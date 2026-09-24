@@ -1,0 +1,26 @@
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fallback-bird {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.bird-figure {
+  transform-origin: 50% 50%;
+  transition: transform .15s ease;
+}
+
+.fallback-core {
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.section-open .fallback-core {
+  opacity: 1;
+}

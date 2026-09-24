@@ -1,0 +1,1 @@
+- [WebGL preview limitation](webgl-preview.md) — the Replit screenshot browser may lack WebGL even when a normal Chromium session can render the 3D exhibit.

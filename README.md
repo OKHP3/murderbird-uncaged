@@ -6,7 +6,7 @@ The canonical origin story lives at [overkillhill.com/writings/murderbird](https
 
 ## Status
 
-Early scaffold. No working exhibit yet. This commit lays down repo structure, licensing, and asset conventions before any real 3D or audio work lands. Treat everything under `src/` as placeholder.
+Playable first-pass exhibit. The bird is a procedural Three.js construction study: drag to rotate, scroll to zoom, select anatomy markers, and open the chest section. The field notes follow the three-era outline in `docs/`. Sound is an optional synthesized Web Audio sketch, not the final song or recorded bird. No finished model, images, or videos are included yet; those require source assets. The original story remains on [overkillhill.com](https://overkillhill.com/writings/murderbird/).
 
 ## Getting started
 
@@ -15,14 +15,24 @@ npm install
 npm run dev
 ```
 
-## Stack (assumed, open to change)
+## Stack
 
 - [Vite](https://vitejs.dev/) for build/dev tooling, matching the main overkillhill.com site's pipeline
 - [Three.js](https://threejs.org/) for the 3D scene, vanilla rather than a framework wrapper, kept deliberately light for a single-page exhibit
-- Web Audio API for the layered theme-song bed, SFX ducking, and climax crossfade, `<audio>` tags won't do the mixing this needs
+- Web Audio API for the opt-in synthesized bed and interaction effects; final stems and climax crossfade await media assets
 - Git LFS for binary assets (3D models, audio, video), see `.gitattributes`
 
-None of this is locked in, it's a reasonable default so the scaffold isn't empty. Swap it if the actual build calls for something else.
+This is a static client-side SPA; it does not use a backend or secrets.
+
+## GitHub Pages
+
+The existing `.github/workflows/deploy.yml` builds `dist/` on pushes to `main` and uploads it to GitHub Pages. In the repository's **Settings → Pages**, choose **GitHub Actions** as the source. `vite.config.js` uses relative asset paths so the build works under a repository subpath. Deployment is performed by GitHub Actions, **not** Replit publishing.
+
+To check the production bundle locally, run `npm run build` then `npm run preview`. The Replit dev preview, if running, is only a development view.
+
+## Adding finished media
+
+Place source material under `assets/` according to `assets/README.md`; browser-delivered static files belong in `public/` or can be imported from `src/`. Large binary assets are tracked with Git LFS, so confirm GitHub Pages can retrieve your LFS media before relying on it. The current UI does not pretend to play a song or video that has not been supplied.
 
 ## License
 
