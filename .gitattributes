@@ -7,3 +7,17 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
 *.psd filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Preserve imported source bytes, including historical CRLF and native bundles.
+assets/murderbird/** -text
+assets/docs/** -text
+context/** -text
+content/story/*.html -text
+provenance/website-support/** -text
+assets/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/**/*.webp filter=lfs diff=lfs merge=lfs -text
+assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+context/**/*.png filter=lfs diff=lfs merge=lfs -text
