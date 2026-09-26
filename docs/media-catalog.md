@@ -29,3 +29,8 @@ Imported scripts and notes can retain old absolute paths and tool assumptions.
 They are preserved evidence. Review and adapt an active production copy before
 running it; the import does not prove that an old workstation environment runs
 unchanged on Replit or another computer.
+
+Frozen imported dependency pins preserve reproducibility. The website audio
+Dependabot entry was retired when its source tree moved. Establish an active
+production working copy and its update checks before changing these pins; do
+not let an automatic update overwrite the recorded source snapshot.
