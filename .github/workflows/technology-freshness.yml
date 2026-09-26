@@ -9,14 +9,14 @@ jobs:
   inventory:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
-      - name: Check official release sources
+      - name: Refresh version inventory from official release sources
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: npm run technology:check
+        run: npm run technology:report
       - name: Publish report in run summary
         if: always()
         run: cat docs/technology-versions.md >> "$GITHUB_STEP_SUMMARY"

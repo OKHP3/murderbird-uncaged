@@ -11,7 +11,7 @@ Playable first-pass exhibit. The bird is a procedural Three.js construction stud
 ## Getting started
 
 ```
-npm install
+npm ci
 npm run dev
 ```
 

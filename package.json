@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "description": "Interactive teardown exhibit of The MurderBird.",
   "type": "module",
+  "engines": {
+    "node": ">=24 <27"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,9 +15,9 @@
     "technology:check": "node scripts/check-technology-versions.mjs --check"
   },
   "dependencies": {
-    "three": "^0.169.0"
+    "three": "0.186.1"
   },
   "devDependencies": {
-    "vite": "^5.4.21"
+    "vite": "8.3.1"
   }
 }
