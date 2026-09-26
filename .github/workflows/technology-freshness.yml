@@ -1,0 +1,22 @@
+name: Technology freshness
+on:
+  schedule:
+    - cron: '23 14 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check official release sources
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run technology:check
+      - name: Publish report in run summary
+        if: always()
+        run: cat docs/technology-versions.md >> "$GITHUB_STEP_SUMMARY"
