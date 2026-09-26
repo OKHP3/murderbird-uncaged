@@ -104,6 +104,10 @@ let selected = 'beak';
 let sectionOpen = false;
 let interactionCount = 0;
 
+function trackEvent(name, parameters = {}) {
+  if (typeof window.gtag === 'function') window.gtag('event', name, parameters);
+}
+
 const updateMarker = (id, x, y, visible) => {
   const marker = hotspotLayer.querySelector(`[data-marker="${id}"]`);
   if (!marker) return;
@@ -141,6 +145,7 @@ function renderSelection(id, play = true) {
   if (play) {
     sound.effect(item.sound);
     interactionCount++;
+    trackEvent('select_specimen', { specimen_id: item.id });
     if (interactionCount === 7) exhibit.react();
   }
 }
@@ -160,6 +165,7 @@ document.querySelector('#section-toggle').addEventListener('click', event => {
   sectionOpen = !sectionOpen;
   exhibit.setSection(sectionOpen);
   sound.effect(sectionOpen ? 'open' : 'click');
+  trackEvent('section_view_toggle', { is_open: sectionOpen });
   event.currentTarget.setAttribute('aria-pressed', String(sectionOpen));
   event.currentTarget.innerHTML = `<span class="control-icon">◫</span> ${sectionOpen ? 'CLOSE SECTION VIEW' : 'OPEN SECTION VIEW'} <span class="control-arrow">↗</span>`;
   document.querySelector('#view-label').textContent = sectionOpen ? 'SECTION VIEW / CORE EXPOSED' : 'EXTERIOR VIEW';
@@ -168,9 +174,11 @@ document.querySelector('#section-toggle').addEventListener('click', event => {
 document.querySelector('#reset-view').addEventListener('click', () => {
   exhibit.reset();
   sound.effect('click');
+  trackEvent('view_reset');
 });
 document.querySelector('#sound-toggle').addEventListener('click', async event => {
   const enabled = await sound.toggle();
+  trackEvent('sound_toggle', { is_enabled: enabled });
   event.currentTarget.setAttribute('aria-pressed', String(enabled));
   event.currentTarget.innerHTML = `<span class="control-icon">♫</span> SOUND ${enabled ? 'ON' : 'OFF'}`;
 });
