@@ -6,9 +6,22 @@ updates:
       interval: weekly
       day: monday
     open-pull-requests-limit: 10
+    groups:
+      compatible-npm-updates:
+        update-types:
+          - minor
+          - patch
+      direct-major-updates:
+        dependency-type: direct
+        update-types:
+          - major
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
       day: monday
     open-pull-requests-limit: 10
+    groups:
+      github-actions:
+        patterns:
+          - "*"
