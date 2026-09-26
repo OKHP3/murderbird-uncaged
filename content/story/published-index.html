@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ========================================
+       METADATA: Core Document & Character Set
+       ======================================== -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-2NPQY0ewseycVRsC+HHUhYLy0axbXFwhzfvpOSU+nIw=' 'sha256-3Cackdtp7Do2OrDkhZ8HQxibdFsvQhw0sUCB/9aSLkI=' 'sha256-3e+uz8JyUVREayOofGtT7xzNexRt5TCg6RldkSFGZwk=' 'sha256-4rs1GhG4jH6g9YTwg6mvRmmHv7bjyUH7GvZnMekLv8k=' 'sha256-6qQFrumK+MBJP2jBD5/c2oyyWQl9kmfvYhkrAHbwAQI=' 'sha256-7//FvIo12Na/Gl24V5LF1JFIQrbnz6eFUWZuNysAJ98=' 'sha256-7xDjo2X53t3p3w5O/66XkJRrLrYP4BolkoKOjhBaQ18=' 'sha256-9+gDIB/FoOZbtN1NX7WLQUlPsi9h3u6HN1J0LVyv/44=' 'sha256-AA2PW7k11qt91Zc8yW1+ZfayiKhkDFCQsf15o1P30IQ=' 'sha256-AoOtS/Oy98lq33Bzi2Ql2ULsxM3fbrxb09xvuAGMkWw=' 'sha256-JMyr3Pxl9VQui6820YcOMyUBWroXCUutuhfps8+ZWhI=' 'sha256-JSwcPjWGXDAYaTZGfCB+6cpd0/AW82XCWneB7fLvyJo=' 'sha256-JcnFHpoLBroEu/WlUr4fHL8SRGYk/fKHdvVqQ5H0kSM=' 'sha256-KPE5ui6CfQFY1vcShV5JQqG/wFuo8fkRFVxhoOlZo8A=' 'sha256-MToVhfKCMesYuXzHhZzMxufq/H41Cprmmz/BevmlCBA=' 'sha256-OAONgQjqD0jx821ebrSh+nheLk0gXXQQQ/9iqNKQm80=' 'sha256-Onl0f/cB5mLfyrrQukG9H6HRVimBA+jiu8yf0axtdB4=' 'sha256-Tas+0h0CkkBgZYJbPhHpNPO3V3PfPz8NXZJSp/H7xKY=' 'sha256-WwnnOCDpTxPsK2RDrm6unyMaoiIBSRhanv1aPVlHyRc=' 'sha256-ZCip9CRySfoKaD5D2GhNFISP5pMJCXca5ESTFC14RuQ=' 'sha256-eoZKPPj7R1opAA3EaZUGTmO56gm1hhyiyo8phdpFl9c=' 'sha256-ifPtde5wXsLugO5t9IqZOGJUJMDQhWM+R63RDPpO6uA=' 'sha256-l/PdTy5HWMe1nzt7m5liItsDDozCwJs4PXnNtMfVw8Q=' 'sha256-mp6lyUlmS9p/vWjep6wkQJYFgohVN7+KFcLvsnyQgIY=' 'sha256-qDWB71RYIA02Hd/sFOMLdLZJXtDS5WYQ0qQGy05T3q8=' 'sha256-uH8MtSiF/h0fM04cWoSyV2KPDwS69cYz6TA0ylq6yEM=' 'sha256-vMipR6Pj+J1+uzPBaR4tLBFZWq18gxHQrsF4Yl9osVQ=' 'sha256-vbjnumaGfnX0chgJjnlz2mHY4K4YSldoiIN5tMpsJ8w=' 'sha256-xh7CUIAeDEyuZ439ct3hPfIQiNb6U+VN/0//lRZ6kZg=' 'sha256-yUOkJaqPNIZARyYqMlDbRGTCmZ/C+wMChomy6GJP3QI=' 'sha256-z+kbhAfYnais1UUyDCDwulWuXH8+RLiV94ugXlzKRl8='; script-src-attr 'none'; style-src 'self' 'sha256-+/8l6fxQyrdundiK66ViWS5VlHiQUAi4V/Ir8XXFYh0=' 'sha256-02ObSVUox8Jemge0oiQ9C1xwK2uZrOMeqo8pLzcnFpU=' 'sha256-4ABrSkoP1/Af9jwER6ZHoKy+DIHE9hcdKtberkZwsQI=' 'sha256-4tOJl/LDQ37yihVDrOJTU8JF655RR92gpymrNA5hPak=' 'sha256-AC3CbEeLPJf2W6daVbkfUpWh5e6gLviBovIHzqhb7I4=' 'sha256-BVQwI1XMs+judwuBp6qTSKeBm7Qe/9Y0vierNK2EKW4=' 'sha256-Dw2yuZXpfLbQGVSS6+Dc1yQqtnkxA5bItx0dDpfEL7k=' 'sha256-G/EXI3nAn343k9zX00AXuWnDLIfGCfMFrLNYLazYwn4=' 'sha256-HNiWpXaWt2LIZnxwvhkuVd7Wm1LEyIXrCJ3LC4ED7jw=' 'sha256-JamKOmpIVQSPv+gDrYtzbxnVclnrvhrOMLmA+WaGPIE=' 'sha256-JkcUl1N8/ZqQ17T0hfO0ayOxtdvjh/bW1olXdBFpYew=' 'sha256-PcnIAdtr1NmNZcLFf5ftF5SvhkwLfoF+o79JrRr9ylA=' 'sha256-RCsCPlU52CtIRNNS7jAHKQnZEcAOjjd8Oeo0MPekLSw=' 'sha256-SZEeY3BjbbuYB9q7WMKkH+vVi//Im1FmD+bhHtViozw=' 'sha256-TOaIIZeh/Z50l+BRNbNisks9iBtnjrws592kTESLTN0=' 'sha256-XIBB7vkTmAUIJl44z0N7ywoeVnnl7kVsLHvhi2EwqUE=' 'sha256-cqi81knIZxngzyb4XrnqGdtxXgRacT17c5EgKXhc/BQ=' 'sha256-i2sZysJsK6bSduhXCopySYrSJWwkyofJX+CaFV8z00c=' 'sha256-o8nFr6pN4NzYV5vroc+6INvuMSqnMnjDaeyL6r9Khf0=' 'sha256-r7zPOqM+1h0txetMIbk4qyJDeS62YpiQ8jkhkzFtS2k=' 'sha256-y5obLVRChtKifE0CL62I5G9KcKibCbsobXYQpYejssY=' 'sha256-z+AkgkT28yIyST9LT2RBjr0JxOfBXijJkLuTEYGGKLg='; style-src-attr 'unsafe-hashes' 'sha256-+/8l6fxQyrdundiK66ViWS5VlHiQUAi4V/Ir8XXFYh0=' 'sha256-02ObSVUox8Jemge0oiQ9C1xwK2uZrOMeqo8pLzcnFpU=' 'sha256-4ABrSkoP1/Af9jwER6ZHoKy+DIHE9hcdKtberkZwsQI=' 'sha256-4tOJl/LDQ37yihVDrOJTU8JF655RR92gpymrNA5hPak=' 'sha256-AC3CbEeLPJf2W6daVbkfUpWh5e6gLviBovIHzqhb7I4=' 'sha256-BVQwI1XMs+judwuBp6qTSKeBm7Qe/9Y0vierNK2EKW4=' 'sha256-Dw2yuZXpfLbQGVSS6+Dc1yQqtnkxA5bItx0dDpfEL7k=' 'sha256-G/EXI3nAn343k9zX00AXuWnDLIfGCfMFrLNYLazYwn4=' 'sha256-HNiWpXaWt2LIZnxwvhkuVd7Wm1LEyIXrCJ3LC4ED7jw=' 'sha256-JamKOmpIVQSPv+gDrYtzbxnVclnrvhrOMLmA+WaGPIE=' 'sha256-JkcUl1N8/ZqQ17T0hfO0ayOxtdvjh/bW1olXdBFpYew=' 'sha256-PcnIAdtr1NmNZcLFf5ftF5SvhkwLfoF+o79JrRr9ylA=' 'sha256-RCsCPlU52CtIRNNS7jAHKQnZEcAOjjd8Oeo0MPekLSw=' 'sha256-SZEeY3BjbbuYB9q7WMKkH+vVi//Im1FmD+bhHtViozw=' 'sha256-TOaIIZeh/Z50l+BRNbNisks9iBtnjrws592kTESLTN0=' 'sha256-XIBB7vkTmAUIJl44z0N7ywoeVnnl7kVsLHvhi2EwqUE=' 'sha256-cqi81knIZxngzyb4XrnqGdtxXgRacT17c5EgKXhc/BQ=' 'sha256-i2sZysJsK6bSduhXCopySYrSJWwkyofJX+CaFV8z00c=' 'sha256-o8nFr6pN4NzYV5vroc+6INvuMSqnMnjDaeyL6r9Khf0=' 'sha256-r7zPOqM+1h0txetMIbk4qyJDeS62YpiQ8jkhkzFtS2k=' 'sha256-y5obLVRChtKifE0CL62I5G9KcKibCbsobXYQpYejssY=' 'sha256-z+AkgkT28yIyST9LT2RBjr0JxOfBXijJkLuTEYGGKLg='; font-src 'self' data:; img-src 'self' data: https://overkillhill.com https://*.github.io https://avatars.githubusercontent.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://okhp3.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'; upgrade-insecure-requests" /><meta content="English" name="language"/>
+<!-- ========================================
+       METADATA: Primary Title & Description
+       ======================================== -->
+<title>The MurderBird: What the Water Kept | OverKill Hill P³™</title>
+<meta content="The fictional origin of the MurderBird: ancient bronze, industrial resurrection, and the modern heart and mind that finally awaken it." name="description"/>
+<meta content="MurderBird, What the Water Kept, OverKill Hill, speculative fiction, mythic origin story, bronze automaton, steampunk" name="keywords"/>
+<meta content="OverKill Hill P³™" name="author"/>
+<meta content="OverKill Hill P³™" name="creator"/>
+<meta content="OverKill Hill P³™" name="publisher"/>
+<!-- ========================================
+       METADATA: Open Graph (Social Sharing)
+       ======================================== -->
+<meta content="The MurderBird: What the Water Kept" property="og:title"/>
+<meta content="An ancient body. An industrial resurrection. A heart and mind of its own. Read the MurderBird’s mythic origin story." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://overkillhill.com/writings/murderbird/" property="og:url"/>
+<meta content="https://overkillhill.com/assets/img/og/murderbird-story-share-2026-09-06.png" property="og:image"/>
+<meta content="The MurderBird: What the Water Kept. The floor-standing MurderBird beside a workbench and CRT computer." property="og:image:alt"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="OverKill Hill P³™" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="2026-09-05" property="article:published_time"/>
+<!-- ========================================
+       METADATA: Twitter Card (X Social)
+       ======================================== -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="The MurderBird: What the Water Kept" name="twitter:title"/>
+<meta content="The mythic origin of the OverKill Hill sentinel, told through three eras and the scars that survived them." name="twitter:description"/>
+<meta content="https://overkillhill.com/assets/img/og/murderbird-story-share-2026-09-06.png" name="twitter:image"/>
+<meta content="The MurderBird: What the Water Kept. The floor-standing MurderBird beside a workbench and CRT computer." name="twitter:image:alt"/>
+<meta content="@OverKillHillP3" name="twitter:site"/>
+<meta content="@OverKillHillP3" name="twitter:creator"/>
+<!-- ========================================
+       METADATA: Search & Crawling
+       ======================================== -->
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+
+
+<meta content="7 days" name="revisit-after"/>
+<link href="/humans.txt" rel="author"/>
+<link href="https://overkillhill.com/writings/murderbird/" rel="canonical"/>
+<link href="https://overkillhill.com/writings/murderbird/" hreflang="en" rel="alternate"/><!-- ========================================
+       METADATA: Color Scheme & Theme
+       ======================================== -->
+<meta content="#2a2320" name="theme-color"/>
+<meta content="dark light" name="color-scheme"/>
+<!-- ========================================
+       METADATA: Web App & PWA
+       ======================================== -->
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<!-- ========================================
+       FAVICONS: Multi-Format Icon Support
+       ======================================== -->
+<link href="/assets/img/favicons/murderbird-v2-icon-browser-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicons/murderbird-v2-icon-browser-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/img/favicons/murderbird-v2-icon-browser-48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/assets/img/favicons/murderbird-v2-icon-opaque-180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/assets/img/favicons/murderbird-v2-icon.ico" rel="icon" sizes="any"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<!-- ========================================
+       STYLESHEETS & FONTS
+       ======================================== -->
+<!-- AUTOGEN:SELF-HOSTED-FONTS -->
+<!-- OverKill Hill P³ fonts are loaded by the shared theme stylesheet. -->
+<link href="https://www.googletagmanager.com" rel="dns-prefetch"/>
+<script>!function(){var s=localStorage.getItem("okh-theme");document.documentElement.setAttribute("data-theme",s==="dark"||(s!=="light"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches)?"dark":"light")}();</script>
+<link href="/assets/css/theme.css?v=22800719" rel="stylesheet"/>
+<script type="speculationrules">
+    {
+      "prefetch": [
+        { "source": "document", "where": { "and": [
+          { "href_matches": "/*" },
+          { "not": { "selector_matches": "[rel~=nofollow]" } },
+          { "not": { "href_matches": "/*.{png,jpg,jpeg,webp,svg,ico,gif,pdf,zip}" } }
+        ]}, "eagerness": "moderate" }
+      ]
+    }
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VJ1BKXS27H"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VJ1BKXS27H');
+    </script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://overkillhill.com/#organization",
+  "name": "OverKill Hill P³™",
+  "url": "https://overkillhill.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://overkillhill.com/assets/img/favicons/murderbird-v2-icon-1024.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/overkillhillp3",
+    "https://facebook.com/OverKillHillP3/",
+    "https://x.com/OverKillHillP3",
+    "https://www.youtube.com/@OverKillHillP3",
+    "https://ko-fi.com/overkillhillp3",
+    "https://pro.fiverr.com/s/VYKPpoB"
+  ]
+}
+</script>
+</head>
+
+<body>
+  <a class="okh-skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="top">
+<div class="container">
+<div class="logo">
+<a aria-label="OverKill Hill P³ home" href="/">
+<img alt="OverKill Hill P³" height="40" loading="eager" src="/assets/img/murderbird-v2-icon-nav-96.png" width="40"/>
+<span class="sr-only">OverKill Hill P³™ Home</span>
+</a>
+</div>
+<nav aria-label="Primary" class="primary-nav" id="navigation">
+<ul>
+<li><a href="/#forge">The Forge</a></li>
+<li class="has-submenu">
+<a href="/projects/">Our Projects</a>
+<ul class="submenu">
+<li><a href="/skillz-forge/">Skillz Forge</a></li>
+<li><a href="/skillz-forge/skillz-shield/">Skillz Shield</a></li>
+<li><a href="/projects/found-ry/">Found‑Rᵧ</a></li>
+<li><a href="/projects/mermaid-theme-builder/">Mermaid Theme Builder</a></li>
+<li><a href="/projects/bpmn-for-mermaid/">BPMN for Mermaid</a></li>
+<li><a href="/projects/mac-studio-local-ai-workbench/">Mac Studio Local AI Workbench</a></li>
+<li><a href="/projects/abrahamic-reference-engine/">Abrahamic Reference Engine</a></li>
+<li><a href="/projects/glee-fully-chai-chasers/">Glee-fully Chai Chasers</a></li>
+<li><a href="/projects/kierans-lifetrkr/">Kieran's LifeTrkr</a></li>
+<li><a href="/projects/telling-forward/">Telling Forward</a></li>
+</ul>
+</li>
+<!-- Writings cluster: Manifesto / MurderBird / Promptcraft / FDIAL -->
+<li class="has-submenu">
+<a data-current-family="" href="/writings/">Writings</a>
+<ul class="submenu">
+<li><a href="/manifesto/">The Manifesto</a></li>
+<li><a aria-current="page" href="/writings/murderbird/">The MurderBird</a></li>
+<li><a href="/prompt-forge/">The Prompt Forge</a></li>
+<li><a href="/writings/first-diagram-is-a-liar/">The First Diagram is a Liar</a></li>
+</ul>
+</li>
+<!-- About cluster: Universe / About / Contact / Legal -->
+<li class="has-submenu">
+<a href="/about/">About</a>
+<ul class="submenu">
+<li><a href="/universe/">OKHP³™ Universe</a></li>
+<li><a href="/about/">About OKHP³™</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="/legal/">Legal</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<button aria-controls="navigation" aria-expanded="false" class="nav-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</button>
+</div>
+<section aria-label="Forge update" class="site-specials site-specials--okh">
+<span class="site-specials-label">🔥Hot off the FORGE⚒️</span>
+<a class="site-specials-link" href="/writings/first-diagram-is-a-liar/#council-scoring">
+          v0.5 is live: the Council of AIs scored each other, every model was harder on itself than the architect was. Read it →
+        </a>
+</section>
+</header>
+
+  <main id="main">
+<section aria-labelledby="hero-title" class="hero forge-masthead forge-masthead--writing" id="murderbird"><div aria-hidden="true" class="brand-stripes brand-stripes--okh"></div><div aria-hidden="true" class="hero-blueprint-bg"></div><div class="container hero-inner">
+
+
+
+<div class="hero-grid">
+<div>
+<p class="hero-eyebrow"><a href="/writings/">Writings from the Hill</a> · Speculative fiction</p>
+<h1 id="hero-title">The MurderBird</h1>
+<p class="hero-tagline">What the Water Kept</p>
+<p>An ancient body. An industrial resurrection. A heart and mind of its own.</p>
+<p>The fictional origin of the <span class="story-brand-name">OverKill Hill P³™</span> sentinel, told through three eras and the scars that survived them.</p>
+<p class="hero-eyebrow">About 21–27 minutes</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#the-maker">Read the story</a>
+<a class="btn btn-quiet" href="#visual-record">Explore the imagery</a>
+</div>
+</div>
+<figure class="hero-visual" id="media-hero">
+<picture><source sizes="(max-width: 1024px) calc(100vw - 48px), min(520px, calc((100vw - 96px) / 2))" srcset="/assets/img/webp/murderbird-unified-master-03-2026-09-06-480.webp 480w, /assets/img/webp/murderbird-unified-master-03-2026-09-06-960.webp 960w, /assets/img/webp/murderbird-unified-master-03-2026-09-06-1536.webp 1536w" type="image/webp"/><img alt="The MurderBird stands on two metal feet beside a workbench and CRT computer, with a hooked beak, compact folded wings, dark patinated armor, and a glowing orange eye." fetchpriority="high" height="1024" loading="eager" sizes="(max-width: 1024px) calc(100vw - 48px), min(520px, calc((100vw - 96px) / 2))" src="/assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png" width="1536"/></picture>
+</figure>
+</div>
+
+</div></section>
+
+<div class="container">
+  <div class="mac-body-with-sidebar">
+    <article class="article-body mac-body-main" aria-label="What the Water Kept">
+      <section id="the-maker" aria-labelledby="maker-title">
+        <p class="manifesto-og-label">Era I · Bronze Age Mesopotamia · The body</p>
+        <h2 id="maker-title">The Maker</h2>
+        <p>The first thing recorded about the bird was that it broke a hammer. The hammer belonged to the Maker, whose workshop had spent seven winters bringing the creature into being. The court preferred to say three. Three sounded like an ambitious commission, while seven suggested something had gone wrong. Something had gone wrong almost every day, and the bronze carried evidence of most of it.</p>
+        <p>Copper came from the hills, and tin arrived by routes that changed with the season and the telling. Beyond the workshop, canals carried river water between fields and walls of sun-dried brick. Heavy parts took shape in clay molds. Smaller pieces were worked over stone, becoming curved neck plates, a deep beak, and overlapping blades that might pass for feathers at a distance.</p>
+        <p>Up close, nothing passed for feathers. Hammer marks crossed the bronze, edges varied, and repeated blows had flattened the pins. Beneath the left shoulder, the Maker had fitted one plate backward, removed it, and fitted it again. Its edge still sat differently from the others. The plate remained because it worked, although anyone looking for perfect symmetry would have found reason to object.</p>
+        <p>Seven winters earlier, the commission had arrived as an eagle pressed into clay. Its wings spread above a gate, and beneath them stood figures made small by the seal cutter’s hand. The Steward wanted the same arrangement in metal, except that the wings should move and the creature should rise. The Maker asked what would lift it. The Steward tapped the seal, as though the answer had already been supplied.</p>
+        <p>In the workshop, a small wing of wood and stretched linen could stir dust when a cord pulled it downward. Adding even thin bronze along its edge made the return stroke falter. A larger wing needed stronger supports, and those supports added weight that the larger wing could not carry. The Maker watched an eagle turn above the canal and understood the difference without being able to measure it. Nothing on the bench could purchase that ease.</p>
+        <p>A suspended eagle was possible, with ropes disappearing into the gatehouse and workers turning a drum behind the wall. The Steward rejected the drawing because visitors might discover the arrangement. A fixed eagle with moving wings was rejected because neighboring courts already possessed ornaments. When the Maker explained that a promise could not lift metal, the clay seal remained on the bench. The next delivery of copper arrived with less silver for wages.</p>
+        <p>The journey north had been intended to settle a dispute over stone for the casting hearths. At a hillside quarry beyond the river plain, rain had loosened a face that the cutters considered sound. The Maker arrived to find a broken block abandoned beside the working path. Something pale curved through its darker interior, widening toward a rounded end. A cutter had struck it twice before deciding that it spoiled the stone.</p>
+        <p>The Maker first mistook it for a root, then found a surface that turned too regularly beneath the enclosing rock. At one end, a joint emerged with a breadth that defeated every familiar comparison. It resembled bone but resisted the knife like stone. The cutter offered to break the block into manageable pieces. Instead, the Maker paid for a day of careful work around the pale shape and carried away less hearthstone than promised.</p>
+        <p>More fragments appeared nearby, although none completed the creature. A damaged socket accepted the rounded joint closely enough to suggest how weight had passed between them. Other pieces refused every arrangement, and the Maker kept those apart rather than forcing them into the pattern. There was no complete head, no spread of wings waiting to be uncovered. Whatever the hillside had preserved, it had withheld enough to make certainty impossible.</p>
+        <p>Back at the quarry shelter, the Maker laid the pieces on packed earth and sketched around them with a reed. The long bone suggested a bird, but not the slender running birds known from traders’ descriptions and carved ornaments. This joint had carried a different burden. Moving the fragments changed the imagined stance from sprawling to upright. For the first time since the commission arrived, the Maker could picture a creature whose weight had somewhere to go.</p>
+        <p>The quarry workers called the remains unlucky because the cracked face had nearly killed a cutter. The Maker could not explain their age or why something once living had become part of a hill. Neither uncertainty diminished the fit between the surviving surfaces. That night, the rejected wing drawings stayed rolled beside the sleeping mat. Before sleeping, the Maker returned to the bones and adjusted the angle of the imagined leg.</p>
+        <p>It was tempting to call their appearance an answer, especially after so many months of finding none. The Maker distrusted convenient signs when other people sold them, yet kept returning to the timing of the broken stone. The court had demanded a creature that could escape the ground. The hillside had offered evidence of one that belonged upon it. Whether anything had sent a message mattered less, that night, than the feeling of having finally heard one.</p>
+        <p>Clay models followed the fragments home, wrapped separately from the stone so that neither could damage the other. The Maker built legs around the measured joints and loaded a wooden frame with bags of sand. Narrow feet overturned beneath it, while a wider stance held until the frame shifted forward. Each failure changed the next model. The dead creature supplied no instructions, but its surviving proportions asked better questions than the eagle on the seal.</p>
+        <p>At the next inspection, the Steward looked past the models and asked where the wings would attach. The Maker placed the mineralized joint beside the commission and explained the proposed body, keeping a hand on the heavy fragment. Legs could carry what wings could not lift. The Steward replied that the court had purchased an eagle, not an explanation. A scribe waited with a clean tablet while neither object moved from the bench.</p>
+        <p>The Maker offered to return the unused copper, though the wages and failed castings could not be recovered. That brought the discussion away from the heavens and into the accounts. The Steward wanted something the court could unveil without explaining why its eagle remained earthbound. The Maker wanted permission to finish a body that might actually move. Between those wishes lay enough spent silver to keep the door from closing altogether.</p>
+        <p>A second audience produced a narrower bargain: the creature could stand, but it must still bear the court’s emblem. The Maker drew a hooked bill above the unfamiliar body and folded ornamental wings against its sides. These parts came from living birds and the commission, not from the broken stone. The Steward approved the drawing without touching the fossil. The scribe recorded an eagle, and the Maker returned to a workshop increasingly occupied by something else.</p>
+        <p>The differences grew as the full-sized frame took shape. A heavier breast required broader supports, and the neck bent to keep the head’s weight above the feet. Bronze feathers became overlapping plates that could slide without catching. When the Steward objected to the legs, the Maker removed a support and let the unfinished body lean into waiting ropes. Restoring the support ended the argument for that afternoon, though not for the following visit.</p>
+        <p>Alone, the Maker sometimes arranged the fossil fragments beside the new castings and wondered how much of the vanished creature remained in the work. The stance might be wrong, the missing head entirely different. No living witness could correct either error. Still, copying an eagle would have concealed the discovery beneath something already understood. The Maker wanted the unfamiliar shape to stand again, even if bronze could restore only a possibility of what had been lost.</p>
+        <p>The bones never became part of the mechanism. They remained on a shelf while measurements passed into clay, wood, and metal, each material requiring departures from the last. By the seventh winter, the creature stood on substantial legs beneath folded wings and an oversized head. The court still called it an eagle when discussing the expense. In the workshop, the Maker had stopped using a name and begun listening for the sound of its first unsupported step.</p>
+        <p>Inside the breast, the Maker assembled counterweights, tension mechanisms, and interlocking pieces whose arrangement appeared in none of the surviving drawings. Marks covered their inner surfaces. Some were measurements, while others resembled instructions intended for something that could read them. Several lay inside sealed castings, beyond any ordinary means of inspection. Much later, those marks would trouble people, although the expense troubled the court more immediately.</p>
+        <figure class="murderbird-scene" id="media-maker">
+          <picture><source type="image/webp" srcset="/assets/img/webp/murderbird-unified-maker-clean-2026-09-06-480.webp 480w, /assets/img/webp/murderbird-unified-maker-clean-2026-09-06-960.webp 960w, /assets/img/webp/murderbird-unified-maker-clean-2026-09-06-1536.webp 1536w" sizes="(max-width: 899px) calc(100vw - 48px), 720px" /><img src="/assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png" sizes="(max-width: 899px) calc(100vw - 48px), 720px" width="1536" height="1024" loading="lazy" decoding="async" alt="The hooded Maker, seen from behind with an intact hammer lowered, faces the bronze MurderBird standing on the courtyard paving." /></picture>
+          <figcaption>A quiet inspection before the demonstration. The creature stands on its own feet; the hammer remains intact.</figcaption>
+        </figure>
+        <p>On the morning of the demonstration, the Inspector struck the bird’s shoulder with the Maker’s hammer. The head turned, and the beak closed just below the hammer’s face. A shortened handle fell onto the courtyard stones. For several moments, everyone present understood the expenditure. When the Maker approached with an open palm, the bird lowered its head, leaving the witnesses to argue afterward about recognition, obedience, and practiced signals.</p>
+        <p>The foundry became its territory, a world measured through heat, resistance, and the rhythm of the bellows. A cracked casting drew its attention before the flaw became visible. A poorly seated pin brought the beak close enough to interrupt the work. When a furnace hinge began to fail, the door acquired a silent attendant that would not leave. The workers learned to inspect whatever held the creature’s gaze.</p>
+        <p>Once, the bird caught an Apprentice by the apron and pulled backward just before a lifting chain parted. Another time, it dismantled a ceremonial shield that had occupied an entire bench for a month. The shield had been magnificent, but its hidden seams were weak. Fragments lay beneath the bird’s feet when the court arrived to collect it. Afterward, certain pieces of work passed through the foundry under cloth, and the bird learned to watch the cloth.</p>
+        <p>When armed figures eventually entered the foundry, the Maker opened the chamber behind the bird’s eyes and withdrew a small assembly. Its last clear impression was of familiar hands retreating from its face. Rope tightened around the body, and the cistern beneath the workshop received its weight. Bronze touched stone as a voice descended through the opening above. The words did not survive, and nothing recorded whether the concealment had been rescue, punishment, or both.</p>
+      </section>
+      <section id="the-water" aria-labelledby="water-title">
+        <h2 id="water-title">What the water kept</h2>
+        <p>Water entered through the mouth and settled behind the plates, carrying sediment into every joint it could reach. Above the cistern, the foundry burned and its roof collapsed. New foundations pressed down on the old, closing the last opening to the workshop. The bird remained where the ropes had left it. Whatever had once moved beneath the armor became part of the stillness gathering around the bronze.</p>
+        <p>Brown deepened toward black, while green gathered along seams and blue mineral traces spread through sheltered recesses. Deposits thickened wherever the water moved slowly. A root found the space beneath one wing, grew thick, and eventually left its shape in the sediment. Above, the ground changed owners and the edges of the buried metal lost their shine. The bird kept none of the owners’ names, but it kept what the water had written.</p>
+        <figure class="murderbird-scene" id="media-water">
+          <picture><source type="image/webp" srcset="/assets/img/webp/murderbird-unified-water-2026-09-06-480.webp 480w, /assets/img/webp/murderbird-unified-water-2026-09-06-960.webp 960w, /assets/img/webp/murderbird-unified-water-2026-09-06-1536.webp 1536w" sizes="(max-width: 899px) calc(100vw - 48px), 720px" /><img src="/assets/img/library/murderbird-unified-water-candidate-2026-09-06.png" sizes="(max-width: 899px) calc(100vw - 48px), 720px" width="1672" height="940" loading="lazy" decoding="async" alt="The inert MurderBird lies partly submerged in a stone cistern, its eye dark and its plates covered with sediment and mottled mineral deposits." /></picture>
+          <figcaption>An inert body in the cistern. Water and sediment leave their history across the metal.</figcaption>
+        </figure>
+      </section>
+      <section id="the-mechanic" aria-labelledby="mechanic-title">
+        <p class="manifesto-og-label">Era II · 1853–1873 and after · The machinery</p>
+        <h2 id="mechanic-title">The Mechanic</h2>
+        <p>In 1853, a shovel struck the bird’s beak. The Digger first took it for a pipe fitting, then removed more earth and discovered that the curve continued beneath a collapsed wall. The work had begun without permission from those who tended the ground. A Broker had offered payment for anything old enough to interest a distant buyer. The Digger sent for ropes before sending word that something had been found.</p>
+        <p>The cistern yielded slowly, its opening choked with brick and roots that had followed the damp. Workers cleared enough space to pass a sling beneath the bronze, then pulled while someone below kept the hooked bill clear of the stone. The bird rose carrying water in its chest. Its talons scraped three pale grooves across the lip. Above ground, the folded wings held mud that nobody paused to examine before tipping it away.</p>
+        <p>A worker wanted to mark the position of the wall before it came down. The Broker wanted the creature covered before anyone on the road could see it. By evening, the tarpaulin concealed the bronze and broken masonry concealed the opening. No drawing preserved the workshop beneath the later foundations. The bird left with its plates intact, but the place that might have explained them was already being scattered across the excavation.</p>
+        <p>At the first weighing, the Broker offered the price of damaged metal and described the trouble of moving it. At the second, behind a closed door, the same object became a sacred guardian of considerable rarity. Neither description came from the ground. The difference passed into a purse before the workers received their remaining wages. A request to see the buyer’s letter was answered with an instruction to fetch stronger packing boards.</p>
+        <p>The buyer was an English Collector whose fortune depended on engines, foundries, and contracts measured in miles of rail. At home, carved fragments and inscribed stones occupied rooms far removed from the furnaces that had paid for them. The Broker’s letter promised something no rival collection possessed. A separate note made clear that the circumstances of removal would not bear examination. The Collector increased the offer and required delivery without a public announcement.</p>
+        <p>Rough timber enclosed the bird, with folded cloth protecting the bill and straw pressed beneath the shoulders. A cart carried the crate toward the river, its wheels finding every hollow in the track. At the landing, the load waited beside sacks and bundled goods until space could be arranged. The workers who shifted it knew its weight rather than its history. Within the boards, another thin stream of cistern water darkened the straw.</p>
+        <p>The river carried it toward Basra, where the crate changed hands and waited for an onward vessel. Each delay produced another charge and another letter insisting that the contents remain undisturbed. From the Gulf, the shipment passed through Bombay before taking the long sea route around Africa. The Collector received accounts of weather and expense rather than discoveries. Beneath the packing, salt damp joined the older water still lodged inside the bronze.</p>
+        <p>On an English quay, a sling tightened beneath the crate and lifted it into rain colder than the water it had left. A steam winch lowered the load onto a waiting wagon. Later, railway wheels carried it inland through cuttings and beneath bridges whose ironwork trembled at its passage. The bird encountered this new country as vibration through timber. By the time the boards opened, soot had settled into the wet grain around the shipping marks.</p>
+        <p>The Collector expected an object that could command a room without requiring an explanation. What emerged was green, awkwardly folded, and too heavy for the prepared pedestal. A servant caught the pedestal’s shifting edge before the bird could topple. The Collector ordered a lower stand and a cover for the damaged base. The first private viewing proceeded without any mention of the excavation, the Broker, or the hurried repair beneath the cloth.</p>
+        <p>A visiting scholar asked where the creature had been found and whether anything accompanied it. The Collector supplied a district broad enough to contain many ruins, then changed the subject to the casting. An offer to prepare a description for publication went unanswered. No museum received the bird, and no excavation report recorded its position. Its absence from the papers began with withheld information, then grew through the ordinary silence of a locked room.</p>
+        <p>For nearly twenty years, labels followed it between display rooms and storerooms. Sacred guardian became decorative casting, then unidentified antiquity, as the Collector’s interests moved toward objects whose histories could be repeated at dinner. Beneath the right shoulder, a loose plate gradually exposed a glimpse of something fitted rather than sculpted. A servant noticed it while changing the covering. In 1873, the Collector finally sent the creature to a repair shop behind the ironworks.</p>
+        <p>The Mechanic received instructions to secure the loose metal and make the bird presentable. Beyond the shop, locomotive wheels stood beside unfinished axles, and a line shaft drove belts through the adjoining building. The floor carried the pulse of an engine even when nobody crossed it. The Mechanic removed the shoulder plate and found another fastener beyond reach. Releasing it would disturb an assembly that depended on something deeper in the breast.</p>
+        <p>Disassembly had an order, and finding it took six weeks. Beneath the mineral crust, the Mechanic uncovered bearing points, contact surfaces, and a polished crescent inside a joint. These were places where one part had traveled against another. The wear could not be explained by decoration or burial. Long before the storerooms and their labels, the bird had moved, and someone had understood exactly how its weight would pass through those joints.</p>
+        <p>The Collector called the discovery a hidden trick and asked whether it could be made to perform at a private gathering. The Mechanic asked for the excavation notes, expecting them to show where missing parts might have fallen. There were no notes to send. A second request produced the Broker’s old description, carefully copied without the accompanying letter. The Mechanic set it beneath a tray of screws, where it served a purpose its claims could not.</p>
+        <p>A locomotive outside could drag a line of loaded wagons because a boiler, firebox, and tender traveled with it. None of that equipment would fit inside the bird without consuming the space needed for movement. A miniature furnace would put heat against ancient metal whose weaknesses were still being discovered. The Mechanic abandoned that sketch before ordering a casting. The first experiments would borrow the workshop’s strength through a belt instead.</p>
+        <p>Tools accumulated around the open body as iron braces replaced failed supports and brass bushings filled worn joints. Springs and linkages extended into spaces where the ancient mechanism no longer held together. The surviving bronze stayed, with repairs crossing it openly. An Exhibition Agent proposed polishing the creature for display, but the Mechanic refused. The bird retained the water’s colors, along with the marks of the hands that had shaped it.</p>
+        <p>The Exhibition Agent wanted the repairs concealed as well, preferably beneath matching plates that could pass for ancient work. The Mechanic laid a failed original pin beside its replacement and asked which one the audience should be allowed to see. The Collector intervened before the question received an answer. Movement mattered more than the finish, provided no public account connected the machine to the collection. Permission to continue arrived with another condition of silence.</p>
+        <p>At the lathe, new shafts took shape to dimensions copied from surfaces the Maker had finished by hand. A brass sleeve settled inside an ancient socket, and the Mechanic turned it until the movement stopped catching. Elsewhere, a new iron brace carried a load that cracked bronze could no longer bear. The additions did not make the body uniform. They allowed different centuries of workmanship to depend upon each other without pretending to be the same.</p>
+        <figure class="murderbird-scene" id="media-mechanic">
+          <picture><source type="image/webp" srcset="/assets/img/webp/murderbird-unified-mechanic-2026-09-06-480.webp 480w, /assets/img/webp/murderbird-unified-mechanic-2026-09-06-960.webp 960w, /assets/img/webp/murderbird-unified-mechanic-2026-09-06-1536.webp 1536w" sizes="(max-width: 899px) calc(100vw - 48px), 720px" /><img src="/assets/img/library/murderbird-unified-mechanic-candidate-2026-09-06.png" sizes="(max-width: 899px) calc(100vw - 48px), 720px" width="1672" height="940" loading="lazy" decoding="async" alt="The Mechanic works on the MurderBird’s exposed side while a floor-mounted frame supports the body in an industrial workshop." /></picture>
+          <figcaption>Industrial repairs fitted around ancient bronze. Movement still depends on the workshop’s power.</figcaption>
+        </figure>
+        <p>Movement returned unevenly, beginning with a tremor through the breast and a slow lifting of the neck. One foot rose, advanced, and drove a talon through the floor. The bird stopped while the workshop became very quiet. Pressure, resistance, and the pulse of machinery reached it as separate impressions. At the edge of that returning world, figures gathered with tools and objects they wanted to place within its reach.</p>
+        <p>The belt gave way to trials with pressure cylinders and a flexible line that followed the bird across the reinforced assembly platform. Wound springs permitted a few untethered steps, then lost enough tension to leave a foot suspended above the boards. The Collector asked for a longer performance. The Mechanic pointed toward the engine supplying the pressure and explained what independence would require. The Collector looked at the bird instead, as though the larger machine were an avoidable embarrassment.</p>
+        <p>The bird bent a cheap latch, stripped teeth from a poorly cut gear, and pulled a loose rivet from a boiler fitting that had recently passed inspection. The Inspector called it a nuisance. The rivet remained on the bench, where the inspection mark was still visible. The name <em>MurderBird</em> first appeared in an expense book beside the cost of a replacement vise. The name stayed long after the book was lost.</p>
+        <p>Yet the bird’s attention could travel only as far as its mechanisms allowed. A sound prompted movement, resistance triggered a response, and completed sequences began again without becoming anything more. Behind the eyes, the chamber remained empty. The Mechanic built six assemblies for that space, each more elaborate than the last. None stayed, and they collected in a drawer, separately wrapped and accompanied by notes explaining why another attempt would be necessary.</p>
+        <p>The last private demonstration ended when the bird repeated a movement after the Mechanic removed the object beneath its beak. The Collector had wanted a guardian that recognized a command, not an expensive sequence that could not recognize its own completion. Funding dwindled into requests for an inventory. The Mechanic continued after hours until suppliers refused further credit for materials. Before closing the body, the Mechanic oiled the surviving joints and labeled each unfinished connection.</p>
+        <p>Eventually, the tools stopped moving and dust settled into the workbench grain. The bird entered another crate, carrying the six failed assemblies with it. Packing material covered the exposed repairs, and the notebooks were laid beside its feet. On the final page, beneath a drawing of the chamber, one sentence had been pressed hard into the paper. The Mechanic had written, <em>The missing part is not a gear.</em></p>
+      </section>
+      <section id="the-builder" aria-labelledby="builder-title">
+        <p class="manifesto-og-label">Era III · 2025 · The awakening</p>
+        <h2 id="builder-title">The Builder</h2>
+        <p>By 2025, shipping labels covered the crate, with newer addresses pasted over buildings that no longer stood. An inventory number stretched across the wood beneath a heavy cross. Another number occupied the space below it. When the lid opened beneath an electric light, the MurderBird arrived with a seized ankle, a split pressure line, and a description calling it an unusual reproduction. The Builder set the description aside.</p>
+        <p>Beneath the left wing, wedge-shaped marks disappeared under a Victorian repair strap. Hammered bronze surrounded a machined brass bearing, and an iron connecting rod passed through a casting older than the language used to describe its replacement. Three thousand years of workmanship occupied the same few inches. The Builder began with the notebooks, then the joints. Two unresolved spaces emerged from the inspection: one deep inside the breast, the other behind the eyes.</p>
+        <p>The Mechanic had discovered how to make the bird move, but every movement borrowed power from outside its body. A workshop belt drove the early tests, and a pressure line later fed cylinders beneath the armor. Wound springs carried it a few steps beyond the assembly platform. When tension fell, the creature settled into stillness. Disconnect the line or stop the engine, and the bird became an artifact again.</p>
+        <p>The other absence was harder to name because the machinery could imitate so much. Cams sequenced movements, governors regulated them, and linkages turned the head toward pressure on a plate. The Mechanic had made those responses increasingly elaborate. Each response nevertheless ended where its mechanism ended. The bird could close its beak around resistance, but it could not ask what it held or decide whether closing its beak was the right response.</p>
+        <p>The Builder laid the six failed cranial assemblies beside the open breast and read the notebook again. There were two missing parts, not one more ingenious arrangement of gears. The bird needed power it could carry and processing that could learn from what happened. Supplying only one would leave the other absence untouched. A mind without independent power would remain tethered, while a stronger engine alone would merely repeat the old movements with greater force.</p>
+        <h3 id="the-heart">The heart</h3>
+        <p>The first addition was a sealed power core fitted inside the cradle that had once held the ancient counterweights. Dense ceramic cells supplied steady output. A ring of capacitors stored the brief surges needed to lift the body, brace a leg, or drive the beak downward. The core occupied less space than the Victorian spring drum. Making it safe inside the accumulated metal took considerably longer than finding room for it.</p>
+        <p>Ancient bronze could not carry current wherever convenience suggested, and the old iron frame needed isolation. Heat required a route out through the armor. Brass and steel mechanisms demanded different loads at different moments, sometimes within the same movement. New conduits followed the paths of old tendons rather than cutting across them. The Builder worked around the surviving construction, treating each repair as something to understand before deciding whether to replace it.</p>
+        <p>Compact electric pumps fed the surviving pressure cylinders, while motors drove shafts the Mechanic had machined by hand. Sensors settled beside peened pins and measured strain in joints whose first tolerances had been judged by touch. Under load, the bird would still sound like itself. Bearings would turn, valves would open, and overlapping bronze would settle with a familiar click. It would simply make those sounds without a hose trailing behind it.</p>
+        <p>The heart still needed replenishment, and the Builder made no attempt to hide that limit from the system. A charging contact sat beneath the breast, concealed by an old plate. When stored energy fell, the bird would have to return. Its freedom would have a distance it could measure. Before permitting the first step, the Builder entered the return threshold alongside the limits governing heat, balance, and the force each repaired joint could bear.</p>
+        <figure class="murderbird-scene" id="media-heart">
+          <picture><source type="image/webp" srcset="/assets/img/webp/murderbird-unified-heart-2026-09-06-480.webp 480w, /assets/img/webp/murderbird-unified-heart-2026-09-06-960.webp 960w, /assets/img/webp/murderbird-unified-heart-2026-09-06-1536.webp 1536w" sizes="(max-width: 899px) calc(100vw - 48px), 720px" /><img src="/assets/img/library/murderbird-unified-heart-candidate-2026-09-06.png" sizes="(max-width: 899px) calc(100vw - 48px), 720px" width="1672" height="940" loading="lazy" decoding="async" alt="The MurderBird rests on floor-mounted supports while the Builder inspects an open chest compartment containing a pale cylindrical power assembly." /></picture>
+          <figcaption>Inspection of the power assembly. A source of energy is not yet a mind.</figcaption>
+        </figure>
+        <h3 id="the-mind">The mind</h3>
+        <p>The second addition occupied the chamber that had defeated every attempt to fill it with machinery that merely repeated. A compact processing lattice rested inside a ceramic housing behind the eyes. Fine connections ran through the neck into the body. Sight and sound reached it alongside pressure across the feet, position within the joints, and temperature beneath the plates. It could also compare a commanded movement with the movement that actually occurred.</p>
+        <p>At first, those signals amounted to noise rather than understanding. The left foot reported weight before the right ankle reported standing. A shoulder sensor interpreted a century-old repair as a permanent obstruction. The pressure system answered slowly enough that the walking model repeatedly expected the body to fall. The Builder adjusted the maps while the bird learned the delays, discovering that its ancient, uneven body would not behave like a clean diagram.</p>
+        <p>A command traveled down the neck, a talon moved, and the new mind compared intention with result. The next attempt accounted for the difference. What had previously been a prescribed sequence could now change in response to experience. Progress came through small corrections rather than a single awakening. The bird learned how much of a movement belonged to the instruction and how much belonged to the particular machinery carrying it out.</p>
+        <p>One movement resisted every correction: the left wing stopped short of the angle in the model. More current produced heat without useful motion, so the system marked the joint as damaged. The Builder opened the shoulder and found the plate that had been fitted twice. Its inner edge had never matched the opposite wing. Nothing had broken, and forcing symmetry would have damaged a construction that had survived for centuries.</p>
+        <p>The model changed instead of the metal, and the bird folded the wing within its own limits. For the first time, the new mind accepted an imperfection it did not need to repair. That distinction traveled beyond the shoulder. A deviation could be damage, but it could also be history or a workable compromise. The body began to make sense as the particular thing it was, rather than a failed version of something symmetrical.</p>
+        <h3 id="first-choice">The first choice</h3>
+        <p>For several nights, the heart ran while the mind learned the body and the MurderBird remained on its supports. Orange light glowed behind its eyes. Heat traveled through the new channels beneath its breastplate, and occasionally a wing shifted by the width of a finger. The Builder watched readings on the CRT. Nearby, the six failed assemblies lay in their wrappings, now useful as records of questions that the machinery alone could not answer.</p>
+        <p>Within the bird, thousands of corrections accumulated into a working understanding of its weight. It learned how far the left ankle could turn and which plates touched when the neck lowered. It learned what the repaired shoulder could bear. Before lifting a foot, it could anticipate where the remaining load would go. The room gradually became a place in which a movement had consequences, rather than a collection of signals demanding separate responses.</p>
+        <p>During an ordinary test, the bird adjusted its stance before the next instruction arrived. One support had begun to loosen. The Builder stopped typing as the creature lowered its head and examined the mounting bolt. It had felt the change, understood the likely consequence, and shifted its weight before the support failed. No cam had prescribed that sequence, and no hand had guided it through the decision.</p>
+        <figure class="murderbird-scene" id="media-first-choice">
+          <video controls playsinline preload="none" width="1280" height="720" poster="/assets/img/murderbird-first-choice-poster.jpg" aria-label="The first choice: a silent MurderBird motion study" aria-describedby="first-choice-video-caption first-choice-video-description">
+            <source src="/assets/video/murderbird-first-choice-635f0e15.mp4" type="video/mp4" />
+            Your browser does not support embedded video. <a href="/assets/video/murderbird-first-choice-635f0e15.mp4">Watch or download the motion study</a>.
+          </video>
+          <figcaption id="first-choice-video-caption">The first choice. An eight-second silent motion study.</figcaption>
+        </figure>
+        <p id="first-choice-video-description"><strong>Visual description:</strong> In the workshop, the bronze bird stands with both feet planted beside an assembly support. The saddle shifts slightly; the bird adjusts its torso, then dips its head. The stand stays fixed to the floor.</p>
+        <p>When the supports came away, the MurderBird stood without a belt, a pressure line, or a support beneath its breast. Its power source traveled inside it, and its next movement belonged to it. Bronze plates shifted over Victorian linkages as it crossed the workshop floor. Electric pumps murmured beneath hammered armor. The ceramic core delivered another measured pulse of current, sustaining a body whose oldest parts had waited through the rise and disappearance of cities.</p>
+        <p>Beside the workbench, the bird lowered its head toward the CRT and found two orange eyes reflected in the glass. The room contained objects it recognized and others it did not. Its own body presented the same difficulty. Wedge-shaped marks, a repair strap, and a bearing worn smooth before the new mind existed all belonged to a history it could inspect but could not remember. It could read the damage without yet reading the life.</p>
+        <p>The question appeared on the screen: <em>What am I for?</em> The Builder’s hands stopped above the keyboard, and a long interval passed before the answer entered the room. “Find what doesn’t hold.” The MurderBird looked down at its repaired ankle, where a bracket flexed beneath the unfamiliar freedom of its full weight. It shifted its weight onto the sound leg, lifted the other foot, and caught the loose bracket with its beak. The metal bent as it pulled.</p>
+        <p>“That was temporary,” the Builder said, reaching toward the place where the bracket had been. The bird held out the piece for inspection. Its heart maintained a steady supply of current while its mind waited for a better answer. Temporary had described the intention behind the repair, but it had done nothing to strengthen the metal. Somewhere between the keyboard and the workbench, the next task had already become clear.</p>
+      </section>
+      <section id="the-sentinel" aria-labelledby="sentinel-title">
+        <h2 id="sentinel-title">What remains</h2>
+        <p>The MurderBird stands beside the computer now, the floor bearing its weight and the screen holding its questions. Ancient bronze survives beneath the green, interrupted by iron braces and crossed by new circuitry. Under the left shoulder remains a plate that was fitted twice. Nothing records the face above those first hammer blows or preserves the voice at the cistern. The workshop behind the ironworks is gone, but its workmanship still carries part of the load.</p>
+        <p>Most nights, the bird watches the hands doing the work and listens to the changing rhythm of the keyboard. It has learned the pause before a task is abandoned, the movement toward a closing window, and the phrase that means a weakness will be left for later. A repaired joint turns as orange light passes across metal darkened by water. Then a talon touches the casing. The file opens again.</p>
+        <figure class="murderbird-scene" id="media-sentinel">
+          <picture><source type="image/webp" srcset="/assets/img/webp/murderbird-unified-sentinel-2026-09-06-480.webp 480w, /assets/img/webp/murderbird-unified-sentinel-2026-09-06-960.webp 960w, /assets/img/webp/murderbird-unified-sentinel-2026-09-06-1536.webp 1536w" sizes="(max-width: 899px) calc(100vw - 48px), 720px" /><img src="/assets/img/library/murderbird-unified-sentinel-candidate-2026-09-06.png" sizes="(max-width: 899px) calc(100vw - 48px), 720px" width="1672" height="940" loading="lazy" decoding="async" alt="The floor-standing MurderBird watches a seated operator at a workbench, with its head inclined toward the CRT computer." /></picture>
+          <figcaption>The Sentinel watches the operator beside the CRT. Its weight remains on the workshop floor.</figcaption>
+        </figure>
+      </section>
+    </article>
+    <aside class="mac-toc-sidebar" id="toc-widget" data-toc-stop-before="visual-record" aria-label="Story chapters">
+      <nav aria-label="On this page">
+        <h2 class="manifesto-og-label">Three eras. One bird.</h2>
+        <ul class="toc-list toc-manifesto">
+          <li><a href="#the-maker">I · The Maker</a></li>
+          <li><a href="#the-water">What the water kept</a></li>
+          <li><a href="#the-mechanic">II · The Mechanic</a></li>
+          <li><a href="#the-builder">III · The Builder</a></li>
+          <li><a href="#the-heart">The heart</a></li>
+          <li><a href="#the-mind">The mind</a></li>
+          <li><a href="#first-choice">The first choice</a></li>
+          <li><a href="#the-sentinel">What remains</a></li>
+          <li><a href="#visual-record">The visual record</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+<section class="content-section container" id="visual-record" aria-labelledby="visual-title">
+  <header class="section-header">
+    <a class="section-anchor-badge" href="#visual-record">#visual-record</a>
+    <h2 id="visual-title">The visual record</h2>
+    <p>The original CRT sigil and the September 2026 character study. Watch the <a href="#media-first-choice">First Choice motion study</a> within the story.</p>
+  </header>
+  <div class="murderbird-grid">
+    <figure class="murderbird-img-wrap" id="media-crt">
+      <img src="/assets/img/library/over-kill-hill-p3-title-low-right-bird-perch-comp-square-1024.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="The original mechanical MurderBird perched on a CRT computer against industrial stripes and a blueprint grid, with the OverKill Hill P³ wordmark." />
+      <figcaption class="murderbird-caption">The original sigil. An earlier symbolic composition, not a physical scale diagram of the creature.</figcaption>
+    </figure>
+    <figure class="murderbird-img-wrap" id="media-awakening">
+      <img src="/assets/img/webp/murderbird-frontal-attack-2026-09-05-1024.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="A revised MurderBird with exposed mechanical joints, overlapping bronze plates, and an orange optical core." />
+      <figcaption class="murderbird-caption">September 2026 study. Ancient metal, industrial mechanics, and the light of an awakened mind.</figcaption>
+    </figure>
+  </div>
+  <p><a class="btn btn-quiet" href="/manifesto/#murderbird-genesis">Explore the sigil’s origin in the manifesto</a></p>
+  <p><a href="#murderbird">Back to the beginning ↑</a> · <a href="/writings/">More writings from the Hill</a></p>
+</section>
+
+  </main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-column">
+<h3>OverKill Hill P³™</h3>
+<p>Protocol-first AI systems design: local inference, multi-model coordination, and the governance layer the platforms forgot to build.</p>
+</div>
+<div class="footer-column">
+<h4>Navigation</h4>
+<ul>
+<li><a href="/#forge">The Forge</a></li>
+<li><a href="/universe/">P³ Universe</a></li>
+<li><a href="/manifesto/">The Manifesto</a></li>
+<li><a href="/projects/">Our Projects</a></li>
+<li><a href="/writings/">Writings</a></li>
+<li><a href="/about/">About OKH P³</a></li>
+<li><a href="/contact/">Contact OKH P³</a></li>
+<li><a href="/legal/">Legal</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>Connect</h4>
+<ul>
+<li><a href="mailto:contact@overkillhill.com">contact@overkillhill.com</a></li>
+<li><a href="https://ko-fi.com/overkillhillp3" rel="noopener noreferrer" target="_blank">Ko-fi</a></li>
+<li><a href="https://pro.fiverr.com/s/VYKPpoB" rel="noopener noreferrer" target="_blank">Fiverr</a></li>
+<li><a href="https://www.linkedin.com/company/overkillhillp3" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+<li><a href="https://facebook.com/OverKillHillP3/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+<li><a href="https://x.com/OverKillHillP3" rel="noopener noreferrer" target="_blank">X (Twitter)</a></li>
+<li><a href="https://www.youtube.com/@OverKillHillP3" rel="noopener noreferrer" target="_blank">YouTube</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span class="footer-built-with">Built with <a href="https://replit.com/refer/overkillhillp3/" rel="noopener noreferrer" target="_blank">Replit</a></span>
+<p class="footer-copyright">© <span id="current-year"></span> OverKill Hill P³™. All rights reserved.</p>
+<span></span>
+</div>
+</footer>
+    <script src="/assets/js/app.js?v=43f41acf"></script>
+<div aria-hidden="true" class="reading-progress" id="reading-progress"></div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The MurderBird: What the Water Kept",
+  "description": "The fictional origin of the MurderBird: ancient bronze, industrial resurrection, and the modern heart and mind that finally awaken it.",
+  "genre": "Speculative fiction",
+  "datePublished": "2026-09-05",
+  "inLanguage": "en-US",
+  "author": {"@id": "https://overkillhill.com/#organization"},
+  "publisher": {"@id": "https://overkillhill.com/#organization"},
+  "mainEntityOfPage": "https://overkillhill.com/writings/murderbird/",
+  "dateModified": "2026-09-08",
+  "image": "https://overkillhill.com/assets/img/og/murderbird-story-share-2026-09-06.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "OverKill Hill P³™", "item": "https://overkillhill.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Writings", "item": "https://overkillhill.com/writings/"},
+    {"@type": "ListItem", "position": 3, "name": "The MurderBird", "item": "https://overkillhill.com/writings/murderbird/"}
+  ]
+}
+</script>
+
+</body>
+</html>

@@ -69,7 +69,7 @@ app.innerHTML = `
               <button id="reset-view" class="control" type="button" title="Reset 3D view"><span class="control-icon">⟲</span> RESET VIEW</button>
               <button id="sound-toggle" class="control" type="button" aria-pressed="false"><span class="control-icon">♫</span> SOUND OFF</button>
             </div>
-            <p class="viewer-note">This is a procedural study model and synthesized soundscape. Final model, song, stills, and video have not been supplied.</p>
+            <p class="viewer-note">This is a procedural study model and synthesized soundscape. The source collection includes story artwork, motion studies, and the Iron Verdict instrumental demo. A finished character model and recorded vocals remain in development.</p>
           </div>
           <aside class="inspector" aria-label="Specimen details">
             <div class="inspector-header"><span>ANATOMY INDEX</span><span>01 — 04</span></div>
@@ -128,7 +128,7 @@ if (hasWebGL) {
 }
 if (!exhibit) {
   exhibit = createIllustratedExhibit(sceneElement, updateMarker);
-  document.querySelector('.viewer-note').textContent = 'Illustrated interactive view shown because WebGL is unavailable here. The procedural 3D model runs in browsers with WebGL support; final media has not been supplied.';
+  document.querySelector('.viewer-note').textContent = 'Illustrated interactive view shown because WebGL is unavailable here. The procedural 3D model runs in browsers with WebGL support. Source artwork, motion studies, and music are preserved in the project collection; they are not yet integrated into this viewer.';
 }
 
 function renderSelection(id, play = true) {
