@@ -17,6 +17,8 @@ npm run dev
 
 ## Stack
 
+See the [complete technology inventory and update plan](docs/technology-stack.md) and [current/latest version table](docs/technology-versions.md). Refresh with `npm run technology:report`. Weekly Dependabot proposals and a technology freshness workflow are configured for activation on the default branch.
+
 - [Vite](https://vitejs.dev/) for build/dev tooling, matching the main overkillhill.com site's pipeline
 - [Three.js](https://threejs.org/) for the 3D scene, vanilla rather than a framework wrapper, kept deliberately light for a single-page exhibit
 - Web Audio API for the opt-in synthesized bed and interaction effects; final stems and climax crossfade await media assets
