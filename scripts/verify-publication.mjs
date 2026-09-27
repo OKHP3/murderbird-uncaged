@@ -14,7 +14,12 @@ async function files(dir,prefix='') {
   return result.sort();
 }
 const output=await files('dist');
-const allowed=new Set(['index.html','folio.html']);
+const allowed=new Set(['index.html','folio.html','release.json']);
+const release=JSON.parse(await readFile('dist/release.json','utf8'));
+assert.match(release.revision,/^[a-f0-9]{40}$/);
+if(process.env.GITHUB_SHA){assert.equal(release.revision,process.env.GITHUB_SHA);assert.equal(release.workingTreeDirty,false,"CI release must use a clean checkout");}
+assert.deepEqual(release.files.map(f=>f.path).sort(),output.filter(f=>f!=='release.json'));
+for(const file of release.files){const bytes=await readFile('dist/'+file.path);assert.equal(bytes.length,file.bytes,file.path);assert.equal(sha(bytes),file.sha256,file.path);}
 const proof=[];
 for(const name of await files('public')) {
   const source=await readFile('public/'+name), built=await readFile('dist/'+name);

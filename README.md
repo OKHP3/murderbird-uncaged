@@ -1,70 +1,99 @@
 # MurderBird: Uncaged
 
-An interactive teardown of **The MurderBird**: turn it, inspect its mechanisms, and watch it choose. The exhibit follows three eras of construction and repair. It is a science-museum-style construction study, not a chase scene.
+**One inherited body. Three eras. An interactive mechanical-creature exhibit.**
 
-## What belongs here
+![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)
 
-This repository is the canonical home for MurderBird creative production and the interactive exhibit application: source images and video, music and lyrics, story-source snapshots, production files, models, and the app. The published MurderBird story and its page shells remain on [overkillhill.com](https://overkillhill.com/writings/murderbird/), along with stable assets needed by that website. This repository preserves versioned story-source snapshots and production provenance; a snapshot does not replace the published page.
+**[Enter the exhibit](https://okhp3.github.io/murderbird-uncaged/)** · **[View the assessment gallery](https://okhp3.github.io/murderbird-uncaged/review/)** · **[Read the origin story](https://overkillhill.com/writings/murderbird/)**
 
-FoundRy routes and incubates separate work. Accepted MurderBird production material belongs in this repository at the paths described in [the repository boundaries](docs/repository-boundaries.md).
+Meet a flightless mechanical creature whose construction changes across centuries. Orbit its enclosure, operate the Maker's external controls, engage the Mechanic's limited walking routine, and encounter the Advanced bird's attention, strikes, jump, and shield thrust. Open its assemblies to explore the machinery beneath the armor.
 
-## Exhibit status
+**Published for assessment.** This is a working 3D interpretation, not an owner-approved final character. The banner is reference artwork, not a screenshot. The gallery separates reference images, authoring renders, browser captures, and recorded motion so reviewers can compare what was intended with what was built.
 
-The current assessment checkpoint is **three exterior construction states v1**, with versioned rigid geometry, regional UV/PBR surfaces and Maker, Mechanic and Advanced configurations. Maker remains externally operated and anchored; Mechanic retains limited spring/cam movement; Advanced retains coordinated attention, encounter behavior, jump and shield thrust. See the [published assessment gallery](https://okhp3.github.io/murderbird-uncaged/review/), [regional attachment map](docs/exterior-regional-map.md), [surface pipeline](docs/exterior-surface-pipeline.md), [checks and remaining decisions](docs/exterior-stage-record.md), and [production handoff](docs/production-handoff.md). Artistic acceptance remains pending and separate from local technical checks. The [structural v1 review](assets/audit/structural-reconciliation-v1/likeness-review.html), earlier checkpoints and historical assets remain preserved. Publication is authorized for assessment; it does not settle artistic acceptance. The [story folio](https://okhp3.github.io/murderbird-uncaged/folio.html) preserves the concurrent story/media presentation and identifies its earlier model separately. See the [publication record](docs/publication-review-2026-09-27.md) for the exact release boundary. The accepted Iron Verdict theme remains visitor-controlled.
+## Three eras, three ways to move
 
-## Getting started
+| Era | What you can do | Construction |
+| --- | --- | --- |
+| **I · Maker** | Operate the leg, wing, tail, neck, and jaw controls. The supported body stays anchored. | External levers, rods, and lines; no autonomous movement or internal powered system. |
+| **II · Mechanic** | Wind and engage a slow routine of short steps, pauses, and segmented turns. | A proposed spring, reduction-gear, and cam transmission with finite stored energy. |
+| **III · Advanced** | Observe pacing and attention, choose a position at the rail, reach and retreat, or trigger a power jump and shield thrust. | Coordinated actuators, sensing, processing, and a separate fictional power supply. |
+
+The wings are flightless guards for balance and shielding. The repaired anatomical left shoulder retains limited travel. New hidden mechanisms are proposed reconstructions. Current exhibit directions and the original story are recorded separately where they differ.
+
+## Explore the exhibit
+
+- **Look around:** drag to orbit; scroll or pinch to zoom. Camera buttons and keyboard controls are also available.
+- **Choose an era:** the controls, movement, and visible construction change together.
+- **Look inside:** open for inspection, select an assembly, center it, and adjust separation. Reassemble to return to the encounter.
+- **Control the experience:** pause, reduce motion, toggle labels, and choose whether to start sound. Iron Verdict plays only after you press Play.
+- **Without WebGL:** an illustrated view preserves era-specific explanations; it does not simulate the full 3D encounter.
+
+The [story and media folio](https://okhp3.github.io/murderbird-uncaged/folio.html) preserves the illustrated narrative, motion study, and earlier model context. The **main exhibit above is the current interactive implementation**; the folio's earlier construction study is historical context.
+
+## What is ready, and what is still being assessed
+
+The current checkpoint includes three exterior configurations, regional UV/PBR surfaces, rigid articulated assemblies, era-specific controls, reversible inspection, the theme player, and a published comparison gallery.
+
+Likeness, proportions, armor rhythm, wear placement, and character acting remain open artistic questions. Motion is kinematic, not a validated force or collision simulation. Human accessibility acceptance and broader physical-device/browser coverage are separate from automated checks. Do not infer final approval from a passing build or a published page.
+
+Start an assessment with the [stage record](docs/exterior-stage-record.md), [regional attachment map](docs/exterior-regional-map.md), [surface pipeline](docs/exterior-surface-pipeline.md), and [creative authority](docs/creative-authority.md). The [production handoff](docs/production-handoff.md) identifies editable sources, exports, and historical checkpoints.
+
+## One release source
+
+**GitHub `main` is the integration and deployment source.** GitHub Actions builds the exhibit, folio, and allowlisted review gallery together and publishes one GitHub Pages artifact.
+
+- [Build checks](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/validate.yml)
+- [Pages deployment](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/deploy.yml)
+- [Live release manifest](https://okhp3.github.io/murderbird-uncaged/release.json): exact source revision and SHA-256 hashes for the published files.
+- [Release and reconciliation guide](docs/release-source-of-truth.md)
+
+A local preview is a checkout, not a second authority. Replit is development preview only. Other machines and Replit must verify their own commit against `origin/main`; this repository does not imply that an inaccessible checkout is synchronized.
+
+## Run locally
+
+Use a supported Node.js version from `package.json`, Python 3, and Git LFS for the model and media files.
 
 ```sh
+git lfs install
+git lfs pull
 npm ci
-npm run dev
+npm run dev -- --host 127.0.0.1
 ```
 
-## Stack and release
+Create and inspect the production release:
 
-This repository is a static client-side Vite and Three.js app with no backend or secrets. The OverKill Hill public website is a separate generated static-HTML site; it does not use this repository's Vite pipeline.
-
-See the [technology inventory and update plan](docs/technology-stack.md) and [version table](docs/technology-versions.md) for the app's toolchain. Refresh the inventory with `npm run technology:report` and check it with `npm run technology:check`.
-
-GitHub Actions builds the app for GitHub Pages from `main`. The current deployment workflow is in `.github/workflows/deploy.yml`; the validated build command is `npm run build`. Replit is for development preview only, not application publishing. See [replit.md](replit.md) for synchronization boundaries and the current connector limitation.
-
-To inspect a local production build, run `npm run build` followed by `npm run preview`.
-
-Files under `public/` are copied into the distributable. Put only release-approved, browser-delivered files there. Source archives, production sessions, private material, and provenance records are not deployment inputs and must never be placed under `public/`.
-
-## Media and story material
-
-Start with the [media catalog](docs/media-catalog.md), the
-[migration record](docs/migration-2026-09-26.md), and the
-[Replit handoff](docs/replit-media-handoff.md). Verify the imported public
-collection with `python3 scripts/verify-media-import.py`.
-
-The [ASUS verification addendum](docs/asus-migration-verification-2026-09-26.md)
-records the Windows byte-preservation repair, additional Skillz imagery, and
-machine-specific archive and synchronization evidence.
-
-Use [assets/README.md](assets/README.md) for the media map and [docs/repository-boundaries.md](docs/repository-boundaries.md) for source, publication, and provenance rules. Keep imported source trees intact under `assets/murderbird/` and existing image paths under `assets/img/`; retain story snapshots under `content/story/`; record custody and relationships in `provenance/`. Imported scripts, tests, and configuration from the website belong under `provenance/website-support/`, where they cannot be mistaken for active app tooling. Private local music-session archives belong at `.local/archives/music-session-2026-09-17/` only after that path is confirmed ignored by Git.
-
-## License
-
-This project has a split license; see [NOTICE.md](NOTICE.md):
-
-- **Code** is MIT licensed; see [LICENSE](LICENSE).
-- **The MurderBird itself**, including its name, character, story, art, models, and music, is all rights reserved and is not covered by the MIT grant.
-
-## Repository map
-
-```text
-src/                         interactive application source
-public/                      approved files copied into the website build
-assets/murderbird/            preserved MurderBird source and production hierarchy
-assets/img/                   source-relative and website-related image paths
-assets/audio/                 organized audio delivery and production material
-assets/images/                organized image material
-assets/models/                organized 3D models and exports
-content/story/                versioned story-source snapshots
-provenance/                   migration and asset provenance ledgers
-.local/archives/              private local archives; must be Git-ignored
-docs/                         exhibit and repository guidance
+```sh
+npm run build
+node --test tests/*.test.mjs
+node scripts/verify-theme-release.mjs
+node scripts/verify-publication.mjs
+node scripts/verify-presentation.mjs
+python3 scripts/verify-media-import.py
+npm run preview -- --host 127.0.0.1
 ```
 
-The established public story remains at [overkillhill.com/writings/murderbird](https://overkillhill.com/writings/murderbird/).
+`npm run build` includes the manifest-selected review gallery and writes `dist/release.json`. Local modified builds are marked as such. The publication verifier checks emitted media and file hashes. CI retrieves LFS objects and validates Node 24 and 26. See the [technology inventory](docs/technology-stack.md) for maintenance details.
+
+The application uses **Vite, Three.js, and Web Audio**, with no application backend. Existing Google Analytics is loaded by the page; audio remains visitor-controlled. Do not put credentials or private files into browser assets.
+
+## Sources, privacy, and ownership
+
+This is the canonical repository for MurderBird creative production and the interactive exhibit. The published original story remains on OverKill Hill. FoundRy is an incubation/routing space, and Replit is a preview environment.
+
+| Location | Purpose |
+| --- | --- |
+| `src/` | Active exhibit, era movement, folio, and audio code |
+| `assets/models/` | Versioned editable models, exports, maps, and preview renders |
+| `assets/murderbird/`, `assets/img/` | Preserved creative sources and production history |
+| `content/story/` | Provenance-linked story snapshots; not a live-page claim |
+| `docs/`, `provenance/` | Requirements, decisions, source lineage, and validation boundaries |
+| `public/` | Deliberately approved browser-delivered files |
+| `.local/` | Ignored private archives and machine-local verification |
+
+Original names, source trees, and historical candidates are preserved. Only explicit runtime references and the reviewed publication allowlist enter the website build. Private session archives are never staged or published. Read the [repository boundaries](docs/repository-boundaries.md), [asset guide](assets/README.md), [media catalog](docs/media-catalog.md), and [agent guidance](AGENTS.md) before contributing.
+
+## License and credits
+
+Created and directed by **Jamie Hill / OverKill Hill P³**.
+
+**Code:** [MIT](LICENSE). **MurderBird creative content:** all rights reserved, including the character, likeness, story, imagery, models, music, and lyrics. The code license does not grant reuse rights to the creature. See [NOTICE.md](NOTICE.md).

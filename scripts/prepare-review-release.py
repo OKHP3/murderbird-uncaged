@@ -21,6 +21,15 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'assets/review/exterior-v1-publication.json'
 REPOSITORY = 'https://github.com/OKHP3/murderbird-uncaged'
 POINTER = b'version https://git-lfs.github.com/spec/v1'
+# Shared release identity, separate from the immutable source gallery.
+BRAND_LINKS = {
+    '../favicon.svg?v=20260927': 'favicon.svg',
+    '../icons/apple-touch-icon.png?v=20260927': 'icons/apple-touch-icon.png',
+    '../safari-pinned-tab.svg?v=20260927': 'safari-pinned-tab.svg',
+    '../site.webmanifest': 'site.webmanifest',
+}
+REVIEW_URL = 'https://okhp3.github.io/murderbird-uncaged/review/'
+
 
 
 def require(condition, message):
@@ -155,6 +164,28 @@ def render(manifest, gallery, source, sha):
         'Historical validation receipts are linked from the repository and retain their original scope.</p>'
     )
     page = page.replace('<nav>', revision_note + '<nav>', 1)
+    branding = '''
+<link rel="icon" href="../favicon.svg?v=20260927" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png?v=20260927">
+<link rel="mask-icon" href="../safari-pinned-tab.svg?v=20260927" color="#a76a46">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="canonical" href="https://okhp3.github.io/murderbird-uncaged/review/">
+<meta name="theme-color" content="#171a17">
+<meta name="description" content="Compare MurderBird reference art, authoring renders and browser evidence across three mechanical eras. Published for assessment; artistic acceptance pending.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MurderBird: Uncaged">
+<meta property="og:title" content="MurderBird: Uncaged | Assessment Gallery">
+<meta property="og:url" content="https://okhp3.github.io/murderbird-uncaged/review/">
+<meta property="og:description" content="Reference art and implementation evidence. Published for assessment; artistic acceptance pending.">
+<meta property="og:image" content="https://okhp3.github.io/murderbird-uncaged/og-image.png?v=20260927">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MurderBird reference art; interactive exhibit under assessment.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://okhp3.github.io/murderbird-uncaged/og-image.png?v=20260927">
+'''
+    page = page.replace('<style>', branding + '<style>', 1)
+    require(all(url in page for url in BRAND_LINKS), 'Shared presentation metadata missing')
     require(manifest['model']['sha256'] in page, 'Gallery does not identify the pinned model')
     require('Published for assessment' in page and 'pending artistic acceptance' in page,
             'Missing assessment/acceptance status')
@@ -186,6 +217,11 @@ def check_output(dist, manifest, expected_page, sha):
     for tag, attr, url in references.links:
         if url.startswith('#'):
             require(url[1:] in references.ids, f'Unresolved review anchor: {url}')
+        elif url in BRAND_LINKS:
+            require(tag == 'link' and attr == 'href', f'Unexpected shared asset use: {url}')
+            require((dist / BRAND_LINKS[url]).is_file(), f'Missing shared identity: {url}')
+        elif url == REVIEW_URL:
+            require(tag == 'link' and attr == 'href', 'Invalid canonical URL usage')
         elif url.startswith('https://'):
             require(url.startswith(f'{REPOSITORY}/blob/{sha}/') or
                     url in {f'{REPOSITORY}/commit/{sha}',
