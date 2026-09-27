@@ -2,14 +2,14 @@
   "name": "murderbird-uncaged",
   "private": true,
   "version": "0.0.1",
-  "description": "Interactive fictional field exhibit about the MurderBird.",
+  "description": "Interactive 3D mechanical-creature exhibit across three eras of MurderBird construction.",
   "type": "module",
   "engines": {
     "node": ">=24 <27"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && python3 scripts/prepare-review-release.py",
+    "build": "vite build && python3 scripts/prepare-review-release.py && node scripts/write-release-manifest.mjs",
     "preview": "vite preview",
     "technology:report": "node scripts/check-technology-versions.mjs",
     "technology:check": "node scripts/check-technology-versions.mjs --check"
