@@ -17,10 +17,11 @@ const parts=[
   {id:'drive',name:'Winding & transmission',title:'Energy becomes movement.'},
   {id:'power',name:'Heart · power',title:'Power is one missing part.'},
   {id:'mind',name:'Mind · processing',title:'Processing is the other.'},
+  {id:'guard',name:'Wings · balance & shielding',title:'Tuck. Brace. Drive.',text:'MurderBird is flightless. Its folded wings guard the ribs and help balance close, forceful movements. The shoulder leads a short shove while the elbow drives the armored forewing; the opposite wing counters. The repaired left shoulder keeps a smaller range. The exact joint design is reconstructed for this study.'},
 ];
 const app=document.querySelector('#app');
 app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a><div class="site-shell">
-<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">MASS & POSTURE STUDY / 02</span></header>
+<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">FLIGHTLESS GUARD STUDY / 03</span></header>
 <main id="top"><section class="exhibit" id="specimen" aria-labelledby="exhibit-title">
 <div class="exhibit-heading"><div><p class="eyebrow">AN ENCOUNTER WITH AN IMPOSSIBLE MACHINE</p><h1 id="exhibit-title">MurderBird: <em>Uncaged.</em></h1></div><p>Drag to orbit. Scroll or pinch to move closer.<br>Reach deliberately. Open it when you’re ready.</p></div>
 <div class="exhibit-grid"><div class="viewer-column"><div class="viewer" id="viewer">
@@ -66,7 +67,7 @@ function renderState(force=false){
   $('reach').disabled=loading||!exhibit||s.state!=='idle'||s.paused||s.inspection||returning;
   $('arm-reach').disabled=$('reach').disabled||exhibit?.kind!=='webgl';
   if(token===lastState&&!force)return;
-  const words={idle:'Watching. Approach the front bar when you’re ready.',notice:'Noticing the approach…',warning:'Warning. The bill opens; the stance stays supported.',strike:'A controlled strike toward the contact bar.',contact:'Contact at the cage boundary.',recover:'Recovering to the resting pose.',cooldown:'Settling. Give the mechanism a moment.'};
+  const words={idle:'Watching. Approach the front bar when you’re ready.',notice:'Noticing the approach…',warning:'The wings tuck to shield the ribs. One shoulder leads.',strike:'A short shoulder-and-elbow drive accompanies the snap.',contact:'Contact at the cage boundary.',recover:'Recovering to the resting pose.',cooldown:'Settling. Give the mechanism a moment.'};
   $('encounter-status').textContent=loading?'Preparing the assembly…':returning?'Reassembling. The encounter resumes once every component is seated.':s.inspection?'Inspection is calm. Open assemblies stay still while you examine them.':s.paused?'Paused. The specimen stays calm; you can still orbit.':s.reducedMotion&&s.state!=='idle'?'Approach acknowledged. Reduced motion keeps the specimen still.':words[s.state];
   if(exhibit?.kind==='illustrated'&&!loading)$('encounter-status').textContent+=' Illustrated mode reports the response in text.';
   if(s.state==='contact'&&lastState.split(':')[0]!=='contact')sound.effect('metal');

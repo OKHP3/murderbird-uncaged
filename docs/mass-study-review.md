@@ -1,5 +1,7 @@
 # MurderBird — strength and posture review
 
+**Preserved checkpoint at `882268b`.** The next derivative implements the owner's flightless balance/shielding and shoulder/elbow clarification. See [the current shield-study review](shield-study-review.md); this report and its evidence remain historical.
+
 **2026-09-27 · PARTIAL · new owner direction implemented as a local study; likeness acceptance pending.**
 
 The owner clarified a combination of exposed Terminator machinery, B2 super battle droid strength and bulk, and Jurassic Park raptor speed and ferocity, in bird form. The [direction record](mechanical-predator-direction.md) preserves the exact instruction, its interpretation and evidence tiers. The resulting study emphasizes a broad shoulder frame, a deep trunk, substantial leg mechanisms and a compact structural neck. It remains rough character work, not finished production art.

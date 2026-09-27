@@ -1,18 +1,18 @@
 # MurderBird: Uncaged — local production handoff
 
-**Status:** a reference-informed full-body prototype and local interactive slice are present in the managed worktree. See the [current mass-study review](mass-study-review.md) for executed checks, artifact hashes, failures and limitations. Owner likeness review, visual acceptance, and any remote publication remain pending; remote publication is not authorized. See [working requirements](uncaged-requirements.md) and [creative authority](creative-authority.md).
+**Status:** a reference-informed full-body prototype and local interactive slice are present in the managed worktree. See the [current shield-study review](shield-study-review.md) for executed checks, artifact hashes, failures and limitations. Owner likeness review, visual acceptance, and any remote publication remain pending; remote publication is not authorized. See [working requirements](uncaged-requirements.md) and [creative authority](creative-authority.md).
 
 ## Source and outputs
 
-- Authoring script: [`scripts/build-uncaged-mass-study.py`](../scripts/build-uncaged-mass-study.py)
-- Editable Blender source: [`assets/models/uncaged-mass-study/murderbird-mass-study.blend`](../assets/models/uncaged-mass-study/murderbird-mass-study.blend)
-- Browser export: [`assets/models/uncaged-mass-study/murderbird-mass-study.glb`](../assets/models/uncaged-mass-study/murderbird-mass-study.glb)
+- Authoring script: [`scripts/build-uncaged-shield-study.py`](../scripts/build-uncaged-shield-study.py)
+- Editable Blender source: [`assets/models/uncaged-shield-study/murderbird-shield-study.blend`](../assets/models/uncaged-shield-study/murderbird-shield-study.blend)
+- Browser export: [`assets/models/uncaged-shield-study/murderbird-shield-study.glb`](../assets/models/uncaged-shield-study/murderbird-shield-study.glb)
 - Runtime loader and assembly contract: [`src/scene/exhibit.js`](../src/scene/exhibit.js)
 - Encounter sequence: [`src/scene/encounter-state.js`](../src/scene/encounter-state.js); controls and copy: [`src/main.js`](../src/main.js)
 
-The script is deterministic at the authoring level (fixed random seed), operates locally, creates new geometry, saves the editable `.blend`, then exports the GLB. It does not reconstruct certified hidden surfaces. The `.blend` keeps individual editable plates and fasteners. The GLB batches render meshes by named articulated assembly/material for browser delivery. It has no authored claw animation; scripted Three.js motion currently moves the bill/jaw/neck during the approach sequence.
+The script is deterministic at the authoring level (fixed random seed), operates locally, creates new geometry, saves the editable `.blend`, then exports the GLB. It does not reconstruct certified hidden surfaces. The `.blend` keeps individual editable plates and fasteners. The GLB batches render meshes by named articulated assembly/material for browser delivery. It has no authored claw animation; scripted Three.js motion currently moves the bill/jaw/neck and the wing shoulders/elbows during the approach sequence.
 
-The required root groups are `murderbird`, `body`, `neck`, `head`, `jaw`, `breastplate`, `cranial-cover`, `winding-drive`, `power-core`, `processing`, `industrial-repairs`, `builder-optics`, `left-mantle`, and `right-mantle`. The browser checks for the 13 named component groups from `body` through `right-mantle` before it accepts the model. Child mesh names describe proposed geometry such as the hooked upper bill, lower mandible, peened fasteners, shoulder repair, cavity, spring drive, ceramic cells, and processing lattice. The exact `export_scene.gltf` call and grouping pass are at the end of the script. The app's inspection view opens the breastplate and cranial cover, hides era-inapplicable systems, and offsets selected groups for the exploded view.
+The required named groups are `murderbird`, `body`, `neck`, `head`, `jaw`, `breastplate`, `cranial-cover`, `winding-drive`, `power-core`, `processing`, `industrial-repairs`, `builder-optics`, `left-mantle`, `right-mantle`, `left-wing-shield`, and `right-wing-shield`. The browser checks for the 15 named component groups from `body` through `right-wing-shield` before it accepts the model. Child mesh names describe proposed geometry such as the hooked upper bill, lower mandible, peened fasteners, shoulder repair, cavity, spring drive, ceramic cells, and processing lattice. The exact `export_scene.gltf` call and grouping pass are at the end of the script. The app's inspection view opens the breastplate and cranial cover, hides era-inapplicable systems, and offsets selected groups for the exploded view.
 
 ## Reproduction
 
@@ -21,7 +21,7 @@ Start in a clean, authorized local checkout of this branch. Do not use the indep
 ```sh
 npm ci
 npm run build
-/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/build-uncaged-mass-study.py
+/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/build-uncaged-shield-study.py
 npm run build
 ```
 
@@ -39,10 +39,14 @@ The [asset capability audit](asset-capability-audit.md) and [production workflow
 
 ## Repeat the local checks
 
-`node --test tests/encounter-state.test.mjs` runs the dependency-free response-state checks. After building, `python3 scripts/verify-uncaged-assets.py` validates the real GLB, required nodes, local build allowlist and pointer absence. `scripts/verify-uncaged-browser.mjs` accepts the path to an already installed Playwright entry module; Playwright is QA tooling and is not added to the app. Start the loopback preview on port 5174 or set `UNCAGED_URL` to another loopback URL. The browser check writes review evidence outside the runtime bundle under `assets/audit/uncaged-mass-review/`.
+`node --test tests/encounter-state.test.mjs` runs the dependency-free response-state checks. After building, `python3 scripts/verify-uncaged-assets.py` validates the real GLB, required nodes, local build allowlist and pointer absence. `scripts/verify-uncaged-browser.mjs` accepts the path to an already installed Playwright entry module; Playwright is QA tooling and is not added to the app. Start the loopback preview on port 5174 or set `UNCAGED_URL` to another loopback URL. The browser check writes review evidence outside the runtime bundle under `assets/audit/uncaged-shield-review/`.
 
-The native source currently contains 1,838 mesh objects, 13 component groups plus root and seven named landmarks. `bill-contact` and `anchor-*` move with authoring changes. Keep those landmarks rather than hard-coding a new contact offset in the browser. Before regenerating, save any manual modeling work as a new source version; the generator replaces its two named study outputs. The approximate two-metre convention must not be promoted into story canon.
+The native source currently contains 1,912 mesh objects, 15 component groups plus root and eight named landmarks. `bill-contact` and `anchor-*` move with authoring changes. Keep those landmarks rather than hard-coding a new contact offset in the browser. Before regenerating, save any manual modeling work as a new source version; the generator replaces its two named study outputs. The approximate two-metre convention must not be promoted into story canon.
 
 ## Preserved earlier revision
 
-The source under `assets/models/uncaged-study/`, original `scripts/build-uncaged-study.py`, provenance ledger `provenance/uncaged-study-2026-09-27.json` and evidence under `assets/audit/uncaged-review/` describe the earlier study. They remain intact. The mass study is a new derivative responding to the owner's later heavy-machine/predator instruction; regenerate it with the command above. Runtime contact now constrains the actual leading head surface to the front bar rather than relying on the hooked tip alone.
+The source under `assets/models/uncaged-study/`, original `scripts/build-uncaged-study.py`, provenance ledger `provenance/uncaged-study-2026-09-27.json` and evidence under `assets/audit/uncaged-review/` describe the earlier study. They remain intact. The mass study is preserved under `assets/models/uncaged-mass-study/`. The current shield study adds real elbow/forewing groups for the owner's flightless balance/shielding instruction; regenerate the shield study with the command above. Runtime contact now constrains the actual leading head surface to the front bar rather than relying on the hooked tip alone.
+
+## Flightless wing behavior
+
+`left-wing-shield` must be a child of `left-mantle`, and `right-wing-shield` of `right-mantle`; both the loader and asset validator check that hierarchy. These legacy mantle names now identify upper-wing/shoulder assemblies. The elbow groups carry the forewing armor and move with their shoulders. The right side drives; the repaired left side has smaller travel. No flight, lift or flapping motion is authored. Inspection, pause and reduced motion suppress the drive. `anchor-guard` supports the seventh readable component entry.

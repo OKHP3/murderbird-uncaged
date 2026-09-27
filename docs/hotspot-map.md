@@ -1,6 +1,6 @@
 # Hotspot map — local assembly study
 
-The six active regions below match the local prototype. Model landmarks move with the authored assemblies; readable descriptions remain outside the canvas and available in the illustrated fallback. This map records exhibit behavior, not newly established story mechanisms. See [creative authority](creative-authority.md) and [current review](mass-study-review.md).
+The seven active regions below match the local prototype. Model landmarks move with the authored assemblies; readable descriptions remain outside the canvas and available in the illustrated fallback. This map records exhibit behavior, not newly established story mechanisms. See [creative authority](creative-authority.md) and [current review](shield-study-review.md).
 
 | Region | Era and visible system | Visitor interpretation |
 |---|---|---|
@@ -10,6 +10,7 @@ The six active regions below match the local prototype. Model landmarks move wit
 | 04 · Winding & transmission | Mechanic only | A proposed finite-energy spring/drive arrangement. Maker's unexplained mechanism is not replaced by this reconstruction; Builder uses its separate power addition. |
 | 05 · Heart · power | Builder only | Proposed finite ceramic power assembly in the breast. Absent in earlier eras; not cognition or a biological organ. |
 | 06 · Mind · processing | Builder only | Proposed processing assembly behind the eyes, separately revealed by lifting the cranial cover. Absent in earlier eras; not a working AI or engineered computer. |
+| 07 · Wings · balance & shielding | All three | Flightless shoulder/elbow guard assemblies; ribs shielded by folded forewings, short asymmetric shove, smaller repaired-left travel. Exact joint design and actual balance/force remain unverified. |
 
 Selecting an absent mechanism explains its absence; focusing it is disabled. Opening and separation suspend the encounter response. A selected part can be centered in 3D; the fixed illustrated fallback does not advertise camera orbit or 3D focus.
 

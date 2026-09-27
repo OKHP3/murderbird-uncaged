@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — creative authority and discrepancy record
 
+**Latest owner clarification:** MurderBird is flightless. Its articulated wings provide balance, shielding and a tucked shoulder/elbow shove. [Flightless wing direction](flightless-wing-direction.md) controls earlier ornamental-only interpretations; [current shield review](shield-study-review.md) records the derivative and checks.
+
 **Current owner direction:** the September 27 heavy-machine/predator clarification controls the new mass and posture study. See [the recorded instruction and interpretation](mechanical-predator-direction.md) and [current review](mass-study-review.md). Earlier selections below retain their scoped appearance authority; they are not model approval.
 
 Status: evidence synthesis for local production. This record does not approve a finished character model, alter story canon, or authorize publication.

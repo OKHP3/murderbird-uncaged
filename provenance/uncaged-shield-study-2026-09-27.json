@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-27",
+  "status": "local flightless shielding-wing study; owner likeness and movement acceptance pending",
+  "authorization": "Reversible local prototype under original mandate and subsequent wing-function clarification; no publication or external asset upload",
+  "ownerDirection": "Flightless. Wings provide balance and shielding; a running back tucks in and uses shoulder and elbow to push off and shove. Exact instruction: docs/flightless-wing-direction.md.",
+  "creativeRights": "MurderBird creative output all rights reserved under NOTICE.md; repository code MIT",
+  "previousCheckpoint": "882268b",
+  "references": [
+    {
+      "path": "assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+      "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+      "scope": "Lead-selected visible identity; not owner model approval"
+    },
+    {
+      "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "scope": "Documented owner selection for head only"
+    }
+  ],
+  "baseAssets": [
+    {
+      "path": "scripts/build-uncaged-mass-study.py",
+      "bytes": 26755,
+      "sha256": "60bab787f39612c3f0de748a61fad4e862b05f871c185e6e826040aab5ac0400"
+    },
+    {
+      "path": "assets/models/uncaged-mass-study/murderbird-mass-study.blend",
+      "bytes": 1330192,
+      "sha256": "ff5148cba9d2fa74cd2fb6169ca24f8ae74571a206e02be66e057168e5871eb9"
+    },
+    {
+      "path": "assets/models/uncaged-mass-study/murderbird-mass-study.glb",
+      "bytes": 3600600,
+      "sha256": "53aeebf78aba1c2c479f1ebd5c502904b6e5e90a5bd28460344805ea1fed4728"
+    }
+  ],
+  "method": "Local Blender procedural meshes; existing body retained, one-piece mantles replaced by articulated upper-wing/shoulder and elbow/forewing shielding assemblies",
+  "tools": {
+    "blender": "5.2.1 LTS, 9e2066aef7ef, existing verified signed/notarized local installation",
+    "runtime": "Existing Vite 8.3.1, Three.js 0.186.1 and Web Audio; no app dependency added"
+  },
+  "outputs": [
+    {
+      "path": "scripts/build-uncaged-shield-study.py",
+      "bytes": 28293,
+      "sha256": "a07b58d81f920ea4b30ed429ab8b69bf9a86276dc1f8e216ad4f6279f9cc34ba"
+    },
+    {
+      "path": "assets/models/uncaged-shield-study/murderbird-shield-study.blend",
+      "bytes": 1383830,
+      "sha256": "c71b10da2f20454c7db3c04f4ec9c250f4106c6bbd692a60598b81738c7cbdb0"
+    },
+    {
+      "path": "assets/models/uncaged-shield-study/murderbird-shield-study.glb",
+      "bytes": 3747052,
+      "sha256": "d65dc8dcd642a1a60a642678118b2abb063db92000d74015fd8cc8ce6f279fbc"
+    }
+  ],
+  "nativeValidation": {
+    "source": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-shield-study/murderbird-shield-study.blend",
+    "meshObjects": 1912,
+    "emptyObjects": 24,
+    "height": 2.0530246067792177,
+    "width": 1.6095318794250488,
+    "depth": 1.7200073599815369,
+    "limits": "Native bounding boxes, not engineering or evaluated modifier bounds."
+  },
+  "runtimeContract": {
+    "assemblies": 15,
+    "elbowParenting": {
+      "left-wing-shield": "left-mantle",
+      "right-wing-shield": "right-mantle"
+    },
+    "landmarks": 8,
+    "motion": "Asymmetric short drive, larger right shoulder/elbow travel; repaired left range limited. No flight, lift or flapping animation."
+  },
+  "preservation": "Both earlier studies, their generators, output binaries and review records remain intact. Historical source imagery and private archives untouched.",
+  "limits": [
+    "Exact anatomy, joint geometry and repaired-shoulder topology remain reconstructions",
+    "A posed counterbalance is not validated balance, force, cage-impact physics or engineering",
+    "Wing gesture stays within cage; the beak supplies the existing explicit bar contact",
+    "No full-body locomotion or claw strike",
+    "Owner likeness and motion acceptance, physical-device performance, remote LFS/CI/deployment remain unverified"
+  ]
+}

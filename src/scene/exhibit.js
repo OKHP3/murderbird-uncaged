@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-mass-study/murderbird-mass-study.glb', import.meta.url).href;
+const modelUrl = new URL('../../assets/models/uncaged-shield-study/murderbird-shield-study.glb', import.meta.url).href;
 const FRONT = 1.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
@@ -109,9 +109,9 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   }
   clearTimeout(timeout);
   const model = gltf.scene; scene.add(model);
-  const names = ['body','neck','head','jaw','breastplate','cranial-cover','winding-drive','power-core','processing','industrial-repairs','builder-optics','left-mantle','right-mantle'];
+  const names = ['body','neck','head','jaw','breastplate','cranial-cover','winding-drive','power-core','processing','industrial-repairs','builder-optics','left-mantle','right-mantle','left-wing-shield','right-wing-shield'];
   const nodes = Object.fromEntries(names.map(name => [name, model.getObjectByName(name)]));
-  if (names.some(name => !nodes[name])) {
+  if (names.some(name => !nodes[name]) || nodes['left-wing-shield']?.parent !== nodes['left-mantle'] || nodes['right-wing-shield']?.parent !== nodes['right-mantle']) {
     controls.dispose(); environment.dispose(); renderer.dispose(); canvas.remove();
     throw new Error('Model assembly contract is incomplete.');
   }
@@ -121,13 +121,14 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   const markerNodes = {
     beak: ['head', [0,-.035,.28]], joint:['body',[.28,.6,.07]],
     shell:['breastplate',[.245,-.19,.01]], drive:['winding-drive',[.13,0,0]],
-    power:['power-core',[0,0,.055]], mind:['processing',[0,.04,0]],
+    power:['power-core',[0,0,.055]], mind:['processing',[0,.04,0]], guard:['right-wing-shield',[-.085,.12,.125]],
   };
   const anchors = Object.fromEntries(Object.entries(markerNodes).map(([id,[name,p]])=>{const landmark=model.getObjectByName('anchor-'+id);if(landmark)return [id,landmark];const o=new THREE.Object3D();o.position.set(...p);nodes[name].add(o);return [id,o];}));
   const billTip = model.getObjectByName('bill-contact');
   if(!billTip)throw new Error('Model contact landmark is missing.');
   const exploded = {
     breastplate:[-.70,-.12,.18], 'left-mantle':[.39,.09,0], 'right-mantle':[-.39,.09,0],
+    'left-wing-shield':[.11,-.04,.12], 'right-wing-shield':[-.11,-.04,.12],
     'winding-drive':[-.45,-.10,.22], 'power-core':[.32,-.05,.28], processing:[.28,.20,0], 'cranial-cover':[0,.14,0],
   };
   const lines = {};
@@ -203,6 +204,16 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       nodes.neck.rotation.x=-anticipation*.075+extension*.26;
       nodes.head.rotation.y=snapshot.reach.x*.16*(1-extension);
       nodes.jaw.rotation.x=-beak*.32;
+      // Flightless wings tuck over the ribs, then deliver a short shoulder/elbow
+      // drive. The repaired left shoulder moves less and counterbalances.
+      const guard=state==='warning'?p:state==='strike'||state==='contact'?1:state==='recover'?1-p:0;
+      nodes['right-mantle'].rotation.x=-guard*.23;
+      nodes['right-mantle'].rotation.y=guard*.08;
+      nodes['right-wing-shield'].rotation.x=guard*.32+extension*.08;
+      nodes['left-mantle'].rotation.x=guard*.065;
+      nodes['left-mantle'].rotation.y=-guard*.045;
+      nodes['left-wing-shield'].rotation.x=guard*.18;
+
       // The leading modeled surface meets the bar, including the broad curved bill.
       // A tip-only constraint can let the upper hook pass through the rail.
       // The bounded cervical slide remains an illustrative rigid mechanism.
@@ -249,7 +260,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     setArmed(value){armed=value;controls.enabled=!value;canvas.style.cursor=value?'crosshair':'grab';pointer=null;},
     isAssembled(){return open===0&&separation===0;},
     focus(id){const anchor=anchors[id];if(!anchor||!nodes[markerNodes[id]?.[0]]?.visible)return;anchor.getWorldPosition(vector);const delta=vector.clone().sub(controls.target);controls.target.copy(vector);camera.position.add(delta);controls.update();},
-    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
+    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,wingAngles:{leftShoulder:nodes['left-mantle'].rotation.x,leftElbow:nodes['left-wing-shield'].rotation.x,rightShoulder:nodes['right-mantle'].rotation.x,rightElbow:nodes['right-wing-shield'].rotation.x},wingBounds:{left:new THREE.Box3().setFromObject(nodes['left-mantle'],true),right:new THREE.Box3().setFromObject(nodes['right-mantle'],true)},contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
     destroy(){listeners.abort();controls.dispose();environment.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});renderer.dispose();canvas.remove();},
   };
 }

@@ -8,7 +8,7 @@ export function createIllustratedExhibit(container, updateMarker) {
   let open=false,era='builder',separation=0;
   img.addEventListener('error',()=>{img.hidden=true;container.querySelector('.illustrated-caption').textContent='Reference image unavailable. The component descriptions remain available; Retry 3D also retries this image.';});
   function update(){
-    for(const id of ['beak','joint','shell','drive','power','mind'])updateMarker(id,0,0,false);
+    for(const id of ['beak','joint','shell','drive','power','mind','guard'])updateMarker(id,0,0,false);
     diagram.hidden=!open;
     for(const name of ['drive','power','mind'])diagram.querySelector(`[data-schematic="${name}"]`).style.display=(name==='drive'?era==='mechanic':era==='builder')?'':'none';
     diagram.querySelector('[data-schematic="shell"]').setAttribute('transform',`translate(${-20*separation} 0)`);

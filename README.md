@@ -10,7 +10,7 @@ FoundRy routes and incubates separate work. Accepted MurderBird production mater
 
 ## Exhibit status
 
-This branch contains a local Blender/GLB assembly study with orbit, a deliberate cage response, reversible opening/explosion, three-era system visibility, and an illustrated fallback. The owner requested robot-like strength and raptor-like speed in bird form; the new mass/posture study has broader shoulders, a deep trunk and substantial joint mechanisms. Likeness review remains pending. It is not a finished character model. See the [requirements](docs/uncaged-requirements.md), [current review](docs/mass-study-review.md), [likeness comparison](assets/audit/uncaged-mass-review/likeness-review.html), and [production handoff](docs/production-handoff.md). The accepted Iron Verdict theme remains visitor-controlled. Imported material retains its recorded status and provenance.
+This branch contains a local Blender/GLB assembly study with orbit, a deliberate cage response, reversible opening/explosion, three-era system visibility, and an illustrated fallback. The owner requested robot-like strength and raptor-like speed in bird form; the current flightless-wing study adds articulated shoulders and elbows for balance, tucked shielding and a short asymmetric shove. Likeness review remains pending. It is not a finished character model. See the [requirements](docs/uncaged-requirements.md), [current review](docs/shield-study-review.md), [likeness comparison](assets/audit/uncaged-shield-review/likeness-review.html), and [production handoff](docs/production-handoff.md). The accepted Iron Verdict theme remains visitor-controlled. Imported material retains its recorded status and provenance.
 
 ## Getting started
 
