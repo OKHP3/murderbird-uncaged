@@ -69,7 +69,7 @@ app.innerHTML = `
               <button id="reset-view" class="control" type="button" title="Reset 3D view"><span class="control-icon">⟲</span> RESET VIEW</button>
               <button id="sound-toggle" class="control" type="button" aria-pressed="false"><span class="control-icon">♫</span> SOUND OFF</button>
             </div>
-            <p class="viewer-note">This is a procedural study model and synthesized soundscape. The source collection includes story artwork, motion studies, and the Iron Verdict instrumental demo. A finished character model and recorded vocals remain in development.</p>
+            <p class="viewer-note">Explore the procedural study model and listen to Iron Verdict, the MurderBird theme song, below. The source collection preserves story artwork and motion studies; a finished character model remains in development.</p>
           </div>
           <aside class="inspector" aria-label="Specimen details">
             <div class="inspector-header"><span>ANATOMY INDEX</span><span>01 — 04</span></div>
@@ -128,7 +128,7 @@ if (hasWebGL) {
 }
 if (!exhibit) {
   exhibit = createIllustratedExhibit(sceneElement, updateMarker);
-  document.querySelector('.viewer-note').textContent = 'Illustrated interactive view shown because WebGL is unavailable here. The procedural 3D model runs in browsers with WebGL support. Source artwork, motion studies, and music are preserved in the project collection; they are not yet integrated into this viewer.';
+  document.querySelector('.viewer-note').textContent = 'Illustrated interactive view shown because WebGL is unavailable here. The procedural 3D model runs in browsers with WebGL support. Listen to Iron Verdict, the MurderBird theme song, using the player below.';
 }
 
 function renderSelection(id, play = true) {
@@ -190,9 +190,7 @@ document.querySelector('#sound-toggle').addEventListener('click', async event =>
     button.disabled = false;
   }
 });
-if (import.meta.env.DEV && __LOCAL_THEME_PREVIEW__) {
-  const { mountThemePlayer } = await import('./audio/theme-player.js');
-  mountThemePlayer(document.querySelector('.viewer-column'), sound);
-}
+const { mountThemePlayer } = await import('./audio/theme-player.js');
+mountThemePlayer(document.querySelector('.viewer-column'), sound);
 renderSelection('beak', false);
 new ResizeObserver(() => exhibit.resize()).observe(viewerElement);

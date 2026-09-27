@@ -1,14 +1,23 @@
 import './theme-player.css';
 
-// This module is dynamically loaded only by an explicitly enabled local preview.
-// Decode lossless masters once; AudioBufferSourceNode loops sample-accurately.
+// The full song uses its listening copy; the loop is lossless and repeats exact
+// decoded samples. Private working masters remain an opt-in local override.
+const localPreview = import.meta.env.DEV && __LOCAL_THEME_PREVIEW__;
+const tracks = localPreview ? {
+  full: '/__theme-preview/full.wav',
+  loop: '/__theme-preview/loop.wav',
+} : {
+  full: `${import.meta.env.BASE_URL}audio/iron-verdict-v3/full-song.mp3`,
+  loop: `${import.meta.env.BASE_URL}audio/iron-verdict-v3/seamless-loop.flac`,
+};
+
 export function mountThemePlayer(container, sound) {
   const panel = document.createElement('section');
   panel.className = 'theme-player';
   panel.setAttribute('aria-labelledby', 'theme-title');
   panel.innerHTML = `
-    <div class="theme-heading"><div><p class="theme-eyebrow">LOCAL LISTENING PREVIEW</p><h3 id="theme-title">Iron Verdict</h3></div><span class="theme-badge">MURDERBIRD THEME</span></div>
-    <p class="theme-description">Choose the full song or repeating exhibit mix. Playback begins when you press Play.</p>
+    <div class="theme-heading"><div><p class="theme-eyebrow">${localPreview ? 'LOCAL LISTENING PREVIEW' : 'THE SOUND OF MURDERBIRD'}</p><h3 id="theme-title">Iron Verdict</h3></div><span class="theme-badge">MURDERBIRD THEME</span></div>
+    <p class="theme-description">Choose the full song or repeating exhibit mix. Playback begins when you press Play. <a href="${import.meta.env.BASE_URL}audio/iron-verdict-v3/lyrics.txt">Read the lyrics</a>.</p>
     <div class="theme-controls">
       <button id="theme-play" type="button" aria-pressed="false">Play</button>
       <button id="theme-restart" type="button">Restart</button>
@@ -86,8 +95,8 @@ export function mountThemePlayer(container, sound) {
         loading = new AbortController();
         status.textContent = `Loading ${label().toLowerCase()}…`;
         updateControls();
-        const response = await fetch(`/__theme-preview/${selectedMode}.wav`, { signal: loading.signal, cache: 'no-store' });
-        if (!response.ok) throw new Error(response.status === 404 ? 'The selected local master is not available yet.' : 'The local master could not be loaded.');
+        const response = await fetch(tracks[selectedMode], { signal: loading.signal, cache: localPreview ? 'no-store' : 'default' });
+        if (!response.ok) throw new Error('The selected song could not be loaded.');
         buffer = await context.decodeAudioData(await response.arrayBuffer());
         if (currentRequest !== requestId) return;
         buffers.set(selectedMode, buffer);

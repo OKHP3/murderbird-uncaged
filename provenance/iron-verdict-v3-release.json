@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "title": "MurderBird: Iron Verdict",
+  "version": "production-v3",
+  "recorded_at_utc": "2026-09-27T04:00:54.392853+00:00",
+  "status": "Owner accepted song and explicitly authorized deployment and push to origin/main in this production chat; deployment verification is separate.",
+  "rights": "All rights reserved under NOTICE.md; no models, voicebanks or software packages are distributed with the runtime audio.",
+  "origin": {
+    "method": "Original locally generated sung performance and arrangement using existing Iron Verdict lyrics/composition and preserved MurderBird story as creative sources. No identifiable singer was requested for cloning or imitation.",
+    "historical_source": "assets/murderbird/production/audio/iron-verdict/",
+    "story_source_revision": "f1142a02f1e73cd45e46e981022aef27f1c6e095",
+    "published_story": "https://overkillhill.com/writings/murderbird/"
+  },
+  "generation": {
+    "tool": "ACE-Step 1.5",
+    "code_commit": "ca1e85fe9430179831e6bc6be790c332190a3866",
+    "code_license": "MIT",
+    "code_source": "https://github.com/ace-step/ACE-Step-1.5",
+    "model_source": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+    "model_revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "model_license_evidence": "Pinned official model card declares MIT and permits commercial output; underlying training-item rights were not independently audited.",
+    "seed": 927105
+  },
+  "finishing": {
+    "tools": [
+      {
+        "name": "Demucs 4.0.1",
+        "license": "MIT",
+        "source": "https://github.com/facebookresearch/demucs"
+      },
+      {
+        "name": "NumPy / SciPy / SoundFile",
+        "role": "Local signal processing and lossless export"
+      },
+      {
+        "name": "FFmpeg",
+        "role": "Local MP3 and FLAC encoding / loudness measurement"
+      }
+    ],
+    "method": "Estimated stems reconstructed with separation residual retained, common highpass and gain, short synthesized instrumental room release; full masters preserved locally. Loop folds the outgoing instrumental tail under the original entrance.",
+    "external_samples_added": false
+  },
+  "verification": {
+    "aligned_full_frames_48khz": 7092000,
+    "loop_frames_48khz": 6978462,
+    "lossless_loop_matches_wav_pcm": true,
+    "repeated_cycles_checked": 3,
+    "no_full_scale_clipping": true,
+    "loop_true_peak_dbtp": -1.7,
+    "owner_listening_acceptance": "Accepted in the release authorization message; no claim of separate testing by a human vocalist."
+  },
+  "assets": [
+    {
+      "path": "public/audio/iron-verdict-v3/full-song.mp3",
+      "source": "local production v3 delivery: full-song.mp3",
+      "sha256": "88d21ba2bafc8750976f133006f7aee416192e72dcef40ef13a4f561f06bd249",
+      "bytes": 5912684,
+      "duration_seconds": 147.75,
+      "role": "Complete sung theme, 320 kbps listening copy",
+      "transformation": "Byte-identical copy of accepted delivery file"
+    },
+    {
+      "path": "public/audio/iron-verdict-v3/seamless-loop.flac",
+      "source": "local production v3 delivery: seamless-loop.flac",
+      "sha256": "d9bc121c0c2f1a04ff8456b8aeea1ae6d48fdc1777119ef4823bebc458425a72",
+      "bytes": 30880257,
+      "duration_seconds": 145.384625,
+      "role": "Lossless 48 kHz / 24-bit stereo repeating version",
+      "transformation": "Byte-identical copy of accepted delivery file"
+    },
+    {
+      "path": "public/audio/iron-verdict-v3/lyrics.txt",
+      "source": "local production v3 delivery: lyrics.txt",
+      "sha256": "1c15ca04684c34329ed9c53018960e23e0556280e571b57bb168ebda88749e89",
+      "bytes": 1181,
+      "role": "Text alternative: approved composition lyrics",
+      "transformation": "Byte-identical copy of accepted lyric sheet; no session metadata"
+    }
+  ],
+  "private_boundary": "Only these two audio delivery files and the lyric text are approved runtime copies. Original renders, stems, editable sessions, models, logs, analysis and private archives remain local and are excluded from the site build."
+}

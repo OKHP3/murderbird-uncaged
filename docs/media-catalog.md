@@ -13,11 +13,12 @@ they had when written; this catalog provides current navigation.
 | Skillz Forge related artwork | [Related source copy](../assets/related/skillz/README.md) | Public Forge consumer derivatives, with unknown underlying generation lineage; retained separately and not approved as new exhibit inputs. |
 | Video source collection | `assets/murderbird/production/video/`, [historical migration notes](../assets/docs/murderbird-video-migration-2026-09-08.md) | Legacy clips and pilots include held or rejected motion; preserve duplicate source copies. |
 | Website motion clip | `assets/video/murderbird-first-choice-635f0e15.mp4` | Existing public website delivery copy. No new artistic approval is inferred. |
-| Iron Verdict music | [Audio production README](../assets/murderbird/production/audio/iron-verdict/README.md) | Instrumental demo, GarageBand session and preview, MIDI, stems, arrangement, and source scripts. |
+| Accepted sung theme v3 | [Audio brief](audio-brief.md), [release provenance](../provenance/iron-verdict-v3-release.json) | Owner accepted the synthesized sung theme and authorized publication; full-song MP3 and lossless loop are explicit app inputs. Editable sessions and stems remain local. |
+| Historical Iron Verdict music | [Audio production README](../assets/murderbird/production/audio/iron-verdict/README.md) | Instrumental demo, GarageBand session and preview, MIDI, stems, arrangement, and source scripts. |
 | Lyrics and vocal composition | [Performance sheet v2](../assets/murderbird/production/audio/iron-verdict/vocal-score-v2/performance-sheet.md) | Complete lyrics and notated melody with PDF, MusicXML, MIDI, pitch guide, and rehearsal mix. These are not a recorded singer's performance. |
 | Earlier lyric and private sessions | `.local/archives/` in the owner's Mac clone | Preserved local archives include the earlier lyric and production sessions. Private library/profile context stays local. |
 | 3D staging | [Scale-stage notes](../assets/murderbird/v2/production/README.md) | Blender scale proxy, not a finished character model or rig. |
-| Interactive app | `src/` | Existing procedural Three.js study, illustrated fallback, and synthesized soundscape. Imported media is not yet wired into the viewer. |
+| Interactive app | `src/` | Procedural Three.js study, illustrated fallback, optional synthesized soundscape, and visitor-controlled accepted theme song. Imported visual production archives remain separate from the viewer. |
 
 ## Working from the collection
 
