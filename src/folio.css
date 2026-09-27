@@ -1,0 +1,356 @@
+.era-chooser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 12px;
+  border: 1px solid #4e564c;
+  background: #4e564c;
+}
+
+.era-chooser button {
+  display: grid;
+  min-height: 78px;
+  align-content: start;
+  gap: 5px;
+  padding: 12px 14px;
+  border: 0;
+  background: #171c18;
+  color: #d9d3c3;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.era-chooser button:hover,
+.era-chooser button[aria-pressed="true"] {
+  background: #293129;
+  color: #f1dfb8;
+}
+
+.era-chooser button > span {
+  color: #b68b56;
+  font: 600 9px/1.2 var(--mono, monospace);
+  letter-spacing: .1em;
+}
+
+.era-chooser button strong {
+  font: 500 14px/1.15 var(--serif, Georgia, serif);
+}
+
+.era-chooser button small {
+  color: #9ea195;
+  font: 9px/1.4 var(--mono, monospace);
+}
+
+.era-chooser button:focus-visible,
+.part-list button:focus-visible,
+.control:focus-visible,
+.marker:focus-visible,
+.lyrics-details summary:focus-visible,
+.source-note summary:focus-visible,
+.production-note summary:focus-visible {
+  outline: 2px solid #d6a66c;
+  outline-offset: 3px;
+  z-index: 2;
+}
+
+.era-summary {
+  min-height: 3.3em;
+  margin: 0 0 16px;
+  color: #55594f;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.era-summary a,
+.story-thread {
+  color: #775436;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.eras article a,
+.production-note a {
+  color: #d3a86e;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.era-summary a {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.specimen-facts {
+  display: grid;
+  gap: 13px;
+  margin: 20px 0;
+}
+
+.specimen-facts > div {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #c9c3b4;
+}
+
+.specimen-facts dt {
+  margin-bottom: 5px;
+  color: #805a34;
+  font: 600 9px/1.3 var(--mono, monospace);
+  letter-spacing: .12em;
+}
+
+.specimen-facts dd {
+  margin: 0;
+  color: #4e554a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.story-passage {
+  margin: 19px 0 12px;
+  padding: 0 0 0 14px;
+  border-left: 2px solid #9a7349;
+  color: #353b33;
+  font: italic 16px/1.5 var(--serif, Georgia, serif);
+}
+
+.story-thread {
+  display: inline-block;
+  margin: 4px 0 15px;
+  font: 600 9px/1.5 var(--mono, monospace);
+  letter-spacing: .06em;
+}
+
+.observation {
+  margin: 0;
+  padding-top: 13px;
+  border-top: 1px solid #c9c3b4;
+  color: #565d52;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.observation span {
+  display: block;
+  margin-bottom: 5px;
+  color: #805a34;
+  font: 600 9px/1.3 var(--mono, monospace);
+  letter-spacing: .1em;
+}
+
+.water-interlude {
+  background: rgba(67, 82, 75, .15);
+}
+
+.source-note {
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid #444b42;
+  color: #b6b5a8;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.source-note summary,
+.lyrics-details summary,
+.production-note > summary {
+  color: #d5b37f;
+  cursor: pointer;
+  font: 600 10px/1.6 var(--mono, monospace);
+  letter-spacing: .04em;
+}
+
+.source-note p {
+  margin: 10px 0 0;
+}
+
+.music-stack {
+  display: grid;
+  gap: 15px;
+  align-content: start;
+}
+
+.playback-card audio {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  margin: 16px 0 12px;
+}
+
+.vocal-score {
+  margin-top: 22px;
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid #41483e;
+  background: #171c18;
+}
+
+.vocal-score-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.vocal-score-heading h3 {
+  margin: 3px 0 0;
+}
+
+.vocal-score-heading > span {
+  max-width: 150px;
+  color: #c29660;
+  font: 600 9px/1.5 var(--mono, monospace);
+  letter-spacing: .08em;
+  text-align: right;
+}
+
+.performance-direction,
+.lyrics-status {
+  color: #b6b6a9;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.performance-direction {
+  padding: 13px 15px;
+  border-left: 2px solid #9f784e;
+  background: rgba(255, 255, 255, .025);
+}
+
+.lyrics-details {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #41483e;
+}
+
+.lyrics-details > summary {
+  font-size: 11px;
+}
+
+.lyrics-status {
+  margin: 14px 0 20px;
+}
+
+.lyrics-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+}
+
+.lyric-section {
+  padding: 15px 0;
+  border-top: 1px solid #343c34;
+}
+
+.lyric-section h4 {
+  margin: 0 0 5px;
+  color: #dfc59b;
+  font: 500 16px/1.35 var(--serif, Georgia, serif);
+}
+
+.lyric-direction {
+  margin: 0 0 10px;
+  color: #9fa395;
+  font: 10px/1.5 var(--mono, monospace);
+}
+
+.lyric-lines {
+  margin: 0;
+  color: #e3e0d4;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.lyric-lines span {
+  display: block;
+}
+
+.lyric-instrumental {
+  color: #929789;
+  font-style: italic;
+}
+
+.production-note {
+  margin: 0 5%;
+  padding: 17px 0;
+  border-top: 1px solid #41483e;
+  border-bottom: 1px solid #41483e;
+}
+
+.production-note[open] > summary {
+  margin-bottom: 15px;
+}
+
+.production-note-body {
+  max-width: 900px;
+  color: #aaa99e;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.production-note-body p {
+  margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+  .era-summary {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .era-chooser button {
+    min-height: 78px;
+    padding: 10px 8px;
+  }
+
+  .era-chooser button strong {
+    font-size: 12px;
+  }
+
+  .era-chooser button small {
+    font-size: 8px;
+  }
+
+  .era-summary {
+    font-size: 11px;
+  }
+
+  .specimen-facts {
+    gap: 10px;
+    margin: 16px 0;
+  }
+
+  .vocal-score-heading {
+    display: block;
+  }
+
+  .vocal-score-heading > span {
+    display: block;
+    max-width: none;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .lyrics-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .production-note {
+    margin: 0 5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .era-chooser button,
+  .part-list button,
+  .control,
+  .marker {
+    transition: none !important;
+    animation: none !important;
+  }
+}

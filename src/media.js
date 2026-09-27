@@ -9,6 +9,7 @@ import sentinel from '../assets/img/webp/murderbird-unified-sentinel-2026-09-06-
 import pilotPoster from '../assets/img/murderbird-first-choice-poster.jpg';
 import pilotVideo from '../assets/video/murderbird-first-choice-635f0e15.mp4';
 import ironVerdictTrack from '../assets/murderbird/production/audio/iron-verdict/murderbird-iron-verdict.mp3';
+import garageBandTrack from '../assets/audio/murderbird-iron-verdict-garageband-preview-192k.mp3';
 
 export const murderBirdHero = {
   src: hero960,
@@ -59,4 +60,4 @@ export const firstChoicePilot = {
   poster: pilotPoster,
 };
 
-export { ironVerdictTrack };
+export { garageBandTrack, ironVerdictTrack };
