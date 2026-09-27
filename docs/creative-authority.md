@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — creative authority and discrepancy record
 
+**Current owner direction:** the September 27 heavy-machine/predator clarification controls the new mass and posture study. See [the recorded instruction and interpretation](mechanical-predator-direction.md) and [current review](mass-study-review.md). Earlier selections below retain their scoped appearance authority; they are not model approval.
+
 Status: evidence synthesis for local production. This record does not approve a finished character model, alter story canon, or authorize publication.
 
 ## Authority order and decisions
@@ -68,3 +70,9 @@ Consequential choices that remain open for review are: (1) the cage’s visual l
 ## Owner checkpoint, September 27, 2026
 
 The first local assembly study was presented with a comparison against candidate 03. The owner answered **“Rework the proportions first.”** That is a request for correction, not approval. The next revision moves visual mass into the torso and pelvis, shortens exposed legs, and broadens/compacts the neck. The revised rendering remains **awaiting owner review**. The [local comparison](../assets/audit/uncaged-review/likeness-review.html) retains the prior view and the current render; neither replaces the selected raster references.
+
+## Owner clarification: heavy mechanical predator
+
+The owner identified the B2-series super battle droid and combined its bulk/strength with exposed Terminator machinery and Jurassic Park raptor speed/ferocity, explicitly in a birdlike form. The exact message, evidence tiers and bounded interpretation are in [mechanical predator direction](mechanical-predator-direction.md). This supports a more substantial torso, shoulders and leg mechanisms, a compact structural neck and fast deliberate response. It does not introduce a humanoid body, dinosaur tail, franchise identity or new heart/brain history.
+
+The new editable derivative is `assets/models/uncaged-mass-study/murderbird-mass-study.blend`; the earlier study and comparison remain preserved. Artistic acceptance of the new study is pending.

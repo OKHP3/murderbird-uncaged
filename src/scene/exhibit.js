@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-study/murderbird-study.glb', import.meta.url).href;
+const modelUrl = new URL('../../assets/models/uncaged-mass-study/murderbird-mass-study.glb', import.meta.url).href;
 const FRONT = 1.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
@@ -137,6 +137,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   let lastSnapshot, lastWidth=0, lastHeight=0;
   const vector = new THREE.Vector3();
   const worldTip = new THREE.Vector3();
+  const contactBounds = new THREE.Box3();
   const frameTimes = [];
   const highlight = new THREE.Box3Helper(new THREE.Box3(),0xd9b87b); highlight.visible=false;scene.add(highlight);
 
@@ -202,10 +203,15 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       nodes.neck.rotation.x=-anticipation*.075+extension*.26;
       nodes.head.rotation.y=snapshot.reach.x*.16*(1-extension);
       nodes.jaw.rotation.x=-beak*.32;
-      // A constrained cervical slide reaches the contact rail. Feet never translate.
-      model.updateMatrixWorld(true);billTip.getWorldPosition(worldTip);
-      const travel=clamp((FRONT-worldTip.z-.021)/nodes.neck.parent.getWorldScale(vector).z,0,.20);
-      nodes.neck.position.z+=travel*extension;
+      // The leading modeled surface meets the bar, including the broad curved bill.
+      // A tip-only constraint can let the upper hook pass through the rail.
+      // The bounded cervical slide remains an illustrative rigid mechanism.
+      if(extension>0){
+        model.updateMatrixWorld(true);
+        contactBounds.setFromObject(nodes.head,true);
+        const travel=clamp((FRONT-contactBounds.max.z-.021)/nodes.neck.parent.getWorldScale(vector).z,-.10,.20);
+        nodes.neck.position.z+=travel*extension;
+      }
     }
     model.updateMatrixWorld(true);
     billTip.getWorldPosition(worldTip);
@@ -243,7 +249,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     setArmed(value){armed=value;controls.enabled=!value;canvas.style.cursor=value?'crosshair':'grab';pointer=null;},
     isAssembled(){return open===0&&separation===0;},
     focus(id){const anchor=anchors[id];if(!anchor||!nodes[markerNodes[id]?.[0]]?.visible)return;anchor.getWorldPosition(vector);const delta=vector.clone().sub(controls.target);controls.target.copy(vector);camera.position.add(delta);controls.update();},
-    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
+    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
     destroy(){listeners.abort();controls.dispose();environment.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});renderer.dispose();canvas.remove();},
   };
 }

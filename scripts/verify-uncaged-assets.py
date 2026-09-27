@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,struct
 ROOT=Path(__file__).resolve().parents[1]
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
-model=ROOT/'assets/models/uncaged-study/murderbird-study.glb'
+model=ROOT/'assets/models/uncaged-mass-study/murderbird-mass-study.glb'
 data=model.read_bytes()
 assert data[:4]==b'glTF','GLB is missing or an LFS pointer'
 magic,version,size=struct.unpack_from('<III',data)
@@ -17,12 +17,12 @@ for name in required:assert names.count(name)==1,name
 assert not any(x.get('uri') for x in gltf.get('buffers',[])+gltf.get('images',[])),'GLB must be self-contained'
 assert all(a['count']>0 for a in gltf['accessors'])
 triangles=sum(gltf['accessors'][p['indices']]['count']//3 for m in gltf['meshes'] for p in m['primitives'])
-blend=ROOT/'assets/models/uncaged-study/murderbird-study.blend'
+blend=ROOT/'assets/models/uncaged-mass-study/murderbird-mass-study.blend'
 assert len(blend.read_bytes())>10000 and not blend.read_bytes().startswith(b'version https://git-lfs')
 files=sorted(p for p in (ROOT/'dist').rglob('*') if p.is_file())
 assert files,'Build first'
 public={p.relative_to(ROOT/'public').as_posix() for p in (ROOT/'public').rglob('*') if p.is_file()}
-allowed=['index-','theme-player-','murderbird-study-','murderbird-unified-master-03-2026-09-06-960-']
+allowed=['index-','theme-player-','murderbird-mass-study-','murderbird-unified-master-03-2026-09-06-960-']
 for p in files:
     rel=p.relative_to(ROOT/'dist').as_posix()
     assert rel in public or rel=='index.html' or (rel.startswith('assets/') and any(p.name.startswith(x) for x in allowed)),f'Unapproved build path: {rel}'
@@ -30,5 +30,5 @@ for p in files:
     assert p.suffix not in ['.blend','.py','.md','.zip'],f'Source artifact in build: {rel}'
 models=[p for p in files if p.suffix=='.glb'];assert len(models)==1 and digest(models[0])==digest(model),'Built model differs from source export'
 report={'status':'verified-local','date':'2026-09-27','model':{'path':str(model.relative_to(ROOT)),'bytes':len(data),'sha256':digest(model),'nodes':len(gltf['nodes']),'meshes':len(gltf['meshes']),'triangles':triangles,'assemblies':required,'selfContained':True},'editableSource':{'path':str(blend.relative_to(ROOT)),'bytes':blend.stat().st_size,'sha256':digest(blend)},'build':{'totalBytes':sum(p.stat().st_size for p in files),'files':[{'path':p.relative_to(ROOT/'dist').as_posix(),'bytes':p.stat().st_size,'sha256':digest(p)} for p in files]},'limits':['Does not prove remote LFS retrieval, deployed behavior, owner acceptance, or mechanical simulation.']}
-out=ROOT/'assets/audit/uncaged-review/asset-validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,indent=2)+'\n')
+out=ROOT/'assets/audit/uncaged-mass-review/asset-validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({'modelBytes':len(data),'uniqueTriangles':triangles,'buildFiles':len(files),'totalBuildBytes':report['build']['totalBytes'],'status':'verified-local'},indent=2))

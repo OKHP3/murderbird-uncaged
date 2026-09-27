@@ -37,3 +37,7 @@ Frozen imported dependency pins preserve reproducibility. The website audio
 Dependabot entry was retired when its source tree moved. Establish an active
 production working copy and its update checks before changing these pins; do
 not let an automatic update overwrite the recorded source snapshot.
+
+## Heavy-machine/predator mass study — September 27
+
+The separate `assets/models/uncaged-mass-study/` Blender source and GLB respond to the owner's later strength/speed clarification. They are editable local studies, not accepted finished art. See [direction](mechanical-predator-direction.md), [current review](mass-study-review.md), and [derivative provenance](../provenance/uncaged-mass-study-2026-09-27.json). The original `uncaged-study/` files remain intact.

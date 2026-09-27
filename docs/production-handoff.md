@@ -1,12 +1,12 @@
 # MurderBird: Uncaged — local production handoff
 
-**Status:** a reference-informed full-body prototype and local interactive slice are present in the managed worktree. See the [acceptance report](acceptance-report.md) for executed checks, artifact hashes, failures and limitations. Owner likeness review, visual acceptance, and any remote publication remain pending; remote publication is not authorized. See [working requirements](uncaged-requirements.md) and [creative authority](creative-authority.md).
+**Status:** a reference-informed full-body prototype and local interactive slice are present in the managed worktree. See the [current mass-study review](mass-study-review.md) for executed checks, artifact hashes, failures and limitations. Owner likeness review, visual acceptance, and any remote publication remain pending; remote publication is not authorized. See [working requirements](uncaged-requirements.md) and [creative authority](creative-authority.md).
 
 ## Source and outputs
 
-- Authoring script: [`scripts/build-uncaged-study.py`](../scripts/build-uncaged-study.py)
-- Editable Blender source: [`assets/models/uncaged-study/murderbird-study.blend`](../assets/models/uncaged-study/murderbird-study.blend)
-- Browser export: [`assets/models/uncaged-study/murderbird-study.glb`](../assets/models/uncaged-study/murderbird-study.glb)
+- Authoring script: [`scripts/build-uncaged-mass-study.py`](../scripts/build-uncaged-mass-study.py)
+- Editable Blender source: [`assets/models/uncaged-mass-study/murderbird-mass-study.blend`](../assets/models/uncaged-mass-study/murderbird-mass-study.blend)
+- Browser export: [`assets/models/uncaged-mass-study/murderbird-mass-study.glb`](../assets/models/uncaged-mass-study/murderbird-mass-study.glb)
 - Runtime loader and assembly contract: [`src/scene/exhibit.js`](../src/scene/exhibit.js)
 - Encounter sequence: [`src/scene/encounter-state.js`](../src/scene/encounter-state.js); controls and copy: [`src/main.js`](../src/main.js)
 
@@ -21,7 +21,7 @@ Start in a clean, authorized local checkout of this branch. Do not use the indep
 ```sh
 npm ci
 npm run build
-/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/build-uncaged-study.py
+/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/build-uncaged-mass-study.py
 npm run build
 ```
 
@@ -39,6 +39,10 @@ The [asset capability audit](asset-capability-audit.md) and [production workflow
 
 ## Repeat the local checks
 
-`node --test tests/encounter-state.test.mjs` runs the dependency-free response-state checks. After building, `python3 scripts/verify-uncaged-assets.py` validates the real GLB, required nodes, local build allowlist and pointer absence. `scripts/verify-uncaged-browser.mjs` accepts the path to an already installed Playwright entry module; Playwright is QA tooling and is not added to the app. Start the loopback preview on port 5174 or set `UNCAGED_URL` to another loopback URL. The browser check writes review evidence outside the runtime bundle under `assets/audit/uncaged-review/`.
+`node --test tests/encounter-state.test.mjs` runs the dependency-free response-state checks. After building, `python3 scripts/verify-uncaged-assets.py` validates the real GLB, required nodes, local build allowlist and pointer absence. `scripts/verify-uncaged-browser.mjs` accepts the path to an already installed Playwright entry module; Playwright is QA tooling and is not added to the app. Start the loopback preview on port 5174 or set `UNCAGED_URL` to another loopback URL. The browser check writes review evidence outside the runtime bundle under `assets/audit/uncaged-mass-review/`.
 
-The native source currently contains 3,017 mesh objects, 13 component groups plus root and seven named landmarks. `bill-contact` and `anchor-*` move with authoring changes. Keep those landmarks rather than hard-coding a new contact offset in the browser. Before regenerating, save any manual modeling work as a new source version; the generator replaces its two named study outputs. The approximate two-metre convention must not be promoted into story canon.
+The native source currently contains 1,838 mesh objects, 13 component groups plus root and seven named landmarks. `bill-contact` and `anchor-*` move with authoring changes. Keep those landmarks rather than hard-coding a new contact offset in the browser. Before regenerating, save any manual modeling work as a new source version; the generator replaces its two named study outputs. The approximate two-metre convention must not be promoted into story canon.
+
+## Preserved earlier revision
+
+The source under `assets/models/uncaged-study/`, original `scripts/build-uncaged-study.py`, provenance ledger `provenance/uncaged-study-2026-09-27.json` and evidence under `assets/audit/uncaged-review/` describe the earlier study. They remain intact. The mass study is a new derivative responding to the owner's later heavy-machine/predator instruction; regenerate it with the command above. Runtime contact now constrains the actual leading head surface to the front bar rather than relying on the hooked tip alone.

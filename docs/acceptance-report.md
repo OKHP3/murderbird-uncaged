@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — local acceptance report
 
+**Historical checkpoint at `519201b`.** This records the earlier proportion revision. The active model now follows the owner’s subsequent heavy-machine/predator direction; see [the current mass-study review](mass-study-review.md). Earlier assets and test receipts remain preserved.
+
 **2026-09-27 · PARTIAL · revised proportions awaiting owner review.** The integrated local study demonstrates genuine 3D, a scripted cage response and reversible interior inspection. It does not yet establish the unmistakable MurderBird likeness or physical credibility required for finished character production. The owner rejected the first proportion direction with **“Rework the proportions first.”** The revised geometry is implemented; no subsequent owner acceptance is recorded.
 
 This report is the current local verification record. It supersedes source-presence-only status in earlier handoff drafts. Technical checks, artistic acceptance, remote CI and publication are separate gates.

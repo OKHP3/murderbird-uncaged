@@ -10,7 +10,8 @@
 export const ENCOUNTER_DURATIONS = Object.freeze({
   notice: 0.8,
   warning: 0.8,
-  strike: 0.3,
+  // Owner's mechanical-predator direction: a short strike after readable warning.
+  strike: 0.18,
   contact: 0.2,
   recover: 0.8,
   cooldown: 1.0,

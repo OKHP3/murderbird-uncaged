@@ -1,6 +1,6 @@
 # Hotspot map — local assembly study
 
-The six active regions below match the local prototype. Model landmarks move with the authored assemblies; readable descriptions remain outside the canvas and available in the illustrated fallback. This map records exhibit behavior, not newly established story mechanisms. See [creative authority](creative-authority.md) and [acceptance](acceptance-report.md).
+The six active regions below match the local prototype. Model landmarks move with the authored assemblies; readable descriptions remain outside the canvas and available in the illustrated fallback. This map records exhibit behavior, not newly established story mechanisms. See [creative authority](creative-authority.md) and [current review](mass-study-review.md).
 
 | Region | Era and visible system | Visitor interpretation |
 |---|---|---|
