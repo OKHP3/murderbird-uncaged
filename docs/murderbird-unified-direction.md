@@ -1,5 +1,7 @@
 # MurderBird unified direction
 
+Current exhibit supersession: the [three-era owner direction](three-era-construction-direction.md) and [movement review](three-era-movement-review.md) supersede earlier static-era and finite Advanced encounter-power assumptions below. This record retains its prior source and story distinctions.
+
 > **Owner clarification, 2026-09-27:** MurderBird is flightless. Compact wings are functional balance and shielding limbs, with a tucked shoulder/elbow shove. See [the exact owner instruction](flightless-wing-direction.md). Earlier ornamental-wing wording below is retained as historical visual direction and does not limit their current function.
 
 Version 1.2. September 6, 2026. Coordinating production brief, not a release record.

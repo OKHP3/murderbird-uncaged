@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { createPresenceMotion } from './presence-motion.js';
+import { createEraMotion } from './era-motion.js';
+import { createEraMechanisms } from './era-mechanisms.js';
 
 const modelUrl = new URL('../../assets/models/uncaged-presence-study/murderbird-presence-study.glb', import.meta.url).href;
 const FRONT = 2.10;
@@ -124,7 +125,8 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     throw new Error('Model assembly contract is incomplete.');
   }
   const rest = Object.fromEntries(names.map(name => [name, { position:nodes[name].position.clone(), rotation:nodes[name].rotation.clone() }]));
-  const motion=createPresenceMotion(model,nodes,rest);
+  const motion=createEraMotion(model,nodes,rest);
+  const mechanisms=createEraMechanisms({scene,model,nodes,rest});
   const animationProof={clips:gltf.animations.map(a=>({name:a.name,duration:a.duration,tracks:a.tracks.length})),verified:false};
   // Probe the actual exported transform track before enabling procedural motion.
   if(gltf.animations.length){
@@ -161,7 +163,8 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
 
   function setEra(value) {
     era=value;
-    nodes['winding-drive'].visible=value==='mechanic';
+    motion.resetEra(value);mechanisms.setEra(value);
+    nodes['winding-drive'].visible=false;
     nodes['power-core'].visible=value==='builder';
     nodes.processing.visible=value==='builder';
     nodes['builder-optics'].visible=value==='builder';
@@ -214,6 +217,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     nodes['cranial-cover'].position.y=rest['cranial-cover'].position.y+open*.08;
     Object.entries(exploded).forEach(([name,offset])=>{nodes[name].position.addScaledVector(vector.set(...offset),separation);});
     model.updateMatrixWorld(true);
+    mechanisms.tick(dt,snapshot,motion.driveMetrics(),{open,separation});
     billTip.getWorldPosition(worldTip);
     const state=snapshot.state;
     target.visible=armed||snapshot.visitorPresent;
@@ -237,25 +241,27 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       line.geometry.setFromPoints([a,b]);line.computeLineDistances();
     });
     Object.entries(anchors).forEach(([id,anchor])=>{
-      anchor.getWorldPosition(vector);vector.project(camera);
-      const present=id==='drive'?era==='mechanic':id==='power'||id==='mind'?era==='builder':true;
-      const interior=['drive','power','mind'].includes(id);
+      const mechanism=['drive','power','mind'].includes(id);
+      const point=mechanism?mechanisms.getAnchor(id):anchor.getWorldPosition(vector);
+      const present=Boolean(point);
+      if(point)vector.copy(point);vector.project(camera);
       updateMarker(id,(vector.x+1)*lastWidth/2,(1-vector.y)*lastHeight/2,present&&open>.8&&vector.z<1&&Math.abs(vector.x)<.94&&Math.abs(vector.y)<.86);
     });
-    if(highlight.visible){const name=markerNodes[selected]?.[0];if(name&&nodes[name].visible)highlight.box.setFromObject(nodes[name]);else highlight.visible=false;}
+    if(highlight.visible){const part=mechanisms.getPart(selected)||nodes[markerNodes[selected]?.[0]];if(part?.visible)highlight.box.setFromObject(part);else highlight.visible=false;}
     renderer.render(scene,camera);
   }
   setEra(era);resize();
   return {
     kind:'webgl', resize, tick, reset, nudge, setEra,
+    driveState:()=>motion.driveMetrics().mechanicalStage,
     feedback:()=>motion.feedback(),
     select(id){selected=id;highlight.visible=targetOpen>0;},
     setSection(value){targetOpen=value?1:0;if(!value)targetSeparation=0;highlight.visible=false;},
     setSeparation(value){targetSeparation=targetOpen?clamp(Number(value)||0,0,1):0;},
     setArmed(value){armed=value;controls.enabled=!value;canvas.style.cursor=value?'crosshair':'grab';pointer=null;},
     isAssembled(){return open===0&&separation===0;},
-    focus(id){const anchor=anchors[id];if(!anchor||!nodes[markerNodes[id]?.[0]]?.visible)return;anchor.getWorldPosition(vector);const delta=vector.clone().sub(controls.target);controls.target.copy(vector);camera.position.add(delta);controls.update();},
-    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,wingAngles:{leftShoulder:nodes['left-mantle'].rotation.x,leftElbow:nodes['left-wing-shield'].rotation.x,rightShoulder:nodes['right-mantle'].rotation.x,rightElbow:nodes['right-wing-shield'].rotation.x},wingBounds:{left:new THREE.Box3().setFromObject(nodes['left-mantle'],true),right:new THREE.Box3().setFromObject(nodes['right-mantle'],true)},contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,motion:motion.metrics(),animationProof,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
+    focus(id){const point=['drive','power','mind'].includes(id)?mechanisms.getAnchor(id):anchors[id]?.getWorldPosition(new THREE.Vector3());if(!point)return;vector.copy(point);const delta=vector.clone().sub(controls.target),radius=camera.position.distanceTo(controls.target);controls.target.copy(vector);if(['drive','power'].includes(id)&&era!=='maker'){const view=new THREE.Vector3(-6,1.8,2).normalize().applyAxisAngle(new THREE.Vector3(0,1,0),model.rotation.y);camera.position.copy(vector).addScaledVector(view,radius);}else camera.position.add(delta);controls.update();},
+    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,wingAngles:{leftShoulder:nodes['left-mantle'].rotation.x,leftElbow:nodes['left-wing-shield'].rotation.x,rightShoulder:nodes['right-mantle'].rotation.x,rightElbow:nodes['right-wing-shield'].rotation.x},wingBounds:{left:new THREE.Box3().setFromObject(nodes['left-mantle'],true),right:new THREE.Box3().setFromObject(nodes['right-mantle'],true)},contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,motion:motion.metrics(),mechanisms:mechanisms.metrics(),animationProof,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
     destroy(){listeners.abort();controls.dispose();environment.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});renderer.dispose();canvas.remove();},
   };
 }

@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — asset capability audit
 
+Current exhibit supersession: the [three-era owner direction](three-era-construction-direction.md) and [movement review](three-era-movement-review.md) supersede earlier static-era and finite Advanced encounter-power assumptions below. This record retains its prior source and story distinctions.
+
 Status: local file and provenance review, with firsthand inspection of the selected stills and representative video frames. The initial asset inventory was captured at repository baseline `0d4032907ce55f328de10ba4978a5025988606ee` (short SHA `0d40329`). The Blender/GLB study described below is a separate post-baseline addition in the current worktree. This is not an app review, full playback certification, engineering assessment, rights expansion, or release approval. Original source media was not modified. Temporary frame extracts are in Git-ignored `.local/uncaged-review/`.
 
 ## Selected visual package

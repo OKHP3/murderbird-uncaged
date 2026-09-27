@@ -6,6 +6,8 @@
 
 Status: evidence synthesis for local production. This record does not approve a finished character model, alter story canon, or authorize publication.
 
+The story-source table below preserves what the fiction says, including its finite-energy language for the later machine. The September 27 three-era owner clarification governs the **exhibit behavior** where it differs: the Advanced encounter uses effectively inexhaustible fictional power. That exhibit direction does not rewrite the story snapshot or turn proposed geometry into historical evidence. See the [three-era construction direction](three-era-construction-direction.md).
+
 ## Authority order and decisions
 
 The current owner mandate in the supplied “MurderBird: Uncaged — Product Requirements and Primary Architect Mandate” sets the product goal: the recognizable MurderBird in a visitor-facing enclosure, with spatial inspection, a deliberate reaction, and inspectable construction. It explicitly distinguishes that new exhibit framing from story events and says not to invent an escape sequence. This is a new owner direction for the exhibit. Existing artwork and story pages do not yet establish a cage design or the requested cage-strike behavior.
@@ -84,3 +86,17 @@ The new editable derivative is `assets/models/uncaged-mass-study/murderbird-mass
 The owner supplied a Stage Two brief for a deliberate, autonomous-feeling encounter with a physically present MurderBird. The new local Builder implementation adds rigid thigh/shin/foot/toe groups, planted-foot procedural stepping, attention, pacing, cage testing, visitor-directed approach and strike, recovery, residual agitation, and a stop for reversible inspection. The exported rigid model has no skinned armature; a single short head-rotation clip verifies animation export, while runtime choreography is procedural. The [reference and movement baseline](stage-two-reference-baseline.md) documents source scopes and prior motion samples.
 
 The owner explicitly restated that the raptor comparison is about capability and tension, not anatomy. The model retains bird feet, a hooked bill, a compact rear outline and flightless folded wings. The continuous encounter and likeness comparison are recorded in the [Stage Two review](stage-two-encounter-review.md) and [capture page](../assets/audit/uncaged-presence-review/encounter-review.html). Automated kinematic and browser checks pass their documented scenarios; they do not establish artistic likeness, real balance/force, human accessibility, or final owner approval. The current likeness decision and publication approval remain pending.
+
+## Current three-era exhibit direction — September 27, 2026
+
+The owner's newer direction supersedes the earlier exhibit assumption that Maker and Mechanic are static. It changes the exhibit's capability progression while preserving the story facts and all prior dated review evidence:
+
+| Era | Exhibit behavior now directed | Evidence boundary |
+|---|---|---|
+| Maker | Anchored in a load-bearing support; no self-directed translation, tracking, or attack. Visitors may operate labeled external controls for individual leg, wing, tail, neck, and jaw articulation. | The rear cradle, control rack, rods, and tension lines are proposed reconstructions. Their exact layout and load capacity are not established by the selected references. |
+| Mechanic | Limited traversal from one wound spring / reduction / cam sequence, with deliberate loading, short steps, segmented turns, settling, and dwell. No visitor tracking or tactical intent. | The single spring-and-cam chain is a coherent exhibit design proposal, not an asserted historical mechanism. The original story's finite movement and spring language remain intact. |
+| Advanced (retained `builder` key) | Fast, fluid, coordinated encounter behavior, with separate sensing and processing and an effectively inexhaustible fictional encounter supply. No routine winding, fuel use, or power-depletion cycle. | The supply, distribution, actuator and sensing layouts remain fictional reconstruction proposals. The preserved story continues to describe its own finite system; the exhibit premise supersedes only its earlier operational interpretation. |
+
+The current implementation adds procedural Three.js movement and mechanism geometry over the existing presence-study GLB; the GLB itself is unchanged. This does not certify physical engineering or establish likeness acceptance. The [three-era movement review](three-era-movement-review.md) and [visual review page](../assets/audit/three-era-review/era-review.html) record passing local integrated checks and a continuous browser demonstration. Artistic acceptance remains pending; the [Stage Two review](stage-two-encounter-review.md) remains a historical Builder-only checkpoint.
+
+The subsequent [owner jump/thrust direction](../context/threads/advanced-power-owner-direction-2026-09-27.md) authorizes Advanced-only power demonstrations. The current interpretation is a short leg-powered vertical jump with a controlled landing, plus a planted shoulder/elbow shield thrust. Wings remain flightless; these motion choices and exact dimensions are proposals for review.

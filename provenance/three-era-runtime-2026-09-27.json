@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "title": "Three era movement systems and Advanced power actions",
+  "recorded_at_utc": "2026-09-27T14:27:53.290318+00:00",
+  "status": "Locally implemented and verified prototype. Artistic likeness, mechanical construction and final acting await owner review. No remote publication.",
+  "base_commit": "a36cca73176ee815238e958ef6f6b0dc20445547",
+  "authorization": "Owner three-era brief plus subsequent message requesting Advanced jump and thrust; reversible local production only.",
+  "rights": "MurderBird creative content remains all rights reserved under NOTICE.md; code licensing is unchanged.",
+  "owner_direction_ledger": "provenance/three-era-owner-direction-2026-09-27.json",
+  "model_lineage": "provenance/uncaged-presence-study-2026-09-27.json",
+  "construction_rationale": "docs/three-era-construction-direction.md",
+  "implementation": "Separate capability controller and three motion paths over the unchanged Stage Two rigid GLB. New cradle, controls, tail, spring/cam transmission and Advanced distribution/actuation are authored Three.js runtime geometry; they are not new Blender meshes or exported animation clips.",
+  "power_supersession": "Advanced encounter supply is effectively inexhaustible by owner direction. Earlier finite-power exhibit copy is superseded; original story source is preserved.",
+  "proposed": [
+    "Maker support and control routing",
+    "Mechanic single mainspring/reduction/cam/linkage drive",
+    "Advanced supply, distribution and actuators",
+    "36 cm vertical jump and planted shoulder/elbow thrust timing"
+  ],
+  "sources_and_runtime": [
+    {
+      "path": "context/threads/three-era-movement-owner-brief-2026-09-27.md",
+      "bytes": 12552,
+      "sha256": "751bd9f528d46929a80725c3f7e5cd6a579b312e90fb06b6cb0192a1717c322a"
+    },
+    {
+      "path": "context/threads/advanced-power-owner-direction-2026-09-27.md",
+      "bytes": 720,
+      "sha256": "aa62e8a1464b274559a35c3c8eb77898bab1958da611406168d3b12c4733d295"
+    },
+    {
+      "path": "assets/models/uncaged-presence-study/murderbird-presence-study.blend",
+      "bytes": 1356359,
+      "sha256": "2206e8d6b63c9adec672523f94158323555938932163f6205c8a391030a05666"
+    },
+    {
+      "path": "assets/models/uncaged-presence-study/murderbird-presence-study.glb",
+      "bytes": 3425344,
+      "sha256": "cbf75f80876669505a8919eac0875575d0ce8f2a5dcf189d84f01b76e7f3d851"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 27622,
+      "sha256": "620d9e2c055817a5d3ca1d3d224a64ac91f53bc6a3a1d2347ddbc2422fcd677c"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 9493,
+      "sha256": "f432b987e7b5a77060fc627e64cedbc5abbb7a478126d615aacbe36526de243a"
+    },
+    {
+      "path": "src/scene/era-controller.js",
+      "bytes": 18169,
+      "sha256": "3f2b429fa74d8d8927bb25eaf25176ca58ee8538b3794d5f57e1ef6e85d12e2d"
+    },
+    {
+      "path": "src/scene/era-motion.js",
+      "bytes": 21440,
+      "sha256": "a09f8c667af62bec5c362d783987122b3273f43c120469c8f5acb859aff9645a"
+    },
+    {
+      "path": "src/scene/era-mechanisms.js",
+      "bytes": 18454,
+      "sha256": "c53a501c43ae07d6f37e2bd1b823162ff7a20f8aeb63220803d490a3eedbd41b"
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "bytes": 18329,
+      "sha256": "13088991fad6a8808e8c66afedfe883f5431e66c94f055ff1c4df4ef4884f86c"
+    },
+    {
+      "path": "src/scene/fallback.js",
+      "bytes": 4012,
+      "sha256": "aa956e0d80136194884e95b8d45183d04b0b529063fe2c7d1523b8717e09e5fc"
+    }
+  ],
+  "validators": [
+    {
+      "path": "tests/era-controller.test.mjs",
+      "bytes": 19918,
+      "sha256": "d2f4994f575c2ef510110759ab974b71f7bfe0f971a75f1e66cfe5acec065f58"
+    },
+    {
+      "path": "scripts/verify-era-motion.mjs",
+      "bytes": 15915,
+      "sha256": "c4cc4395fa6a7f0290f8bf2ce4926ac100a9be43ebd0a3d7ccd2bd9085afa5f3"
+    },
+    {
+      "path": "scripts/verify-advanced-power-moves.mjs",
+      "bytes": 10922,
+      "sha256": "64c80d7d72780d414cf22467512e4d395cf94e58c658bc7e3590650770f6e6c0"
+    },
+    {
+      "path": "scripts/verify-era-browser.mjs",
+      "bytes": 23354,
+      "sha256": "93caa036a35e4b43aa51ab2570711ce37f8931186253a61aa6b0e13862eca523"
+    },
+    {
+      "path": "scripts/verify-advanced-power-browser.mjs",
+      "bytes": 17704,
+      "sha256": "3c96d728a6c52655a10d38bdc5c43929f1d293f17803037ac8d63a8a687423da"
+    },
+    {
+      "path": "scripts/verify-era-assets.py",
+      "bytes": 11516,
+      "sha256": "d809be275ff72731ea1c7d702959a3e80439ef1365fec8e4bc906ca4bc3ccf3d"
+    },
+    {
+      "path": "scripts/capture-three-eras.mjs",
+      "bytes": 7431,
+      "sha256": "6cf60eab358ef2d31ef823e49ba2576a9eefcea2f0435a1ce67218b63023e3ff"
+    },
+    {
+      "path": "scripts/verify-era-review.mjs",
+      "bytes": 2683,
+      "sha256": "2bcbf7e1566343825677121325a96cc14835b73725df7d06c13fcca0d3224e7d"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "assets/audit/three-era-review/controller-tests.txt",
+      "bytes": 3411,
+      "sha256": "e3afdd3adb9655e72235d7e5723520aa779fbb893096c987aefb10adda4621b6"
+    },
+    {
+      "path": "assets/audit/three-era-review/motion-validation.json",
+      "bytes": 171232,
+      "sha256": "247293d906c206a906dacf7f601f2261ca8d0511ad5edf24fba9b02d4d150998"
+    },
+    {
+      "path": "assets/audit/three-era-review/power-move-validation.json",
+      "bytes": 2537,
+      "sha256": "e0da3fb7a974763204719cf3057ed2296e4d42d4dbcb54702324b21e26494174"
+    },
+    {
+      "path": "assets/audit/three-era-review/browser-validation.json",
+      "bytes": 16860,
+      "sha256": "debe6a9e4d0a4bf7f13ed991373cfbc900f8d5224a7f501a557d5b650ce6f12d"
+    },
+    {
+      "path": "assets/audit/three-era-review/power-browser-validation.json",
+      "bytes": 4289,
+      "sha256": "5724dbb09fc630dc9f98c30ae404a54041adc5787e59bdc351b6097709f4d1bc"
+    },
+    {
+      "path": "assets/audit/three-era-review/asset-validation.json",
+      "bytes": 6521,
+      "sha256": "ac254582f2c23b4fae31f15d2df2cc2571cf0180c7ea40b31ab31546842d4c74"
+    },
+    {
+      "path": "assets/audit/three-era-review/demonstration.json",
+      "bytes": 602375,
+      "sha256": "934714d2813dfcf037f160227752b1bd7f70136787fca0aba9b8593ca3ac5ba3"
+    },
+    {
+      "path": "assets/audit/three-era-review/video-metadata.json",
+      "bytes": 347,
+      "sha256": "db3baae413420e19e38e8fa005463f2b29b7f4192ebf396e0b1c7195bd2d4ce8"
+    },
+    {
+      "path": "assets/audit/three-era-review/final-preview-validation.json",
+      "bytes": 408,
+      "sha256": "72cccd711ddbe95f2f1e5e1c56342dc57bf0f6942dbd663d32f705eca003a1dc"
+    }
+  ],
+  "capture_media": [
+    {
+      "path": "assets/audit/three-era-review/three-era-demonstration.webm",
+      "bytes": 13088801,
+      "sha256": "ff54213e00babbd4be413e5f4112dde20cc40a1ecff2ecb3639e5735b2e50c76"
+    },
+    {
+      "path": "assets/audit/three-era-review/three-era-demonstration.mp4",
+      "bytes": 12686904,
+      "sha256": "fb85b21af713f9c45814ff7ccd956f74845c79e61c72fabcebeb74c549d6ec27"
+    }
+  ],
+  "capture_images": [
+    {
+      "path": "assets/audit/three-era-review/advanced-drive-detail.png",
+      "bytes": 215832,
+      "sha256": "459ccf95e46385570d9ab3ba5d33be0323607d200f9f4107a86b04c8636fd3d6"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-inspection.png",
+      "bytes": 197056,
+      "sha256": "03625937e4cdb0be177016684a7899b9c38a0cde02043c7ace05ef47b602857f"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-jump-era-transition-landed.png",
+      "bytes": 210076,
+      "sha256": "e1bc4b8c0c537c31f0f6d5e3a3df2e730a4530f3d8162bf962a1518e513ca951"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-jump-inspection-landed.png",
+      "bytes": 133906,
+      "sha256": "bd79f9b6a92803eca3997c49b70120c8e5d3a48ea73bad9a3d4d392cd637a839"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-jump.png",
+      "bytes": 262902,
+      "sha256": "cb06a7f44ceaecee1440ed20af0fecdc20ad8247832e3d59c7039aa8ece3fa4b"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-pacing.png",
+      "bytes": 252370,
+      "sha256": "d66d0272124b3b318886afea8d408147950a0a07e10dcbfb522249104074acf7"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-power-detail.png",
+      "bytes": 197185,
+      "sha256": "f4c09ce03f4df325843a9bcbb6f7a7f6cf728d66808e0c769d159ce11782abea"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-power-jump-peak.png",
+      "bytes": 195258,
+      "sha256": "acea7ee89375d2470480fb0c467cb14dec36b8c4db2700faf812c00de2eddb45"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-processing-detail.png",
+      "bytes": 176747,
+      "sha256": "e97198ed25cc933d9d19e4ebdacc463074a4f8e91d099cd32c54c169da4d520e"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-recovery.png",
+      "bytes": 259853,
+      "sha256": "0429ba802521f653733a88a34c1b6b96fc6b2deae0aeb1ef0d71f898f0058645"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-shield-thrust-drive.png",
+      "bytes": 191955,
+      "sha256": "ea3e92ecbbe5afab0c8a09d482e71a6913293052913bcf87660f3cf86257aafb"
+    },
+    {
+      "path": "assets/audit/three-era-review/advanced-thrust.png",
+      "bytes": 259214,
+      "sha256": "aca22e07913850580e9358e78c3c29f923d312698f62003c9c160ac546cd3586"
+    },
+    {
+      "path": "assets/audit/three-era-review/builder-era.png",
+      "bytes": 192933,
+      "sha256": "4b9fe794543c52ccdec710c57245c81c685e8b89742d191d0903a47fc6aa1f90"
+    },
+    {
+      "path": "assets/audit/three-era-review/builder-inspection.png",
+      "bytes": 148431,
+      "sha256": "1e069595b6068f9c545a2958a75cb71ff2e0927ea7a680c0584c0003e6e65672"
+    },
+    {
+      "path": "assets/audit/three-era-review/illustrated-builder.png",
+      "bytes": 350002,
+      "sha256": "8ab3f47c33008f793236c31ab2f994571aa216f3a284d5477a1ddc8ed7df7da3"
+    },
+    {
+      "path": "assets/audit/three-era-review/illustrated-maker.png",
+      "bytes": 350824,
+      "sha256": "350a081f24a4d0048e4b4c109527a859703b92ae275461fc555682a74e4e0f8b"
+    },
+    {
+      "path": "assets/audit/three-era-review/illustrated-mechanic.png",
+      "bytes": 354149,
+      "sha256": "73359d0d5af849499b6bf8de3bab0cfccee83ede8ae6b2d25bce0f9fa37740a8"
+    },
+    {
+      "path": "assets/audit/three-era-review/maker-era.png",
+      "bytes": 210076,
+      "sha256": "e1bc4b8c0c537c31f0f6d5e3a3df2e730a4530f3d8162bf962a1518e513ca951"
+    },
+    {
+      "path": "assets/audit/three-era-review/maker-inspection.png",
+      "bytes": 205081,
+      "sha256": "b011d0828ac3f54bc4e9ff071531d3e04d7e7363f0b7165ae9bec8bd10cde4e5"
+    },
+    {
+      "path": "assets/audit/three-era-review/maker-operated.png",
+      "bytes": 280647,
+      "sha256": "299a8704f54fcee9aadd52f119df6fe8963886d6d3f8cb93e02238370dc3197a"
+    },
+    {
+      "path": "assets/audit/three-era-review/maker-rest.png",
+      "bytes": 281057,
+      "sha256": "995735f079f02daea5e6df8f7cc20b4c155499f67e82da3b8e81a7258d36ca04"
+    },
+    {
+      "path": "assets/audit/three-era-review/mechanic-drive-detail.png",
+      "bytes": 223757,
+      "sha256": "bae80554b2af6efd485a48e810dd391497d1ed1787b22da5fc0169a7acc11b0a"
+    },
+    {
+      "path": "assets/audit/three-era-review/mechanic-era.png",
+      "bytes": 192764,
+      "sha256": "ed666d07c93c667915007a678f5360b333ea66e1c45dc6fdf47e4ab9c4f584e7"
+    },
+    {
+      "path": "assets/audit/three-era-review/mechanic-inspection.png",
+      "bytes": 205755,
+      "sha256": "6c72323e12dc13fb60ceb7a9ac5ed03f750455635e8c358efd9ca9e82af27254"
+    },
+    {
+      "path": "assets/audit/three-era-review/mechanic-stepping.png",
+      "bytes": 254482,
+      "sha256": "76c97f727fee4e561adefd7bff685df66b4324b06400ca2a7ed87b090d3ada25"
+    },
+    {
+      "path": "assets/audit/three-era-review/mobile-advanced-power-controls.png",
+      "bytes": 54803,
+      "sha256": "02d075226b31fc0b71866169b4378d470832545ed2ea72a90688aa84997de0eb"
+    },
+    {
+      "path": "assets/audit/three-era-review/mobile-maker.png",
+      "bytes": 58738,
+      "sha256": "cdfc6b5c9877fcea9be77efeea1745516578de1b2e83f7d32dcc866b8a7fb4b9"
+    },
+    {
+      "path": "assets/audit/three-era-review/review-page.png",
+      "bytes": 402423,
+      "sha256": "ed61fa730c270be89d3407b73745ce66189916d79b799c0a46d7c8113c084776"
+    }
+  ],
+  "local_results": {
+    "controller-tests.txt": {
+      "tests": 34,
+      "passed": 34
+    },
+    "motion-validation.json": {
+      "status": "passed",
+      "checks": 14,
+      "passed": 14
+    },
+    "power-move-validation.json": {
+      "status": "passed",
+      "checks": 4,
+      "passed": 4
+    },
+    "browser-validation.json": {
+      "status": "passed",
+      "checks": 13,
+      "passed": 13
+    },
+    "power-browser-validation.json": {
+      "status": "passed",
+      "checks": 9,
+      "passed": 9
+    },
+    "asset-validation.json": {
+      "status": "verified-local"
+    },
+    "demonstration.json": {
+      "status": "passed"
+    },
+    "video-metadata.json": {
+      "status": "passed"
+    },
+    "final-preview-validation.json": {
+      "status": "passed"
+    }
+  },
+  "publication_boundary": "Audit pages, recordings, provenance, story snapshots and production sources remain outside public/ and the 26-file production build. No model/source upload, new dependency, cloud AI service, paid generation or remote publication was performed.",
+  "limitations": [
+    "Kinematics are not rigid-body dynamics or engineering proof",
+    "Exact reconstructions and character likeness remain proposals",
+    "Human screen-reader review and physical-device/cross-browser coverage remain open",
+    "Remote CI, LFS clean-clone retrieval and deployment unverified"
+  ],
+  "review_documents": [
+    {
+      "path": "assets/audit/three-era-review/era-review.html",
+      "bytes": 7931,
+      "sha256": "5465bfa894cd9132fdfddac96d7beefbf982bd189a0ae540b953150a3e3a007d"
+    },
+    {
+      "path": "docs/three-era-movement-review.md",
+      "bytes": 8426,
+      "sha256": "51e5481e419e83393260cffa9f83c08c974199cc379a0532c4db2227ba11941f"
+    },
+    {
+      "path": "docs/three-era-construction-direction.md",
+      "bytes": 5929,
+      "sha256": "54fc98f1bb45faa4fec7d198c2965fc4822b5c49ec14a78d0f7958019199eed1"
+    },
+    {
+      "path": "docs/production-handoff.md",
+      "bytes": 7390,
+      "sha256": "13d1dc20771d0672283a8299bcb2a5d4bfd43a924b58282c89d4f31d08fbd8f1"
+    }
+  ]
+}
