@@ -1,8 +1,8 @@
 import './style.css';
 import './fallback.css';
-import { createExhibit } from './scene/exhibit.js';
+import { createExhibit } from './scene/presence-exhibit.js';
 import { createIllustratedExhibit } from './scene/fallback.js';
-import { createEncounterState } from './scene/encounter-state.js';
+import { createPresenceState } from './scene/presence-state.js';
 import { createSoundscape } from './audio/soundscape.js';
 
 const eras = {
@@ -21,16 +21,16 @@ const parts=[
 ];
 const app=document.querySelector('#app');
 app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a><div class="site-shell">
-<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">FLIGHTLESS GUARD STUDY / 03</span></header>
+<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">PHYSICAL PRESENCE STUDY / 04</span></header>
 <main id="top"><section class="exhibit" id="specimen" aria-labelledby="exhibit-title">
-<div class="exhibit-heading"><div><p class="eyebrow">AN ENCOUNTER WITH AN IMPOSSIBLE MACHINE</p><h1 id="exhibit-title">MurderBird: <em>Uncaged.</em></h1></div><p>Drag to orbit. Scroll or pinch to move closer.<br>Reach deliberately. Open it when you’re ready.</p></div>
+<div class="exhibit-heading"><div><p class="eyebrow">AN ENCOUNTER WITH AN IMPOSSIBLE MACHINE</p><h1 id="exhibit-title">MurderBird: <em>Uncaged.</em></h1></div><p>Drag to orbit. Scroll or pinch to move closer.<br>It watches, paces, and tests the cage.<br>Choose a position, reach, then retreat.</p></div>
 <div class="exhibit-grid"><div class="viewer-column"><div class="viewer" id="viewer">
 <div class="viewer-top"><span id="render-label">LOADING ASSEMBLY…</span><span id="era-label">III · BUILDER</span></div>
 <div id="scene" aria-label="MurderBird exhibit"></div><div id="hotspots" class="hotspots"></div><div class="loading" id="loading" role="status">Preparing the mechanical assembly…</div>
 <div class="viewer-bottom"><span id="view-label">ENCLOSURE / EXTERIOR</span><span>LIKENESS REVIEW PENDING</span></div>
 </div>
 <div id="controls" class="toolbar" role="group" aria-label="Encounter and inspection controls" tabindex="-1">
-<button id="reach" type="button" class="primary">Reach toward bars</button><button id="arm-reach" type="button" aria-pressed="false">Tap-to-reach mode</button><button id="section-toggle" type="button" aria-pressed="false">Open for inspection</button><button id="reset-view" type="button">Reset view</button></div>
+<label class="reach-position" for="reach-position">Your position<select id="reach-position"><option value="-1">Left rail</option><option value="0" selected>Center rail</option><option value="1">Right rail</option></select></label><button id="reach" type="button" class="primary">Reach toward bars</button><button id="retreat" type="button" disabled>Retreat</button><button id="arm-reach" type="button" aria-pressed="false">Tap-to-reach mode</button><button id="section-toggle" type="button" aria-pressed="false">Open for inspection</button><button id="reset-view" type="button">Reset view</button></div>
 <p id="encounter-status" class="encounter-status" role="status">Loading the specimen.</p>
 <div class="inspection-controls"><label for="separation">Separate assembly <output id="separation-value">0%</output></label><input id="separation" type="range" min="0" max="100" step="1" value="0" disabled /><button id="reassemble" type="button" disabled>Reassemble & return</button></div>
 <div class="secondary-controls"><div class="view-controls" role="group" aria-label="Camera controls"><button data-view="left" aria-label="Orbit left">←</button><button data-view="right" aria-label="Orbit right">→</button><button data-view="up" aria-label="Raise viewpoint">↑</button><button data-view="down" aria-label="Lower viewpoint">↓</button><button data-view="in" aria-label="Zoom in">+</button><button data-view="out" aria-label="Zoom out">−</button></div><button id="pause" type="button" aria-pressed="false">Calm / pause</button><label class="motion-label"><input id="reduced-motion" type="checkbox" /> Reduced motion</label><button id="sound-toggle" type="button" aria-pressed="false">Sound off</button></div>
@@ -41,16 +41,16 @@ app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a
 </main><footer><span>© JAMIE HILL / OVERKILL HILL P³ · CREATIVE CONTENT ALL RIGHTS RESERVED</span><span>WORKING STUDY · ARTISTIC ACCEPTANCE PENDING</span></footer></div>`;
 const $=id=>document.getElementById(id);
 const sound=createSoundscape();
-const machine=createEncounterState();machine.setEra('builder');
+const machine=createPresenceState();machine.setEra('builder');
 const motionQuery=matchMedia('(prefers-reduced-motion: reduce)');
 $('reduced-motion').checked=motionQuery.matches;machine.setReducedMotion(motionQuery.matches);
 const sceneElement=$('scene');
-let exhibit,selected='beak',era='builder',section=false,returning=false,armed=false,lastState='',loading=false,loadSequence=0;
+let exhibit,selected='beak',era='builder',section=false,sectionOpen=false,returning=false,armed=false,lastState='',loading=false,loadSequence=0;
 const updateMarker=(id,x,y,visible)=>{const m=$('hotspots').querySelector(`[data-marker="${id}"]`);if(!m)return;m.style.left=`${x}px`;m.style.top=`${y}px`;m.hidden=!visible;};
 $('hotspots').innerHTML=parts.map((p,i)=>`<button class="marker" type="button" data-marker="${p.id}" aria-label="Inspect ${p.name}" hidden>${i+1}</button>`).join('');
 
-function setArmed(value){armed=value;exhibit?.setArmed(value);$('arm-reach').setAttribute('aria-pressed',String(value));$('arm-reach').textContent=value?'Cancel tap-to-reach':'Tap-to-reach mode';if(value)$('encounter-status').textContent='Tap the view once to approach the fixed front contact bar. Dragging will not trigger a reach. Escape cancels.';}
-function requestReach(point={}){
+function setArmed(value){armed=value;exhibit?.setArmed(value);$('arm-reach').setAttribute('aria-pressed',String(value));$('arm-reach').textContent=value?'Cancel tap-to-reach':'Tap-to-reach mode';if(value)$('encounter-status').textContent='Tap a front rail to choose your virtual approach position. Dragging does not provoke it. Escape cancels targeting.';}
+function requestReach(point={x:Number($('reach-position').value),y:0}){
   if(!exhibit||loading||returning)return;
   if(machine.requestReach(point)){setArmed(false);sound.effect('click');renderState(true);}
 }
@@ -64,11 +64,12 @@ function renderSelection(id){
 function renderState(force=false){
   const s=machine.getSnapshot();
   const token=[s.state,s.paused,s.inspection,s.reducedMotion,era,returning,loading,exhibit?.kind].join(':');
-  $('reach').disabled=loading||!exhibit||s.state!=='idle'||s.paused||s.inspection||returning;
+  $('reach').disabled=loading||!exhibit||!s.canReach||s.paused||s.inspectionRequested||returning;
+  $('retreat').disabled=loading||!s.visitorPresent||s.inspectionRequested;
   $('arm-reach').disabled=$('reach').disabled||exhibit?.kind!=='webgl';
   if(token===lastState&&!force)return;
-  const words={idle:'Watching. Approach the front bar when you’re ready.',notice:'Noticing the approach…',warning:'The wings tuck to shield the ribs. One shoulder leads.',strike:'A short shoulder-and-elbow drive accompanies the snap.',contact:'Contact at the cage boundary.',recover:'Recovering to the resting pose.',cooldown:'Settling. Give the mechanism a moment.'};
-  $('encounter-status').textContent=loading?'Preparing the assembly…':returning?'Reassembling. The encounter resumes once every component is seated.':s.inspection?'Inspection is calm. Open assemblies stay still while you examine them.':s.paused?'Paused. The specimen stays calm; you can still orbit.':s.reducedMotion&&s.state!=='idle'?'Approach acknowledged. Reduced motion keeps the specimen still.':words[s.state];
+  const words={watch:'Watching the enclosure. Its stillness is deliberate.',pace:'Pacing. Each turn takes another planted step.',boundary:'Following a seam toward the bars.', 'cage-test':'Testing the cage with a slow, controlled press.',notice:'The head turns first. You have its attention.',approach:'Closing toward your position. You can retreat.',warning:'Feet planted. Wings tucked. The body loads for a strike.',strike:'A committed snap toward your chosen rail.',contact:'The bill meets the inside of the cage.',recover:'Decelerating and restoring its stance.',agitated:'Still watching you. The encounter has not been forgotten.',settle:'Finishing its step and settling into inspection.',inspection:'Inspection is calm. Assemblies stay still while open.'};
+  $('encounter-status').textContent=loading?'Preparing the assembly…':returning?'Reassembling. Movement resumes once every component is seated.':s.inspection?words.inspection:s.inspectionRequested?words.settle:s.paused?'Paused in place. You can still orbit or inspect.':s.reducedMotion?'Calm view. Autonomous travel and strikes are off. A reach is acknowledged without an attack.':era!=='builder'?'Historical construction view. Autonomous predatory behavior belongs to the Builder encounter.':words[s.state]||'Watching.';
   if(exhibit?.kind==='illustrated'&&!loading)$('encounter-status').textContent+=' Illustrated mode reports the response in text.';
   if(s.state==='contact'&&lastState.split(':')[0]!=='contact')sound.effect('metal');
   $('viewer').dataset.behavior=s.state;$('viewer').dataset.mode=s.inspection?'inspection':'encounter';
@@ -76,10 +77,9 @@ function renderState(force=false){
 }
 function setSection(value){
   section=value;setArmed(false);$('section-toggle').setAttribute('aria-pressed',String(value));$('section-toggle').textContent=value?'Close inspection':'Open for inspection';
-  $('separation').disabled=!value;$('reassemble').disabled=!value;$('view-label').textContent=value?'INSPECTION / ASSEMBLY RELATIONSHIPS':'ENCLOSURE / EXTERIOR';
-  exhibit?.setSection(value);
-  if(value){returning=false;machine.setInspection(true);sound.effect('open');}
-  else{exhibit?.setSeparation(0);$('separation').value=0;$('separation-value').textContent='0%';returning=true;}
+  $('separation').disabled=true;$('reassemble').disabled=!value;
+  if(value){returning=false;machine.setInspection(true);}
+  else{sectionOpen=false;exhibit?.setSection(false);exhibit?.setSeparation(0);$('separation').value=0;$('separation-value').textContent='0%';returning=true;}
   renderState(true);
 }
 function applyEra(value){
@@ -105,9 +105,10 @@ async function loadExhibit(forceFallback=false){
   loading=false;$('loading').hidden=true;$('render-label').textContent=exhibit.kind==='webgl'?'3D / REFERENCE-INFORMED STUDY':'ILLUSTRATED / FIXED VIEW';
   if(exhibit.kind==='webgl')$('viewer-note').textContent='Reference-informed 3D reconstruction under review. The cage is an exhibit device; hidden surfaces and mechanisms are proposals. Music starts only when you choose Play.';
   document.querySelectorAll('[data-view],#focus-part,#reset-view').forEach(b=>b.disabled=exhibit.kind!=='webgl');
-  exhibit.setEra(era);exhibit.setSection(section);exhibit.setSeparation(Number($('separation').value)/100);exhibit.resize();renderSelection(selected);renderState(true);
+  exhibit.setEra(era);sectionOpen=false;if(section)machine.setInspection(true);exhibit.setSection(false);exhibit.setSeparation(0);exhibit.resize();renderSelection(selected);renderState(true);
 }
 $('reach').addEventListener('click',()=>requestReach());
+$('retreat').addEventListener('click',()=>{machine.requestRetreat();setArmed(false);renderState(true);});
 $('arm-reach').addEventListener('click',()=>setArmed(!armed));
 $('section-toggle').addEventListener('click',()=>setSection(!section));
 $('reassemble').addEventListener('click',()=>setSection(false));
@@ -128,8 +129,16 @@ const {mountThemePlayer}=await import('./audio/theme-player.js');mountThemePlaye
 applyEra('builder');renderSelection('beak');
 new ResizeObserver(()=>exhibit?.resize()).observe($('viewer'));
 let previous=performance.now();
-function animate(now){const frameDelta=(now-previous)/1000;const dt=Math.min(frameDelta,.1);previous=now;if(exhibit){const state=machine.update(document.hidden?0:dt);exhibit.tick(document.hidden?0:dt,state,document.hidden?0:frameDelta);if(returning&&exhibit.isAssembled()){returning=false;machine.setInspection(false);}renderState();}requestAnimationFrame(animate);}
+function frame(dt,frameDelta=dt){
+  if(!exhibit)return;
+  const state=machine.update(dt,exhibit.feedback?.()||{arrived:true,settled:true,aligned:true});
+  exhibit.tick(dt,state,frameDelta);
+  if(section&&state.inspection&&!sectionOpen){sectionOpen=true;exhibit.setSection(true);$('separation').disabled=false;$('view-label').textContent='INSPECTION / ASSEMBLY RELATIONSHIPS';sound.effect('open');}
+  if(returning&&exhibit.isAssembled()){returning=false;machine.setInspection(false);$('view-label').textContent='ENCLOSURE / EXTERIOR';}
+  renderState();
+}
+function animate(now){const frameDelta=(now-previous)/1000;const dt=Math.min(frameDelta,.1);previous=now;if(!document.hidden)frame(dt,frameDelta);requestAnimationFrame(animate);}
 requestAnimationFrame(animate);
 // Local QA reads actual loaded scene metrics; this hook is removed by Vite builds.
-if(import.meta.env.DEV)window.__uncaged={getSnapshot:()=>machine.getSnapshot(),metrics:()=>exhibit?.metrics()};
+if(import.meta.env.DEV)window.__uncaged={getSnapshot:()=>machine.getSnapshot(),metrics:()=>exhibit?.metrics(),step:(seconds)=>{for(let t=0;t<seconds;t+=1/60)frame(Math.min(1/60,seconds-t));},reach:point=>requestReach(point),retreat:()=>machine.requestRetreat()};
 await loadExhibit();

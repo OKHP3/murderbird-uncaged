@@ -1,8 +1,8 @@
 # MurderBird: Uncaged — creative authority and discrepancy record
 
-**Latest owner clarification:** MurderBird is flightless. Its articulated wings provide balance, shielding and a tucked shoulder/elbow shove. [Flightless wing direction](flightless-wing-direction.md) controls earlier ornamental-only interpretations; [current shield review](shield-study-review.md) records the derivative and checks.
+**Latest owner clarification:** MurderBird is flightless. Its articulated wings provide balance, shielding and a tucked shoulder/elbow shove. The raptor comparison describes speed, attention and tension, not anatomy. The current [Stage Two encounter review](stage-two-encounter-review.md) records the moving Builder implementation and its limits; the [shield-study review](shield-study-review.md) remains a preserved earlier checkpoint.
 
-**Current owner direction:** the September 27 heavy-machine/predator clarification controls the new mass and posture study. See [the recorded instruction and interpretation](mechanical-predator-direction.md) and [current review](mass-study-review.md). Earlier selections below retain their scoped appearance authority; they are not model approval.
+**Current owner direction:** the September 27 heavy-machine/predator clarification controls the current mass, posture and movement study. See [the recorded instruction and interpretation](mechanical-predator-direction.md) and [Stage Two review](stage-two-encounter-review.md). Earlier selections below retain their scoped appearance authority; they are not model approval.
 
 Status: evidence synthesis for local production. This record does not approve a finished character model, alter story canon, or authorize publication.
 
@@ -65,7 +65,7 @@ Resolve this by treating the cage as a separable museum-exhibit fixture around t
 
 ## Production decisions and open owner-facing choices
 
-Evidence supports using candidate 03 as the current visible identity target, with the July owner selection limited to head form and 2.0 m as a lead-selected production target. It also supports keeping heart and mind separate and preserving uncertainty about the ancient mechanism. These decisions do not need to be reopened to begin a bounded blockout.
+Evidence supports using candidate 03 as the current full-body identity target, with the July owner selection limited to head form and 2.0 m as a lead-selected production target. It also supports keeping heart and mind separate and preserving uncertainty about the ancient mechanism. These decisions guide the Stage Two prototype but do not approve its likeness, motion, or reconstructed engineering.
 
 Consequential choices that remain open for review are: (1) the cage’s visual language and whether visitors encounter the bird through bars or a more abstract containment boundary; (2) the intensity and exact contact point of the visitor-triggered reaction; (3) a dedicated, close-up reference for the inherited left-shoulder repair; and (4) the proposed, noncanonical geometry of unseen winding, power, and processing assemblies. These are design decisions, not missing historical facts.
 
@@ -78,3 +78,9 @@ The first local assembly study was presented with a comparison against candidate
 The owner identified the B2-series super battle droid and combined its bulk/strength with exposed Terminator machinery and Jurassic Park raptor speed/ferocity, explicitly in a birdlike form. The exact message, evidence tiers and bounded interpretation are in [mechanical predator direction](mechanical-predator-direction.md). This supports a more substantial torso, shoulders and leg mechanisms, a compact structural neck and fast deliberate response. It does not introduce a humanoid body, dinosaur tail, franchise identity or new heart/brain history.
 
 The new editable derivative is `assets/models/uncaged-mass-study/murderbird-mass-study.blend`; the earlier study and comparison remain preserved. Artistic acceptance of the new study is pending.
+
+## Stage Two implementation checkpoint, September 27, 2026
+
+The owner supplied a Stage Two brief for a deliberate, autonomous-feeling encounter with a physically present MurderBird. The new local Builder implementation adds rigid thigh/shin/foot/toe groups, planted-foot procedural stepping, attention, pacing, cage testing, visitor-directed approach and strike, recovery, residual agitation, and a stop for reversible inspection. The exported rigid model has no skinned armature; a single short head-rotation clip verifies animation export, while runtime choreography is procedural. The [reference and movement baseline](stage-two-reference-baseline.md) documents source scopes and prior motion samples.
+
+The owner explicitly restated that the raptor comparison is about capability and tension, not anatomy. The model retains bird feet, a hooked bill, a compact rear outline and flightless folded wings. The continuous encounter and likeness comparison are recorded in the [Stage Two review](stage-two-encounter-review.md) and [capture page](../assets/audit/uncaged-presence-review/encounter-review.html). Automated kinematic and browser checks pass their documented scenarios; they do not establish artistic likeness, real balance/force, human accessibility, or final owner approval. The current likeness decision and publication approval remain pending.

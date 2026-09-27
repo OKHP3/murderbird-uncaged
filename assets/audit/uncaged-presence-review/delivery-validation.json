@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-27T13:02:50.520Z",
+  "checks": [
+    {
+      "name": "narrow screen inspection leaves creature unobscured and retains seven part controls",
+      "status": "pass"
+    },
+    {
+      "name": "review images load and final MP4 plays in browser",
+      "status": "pass",
+      "video": {
+        "duration": 90.4,
+        "width": 1440,
+        "height": 1200
+      }
+    },
+    {
+      "name": "final production build loads WebGL and excludes development diagnostics",
+      "status": "pass"
+    }
+  ],
+  "repair": "Review image changed from an unavailable 1536px LFS pointer to the existing hydrated 960px delivery derivative.",
+  "deliveredFiles": [
+    {
+      "path": "src/main.js",
+      "bytes": 19998,
+      "sha256": "17b5d0931a9f7de2be34e876574f3dbb4205f0fa96c9db98f9a2b35d0365544d"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 8588,
+      "sha256": "35c3cc128d3d9f481609ad4b791b14a75fef4c51242b656402f87bb476d1506d"
+    },
+    {
+      "path": "src/scene/presence-state.js",
+      "bytes": 19157,
+      "sha256": "2b4c8c0bb4d75606688034aa9d894dcca1a91ff67d99c1d71abcc626c4b5098d"
+    },
+    {
+      "path": "src/scene/presence-motion.js",
+      "bytes": 13120,
+      "sha256": "f900421738c4817883464d2bb1b105d5d4d797751e95e7a4a5a11e0d42408934"
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "bytes": 17654,
+      "sha256": "e5a0bc77ba74f0ad22a6b9e335655b854bca6ab6755955f68a3bb6f43b7d7ea7"
+    },
+    {
+      "path": "assets/models/uncaged-presence-study/murderbird-presence-study.glb",
+      "bytes": 3425344,
+      "sha256": "cbf75f80876669505a8919eac0875575d0ce8f2a5dcf189d84f01b76e7f3d851"
+    },
+    {
+      "path": "assets/audit/uncaged-presence-review/milestone-encounter.webm",
+      "bytes": 10816431,
+      "sha256": "b21de499196a26ba6e73904b2cd8380b22b245eb4b90d263644cc79c1bb6747c"
+    },
+    {
+      "path": "assets/audit/uncaged-presence-review/milestone-encounter.mp4",
+      "bytes": 8607898,
+      "sha256": "40f1f3f66e5be407cf6fb41a343709b6434094427ef27af3640be5b4435eda8f"
+    }
+  ],
+  "videoEncoding": {
+    "operation": "Full-length uncut transcode of browser WebM to H.264 MP4; no audio",
+    "durationSeconds": 90.4,
+    "width": 1440,
+    "height": 1200,
+    "framesPerSecond": 25
+  },
+  "sourceBuildManifest": "assets/audit/uncaged-presence-review/asset-validation.json"
+}

@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>MurderBird rigid-motion review</title><style>body{margin:0;background:#232b29;color:#eee;font:14px system-ui}#scene{height:90vh;width:100vw}p{margin:12px}</style><div id="scene"></div><p>Local rig review — production proposal. Ordinary orbit controls. No final art approval.</p><script type="module">
+import {createExhibit} from '/src/scene/presence-exhibit.js';
+const view=await createExhibit(document.querySelector('#scene'),()=>{});view.setEra('builder');
+let time=0,last=performance.now(),paused=false;const state={era:'builder',state:'watch',phase:0,goal:{x:0,z:-.25},lookTarget:{x:0,y:1.5,z:2.1},speed:0,heading:0};
+function frame(now){const dt=paused?0:Math.min(.1,(now-last)/1000);last=now;time+=dt;view.tick(dt,state);requestAnimationFrame(frame)}requestAnimationFrame(frame);
+window.rig={view,state,pause:v=>paused=v,step:n=>{for(let t=0;t<n;t+=1/60)view.tick(1/60,state)},ready:true};
+</script>

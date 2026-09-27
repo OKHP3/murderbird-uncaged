@@ -1,0 +1,9 @@
+# Stage Two local evidence
+
+Start with [encounter-review.html](encounter-review.html) and the [review report](../../../docs/stage-two-encounter-review.md). The MP4 is a full-length H.264 transcode of `milestone-encounter.webm`, without cuts or sound. `browser-encounter.json` records wall-clock events and sampled actual scene transforms; its timer begins after the scene is ready, about one second after the video starts. Recorded video is 25 fps; runtime frame-rate estimates are separate.
+
+Current review images are `encounter-start.png`, `autonomous-pacing.png`, `post-strike-agitation.png`, `stable-exploded.png`, `matched-angle-model.png`, `side-step-model.png`, `mobile-inspection.png`, `illustrated-fallback.png`, and `review-page.png`. `video-recovery-sample.png` is one frame extracted at video time 68.95 seconds; it shows recovery, not the instant of impact. Likeness views approximate the reference angle, without matching camera calibration. These captures supplement the uninterrupted recording.
+
+`rig-first-view.png`, `rig-walking.png`, `first-integrated.png`, and `early-inspection.png` are preserved intermediate captures from development, not final acceptance evidence. `rig-preview.html` is a local diagnostic view and is not emitted in the production build. `browser-regressions-initial.json` preserves a failed early test assumption; `browser-regressions.json` is the corrected full test result. `delivery-validation.json` covers the subsequent narrow-screen overlay fix, final review media and production smoke check.
+
+`native-source.json`, `asset-validation.json`, `motion-validation.json`, and `host.json` describe separate local checks. Numerical correctness is not owner likeness, animation or release approval. The audit folder, recordings, editable source and provenance do not belong in `public/` or the built website. All MurderBird creative material remains all rights reserved.
