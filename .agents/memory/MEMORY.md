@@ -1,3 +1,4 @@
 - [WebGL preview limitation](webgl-preview.md) — the Replit screenshot browser may lack WebGL even when a normal Chromium session can render the 3D exhibit.
 - [ImageMagick SVG transparency](imagemagick-svg-transparency.md) — set the SVG reader background to none before loading it, or transparent regions may render white during compositing.
 - [.replit configuration edits](dot-replit-editing.md) — direct patches are blocked; stage complete TOML and use the validator callback only when a config change is needed.
+- [Mobile CDP testing](mobile-cdp-testing.md) — force instant scrolling before measuring touch targets; smooth-scroll animation can leave stale viewport coordinates.
