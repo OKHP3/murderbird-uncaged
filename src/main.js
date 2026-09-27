@@ -177,10 +177,22 @@ document.querySelector('#reset-view').addEventListener('click', () => {
   trackEvent('view_reset');
 });
 document.querySelector('#sound-toggle').addEventListener('click', async event => {
-  const enabled = await sound.toggle();
-  trackEvent('sound_toggle', { is_enabled: enabled });
-  event.currentTarget.setAttribute('aria-pressed', String(enabled));
-  event.currentTarget.innerHTML = `<span class="control-icon">♫</span> SOUND ${enabled ? 'ON' : 'OFF'}`;
+  const button = event.currentTarget;
+  button.disabled = true;
+  try {
+    const enabled = await sound.toggle();
+    trackEvent('sound_toggle', { is_enabled: enabled });
+    button.setAttribute('aria-pressed', String(enabled));
+    button.innerHTML = `<span class="control-icon">♫</span> SOUND ${enabled ? 'ON' : 'OFF'}`;
+  } catch {
+    button.textContent = 'SOUND UNAVAILABLE';
+  } finally {
+    button.disabled = false;
+  }
 });
+if (import.meta.env.DEV && __LOCAL_THEME_PREVIEW__) {
+  const { mountThemePlayer } = await import('./audio/theme-player.js');
+  mountThemePlayer(document.querySelector('.viewer-column'), sound);
+}
 renderSelection('beak', false);
 new ResizeObserver(() => exhibit.resize()).observe(viewerElement);

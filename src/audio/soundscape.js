@@ -1,6 +1,17 @@
 // Gesture-started Web Audio sketch. No final song or recorded effects are bundled.
 export function createSoundscape() {
-  let context, master, bed, timer, enabled = false, step = 0;
+  let context, master, bed, timer, enabled = false, step = 0, themePlaying = false;
+  function getContext() {
+    if (!context) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) throw new Error('Web Audio is unavailable in this browser.');
+      context = new AudioContext();
+      master = context.createGain();
+      master.gain.value = .6;
+      master.connect(context.destination);
+    }
+    return context;
+  }
   function tone(frequency, duration, type = 'sine', volume = .08, destination = master, start = context.currentTime) {
     const oscillator = context.createOscillator();
     const envelope = context.createGain();
@@ -16,7 +27,7 @@ export function createSoundscape() {
   function startBed() {
     // A quiet workshop pulse, not a substitute for the planned theme song.
     bed = context.createGain();
-    bed.gain.value = .55;
+    bed.gain.value = themePlaying ? 0 : .55;
     bed.connect(master);
     const notes = [82.41, 98, 110, 98, 82.41, 73.42, 65.41, 73.42];
     function beat() {
@@ -31,17 +42,12 @@ export function createSoundscape() {
   }
   return {
     async toggle() {
-      if (!context) {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (!AudioContext) return false;
-        context = new AudioContext();
-        master = context.createGain();
-        master.gain.value = .6;
-        master.connect(context.destination);
-      }
+      getContext();
       if (enabled) {
         enabled = false;
         window.clearInterval(timer);
+        if (bed) bed.disconnect();
+        bed = undefined;
         master.gain.setTargetAtTime(0, context.currentTime, .12);
       } else {
         await context.resume();
@@ -52,12 +58,18 @@ export function createSoundscape() {
       }
       return enabled;
     },
+    // Shared context; the theme has its own gain so SOUND still controls effects.
+    getContext,
+    setThemePlaying(playing) {
+      themePlaying = playing;
+      if (bed) bed.gain.setTargetAtTime(playing ? 0 : .55, context.currentTime, .12);
+    },
     effect(name) {
       if (!enabled || !context) return;
       const now = context.currentTime;
       if (bed) {
-        bed.gain.setTargetAtTime(.16, now, .015);
-        bed.gain.setTargetAtTime(.55, now + .35, .22);
+        bed.gain.setTargetAtTime(themePlaying ? 0 : .16, now, .015);
+        bed.gain.setTargetAtTime(themePlaying ? 0 : .55, now + .35, .22);
       }
       if (name === 'metal' || name === 'open') {
         tone(320, .55, 'triangle', .095);
