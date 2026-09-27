@@ -4,6 +4,7 @@
 .theme-eyebrow{margin:0 0 9px}.theme-badge{text-align:right;line-height:1.6}
 .theme-player h3{font:500 32px 'Playfair Display',Georgia,serif;letter-spacing:-.035em;margin:0}
 .theme-description{font-size:13px;line-height:1.7;color:#555d50;margin:16px 0}
+.theme-description a{text-decoration:underline;text-underline-offset:3px}
 .theme-controls{display:flex;align-items:end;gap:8px;flex-wrap:wrap}
 .theme-player button,.theme-player select{font:12px 'DM Sans',sans-serif;color:#292e28;background:transparent;border:1px solid #8d9484;border-radius:0;min-height:44px;padding:10px 16px}
 .theme-player button:hover{background:#ddd5c4}.theme-player button:disabled{opacity:.55;cursor:wait}
@@ -15,5 +16,5 @@
 .theme-level output{font:11px 'DM Mono',monospace;min-width:34px;text-align:right}
 .theme-progress{display:flex;justify-content:space-between;gap:16px;margin-top:17px;font-size:12px;line-height:1.6;color:#555d50}
 #theme-time{white-space:nowrap;font-family:'DM Mono',monospace;font-size:11px}
-.theme-player :is(button,select,input):focus-visible{outline:2px solid #79421f;outline-offset:4px}
+.theme-player :is(button,select,input,a):focus-visible{outline:2px solid #79421f;outline-offset:4px}
 @media(max-width:600px){.theme-player{padding:20px 16px}.theme-heading{align-items:start}.theme-badge{max-width:100px}.theme-mode{flex-basis:100%;margin:5px 0 0}.theme-mode select{width:100%}.theme-progress{flex-direction:column;gap:5px}.theme-level{gap:8px}}
