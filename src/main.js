@@ -1,36 +1,42 @@
 import './style.css';
 import './fallback.css';
-import { createExhibit } from './scene/exhibit.js';
+import './media.css';
 import { createIllustratedExhibit } from './scene/fallback.js';
 import { createSoundscape } from './audio/soundscape.js';
+import {
+  chapterStills,
+  ironVerdictTrack,
+  murderBirdHero,
+  firstChoicePilot,
+} from './media.js';
 
 const specimens = [
   {
     id: 'beak', number: '01', name: 'Hammered beak', era: 'I · THE MAKER',
     title: 'Built to break, built by hand.',
-    description: 'The bronze beak bears the marks of its first maker. Its overlapping plates suggest a tool assembled piece by piece, rather than a creature born whole.',
-    observation: 'Look for the segmented bronze at the front of the skull.',
+    description: 'The deep hooked bill and hand-worked bronze belong to the Bird’s earliest, deliberately made body. The story leaves the original mechanism unresolved.',
+    observation: 'Look for the hooked profile and irregularly fitted plates.',
     sound: 'metal',
   },
   {
     id: 'joint', number: '02', name: 'Joint assembly', era: 'II · THE MECHANIC',
     title: 'Motion, repaired.',
-    description: 'The leg joints expose bearing surfaces and restoration-era repair. These mechanisms translate the weight of the body into a deliberate, uneasy stance.',
-    observation: 'Inspect the rings and pins above the talons.',
+    description: 'Industrial braces and bearings mark later repair. The Bird remains a floor-supported, flightless body; the ordinary workbench and CRT do not carry its weight.',
+    observation: 'Inspect the reinforced joints above the planted talons.',
     sound: 'click',
   },
   {
     id: 'core', number: '03', name: 'Ceramic power core', era: 'III · THE BUILDER',
-    title: 'Something under the armor.',
-    description: 'Behind the breastplate sits a sealed ceramic core and processing lattice. Open the chest to study the part that changed the bird from mechanism to possibility.',
-    observation: 'Use the section-view control to expose the cavity.',
+    title: 'Power is not a mind.',
+    description: 'The modern Builder adds finite onboard energy and processing as separate systems. This exploratory section view is a power inspection, not a glowing reactor or proof of a completed mind.',
+    observation: 'Open the Builder-era inspection to see a simplified, non-glowing study.',
     sound: 'pulse',
   },
   {
     id: 'eye', number: '04', name: 'The eye', era: 'III · THE BUILDER',
-    title: 'The moment it chooses.',
-    description: 'Its eye is not just a sensor. In the story of the MurderBird, this is where observation becomes decision—the first sign that the cage is no longer in control.',
-    observation: 'The lens follows the exhibit light, even when the body is still.',
+    title: 'One modern optic.',
+    description: 'The circular amber optic belongs to the modern Builder-era study only. The inert Water stage and industrial Mechanic stage keep their eyes dark.',
+    observation: 'This geometry does not animate an eye or represent a finished character rig.',
     sound: 'chirp',
   },
 ];
@@ -47,35 +53,38 @@ app.innerHTML = `
       <section class="intro">
         <div class="intro-copy"><p class="eyebrow"><span class="eyebrow-line"></span> AN INTERACTIVE FIELD EXHIBIT <span class="edition">/ 001</span></p>
           <h1>Meet the thing<br><em>that learned</em><br>to choose.</h1>
-          <p class="intro-sub">Part artifact. Part animal. Entirely unexpected. Turn the MurderBird, inspect its construction, and follow the three eras that brought it to life.</p>
+          <p class="intro-sub">In this fictional field exhibit, meet a floor-standing, flightless terrorbird: deep hooked bill, segmented crown, compact folded wings, and legs built to carry its weight. Follow its history without mistaking a study model for a finished rig.</p>
           <a class="text-link" href="#specimen">ENTER THE EXHIBIT <span>↓</span></a>
         </div>
-        <div class="intro-index"><span>THE MURDERBIRD</span><span>SPECIMEN NO. 001</span><span>ANATOMY OF AN IMPOSSIBILITY</span></div>
+        <figure class="intro-art">
+          <img src="${murderBirdHero.src}" srcset="${murderBirdHero.srcset}" sizes="(max-width: 760px) 100vw, 52vw" alt="${murderBirdHero.alt}" fetchpriority="high" decoding="async">
+          <figcaption><span>COMMON SILHOUETTE / MASTER STILL</span><span>Floor-supported · local preview</span></figcaption>
+        </figure>
       </section>
 
       <section id="specimen" class="exhibit" aria-labelledby="exhibit-title">
-        <div class="exhibit-heading"><div><p class="eyebrow">THE SPECIMEN / INTERACTIVE STUDY</p><h2 id="exhibit-title">A creature in parts.</h2></div><p>DRAG TO ROTATE &nbsp;·&nbsp; SCROLL TO ZOOM<br>SELECT A MARKER TO INSPECT</p></div>
+        <div class="exhibit-heading"><div><p class="eyebrow">THE SPECIMEN / INTERACTIVE STUDY</p><h2 id="exhibit-title">A study—not the Bird.</h2></div><p>DRAG TO ROTATE &nbsp;·&nbsp; SCROLL TO ZOOM<br>SELECT A MARKER TO INSPECT</p></div>
         <div class="exhibit-grid">
           <div class="viewer-column">
             <div class="viewer" id="viewer">
-              <div class="viewer-top"><span><i class="status-dot"></i> SPECIMEN ACTIVE</span><span>MB–001 / MODEL STUDY</span></div>
-              <div id="scene" aria-label="Interactive 3D model of the MurderBird"></div>
+              <div class="viewer-top"><span><i class="status-dot"></i> EXPLORATORY GEOMETRY</span><span>BUILDER ERA / DRAFT</span></div>
+              <div id="scene" aria-label="Interactive procedural geometry study, not a finished MurderBird model"></div>
               <div id="hotspots" class="hotspots"></div>
               <div class="viewer-corner tl"></div><div class="viewer-corner tr"></div><div class="viewer-corner bl"></div><div class="viewer-corner br"></div>
-              <div class="viewer-bottom"><span>FIG. 01 / CONSTRUCTION STUDY</span><span id="view-label">EXTERIOR VIEW</span></div>
+              <div class="viewer-bottom"><span>NOT A CHARACTER RIG</span><span id="view-label">EXTERIOR VIEW</span></div>
             </div>
             <div class="toolbar" aria-label="Exhibit controls">
-              <button id="section-toggle" class="control primary" type="button" aria-pressed="false"><span class="control-icon">◫</span> OPEN SECTION VIEW <span class="control-arrow">↗</span></button>
+              <button id="section-toggle" class="control primary" type="button" aria-pressed="false"><span class="control-icon">◫</span> OPEN POWER INSPECTION <span class="control-arrow">↗</span></button>
               <button id="reset-view" class="control" type="button" title="Reset 3D view"><span class="control-icon">⟲</span> RESET VIEW</button>
-              <button id="sound-toggle" class="control" type="button" aria-pressed="false"><span class="control-icon">♫</span> SOUND OFF</button>
+              <button id="sound-toggle" class="control" type="button" aria-pressed="false"><span class="control-icon">♫</span> SOUNDSCAPE OFF</button>
             </div>
-            <p class="viewer-note">Explore the procedural study model and listen to Iron Verdict, the MurderBird theme song, below. The source collection preserves story artwork and motion studies; a finished character model remains in development.</p>
+            <p class="viewer-note">This procedural geometry is an interaction sketch for the Builder stage, not a finished MurderBird model or rig. Scoped story stills and motion studies below provide local-preview visual references; listen to Iron Verdict in the player below.</p>
           </div>
           <aside class="inspector" aria-label="Specimen details">
-            <div class="inspector-header"><span>ANATOMY INDEX</span><span>01 — 04</span></div>
+            <div class="inspector-header"><span>STUDY INDEX</span><span>01 — 04</span></div>
             <div class="part-list" id="part-list"></div>
             <div id="detail" class="detail" aria-live="polite"></div>
-            <div class="inspector-foot"><span>THREE ERAS. ONE IMPOSSIBLE BIRD.</span><span>↘</span></div>
+            <div class="inspector-foot"><span>FICTIONAL HISTORY / WORKING STUDY</span><span>↘</span></div>
           </aside>
         </div>
       </section>
@@ -84,9 +93,45 @@ app.innerHTML = `
         <div class="section-kicker"><span>FIELD NOTES</span><span>THE CONSTRUCTION RECORD / 01—03</span></div>
         <h2 id="timeline-title">Not born. <em>Built.</em></h2>
         <div class="eras">
-          <article><span class="era-number">I / THE MAKER</span><div class="era-symbol">✳</div><h3>Forged</h3><p>Bronze, heat, and a maker’s hand. The earliest form was an object with a purpose.</p></article>
-          <article><span class="era-number">II / THE MECHANIC</span><div class="era-symbol">◎</div><h3>Repaired</h3><p>Bearings and joints brought motion back to a body that had learned to wear down.</p></article>
-          <article><span class="era-number">III / THE BUILDER</span><div class="era-symbol">✺</div><h3>Awakened</h3><p>A sealed core and a new kind of processing. The first choice belonged to the bird.</p></article>
+          <article><span class="era-number">I / THE MAKER</span><div class="era-symbol">✳</div><h3>Hand-worked</h3><p>Bronze, peened pins, and an eagle commission shaped into a formidable terrestrial body. Its earliest mechanism remains a story mystery.</p></article>
+          <article><span class="era-number">II / THE MECHANIC</span><div class="era-symbol">◎</div><h3>Repaired</h3><p>Industrial braces and bearings accumulate around the old body. Its weight stays on the floor or a credible assembly cradle.</p></article>
+          <article><span class="era-number">III / THE BUILDER</span><div class="era-symbol">✺</div><h3>Power / processing</h3><p>Modern energy and processing are distinct additions. The Heart still is a power inspection—not a completed mind.</p></article>
+        </div>
+      </section>
+      <section class="media-atlas" id="media-record" aria-labelledby="media-title">
+        <div class="section-kicker"><span>SCOPED STORY STILLS</span><span>LOCAL PREVIEW / NOT RELEASE APPROVAL</span></div>
+        <h2 id="media-title">Material, time, <em>repair.</em></h2>
+        <p class="media-intro">These supplied images are reviewed for specific fictional story beats. They establish silhouette, material, and setting; they do not certify a finished model, exact anatomy, or hidden mechanism.</p>
+        <div class="still-grid">
+          ${chapterStills.map(still => `
+            <figure class="still-card">
+              <img src="${still.src}" alt="${still.alt}" loading="lazy" decoding="async">
+              <figcaption><span class="still-era">${still.era}</span><strong>${still.title}</strong><span>${still.note}</span></figcaption>
+            </figure>`).join('')}
+        </div>
+      </section>
+      <section class="media-playback" id="motion-sound" aria-labelledby="playback-title">
+        <div class="section-kicker"><span>OPTIONAL MEDIA</span><span>VISITOR-STARTED / NO AUTOPLAY</span></div>
+        <h2 id="playback-title">Motion and <em>sound.</em></h2>
+        <div class="playback-grid">
+          <article class="playback-card">
+            <p class="playback-kicker">CONTROLLED PILOT 03 / 8 SECONDS</p>
+            <h3>First choice</h3>
+            <video id="first-choice-video" controls playsinline preload="none" poster="${firstChoicePilot.poster}" aria-describedby="pilot-description">
+              <source src="${firstChoicePilot.src}" type="video/mp4">
+              <p>Your browser does not support this video. <a href="${firstChoicePilot.src}">Open the silent pilot file</a>.</p>
+            </video>
+            <p id="pilot-description" class="playback-description">Silent controlled motion study: the Bird shifts on its supported saddle and inspects the work while both feet, the floor, the CRT, and the stand remain fixed. It is a short 2D review clip, not a reconstructed 3D mechanism or a longer film. There is no audio track, dialogue, or implied sound.</p>
+          </article>
+          <article class="playback-card">
+            <p class="playback-kicker">IRON VERDICT / INSTRUMENTAL DEMO</p>
+            <h3>Visitor-controlled theme</h3>
+            <audio id="iron-verdict-audio" controls preload="none" aria-label="Iron Verdict original programmed instrumental demo, without vocals">
+              <source src="${ironVerdictTrack}" type="audio/mpeg">
+              <a href="${ironVerdictTrack}">Open the Iron Verdict MP3</a>
+            </audio>
+            <p class="playback-description">An original programmed instrumental demo, not a live performance or a finished vocal recording. No singer has been recorded. A separate notated lyric/performance guide exists, but these lyrics are not sung in this track.</p>
+          </article>
         </div>
       </section>
       <section class="closing"><p class="eyebrow">THE STORY BEHIND THE SPECIMEN</p><h2>Every machine<br>has a <em>maker.</em></h2><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">READ THE ORIGIN STORY <span>↗</span></a></section>
@@ -102,7 +147,7 @@ const detail = document.querySelector('#detail');
 const sound = createSoundscape();
 let selected = 'beak';
 let sectionOpen = false;
-let interactionCount = 0;
+let soundscapeEnabled = false;
 
 function trackEvent(name, parameters = {}) {
   if (typeof window.gtag === 'function') window.gtag('event', name, parameters);
@@ -120,6 +165,7 @@ const hasWebGL = Boolean(probe.getContext('webgl2') || probe.getContext('webgl')
 let exhibit;
 if (hasWebGL) {
   try {
+    const { createExhibit } = await import('./scene/exhibit.js');
     exhibit = createExhibit(sceneElement, updateMarker);
   } catch (error) {
     console.warn('3D renderer unavailable; switching to illustrated exhibit.', error);
@@ -128,7 +174,12 @@ if (hasWebGL) {
 }
 if (!exhibit) {
   exhibit = createIllustratedExhibit(sceneElement, updateMarker);
-  document.querySelector('.viewer-note').textContent = 'Illustrated interactive view shown because WebGL is unavailable here. The procedural 3D model runs in browsers with WebGL support. Listen to Iron Verdict, the MurderBird theme song, using the player below.';
+  viewerElement.classList.add('fallback-active');
+  document.querySelector('.viewer-top span:first-child').innerHTML = '<i class="status-dot"></i> SCOPED STORY ART';
+  document.querySelector('.viewer-top span:last-child').textContent = 'LOCAL PREVIEW';
+  document.querySelector('.exhibit-heading > p').textContent = 'SELECT A STUDY INDEX TO VIEW ITS SCOPED STILL';
+  document.querySelector('#reset-view').hidden = true;
+  document.querySelector('.viewer-note').textContent = 'Illustrated story art is shown because WebGL is unavailable here. Select a study index to view its scoped still. This is local-preview artwork, not final release art. The interactive 3D model requires WebGL; listen to Iron Verdict using the player below.';
 }
 
 function renderSelection(id, play = true) {
@@ -144,14 +195,12 @@ function renderSelection(id, play = true) {
   exhibit.select(id);
   if (play) {
     sound.effect(item.sound);
-    interactionCount++;
     trackEvent('select_specimen', { specimen_id: item.id });
-    if (interactionCount === 7) exhibit.react();
   }
 }
 
 partList.innerHTML = specimens.map(item => `<button type="button" data-part="${item.id}" aria-pressed="false"><span class="part-number">${item.number}</span><span>${item.name}</span><span class="part-arrow">↗</span></button>`).join('');
-hotspotLayer.innerHTML = specimens.map(item => `<button class="marker" type="button" data-marker="${item.id}" aria-label="Inspect ${item.name}"><span>${item.number}</span></button>`).join('');
+hotspotLayer.innerHTML = specimens.map(item => `<button class="marker" type="button" data-marker="${item.id}" aria-label="Inspect ${item.name}"${exhibit.supportsMarkers ? '' : ' hidden'}><span>${item.number}</span></button>`).join('');
 exhibit.resize();
 partList.addEventListener('click', event => {
   const button = event.target.closest('[data-part]');
@@ -167,8 +216,8 @@ document.querySelector('#section-toggle').addEventListener('click', event => {
   sound.effect(sectionOpen ? 'open' : 'click');
   trackEvent('section_view_toggle', { is_open: sectionOpen });
   event.currentTarget.setAttribute('aria-pressed', String(sectionOpen));
-  event.currentTarget.innerHTML = `<span class="control-icon">◫</span> ${sectionOpen ? 'CLOSE SECTION VIEW' : 'OPEN SECTION VIEW'} <span class="control-arrow">↗</span>`;
-  document.querySelector('#view-label').textContent = sectionOpen ? 'SECTION VIEW / CORE EXPOSED' : 'EXTERIOR VIEW';
+  event.currentTarget.innerHTML = `<span class="control-icon">◫</span> ${sectionOpen ? 'CLOSE POWER INSPECTION' : 'OPEN POWER INSPECTION'} <span class="control-arrow">↗</span>`;
+  document.querySelector('#view-label').textContent = sectionOpen ? 'POWER INSPECTION' : 'EXTERIOR VIEW';
   if (sectionOpen) renderSelection('core');
 });
 document.querySelector('#reset-view').addEventListener('click', () => {
@@ -176,21 +225,59 @@ document.querySelector('#reset-view').addEventListener('click', () => {
   sound.effect('click');
   trackEvent('view_reset');
 });
-document.querySelector('#sound-toggle').addEventListener('click', async event => {
+const soundButton = document.querySelector('#sound-toggle');
+const mediaPlayers = [
+  document.querySelector('#iron-verdict-audio'),
+  document.querySelector('#garageband-audio'),
+  document.querySelector('#first-choice-video'),
+].filter(Boolean);
+let themePlayer;
+
+function syncSoundscapeButton() {
+  soundButton.setAttribute('aria-pressed', String(soundscapeEnabled));
+  soundButton.innerHTML = `<span class="control-icon">♫</span> SOUNDSCAPE ${soundscapeEnabled ? 'ON' : 'OFF'}`;
+}
+
+function stopSoundscape() {
+  if (!soundscapeEnabled) return;
+  soundscapeEnabled = sound.stop();
+  syncSoundscapeButton();
+}
+
+function stopOtherMedia(currentMedia, stopTheme = true) {
+  mediaPlayers.forEach(player => {
+    if (player !== currentMedia) player.pause();
+  });
+  if (stopTheme) themePlayer?.pause();
+  stopSoundscape();
+}
+
+mediaPlayers.forEach(player => {
+  player.addEventListener('play', () => stopOtherMedia(player));
+});
+
+soundButton.addEventListener('click', async event => {
   const button = event.currentTarget;
   button.disabled = true;
   try {
-    const enabled = await sound.toggle();
-    trackEvent('sound_toggle', { is_enabled: enabled });
-    button.setAttribute('aria-pressed', String(enabled));
-    button.innerHTML = `<span class="control-icon">♫</span> SOUND ${enabled ? 'ON' : 'OFF'}`;
+    if (!soundscapeEnabled) stopOtherMedia(null);
+    soundscapeEnabled = await sound.toggle();
+    trackEvent('sound_toggle', { is_enabled: soundscapeEnabled });
+    syncSoundscapeButton();
   } catch {
-    button.textContent = 'SOUND UNAVAILABLE';
+    soundscapeEnabled = sound.stop();
+    button.setAttribute('aria-pressed', 'false');
+    button.textContent = 'SOUNDSCAPE UNAVAILABLE';
   } finally {
     button.disabled = false;
   }
 });
+
 const { mountThemePlayer } = await import('./audio/theme-player.js');
-mountThemePlayer(document.querySelector('.viewer-column'), sound);
+themePlayer = mountThemePlayer(document.querySelector('.viewer-column'), sound, {
+  onStart() {
+    stopOtherMedia(null, false);
+  },
+});
 renderSelection('beak', false);
 new ResizeObserver(() => exhibit.resize()).observe(viewerElement);

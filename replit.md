@@ -5,6 +5,14 @@
 - Install dependencies with `npm ci`, run `npm run dev -- --host 0.0.0.0 --port 5000` for a Replit preview, and verify the distributable with `npm run build`. The workflow definitions are in `.github/workflows/validate.yml` and `.github/workflows/deploy.yml`.
 - Preserve the current stack and three-era exhibit structure unless a separately scoped change requires otherwise. The procedural construction study and synthesized Web Audio sketch are drafts. No finished 3D model or recorded vocal take is verified by this repository guidance; do not infer final status, rights, or publication approval from a file name.
 - Follow [AGENTS.md](AGENTS.md) and [the repository boundaries](docs/repository-boundaries.md) for source retention, privacy, provenance, and release checks. Never put source archives, production sessions, or private material under `public/`.
+- Apply the current visual canon and asset-specific use limits in [the exhibit direction](docs/exhibit-direction.md). Selected stills are for local illustrated preview only, not final-art or deployment approval. Use scoped existing WebP derivatives, the approved silent controlled pilot, and the original instrumental demo only as visitor-started media; do not imply a finished rig, reactor, vocal take, or rights clearance.
+
+## MurderBird exhibit boundaries
+
+- Treat the character as a formidable, floor-standing, flightless terrorbird with a deep hooked bill, segmented crown, strong legs/talons, compact folded wings, and an anatomically left shoulder fitted twice with limited travel. Keep the shoulder history asymmetric.
+- Keep era materials distinct: Water is inert and dark-eyed; Mechanic-era repairs are visibly industrial; modern energy and processing are separate, and the Heart still is not a completed mind. Do not show a glowing chest reactor or put a modern amber optic into earlier eras.
+- The Three.js geometry is an exploratory Builder-era sketch, not the canonical character or an engineering/animation rig. The stills carry the scoped visual reference.
+- Replit remains development preview only. A successful build or local-media integration does not approve a GitHub Pages release.
 
 ## Git synchronization
 

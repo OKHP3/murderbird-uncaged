@@ -11,7 +11,7 @@ const tracks = localPreview ? {
   loop: `${import.meta.env.BASE_URL}audio/iron-verdict-v3/seamless-loop.flac`,
 };
 
-export function mountThemePlayer(container, sound) {
+export function mountThemePlayer(container, sound, { onStart = () => {} } = {}) {
   const panel = document.createElement('section');
   panel.className = 'theme-player';
   panel.setAttribute('aria-labelledby', 'theme-title');
@@ -78,6 +78,7 @@ export function mountThemePlayer(container, sound) {
   }
   async function start(fromBeginning = false) {
     if (fromBeginning) stop(false);
+    onStart();
     const selectedMode = mode.value;
     const currentRequest = ++requestId;
     try {
@@ -145,4 +146,14 @@ export function mountThemePlayer(container, sound) {
   volume.addEventListener('input', updateGain);
   const timer = window.setInterval(updateTime, 250);
   window.addEventListener('pagehide', () => { stop(); window.clearInterval(timer); }, { once: true });
+
+  return {
+    pause() {
+      if (!source && !loading) return false;
+      const wasLoading = Boolean(loading);
+      stop();
+      status.textContent = wasLoading ? 'Loading canceled. Press Play to retry.' : `${label()} paused.`;
+      return true;
+    },
+  };
 }

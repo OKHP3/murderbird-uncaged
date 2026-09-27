@@ -1,0 +1,268 @@
+.intro-copy {
+  width: min(52%, 690px);
+}
+
+.intro-art {
+  position: relative;
+  z-index: 1;
+  width: min(47vw, 680px);
+  align-self: center;
+  margin: 0;
+  border: 1px solid #b88a5c66;
+  background: #121612;
+  box-shadow: 0 24px 60px #0005;
+}
+
+.intro-art img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.intro-art figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  color: #c3b9a6;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.media-atlas {
+  padding: 78px 5.2% 92px;
+  color: #292e28;
+  background: #ddd9cc;
+}
+
+.media-atlas .section-kicker,
+.media-playback .section-kicker {
+  color: #9b603c;
+  border-bottom-color: #c6c1b3;
+}
+
+.media-atlas h2,
+.media-playback h2 {
+  margin: 42px 0 20px;
+  font: 500 clamp(44px, 5.8vw, 78px)/1.04 'Playfair Display', Georgia, serif;
+  letter-spacing: -.045em;
+}
+
+.media-atlas h2 em,
+.media-playback h2 em {
+  color: #a76a46;
+}
+
+.media-intro {
+  max-width: 700px;
+  margin: 0 0 38px;
+  color: #696e63;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.still-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.still-card {
+  min-width: 0;
+  margin: 0;
+  background: #eeeade;
+  border: 1px solid #c6c4b6;
+}
+
+.still-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #242a23;
+}
+
+.still-card figcaption {
+  display: grid;
+  gap: 9px;
+  padding: 17px 18px 20px;
+}
+
+.still-era,
+.playback-kicker {
+  color: #9b603c;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: .1em;
+}
+
+.still-card strong {
+  color: #30352e;
+  font: 500 23px/1.15 'Playfair Display', Georgia, serif;
+}
+
+.still-card figcaption > span:last-child {
+  color: #696e63;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.media-playback {
+  padding: 78px 5.2% 92px;
+  color: #e6e1d4;
+  background:
+    radial-gradient(ellipse at 82% 14%, #3b4035 0, transparent 40%),
+    #222821;
+}
+
+.media-playback .section-kicker {
+  color: #c5926a;
+  border-bottom-color: #50594e;
+}
+
+.media-playback h2 {
+  margin-bottom: 36px;
+}
+
+.media-playback h2 em {
+  color: #d6a176;
+}
+
+.playback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.playback-card {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 34px);
+  border: 1px solid #687061;
+  background: #191e19bb;
+}
+
+.playback-kicker {
+  margin: 0 0 14px;
+  color: #d1a176;
+}
+
+.playback-card h3 {
+  margin: 0 0 20px;
+  color: #efe7d7;
+  font: 500 clamp(28px, 3vw, 38px)/1.1 'Playfair Display', Georgia, serif;
+}
+
+.playback-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0b0d0b;
+  object-fit: contain;
+}
+
+.playback-card audio {
+  display: block;
+  width: 100%;
+  margin: 24px 0;
+}
+
+.playback-description {
+  margin: 18px 0 0;
+  color: #b9bbae;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.playback-description a {
+  color: #e8ba8e;
+}
+
+.viewer.fallback-active::before,
+.viewer.fallback-active::after {
+  display: none;
+}
+
+.control[hidden] {
+  display: none;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .intro-copy {
+    width: 49%;
+  }
+
+  .intro-art {
+    width: 46%;
+  }
+}
+
+@media (max-width: 760px) {
+  .intro {
+    min-height: unset;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 68px;
+  }
+
+  .intro-copy,
+  .intro-art {
+    width: 100%;
+    max-width: none;
+  }
+
+  .intro-art {
+    margin-top: 22px;
+  }
+
+  .intro-art figcaption {
+    flex-wrap: wrap;
+    font-size: 8px;
+  }
+
+  .media-atlas,
+  .media-playback {
+    padding: 64px 5% 72px;
+  }
+
+  .still-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .playback-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .still-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .still-card img {
+    aspect-ratio: 3 / 2;
+  }
+
+  .media-atlas .section-kicker,
+  .media-playback .section-kicker {
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-art img,
+  .still-card img {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
