@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 const modelUrl = new URL('../../assets/models/uncaged-study/murderbird-study.glb', import.meta.url).href;
-const FRONT = .76;
+const FRONT = 1.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
 
@@ -14,14 +14,18 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.25;
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  const gl=renderer.getContext();
+  const info=gl.getExtension('WEBGL_debug_renderer_info');
+  const softwareRenderer=info&&/swiftshader|llvmpipe|software/i.test(gl.getParameter(info.UNMASKED_RENDERER_WEBGL));
+  renderer.shadowMap.enabled = !softwareRenderer;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
   const canvas = renderer.domElement;
   canvas.tabIndex = 0;
   canvas.setAttribute('aria-label', 'MurderBird 3D enclosure. Arrow keys orbit; plus and minus zoom. Use Reach toward bars for a reaction.');
   container.append(canvas);
   const scene = new THREE.Scene();
   scene.background = new THREE.Color('#232b29');
+  scene.fog = new THREE.Fog('#232b29', 5, 13);
   const camera = new THREE.PerspectiveCamera(36, 1, .05, 35);
   const controls = new OrbitControls(camera, canvas);
   controls.enablePan = false;
@@ -31,7 +35,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   controls.minPolarAngle = .25;
   controls.maxPolarAngle = Math.PI / 2 - .03;
   controls.target.set(0, 1.03, 0);
-  camera.position.set(2.85, 1.85, 3.55);
+  camera.position.set(-2.85, 1.85, 3.55);
   controls.update();
   const pmrem = new THREE.PMREMGenerator(renderer);
   const room = new RoomEnvironment();
@@ -56,10 +60,16 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     const o = new THREE.Mesh(geometry, material); o.position.set(...position);
     o.castShadow = true; o.receiveShadow = true; scene.add(o); return o;
   };
-  mesh(new THREE.BoxGeometry(2.25, .10, 1.94), metal, [0, -.065, -.09]);
-  mesh(new THREE.BoxGeometry(2.12, .012, 1.82), floorMat, [0, -.009, -.09]);
-  const ground = mesh(new THREE.PlaneGeometry(200, 200), floorMat, [0, -.12, 0]);
+  mesh(new THREE.BoxGeometry(2.25, .10, 2.32), metal, [0, -.065, .06]);
+  mesh(new THREE.BoxGeometry(2.12, .012, 2.22), floorMat, [0, -.009, .06]);
+  const ground = mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({color:'#111916',roughness:.95}), [0, -.12, 0]);
   ground.rotation.x = -Math.PI / 2;
+  if(softwareRenderer){
+    for(const side of [-1,1])for(let layer=0;layer<4;layer++){
+      const shadow=mesh(new THREE.CircleGeometry(1,32),new THREE.MeshBasicMaterial({color:'#0a130d',transparent:true,opacity:.085,depthWrite:false}),[side*.275,.0001+layer*.0001,.16]);
+      shadow.rotation.x=-Math.PI/2;shadow.scale.set(.16-layer*.025,.25-layer*.035,1);
+    }
+  }
   const cage = new THREE.Group(); scene.add(cage);
   const bars = [];
   function bar(a, b, radius, permanent = false) {
@@ -80,7 +90,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     bar([x,2.15,-.95],[x,2.15,FRONT],.021);
     bar([x,.07,-.95],[x,.07,FRONT],.018,true);
   }
-  const contactRail = bar([-.5,1.54,FRONT],[.5,1.54,FRONT],.021);
+  const contactRail = bar([0,1.25,FRONT],[0,1.95,FRONT],.021);
   const target = mesh(new THREE.TorusGeometry(.045,.006,8,32), brass, [0,1.54,FRONT+.005]);
   target.visible = false;
   const guides = new THREE.Group(); scene.add(guides);
@@ -107,17 +117,18 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   }
   const rest = Object.fromEntries(names.map(name => [name, { position:nodes[name].position.clone(), rotation:nodes[name].rotation.clone() }]));
   const materialOrigins = new Map();
-  model.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; const mats = Array.isArray(o.material) ? o.material : [o.material]; mats.forEach(m=>{ if (!materialOrigins.has(m)) materialOrigins.set(m, { color:m.color.clone(), roughness:m.roughness }); }); } });
+  model.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; const mats = Array.isArray(o.material) ? o.material : [o.material]; mats.forEach(m=>{ if (!materialOrigins.has(m)) materialOrigins.set(m, { color:m.color.clone(), roughness:m.roughness,vertexColors:m.vertexColors }); }); } });
   const markerNodes = {
     beak: ['head', [0,-.035,.28]], joint:['body',[.28,.6,.07]],
     shell:['breastplate',[.245,-.19,.01]], drive:['winding-drive',[.13,0,0]],
     power:['power-core',[0,0,.055]], mind:['processing',[0,.04,0]],
   };
-  const anchors = Object.fromEntries(Object.entries(markerNodes).map(([id,[name,p]])=>{const o=new THREE.Object3D();o.position.set(...p);nodes[name].add(o);return [id,o];}));
-  const billTip = new THREE.Object3D(); billTip.position.set(0,-.215,.322); nodes.head.add(billTip);
+  const anchors = Object.fromEntries(Object.entries(markerNodes).map(([id,[name,p]])=>{const landmark=model.getObjectByName('anchor-'+id);if(landmark)return [id,landmark];const o=new THREE.Object3D();o.position.set(...p);nodes[name].add(o);return [id,o];}));
+  const billTip = model.getObjectByName('bill-contact');
+  if(!billTip)throw new Error('Model contact landmark is missing.');
   const exploded = {
-    breastplate:[-.26,0,.24], 'left-mantle':[.39,.09,0], 'right-mantle':[-.39,.09,0],
-    'winding-drive':[-.45,-.10,.22], 'power-core':[.32,-.05,.28], processing:[.28,.20,0], 'cranial-cover':[0,.25,0],
+    breastplate:[-.70,-.12,.18], 'left-mantle':[.39,.09,0], 'right-mantle':[-.39,.09,0],
+    'winding-drive':[-.45,-.10,.22], 'power-core':[.32,-.05,.28], processing:[.28,.20,0], 'cranial-cover':[0,.14,0],
   };
   const lines = {};
   Object.keys(exploded).forEach(name => { const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3()]),guideMat);guides.add(line);lines[name]=line; });
@@ -137,8 +148,9 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     nodes['builder-optics'].visible=value==='builder';
     nodes['industrial-repairs'].visible=value!=='maker';
     materialOrigins.forEach((original,m) => {
-      m.color.copy(original.color);m.roughness=original.roughness;
-      if(value==='maker' && m.name.includes('mineral')){m.color.set('#826241');m.roughness=.57;}
+      m.color.copy(original.color);m.roughness=original.roughness;m.vertexColors=original.vertexColors;
+      if(value==='maker' && (m.name.includes('mineral')||m.name.includes('Industrial iron'))){m.color.set('#826241');m.roughness=.57;m.vertexColors=false;}
+      m.needsUpdate=true;
     });
   }
   function resize() {
@@ -147,7 +159,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     lastWidth=width;lastHeight=height;renderer.setSize(width,height);camera.aspect=width/height;
     camera.fov=width<550?47:36;camera.updateProjectionMatrix();
   }
-  function reset(){controls.target.set(0,1.03,0);camera.position.set(2.85,1.85,3.55);controls.update();}
+  function reset(){controls.target.set(0,1.03,0);camera.position.set(-2.85,1.85,3.55);controls.update();}
   function nudge(action){
     const offset=camera.position.clone().sub(controls.target);const s=new THREE.Spherical().setFromVector3(offset);
     if(action==='left')s.theta-=.23;if(action==='right')s.theta+=.23;
@@ -159,7 +171,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   const listeners = new AbortController();
   const listen=(type,fn,options={})=>canvas.addEventListener(type,fn,{...options,signal:listeners.signal});
   listen('keydown',e=>{ const actions={ArrowLeft:'left',ArrowRight:'right',ArrowUp:'up',ArrowDown:'down','+':'in','=':'in','-':'out',Home:'reset'};if(actions[e.key]){e.preventDefault();actions[e.key]==='reset'?reset():nudge(actions[e.key]);}});
-  listen('pointerdown',e=>{if(!armed)return;pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});
+  listen('pointerdown',e=>{if(!armed||e.button>0)return;if(pointer){pointer=null;return;}pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});
   listen('pointerup',e=>{
     if(!pointer||pointer.id!==e.pointerId)return;const saved=pointer;pointer=null;
     if(Math.hypot(e.clientX-saved.x,e.clientY-saved.y)>10)return;
@@ -168,16 +180,16 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   listen('pointercancel',()=>{pointer=null;});listen('lostpointercapture',()=>{pointer=null;});
   listen('webglcontextlost',e=>{e.preventDefault();onContextLost?.();});
 
-  function tick(dt,snapshot) {
+  function tick(dt,snapshot,frameDelta=dt) {
     lastSnapshot=snapshot; frameCount++;
-    if(dt>0&&dt<.5){frameTimes.push(dt);if(frameTimes.length>180)frameTimes.shift();}
+    if(frameDelta>0&&frameDelta<5){frameTimes.push(frameDelta);if(frameTimes.length>180)frameTimes.shift();}
     const ease=snapshot.reducedMotion?1:1-Math.exp(-dt*8);
     open=THREE.MathUtils.lerp(open,targetOpen,ease);separation=THREE.MathUtils.lerp(separation,targetSeparation,ease);
     if(Math.abs(open-targetOpen)<.001)open=targetOpen;
     if(Math.abs(separation-targetSeparation)<.001)separation=targetSeparation;
     names.forEach(name=>{nodes[name].position.copy(rest[name].position);nodes[name].rotation.copy(rest[name].rotation);});
     nodes.breastplate.rotation.y=-open*1.35;
-    nodes['cranial-cover'].position.y+=open*.14;
+    nodes['cranial-cover'].position.y+=open*.08;
     Object.entries(exploded).forEach(([name,offset])=>nodes[name].position.addScaledVector(vector.set(...offset),separation));
     const p=smooth(snapshot.phase),state=snapshot.state;
     let extension=0,anticipation=0,beak=0;
@@ -188,11 +200,11 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       if(state==='contact'){extension=1;beak=.2*(1-p);}
       if(state==='recover'){extension=1-p;beak=0;}
       nodes.neck.rotation.x=-anticipation*.075+extension*.26;
-      nodes.head.rotation.y=snapshot.reach.x*.16*(state==='recover'?1-p:1);
+      nodes.head.rotation.y=snapshot.reach.x*.16*(1-extension);
       nodes.jaw.rotation.x=-beak*.32;
       // A constrained cervical slide reaches the contact rail. Feet never translate.
       model.updateMatrixWorld(true);billTip.getWorldPosition(worldTip);
-      const travel=clamp(FRONT-worldTip.z-.006,0,.20);
+      const travel=clamp((FRONT-worldTip.z-.021)/nodes.neck.parent.getWorldScale(vector).z,0,.20);
       nodes.neck.position.z+=travel*extension;
     }
     model.updateMatrixWorld(true);
@@ -200,7 +212,6 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     target.visible=armed||['notice','warning','strike','contact','recover'].includes(state);
     target.position.x=worldTip.x;
     target.position.y=worldTip.y;
-    contactRail.position.y=worldTip.y;
     const viewDirection=camera.position.clone().sub(controls.target).normalize();
     bars.forEach(o=>{
       const near=o.position.x*viewDirection.x+o.position.z*viewDirection.z>0;
@@ -231,8 +242,8 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     setSeparation(value){targetSeparation=targetOpen?clamp(Number(value)||0,0,1):0;},
     setArmed(value){armed=value;controls.enabled=!value;canvas.style.cursor=value?'crosshair':'grab';pointer=null;},
     isAssembled(){return open===0&&separation===0;},
-    focus(id){const anchor=anchors[id];if(!anchor)return;anchor.getWorldPosition(vector);const delta=vector.clone().sub(controls.target);controls.target.copy(vector);camera.position.add(delta);controls.update();},
-    metrics(){return {kind:'webgl',era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
+    focus(id){const anchor=anchors[id];if(!anchor||!nodes[markerNodes[id]?.[0]]?.visible)return;anchor.getWorldPosition(vector);const delta=vector.clone().sub(controls.target);controls.target.copy(vector);camera.position.add(delta);controls.update();},
+    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
     destroy(){listeners.abort();controls.dispose();environment.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});renderer.dispose();canvas.remove();},
   };
 }

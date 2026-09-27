@@ -8,7 +8,7 @@ from pathlib import Path
 import bpy
 import math
 import random
-from mathutils import Vector
+from mathutils import Vector, Matrix
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/models/uncaged-study'
@@ -46,8 +46,10 @@ def group(name, parent=None, pivot=(0,0,0)):
 
 root = group('murderbird')
 body = group('body', root)
+body.scale = (1.08, 1.12, 1)
 neck = group('neck', body, (0,-.20,1.35))
 head = group('head', neck, (0,-.07,.41))
+head.scale = (1.32, 1.32, 1.26)
 jaw = group('jaw', head, (0,-.05,-.045))
 chest = group('breastplate', body, (-.245,-.225,1.36))
 crown = group('cranial-cover', head)
@@ -77,11 +79,16 @@ def bevel(obj, width=.006):
 
 def rod(name, a, b, radius, mat, parent, sides=12, end_radius=None):
     a,b=Vector(a),Vector(b); delta=b-a
-    bpy.ops.mesh.primitive_cone_add(vertices=sides, radius1=radius, radius2=radius if end_radius is None else end_radius, depth=delta.length)
-    o=bpy.context.object; o.name=name; o.parent=parent
-    o.location=(a+b)*.5; o.rotation_euler=delta.to_track_quat('Z','Y').to_euler()
-    o.data.materials.append(mat)
-    for p in o.data.polygons: p.use_smooth=True
+    rotation=delta.to_track_quat('Z','Y')
+    verts=[]
+    for center,r in [(a,radius),(b,radius if end_radius is None else end_radius)]:
+        for i in range(sides):
+            t=i*math.tau/sides
+            verts.append(center+rotation@Vector((r*math.cos(t),r*math.sin(t),0)))
+    faces=[tuple(reversed(range(sides))),tuple(range(sides,2*sides))]
+    for i in range(sides):faces.append((i,(i+1)%sides,(i+1)%sides+sides,i+sides))
+    o=mesh(name,verts,faces,mat,parent)
+    for poly in o.data.polygons[2:]:poly.use_smooth=True
     return o
 
 def ring(name, center, radius, wire, mat, parent, axis='X', segments=36):
@@ -245,7 +252,18 @@ for s in [-1,1]:
     for row in range(3):
         plate('Cheek guard',(s*.118,.02+row*.038,.060-row*.038),.095,.115,bronze if row==0 else patina,head,(-.4,s*1.05,.1))
 
+# Swept cheek/occipital scales and broad collar cover the side silhouette.
+for s in [-1,1]:
+    for row in range(4):
+        plate('Swept occipital armor',(s*(.092+row*.008),.085+row*.02,.12-row*.038),.095,.16,patina,head,(-.65,s*1.07,0))
+    for row in range(5):
+        plate('Lateral neck armor',(s*.087,-.015,.35-row*.067),.105,.14,patina,neck,(-1.05,s*.85,s*.12))
+    wing=wing_l if s==1 else wing_r
+    for row in range(4):
+        plate('Mantle leading edge',(s*.10,-.15,-row*.075),.14,.17,patina,wing,(-1.0,s*.65,s*-.35))
+
 # Deep recurved bill: tailored profile with elliptical transverse sections.
+
 def bill(name, profile, parent, mat):
     verts=[];faces=[];n=12
     for y,z,width,depth in profile:
@@ -289,6 +307,108 @@ for layer in range(4):
     for x in [-.065,0,.065]:rod('Processing lattice rail',(x,-.03,-.01+layer*.019),(x,.085,-.01+layer*.019),.008,ceramic,mind,6)
     for y in [-.025,.025,.078]:rod('Processing crosspiece',(-.069,y,-.01+layer*.019),(.069,y,-.01+layer*.019),.007,bronze,mind,6)
 
+# Conforming armor fields follow each load-bearing volume. The plate seams
+# establish construction without exposing a naked primitive torso/neck.
+for obj in list(bpy.context.scene.objects):
+    if obj.type == 'MESH' and any(obj.name.startswith(prefix) for prefix in [
+        'Breast overlapping armor','Compact mantle plate','Mantle leading edge',
+        'Lateral neck armor','Neck armor']):
+        bpy.data.objects.remove(obj, do_unlink=True)
+
+def shell_scales(name, profiles, rows, cols, theta_start, theta_span, parent, pivot=(0,0,0), x_center=0):
+    profiles=sorted(profiles)
+    def surface(z,t,offset):
+        z=max(profiles[0][0],min(profiles[-1][0],z))
+        a,b=profiles[0],profiles[-1]
+        for k in range(len(profiles)-1):
+            if profiles[k][0]<=z<=profiles[k+1][0]:a,b=profiles[k],profiles[k+1];break
+        f=(z-a[0])/(b[0]-a[0]) if a[0]!=b[0] else 0
+        cy,rx,ry=[a[k]+(b[k]-a[k])*f for k in range(1,4)]
+        return (x_center+math.sin(t)*(rx+offset)-pivot[0],cy-math.cos(t)*(ry+offset)-pivot[1],z-pivot[2])
+    top,bottom=profiles[-1][0],profiles[0][0]
+    step=(top-bottom)/rows
+    for row in range(rows):
+        z=top-row*step
+        for col in range(cols):
+            t=theta_start+(col+.5+(row%2)*.21)*theta_span/cols
+            outline=[(-.5,0),(-.55,.30),(-.43,.83),(0,1.10),(.43,.83),(.55,.30),(.5,0)]
+            verts=[]
+            for offset in [.018,.008]:
+                verts += [surface(z-v*step,t+u*theta_span/cols,offset) for u,v in outline]
+            n=len(outline);faces=[tuple(range(n)),tuple(reversed(range(n,2*n)))]
+            for k in range(n):faces.append((k,(k+1)%n,(k+1)%n+n,k+n))
+            mat=patina if (col+row)%6 else bronze
+            mesh(name,verts,faces,mat,parent)
+            for k in range(n):rod(name+' edge',verts[k],verts[(k+1)%n],.0016,bronze,parent,6)
+            for u in [-.30,.30]:
+                a=surface(z-step*.14,t+u*theta_span/cols,.021)
+                b=surface(z-step*.14,t+u*theta_span/cols,.026)
+                rod(name+' pin',a,b,.004,brass,parent,6)
+
+shell_scales('Curved breast scale',sections,7,9,-math.pi/2,math.pi,chest,(-.245,-.225,1.36))
+shell_scales('Rear fitted scale',[(.85,.12,.14,.17),(.98,.10,.26,.26),(1.19,.08,.29,.28),(1.37,.02,.24,.20),(1.45,-.03,.13,.13)],7,8,math.pi/2,math.pi,body)
+for side,wing in [(1,wing_l),(-1,wing_r)]:
+    shell_scales('Mantle overlapping scale',[(-.46,.16,.03,.08),(-.35,.16,.10,.17),(-.16,.07,.16,.26),(.015,0,.07,.16)],6,6,0 if side==1 else math.pi,math.pi,wing)
+shell_scales('Cervical overlapping scale',[(0,.025,.105,.12),(.11,-.055,.103,.12),(.23,-.040,.11,.125),(.39,-.065,.085,.115)],6,9,-math.pi,math.tau,neck)
+
+# Proportion revision after owner review: shorter exposed legs, deeper torso,
+# broader compact neck and a larger skull profile. This is a new study, not approval.
+# Named anatomical landmarks export with the geometry, avoiding stale app offsets.
+for name,parent,pos in [
+    ('bill-contact',head,(0,-.322,-.215)),
+    ('anchor-beak',head,(0,-.28,-.035)),
+    ('anchor-joint',body,(.28,-.07,.60)),
+    ('anchor-shell',chest,(.245,-.01,-.19)),
+    ('anchor-drive',drive,(.13,0,0)),
+    ('anchor-power',power,(0,-.055,0)),
+    ('anchor-mind',mind,(0,0,.04))]:
+    group(name,parent,pos)
+bpy.context.view_layer.update()
+old_neck=neck.matrix_world.translation.copy()
+old_head=head.matrix_world.translation.copy()
+new_neck=Vector((0,-.28,1.39))
+new_head=Vector((0,-.38,1.70))
+
+def domain(obj):
+    cursor=obj
+    while cursor:
+        if cursor==head:return 'head'
+        cursor=cursor.parent
+    cursor=obj
+    while cursor:
+        if cursor==neck:return 'neck'
+        cursor=cursor.parent
+    return 'body'
+
+def body_height(z):
+    keys=[(0,0),(.30,.24),(.61,.48),(.91,.72),(1.35,1.39),(1.45,1.51),(2,2.06)]
+    for (a,b),(c,d) in zip(keys,keys[1:]):
+        if z<=c:return b+(z-a)*(d-b)/(c-a)
+    return z+.06
+
+def reshape(p,kind):
+    if kind=='head':
+        q=p-old_head
+        value=new_head+Vector((q.x*1.16,q.y*1.03,q.z*1.15))
+    elif kind=='neck':
+        fraction=(p.z-old_neck.z)/(old_head.z-old_neck.z)
+        center=old_neck.lerp(old_head,fraction)
+        newcenter=new_neck.lerp(new_head,fraction)
+        value=newcenter+Vector(((p.x-center.x)*1.48,(p.y-center.y)*1.28,0))
+    else:value=Vector((p.x*1.10,p.y*1.18,body_height(p.z)))
+    return value*1.045
+
+objects=list(bpy.context.scene.objects)
+origins={o:reshape(o.matrix_world.translation,domain(o)) for o in objects}
+vertices={o:[reshape(o.matrix_world@v.co,domain(o)) for v in o.data.vertices] for o in objects if o.type=='MESH'}
+def depth(o):return 0 if not o.parent else 1+depth(o.parent)
+for o in sorted(objects,key=depth):
+    o.matrix_world=Matrix.Translation(origins[o])
+    if o.type=='MESH':
+        for v,p in zip(o.data.vertices,vertices[o]):v.co=p-origins[o]
+        o.data.update()
+bpy.context.view_layer.update()
+
 # Vertex color weathering travels into glTF. Positional variation is bounded;
 # shiny contact metals remain distinct from mineral-coated panels.
 for obj in list(bpy.context.scene.objects):
@@ -299,11 +419,10 @@ for obj in list(bpy.context.scene.objects):
     for i,loop in enumerate(obj.data.loops):
         p=obj.data.vertices[loop.vertex_index].co
         f=.75+.22*(.5+.5*math.sin(p.x*247+p.y*103+p.z*173+len(obj.name)))
-        colors.data[i].color=(f,f,f,1)
+        colors.data[i].color=tuple(c*f for c in mat.diffuse_color[:3])+(1,)
     if not mat.node_tree.nodes.get('Vertex wear'):
         attr=mat.node_tree.nodes.new('ShaderNodeVertexColor');attr.name='Vertex wear';attr.layer_name='Color'
-        mix=mat.node_tree.nodes.new('ShaderNodeMixRGB');mix.blend_type='MULTIPLY';mix.inputs[0].default_value=1;mix.inputs[1].default_value=mat.diffuse_color
-        mat.node_tree.links.new(attr.outputs['Color'],mix.inputs[2]);mat.node_tree.links.new(mix.outputs[0],mat.node_tree.nodes.get('Principled BSDF').inputs['Base Color'])
+        mat.node_tree.links.new(attr.outputs['Color'],mat.node_tree.nodes.get('Principled BSDF').inputs['Base Color'])
 
 root['status']='Reference-informed assembly study; owner likeness review pending'
 root['reference']='assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png'
@@ -311,6 +430,7 @@ root['rights']='MurderBird creative content all rights reserved; see NOTICE.md'
 root['units']='metres; about 2 m crown height is a production convention, not a story measurement'
 for obj in [drive,power,mind]:obj['provenance']='Illustrative reconstruction; internal topology is proposed'
 bpy.context.scene.unit_settings.system='METRIC'
+bpy.context.preferences.filepaths.save_version = 0
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'murderbird-study.blend'))
 
 # Apply modifiers and batch render meshes per named articulated assembly/material.

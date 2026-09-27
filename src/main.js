@@ -29,7 +29,7 @@ app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a
 <div class="viewer-bottom"><span id="view-label">ENCLOSURE / EXTERIOR</span><span>LIKENESS REVIEW PENDING</span></div>
 </div>
 <div id="controls" class="toolbar" role="group" aria-label="Encounter and inspection controls" tabindex="-1">
-<button id="reach" type="button" class="primary">Reach toward bars</button><button id="arm-reach" type="button" aria-pressed="false">Aim a reach</button><button id="section-toggle" type="button" aria-pressed="false">Open for inspection</button><button id="reset-view" type="button">Reset view</button></div>
+<button id="reach" type="button" class="primary">Reach toward bars</button><button id="arm-reach" type="button" aria-pressed="false">Tap-to-reach mode</button><button id="section-toggle" type="button" aria-pressed="false">Open for inspection</button><button id="reset-view" type="button">Reset view</button></div>
 <p id="encounter-status" class="encounter-status" role="status">Loading the specimen.</p>
 <div class="inspection-controls"><label for="separation">Separate assembly <output id="separation-value">0%</output></label><input id="separation" type="range" min="0" max="100" step="1" value="0" disabled /><button id="reassemble" type="button" disabled>Reassemble & return</button></div>
 <div class="secondary-controls"><div class="view-controls" role="group" aria-label="Camera controls"><button data-view="left" aria-label="Orbit left">←</button><button data-view="right" aria-label="Orbit right">→</button><button data-view="up" aria-label="Raise viewpoint">↑</button><button data-view="down" aria-label="Lower viewpoint">↓</button><button data-view="in" aria-label="Zoom in">+</button><button data-view="out" aria-label="Zoom out">−</button></div><button id="pause" type="button" aria-pressed="false">Calm / pause</button><label class="motion-label"><input id="reduced-motion" type="checkbox" /> Reduced motion</label><button id="sound-toggle" type="button" aria-pressed="false">Sound off</button></div>
@@ -48,7 +48,7 @@ let exhibit,selected='beak',era='builder',section=false,returning=false,armed=fa
 const updateMarker=(id,x,y,visible)=>{const m=$('hotspots').querySelector(`[data-marker="${id}"]`);if(!m)return;m.style.left=`${x}px`;m.style.top=`${y}px`;m.hidden=!visible;};
 $('hotspots').innerHTML=parts.map((p,i)=>`<button class="marker" type="button" data-marker="${p.id}" aria-label="Inspect ${p.name}" hidden>${i+1}</button>`).join('');
 
-function setArmed(value){armed=value;exhibit?.setArmed(value);$('arm-reach').setAttribute('aria-pressed',String(value));$('arm-reach').textContent=value?'Cancel aimed reach':'Aim a reach';if(value)$('encounter-status').textContent='Tap the view once to approach the marked front contact bar. Dragging will cancel the reach. Escape cancels.';}
+function setArmed(value){armed=value;exhibit?.setArmed(value);$('arm-reach').setAttribute('aria-pressed',String(value));$('arm-reach').textContent=value?'Cancel tap-to-reach':'Tap-to-reach mode';if(value)$('encounter-status').textContent='Tap the view once to approach the fixed front contact bar. Dragging will not trigger a reach. Escape cancels.';}
 function requestReach(point={}){
   if(!exhibit||loading||returning)return;
   if(machine.requestReach(point)){setArmed(false);sound.effect('click');renderState(true);}
@@ -58,6 +58,7 @@ function renderSelection(id){
   document.querySelectorAll('[data-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.part===id)));
   $('detail').innerHTML=`<p class="detail-era">${eras[era].name.toUpperCase()}</p><h3>${p.title}</h3><p>${eras[era][id]||p.text}</p><p class="observation">${['drive','power','mind'].includes(id)?'Open for inspection to examine the present assembly. Absent systems remain absent.':'Use the orbit controls to inspect a different side. Hidden geometry is a proposed reconstruction.'}</p>`;
   exhibit?.select(id);
+  $('focus-part').disabled=exhibit?.kind!=='webgl'||(id==='drive'&&era!=='mechanic')||(['power','mind'].includes(id)&&era!=='builder');
 }
 function renderState(force=false){
   const s=machine.getSnapshot();
@@ -91,7 +92,9 @@ async function loadExhibit(forceFallback=false){
   const forced=forceFallback||new URLSearchParams(location.search).get('view')==='illustrated';
   try{
     if(forced)throw new Error('Illustrated view explicitly selected.');
-    exhibit=await createExhibit(sceneElement,updateMarker,{onReach:requestReach,onContextLost:()=>loadExhibit(true)});
+    const loaded=await createExhibit(sceneElement,updateMarker,{onReach:requestReach,onContextLost:()=>loadExhibit(true)});
+    if(sequence!==loadSequence){loaded.destroy();return;}
+    exhibit=loaded;
   }catch(error){
     if(sequence!==loadSequence)return;
     sceneElement.replaceChildren();exhibit=createIllustratedExhibit(sceneElement,updateMarker);
@@ -101,7 +104,7 @@ async function loadExhibit(forceFallback=false){
   loading=false;$('loading').hidden=true;$('render-label').textContent=exhibit.kind==='webgl'?'3D / REFERENCE-INFORMED STUDY':'ILLUSTRATED / FIXED VIEW';
   if(exhibit.kind==='webgl')$('viewer-note').textContent='Reference-informed 3D reconstruction under review. The cage is an exhibit device; hidden surfaces and mechanisms are proposals. Music starts only when you choose Play.';
   document.querySelectorAll('[data-view],#focus-part,#reset-view').forEach(b=>b.disabled=exhibit.kind!=='webgl');
-  exhibit.setEra(era);exhibit.setSection(section);exhibit.setSeparation(Number($('separation').value)/100);exhibit.resize();renderState(true);
+  exhibit.setEra(era);exhibit.setSection(section);exhibit.setSeparation(Number($('separation').value)/100);exhibit.resize();renderSelection(selected);renderState(true);
 }
 $('reach').addEventListener('click',()=>requestReach());
 $('arm-reach').addEventListener('click',()=>setArmed(!armed));
@@ -124,7 +127,7 @@ const {mountThemePlayer}=await import('./audio/theme-player.js');mountThemePlaye
 applyEra('builder');renderSelection('beak');
 new ResizeObserver(()=>exhibit?.resize()).observe($('viewer'));
 let previous=performance.now();
-function animate(now){const dt=Math.min((now-previous)/1000,.1);previous=now;if(exhibit){const state=machine.update(document.hidden?0:dt);exhibit.tick(document.hidden?0:dt,state);if(returning&&exhibit.isAssembled()){returning=false;machine.setInspection(false);}renderState();}requestAnimationFrame(animate);}
+function animate(now){const frameDelta=(now-previous)/1000;const dt=Math.min(frameDelta,.1);previous=now;if(exhibit){const state=machine.update(document.hidden?0:dt);exhibit.tick(document.hidden?0:dt,state,document.hidden?0:frameDelta);if(returning&&exhibit.isAssembled()){returning=false;machine.setInspection(false);}renderState();}requestAnimationFrame(animate);}
 requestAnimationFrame(animate);
 // Local QA reads actual loaded scene metrics; this hook is removed by Vite builds.
 if(import.meta.env.DEV)window.__uncaged={getSnapshot:()=>machine.getSnapshot(),metrics:()=>exhibit?.metrics()};

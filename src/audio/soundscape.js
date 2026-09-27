@@ -1,4 +1,4 @@
-// Gesture-started Web Audio sketch. No final song or recorded effects are bundled.
+// Gesture-started synthesized effects. The accepted theme has its own player.
 export function createSoundscape() {
   let context, master, bed, timer, enabled = false, step = 0, themePlaying = false;
   function getContext() {

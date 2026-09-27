@@ -10,7 +10,7 @@ FoundRy routes and incubates separate work. Accepted MurderBird production mater
 
 ## Exhibit status
 
-The app is a playable first pass. It includes a procedural Three.js construction study, anatomy markers, a chest-opening interaction, and an optional synthesized Web Audio sketch. No finished 3D model or recorded vocal take is verified as part of this migration. Imported material must retain its actual draft or final status and source; a filename alone is not proof of completion.
+This branch contains a local Blender/GLB assembly study with orbit, a deliberate cage response, reversible opening/explosion, three-era system visibility, and an illustrated fallback. The owner requested proportion corrections; the revised study is awaiting likeness review. It is not a finished character model. See the [requirements](docs/uncaged-requirements.md), [acceptance report](docs/acceptance-report.md), [likeness comparison](assets/audit/uncaged-review/likeness-review.html), and [production handoff](docs/production-handoff.md). The accepted Iron Verdict theme remains visitor-controlled. Imported material retains its recorded status and provenance.
 
 ## Getting started
 
