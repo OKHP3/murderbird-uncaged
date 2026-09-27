@@ -25,3 +25,7 @@ The Vite build copies files from `public/` into the distributable. Keep source a
 `.gitattributes` configures Git LFS for models, audio, video, Blender scenes, ZIPs, PDFs, and the imported image trees. Confirm that LFS is installed and available on the machine handling binary imports. Before relying on a LFS-managed asset in the deployed site, verify the remote contains the object and that a clean GitHub Actions checkout retrieves the actual asset. A committed pointer alone does not prove that visitors can retrieve the media.
 
 Keep production state explicit. Preserve the source's recorded draft, working, or final designation, and use `unknown` when evidence is missing. A filename or file extension does not establish that media is finished, licensed for every use, or approved for publication.
+
+## Current local exterior study
+
+`models/uncaged-exterior-v1/` now holds the versioned editable exterior proposal, combined runtime GLB, individual era exports, regional PBR maps and fixed fallback previews. See its [source/export guide](models/uncaged-exterior-v1/README.md). This production status is a local review study, not final character art or a deployed release. Earlier `uncaged-*` model versions remain preserved. `audit/exterior-v1/` contains local review media and validation receipts; none of that audit material is included in the Vite runtime.

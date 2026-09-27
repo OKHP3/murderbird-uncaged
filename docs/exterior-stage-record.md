@@ -1,0 +1,68 @@
+# Three exterior construction states — local v1
+
+This stage continues the clean structural checkpoint `21ac417` in the production worktree. The owner's subsequent exterior brief authorizes geometry corrections and region-by-region surface production; the earlier structural study is not thereby approved. The original story, image/video sources, structural version and its evidence remain historical and unchanged. No publication is part of this work.
+
+## Source authority and time
+
+Candidate 03 controls the shared floor-standing bird, substantial breast, compact folded shields and short rear. The July selection controls the head only: constructed convex bill, open cheek, recessed circular optic and swept crown. Maker-clean controls the newly fabricated shell and dark optics. Mechanic supplies the aged inherited body and repair context. Heart supplies the accessible pale power unit under the breast; processing remains separate behind the eyes. First Choice supports surface continuity and restrained story-page movement; it does not approve attacks, jumps or a 3D mechanism.
+
+The Maker configuration depicts completion **before immersion**. Restrained darkening and tool marks represent fabrication, oil and surface finish. Water deposits belong to the later inherited shell. The exact alloy, coating, repair patterns, hidden faces, fastener spacing, access seams and texture fields are proposed construction details, not recovered dimensions or historical material analysis. The exhibit's abundant Advanced power remains an owner-directed premise distinct from the preserved story's finite heart.
+
+## Implemented representation
+
+The versioned source and derivatives are under `assets/models/uncaged-exterior-v1/`. The `.blend` retains separate editable components and three era configurations. A combined GLB serves the exhibit; three individual GLBs provide bounded era exports. Runtime-only external controls, spring/cam transmission and Advanced actuation remain editable Three.js assemblies. They are not implied to be baked into the Blender file.
+
+The [regional map](exterior-regional-map.md) records geometry, attachment, clearance and inheritance. The [surface pipeline](exterior-surface-pipeline.md) documents portable PBR maps, texture budgeting and browser verification. Regeneration checks prior output hashes and refuses to overwrite a manually modified output; preserve manual work under a new version before proceeding.
+
+The revised armor has actual plate edges, fastening geometry, guards and service openings; rigid pieces follow their own assemblies. Neck guards are split between the lower cervical frame and skull attachment; no continuous metal skin stretches between them. Breast and crown access remain separate transforms. Shoulders, forewing shields, legs and toe groups retain their motion hierarchy. Variable-span control rods, sliding transmission and conduits are separate illustrative mechanisms.
+
+## Review boundaries
+
+Neutral authoring renders, clay silhouettes, browser neutral/exhibit views, regional close-ups, era-specific inspection and extreme-pose captures are collected in `assets/audit/exterior-v1/`. Perspective artwork is labelled separately from orthographic reconstruction views; no exact body measurements are inferred from it. Automated geometry/UV/material, motion and browser checks establish only their measured contracts. Human recognition, accepted wear, plate density and final acting remain artistic decisions.
+
+The review must state the tested build, hardware renderer, viewport, pixel ratio, timing window and observed frame performance. Desktop results do not establish physical phone performance. Sampled kinematic contact is not physical dynamics or an exhaustive collision proof. A local build and a local Git checkpoint do not establish remote CI, LFS availability from a clean remote checkout or deployment.
+
+## Discrepancies addressed and visible evidence
+
+The [review gallery](../assets/audit/exterior-v1/exterior-review.html) pairs the preserved structural-v1 clay images with exterior-v1 clay from identical orthographic cameras. Its era references are separately labelled perspective illustrations.
+
+| Previous issue | Implemented correction | Remaining visual judgment |
+|---|---|---|
+| Broad hood and thin arc-like bill | Closed crown with raised segmented patches; deeper continuous upper bill, separate mandible and cheek opening; optic seated within a passive socket. | The crown, bill hook and eye proportions still need owner likeness review. Fine seam layout is proposed. |
+| Disconnected straight neck guards | Four overlapping guards follow the curved frame; a separate head-side collar crosses the skull joint by overlap. A lower service aperture admits the Maker linkage. | Collar rhythm and visible neck mass remain more schematic than the artwork. |
+| Repetitive barrel armor | Shaped breast access shell, 16 varied fitted panels, separate rear/waist transitions and a neck bridge rim. | Plate density, lower taper and hidden dorsal construction remain artistic reconstruction. |
+| Small coverings with upward projecting wing spars | Rebuilt down/rearward supports, 20 short swept armor leaves per shoulder, wider outward-facing forewing shields, varied trailing layers and distinct leading guards. | Readability as a compact flightless wing, rather than an arm/axle assembly, remains a specific review question. |
+| Internal power protruding through closed breast | The whole Advanced-only power package is seated within the breast envelope and remains independently inspectable. | Exact equipment packaging is an exhibit reconstruction. |
+| Contact locator separated from the revised bill | Locator now follows `upper-bill` at the actual foremost surface; measured closest-triangle error is 0.347 mm. | This is a virtual contact tolerance, not a manufacturing dimension. |
+| One universal surface treatment | Maker fabrication, later inherited aging, separate repair roles, Advanced-only optics/equipment; local regional UV/PBR maps and actual plate thickness. | Exact alloy, wear level, manufacturing marks and deposit history are proposed. |
+| Illustrated fallback always showed one reference | Three actual fixed model renders now follow the selected era; separate assembly diagrams remain. | This fallback is an illustration and text response, not an animated 3D substitute. |
+
+## Export and construction evidence
+
+The combined runtime GLB is **16,956,956 bytes (16.17 MiB)**, SHA-256 `3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5`. It contains 110 nodes, 71 meshes and 187,957 indexed triangles across all three mutually exclusive variants. The Blender source retains 1,383 editable mesh pieces across those variants. The transfer budget was revised from 16 to 18 MiB to retain conforming rigid armor geometry; the final 16.17 MiB combined model fits that explicit budget. The seven embedded 1024² maps have an estimated decoded RGBA+mipmap footprint of 37.33 MiB, below the 48 MiB target. This estimate is not measured device VRAM.
+
+The actual Vite output contains 28 intended runtime files and totals 61,861,889 bytes, including the existing music assets. Only the combined exterior GLB and three explicit fallback images from this model package are included. Source scenes, loose atlas maps, provenance, audit media and historical source trees are excluded. Vite still emits its existing large-JavaScript-chunk advisory; no dependency or build architecture was changed.
+
+`npm ci` and `npm run build` completed successfully; no application dependency was added. Controller tests pass 34/34. The final geometry passes 14 era-motion scenarios, four Advanced power-move scenarios, four fixed-pivot/contact/inspection checks, seven mechanism scenarios and three new exterior construction checks. The latter inspect visible bill/locator proximity, distinct rigid owners and early-era exclusion of later equipment. Export validation checks all four GLBs, UVs, tangents, embedded images, material bindings, unchanged historical-source hash and source-to-build GLB identity. These checks do not certify every possible plate collision or artistic likeness.
+
+## Browser, motion and performance review
+
+The final headed browser review passed seven checks and captured 48 views. The actual loopback-served GLB SHA matches the export above. All three exterior eligibility states, material/normal-map loads, narrow-screen controls, absence of the development hook in the production build, and three fallback image/caption pairs passed. The final run recorded one initial page load per surface, no later Vite reload, and no browser errors. The pre-existing analytics script was fulfilled with an empty local response for QA; analytics itself was not tested.
+
+The retained era browser suite passed 13 checks; the Advanced action suite passed nine. They cover all five Maker controls, Mechanic stepped travel/turns/stopping, restricted systems in early eras, Advanced jump/thrust, landing before inspection or switching, reassembly, reduced motion, fallback and mobile controls. The [continuous recording](../assets/audit/exterior-v1/exterior-motion-demonstration.mp4) is 114.88 seconds, H.264 at 1600×1400/25 fps; its action sequence includes 113.683 seconds after loading. It also records attention/pacing, right-rail strike contact, recovery, separate power and processing inspection, and resumption. The source WebM and timestamped event/sample receipt are preserved.
+
+Performance conditions: Chromium headed on **Apple M4 Max / ANGLE Metal**, software renderer false, viewer 989×648, device pixel ratio 1. After eight-second Maker lever-cycling, Mechanic routine and Advanced autonomous windows, the runtime's rolling 180-frame samples showed **10 ms median**, with **11.7–11.8 ms p95**; observed calls were 200–236 and rendered triangle counts 119,522–131,714 across recorded samples. These counts include the enclosure, runtime mechanisms and render passes, unlike the export triangle inventory. They are desktop observations, not an eight-second aggregate benchmark, sustained thermal test, whole-device VRAM measurement or phone result.
+
+Direct visual review covered neutral authoring fronts/sides/rears, browser head/feet/shoulder views, open/exploded assemblies, and jump/thrust/strike frames. The shoulder overlays now conform outside their backing; the former solid thigh tubes are removed and guards follow the actual knee/ankle slope. The Advanced distribution case occupies a lateral service space, with conduit branches routed behind the power core. The revised bill contact and fixed joint ownership remain coherent in the tested sequences. This sampled review does not establish exhaustive collision freedom. Screenshot lighting metadata in the final run is read directly from the runtime; intended exhibit-light hero views and the continuous recording are separately available.
+
+A Blender source-placement check passes for all **56 shoulder/forewing overlays** and confirms removal of the old full thigh tubes. It samples plate-front vertices against their backing surfaces with a 2 mm numerical tolerance; it does not test every animated overlap. Zero-area bill triangles found during the contact check were removed before the final export. The nominal bill profile Z-range metadata was corrected after export without changing the frozen binary.
+
+The earlier exterior iteration A is preserved under `assets/models/uncaged-exterior-v1/iterations/iteration-a/`, including its editable scene, runtime derivative, generation scripts, inventory and selected renders. A rejected intermediate pass and diagnostic evidence are retained in the audit's `provisional/` directory. Regeneration targets only the current version and writes completed scene/GLB files atomically.
+
+## Acceptance boundary and owner decisions
+
+**This is an implemented exterior review study, not a passed final likeness stage.** Technical operation is verified, but the following known artistic work remains: a broader, more integrated folded wing mantle; less regular breast bands and a more reference-like body taper; stronger crown/bill identity; and more convincing layered leg/foot construction. Those are visible discrepancies, not faults that passing tests can dismiss. Atlas-driven patina is not yet a geometry-aware seam/contact wear map. Mixed-role export batches and the generic `inherited` extras also require the interpretation caveat in the surface pipeline; the explicit regional inheritance record and eligibility gates control this review. Do not describe the current model as an accepted finished MurderBird or use it as authority over the selected references.
+
+The concrete owner review should settle (1) how much of the reference's broad folded mantle should wrap the strong shoulder/elbow guard while retaining the short shove, (2) whether the darker newly fabricated Maker finish and the proposed inherited repair landmarks fit the intended chronology, and (3) the desired amount of local wear/relief for the current viewing distance. The established reference scopes, flightless rule, left-side restriction and capability progression remain fixed. No owner response or artistic acceptance is recorded by this stage.
+
+The final gallery check loaded 83 image entries, verified 94 local links and the MP4 metadata/seek, exercised jump/thrust in the built preview, and found no horizontal overflow at 390 pixels. The separate fallback-pixel-validation receipt confirms each fallback image is pixel-identical to its corresponding common-camera authoring render. The [provenance ledger](../provenance/exterior-construction-v1-2026-09-27.json) records the exact local assets and source/build hashes.

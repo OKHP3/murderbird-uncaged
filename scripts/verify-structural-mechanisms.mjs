@@ -2,17 +2,15 @@ import assert from 'node:assert/strict';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { loadRigidValidation } from './load-rigid-validation.mjs';
 import { createEraMechanisms } from '../src/scene/era-mechanisms.js';
 
 const root = process.cwd();
-const modelPath = resolve(root, 'assets/models/uncaged-structure-v1/murderbird-structure-v1.glb');
-const reportPath = resolve(root, 'assets/audit/structural-reconciliation-v1/mechanism-validation.json');
+const modelPath = resolve(root, 'assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb');
+const reportPath = resolve(root, 'assets/audit/exterior-v1/mechanism-validation.json');
 const bytes = await readFile(modelPath);
 const arrayBuffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
-const gltf = await new Promise((resolveParse, rejectParse) => {
-  new GLTFLoader().parse(arrayBuffer, '', resolveParse, rejectParse);
-});
+const gltf = await loadRigidValidation(bytes);
 const scene = new THREE.Scene();
 const model = gltf.scene;
 scene.add(model);
@@ -22,7 +20,7 @@ assert.ok(names.every(name => nodes[name]), 'all runtime contract nodes load fro
 const rest = Object.fromEntries(names.map(name => [name, { position: nodes[name].position.clone(), rotation: nodes[name].rotation.clone() }]));
 model.updateMatrixWorld(true);
 const mechanisms = createEraMechanisms({ scene, model, nodes, rest });
-const result = { model: 'murderbird-structure-v1.glb', renderer: 'none (headless Three.js scene)', checks: {} };
+const result = { model: 'murderbird-exterior-v1.glb', textureDecoding: 'excluded in Node motion test; checked separately in browser', renderer: 'none (headless Three.js scene)', checks: {} };
 const finitePositive = value => Number.isFinite(value) && value > 0;
 const find = name => scene.getObjectByName(name);
 
@@ -65,6 +63,15 @@ try {
   assert.ok(metric.inspectionConnections.cervical.every(link => link.mode === 'connected' && finitePositive(link.endpointDistance)));
   result.checks.builderAssembled = metric.inspectionConnections;
   const assembledWingDistance = metric.inspectionConnections.wing.endpointDistance;
+  scene.updateMatrixWorld(true);
+  const busBounds = new THREE.Box3().setFromObject(find('builder-sealed-bus-case'));
+  const coreBounds = new THREE.Box3().setFromObject(nodes['power-core']);
+  const busCenter = busBounds.getCenter(new THREE.Vector3());
+  assert.equal(busBounds.intersectsBox(coreBounds), false, 'protected distribution case clears the retained power package');
+  assert.ok(busBounds.min.y > 1 && busBounds.max.y < 1.4, 'distribution case remains inside the torso height, above the leg roots');
+  const manifoldSocket = find('builder-core-conduit-socket');
+  assert.ok(manifoldSocket.position.distanceTo(nodes['power-core'].getWorldPosition(new THREE.Vector3())) < 1e-6);
+  result.checks.protectedDistribution = { busCenter: busCenter.toArray(), busMin:busBounds.min.toArray(), busMax:busBounds.max.toArray(), powerBoundsClear:true, scope:'Rest-pose packaging bounds, not a full assembly collision proof' };
 
   nodes['right-mantle'].position.copy(rest['right-mantle'].position).add(new THREE.Vector3(-.39,.09,0));
   nodes['right-wing-shield'].position.copy(rest['right-wing-shield'].position).add(new THREE.Vector3(-.11,-.04,.12));

@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-09-27T18:12:41.002Z",
+  "devUrl": "http://127.0.0.1:5174/",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "name": "advanced actions are present, named, and gated until a ready Builder state",
+      "status": "passed",
+      "detail": {
+        "era": "builder",
+        "kind": "webgl"
+      }
+    },
+    {
+      "name": "power jump loads grounded, clears the floor, peaks, and lands planted",
+      "status": "passed",
+      "detail": {
+        "start": {
+          "kind": "jump",
+          "phase": 0,
+          "duration": 1.4,
+          "stage": "load"
+        },
+        "peak": {
+          "kind": "jump",
+          "phase": 0.40721428571428575,
+          "height": 0.35576172428154934,
+          "stage": "airborne",
+          "grounded": false
+        },
+        "landed": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.27567640752345324,
+              -0.2883598655462265
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.27567640752345307,
+              -0.28835986554622656
+            ],
+            "swinging": false,
+            "phase": 0,
+            "yaw": 0,
+            "steps": 0,
+            "solveError": 1.7554167342883506e-16,
+            "groundMin": 0.001999999999999844
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.27567640752345324,
+              -0.2883598655462265
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.27567640752345307,
+              -0.28835986554622656
+            ],
+            "swinging": false,
+            "phase": 0,
+            "yaw": 0,
+            "steps": 0,
+            "solveError": 1.7554167342883506e-16,
+            "groundMin": 0.001999999999999844
+          }
+        ],
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      }
+    },
+    {
+      "name": "shield thrust braces on the floor and drives the shoulder and elbow",
+      "status": "passed",
+      "detail": {
+        "start": {
+          "kind": "thrust",
+          "phase": 0,
+          "duration": 1.1,
+          "stage": "load"
+        },
+        "drive": {
+          "kind": "thrust",
+          "phase": 0.49090909090909113,
+          "height": 0,
+          "stage": "brace",
+          "grounded": true
+        },
+        "shoulder": -0.64,
+        "elbow": 0.72
+      }
+    },
+    {
+      "name": "actions hide outside Builder and reduced motion blocks them",
+      "status": "passed",
+      "detail": {
+        "hiddenForMakerAndMechanic": true,
+        "reducedMotionBlocked": true
+      }
+    },
+    {
+      "name": "era switch requested during airborne phase waits for a controlled landing",
+      "status": "passed",
+      "detail": {
+        "airbornePhase": 0.40007142857142813,
+        "transitionSamples": 76,
+        "finalEra": "maker",
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      }
+    },
+    {
+      "name": "inspection requested midair opens only after the jump has landed",
+      "status": "passed",
+      "detail": {
+        "airbornePhase": 0.4001428571428566,
+        "transitionSamples": 52,
+        "inspection": true,
+        "open": 0.9905031963985756
+      }
+    },
+    {
+      "name": "power actions remain unavailable in illustrated fallback",
+      "status": "passed",
+      "detail": {
+        "fallback": "ILLUSTRATED / FIXED VIEW",
+        "actionsDisabled": true
+      }
+    },
+    {
+      "name": "mobile power controls fit and remain labelled",
+      "status": "passed",
+      "detail": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "browser console and page error health",
+      "status": "passed",
+      "detail": {
+        "pages": 3,
+        "consoleErrors": 0
+      }
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "advanced-power-jump-peak.png",
+    "advanced-shield-thrust-drive.png",
+    "advanced-jump-era-transition-landed.png",
+    "advanced-jump-inspection-landed.png",
+    "mobile-advanced-power-controls.png"
+  ]
+}

@@ -2,13 +2,13 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { loadRigidValidation } from './load-rigid-validation.mjs';
 import { clone } from 'three/addons/utils/SkeletonUtils.js';
 import { createEraMotion } from '../src/scene/era-motion.js';
 import { createEraController } from '../src/scene/era-controller.js';
 
-const MODEL_PATH = process.env.UNCAGED_MODEL || 'assets/models/uncaged-structure-v1/murderbird-structure-v1.glb';
-const REPORT_PATH = (process.env.UNCAGED_AUDIT || 'assets/audit/structural-reconciliation-v1') + '/power-move-validation.json';
+const MODEL_PATH = process.env.UNCAGED_MODEL || 'assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb';
+const REPORT_PATH = (process.env.UNCAGED_AUDIT || 'assets/audit/exterior-v1') + '/power-move-validation.json';
 const NODE_NAMES = [
   'body', 'neck', 'head', 'jaw', 'breastplate', 'cranial-cover', 'winding-drive',
   'power-core', 'processing', 'industrial-repairs', 'builder-optics', 'left-mantle',
@@ -166,7 +166,7 @@ function verifyThrust() {
 
 async function main() {
   const bytes = await readFile(MODEL_PATH);
-  template = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
+  template = await loadRigidValidation(bytes);
   assert.ok(template.scene, 'GLB parse returned no scene');
   check('jump-height-foot-clearance-and-grounded-landing', verifyJump);
   check('jump-pause-midair-freezes-and-resumes', verifyPauseMidair);

@@ -190,17 +190,19 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
 
   // Builder: existing story power/processing nodes feed visible distribution and link actuators.
   const builder = eraGroups.builder;
-  const distribution = group(body, 'builder-power-distribution-manifold', [-.22, -.06, .15]);
-  box(distribution, 'builder-sealed-bus-case', [.20, .14, .29], darkIron, [0, 0, 0]);
-  box(distribution, 'builder-copper-bus-cover', [.055, .105, .24], copper, [-.105, .005, 0]);
-  for (const z of [-.08, 0, .08]) cylinder(distribution, 'builder-bus-terminal', .018, .09, brass, [.09, 0, z], 'x');
+  // Protected lateral service space, beside the independently opening power
+  // package. Keep this separate from cognition and accessible in inspection.
+  const distribution = group(body, 'builder-power-distribution-manifold', [-.21, .29, .07]);
+  box(distribution, 'builder-sealed-bus-case', [.08, .16, .13], darkIron, [0, 0, 0]);
+  box(distribution, 'builder-copper-bus-cover', [.015, .125, .105], copper, [-.0475, .005, 0]);
+  for (const z of [-.04, 0, .04]) cylinder(distribution, 'builder-bus-terminal', .012, .035, brass, [.045, 0, z], 'x');
   const builderBranches = ['left', 'right'].map((side, i) => {
     const sign = i === 0 ? 1 : -1;
     const thigh = find(side + '-thigh');
     const shin = find(side + '-shin');
     const housing = dynamicSegment(builder, `builder-${side}-linear-actuator-sleeve`, .044, ceramic);
     const piston = dynamicSegment(builder, `builder-${side}-actuator-rod`, .018, copper);
-    const conduitOuter = [dynamicSegment(builder, `builder-${side}-power-conduit-a`, .022, darkIron), dynamicSegment(builder, `builder-${side}-power-conduit-b`, .022, darkIron)];
+    const conduitOuter = ['a','b','c'].map(label => dynamicSegment(builder, `builder-${side}-power-conduit-${label}`, .018, darkIron));
     const conduitInner = dynamicSegment(builder, `builder-${side}-copper-conduit`, .008, copper);
     return { side, sign, thigh, shin, housing, piston, conduitOuter, conduitInner };
   });
@@ -323,7 +325,7 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     const core = nodes['power-core'];
     const source = worldPoint(core, builderAnchor);
     const lateral=new THREE.Vector3(1,0,0).transformDirection(body.matrixWorld);
-    const manifoldWorld = body.localToWorld(tempA.set(-.22, -.06, .15)).clone();
+    const manifoldWorld = distribution.getWorldPosition(new THREE.Vector3());
     const coreSeparated = inspection.separation >= .18;
     coreDisconnect.coreSocket.position.copy(source);
     coreDisconnect.manifoldSocket.position.copy(manifoldWorld);
@@ -343,10 +345,12 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
       const mid = hip.clone().lerp(knee, .58);
       setSegment(actuator.housing, hip, mid);
       setSegment(actuator.piston, mid, knee);
-      const sideRoute = mid.clone().addScaledVector(lateral,actuator.sign*.16);
-      const sourceRoute = manifoldWorld.clone().addScaledVector(lateral,actuator.sign*.36);
-      setSegment(actuator.conduitOuter[0], manifoldWorld, sourceRoute);
-      setSegment(actuator.conduitOuter[1], sourceRoute, sideRoute);
+      const sideRoute = mid.clone().addScaledVector(lateral,actuator.sign*.12);
+      const rearRoute = body.localToWorld(new THREE.Vector3(distribution.position.x,.24,-.13));
+      const sourceRoute = body.localToWorld(new THREE.Vector3(actuator.sign*.24,.24,-.13));
+      setSegment(actuator.conduitOuter[0], manifoldWorld, rearRoute);
+      setSegment(actuator.conduitOuter[1], rearRoute, sourceRoute);
+      setSegment(actuator.conduitOuter[2], sourceRoute, sideRoute);
       setSegment(actuator.conduitInner, sideRoute.clone().addScaledVector(lateral,actuator.sign*.025), hip);
     }
     const shoulder = worldPoint(nodes['right-mantle'], tempC);
