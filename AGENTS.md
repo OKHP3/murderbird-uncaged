@@ -31,3 +31,7 @@ These instructions govern work in this repository only. They do not replace or m
 - Keep changes small and limited to the requested asset, story, or exhibit scope. Use lowercase kebab-case for new ordinary files and directories; retain tool-required names and established source paths.
 - For app or asset-reference changes, run `npm ci` and `npm run build`. Review the emitted `dist/` paths and confirm referenced assets resolve. For scene changes, check both the WebGL scene and the illustrated fallback; see `.agents/memory/webgl-preview.md`.
 - Report which files changed, what evidence supports their provenance and status, and which checks actually ran. Separate local verification from remote CI, deployment, and human acceptance.
+
+## Project agent skills
+
+See [.agents/skills/README.md](.agents/skills/README.md) for the seven installed Skillz workflows and their source provenance. Load the narrowest matching skill before using it. These workflows supplement this guide; they do not change creative authority, asset preservation, private archive, or publication boundaries.
