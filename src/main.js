@@ -1,5 +1,6 @@
 import './style.css';
 import './fallback.css';
+import './review-navigation.css';
 import { createExhibit } from './scene/presence-exhibit.js';
 import { createIllustratedExhibit } from './scene/fallback.js';
 import { createEraController } from './scene/era-controller.js';
@@ -21,7 +22,7 @@ const parts=[
 ];
 const app=document.querySelector('#app');
 app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a><div class="site-shell">
-<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">THREE MOVEMENT SYSTEMS / 05</span></header>
+<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="./folio.html">Story &amp; media folio</a><a href="./review/">Review evidence</a><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">THREE MOVEMENT SYSTEMS / 05</span></header>
 <main id="top"><section class="exhibit" id="specimen" aria-labelledby="exhibit-title">
 <div class="exhibit-heading"><div><p class="eyebrow">AN ENCOUNTER WITH AN IMPOSSIBLE MACHINE</p><h1 id="exhibit-title">MurderBird: <em>Uncaged.</em></h1></div><p>Drag to orbit. Scroll or pinch to move closer.<br>One inherited body. Three ways to move.<br>Operate. Engage. Encounter.</p></div>
 <div class="exhibit-grid"><div class="viewer-column"><div class="viewer" id="viewer">

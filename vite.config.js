@@ -62,6 +62,14 @@ export default defineConfig(({ command, isPreview }) => {
   const localPreview = command === 'serve' && !isPreview && process.env.MURDERBIRD_THEME_PREVIEW === '1';
   return {
     base: './',
+    build: {
+      rollupOptions: {
+        input: {
+          exhibit: fileURLToPath(new URL('./index.html', import.meta.url)),
+          folio: fileURLToPath(new URL('./folio.html', import.meta.url)),
+        },
+      },
+    },
     define: { __LOCAL_THEME_PREVIEW__: JSON.stringify(localPreview) },
     plugins: localPreview ? [localThemePreview()] : [],
     server: {

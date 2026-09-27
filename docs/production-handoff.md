@@ -1,6 +1,6 @@
 # MurderBird: Uncaged — local production handoff
 
-**Current stage: three exterior construction states v1, technically validated but not yet meeting the full artistic likeness criteria.** This continues the clean structural checkpoint `21ac417` in `/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged`. The owner's subsequent exterior brief authorizes continued geometry and surfacing work; it does not retroactively approve the previous likeness study. The original evaluated checkpoint `2c22a50` and all historical production assets remain preserved. Nothing in this handoff is a publication claim.
+**Current stage: three exterior construction states v1, technically validated but not yet meeting the full artistic likeness criteria.** This continues the clean structural checkpoint `21ac417` in `/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged`. The owner's subsequent exterior brief authorizes continued geometry and surfacing work; it does not retroactively approve the previous likeness study. The original evaluated checkpoint `2c22a50` and all historical production assets remain preserved. The owner subsequently authorized publication for assessment. The [publication record](publication-review-2026-09-27.md) governs the release derivative; previous local receipts retain their dated scope.
 
 ## Current deliverables
 
@@ -23,7 +23,7 @@ Movement is kinematic. Fixed attachments, foot targets, sampled contact and rend
 
 ## Reproduction and local boundary
 
-Development: <http://127.0.0.1:5174/>. Local build preview: <http://127.0.0.1:4176/>. The review gallery is served only from the development tree, outside the runtime output. No provenance, source scene, historical archive or audit gallery belongs in `public/` or the shipped runtime.
+Development: <http://127.0.0.1:5174/>. Local build preview: <http://127.0.0.1:4176/>. The original audit gallery remains in the development tree. The authorized derivative at `/review/` contains only manifest-selected gallery media and immutable repository links. Provenance, editable scenes, historical archives and raw audit receipts remain outside `public/` and the shipped runtime.
 
 ```sh
 npm ci
@@ -34,7 +34,9 @@ node scripts/verify-advanced-power-moves.mjs
 node scripts/verify-structural-motion.mjs
 node scripts/verify-structural-mechanisms.mjs
 node scripts/verify-exterior-construction.mjs
-python3 scripts/verify-exterior-assets.py
+node scripts/verify-theme-release.mjs
+node scripts/verify-publication.mjs
+python3 scripts/verify-media-import.py
 ```
 
 Motion checks load unchanged GLB geometry/transforms but remove image bindings from an in-memory copy because Node does not provide browser image decoding. Hardware-WebGL review separately checks the actual textured export. The validators default to the exterior version and new receipt directory; old receipts remain intact.
@@ -44,5 +46,7 @@ Use the already installed Playwright entry with `scripts/verify-exterior-browser
 The frozen combined GLB is 16,956,956 bytes, SHA-256 `3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5`. The stage record names the exact build assets and observations. Earlier exterior iteration A and rejected-pass diagnostics remain preserved.
 
 Regeneration uses `scripts/build-uncaged-exterior-v1.py` in Blender and verifies both the historical structural source and previously generated output hashes. Preserve any manual changes under a new version before regenerating. `render-exterior-authoring.py` creates authoring and matched clay proofs without saving changes into the source scene.
+
+The original `verify-exterior-assets.py` and capture/receipt generators describe the frozen 28-file local checkpoint. They are historical workflows, not validators for the current 130-file publication, and must not overwrite the pinned exterior-v1 receipts. Use `verify-publication.mjs` and `verify-publication-browser.mjs` for this integrated release; new receipts go under ignored `.local/publication/`.
 
 Use the current dated receipts and stage record for the checks actually performed. Local validation does not prove remote CI, fresh remote LFS retrieval, deployment, phone performance or owner acceptance. The primary clone was used read-only for guidance and preserved source media; this work remains in the production worktree.

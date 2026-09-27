@@ -2,14 +2,14 @@
   "name": "murderbird-uncaged",
   "private": true,
   "version": "0.0.1",
-  "description": "Interactive teardown exhibit of The MurderBird.",
+  "description": "Interactive fictional field exhibit about the MurderBird.",
   "type": "module",
   "engines": {
     "node": ">=24 <27"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && python3 scripts/prepare-review-release.py",
     "preview": "vite preview",
     "technology:report": "node scripts/check-technology-versions.mjs",
     "technology:check": "node scripts/check-technology-versions.mjs --check"

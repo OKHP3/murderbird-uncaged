@@ -1,266 +1,570 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-shield-study/murderbird-shield-study.glb', import.meta.url).href;
-const FRONT = 1.10;
-const smooth = t => t * t * (3 - 2 * t);
-const clamp = THREE.MathUtils.clamp;
+const materials = {
+  bronze: new THREE.MeshStandardMaterial({ color: 0x8a5a39, metalness: .82, roughness: .4 }),
+  bronzeLight: new THREE.MeshStandardMaterial({ color: 0xb47b4b, metalness: .8, roughness: .34 }),
+  patina: new THREE.MeshStandardMaterial({ color: 0x34483d, metalness: .58, roughness: .66 }),
+  darkPatina: new THREE.MeshStandardMaterial({ color: 0x26342d, metalness: .65, roughness: .58 }),
+  iron: new THREE.MeshStandardMaterial({ color: 0x242a29, metalness: .76, roughness: .43 }),
+  ironEdge: new THREE.MeshStandardMaterial({ color: 0x555b54, metalness: .82, roughness: .36 }),
+  brass: new THREE.MeshStandardMaterial({ color: 0xb78a4e, metalness: .78, roughness: .34 }),
+  ceramic: new THREE.MeshStandardMaterial({ color: 0xc5b99c, metalness: .18, roughness: .56 }),
+  darkLens: new THREE.MeshStandardMaterial({ color: 0x121816, metalness: .38, roughness: .28 }),
+  amberLens: new THREE.MeshStandardMaterial({ color: 0xd28643, emissive: 0x351807, emissiveIntensity: .13, metalness: .35, roughness: .28 }),
+  wire: new THREE.MeshStandardMaterial({ color: 0x887650, metalness: .72, roughness: .4 }),
+};
 
-export async function createExhibit(container, updateMarker, { onReach, onContextLost } = {}) {
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+const unitSphere = new THREE.SphereGeometry(1, 24, 16);
+const unitCylinder = new THREE.CylinderGeometry(.82, 1, 1, 12);
+const unitCone = new THREE.ConeGeometry(1, 1, 10);
+const unitTorus = new THREE.TorusGeometry(1, .055, 8, 40);
+const up = new THREE.Vector3(0, 1, 0);
+const floorY = -2.48;
+function addMesh(parent, geometry, material, position = [0, 0, 0], scale = [1, 1, 1], rotation = [0, 0, 0]) {
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.position.set(...position);
+  mesh.scale.set(...scale);
+  mesh.rotation.set(...rotation);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  parent.add(mesh);
+  return mesh;
+}
+
+function ball(parent, material, position, scale) {
+  return addMesh(parent, unitSphere, material, position, scale);
+}
+
+function ring(parent, material, position, scale, rotation = [0, 0, 0]) {
+  return addMesh(parent, unitTorus, material, position, scale, rotation);
+}
+
+function segment(parent, material, radius, start = [0, 0, 0], end = [0, 1, 0], radiusZ = radius) {
+  const mesh = addMesh(parent, unitCylinder, material, [0, 0, 0], [radius, 1, radiusZ]);
+  placeSegment(mesh, start, end, radius, radiusZ);
+  return mesh;
+}
+
+function placeSegment(mesh, start, end, radius = mesh.scale.x, radiusZ = mesh.scale.z) {
+  const a = start.isVector3 ? start : new THREE.Vector3(...start);
+  const b = end.isVector3 ? end : new THREE.Vector3(...end);
+  const direction = b.clone().sub(a);
+  mesh.position.copy(a).add(b).multiplyScalar(.5);
+  mesh.quaternion.setFromUnitVectors(up, direction.clone().normalize());
+  mesh.scale.set(radius, direction.length(), radiusZ);
+}
+
+function plateShape(points, depth = .08) {
+  const shape = new THREE.Shape();
+  shape.moveTo(points[0][0], points[0][1]);
+  for (const [x, y] of points.slice(1)) shape.lineTo(x, y);
+  shape.closePath();
+  return new THREE.ExtrudeGeometry(shape, {
+    depth,
+    bevelEnabled: true,
+    bevelSegments: 2,
+    steps: 1,
+    bevelSize: .025,
+    bevelThickness: .025,
+  });
+}
+
+function makePlate(parent, material, points, position, depth = .08, rotation = [0, 0, 0]) {
+  return addMesh(parent, plateShape(points, depth), material, position, [1, 1, 1], rotation);
+}
+
+function addRivets(parent, points, material, radius = .035, z = .05) {
+  for (const [x, y] of points) ball(parent, material, [x, y, z], [radius, radius, radius * .55]);
+}
+
+export function createExhibit(container, updateMarker) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.25;
-  const gl=renderer.getContext();
-  const info=gl.getExtension('WEBGL_debug_renderer_info');
-  const softwareRenderer=info&&/swiftshader|llvmpipe|software/i.test(gl.getParameter(info.UNMASKED_RENDERER_WEBGL));
-  renderer.shadowMap.enabled = !softwareRenderer;
+  renderer.toneMappingExposure = 1.36;
+  renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
+  container.replaceChildren(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(34, 1, .1, 100);
+  camera.position.set(0, -.04, 9.5);
+  camera.lookAt(0, -.1, 0);
+  scene.add(new THREE.AmbientLight(0xcbd0bd, 1.55));
+  const key = new THREE.DirectionalLight(0xffd8ad, 3.25);
+  key.position.set(-4, 7, 5);
+  key.castShadow = true;
+  key.shadow.mapSize.set(1024, 1024);
+  key.shadow.camera.left = -5;
+  key.shadow.camera.right = 5;
+  key.shadow.camera.top = 5;
+  key.shadow.camera.bottom = -5;
+  scene.add(key);
+  const rim = new THREE.DirectionalLight(0xaec6ad, 2.2);
+  rim.position.set(3, 3, -4);
+  scene.add(rim);
+
+  const ground = addMesh(
+    scene,
+    new THREE.PlaneGeometry(100, 100),
+    new THREE.ShadowMaterial({ color: 0x080c09, opacity: .4 }),
+    [0, floorY, 0],
+    [1, 1, 1],
+    [-Math.PI / 2, 0, 0],
+  );
+  ground.receiveShadow = true;
+
+  const model = new THREE.Group();
+  const body = new THREE.Group();
+  model.add(body);
+  scene.add(model);
+
+  // Relative proportions are a visual design target (neck ≈ half the torso;
+  // legs ≈ torso length), not measurements certified from a reference image.
+  // The substantial torso and hip mass replace the earlier small songbird read.
+  ball(body, materials.iron, [0, .02, -.08], [.78, .91, .66]);
+  ball(body, materials.darkPatina, [0, .04, .08], [.76, .88, .65]);
+  ball(body, materials.patina, [0, -.56, -.04], [.78, .39, .67]);
+  ball(body, materials.patina, [0, .55, -.02], [.73, .42, .6]);
+
+  const chestCover = new THREE.Group();
+  body.add(chestCover);
+  const chestPlate = makePlate(
+    chestCover,
+    materials.bronze,
+    [[-.52, .42], [-.44, .72], [-.18, .83], [.36, .74], [.52, .44], [.42, -.38], [.15, -.58], [-.31, -.5], [-.5, -.18]],
+    [0, .03, .58],
+    .11,
+  );
+  chestPlate.rotation.z = -.025;
+  for (let row = 0; row < 4; row++) {
+    const y = .44 - row * .24;
+    const width = .48 - row * .035;
+    makePlate(
+      chestCover,
+      row % 2 ? materials.bronzeLight : materials.darkPatina,
+      [[-width, .09], [-width * .82, .21], [width * .73, .18], [width, .02], [width * .72, -.12], [-width * .78, -.13]],
+      [0, y, .72],
+      .035,
+    );
+  }
+  addRivets(chestCover, [[-.37, .56], [.35, .55], [-.36, .04], [.37, .02], [-.25, -.36], [.25, -.35]], materials.bronzeLight, .027, .78);
+
+  // The Maker's inherited left-shoulder plate is visibly asymmetric and
+  // twice fitted. This is the anatomical left (positive local X, facing +Z).
+  makePlate(body, materials.bronzeLight,
+    [[-.2, .22], [-.14, .39], [.19, .31], [.24, -.11], [.04, -.28], [-.2, -.12]],
+    [.63, .65, .18], .09, [0, 0, -.17]);
+  makePlate(body, materials.bronze,
+    [[-.13, .2], [-.08, .31], [.18, .22], [.19, -.11], [-.01, -.21], [-.14, -.1]],
+    [.7, .65, .27], .055, [0, 0, -.06]);
+  segment(body, materials.ironEdge, .035, [.74, .84, .16], [.68, .39, .18], .045);
+  addRivets(body, [[.52, .8], [.76, .68], [.56, .47]], materials.brass, .035, .31);
+  makePlate(body, materials.bronze,
+    [[-.18, .18], [-.12, .34], [.14, .28], [.18, -.09], [.02, -.2], [-.15, -.08]],
+    [-.63, .65, .18], .08, [0, 0, .12]);
+  addRivets(body, [[-.72, .77], [-.55, .53]], materials.bronzeLight, .027, .26);
+
+  // A short plated tail keeps the rear contour compact; these are not flight feathers.
+  for (let index = -1; index <= 1; index++) {
+    const tail = addMesh(body, unitCone, index === 0 ? materials.bronze : materials.patina,
+      [index * .17, -.5, -.74], [.15, .26, .13], [-.74, index * .08, 0]);
+    tail.castShadow = true;
+  }
+
+  const neck = new THREE.Group();
+  neck.position.set(0, .65, -.03);
+  body.add(neck);
+  for (let index = 0; index < 4; index++) {
+    const y = .12 + index * .2;
+    const width = .37 - index * .025;
+    ball(neck, index % 2 ? materials.patina : materials.bronze, [0, y, .02 + index * .035], [width, .19, .38 - index * .025]);
+    ring(neck, materials.bronzeLight, [0, y - .075, .035 + index * .035], [width * .77, .07, .82], [0, 0, 0]);
+  }
+
+  const head = new THREE.Group();
+  head.position.set(0, .79, .13);
+  neck.add(head);
+  ball(head, materials.darkPatina, [0, .1, 0], [.49, .39, .47]);
+  ball(head, materials.bronze, [0, .08, .31], [.38, .31, .25]);
+  for (let index = 0; index < 4; index++) {
+    const z = -.29 + index * .13;
+    makePlate(head, index % 2 ? materials.patina : materials.bronzeLight,
+      [[-.25, .07], [-.2, .27], [0, .44], [.2, .27], [.25, .07], [.12, -.02], [-.14, -.02]],
+      [0, .17 + index * .015, z], .045, [0, 0, index % 2 ? .05 : -.05]);
+    addRivets(head, [[-.15, .25], [.15, .25]], materials.bronze, .022, z + .055);
+  }
+
+  // A deep, hooked bill is built along the head's forward axis (+Z).
+  const billProfile = new THREE.Shape();
+  billProfile.moveTo(-.12, .13);
+  billProfile.quadraticCurveTo(.23, .19, .57, .04);
+  billProfile.quadraticCurveTo(.88, -.1, .91, -.36);
+  billProfile.quadraticCurveTo(.9, -.51, .76, -.59);
+  billProfile.quadraticCurveTo(.79, -.38, .55, -.28);
+  billProfile.lineTo(.13, -.22);
+  billProfile.lineTo(-.13, -.08);
+  billProfile.closePath();
+  const billGeometry = new THREE.ExtrudeGeometry(billProfile, {
+    depth: .34, bevelEnabled: true, bevelSegments: 3, steps: 1, bevelSize: .045, bevelThickness: .05,
+  });
+  addMesh(head, billGeometry, materials.bronzeLight, [-.17, .0, .35]);
+  const lowerJaw = new THREE.Group();
+  lowerJaw.position.set(0, -.18, .36);
+  head.add(lowerJaw);
+  const jawProfile = new THREE.Shape();
+  jawProfile.moveTo(-.12, .05);
+  jawProfile.lineTo(.12, .1);
+  jawProfile.lineTo(.65, .05);
+  jawProfile.quadraticCurveTo(.76, -.02, .58, -.15);
+  jawProfile.lineTo(.17, -.13);
+  jawProfile.closePath();
+  addMesh(lowerJaw, new THREE.ExtrudeGeometry(jawProfile, {
+    depth: .27, bevelEnabled: true, bevelSegments: 2, steps: 1, bevelSize: .025, bevelThickness: .03,
+  }), materials.ironEdge, [-.12, -.03, .02]);
+  segment(head, materials.darkPatina, .035, [-.2, -.18, .58], [.2, -.18, .58], .04);
+
+  // The optic housing remains dark in Maker and Mechanic layers.
+  ring(head, materials.bronzeLight, [.3, .13, .43], [.19, .19, 1], [0, 0, 0]);
+  ball(head, materials.darkLens, [.3, .13, .458], [.135, .135, .045]);
+  const builderEye = ball(head, materials.amberLens, [.3, .13, .506], [.087, .087, .035]);
+  builderEye.visible = false;
+
+  const wings = [];
+  for (const side of [-1, 1]) {
+    const wing = new THREE.Group();
+    wing.position.set(side * .64, .45, -.12);
+    wing.rotation.z = side * .13;
+    body.add(wing);
+    ball(wing, materials.iron, [side * .08, -.13, -.02], [.29, .48, .24]);
+    makePlate(wing, materials.patina,
+      [[-.24, .15], [-.22, -.05], [-.14, -.43], [0, -.57], [.2, -.43], [.26, -.1], [.17, .18]],
+      [side * .08, -.13, .16], .055, [0, 0, side * .05]);
+    for (let index = 0; index < 3; index++) {
+      const feather = addMesh(wing, unitCone, index % 2 ? materials.bronze : materials.bronzeLight,
+        [side * (.03 + index * .08), -.28 - index * .07, .17],
+        [.08, .31, .08], [0, 0, side * -.16]);
+      feather.castShadow = true;
+    }
+    ring(wing, materials.bronzeLight, [side * .09, -.03, .24], [.13, .13, .75], [0, 0, 0]);
+    wings.push({ group: wing, side });
+  }
+
+  // Mechanic-era iron braces and brass bearings are a distinct later overlay.
+  const mechanicLayer = new THREE.Group();
+  model.add(mechanicLayer);
+  const shoulderStop = segment(mechanicLayer, materials.ironEdge, .065, [.7, .92, .2], [.7, .38, .22], .07);
+  ring(mechanicLayer, materials.brass, [.7, .67, .26], [.16, .16, .85], [0, 0, 0]);
+  for (const side of [-1, 1]) {
+    segment(mechanicLayer, materials.iron, .095, [side * .64, -.47, .1], [side * .74, -.91, .17], .1);
+    segment(mechanicLayer, materials.brass, .045, [side * .74, -.51, .19], [side * .74, -.89, .24], .055);
+    ring(mechanicLayer, materials.brass, [side * .7, -1.16, .31], [.17, .17, .9], [Math.PI / 2, 0, 0]);
+    segment(mechanicLayer, materials.ironEdge, .035, [side * .73, -1.36, -.18], [side * .73, -1.78, -.08], .045);
+  }
+  for (let index = 0; index < 3; index++) {
+    ring(mechanicLayer, materials.brass, [0, -.5 + index * .18, -.68], [.48, .12, .65], [Math.PI / 2, 0, 0]);
+  }
+  shoulderStop.name = 'limited anatomical left shoulder stop';
+
+  // The Builder adds finite power at the chest and separate processing behind the eyes.
+  const builderLayer = new THREE.Group();
+  model.add(builderLayer);
+  const heart = new THREE.Group();
+  heart.position.set(0, -.04, .77);
+  builderLayer.add(heart);
+  ball(heart, materials.iron, [0, 0, 0], [.36, .48, .12]);
+  for (let index = 0; index < 4; index++) {
+    const y = -.29 + index * .19;
+    ball(heart, materials.ceramic, [0, y, .1], [.2, .075, .1]);
+    ring(heart, materials.brass, [0, y, .16], [.21, .06, .7], [0, 0, 0]);
+  }
+  segment(heart, materials.wire, .025, [-.23, .23, .09], [-.38, .5, .02], .025);
+  segment(heart, materials.wire, .025, [.23, -.19, .09], [.42, -.53, .03], .025);
+
+  const mind = new THREE.Group();
+  mind.position.set(0, 1.7, -.13);
+  body.add(mind);
+  ball(mind, materials.iron, [0, 0, 0], [.27, .21, .22]);
+  for (let index = -1; index <= 1; index++) {
+    segment(mind, materials.brass, .018,
+      [index * .11, -.14, .17], [index * .11, .14, .17], .018);
+  }
+  segment(mind, materials.wire, .022, [0, 0, -.18], [0, -.2, -.46], .022);
+  segment(builderLayer, materials.wire, .018, [-.4, .5, -.12], [-.57, .95, -.1], .018);
+  heart.visible = false;
+  mind.visible = false;
+  builderLayer.visible = false;
+
+  const legs = [];
+  const feet = [];
+  for (const side of [-1, 1]) {
+    const leg = {
+      side,
+      upper: segment(model, materials.patina, .18, [side * .5, -.5, 0], [side * .6, -1, .2], .17),
+      lower: segment(model, materials.darkPatina, .12, [side * .6, -1, .2], [side * .68, -1.8, -.18], .12),
+      tarsus: segment(model, materials.bronze, .105, [side * .68, -1.8, -.18], [side * .7, -2.3, .16], .1),
+      hip: ball(model, materials.darkPatina, [side * .5, -.55, 0], [.24, .22, .24]),
+      knee: ball(model, materials.bronzeLight, [side * .6, -1.05, .2], [.18, .17, .2]),
+      hock: ball(model, materials.ironEdge, [side * .68, -1.8, -.18], [.15, .16, .16]),
+      ankle: ball(model, materials.brass, [side * .7, -2.3, .16], [.13, .12, .14]),
+    };
+    legs.push(leg);
+
+    const foot = new THREE.Group();
+    foot.position.set(side * .7, floorY, .12);
+    model.add(foot);
+    ball(foot, materials.darkPatina, [0, .08, -.02], [.25, .1, .29]);
+    const claws = [];
+    for (let toe = -1; toe <= 1; toe++) {
+      const spread = toe * .17;
+      const start = new THREE.Vector3(spread * .72, .1, .07);
+      const end = new THREE.Vector3(spread, .075, .42 + (toe === 0 ? .09 : 0));
+      const toeBone = segment(foot, materials.ironEdge, toe === 0 ? .075 : .062, start, end, .065);
+      const claw = segment(foot, materials.bronzeLight, .042, end, [spread * 1.12, .035, end.z + .22], .038);
+      claws.push({ toeBone, claw, side: toe });
+      ball(foot, materials.brass, end.toArray(), [.075, .055, .075]);
+    }
+    const rearDigit = segment(foot, materials.bronze, .052, [0, .1, -.18], [0, .05, -.36], .05);
+    feet.push({ group: foot, claws, rearDigit, side });
+  }
+
+  const markerPositions = {
+    beak: new THREE.Vector3(.75, 1.08, .78),
+    shoulder: new THREE.Vector3(.72, .65, .38),
+    ankle: new THREE.Vector3(.7, -2.23, .34),
+    heart: new THREE.Vector3(0, .05, .94),
+    mind: new THREE.Vector3(0, 1.68, .08),
+  };
+  let currentEra = 'builder';
+  let inspectionOpen = false;
+  let yaw = .45;
+  let pitch = 0;
+  let targetYaw = yaw;
+  let targetPitch = 0;
+  let zoom = 9.5;
+  let pointer = null;
+  let lookYaw = 0;
+  let lookPitch = 0;
+  let targetLookYaw = 0;
+  let targetLookPitch = 0;
+  let reactionStarted = -Infinity;
+  let frame = 0;
+  let lastWidth = 0;
+  let lastHeight = 0;
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const canvas = renderer.domElement;
   canvas.tabIndex = 0;
-  canvas.setAttribute('aria-label', 'MurderBird 3D enclosure. Arrow keys orbit; plus and minus zoom. Use Reach toward bars for a reaction.');
-  container.append(canvas);
-  const scene = new THREE.Scene();
-  scene.background = new THREE.Color('#232b29');
-  scene.fog = new THREE.Fog('#232b29', 5, 13);
-  const camera = new THREE.PerspectiveCamera(36, 1, .05, 35);
-  const controls = new OrbitControls(camera, canvas);
-  controls.enablePan = false;
-  controls.enableDamping = false;
-  controls.minDistance = 2.7;
-  controls.maxDistance = 6.5;
-  controls.minPolarAngle = .25;
-  controls.maxPolarAngle = Math.PI / 2 - .03;
-  controls.target.set(0, 1.03, 0);
-  camera.position.set(-2.85, 1.85, 3.55);
-  controls.update();
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  const room = new RoomEnvironment();
-  const environment = pmrem.fromScene(room, .04);
-  scene.environment = environment.texture;
-  scene.environmentIntensity = .48;
-  room.dispose(); pmrem.dispose();
-  scene.add(new THREE.HemisphereLight(0xddeee8, 0x3b3327, 1.7));
-  const key = new THREE.DirectionalLight(0xffe0b8, 4);
-  key.position.set(-2.5, 4.5, 4); key.castShadow = true;
-  key.shadow.mapSize.set(1024, 1024);
-  Object.assign(key.shadow.camera, { left: -2, right: 2, top: 3, bottom: -2, near: .1, far: 12 });
-  key.shadow.bias = -.0004; key.shadow.normalBias = .012;
-  scene.add(key);
-  const fill = new THREE.DirectionalLight(0xb1dcd4, 2.4);
-  fill.position.set(3, 2.5, -2); scene.add(fill);
+  canvas.setAttribute('role', 'region');
+  canvas.setAttribute('aria-label', 'Interactive procedural MurderBird study. Use arrow keys to rotate, plus and minus to zoom, Enter to trigger a brief reaction, and R to reset.');
+  canvas.style.touchAction = 'none';
 
-  const metal = new THREE.MeshStandardMaterial({ color: '#404b45', roughness: .62, metalness: .65 });
-  const brass = new THREE.MeshStandardMaterial({ color: '#998260', roughness: .5, metalness: .7 });
-  const floorMat = new THREE.MeshStandardMaterial({ color: '#323a36', roughness: .87, metalness: .15 });
-  const mesh = (geometry, material, position) => {
-    const o = new THREE.Mesh(geometry, material); o.position.set(...position);
-    o.castShadow = true; o.receiveShadow = true; scene.add(o); return o;
-  };
-  mesh(new THREE.BoxGeometry(2.25, .10, 2.32), metal, [0, -.065, .06]);
-  mesh(new THREE.BoxGeometry(2.12, .012, 2.22), floorMat, [0, -.009, .06]);
-  const ground = mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({color:'#111916',roughness:.95}), [0, -.12, 0]);
-  ground.rotation.x = -Math.PI / 2;
-  if(softwareRenderer){
-    for(const side of [-1,1])for(let layer=0;layer<4;layer++){
-      const shadow=mesh(new THREE.CircleGeometry(1,32),new THREE.MeshBasicMaterial({color:'#0a130d',transparent:true,opacity:.085,depthWrite:false}),[side*.275,.0001+layer*.0001,.16]);
-      shadow.rotation.x=-Math.PI/2;shadow.scale.set(.16-layer*.025,.25-layer*.035,1);
-    }
-  }
-  const cage = new THREE.Group(); scene.add(cage);
-  const bars = [];
-  function bar(a, b, radius, permanent = false) {
-    const start = new THREE.Vector3(...a), end = new THREE.Vector3(...b);
-    const mat = metal.clone(); mat.transparent = true; mat.opacity = .66; mat.depthWrite = false;
-    const o = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, start.distanceTo(end), 8), mat);
-    o.position.copy(start).add(end).multiplyScalar(.5);
-    o.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), end.sub(start).normalize());
-    o.userData.permanent = permanent; cage.add(o); bars.push(o); return o;
-  }
-  for (const z of [FRONT, -.95]) {
-    for (let i = -3; i <= 3; i++) bar([i / 3, 0, z], [i / 3, 2.15, z], Math.abs(i) === 3 ? .018 : .011);
-    bar([-1, 2.15, z], [1, 2.15, z], .021);
-    bar([-1, .07, z], [1, .07, z], .018, true);
-  }
-  for (const x of [-1, 1]) {
-    for (let i = 1; i < 5; i++) bar([x,0,-.95+i*.342],[x,2.15,-.95+i*.342],.011);
-    bar([x,2.15,-.95],[x,2.15,FRONT],.021);
-    bar([x,.07,-.95],[x,.07,FRONT],.018,true);
-  }
-  const contactRail = bar([0,1.25,FRONT],[0,1.95,FRONT],.021);
-  const target = mesh(new THREE.TorusGeometry(.045,.006,8,32), brass, [0,1.54,FRONT+.005]);
-  target.visible = false;
-  const guides = new THREE.Group(); scene.add(guides);
-  const guideMat = new THREE.LineDashedMaterial({ color: '#dfc899', transparent:true, opacity:.52, dashSize:.025, gapSize:.025 });
-  let gltf;
-  const abort = new AbortController();
-  const timeout = setTimeout(() => abort.abort(), 25000);
-  try {
-    const response = await fetch(modelUrl, { signal: abort.signal });
-    if (!response.ok) throw new Error(`Model request failed (${response.status})`);
-    const data = await response.arrayBuffer();
-    gltf = await new GLTFLoader().parseAsync(data, '');
-  } catch (error) {
-    clearTimeout(timeout); controls.dispose(); environment.dispose(); renderer.dispose(); canvas.remove();
-    throw error;
-  }
-  clearTimeout(timeout);
-  const model = gltf.scene; scene.add(model);
-  const names = ['body','neck','head','jaw','breastplate','cranial-cover','winding-drive','power-core','processing','industrial-repairs','builder-optics','left-mantle','right-mantle','left-wing-shield','right-wing-shield'];
-  const nodes = Object.fromEntries(names.map(name => [name, model.getObjectByName(name)]));
-  if (names.some(name => !nodes[name]) || nodes['left-wing-shield']?.parent !== nodes['left-mantle'] || nodes['right-wing-shield']?.parent !== nodes['right-mantle']) {
-    controls.dispose(); environment.dispose(); renderer.dispose(); canvas.remove();
-    throw new Error('Model assembly contract is incomplete.');
-  }
-  const rest = Object.fromEntries(names.map(name => [name, { position:nodes[name].position.clone(), rotation:nodes[name].rotation.clone() }]));
-  const materialOrigins = new Map();
-  model.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; const mats = Array.isArray(o.material) ? o.material : [o.material]; mats.forEach(m=>{ if (!materialOrigins.has(m)) materialOrigins.set(m, { color:m.color.clone(), roughness:m.roughness,vertexColors:m.vertexColors }); }); } });
-  const markerNodes = {
-    beak: ['head', [0,-.035,.28]], joint:['body',[.28,.6,.07]],
-    shell:['breastplate',[.245,-.19,.01]], drive:['winding-drive',[.13,0,0]],
-    power:['power-core',[0,0,.055]], mind:['processing',[0,.04,0]], guard:['right-wing-shield',[-.085,.12,.125]],
-  };
-  const anchors = Object.fromEntries(Object.entries(markerNodes).map(([id,[name,p]])=>{const landmark=model.getObjectByName('anchor-'+id);if(landmark)return [id,landmark];const o=new THREE.Object3D();o.position.set(...p);nodes[name].add(o);return [id,o];}));
-  const billTip = model.getObjectByName('bill-contact');
-  if(!billTip)throw new Error('Model contact landmark is missing.');
-  const exploded = {
-    breastplate:[-.70,-.12,.18], 'left-mantle':[.39,.09,0], 'right-mantle':[-.39,.09,0],
-    'left-wing-shield':[.11,-.04,.12], 'right-wing-shield':[-.11,-.04,.12],
-    'winding-drive':[-.45,-.10,.22], 'power-core':[.32,-.05,.28], processing:[.28,.20,0], 'cranial-cover':[0,.14,0],
-  };
-  const lines = {};
-  Object.keys(exploded).forEach(name => { const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3()]),guideMat);guides.add(line);lines[name]=line; });
-  let open = 0, separation = 0, targetOpen = 0, targetSeparation = 0, armed = false, era = 'builder', pointer, frameCount=0;
-  let selected = 'beak';
-  let lastSnapshot, lastWidth=0, lastHeight=0;
-  const vector = new THREE.Vector3();
-  const worldTip = new THREE.Vector3();
-  const contactBounds = new THREE.Box3();
-  const frameTimes = [];
-  const highlight = new THREE.Box3Helper(new THREE.Box3(),0xd9b87b); highlight.visible=false;scene.add(highlight);
-
-  function setEra(value) {
-    era=value;
-    nodes['winding-drive'].visible=value==='mechanic';
-    nodes['power-core'].visible=value==='builder';
-    nodes.processing.visible=value==='builder';
-    nodes['builder-optics'].visible=value==='builder';
-    nodes['industrial-repairs'].visible=value!=='maker';
-    materialOrigins.forEach((original,m) => {
-      m.color.copy(original.color);m.roughness=original.roughness;m.vertexColors=original.vertexColors;
-      if(value==='maker' && (m.name.includes('mineral')||m.name.includes('Industrial iron'))){m.color.set('#826241');m.roughness=.57;m.vertexColors=false;}
-      m.needsUpdate=true;
-    });
-  }
   function resize() {
-    const width=container.clientWidth,height=container.clientHeight;
-    if(!width||!height||width===lastWidth&&height===lastHeight)return;
-    lastWidth=width;lastHeight=height;renderer.setSize(width,height);camera.aspect=width/height;
-    camera.fov=width<550?47:36;camera.updateProjectionMatrix();
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    if (!width || !height || (width === lastWidth && height === lastHeight)) return;
+    lastWidth = width;
+    lastHeight = height;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.fov = width < 560 ? 37 : 34;
+    camera.position.z = width < 560 ? 9.1 : 9.5;
+    camera.updateProjectionMatrix();
   }
-  function reset(){controls.target.set(0,1.03,0);camera.position.set(-2.85,1.85,3.55);controls.update();}
-  function nudge(action){
-    const offset=camera.position.clone().sub(controls.target);const s=new THREE.Spherical().setFromVector3(offset);
-    if(action==='left')s.theta-=.23;if(action==='right')s.theta+=.23;
-    if(action==='up')s.phi-=.14;if(action==='down')s.phi+=.14;
-    if(action==='in')s.radius*=.9;if(action==='out')s.radius*=1.1;
-    s.radius=clamp(s.radius,controls.minDistance,controls.maxDistance);s.phi=clamp(s.phi,controls.minPolarAngle,controls.maxPolarAngle);
-    camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(s));controls.update();
+
+  function setEra(era) {
+    currentEra = era;
+    mechanicLayer.visible = era !== 'maker';
+    builderLayer.visible = era === 'builder';
+    builderEye.visible = era === 'builder';
+    if (era !== 'builder') setInspection(false);
   }
-  const listeners = new AbortController();
-  const listen=(type,fn,options={})=>canvas.addEventListener(type,fn,{...options,signal:listeners.signal});
-  listen('keydown',e=>{ const actions={ArrowLeft:'left',ArrowRight:'right',ArrowUp:'up',ArrowDown:'down','+':'in','=':'in','-':'out',Home:'reset'};if(actions[e.key]){e.preventDefault();actions[e.key]==='reset'?reset():nudge(actions[e.key]);}});
-  listen('pointerdown',e=>{if(!armed||e.button>0)return;if(pointer){pointer=null;return;}pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});
-  listen('pointerup',e=>{
-    if(!pointer||pointer.id!==e.pointerId)return;const saved=pointer;pointer=null;
-    if(Math.hypot(e.clientX-saved.x,e.clientY-saved.y)>10)return;
-    const rect=canvas.getBoundingClientRect();onReach?.({x:(e.clientX-rect.left)/rect.width*2-1,y:1-(e.clientY-rect.top)/rect.height*2});
-  });
-  listen('pointercancel',()=>{pointer=null;});listen('lostpointercapture',()=>{pointer=null;});
-  listen('webglcontextlost',e=>{e.preventDefault();onContextLost?.();});
 
-  function tick(dt,snapshot,frameDelta=dt) {
-    lastSnapshot=snapshot; frameCount++;
-    if(frameDelta>0&&frameDelta<5){frameTimes.push(frameDelta);if(frameTimes.length>180)frameTimes.shift();}
-    const ease=snapshot.reducedMotion?1:1-Math.exp(-dt*8);
-    open=THREE.MathUtils.lerp(open,targetOpen,ease);separation=THREE.MathUtils.lerp(separation,targetSeparation,ease);
-    if(Math.abs(open-targetOpen)<.001)open=targetOpen;
-    if(Math.abs(separation-targetSeparation)<.001)separation=targetSeparation;
-    names.forEach(name=>{nodes[name].position.copy(rest[name].position);nodes[name].rotation.copy(rest[name].rotation);});
-    nodes.breastplate.rotation.y=-open*1.35;
-    nodes['cranial-cover'].position.y+=open*.08;
-    Object.entries(exploded).forEach(([name,offset])=>nodes[name].position.addScaledVector(vector.set(...offset),separation));
-    const p=smooth(snapshot.phase),state=snapshot.state;
-    let extension=0,anticipation=0,beak=0;
-    if(!snapshot.reducedMotion&&!snapshot.inspection&&!snapshot.paused){
-      if(state==='notice')anticipation=p*.20;
-      if(state==='warning'){anticipation=.20+p*.80;beak=p;}
-      if(state==='strike'){extension=p;anticipation=1-p;beak=1-p*.8;}
-      if(state==='contact'){extension=1;beak=.2*(1-p);}
-      if(state==='recover'){extension=1-p;beak=0;}
-      nodes.neck.rotation.x=-anticipation*.075+extension*.26;
-      nodes.head.rotation.y=snapshot.reach.x*.16*(1-extension);
-      nodes.jaw.rotation.x=-beak*.32;
-      // Flightless wings tuck over the ribs, then deliver a short shoulder/elbow
-      // drive. The repaired left shoulder moves less and counterbalances.
-      const guard=state==='warning'?p:state==='strike'||state==='contact'?1:state==='recover'?1-p:0;
-      nodes['right-mantle'].rotation.x=-guard*.23;
-      nodes['right-mantle'].rotation.y=guard*.08;
-      nodes['right-wing-shield'].rotation.x=guard*.32+extension*.08;
-      nodes['left-mantle'].rotation.x=guard*.065;
-      nodes['left-mantle'].rotation.y=-guard*.045;
-      nodes['left-wing-shield'].rotation.x=guard*.18;
+  function setInspection(value) {
+    inspectionOpen = Boolean(value && currentEra === 'builder');
+    heart.visible = inspectionOpen;
+    mind.visible = inspectionOpen;
+    const target = inspectionOpen ? 1 : 0;
+    chestCover.userData.openTarget = target;
+    head.userData.openTarget = target;
+  }
 
-      // The leading modeled surface meets the bar, including the broad curved bill.
-      // A tip-only constraint can let the upper hook pass through the rail.
-      // The bounded cervical slide remains an illustrative rigid mechanism.
-      if(extension>0){
-        model.updateMatrixWorld(true);
-        contactBounds.setFromObject(nodes.head,true);
-        const travel=clamp((FRONT-contactBounds.max.z-.021)/nodes.neck.parent.getWorldScale(vector).z,-.10,.20);
-        nodes.neck.position.z+=travel*extension;
-      }
+  function triggerReaction() {
+    reactionStarted = performance.now();
+  }
+
+  function reset() {
+    targetYaw = .45;
+    targetPitch = 0;
+    zoom = 9.5;
+    targetLookYaw = 0;
+    targetLookPitch = 0;
+    reactionStarted = -Infinity;
+  }
+
+  const onPointerDown = event => {
+    pointer = { x: event.clientX, y: event.clientY, yaw: targetYaw, pitch: targetPitch, moved: false };
+    canvas.setPointerCapture(event.pointerId);
+    canvas.focus({ preventScroll: true });
+  };
+  const onPointerMove = event => {
+    if (!pointer) {
+      const rect = canvas.getBoundingClientRect();
+      targetLookYaw = THREE.MathUtils.clamp(((event.clientX - rect.left) / rect.width - .5) * .26, -.13, .13);
+      targetLookPitch = THREE.MathUtils.clamp(((event.clientY - rect.top) / rect.height - .5) * -.11, -.055, .055);
+      return;
     }
-    model.updateMatrixWorld(true);
-    billTip.getWorldPosition(worldTip);
-    target.visible=armed||['notice','warning','strike','contact','recover'].includes(state);
-    target.position.x=worldTip.x;
-    target.position.y=worldTip.y;
-    const viewDirection=camera.position.clone().sub(controls.target).normalize();
-    bars.forEach(o=>{
-      const near=o.position.x*viewDirection.x+o.position.z*viewDirection.z>0;
-      o.material.opacity=open>.02?.035:near?.12:.48;
-      if(o===contactRail)o.material.opacity=open>.02?.02:state==='contact'?.85:.29;
-    });
-    guides.visible=separation>.015;
-    Object.entries(lines).forEach(([name,line])=>{
-      line.visible=nodes[name].visible;
-      const a=nodes[name].parent.localToWorld(rest[name].position.clone());
-      const b=nodes[name].getWorldPosition(new THREE.Vector3());
-      line.geometry.setFromPoints([a,b]);line.computeLineDistances();
-    });
-    Object.entries(anchors).forEach(([id,anchor])=>{
-      anchor.getWorldPosition(vector);vector.project(camera);
-      const present=id==='drive'?era==='mechanic':id==='power'||id==='mind'?era==='builder':true;
-      const interior=['drive','power','mind'].includes(id);
-      updateMarker(id,(vector.x+1)*lastWidth/2,(1-vector.y)*lastHeight/2,present&&(!interior||open>.8)&&vector.z<1&&Math.abs(vector.x)<.94&&Math.abs(vector.y)<.86);
-    });
-    if(highlight.visible){const name=markerNodes[selected]?.[0];if(name&&nodes[name].visible)highlight.box.setFromObject(nodes[name]);else highlight.visible=false;}
-    renderer.render(scene,camera);
+    const dx = event.clientX - pointer.x;
+    const dy = event.clientY - pointer.y;
+    if (Math.abs(dx) + Math.abs(dy) > 4) pointer.moved = true;
+    targetYaw = pointer.yaw + dx * .007;
+    targetPitch = THREE.MathUtils.clamp(pointer.pitch + dy * .004, -.28, .28);
+  };
+  const onPointerUp = event => {
+    if (pointer && !pointer.moved && event.pointerType !== 'touch') triggerReaction();
+    pointer = null;
+  };
+  const onPointerCancel = () => { pointer = null; };
+  const onPointerLeave = () => {
+    if (!pointer) {
+      targetLookYaw = 0;
+      targetLookPitch = 0;
+    }
+  };
+  const onWheel = event => {
+    event.preventDefault();
+    zoom = THREE.MathUtils.clamp(zoom + event.deltaY * .007, 7.7, 12.5);
+  };
+  const onKeyDown = event => {
+    const step = motionQuery.matches ? .16 : .11;
+    if (event.key === 'ArrowLeft') targetYaw -= step;
+    else if (event.key === 'ArrowRight') targetYaw += step;
+    else if (event.key === 'ArrowUp') targetPitch = THREE.MathUtils.clamp(targetPitch - step, -.28, .28);
+    else if (event.key === 'ArrowDown') targetPitch = THREE.MathUtils.clamp(targetPitch + step, -.28, .28);
+    else if (event.key === '+' || event.key === '=') zoom = Math.max(7.7, zoom - .7);
+    else if (event.key === '-') zoom = Math.min(12.5, zoom + .7);
+    else if (event.key.toLowerCase() === 'r') reset();
+    else if (event.key === 'Enter') triggerReaction();
+    else return;
+    event.preventDefault();
+  };
+  canvas.addEventListener('pointerdown', onPointerDown);
+  canvas.addEventListener('pointermove', onPointerMove);
+  canvas.addEventListener('pointerup', onPointerUp);
+  canvas.addEventListener('pointercancel', onPointerCancel);
+  canvas.addEventListener('pointerleave', onPointerLeave);
+  canvas.addEventListener('wheel', onWheel, { passive: false });
+  canvas.addEventListener('keydown', onKeyDown);
+
+  const markerVector = new THREE.Vector3();
+  function bodyPoint(x, y, z) {
+    const point = new THREE.Vector3(x, y, z);
+    point.applyEuler(body.rotation).add(body.position);
+    return point;
   }
-  setEra(era);resize();
+  function updateLeg(leg) {
+    const side = leg.side;
+    const hip = bodyPoint(side * .5, -.48, .03);
+    const knee = new THREE.Vector3(
+      side * .59 + body.position.x * .48,
+      -1.08 + body.position.y * .32,
+      .16 + body.position.z * .35,
+    );
+    const hock = new THREE.Vector3(
+      side * .68 + body.position.x * .16,
+      -1.79 + body.position.y * .12,
+      -.2,
+    );
+    const ankle = new THREE.Vector3(side * .7, floorY + .18, .12);
+    placeSegment(leg.upper, hip, knee, .19, .18);
+    placeSegment(leg.lower, knee, hock, .125, .125);
+    placeSegment(leg.tarsus, hock, ankle, .105, .1);
+    leg.hip.position.copy(hip);
+    leg.knee.position.copy(knee);
+    leg.hock.position.copy(hock);
+    leg.ankle.position.copy(ankle);
+  }
+
+  function animate(now) {
+    frame = requestAnimationFrame(animate);
+    const seconds = now * .001;
+    yaw = THREE.MathUtils.lerp(yaw, targetYaw, motionQuery.matches ? 1 : .1);
+    pitch = THREE.MathUtils.lerp(pitch, targetPitch, motionQuery.matches ? 1 : .1);
+    lookYaw = THREE.MathUtils.lerp(lookYaw, targetLookYaw, motionQuery.matches ? .45 : .055);
+    lookPitch = THREE.MathUtils.lerp(lookPitch, targetLookPitch, motionQuery.matches ? .45 : .055);
+    model.rotation.set(pitch, yaw, 0);
+    camera.position.z = THREE.MathUtils.lerp(camera.position.z, zoom, motionQuery.matches ? 1 : .12);
+
+    const progress = (now - reactionStarted) / 1550;
+    const activeReaction = progress >= 0 && progress <= 1;
+    const envelope = activeReaction ? Math.sin(progress * Math.PI) : 0;
+    const shift = (motionQuery.matches ? 0 : Math.sin(seconds * .72) * .035) + envelope * .085;
+    body.position.set(shift, envelope * .012, 0);
+    body.rotation.z = envelope * -.028 + (motionQuery.matches ? 0 : Math.sin(seconds * .72) * .009);
+    neck.rotation.x = lookPitch - envelope * .1;
+    head.rotation.y = lookYaw + envelope * .12;
+    head.rotation.x = -lookPitch * .35 - envelope * .04;
+
+    const jawPulse = activeReaction && progress > .37 && progress < .63
+      ? Math.sin(((progress - .37) / .26) * Math.PI) * .31
+      : 0;
+    lowerJaw.rotation.x = jawPulse;
+    wings.forEach(({ group, side }) => { group.rotation.z = side * (.13 + envelope * .035); });
+    feet.forEach(({ group, claws, side }) => {
+      group.rotation.y = side * envelope * .012;
+      claws.forEach(({ claw, side: toe }) => {
+        claw.rotation.x = envelope * .03;
+        claw.rotation.z = toe * envelope * .025;
+      });
+    });
+
+    const coverTarget = inspectionOpen ? 1 : 0;
+    chestCover.position.x = THREE.MathUtils.lerp(chestCover.position.x, coverTarget * .42, motionQuery.matches ? .28 : .08);
+    chestCover.rotation.y = THREE.MathUtils.lerp(chestCover.rotation.y, coverTarget * -.58, motionQuery.matches ? .28 : .08);
+    head.position.y = THREE.MathUtils.lerp(head.position.y, .79 + coverTarget * .14, motionQuery.matches ? .28 : .08);
+
+    body.updateMatrix();
+    legs.forEach(updateLeg);
+    model.updateMatrixWorld(true);
+    Object.entries(markerPositions).forEach(([id, position]) => {
+      markerVector.copy(position).applyMatrix4(model.matrixWorld).project(camera);
+      const inEra = (id !== 'heart' && id !== 'mind') || currentEra === 'builder';
+      const visible = inEra
+        && markerVector.z > -1 && markerVector.z < 1
+        && markerVector.x > -.96 && markerVector.x < .96
+        && markerVector.y > -.9 && markerVector.y < .9;
+      updateMarker(id, (markerVector.x + 1) * .5 * lastWidth, (1 - markerVector.y) * .5 * lastHeight, visible);
+    });
+    renderer.render(scene, camera);
+  }
+
+  resize();
+  setEra('builder');
+  animate(0);
+
   return {
-    kind:'webgl', resize, tick, reset, nudge, setEra,
-    select(id){selected=id;highlight.visible=targetOpen>0;},
-    setSection(value){targetOpen=value?1:0;if(!value)targetSeparation=0;highlight.visible=false;},
-    setSeparation(value){targetSeparation=targetOpen?clamp(Number(value)||0,0,1):0;},
-    setArmed(value){armed=value;controls.enabled=!value;canvas.style.cursor=value?'crosshair':'grab';pointer=null;},
-    isAssembled(){return open===0&&separation===0;},
-    focus(id){const anchor=anchors[id];if(!anchor||!nodes[markerNodes[id]?.[0]]?.visible)return;anchor.getWorldPosition(vector);const delta=vector.clone().sub(controls.target);controls.target.copy(vector);camera.position.add(delta);controls.update();},
-    metrics(){return {kind:'webgl',softwareRenderer:Boolean(softwareRenderer),era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,wingAngles:{leftShoulder:nodes['left-mantle'].rotation.x,leftElbow:nodes['left-wing-shield'].rotation.x,rightShoulder:nodes['right-mantle'].rotation.x,rightElbow:nodes['right-wing-shield'].rotation.x},wingBounds:{left:new THREE.Box3().setFromObject(nodes['left-mantle'],true),right:new THREE.Box3().setFromObject(nodes['right-mantle'],true)},contactPlane:FRONT,camera:camera.position.toArray(),target:controls.target.toArray(),state:lastSnapshot?.state,nodes:Object.fromEntries(['winding-drive','power-core','processing','builder-optics'].map(n=>[n,nodes[n].visible]))};},
-    destroy(){listeners.abort();controls.dispose();environment.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});renderer.dispose();canvas.remove();},
+    supportsMarkers: true,
+    resize,
+    select() {},
+    setEra,
+    setSection: setInspection,
+    react: triggerReaction,
+    reset,
+    destroy() {
+      cancelAnimationFrame(frame);
+      canvas.removeEventListener('pointerdown', onPointerDown);
+      canvas.removeEventListener('pointermove', onPointerMove);
+      canvas.removeEventListener('pointerup', onPointerUp);
+      canvas.removeEventListener('pointercancel', onPointerCancel);
+      canvas.removeEventListener('pointerleave', onPointerLeave);
+      canvas.removeEventListener('wheel', onWheel);
+      canvas.removeEventListener('keydown', onKeyDown);
+      scene.traverse(object => {
+        if (object.isMesh) object.geometry.dispose();
+      });
+      Object.values(materials).forEach(material => material.dispose());
+      renderer.dispose();
+      container.replaceChildren();
+    },
   };
 }

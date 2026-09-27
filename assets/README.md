@@ -26,6 +26,6 @@ The Vite build copies files from `public/` into the distributable. Keep source a
 
 Keep production state explicit. Preserve the source's recorded draft, working, or final designation, and use `unknown` when evidence is missing. A filename or file extension does not establish that media is finished, licensed for every use, or approved for publication.
 
-## Current local exterior study
+## Current exterior assessment study
 
-`models/uncaged-exterior-v1/` now holds the versioned editable exterior proposal, combined runtime GLB, individual era exports, regional PBR maps and fixed fallback previews. See its [source/export guide](models/uncaged-exterior-v1/README.md). This production status is a local review study, not final character art or a deployed release. Earlier `uncaged-*` model versions remain preserved. `audit/exterior-v1/` contains local review media and validation receipts; none of that audit material is included in the Vite runtime.
+`models/uncaged-exterior-v1/` now holds the versioned editable exterior proposal, combined runtime GLB, individual era exports, regional PBR maps and fixed fallback previews. See its [source/export guide](models/uncaged-exterior-v1/README.md). This production status is a review study, not final character art. The subsequent owner instruction authorizes publication for independent assessment. Earlier `uncaged-*` model versions remain preserved. `audit/exterior-v1/` preserves review media and validation receipts from the local checkpoint. The explicit `review/exterior-v1-publication.json` selects only gallery images and the demonstration MP4 for the public review derivative. Raw receipts, source scenes and provenance stay in the repository; no audit directory is copied wholesale into the runtime.

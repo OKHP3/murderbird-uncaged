@@ -1,4 +1,4 @@
-// Gesture-started synthesized effects. The accepted theme has its own player.
+// Gesture-started procedural Web Audio sketch, separate from the instrumental demo.
 export function createSoundscape() {
   let context, master, bed, timer, enabled = false, step = 0, themePlaying = false;
   function getContext() {
@@ -63,6 +63,16 @@ export function createSoundscape() {
     setThemePlaying(playing) {
       themePlaying = playing;
       if (bed) bed.gain.setTargetAtTime(playing ? 0 : .55, context.currentTime, .12);
+    },
+    stop() {
+      if (!enabled || !context || !master) return false;
+      enabled = false;
+      window.clearInterval(timer);
+      if (bed) bed.disconnect();
+      bed = undefined;
+      master.gain.cancelScheduledValues(context.currentTime);
+      master.gain.setTargetAtTime(0, context.currentTime, .05);
+      return false;
     },
     effect(name) {
       if (!enabled || !context) return;

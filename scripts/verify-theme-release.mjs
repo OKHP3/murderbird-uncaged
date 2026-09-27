@@ -28,7 +28,23 @@ async function files(directory, prefix = '') {
 }
 const built = await files(path.join(root, 'dist'));
 const audio = built.filter(name => /\.(?:mp3|flac|wav|m4a|ogg)$/i.test(name)).sort();
-assert.deepEqual(audio, release.assets.filter(asset => /\.(mp3|flac)$/.test(asset.path)).map(asset => asset.path.slice('public/'.length)).sort(), 'Unexpected built audio');
+// The separately preserved story folio has two explicitly released historical
+// demos. Identify their emitted bytes; do not allow arbitrary additional audio.
+const folio = JSON.parse(await readFile(path.join(root, 'provenance/story-media-publication-2026-09-27.json'), 'utf8'));
+const folioAudio = [];
+for (const asset of folio.assets.filter(asset => /\.mp3$/.test(asset.path))) {
+  const source = await readFile(path.join(root, asset.path));
+  assert.equal(source.length, asset.bytes, `Unhydrated story audio: ${asset.path}`);
+  assert.equal(createHash('sha256').update(source).digest('hex'), asset.sha256);
+  const matches = [];
+  for (const name of audio.filter(name => name.startsWith('assets/'))) {
+    const bytes = await readFile(path.join(root, 'dist', name));
+    if (createHash('sha256').update(bytes).digest('hex') === asset.sha256) matches.push(name);
+  }
+  assert.equal(matches.length, 1, `Expected one emitted story audio copy: ${asset.path}`);
+  folioAudio.push(matches[0]);
+}
+assert.deepEqual(audio, [...release.assets.filter(asset => /\.(mp3|flac)$/.test(asset.path)).map(asset => asset.path.slice('public/'.length)), ...folioAudio].sort(), 'Unexpected built audio');
 for (const name of built) {
   assert(!/(?:^|\/)(?:\.local|provenance|stems|tools|research|Backup)(?:\/|$)|\.(?:sesx|rpp|safetensors|pt|ckpt)$/i.test(name), `Private production file in build: ${name}`);
   if (/\.(?:html|js|css|json)$/i.test(name)) {
