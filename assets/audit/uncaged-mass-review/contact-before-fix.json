@@ -1,0 +1,95 @@
+{
+  "date": "2026-09-27T05:57:42.030Z",
+  "url": "http://127.0.0.1:5174/",
+  "browser": "151.0.7922.34",
+  "softwareGL": false,
+  "checks": [
+    {
+      "name": "identity, meaningful content, no overlay",
+      "status": "pass",
+      "detail": {
+        "title": "MurderBird: Uncaged | Interactive 3D Exhibit",
+        "url": "http://127.0.0.1:5174/"
+      }
+    },
+    {
+      "name": "loaded GLB, era contract and footprint",
+      "status": "pass",
+      "detail": {
+        "kind": "webgl",
+        "softwareRenderer": true,
+        "era": "builder",
+        "open": 0,
+        "separation": 0,
+        "frameCount": 4,
+        "meanFps": 4.4953922229714545,
+        "triangles": 83290,
+        "drawCalls": 82,
+        "geometries": 82,
+        "textures": 2,
+        "tip": [
+          0,
+          1.4669876098632812,
+          0.8978039622306824
+        ],
+        "contactPlane": 1.1,
+        "camera": [
+          -2.85,
+          1.85,
+          3.55
+        ],
+        "target": [
+          0,
+          1.03,
+          0
+        ],
+        "state": "idle",
+        "nodes": {
+          "winding-drive": false,
+          "power-core": true,
+          "processing": true,
+          "builder-optics": true
+        }
+      }
+    },
+    {
+      "name": "orbit, elevation, zoom and reset",
+      "status": "pass",
+      "detail": {
+        "before": [
+          -2.85,
+          1.85,
+          3.55
+        ],
+        "after": [
+          -1.1293409098895166,
+          2.3325188971142725,
+          3.789449515683007
+        ],
+        "reset": [
+          -2.85,
+          1.85,
+          3.55
+        ]
+      }
+    },
+    {
+      "name": "deliberate reach, contact, recovery and cooldown",
+      "status": "fail",
+      "detail": "The expression evaluated to a falsy value:\n\n  assert(Math.abs(m.tip[2]-(m.contactPlane-.021))<.015)\n"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x10400494400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x10400494400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x10400494400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x10400494400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "screenshots": [
+    "encounter-desktop.png",
+    "reference-angle-model.png",
+    "rear-orbit.png"
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(Math.abs(m.tip[2]-(m.contactPlane-.021))<.015)\n\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-uncaged-browser.mjs:29:403\n    at async check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-uncaged-browser.mjs:14:74)\n    at async file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-uncaged-browser.mjs:29:1"
+}

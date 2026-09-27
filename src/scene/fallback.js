@@ -1,66 +1,29 @@
-import { chapterStills, murderBirdHero } from '../media.js';
-
-const fallbackArt = {
-  beak: { ...murderBirdHero, era: 'COMMON SILHOUETTE', title: 'Master still' },
-  shoulder: chapterStills[2],
-  ankle: chapterStills[4],
-  heart: chapterStills[3],
-  mind: chapterStills[4],
+// Fixed renders of this exterior study accompany a separate assembly diagram.
+// The image is not animated or presented as an interactive spatial view.
+const previews = {
+  maker: new URL('../../assets/models/uncaged-exterior-v1/previews/maker.png', import.meta.url).href,
+  mechanic: new URL('../../assets/models/uncaged-exterior-v1/previews/mechanic.png', import.meta.url).href,
+  builder: new URL('../../assets/models/uncaged-exterior-v1/previews/builder.png', import.meta.url).href,
 };
-
-// Use the scoped story art when WebGL is unavailable; do not substitute
-// symmetric placeholder geometry for the character reference.
-export function createIllustratedExhibit(container) {
-  container.innerHTML = `
-    <figure class="fallback-scene">
-      <img class="fallback-image" src="${murderBirdHero.src}" srcset="${murderBirdHero.srcset}" sizes="100vw" alt="${murderBirdHero.alt}" decoding="async">
-      <figcaption class="fallback-caption">COMMON SILHOUETTE / LOCAL-PREVIEW MASTER STILL</figcaption>
-    </figure>`;
-  const image = container.querySelector('.fallback-image');
-  const caption = container.querySelector('.fallback-caption');
-  let selected = null;
-  let activeEra = 'builder';
-  const eraArt = {
-    maker: chapterStills[0],
-    mechanic: chapterStills[2],
-    builder: chapterStills[4],
-  };
-  function showStill(still) {
-    if (!still) return;
-    image.src = still.src;
-    if (still.srcset) {
-      image.srcset = still.srcset;
-      image.sizes = '100vw';
-    } else {
-      image.removeAttribute('srcset');
-      image.removeAttribute('sizes');
-    }
-    image.alt = still.alt;
-    caption.textContent = `${still.era} / ${still.title} / LOCAL PREVIEW`;
+const eraNames = { maker:'Maker', mechanic:'Mechanic', builder:'Advanced' };
+const referenceUrl = previews.builder;
+export function createIllustratedExhibit(container, updateMarker) {
+  container.innerHTML = `<div class="illustrated-view"><img src="${referenceUrl}" alt="MurderBird production reference: heavy floor-standing mechanical body, hooked bill, compact folded wings and layered patinated armor." /><p class="illustrated-caption">Modern appearance reference · fixed view</p><div class="assembly-diagram" hidden><p>ILLUSTRATIVE ASSEMBLY · NOT A 3D VIEW</p><svg viewBox="0 0 500 230" role="img" aria-label="Schematic relationships of shell, drive, power and processing. Parts separate horizontally."><path d="M55 118H450" stroke="#a3a697" stroke-dasharray="5 7"/><g data-schematic="shell"><rect x="40" y="65" width="80" height="105" rx="18" fill="#736c50" stroke="#e6c58d"/><text x="80" y="192">Armor</text></g><g data-schematic="drive"><circle cx="210" cy="115" r="40" fill="#444b42" stroke="#e6c58d"/><circle cx="210" cy="115" r="27" fill="none" stroke="#e6c58d"/><text x="210" y="192">Wound drive</text></g><g data-schematic="power"><rect x="172" y="68" width="76" height="92" rx="9" fill="#d2cbb5"/><text x="210" y="192">Power</text></g><g data-schematic="mind"><rect x="320" y="79" width="80" height="63" fill="#576960" stroke="#e6c58d"/><path d="M330 90h60m-60 15h60m-60 15h60" stroke="#e6c58d"/><text x="360" y="192">Processing</text></g><g data-schematic="external"><path d="M155 105H240M240 85V150M190 120L115 130M105 165V205H140" stroke="#caa779" stroke-width="7" fill="none"/><circle cx="190" cy="105" r="7" fill="#dbb878"/><text x="235" y="192">Outside levers</text></g><g data-schematic="transmission"><path d="M252 115H365M345 115V150L380 165" stroke="#c8ad79" stroke-width="9" fill="none"/><circle cx="315" cy="115" r="24" fill="#756347" stroke="#ead4a3"/><text x="358" y="192">Cam → joints</text></g></svg><p class="diagram-note"></p></div></div>`;
+  const diagram=container.querySelector('.assembly-diagram');
+  const img=container.querySelector('img');
+  let open=false,era='builder',separation=0;
+  img.addEventListener('error',()=>{img.hidden=true;container.querySelector('.illustrated-caption').textContent='Exterior preview unavailable. The component descriptions remain available; Retry 3D also retries this image.';});
+  function update(){
+    if (img.getAttribute('src') !== previews[era]) { img.hidden=false; img.src=previews[era]; }
+    img.alt=`${eraNames[era]} MurderBird exterior study, a fixed neutral-light render of the local mechanical model.`;
+    container.querySelector('.illustrated-caption').textContent=`${eraNames[era]} exterior study · fixed rendered view`;
+    for(const id of ['beak','joint','shell','drive','power','mind','guard'])updateMarker(id,0,0,false);
+    diagram.hidden=!open;
+    for(const name of ['drive','power','mind','external','transmission'])diagram.querySelector(`[data-schematic="${name}"]`).style.display=(name==='external'?era==='maker':['drive','transmission'].includes(name)?era==='mechanic':era==='builder')?'':'none';
+    diagram.querySelector('[data-schematic="shell"]').setAttribute('transform',`translate(${-20*separation} 0)`);
+    diagram.querySelector('[data-schematic="mind"]').setAttribute('transform',`translate(${40*separation} 0)`);
+    diagram.querySelector('.diagram-note').textContent=era==='maker'?'An outside operator moves the joints; a cradle supports the body. No internal power or intent. The 3D view demonstrates the control rods.':era==='mechanic'?'A finite mainspring drives reduction gears, cam timing and joint linkages. No sensing or tactical behavior.':'An abundant fictional supply feeds the actuators; sensing and processing control their coordinated action. No winding or power-depletion routine.';
   }
-  return {
-    supportsMarkers: false,
-    resize() {},
-    select(id) {
-      if (id === selected) return;
-      selected = id;
-      const still = activeEra === 'maker'
-        ? eraArt.maker
-        : activeEra === 'mechanic'
-          ? eraArt.mechanic
-          : fallbackArt[id];
-      showStill(still);
-    },
-    setEra(era) {
-      activeEra = era;
-      selected = null;
-      showStill(eraArt[era]);
-    },
-    setSection(value) {
-      selected = null;
-      showStill(value ? fallbackArt.heart : eraArt[activeEra]);
-    },
-    react() {},
-    reset() {},
-  };
+  update();
+  return {kind:'illustrated',resize:update,tick(){},select(){},reset(){},nudge(){},focus(){},setArmed(){},setEra(value){era=value;update();},setSection(value){open=value;update();},setSeparation(value){separation=value;update();},isAssembled(){return !open;},metrics(){return {kind:'illustrated',era,open,separation};},destroy(){container.replaceChildren();}};
 }

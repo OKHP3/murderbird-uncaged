@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-27T12:49:26.779Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "name": "orbit, zoom and ordinary drag do not provoke; keyboard controls",
+      "status": "pass"
+    },
+    {
+      "name": "keyboard left-rail attack, repeated input rejected, actual contact",
+      "status": "pass",
+      "detail": {
+        "rail": -1.2,
+        "point": [
+          -1.1959185297346726,
+          1.4316410177155634,
+          2.079
+        ],
+        "error": 5.087681048627601e-16
+      }
+    },
+    {
+      "name": "pause preserves actual pose; inspection while paused safely grounds",
+      "status": "pass"
+    },
+    {
+      "name": "era-specific interiors and safe reassembly",
+      "status": "pass"
+    },
+    {
+      "name": "reduced motion grounds current step and disables autonomous travel/strike",
+      "status": "fail",
+      "detail": "page.waitForFunction: Timeout 13000ms exceeded."
+    }
+  ],
+  "errors": [],
+  "failure": "page.waitForFunction: Timeout 13000ms exceeded.\n    at /Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-presence-browser.mjs:14:110\n    at check (/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-presence-browser.mjs:7:105)\n    at /Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-presence-browser.mjs:14:7"
+}

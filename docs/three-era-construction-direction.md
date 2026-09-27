@@ -1,0 +1,29 @@
+# Three-era construction direction
+
+Decision record for the owner brief preserved at [three-era-movement-owner-brief-2026-09-27.md](../context/threads/three-era-movement-owner-brief-2026-09-27.md). Research checked 2026-09-27. This is a production direction, not owner acceptance of a model or proof of physical engineering.
+
+## Confirmed direction and proposed construction
+
+| Era | Owner-confirmed capability | Proposed visible mechanism (reconstruction, not historical fact) |
+|---|---|---|
+| Maker | Fixed position; no self-powered walking, predator behavior, internal engine, or brain. Controls may articulate individual joints. | A rear post and pelvic/torso cradle carry the body. From the cradle, named rods/levers reach specific pivots (leg, wing, neck, jaw); optional tension lines serve only where their endpoints and pull are clear. The cradle remains load-bearing with one foot raised. No control ends in space or passes through a shell. |
+| Mechanic | Internally powered, limited, slow and constrained traversal; no advanced tactical intent. | One wound mainspring barrel → reduction gears → camshaft → hip/leg linkage. The cams produce load, short step, settle, and dwell. Use no steam boiler/pressure system in this design. Expose the energy store, transmission, sequencing cam, and driven joints. |
+| Advanced MurderBird (retained `builder` key) | Fast, fluid, coordinated, intelligent-seeming behavior with virtually unlimited fictional encounter power; cognition distinct from power; no routine fuel, winding, or depletion. | A fictional abundant supply feeds a distribution bus and separate joint actuators. Separate sensors and processing govern behavior. Retain believable mass, balance, contact, and momentum. Invented geometry/naming remains reviewable and must not copy recognizable franchise designs. |
+
+The Maker support cradle is an exhibit reconstruction choice; the cited puppet sources establish operated rods/support structures, not this bird's dimensions, load rating, or exact rear-mounted arrangement. Mechanic's single spring/cam chain is a coherent selection from period mechanisms, not a claim that one cited historical automaton used this exact walking drive. Neither kinematic demonstration nor a rendered contact pose establishes real force capacity, stability, or safe physical construction.
+
+## Source rationale
+
+- The National Theatre Japan describes Bunraku shoulder boards, torso hoops, strings, a hand rod, and a heel fitting used to operate legs. It also documents puppets roughly 130–150 cm and 3–10 kg or more, supporting the relevance of substantial operated figures while not specifying MurderBird's scale or a fixed cradle. [How Bunraku dolls work](https://www2.ntj.jac.go.jp/unesco/bunraku/en/doll/doll2.html) · [size and structure](https://www2.ntj.jac.go.jp/dglib/contents/learn/edc26/ningyo/shikumi2.html)
+- A Smithsonian National Museum of Natural History *AnthroNotes* account describes large animal-head rod/string puppets operated from below by a wooden rod, with the operator hidden beneath the animal-body construction. This supports the below/under-operated animal precedent, not the proposed visible external control layout. [AnthroNotes, Fall 2003](https://repository.si.edu/server/api/core/bitstreams/99b5f452-2ce8-4725-96c6-6a412f764e39/content)
+- The Met documents a wound, spring-driven multi-train movement operating an eagle's beak/eyes and another automaton's shafts and articulated horse motion. The Museum of Art and History Neuchâtel says a complex clockwork mechanism supplied motive energy while cams regulated Jaquet-Droz automata. Together these support a spring / reduction / cam sequencing vocabulary; they do not validate this proposed locomotion design. [Met eagle automaton](https://www.metmuseum.org/art/collection/search/196403) · [Met horse automaton](https://www.metmuseum.org/art/collection/search/207038) · [MAH, *Mouvements*, room 5](https://www.mahn.ch/fileadmin/mahn/EXPOSITIONS/EXPOSITIONS_ACTUELLES/Mouvements/MVTS_Textes_Expo.pdf)
+
+## Baseline and supersession
+
+The factual baseline is commit `a36cca7`, immediately before this owner clarification; the shared working tree has concurrent in-progress edits and must not be mistaken for that baseline or for acceptance. In that baseline, [`src/scene/presence-state.js`](../src/scene/presence-state.js) explicitly says Maker and Mechanic are static interpretive studies and limits autonomous pacing, cage tests, and visitor attacks to Builder; its update path stops non-Builder autonomous behavior. [`src/scene/presence-motion.js`](../src/scene/presence-motion.js) likewise treats non-Builder eras as calm/stopped. The baseline [`src/main.js`](../src/main.js) describes Maker motion as unresolved, Mechanic as a finite drum/arbor reconstruction, and Builder power as finite ceramic cells plus capacitors.
+
+This owner direction **supersedes the baseline Builder/advanced finite-power description**: use effectively inexhaustible fictional encounter power with no routine depletion, winding, fuel, or pressure-recovery behavior. Preserve the existing story source and its wording; this is the controlling exhibit direction, not a silent rewrite of story canon. The retained internal `builder` key refers to the brief's advanced MurderBird; the current interface labels it “III · Advanced.”
+
+## Status and next action
+
+Owner intent is confirmed by the preserved brief; exact assemblies, interface behavior, and artistic likeness remain proposals until reviewed. At research time, concurrent work in the shared tree was not independently accepted or tested here. Implement and inspect each era as its own capability and inspection system; verify Maker's visible control-to-joint causality and support, Mechanic's single-drive sequence and constrained steps, and the advanced encounter separately. No source models or media were downloaded or uploaded for this research.

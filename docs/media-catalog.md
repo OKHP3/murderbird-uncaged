@@ -17,6 +17,7 @@ they had when written; this catalog provides current navigation.
 | Historical Iron Verdict music | [Audio production README](../assets/murderbird/production/audio/iron-verdict/README.md) | Instrumental demo, GarageBand session and preview, MIDI, stems, arrangement, and source scripts. |
 | Lyrics and vocal composition | [Performance sheet v2](../assets/murderbird/production/audio/iron-verdict/vocal-score-v2/performance-sheet.md) | Complete lyrics and notated melody with PDF, MusicXML, MIDI, pitch guide, and rehearsal mix. These are not a recorded singer's performance. |
 | Earlier lyric and private sessions | `.local/archives/` in the owner's Mac clone | Preserved local archives include the earlier lyric and production sessions. Private library/profile context stays local. |
+| Local 3D assembly study | [Production handoff](production-handoff.md), `assets/models/uncaged-study/` | New editable Blender source and grouped GLB; revised proportions await owner review. [Local verification](acceptance-report.md) is separate from artistic acceptance or release. |
 | 3D staging | [Scale-stage notes](../assets/murderbird/v2/production/README.md) | Blender scale proxy, not a finished character model or rig. |
 | Interactive app | `src/` | Procedural Three.js study, illustrated fallback, optional synthesized soundscape, and visitor-controlled accepted theme song. Imported visual production archives remain separate from the viewer. |
 
@@ -36,3 +37,11 @@ Frozen imported dependency pins preserve reproducibility. The website audio
 Dependabot entry was retired when its source tree moved. Establish an active
 production working copy and its update checks before changing these pins; do
 not let an automatic update overwrite the recorded source snapshot.
+
+## Heavy-machine/predator mass study — September 27
+
+The separate `assets/models/uncaged-mass-study/` Blender source and GLB respond to the owner's later strength/speed clarification. They are editable local studies, not accepted finished art. See [direction](mechanical-predator-direction.md), [current review](mass-study-review.md), and [derivative provenance](../provenance/uncaged-mass-study-2026-09-27.json). The original `uncaged-study/` files remain intact.
+
+## Flightless shielding-wing study — September 27
+
+`assets/models/uncaged-shield-study/` contains a separate editable Blender source and GLB with articulated shoulder and elbow/forewing assemblies. It implements the owner's balance, shielding and tucked shove clarification; artistic acceptance and real physical balance/force remain unverified. See [direction](flightless-wing-direction.md), [current review](shield-study-review.md), and [provenance](../provenance/uncaged-shield-study-2026-09-27.json). Earlier studies remain preserved.

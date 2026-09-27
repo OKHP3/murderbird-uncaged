@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && python3 scripts/prepare-review-release.py",
     "preview": "vite preview",
     "technology:report": "node scripts/check-technology-versions.mjs",
     "technology:check": "node scripts/check-technology-versions.mjs --check"

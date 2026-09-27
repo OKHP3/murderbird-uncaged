@@ -1,0 +1,29 @@
+.fallback-scene {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.fallback-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fallback-caption {
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  right: 18px;
+  bottom: 52px;
+  color: #d7d4c6;
+  text-align: center;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: .12em;
+  text-shadow: 0 1px 5px #000;
+  pointer-events: none;
+}

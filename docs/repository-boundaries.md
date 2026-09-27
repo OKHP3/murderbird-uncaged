@@ -57,3 +57,7 @@ Git LFS patterns are configured for supported binary types in `.gitattributes`. 
 ## Remote evidence
 
 The Replit connectors for both relevant accounts were reported **UNAUTHORIZED** for this migration on 2026-09-26. The Replit desktop app was accessible. A fresh fetch there showed a clean `main` equal to GitHub `main` at `74c0705883cfdbdb657707bf93fccd215da36316` before migration. This establishes baseline parity, not delivery of this migration branch. Keep claims bounded to inspected evidence, and verify GitHub, Replit, CI, Pages, and local mirror state separately when a task depends on them.
+
+## Authorized assessment publication — September 27, 2026
+
+The owner subsequently requested publication for other agents to assess. `scripts/prepare-review-release.py` explicitly builds `dist/review/` from `assets/review/exterior-v1-publication.json`: selected comparison images and one motion MP4, plus a rewritten assessment page. It does not copy archive or audit trees. The page links editable sources, raw evidence and provenance to immutable GitHub revisions. Story-folio media are separately pinned in `provenance/story-media-publication-2026-09-27.json`. Private sessions remain excluded. Publication does not imply artistic acceptance.

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "title": "MurderBird articulated presence study",
+  "recorded_at_utc": "2026-09-27T12:59:26Z",
+  "status": "Local Stage Two prototype; owner likeness, movement, and artistic acceptance pending. Not final art and not authorized for publication.",
+  "authorization": "Reversible local modeling and exhibit work under the Stage Two owner direction. No external model or source-image upload, paid generation, publication, or remote release was performed or authorized by this record.",
+  "rights": "The MurderBird character, likeness, model, and other creative output remain all rights reserved under NOTICE.md. The repository MIT license applies to code, not to MurderBird creative content.",
+  "ownerDirection": {
+    "ledger": "provenance/stage-two-owner-direction-2026-09-27.json",
+    "preservedBrief": "context/threads/stage-two-owner-brief-2026-09-27.md",
+    "status": "Current owner direction, not owner acceptance of this model or authorization to publish.",
+    "identityConstraint": "MurderBird is not a velociraptor; bird anatomy and selected MurderBird references remain controlling.",
+    "wingDirection": "Flightless; wings provide balance and shielding, with a compact shoulder/elbow shove and a counterbalancing opposite wing. The repaired left shoulder has limited travel.",
+    "provenanceNote": "Exact source wording and attachment hash are recorded in the linked owner-direction ledger."
+  },
+  "lineage": {
+    "immediateBaseLedger": "provenance/uncaged-shield-study-2026-09-27.json",
+    "earlierStudyLedger": "provenance/uncaged-mass-study-2026-09-27.json",
+    "baselineStudyLedger": "provenance/uncaged-study-2026-09-27.json",
+    "method": "New, locally authored procedural Blender geometry extending the prior shield-study silhouette into a rigid articulated presence and locomotion study. It is not a scan, hosted image-to-3D result, imported marketplace model, or physical-engineering reconstruction.",
+    "preservation": "Earlier mass and shield generators, editable scenes, GLBs, review records, and selected reference paths are retained at their existing paths. This study is a new derivative; it does not overwrite those studies or source art.",
+    "baseFilesVerifiedAgainstShieldLedger": [
+      {
+        "path": "scripts/build-uncaged-mass-study.py",
+        "bytes": 26755,
+        "sha256": "60bab787f39612c3f0de748a61fad4e862b05f871c185e6e826040aab5ac0400",
+        "matchesExistingLedger": true
+      },
+      {
+        "path": "assets/models/uncaged-mass-study/murderbird-mass-study.blend",
+        "bytes": 1330192,
+        "sha256": "ff5148cba9d2fa74cd2fb6169ca24f8ae74571a206e02be66e057168e5871eb9",
+        "matchesExistingLedger": true
+      },
+      {
+        "path": "assets/models/uncaged-mass-study/murderbird-mass-study.glb",
+        "bytes": 3600600,
+        "sha256": "53aeebf78aba1c2c479f1ebd5c502904b6e5e90a5bd28460344805ea1fed4728",
+        "matchesExistingLedger": true
+      },
+      {
+        "path": "scripts/build-uncaged-shield-study.py",
+        "bytes": 28293,
+        "sha256": "a07b58d81f920ea4b30ed429ab8b69bf9a86276dc1f8e216ad4f6279f9cc34ba",
+        "matchesExistingLedger": true
+      },
+      {
+        "path": "assets/models/uncaged-shield-study/murderbird-shield-study.blend",
+        "bytes": 1383830,
+        "sha256": "c71b10da2f20454c7db3c04f4ec9c250f4106c6bbd692a60598b81738c7cbdb0",
+        "matchesExistingLedger": true
+      },
+      {
+        "path": "assets/models/uncaged-shield-study/murderbird-shield-study.glb",
+        "bytes": 3747052,
+        "sha256": "d65dc8dcd642a1a60a642678118b2abb063db92000d74015fd8cc8ce6f279fbc",
+        "matchesExistingLedger": true
+      }
+    ],
+    "selectedReferences": [
+      {
+        "path": "assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+        "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+        "scope": "Lead-selected visible identity reference; not owner model acceptance.",
+        "evidence": "Hash is carried forward from the shield and earlier study ledgers. The managed worktree currently contains a 132-byte Git LFS pointer, so the referenced image bytes could not be independently rehashed here."
+      },
+      {
+        "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+        "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+        "scope": "Previously documented owner-selected head reference only; not full-body approval.",
+        "evidence": "Hash is carried forward from the shield and earlier study ledgers. The managed worktree currently contains a 132-byte Git LFS pointer, so the referenced image bytes could not be independently rehashed here."
+      }
+    ],
+    "noExternalModelUpload": true
+  },
+  "authoring": {
+    "tool": "Blender 5.2.1 LTS local procedural authoring; prior repository workflow records the existing signed/notarized installation.",
+    "generator": {
+      "path": "scripts/build-uncaged-presence-study.py",
+      "bytes": 33812,
+      "sha256": "a62babcaf207bb5966c2a8ab2b3717367be13fc934b11de84c4bffb8b89afd5e"
+    },
+    "sourceHandling": "The script header states local deterministic authoring with no network operations. The source scene keeps independently editable rigid mesh pieces; it does not use skin deformation or a generated/borrowed 3D model."
+  },
+  "outputs": [
+    {
+      "path": "assets/models/uncaged-presence-study/murderbird-presence-study.blend",
+      "bytes": 1356359,
+      "sha256": "2206e8d6b63c9adec672523f94158323555938932163f6205c8a391030a05666",
+      "role": "Editable native source scene; local native-source record says it reopened successfully with automatic execution disabled."
+    },
+    {
+      "path": "assets/models/uncaged-presence-study/murderbird-presence-study.glb",
+      "bytes": 3425344,
+      "sha256": "cbf75f80876669505a8919eac0875575d0ce8f2a5dcf189d84f01b76e7f3d851",
+      "role": "Self-contained browser runtime derivative. The built copy was verified byte-identical by the asset-validation receipt."
+    }
+  ],
+  "nativeSourceValidation": {
+    "record": "assets/audit/uncaged-presence-review/native-source.json",
+    "meshObjects": 2038,
+    "emptyObjects": 39,
+    "armatures": 0,
+    "actions": ["attention-export-proof"],
+    "automaticScriptExecution": "disabled when reopened",
+    "reportedStatus": "Reopened successfully; separately editable source geometry."
+  },
+  "runtimeAssetValidation": {
+    "record": "assets/audit/uncaged-presence-review/asset-validation.json",
+    "status": "verified-local",
+    "glbNodes": 63,
+    "glbMeshes": 24,
+    "indexedTriangles": 89068,
+    "skins": 0,
+    "requiredNamedNodes": [
+      "murderbird", "body", "neck", "head", "jaw", "breastplate", "cranial-cover", "winding-drive", "power-core", "processing", "industrial-repairs", "builder-optics", "left-mantle", "right-mantle", "left-wing-shield", "right-wing-shield", "left-thigh", "left-shin", "left-foot", "left-toes", "right-thigh", "right-shin", "right-foot", "right-toes", "upper-bill"
+    ],
+    "legChains": {
+      "left": "murderbird -> left-thigh -> left-shin -> left-foot -> left-toes",
+      "right": "murderbird -> right-thigh -> right-shin -> right-foot -> right-toes"
+    },
+    "upperBillParent": "head",
+    "exportAnimation": {
+      "name": "attention-export-proof",
+      "target": "head.rotation",
+      "durationSeconds": 1.0333333,
+      "tracks": 1,
+      "role": "Small GLB transform-export proof, not a production behavior clip."
+    },
+    "runtimeBuild": {
+      "distFiles": 26,
+      "totalBytes": 44930382,
+      "exactAllowlist": true,
+      "glbMatchesSource": true,
+      "presenceModelHashedAsset": "assets/murderbird-presence-study-CCI0_nQB.glb"
+    }
+  },
+  "motionEvidenceAndLimits": {
+    "controller": "src/scene/presence-motion.js",
+    "validationRecord": "assets/audit/uncaged-presence-review/motion-validation.json",
+    "reportedChecks": "GLB attention clip; three 60-second seeded unattended runs at two time steps; directed visitor-rail responses; retreat before and after commitment; inspection interruptions.",
+    "kinematics": "Browser motion is scripted/kinematic: goal-driven root movement, alternating planted/swinging feet, a two-link leg solve, body and wing pose offsets, and bounded bill reach to a fixed rail zone. The validation report measures controller behavior and pose/contact conditions.",
+    "notForcePhysics": "No rigid-body force simulation, measured center of mass, validated balance, material strength, impact force, or engineered joint loads are established. Planted-foot and contact checks are controller constraints, not proof of physical force or collision fidelity.",
+    "acceptance": "The review captures are local technical evidence only. Likeness, motion quality, physical credibility, owner acceptance, and publication approval remain pending."
+  },
+  "validationSummary": {
+    "modelFilesRehashedDirectly": true,
+    "baseShieldAndMassGeneratorsAndModelsMatchedExistingLedger": true,
+    "referenceImageBytesAvailableForRehash": false,
+    "referencePathsPreservedAsLfsPointers": true,
+    "networkUploadPerformed": false,
+    "runtimeChangeIncluded": "The model is explicitly referenced by the app; this ledger itself is not in the runtime allowlist or public directory."
+  },
+  "limits": [
+    "This ledger records a local prototype and file/contract checks; it is not an artistic sign-off or finished production model declaration.",
+    "Reference-file hashes are inherited from earlier provenance ledgers; the current worktree has only LFS pointer files at those reference paths.",
+    "Kinematic movement and constrained cage-zone contact are not physical force or balance simulation.",
+    "No remote LFS retrieval, CI, deployment, publication, or owner acceptance is asserted."
+  ]
+}

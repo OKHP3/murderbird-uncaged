@@ -1,0 +1,42 @@
+✔ follows the complete response and returns to idle after cooldown (1.100458ms)
+✔ rejects a second reach until cooldown completes (0.076666ms)
+✔ cancels cleanly when inspection begins and does not resume stale motion (0.0905ms)
+✔ pause cancels immediately and requires a new deliberate reach after resume (0.076916ms)
+✔ era switch cancels response and invalid era is ignored (0.090667ms)
+✔ reduced motion uses finite notice, warning, recovery, and cooldown only (0.127708ms)
+✔ sanitizes coordinates and returns immutable, independent snapshots (0.177166ms)
+✔ clamps large and invalid frame deltas without skipping phases (0.050417ms)
+✔ onChange receives frozen snapshots when observable values change (0.076208ms)
+✔ idle inspection, pause, and reduced-motion toggles each notify once (0.087833ms)
+✔ inspection and pause changes during a reaction emit only one cancellation snapshot (0.073ms)
+✔ enabling reduced motion during a reaction cancels once before calmer requests (0.447666ms)
+✔ capability table gives each era a distinct and immutable movement/control model (0.642958ms)
+✔ Maker stays anchored and still until an explicit articulation control moves (0.577666ms)
+✔ Maker manual controls respect pause and inspection, and inspection waits for a grounded pose (0.144417ms)
+✔ Mechanic performs a bounded, non-predatory route and uses no visitor reach interface (0.209167ms)
+✔ Mechanic energy drains only during the routine, remains paused in pause/stop, then empties safely (0.768292ms)
+✔ Mechanic inspection, reduced motion, and pause cancel movement before interaction resumes (0.170375ms)
+✔ era changes clear incompatible behavior while preserving pause and reduced-motion preferences (0.590666ms)
+✔ Builder delegates autonomous timing, reach behavior, and preserves zero speed while paused (0.793625ms)
+✔ reset clears controls, inspection and routines but preserves user pause/motion settings (0.212334ms)
+✔ Advanced power moves are gated, ground through inspection, then expose bounded phase snapshots (0.27ms)
+✔ power move availability is Advanced-only and respects pause, reduced motion, and inspection (0.125459ms)
+✔ power move pause freezes phase; inspection and reduced motion allow a safe finish (0.160666ms)
+✔ power moves finish their phase before resuming Builder, while era change/reset clears them immediately (0.337875ms)
+✔ autonomous Builder cycle reaches pacing, a rail contact, cage press, and recovery without input (1.61575ms)
+✔ visitor reach maps normalized input to a discrete world rail and runs one gated sequence (0.306375ms)
+✔ retreat cancels before commitment and waits for committed contact/recovery after strike (0.164958ms)
+✔ inspection interrupts reaction, grounds before opening, and stays closed until reassembly (0.126792ms)
+✔ pause freezes encounter phase while inspection can still finish a grounded transition (0.083417ms)
+✔ reduced motion acknowledges a visitor without travel or strike and lets an active step ground (0.137ms)
+✔ earlier eras suppress autonomous behavior and switching eras clears active reach (0.51225ms)
+✔ input and elapsed time are sanitized, bounded, and reproducible (0.200583ms)
+✔ idle pause and inspection changes each notify exactly once (0.101417ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.876083
