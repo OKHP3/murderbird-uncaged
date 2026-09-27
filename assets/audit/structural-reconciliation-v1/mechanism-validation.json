@@ -1,0 +1,113 @@
+{
+  "model": "murderbird-structure-v1.glb",
+  "renderer": "none (headless Three.js scene)",
+  "checks": {
+    "maker": {
+      "visible": {
+        "maker": true,
+        "mechanic": false,
+        "builder": false
+      },
+      "targetCount": 5,
+      "horns": "five finite joint-to-offset connectors"
+    },
+    "mechanic": {
+      "visible": {
+        "maker": false,
+        "mechanic": true,
+        "builder": false
+      },
+      "slidingLinks": {
+        "left": 0.18425717742866188,
+        "right": 0.2810788432662064
+      }
+    },
+    "builderAssembled": {
+      "separationMode": "connected",
+      "wing": {
+        "mode": "connected",
+        "endpointDistance": 0.3011470109785787
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        },
+        {
+          "side": "right",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        }
+      ],
+      "powerCore": {
+        "mode": "connected",
+        "endpointDistance": 0.5269974341925852
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.2810788432662064,
+        "right": 0.18425717742866188
+      }
+    },
+    "builderSeparated": {
+      "separationMode": "disengaged-at-sockets",
+      "wing": {
+        "mode": "disengaged-at-sockets",
+        "endpointDistance": 0.42274060582208683
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "disengaged-at-sockets",
+          "endpointDistance": 0.16650825805346703
+        },
+        {
+          "side": "right",
+          "mode": "disengaged-at-sockets",
+          "endpointDistance": 0.16650825805346703
+        }
+      ],
+      "powerCore": {
+        "mode": "disengaged-at-sockets",
+        "endpointDistance": 0.7893561904990973
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.2810788432662064,
+        "right": 0.18425717742866188
+      }
+    },
+    "builderReassembled": {
+      "separationMode": "connected",
+      "wing": {
+        "mode": "connected",
+        "endpointDistance": 0.3011470109785787
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        },
+        {
+          "side": "right",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        }
+      ],
+      "powerCore": {
+        "mode": "connected",
+        "endpointDistance": 0.5269974341925852
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.2810788432662064,
+        "right": 0.18425717742866188
+      }
+    },
+    "mechanicHidesBuilder": {
+      "maker": false,
+      "mechanic": true,
+      "builder": false
+    }
+  },
+  "status": "passed"
+}

@@ -47,7 +47,7 @@ test('visitor reach maps normalized input to a discrete world rail and runs one 
   assert.equal(notice.actionKind, 'visitor');
 
   const approach = stepUntil(machine, s => s.state === 'approach');
-  assert.deepEqual(approach.goal, { x: 1.2, z: 0.7 });
+  assert.deepEqual(approach.goal, { x: 1.2, z: 1.02 });
   assert.equal(approach.lookTarget.x, 1.2);
   assert.equal(machine.requestReach(), false);
 

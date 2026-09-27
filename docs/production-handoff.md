@@ -1,36 +1,32 @@
 # MurderBird: Uncaged — local production handoff
 
-**Status:** The local exhibit now implements an anchored, externally articulated Maker, a limited spring-driven Mechanic, and an Advanced encounter with pacing, visitor response, jump, shield thrust and grounded inspection. See the [three-era review](three-era-movement-review.md), [demonstration](../assets/audit/three-era-review/era-review.html), [requirements](uncaged-requirements.md) and [creative authority](creative-authority.md). Exact mechanisms and character acting remain proposed; owner likeness acceptance and publication are pending.
+**Current checkpoint: structural reconciliation v1, at the early visual review gate.** The three-era controls remain, and the app loads a new versioned neutral structural study. Owner likeness acceptance is **pending**. The independent reference review still flags bill depth/curvature, a boxy crown, a tall/straight neck and repetitive breast layering. This checkpoint must not be described as a finished recognizable character or an approved exterior.
 
-## Current source and runtime
+The evaluated starting point was `2c22a50d8e8f39982992cd3ce1ada5b098c5a34e`, verified clean in `/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged`. The independently active primary clone was used read-only for selected hash-verified preserved media and repository skill guidance. Work continues in the production worktree. No publication or remote synchronization is claimed.
 
-- Authoring script: [`scripts/build-uncaged-presence-study.py`](../scripts/build-uncaged-presence-study.py)
-- Editable Blender source: [`assets/models/uncaged-presence-study/murderbird-presence-study.blend`](../assets/models/uncaged-presence-study/murderbird-presence-study.blend)
-- Browser GLB: [`assets/models/uncaged-presence-study/murderbird-presence-study.glb`](../assets/models/uncaged-presence-study/murderbird-presence-study.glb)
-- Era capabilities and power-action controller: [`src/scene/era-controller.js`](../src/scene/era-controller.js), delegating the Advanced encounter to the retained [`presence-state.js`](../src/scene/presence-state.js)
-- Separate procedural motion paths: [`src/scene/era-motion.js`](../src/scene/era-motion.js)
-- Proposed runtime construction: [`src/scene/era-mechanisms.js`](../src/scene/era-mechanisms.js)
-- Three.js exhibit: [`src/scene/presence-exhibit.js`](../src/scene/presence-exhibit.js)
-- Current evidence: [three-era demonstration](../assets/audit/three-era-review/era-review.html), [report](three-era-movement-review.md), and [provenance](../provenance/three-era-runtime-2026-09-27.json)
-- Preserved body source and earlier evidence: [Stage Two report](stage-two-encounter-review.md) and [model provenance](../provenance/uncaged-presence-study-2026-09-27.json)
+## Current deliverables
 
-The unchanged Blender source contains **2,038 mesh objects, 39 empties and no armature**. Its GLB contains **24 meshes, 63 nodes and 89,068 unique triangles**. The editable geometry is grouped into rigid body, head, shoulder/elbow, leg and toe assemblies. One short `attention-export-proof` head-rotation action exports as a glTF clip; the continuous encounter is procedural runtime motion, not an authored animation library or skinned character.
+- [Early neutral likeness review](../assets/audit/structural-reconciliation-v1/likeness-review.html): identical-camera before/after front, side, three-quarter, rear reconstruction and head detail; selected references remain separately labelled perspective artwork.
+- [Reference audit](structural-reference-audit.md), [regional construction contract](structural-construction-contract.md), [era eligibility matrix](structural-era-eligibility.md), and [checks / remaining decisions](structural-reconciliation-review.md).
+- [Continuous 1:54 motion demonstration](../assets/audit/structural-reconciliation-v1/structural-motion-demonstration.mp4), [final preview receipt](../assets/audit/structural-reconciliation-v1/final-preview-validation.json), and [version provenance ledger](../provenance/structural-reconciliation-v1-2026-09-27.json).
+- Editable source: [`assets/models/uncaged-structure-v1/murderbird-structure-v1.blend`](../assets/models/uncaged-structure-v1/murderbird-structure-v1.blend).
+- Runtime derivative: [`assets/models/uncaged-structure-v1/murderbird-structure-v1.glb`](../assets/models/uncaged-structure-v1/murderbird-structure-v1.glb).
+- Authoring: [`scripts/build-uncaged-structure-v1.py`](../scripts/build-uncaged-structure-v1.py); named pivots and removed shared powered components: [construction inventory](../assets/models/uncaged-structure-v1/construction-inventory.json).
+- Runtime: `src/scene/era-controller.js`, `era-motion.js`, `era-mechanisms.js`, `presence-exhibit.js`; `presence-state.js` retains the Advanced encounter state logic with the corrected closer approach position.
 
-Legs use thigh → shin → ankle-pivot foot → toes groups. The runtime solves the two leg links to preserve world-space planted foot targets during travel and turns. The head can track a target; the Builder waits for alignment and planted support before committed contact. A dedicated upper-bill leading vertex is checked against the selected cylindrical cage bar. These are kinematic, tested constraints; they do not prove physical mass distribution, force transfer, collision response outside the tested bars, or engineering feasibility.
+The editable source preserves **1,276 separate mesh objects** and rigid named groups. The current GLB contains **23 meshes, 62 nodes, 63,468 indexed unique triangles, no skins**, and one `attention-export-proof` clip. Continuous motion remains procedural. Runtime-only Maker support/controls, Mechanic spring/cam drive, Advanced distribution/actuators, and short tail remain editable in `era-mechanisms.js`; they are not baked into the Blender/GLB pair. Regeneration verifies the historical source hash and writes only the new version path. Preserve any subsequent manual source edits as another version before regeneration.
 
-The owner’s raptor comparison informs speed, attention, and tension only. MurderBird keeps bird anatomy, a compact rear outline, hooked bill, bird feet, and flightless folded wings. The wings brace and shield with a short shoulder/elbow drive; do not add a dinosaur body, tail, or flight motion. Fictional heart and processing assemblies remain separate Builder additions; unseen internal layouts are reconstructions, not story facts.
+## Structural decisions and constraints
 
-## Review and known limits
+The bill is now physically divided into formed panels, the cheek/mandible is open geometry, the cervical load frame has fixed base and skull attachments, and the shoulder assemblies sit lower. The breast/rear envelope is rebuilt around a tapered pelvic frame. Eighteen shared actuator/piston/hydraulic/take-off meshes were removed, and the unused duplicate winding-drive meshes were removed while retaining the interface empty. Passive structural rails remain common; motion sources are era-specific. The left repair bracket follows its corrected shoulder pivot, and restricted travel remains asymmetric.
 
-The [three-era review](three-era-movement-review.md) describes current capture and validation results; Stage Two remains historical. It records passing pure-state tests, the actual GLB motion/integration checks, source/build validation, and local browser encounter/regression groups. Automated checks establish sampled kinematic and interaction behavior; they do not approve likeness, weight, acting, or final character art. The review capture uses local software and should be consulted for its hardware, browser, and viewport limits.
+MurderBird remains a flightless mechanical bird. Wings balance, shield and deliver a tucked short shoulder/elbow shove. No dinosaur tail, long hanging wing train, humanoid hand, biological tissue, or flight action was added. July controls the head only; candidate 03 controls the selected whole-body identity. Original story files remain unchanged, including finite-energy wording that differs from the owner's Advanced exhibit premise.
 
-Owner likeness acceptance remains open. Captured views show improvement over the prior barrel-like form, while bill/cheek identity, neck transition, armor repetition and surface wear still need refinement. The runtime has no skinned armature and no finished authored motion library or claw-grip action. A toe-group lift during a step is not a claw strike. Maker remains anchored with five explicit external controls. Mechanic now has slow, finite spring-driven traversal without visitor awareness. Advanced has the responsive encounter plus controlled jump and planted shield thrust; it requires no ordinary winding or power recovery.
+Movement is kinematic. Fixed attachments, bounded rotation, foot targets and contact sampling do not establish physical simulation, collision-free continuous dynamics, feasible load ratings, or artistic acceptance. The updated review records exactly which sampled checks ran and their limits.
 
-Human accessibility review, screen-reader testing, physical-phone/Safari/Firefox coverage, remote CI, clean-clone LFS retrieval, deployment, and publication approval remain unverified. The local build/allowlist receipt is not a remote deployment claim. Source models, captures, provenance and review pages stay out of `public/` and `dist/` except explicitly referenced approved runtime files.
+## Local review and verification
 
-## Reproduce and verify
-
-Use the managed production worktree, not the independently active primary checkout. Blender 5.2 is the authoring target; regeneration overwrites the named `.blend` and `.glb`, so preserve any manual modeling work as a new version first.
+Development: <http://127.0.0.1:5174/>. Local build preview: <http://127.0.0.1:4176/>. The review HTML is a development-served audit artifact, excluded from `dist/`. Review and proof media, source Blender files, provenance and source archives remain outside `public/` and the shipped runtime allowlist.
 
 ```sh
 npm ci
@@ -38,23 +34,25 @@ npm run build
 node --test tests/*.test.mjs
 node scripts/verify-era-motion.mjs
 node scripts/verify-advanced-power-moves.mjs
-python3 scripts/verify-era-assets.py
+node scripts/verify-structural-motion.mjs
+node scripts/verify-structural-mechanisms.mjs
+python3 scripts/verify-structure-assets.py
 ```
 
-The browser capture and regression scripts use the already-installed Playwright entry point and a loopback preview; they add no application dependency:
+The two retained motion validators now default to the active structural model and the new audit directory. `UNCAGED_MODEL` and `UNCAGED_AUDIT` can select explicit alternatives. Existing historical receipts were not overwritten. Browser validators use the already installed Playwright module; no application dependency was added. Run browser/render capture jobs sequentially on the local GPU:
 
 ```sh
 PLAYWRIGHT_ENTRY="/Users/okh/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
-npm run dev -- --host 127.0.0.1 --port 5174
-npm run preview -- --host 127.0.0.1 --port 4176
-node scripts/capture-three-eras.mjs "$PLAYWRIGHT_ENTRY"
 node scripts/verify-era-browser.mjs "$PLAYWRIGHT_ENTRY"
 node scripts/verify-advanced-power-browser.mjs "$PLAYWRIGHT_ENTRY"
-node scripts/verify-era-review.mjs "$PLAYWRIGHT_ENTRY"
+node scripts/capture-structure-motion.mjs "$PLAYWRIGHT_ENTRY"
+node scripts/verify-structure-review.mjs "$PLAYWRIGHT_ENTRY"
 ```
 
-Run the development server on **5174** and the production preview on **4176** in separate terminals; the capture/regression uses 5174 and the regression's production-build checks use 4176. The Playwright entry shown is the existing local QA installation, not a project dependency. On another host, set the quoted variable to that host's existing `playwright/index.mjs` entry point. Run GPU browser scripts sequentially. The verified local checks and exact receipts are in the [three-era review](three-era-movement-review.md). After a build, inspect every emitted `dist/` path and asset URL. A successful local build does not satisfy repository release rules or authorize publication.
+The explicit local build validator checks 26 intended runtime files and source-to-build GLB identity. A successful local build does not prove remote CI, clean-clone LFS retrieval, deployment, or human accessibility/art review. Refer to the current receipts rather than this reproduction list to know what actually passed.
 
-## Preserved earlier studies
+## Next decision
 
-The earlier source, exports, and captures under `assets/models/uncaged-study/`, `assets/models/uncaged-mass-study/`, and `assets/models/uncaged-shield-study/` and their corresponding `assets/audit/uncaged-review/`, `uncaged-mass-review/`, and `uncaged-shield-review/` directories remain intact. Their prior review documents record historical status and tests at those checkpoints; do not treat their old model paths, test results, or limitations as the current Stage Two inventory. The Stage Two presence model is reused unchanged. Three-era motion and mechanisms are a new runtime derivative; the new geometry is not baked into that Blender/GLB pair.
+The owner was shown the neutral matched views and asked whether to refine this direction or rework head/bill or body/neck proportions. That early gate is pending. Do not treat silence, a completed motion demonstration, or passing tests as approval. Continue structural corrections from the owner's response before detailed surfacing. Preserve the v1 review so later before/after claims remain inspectable.
+
+The previous presence-study source/export and [three-era review](three-era-movement-review.md) remain the preserved `2c22a50` checkpoint. Earlier study, mass, shield and Stage Two files remain intact and retain their dated status.

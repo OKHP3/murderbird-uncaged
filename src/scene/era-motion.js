@@ -36,6 +36,33 @@ export function createEraMotion(model, nodes, rest) {
   const upperBill=model.getObjectByName('upper-bill');
   if(!upperBill)throw new Error('Dedicated bill contact assembly missing.');
   function leadingBillPoint(){let front=-Infinity;upperBill.traverse(o=>{if(!o.isMesh)return;const position=o.geometry.attributes.position;for(let i=0;i<position.count;i++){a.fromBufferAttribute(position,i).applyMatrix4(o.matrixWorld);if(a.z>front){front=a.z;contactPoint.copy(a);}}});return contactPoint;}
+  // Sample actual triangle edges at the selected rail's centre plane. The new
+  // forged bill has a broad face: its side vertices alone do not describe the
+  // surface that touches a narrow bar between them.
+  function billSurfaceAtRail(railX) {
+    let front = -Infinity;
+    const v = [new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()];
+    upperBill.traverse(o => {
+      if (!o.isMesh) return;
+      const position=o.geometry.attributes.position, index=o.geometry.index;
+      const count=index?index.count:position.count;
+      for(let i=0;i<count;i+=3){
+        for(let j=0;j<3;j++)v[j].fromBufferAttribute(position,index?index.getX(i+j):i+j).applyMatrix4(o.matrixWorld);
+        for(let j=0;j<3;j++){
+          const u=v[j], w=v[(j+1)%3], dx=w.x-u.x;
+          if(Math.abs(dx)<1e-9){
+            if(Math.abs(u.x-railX)<1e-7)for(const point of [u,w])if(point.z>front){front=point.z;contactPoint.copy(point);}
+            continue;
+          }
+          const t=(railX-u.x)/dx;
+          if(t<0||t>1)continue;
+          const forward=u.z+(w.z-u.z)*t;
+          if(forward>front){front=forward;contactPoint.set(railX,u.y+(w.y-u.y)*t,forward);}
+        }
+      }
+    });
+    return Number.isFinite(front);
+  }
   for (const foot of feet) foot.position.z += z;
 
   function idealFoot(f, ahead = 0) {
@@ -185,7 +212,18 @@ export function createEraMotion(model, nodes, rest) {
     powerPose={kind,phase:p,height,stage,grounded:height===0};
   }
   function tick(dt, s) {
+    // Keep support-foot scheduling stable after a slow browser frame. Advancing
+    // the root by 100 ms in one solve can outrun the foot that is just lifting.
+    // These are bounded kinematic substeps, not a physical dynamics solver.
+    if(dt>1/30){
+      const elapsed=clamp(dt,0,.1),steps=Math.ceil(elapsed/(1/60));
+      for(let i=0;i<steps;i++)tick(elapsed/steps,s);
+      return;
+    }
     if(s.era!==currentEra)resetEra(s.era);
+    // Fixed structural attachments, including when a caller omits a pose reset.
+    nodes.neck.position.copy(rest.neck.position);
+    nodes.head.position.copy(rest.head.position);
     // Pause freezes the actual pose, including a foot mid-step.
     if (s.paused && !s.inspectionRequested) dt = 0;
     dt = clamp(dt, 0, .1); time += dt; motionFrame++;
@@ -209,7 +247,7 @@ export function createEraMotion(model, nodes, rest) {
     speed=Math.hypot(velocityX,velocityZ);
     if(s.goal&&remaining<.006&&speed<.035){velocityX=0;velocityZ=0;speed=0;}
     x+=velocityX*dt;z+=velocityZ*dt;distance+=speed*dt;
-    x = clamp(x, -1.6, 1.6); z = clamp(z, -.65, .75);
+    x = clamp(x, -1.6, 1.6); z = clamp(z, -.65, 1.08);
     const active = feet.find(f => f.swinging);
     if (active) {
       active.phase = Math.min(1, active.phase + dt / active.duration);
@@ -278,17 +316,31 @@ export function createEraMotion(model, nodes, rest) {
     for (const f of feet) solveLeg(f, shift, f.swinging ? Math.sin(Math.PI * f.phase) : 0);
     model.updateMatrixWorld(true);
     contact = false;
-    // A bounded telescoping cervical linkage reaches the inside face of the
-    // selected front rail only after the feet and heading have settled.
+    // Fixed-length cervical articulation: bend about the body attachment and
+    // counter-rotate the skull. The closer approach goal supplies the missing
+    // reach; contact never translates or stretches the apparent anatomy.
     if (pose.extension > .001 && ['strike','contact','recover','cage-test'].includes(state) && aligned && Math.abs(yaw) < .05) {
-      const leading=leadingBillPoint();
-      const clearance=2.079-leading.z;
-      const worldAxis=new THREE.Vector3(0,0,1).transformDirection(nodes.neck.parent.matrixWorld);
-      nodes.neck.position.z+=clamp(clearance/Math.max(.5,worldAxis.z),-.12,.48)*pose.extension;
-      model.updateMatrixWorld(true);leadingBillPoint();
-      const railX=s.lookTarget?.x??x;
+      const railX=s.lookTarget?.x??s.goal?.x??x;
+      const basePitch=nodes.neck.rotation.x, headBase=nodes.head.rotation.x;
+      const applyPitch=pitch=>{
+        nodes.neck.rotation.x=pitch;
+        nodes.head.rotation.x=headBase-pitch;
+        model.updateMatrixWorld(true);
+        return billSurfaceAtRail(railX);
+      };
+      let low=0, high=.65;
+      const reachable=applyPitch(high)&&contactPoint.z>=2.079;
+      if(reachable){
+        for(let i=0;i<16;i++){
+          const mid=(low+high)/2;
+          if(applyPitch(mid)&&contactPoint.z>=2.079)high=mid;else low=mid;
+        }
+      }
+      const pitch=THREE.MathUtils.lerp(basePitch,high,clamp(pose.extension,0,1));
+      const intersects=applyPitch(pitch);
+      if(!intersects)leadingBillPoint();
       const radial=Math.hypot(contactPoint.x-railX,contactPoint.z-2.1);
-      contact=Math.abs(radial-.021)<.008&&(state==='contact'||state==='cage-test');
+      contact=intersects&&Math.abs(radial-.021)<.008&&(state==='contact'||state==='cage-test');
     }
     if(stop)settled=settled&&pose.extension<.003&&pose.load<.003&&Math.abs(pose.counter)<.003;
     previousState = state;
@@ -304,7 +356,7 @@ export function createEraMotion(model, nodes, rest) {
     feedback: () => ({ arrived, settled, aligned, contact }),
     metrics() {
       model.updateMatrixWorld(true);
-      return { era:currentEra,powerMove:powerPose?{...powerPose}:null,root: { x, z, yaw, speed }, distance, steps: stride, time, motionFrame, settled, arrived, aligned, contact,camAngle,mechanicalPhase,mechanicalStage,actualArticulation:{...articulation}, contactPoint: contactPoint.toArray(), pose: { ...pose }, maxFootError, reachDrop, maxReachDrop, feet: feet.map(f => ({ side: f.label, target: f.position.toArray(), actual: f.foot.getWorldPosition(new THREE.Vector3()).toArray(), swinging: f.swinging, phase: f.phase, yaw: f.yaw, steps: f.steps, solveError: f.solveError, groundMin: new THREE.Box3().setFromObject(f.foot, true).min.y })), bodyBounds: visibleModelBounds(), headBounds: new THREE.Box3().setFromObject(nodes.head, true) };
+      return { era:currentEra,powerMove:powerPose?{...powerPose}:null,root: { x, z, yaw, speed }, distance, steps: stride, time, motionFrame, settled, arrived, aligned, contact,camAngle,mechanicalPhase,mechanicalStage,actualArticulation:{...articulation}, cervical:{baseTranslationError:nodes.neck.position.distanceTo(rest.neck.position),skullTranslationError:nodes.head.position.distanceTo(rest.head.position),neckPitch:nodes.neck.rotation.x,skullPitch:nodes.head.rotation.x,maxContactPitch:.65,contactMethod:'upper-bill triangle / rail-centre plane'}, contactPoint: contactPoint.toArray(), pose: { ...pose }, maxFootError, reachDrop, maxReachDrop, feet: feet.map(f => ({ side: f.label, target: f.position.toArray(), actual: f.foot.getWorldPosition(new THREE.Vector3()).toArray(), swinging: f.swinging, phase: f.phase, yaw: f.yaw, steps: f.steps, solveError: f.solveError, groundMin: new THREE.Box3().setFromObject(f.foot, true).min.y })), bodyBounds: visibleModelBounds(), headBounds: new THREE.Box3().setFromObject(nodes.head, true) };
     },
   };
 }

@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — creative authority and discrepancy record
 
+**Current structural mandate (September 27):** Reconcile likeness and articulation before exterior finishing. The prior movement study is not model approval. The versioned structural proposal, regional contract, exact feature-reference scope, and early visual review gate are recorded in [structural construction](structural-construction-contract.md), [reference audit](structural-reference-audit.md), and [review](structural-reconciliation-review.md). The July head choice remains head-only; the curved neck must remain visible within the powerful-body direction. Owner acceptance remains pending.
+
 **Latest owner clarification:** MurderBird is flightless. Its articulated wings provide balance, shielding and a tucked shoulder/elbow shove. The raptor comparison describes speed, attention and tension, not anatomy. The current [Stage Two encounter review](stage-two-encounter-review.md) records the moving Builder implementation and its limits; the [shield-study review](shield-study-review.md) remains a preserved earlier checkpoint.
 
 **Current owner direction:** the September 27 heavy-machine/predator clarification controls the current mass, posture and movement study. See [the recorded instruction and interpretation](mechanical-predator-direction.md) and [Stage Two review](stage-two-encounter-review.md). Earlier selections below retain their scoped appearance authority; they are not model approval.

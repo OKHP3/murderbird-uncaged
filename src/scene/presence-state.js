@@ -36,7 +36,9 @@ const VALID_ERAS = new Set(['maker', 'mechanic', 'builder']);
 const PACE_X = [-1.35, -0.65, 0.65, 1.35];
 const PACE_Z = [-0.42, 0.08, 0.42];
 const RAIL_X = [-1.2, 0, 1.2];
-const FRONT_CONTACT_Z = 0.7;
+// Structural v1 bill reaches the rail through bounded cervical rotation.
+// Approach the shorter fixed-length neck before committing the planted strike.
+const FRONT_CONTACT_Z = 1.02;
 const NORMALIZED_LIMIT = 1;
 
 const finiteNumber = (value, fallback = 0) => typeof value === 'number' && Number.isFinite(value) ? value : fallback;

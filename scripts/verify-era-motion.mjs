@@ -7,8 +7,8 @@ import { clone } from 'three/addons/utils/SkeletonUtils.js';
 import { createEraMotion } from '../src/scene/era-motion.js';
 import { createEraController } from '../src/scene/era-controller.js';
 
-const MODEL_PATH = 'assets/models/uncaged-presence-study/murderbird-presence-study.glb';
-const REPORT_PATH = 'assets/audit/three-era-review/motion-validation.json';
+const MODEL_PATH = process.env.UNCAGED_MODEL || 'assets/models/uncaged-structure-v1/murderbird-structure-v1.glb';
+const REPORT_PATH = (process.env.UNCAGED_AUDIT || 'assets/audit/structural-reconciliation-v1') + '/motion-validation.json';
 const NODE_NAMES = [
   'body', 'neck', 'head', 'jaw', 'breastplate', 'cranial-cover', 'winding-drive',
   'power-core', 'processing', 'industrial-repairs', 'builder-optics', 'left-mantle',

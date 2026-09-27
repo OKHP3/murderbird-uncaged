@@ -19,7 +19,7 @@ for (const value of [devUrl, productionUrl]) {
   }
 }
 
-const outputDir = path.resolve('assets/audit/three-era-review');
+const outputDir = path.resolve(process.env.UNCAGED_AUDIT || 'assets/audit/structural-reconciliation-v1');
 const reportPath = path.join(outputDir, 'browser-validation.json');
 await mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({ headless: false });

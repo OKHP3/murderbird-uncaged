@@ -5,7 +5,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { createEraMotion } from './era-motion.js';
 import { createEraMechanisms } from './era-mechanisms.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-presence-study/murderbird-presence-study.glb', import.meta.url).href;
+const modelUrl = new URL('../../assets/models/uncaged-structure-v1/murderbird-structure-v1.glb', import.meta.url).href;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;

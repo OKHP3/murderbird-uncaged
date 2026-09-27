@@ -3,6 +3,15 @@ import * as THREE from 'three';
 const UP = new THREE.Vector3(0, 1, 0);
 const clamp = THREE.MathUtils.clamp;
 
+// Runtime geometry is eligible only in its named era. Shared GLB geometry is
+// reserved for passive load frames and pivots; Advanced sensing remains in the
+// separately gated model assemblies managed by presence-exhibit.js.
+const MECHANISM_INVENTORY = Object.freeze([
+  Object.freeze({ id: 'maker-support-controls', eras: Object.freeze(['maker']), role: 'external support cradle, levers, rods and tension lines' }),
+  Object.freeze({ id: 'mechanic-wound-drive', eras: Object.freeze(['mechanic']), role: 'one mainspring, reduction pair, camshaft and kinematic telescoping knee links' }),
+  Object.freeze({ id: 'builder-power-actuation', eras: Object.freeze(['builder']), role: 'fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated' }),
+]);
+
 /** Era-specific, explicitly reconstructed motion systems for the shared bird rig. */
 export function createEraMechanisms({ scene, model, nodes, rest }) {
   const madeGeometry = new Set();
@@ -65,6 +74,25 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     o.quaternion.setFromUnitVectors(UP, delta.multiplyScalar(1 / length));
     o.scale.y = length;
   }
+  function setSlidingLink(sleeve, slider, from, to, overlap = .035) {
+    const delta = new THREE.Vector3().subVectors(to, from);
+    const length = delta.length();
+    if (length < 1e-4) { sleeve.visible = false; slider.visible = false; return length; }
+    const direction = delta.multiplyScalar(1 / length);
+    const split = Math.max(overlap + .015, length * .62);
+    const innerStart = Math.max(0, split - overlap);
+    const splitPoint = from.clone().addScaledVector(direction, split);
+    const innerPoint = from.clone().addScaledVector(direction, innerStart);
+    setSegment(sleeve, from, splitPoint);
+    setSegment(slider, innerPoint, to);
+    return length;
+  }
+  function fixedStub(object, anchor, toward, length) {
+    const delta = new THREE.Vector3().subVectors(toward, anchor);
+    if (delta.lengthSq() < 1e-8) { object.visible = false; return; }
+    delta.normalize();
+    setSegment(object, anchor, anchor.clone().addScaledVector(delta, length));
+  }
   function worldPoint(object, target = new THREE.Vector3()) {
     return object.getWorldPosition(target);
   }
@@ -108,6 +136,7 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     target,
     first: dynamicSegment(maker, `maker-control-line-${leverInputs[i]}-outer`, .009, rope),
     second: dynamicSegment(maker, `maker-control-rod-${leverInputs[i]}-joint`, .013, bronze),
+    horn: dynamicSegment(maker, `maker-control-horn-${leverInputs[i]}`, .013, brass),
     guidePost: dynamicSegment(maker, `maker-guide-support-${leverInputs[i]}`, .014, darkIron),
     pulley:sphere(maker,`maker-guide-pulley-${leverInputs[i]}`,.025,brass,[0,0,0]),
     attachment:sphere(maker,`maker-joint-attachment-${leverInputs[i]}`,.026,brass,[0,0,0]),
@@ -152,7 +181,8 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     side,
     crank: dynamicSegment(mechanic, `mechanic-${side}-crank-link`, .021, brass),
     pin: sphere(mechanic, `mechanic-${side}-crank-pin`, .033, bronze, [0, 0, 0]),
-    load: dynamicSegment(mechanic, `mechanic-${side}-knee-link`, .015, darkIron),
+    loadSleeve: dynamicSegment(mechanic, `mechanic-${side}-slotted-knee-link-sleeve`, .020, darkIron),
+    loadSlider: dynamicSegment(mechanic, `mechanic-${side}-slotted-knee-link-slider`, .010, brass),
     thigh: find(side + '-thigh'),
     shin: find(side + '-shin'),
     sign: i === 0 ? 1 : -1,
@@ -178,10 +208,30 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     housing: dynamicSegment(builder, 'builder-right-shoulder-actuator', .043, ceramic),
     rod: dynamicSegment(builder, 'builder-right-shoulder-actuator-rod', .017, copper),
     conduit: dynamicSegment(builder, 'builder-shoulder-power-conduit', .020, darkIron),
+    sleeveStub: dynamicSegment(builder, 'builder-right-shoulder-disconnected-sleeve-stub', .043, ceramic),
+    rodStub: dynamicSegment(builder, 'builder-right-elbow-disconnected-rod-stub', .017, copper),
+    conduitBodyStub: dynamicSegment(builder, 'builder-shoulder-disconnected-body-conduit-stub', .020, darkIron),
+    conduitWingStub: dynamicSegment(builder, 'builder-shoulder-disconnected-wing-conduit-stub', .020, darkIron),
+    shoulderSocket: sphere(builder, 'builder-right-shoulder-actuator-socket', .052, brass, [0, 0, 0]),
+    elbowSocket: sphere(builder, 'builder-right-elbow-actuator-socket', .041, brass, [0, 0, 0]),
   };
   const manifoldLink = dynamicSegment(builder, 'builder-core-to-distribution-conduit', .027, darkIron);
   const manifoldCopper = dynamicSegment(builder, 'builder-distribution-copper-run', .009, copper);
+  const coreDisconnect = {
+    coreStub: dynamicSegment(builder, 'builder-core-disconnected-conduit-stub', .027, darkIron),
+    manifoldStub: dynamicSegment(builder, 'builder-distribution-disconnected-conduit-stub', .027, darkIron),
+    coreSocket: sphere(builder, 'builder-core-conduit-socket', .042, brass, [0, 0, 0]),
+    manifoldSocket: sphere(builder, 'builder-distribution-conduit-socket', .042, brass, [0, 0, 0]),
+  };
   const builderAnchor = new THREE.Vector3();
+  const mechanicLinkDistances = { left: null, right: null };
+  let wingEndpointDistance = 0;
+  const builderCervical = [1, -1].map(sign => ({
+    sign,
+    sleeve: dynamicSegment(builder, `builder-cervical-${sign > 0 ? 'left' : 'right'}-actuator-sleeve`, .028, ceramic),
+    rod: dynamicSegment(builder, `builder-cervical-${sign > 0 ? 'left' : 'right'}-actuator-rod`, .012, copper),
+    conduit: dynamicSegment(builder, `builder-cervical-${sign > 0 ? 'left' : 'right'}-power-conduit`, .012, darkIron),
+  }));
   let era = 'builder';
   let tickCount = 0;
   let last = { maker: false, mechanic: false, builder: true };
@@ -235,10 +285,12 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
       if (!target) { line.first.visible = false; line.second.visible = false; continue; }
       model.updateMatrixWorld(true);
       const end = root.worldToLocal(target.localToWorld(line.end.set(...controlOffsets[i])));
+      const origin = root.worldToLocal(target.getWorldPosition(tempD).clone());
       const side = end.x >= 0 ? 1 : -1;
       line.from.copy(root.worldToLocal(leverNodes[i].localToWorld(tempD.set(0,.19,0))));
       if(!line.guideReady&&era==='maker'){line.guide.set(side*.67,end.y+.07,-.55);line.guideReady=true;}
       line.pulley.position.copy(line.guide);line.attachment.position.copy(end);
+      setSegment(line.horn, origin, end);
       setSegment(line.guidePost,tempC.set(line.guide.x,.07,line.guide.z),line.guide);
       setSegment(line.first, line.from, line.guide);
       setSegment(line.second, line.guide, end);
@@ -263,7 +315,7 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
       body.localToWorld(pinLocal);
       link.pin.position.copy(pinLocal);
       setSegment(link.crank,crankBase,pinLocal);
-      setSegment(link.load,pinLocal,knee);
+      mechanicLinkDistances[link.side]=setSlidingLink(link.loadSleeve,link.loadSlider,pinLocal,knee,.028);
     }
 
     // Builder bus starts at the actual retained core; branch actuators terminate at actual leg/wing groups.
@@ -272,8 +324,18 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     const source = worldPoint(core, builderAnchor);
     const lateral=new THREE.Vector3(1,0,0).transformDirection(body.matrixWorld);
     const manifoldWorld = body.localToWorld(tempA.set(-.22, -.06, .15)).clone();
-    setSegment(manifoldLink, source, manifoldWorld);
-    setSegment(manifoldCopper, source.clone().addScaledVector(lateral,-.028), manifoldWorld.clone().addScaledVector(lateral,-.028));
+    const coreSeparated = inspection.separation >= .18;
+    coreDisconnect.coreSocket.position.copy(source);
+    coreDisconnect.manifoldSocket.position.copy(manifoldWorld);
+    if (coreSeparated) {
+      manifoldLink.visible = manifoldCopper.visible = false;
+      fixedStub(coreDisconnect.coreStub, source, manifoldWorld, .085);
+      fixedStub(coreDisconnect.manifoldStub, manifoldWorld, source, .085);
+    } else {
+      setSegment(manifoldLink, source, manifoldWorld);
+      setSegment(manifoldCopper, source.clone().addScaledVector(lateral,-.028), manifoldWorld.clone().addScaledVector(lateral,-.028));
+      coreDisconnect.coreStub.visible = coreDisconnect.manifoldStub.visible = false;
+    }
     for (const actuator of builderBranches) {
       model.updateMatrixWorld(true);
       const hip = worldPoint(actuator.thigh, tempA);
@@ -283,16 +345,50 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
       setSegment(actuator.piston, mid, knee);
       const sideRoute = mid.clone().addScaledVector(lateral,actuator.sign*.16);
       const sourceRoute = manifoldWorld.clone().addScaledVector(lateral,actuator.sign*.36);
-      setSegment(actuator.conduitOuter[0], source, sourceRoute);
+      setSegment(actuator.conduitOuter[0], manifoldWorld, sourceRoute);
       setSegment(actuator.conduitOuter[1], sourceRoute, sideRoute);
       setSegment(actuator.conduitInner, sideRoute.clone().addScaledVector(lateral,actuator.sign*.025), hip);
     }
     const shoulder = worldPoint(nodes['right-mantle'], tempC);
     const elbow = worldPoint(nodes['right-wing-shield'], tempD);
     const shoulderMid = shoulder.clone().lerp(elbow, .56);
-    setSegment(shoulderActuator.housing, shoulder, shoulderMid);
-    setSegment(shoulderActuator.rod, shoulderMid, elbow);
-    setSegment(shoulderActuator.conduit, manifoldWorld, shoulder);
+    const shoulderGap = shoulder.distanceTo(elbow);
+    wingEndpointDistance = shoulderGap;
+    const separated = inspection.separation >= .18;
+    shoulderActuator.shoulderSocket.position.copy(shoulder);
+    shoulderActuator.elbowSocket.position.copy(elbow);
+    shoulderActuator.shoulderSocket.visible = shoulderActuator.elbowSocket.visible = true;
+    if (!separated) {
+      setSegment(shoulderActuator.housing, shoulder, shoulderMid);
+      setSegment(shoulderActuator.rod, shoulderMid, elbow);
+      setSegment(shoulderActuator.conduit, manifoldWorld, shoulder);
+      shoulderActuator.sleeveStub.visible = shoulderActuator.rodStub.visible = false;
+      shoulderActuator.conduitBodyStub.visible = shoulderActuator.conduitWingStub.visible = false;
+    } else {
+      shoulderActuator.housing.visible = shoulderActuator.rod.visible = shoulderActuator.conduit.visible = false;
+      fixedStub(shoulderActuator.sleeveStub, shoulder, elbow, .072);
+      fixedStub(shoulderActuator.rodStub, elbow, shoulder, .060);
+      fixedStub(shoulderActuator.conduitBodyStub, manifoldWorld, shoulder, .085);
+      fixedStub(shoulderActuator.conduitWingStub, shoulder, manifoldWorld, .070);
+    }
+
+    // Structure-v1 has passive articulated cervical forks but no shared powered
+    // cylinders. Add a Builder-only pair attached at the real body/neck pivots.
+    // During chest/neck inspection, disconnect at those sockets instead of
+    // stretching a continuous powered link across a separated assembly.
+    for (const actuator of builderCervical) {
+      const bodyAnchor = body.localToWorld(nodes.neck.position.clone().add(tempC.set(actuator.sign * .105, .02, -.10))).clone();
+      const neckAnchor = nodes.neck.localToWorld(tempD.set(actuator.sign * .055, .16, -.025)).clone();
+      const cervicalGap = bodyAnchor.distanceTo(neckAnchor);
+      const cervicalSeparated = inspection.separation >= .18;
+      if (cervicalSeparated) {
+        actuator.sleeve.visible = actuator.rod.visible = actuator.conduit.visible = false;
+      } else {
+        setSlidingLink(actuator.sleeve, actuator.rod, bodyAnchor, neckAnchor, .025);
+        setSegment(actuator.conduit, manifoldWorld, bodyAnchor);
+      }
+      actuator.gap = cervicalGap;
+    }
 
     // Inspection may separate the body; attached mechanism groups remain with their assemblies,
     // while world-linked conduits keep endpoints updated rather than floating free.
@@ -323,12 +419,21 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
   }
 
   function metrics() {
+    const wingMode = era !== 'builder' ? 'not-eligible' : shoulderActuator.housing.visible ? 'connected' : 'disengaged-at-sockets';
     return {
       era, tickCount, visible: { ...last },
       anchors: ['drive', 'power', 'mind'].map(id => ({ id, available: Boolean(getAnchor(id)) })),
       externalControlTargets: makerLines.map(line => line.target),
       mechanicTargets: mechanicLinks.map(link => `${link.side}-thigh/${link.side}-shin`),
       builderTargets: ['left-thigh/left-shin', 'right-thigh/right-shin', 'right-mantle/right-wing-shield'],
+      inventory: MECHANISM_INVENTORY,
+      inspectionConnections: {
+        separationMode: wingMode,
+        wing: { mode: wingMode, endpointDistance: wingEndpointDistance },
+        cervical: builderCervical.map(a => ({ side: a.sign > 0 ? 'left' : 'right', mode: era !== 'builder' ? 'not-eligible' : a.sleeve.visible ? 'connected' : 'disengaged-at-sockets', endpointDistance: a.gap })),
+        powerCore: { mode: era !== 'builder' ? 'not-eligible' : coreDisconnect.coreStub.visible ? 'disengaged-at-sockets' : 'connected', endpointDistance: coreDisconnect.coreSocket.position.distanceTo(coreDisconnect.manifoldSocket.position) },
+        mechanicSlidingLinks: { ...mechanicLinkDistances },
+      },
     };
   }
 
