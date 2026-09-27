@@ -101,6 +101,10 @@ illustrative animation, not an emu biomechanics simulation or a production
 rig. The no-WebGL path presents scoped existing story stills and keeps era and
 anatomy selection available.
 
+The score sheet labels bar 53 as `1:60.00`; the visitor view uses the bar
+number, not that irregular timestamp. Its stated final vocal release
+(2:04.04) and final band hit (2:04.62) are retained.
+
 ## Source-to-exhibit media provenance
 
 | Exhibit use | Source and evidence | Delivered form | Scope and limit |

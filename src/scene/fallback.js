@@ -19,6 +19,7 @@ export function createIllustratedExhibit(container) {
   const image = container.querySelector('.fallback-image');
   const caption = container.querySelector('.fallback-caption');
   let selected = null;
+  let activeEra = 'builder';
   const eraArt = {
     maker: chapterStills[0],
     mechanic: chapterStills[2],
@@ -43,17 +44,21 @@ export function createIllustratedExhibit(container) {
     select(id) {
       if (id === selected) return;
       selected = id;
-      showStill(fallbackArt[id]);
+      const still = activeEra === 'maker'
+        ? eraArt.maker
+        : activeEra === 'mechanic'
+          ? eraArt.mechanic
+          : fallbackArt[id];
+      showStill(still);
     },
     setEra(era) {
+      activeEra = era;
       selected = null;
       showStill(eraArt[era]);
     },
     setSection(value) {
-      if (value) {
-        selected = null;
-        showStill(fallbackArt.heart);
-      }
+      selected = null;
+      showStill(value ? fallbackArt.heart : eraArt[activeEra]);
     },
     react() {},
     reset() {},

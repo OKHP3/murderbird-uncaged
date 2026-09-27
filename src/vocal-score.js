@@ -5,6 +5,7 @@ export const vocalScore = {
   key: 'D minor',
   bars: '56 bars',
   range: 'D3–F4 sounding range',
+  duration: '2:09.23 before the audio tail',
   count: '233 words · 279 syllables · 102.12 seconds of sounding vocal time',
   opening: 'The instrumental begins at bar 1. First vocal: bar 5 at 0:09.23.',
   ending: 'Final vocal release: bar 54, beat 4 at 2:04.04. The band finishes on bar 55 at 2:04.62.',
@@ -12,17 +13,17 @@ export const vocalScore = {
   status: 'These are the complete written lyrics and performance instructions. Neither instrumental recording contains vocals. The pitch guide and rehearsal mix are synthetic rehearsal materials, not a singer recording.',
   sections: [
     {
-      heading: 'A · Ignition · bar 1',
+      heading: 'A · Ignition · bar 1 · 0:00.00',
       direction: 'Instrumental. Count four full bars.',
       lines: [],
     },
     {
-      heading: 'B · The Bird · bar 5',
+      heading: 'B · The Bird · bar 5 · 0:09.23',
       direction: 'Low and deliberate; sing on pitch.',
       lines: ['No crown.', 'No cage.', 'Just weight.', 'Just truth.'],
     },
     {
-      heading: 'C · What the Water Kept · bar 9',
+      heading: 'C · What the Water Kept · bar 9 · 0:18.46',
       direction: 'Tight rhythmic delivery; do not rush.',
       lines: [
         'Seven winters shaped this skin,',
@@ -36,7 +37,7 @@ export const vocalScore = {
       ],
     },
     {
-      heading: 'D · The Rebuild · bar 17',
+      heading: 'D · The Rebuild · bar 17 · 0:36.92',
       direction: 'Build intensity; keep the words clear.',
       lines: [
         'Iron braced the broken frame,',
@@ -50,7 +51,7 @@ export const vocalScore = {
       ],
     },
     {
-      heading: 'E · Under Load · bar 25',
+      heading: 'E · Under Load · bar 25 · 0:55.38',
       direction: 'Open and firm; sustain the final vowels.',
       lines: [
         'Put your promise under load.',
@@ -64,7 +65,7 @@ export const vocalScore = {
       ],
     },
     {
-      heading: 'F · Judgment · bar 33',
+      heading: 'F · Judgment · bar 33 · 1:13.85',
       direction: 'Pull close; feel the half-time drums.',
       lines: [
         'Some scars stay.',
@@ -78,7 +79,7 @@ export const vocalScore = {
       ],
     },
     {
-      heading: 'G · Iron Verdict · bar 41',
+      heading: 'G · Iron Verdict · bar 41 · 1:32.31',
       direction: 'Full voice. Same melody, greater conviction.',
       lines: [
         'Put your promise under load.',
@@ -92,7 +93,7 @@ export const vocalScore = {
       ],
     },
     {
-      heading: 'H · The Unfinished File · bar 49',
+      heading: 'H · The Unfinished File · bar 49 · 1:50.77',
       direction: 'Direct and rhythmic; return toward the low register.',
       lines: [
         "Close the file. I'll bring you back.",
@@ -103,11 +104,11 @@ export const vocalScore = {
     },
     {
       heading: 'I · Final Word · bar 53',
-      direction: 'Hold the vowel; release the final consonant at the notated release.',
+      direction: 'Hold the vowel; close the final “d” at the notated release.',
       lines: ["Find what doesn't hold."],
     },
     {
-      heading: 'J · Final Hit · bar 55',
+      heading: 'J · Final Hit · bar 55 · 2:04.62',
       direction: 'Vocal tacet. Let the band finish.',
       lines: [],
     },

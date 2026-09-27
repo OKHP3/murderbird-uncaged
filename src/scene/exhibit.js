@@ -330,7 +330,7 @@ export function createExhibit(container, updateMarker) {
   }
 
   const markerPositions = {
-    beak: new THREE.Vector3(0, 1.75, 1.12),
+    beak: new THREE.Vector3(.75, 1.08, .78),
     shoulder: new THREE.Vector3(.72, .65, .38),
     ankle: new THREE.Vector3(.7, -2.23, .34),
     heart: new THREE.Vector3(0, .05, .94),

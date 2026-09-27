@@ -161,7 +161,7 @@ app.innerHTML = `
 
         <section class="vocal-score" aria-labelledby="vocal-score-title">
           <div class="vocal-score-heading"><div><p class="playback-kicker">VOCAL SCORE V2 / TEXT AND PERFORMANCE CONTEXT</p><h3 id="vocal-score-title">${escapeHtml(vocalScore.title)}</h3></div><span>NOT SUNG ON EITHER RECORDING</span></div>
-          <p class="playback-description">${escapeHtml(vocalScore.tempo)} · ${escapeHtml(vocalScore.meter)} · ${escapeHtml(vocalScore.key)} · ${escapeHtml(vocalScore.bars)} · ${escapeHtml(vocalScore.range)}. ${escapeHtml(vocalScore.count)}.</p>
+          <p class="playback-description">${escapeHtml(vocalScore.tempo)} · ${escapeHtml(vocalScore.meter)} · ${escapeHtml(vocalScore.key)} · ${escapeHtml(vocalScore.bars)} · ${escapeHtml(vocalScore.range)} · ${escapeHtml(vocalScore.duration)}. ${escapeHtml(vocalScore.count)}.</p>
           <p class="playback-description">${escapeHtml(vocalScore.opening)} ${escapeHtml(vocalScore.ending)}</p>
           <p class="performance-direction">${escapeHtml(vocalScore.delivery)}</p>
           <details class="lyrics-details">
