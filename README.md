@@ -38,6 +38,10 @@ Start with the [media catalog](docs/media-catalog.md), the
 [Replit handoff](docs/replit-media-handoff.md). Verify the imported public
 collection with `python3 scripts/verify-media-import.py`.
 
+The [ASUS verification addendum](docs/asus-migration-verification-2026-09-26.md)
+records the Windows byte-preservation repair, additional Skillz imagery, and
+machine-specific archive and synchronization evidence.
+
 Use [assets/README.md](assets/README.md) for the media map and [docs/repository-boundaries.md](docs/repository-boundaries.md) for source, publication, and provenance rules. Keep imported source trees intact under `assets/murderbird/` and existing image paths under `assets/img/`; retain story snapshots under `content/story/`; record custody and relationships in `provenance/`. Imported scripts, tests, and configuration from the website belong under `provenance/website-support/`, where they cannot be mistaken for active app tooling. Private local music-session archives belong at `.local/archives/music-session-2026-09-17/` only after that path is confirmed ignored by Git.
 
 ## License
