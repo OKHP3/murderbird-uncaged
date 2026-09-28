@@ -1,0 +1,2980 @@
+{
+  "status": "read-only in-memory Boolean fit diagnosis; no native save",
+  "finding": {
+    "classification": "offset-cutter containment failure confirmed; Boolean output parity confirmed; independently tested saved triangle pair intersects",
+    "basis": "V6 evaluated mounting wall minus the exact recreated 1mm vertex-normal offset cutter leaves a nonzero closed residual on both sides; recreated exact Boolean brow triangles match V7. The mount object has unit scale and 1.0 world linear determinant, so object scale does not explain the residual."
+  },
+  "inputs": {
+    "v6": {
+      "path": "assets/models/uncaged-orbital-saddle-study-v6/murderbird-orbital-saddle-study-v6.blend",
+      "sha256": "cb811241d241b0f18f529979b77635caecb83284b8b4df29c7564d4d2bf55eec",
+      "bytes": 2002018
+    },
+    "v7": {
+      "path": "assets/models/uncaged-orbital-saddle-study-v7/murderbird-orbital-saddle-study-v7.blend",
+      "sha256": "e8169a3d685977f2f7dc62ab6f85d61fe456881aba06114d4169a31989de13d5",
+      "bytes": 2012498
+    },
+    "preservedV7Generator": {
+      "path": "assets/audit/orbital-saddle-study-v7/executed-generator.py",
+      "sha256": "39aa675815f7ac95675e2b2b7e8f966bcab72dea1fa8a53d43830a5f15972fd9",
+      "bytes": 5182
+    },
+    "priorFitExamples": {
+      "path": "assets/audit/orbital-saddle-study-v7/cranial-opening-audit-v1/fit-diagnosis-v1.json",
+      "sha256": "e3a022cf4fde103402e281ad2a5561a251da31d40217583a0d2a8c6a04ef80d2",
+      "bytes": 57823
+    },
+    "regionalSurfaceHelper": {
+      "path": "scripts/diagnose-native-regional-clearance.py",
+      "sha256": "dfa270b5bb9175772d1e0665560254914899a20dab9458e4412b237800b85a61",
+      "bytes": 8410
+    },
+    "frozenStrictCrossingKernel": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-07/actual-runtime-joint-clearance-v1/executed-review.py",
+      "sha256": "6d840608cf43b20beccaa8a7f1cab274d000485996ea2b1a6e1460921092b356",
+      "bytes": 58588
+    },
+    "diagnosisRunner": {
+      "path": "assets/audit/orbital-saddle-study-v7/boolean-fit-diagnosis-v2/diagnose-boolean-fit.py",
+      "sha256": "4b721cee2f23fd2d72db5dd2658818b3b19be87f24b739df3856dea4a0ee6296",
+      "bytes": 16224
+    }
+  },
+  "sides": {
+    "-1": {
+      "browName": "Forged orbital brow -1",
+      "mountName": "Forged orbital mounting plate -1",
+      "V6Brow": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 738,
+          "polygons": 736,
+          "triangles": 1472,
+          "signedVolumeObjectLocalM3": 4.009629447393467e-05,
+          "signedVolumeWorldM3": 4.009629447393467e-05,
+          "winding": {
+            "uniqueEdges": 1472,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1472,
+            "oppositeDirection": 1472,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 738,
+          "polygons": 736,
+          "triangles": 1472,
+          "signedVolumeObjectLocalM3": 4.009629447393467e-05,
+          "signedVolumeWorldM3": 4.009629447393467e-05,
+          "winding": {
+            "uniqueEdges": 1472,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1472,
+            "oppositeDirection": 1472,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "V6EvaluatedMountingWall": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.00015591700779686116,
+          "signedVolumeWorldM3": 0.00015591700779686116,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.00015591700779686116,
+          "signedVolumeWorldM3": 0.00015591700779686116,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "mountRawEvaluatedGeometryParity": {
+        "exactCanonicalWorldTriangleSetMatch": true,
+        "rawTriangleCount": 1792,
+        "evaluatedTriangleCount": 1792,
+        "modifierStack": []
+      },
+      "mountObjectScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mountWorldLinearDeterminant": 1.0,
+      "normalOffset": {
+        "method": "reproduced executed-generator.py: bm.normal_update(); vertex.co += vertex.normal * .001 in copied mount mesh local coordinates",
+        "vertexCount": 896,
+        "worldDisplacementRangeM": [
+          0.0009999999134724894,
+          0.0010000001621624374
+        ],
+        "worldNormalComponentRangeM": [
+          0.0009999998874263838,
+          0.0010000002064174396
+        ],
+        "worldTangentialComponentRangeM": [
+          0.0,
+          2.8515813671787943e-10
+        ],
+        "faceVertexNormalProjectionRangeLocalM": [
+          -0.0007584753839182667,
+          0.0009999954490922391
+        ],
+        "faceVertexProjectionAtOrBelowZeroCount": 6,
+        "faceVertexProjectionCount": 3584,
+        "inwardFaceVertexExamples": [
+          {
+            "faceIndex": 318,
+            "vertexIndex": 167,
+            "faceVertexNormalProjectionLocalM": -0.00019047655223403126,
+            "vertexNativeWorldXYZ": [
+              -0.110288002,
+              -0.44756484,
+              1.842872024
+            ],
+            "faceCenterNativeWorldXYZ": [
+              -0.118285879,
+              -0.440175444,
+              1.84256804
+            ],
+            "faceNormalLocalXYZ": [
+              -0.647337854,
+              -0.582497358,
+              0.491579652
+            ]
+          },
+          {
+            "faceIndex": 319,
+            "vertexIndex": 615,
+            "faceVertexNormalProjectionLocalM": -0.0007584753839182667,
+            "vertexNativeWorldXYZ": [
+              -0.102270454,
+              -0.448093355,
+              1.842882395
+            ],
+            "faceCenterNativeWorldXYZ": [
+              -0.108927816,
+              -0.439958841,
+              1.841795325
+            ],
+            "faceNormalLocalXYZ": [
+              0.647338033,
+              0.58249718,
+              -0.491579682
+            ]
+          },
+          {
+            "faceIndex": 326,
+            "vertexIndex": 163,
+            "faceVertexNormalProjectionLocalM": -0.00030332503956742585,
+            "vertexNativeWorldXYZ": [
+              -0.141195118,
+              -0.418366462,
+              1.834336042
+            ],
+            "faceCenterNativeWorldXYZ": [
+              -0.135835022,
+              -0.424548656,
+              1.838378072
+            ],
+            "faceNormalLocalXYZ": [
+              0.644663215,
+              0.716881573,
+              0.26549986
+            ]
+          },
+          {
+            "faceIndex": 327,
+            "vertexIndex": 611,
+            "faceVertexNormalProjectionLocalM": -0.0003033250104635954,
+            "vertexNativeWorldXYZ": [
+              -0.130941123,
+              -0.418080658,
+              1.832804441
+            ],
+            "faceCenterNativeWorldXYZ": [
+              -0.126208156,
+              -0.424940348,
+              1.836611271
+            ],
+            "faceNormalLocalXYZ": [
+              -0.644663215,
+              -0.716881573,
+              -0.26549986
+            ]
+          },
+          {
+            "faceIndex": 332,
+            "vertexIndex": 174,
+            "faceVertexNormalProjectionLocalM": -0.0001428488740202738,
+            "vertexNativeWorldXYZ": [
+              -0.101743408,
+              -0.455943584,
+              1.861943841
+            ],
+            "faceCenterNativeWorldXYZ": [
+              -0.110680275,
+              -0.447831362,
+              1.85043931
+            ],
+            "faceNormalLocalXYZ": [
+              0.639149666,
+              0.768734932,
+              0.023114631
+            ]
+          },
+          {
+            "faceIndex": 333,
+            "vertexIndex": 622,
+            "faceVertexNormalProjectionLocalM": -0.0006498261172964703,
+            "vertexNativeWorldXYZ": [
+              -0.09173394,
+              -0.455743909,
+              1.861683011
+            ],
+            "faceCenterNativeWorldXYZ": [
+              -0.101590775,
+              -0.44827354,
+              1.849452019
+            ],
+            "faceNormalLocalXYZ": [
+              -0.639149666,
+              -0.768734932,
+              -0.023114631
+            ]
+          }
+        ]
+      },
+      "offsetRawCutter": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.0002052913579596954,
+          "signedVolumeWorldM3": 0.0002052913579596954,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.0002052913579596954,
+          "signedVolumeWorldM3": 0.0002052913579596954,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "sourceWallVsOffsetCutterSurface": {
+        "bvhTrianglePairCandidateCount": 68,
+        "strictCrossing": {
+          "method": "Strict noncoplanar edge-through-face tests on evaluated triangles; tangent/coplanar contacts excluded",
+          "confirmedSubjectTriangleCount": 25,
+          "confirmedTargetTriangleCount": 27,
+          "subjectEvaluatedTriangleIndices": [
+            614,
+            627,
+            636,
+            638,
+            639,
+            642,
+            643,
+            648,
+            653,
+            654,
+            658,
+            659,
+            662,
+            663,
+            664,
+            666,
+            667,
+            671,
+            686,
+            690,
+            691,
+            693,
+            694,
+            695,
+            718
+          ],
+          "targetEvaluatedTriangleIndices": [
+            614,
+            624,
+            636,
+            638,
+            639,
+            642,
+            643,
+            651,
+            653,
+            654,
+            655,
+            658,
+            659,
+            662,
+            663,
+            664,
+            665,
+            666,
+            667,
+            670,
+            671,
+            686,
+            690,
+            691,
+            694,
+            695,
+            718
+          ],
+          "subjectCrossingRestWorldBoundsNativeXYZ": [
+            [
+              -0.1444863,
+              -0.0913895
+            ],
+            [
+              -0.4628906,
+              -0.4124172
+            ],
+            [
+              1.8314983,
+              1.8609999
+            ]
+          ],
+          "targetCrossingRestWorldBoundsNativeXYZ": [
+            [
+              -0.1411951,
+              -0.0904776
+            ],
+            [
+              -0.4631738,
+              -0.4151263
+            ],
+            [
+              1.8308239,
+              1.8619438
+            ]
+          ],
+          "examples": [
+            {
+              "subjectEvaluatedTriangle": 654,
+              "targetEvaluatedTriangle": 655,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1315681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  -0.1253056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  -0.120709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1309411,
+                  -0.4180807,
+                  1.8328044
+                ],
+                [
+                  -0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ],
+                [
+                  -0.1281941,
+                  -0.4237345,
+                  1.8364896
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 654,
+              "targetEvaluatedTriangle": 654,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1315681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  -0.1253056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  -0.120709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1309411,
+                  -0.4180807,
+                  1.8328044
+                ],
+                [
+                  -0.1251953,
+                  -0.4259741,
+                  1.8347536
+                ],
+                [
+                  -0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 654,
+              "targetEvaluatedTriangle": 651,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1315681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  -0.1253056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  -0.120709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1309411,
+                  -0.4180807,
+                  1.8328044
+                ],
+                [
+                  -0.1281941,
+                  -0.4237345,
+                  1.8364896
+                ],
+                [
+                  -0.1347737,
+                  -0.4151263,
+                  1.8308239
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 658,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1254771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  -0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  -0.1087122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1251953,
+                  -0.4259741,
+                  1.8347536
+                ],
+                [
+                  -0.118088,
+                  -0.4334942,
+                  1.8368993
+                ],
+                [
+                  -0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 659,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1254771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  -0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  -0.1087122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1251953,
+                  -0.4259741,
+                  1.8347536
+                ],
+                [
+                  -0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ],
+                [
+                  -0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 662,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1254771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  -0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  -0.1087122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.118088,
+                  -0.4334942,
+                  1.8368993
+                ],
+                [
+                  -0.1100915,
+                  -0.4409967,
+                  1.8390462
+                ],
+                [
+                  -0.1022672,
+                  -0.4482602,
+                  1.8541964
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 663,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1254771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  -0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  -0.1087122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.118088,
+                  -0.4334942,
+                  1.8368993
+                ],
+                [
+                  -0.1022672,
+                  -0.4482602,
+                  1.8541964
+                ],
+                [
+                  -0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 686,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1254771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  -0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  -0.1087122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ],
+                [
+                  -0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ],
+                [
+                  -0.1105556,
+                  -0.4449334,
+                  1.8417217
+                ]
+              ]
+            }
+          ],
+          "limits": "Surface penetration evidence only; no containment depth or continuous sweep proof."
+        }
+      },
+      "originalMountMinusOffsetCutterBooleanResidual": {
+        "vertices": 18,
+        "polygons": 16,
+        "triangles": 20,
+        "signedVolumeObjectLocalM3": 1.6385873398878595e-09,
+        "winding": {
+          "uniqueEdges": 26,
+          "boundaryEdges": 0,
+          "twoFaceEdges": 26,
+          "oppositeDirection": 26,
+          "sameDirection": 0,
+          "nonManifoldEdges": 0
+        },
+        "worldBoundsNativeXYZ": [
+          [
+            -0.13962404429912567,
+            -0.10227064043283463
+          ],
+          [
+            -0.45530715584754944,
+            -0.42000558972358704
+          ],
+          [
+            1.8340972661972046,
+            1.8604974746704102
+          ]
+        ]
+      },
+      "V7Brow": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 804,
+          "polygons": 773,
+          "triangles": 1604,
+          "signedVolumeObjectLocalM3": 4.009566925317063e-05,
+          "signedVolumeWorldM3": 4.009566925317063e-05,
+          "winding": {
+            "uniqueEdges": 1575,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1575,
+            "oppositeDirection": 1575,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 804,
+          "polygons": 773,
+          "triangles": 1604,
+          "signedVolumeObjectLocalM3": 4.009566925317063e-05,
+          "signedVolumeWorldM3": 4.009566925317063e-05,
+          "winding": {
+            "uniqueEdges": 1575,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1575,
+            "oppositeDirection": 1575,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "V7BrowVsEvaluatedMountingWallRest": {
+        "bvhTrianglePairCandidateCount": 110,
+        "strictCrossing": {
+          "method": "Strict noncoplanar edge-through-face tests on evaluated triangles; tangent/coplanar contacts excluded",
+          "confirmedSubjectTriangleCount": 90,
+          "confirmedTargetTriangleCount": 12,
+          "subjectEvaluatedTriangleIndices": [
+            1326,
+            1349,
+            1359,
+            1360,
+            1361,
+            1366,
+            1367,
+            1368,
+            1369,
+            1370,
+            1371,
+            1372,
+            1392,
+            1393,
+            1399,
+            1400,
+            1402,
+            1403,
+            1415,
+            1416,
+            1418,
+            1420,
+            1421,
+            1427,
+            1428,
+            1429,
+            1433,
+            1434,
+            1441,
+            1446,
+            1452,
+            1453,
+            1454,
+            1456,
+            1464,
+            1465,
+            1467,
+            1476,
+            1478,
+            1479,
+            1480,
+            1481,
+            1482,
+            1483,
+            1491,
+            1498,
+            1499,
+            1500,
+            1502,
+            1503,
+            1506,
+            1508,
+            1509,
+            1510,
+            1512,
+            1520,
+            1521,
+            1523,
+            1534,
+            1536,
+            1537,
+            1538,
+            1539,
+            1540,
+            1541,
+            1544,
+            1552,
+            1553,
+            1559,
+            1560,
+            1561,
+            1565,
+            1566,
+            1568,
+            1575,
+            1576,
+            1577,
+            1582,
+            1583,
+            1586,
+            1589,
+            1590,
+            1591,
+            1594,
+            1597,
+            1598,
+            1599,
+            1600,
+            1601,
+            1602
+          ],
+          "targetEvaluatedTriangleIndices": [
+            658,
+            659,
+            660,
+            662,
+            663,
+            664,
+            665,
+            666,
+            667,
+            686,
+            690,
+            691
+          ],
+          "subjectCrossingRestWorldBoundsNativeXYZ": [
+            [
+              -0.117176,
+              -0.0982207
+            ],
+            [
+              -0.4508372,
+              -0.434952
+            ],
+            [
+              1.8460001,
+              1.854872
+            ]
+          ],
+          "targetCrossingRestWorldBoundsNativeXYZ": [
+            [
+              -0.1253056,
+              -0.0924179
+            ],
+            [
+              -0.456,
+              -0.4257067
+            ],
+            [
+              1.8357109,
+              1.8609999
+            ]
+          ],
+          "examples": [
+            {
+              "subjectEvaluatedTriangle": 1326,
+              "targetEvaluatedTriangle": 659,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  -0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  -0.117176,
+                  -0.434952,
+                  1.8481519
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1253056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  -0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  -0.120709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1326,
+              "targetEvaluatedTriangle": 658,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  -0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  -0.117176,
+                  -0.434952,
+                  1.8481519
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1253056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  -0.1181052,
+                  -0.4331899,
+                  1.8378518
+                ],
+                [
+                  -0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1326,
+              "targetEvaluatedTriangle": 686,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  -0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  -0.117176,
+                  -0.434952,
+                  1.8481519
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.120709,
+                  -0.4315919,
+                  1.843299
+                ],
+                [
+                  -0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  -0.1112907,
+                  -0.4455079,
+                  1.8420815
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1326,
+              "targetEvaluatedTriangle": 663,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  -0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  -0.117176,
+                  -0.434952,
+                  1.8481519
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1181052,
+                  -0.4331899,
+                  1.8378518
+                ],
+                [
+                  -0.1024316,
+                  -0.447864,
+                  1.8550997
+                ],
+                [
+                  -0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1456,
+              "targetEvaluatedTriangle": 666,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.098849,
+                  -0.4502109,
+                  1.8516051
+                ],
+                [
+                  -0.098875,
+                  -0.45075,
+                  1.8512499
+                ],
+                [
+                  -0.0982207,
+                  -0.4508372,
+                  1.8515117
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  -0.1016111,
+                  -0.4481562,
+                  1.8421332
+                ],
+                [
+                  -0.0924179,
+                  -0.456,
+                  1.8609999
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1544,
+              "targetEvaluatedTriangle": 666,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.098875,
+                  -0.45075,
+                  1.8512499
+                ],
+                [
+                  -0.0983477,
+                  -0.45075,
+                  1.8512499
+                ],
+                [
+                  -0.0982207,
+                  -0.4508372,
+                  1.8515117
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  -0.1016111,
+                  -0.4481562,
+                  1.8421332
+                ],
+                [
+                  -0.0924179,
+                  -0.456,
+                  1.8609999
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1553,
+              "targetEvaluatedTriangle": 666,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.098875,
+                  -0.45075,
+                  1.8512499
+                ],
+                [
+                  -0.0987114,
+                  -0.4505,
+                  1.8504999
+                ],
+                [
+                  -0.0983477,
+                  -0.45075,
+                  1.8512499
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  -0.1016111,
+                  -0.4481562,
+                  1.8421332
+                ],
+                [
+                  -0.0924179,
+                  -0.456,
+                  1.8609999
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1552,
+              "targetEvaluatedTriangle": 666,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  -0.098875,
+                  -0.45075,
+                  1.8512499
+                ],
+                [
+                  -0.10075,
+                  -0.4505,
+                  1.8504999
+                ],
+                [
+                  -0.0987114,
+                  -0.4505,
+                  1.8504999
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  -0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  -0.1016111,
+                  -0.4481562,
+                  1.8421332
+                ],
+                [
+                  -0.0924179,
+                  -0.456,
+                  1.8609999
+                ]
+              ]
+            }
+          ],
+          "limits": "Surface penetration evidence only; no containment depth or continuous sweep proof."
+        },
+        "savedExampleTriangleIndices": {
+          "brow": 1326,
+          "mountingPlate": 659
+        },
+        "independentIntersectionCheck": {
+          "independentSegmentTriangleHitsNativeXYZ": [
+            [
+              -0.11294324,
+              -0.438710868,
+              1.848220825
+            ],
+            [
+              -0.113516934,
+              -0.438292593,
+              1.84815836
+            ]
+          ],
+          "browTriangleNativeXYZ": [
+            [
+              -0.110591121,
+              -0.439160794,
+              1.849213958
+            ],
+            [
+              -0.113683,
+              -0.439285994,
+              1.847491026
+            ],
+            [
+              -0.117176004,
+              -0.434951991,
+              1.848151922
+            ]
+          ],
+          "mountTriangleNativeXYZ": [
+            [
+              -0.125305563,
+              -0.425706744,
+              1.835710883
+            ],
+            [
+              -0.111976363,
+              -0.439727932,
+              1.849199295
+            ],
+            [
+              -0.120708957,
+              -0.431591868,
+              1.843299031
+            ]
+          ],
+          "browPlaneSignedVertexDistancesM": [
+            0.0105841509,
+            -0.0008278032,
+            0.0038645156
+          ],
+          "mountPlaneSignedVertexDistancesM": [
+            -0.0012067477,
+            0.0010632151,
+            -0.0006419537
+          ]
+        },
+        "predictedBooleanParity": {
+          "predictedTriangleCount": 1604,
+          "actualTriangleCount": 1604,
+          "exactCanonicalTriangleSetMatch": true,
+          "matchingTriangleCount": 1604
+        }
+      }
+    },
+    "1": {
+      "browName": "Forged orbital brow 1",
+      "mountName": "Forged orbital mounting plate 1",
+      "V6Brow": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 738,
+          "polygons": 736,
+          "triangles": 1472,
+          "signedVolumeObjectLocalM3": 4.0096294473934695e-05,
+          "signedVolumeWorldM3": 4.0096294473934695e-05,
+          "winding": {
+            "uniqueEdges": 1472,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1472,
+            "oppositeDirection": 1472,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 738,
+          "polygons": 736,
+          "triangles": 1472,
+          "signedVolumeObjectLocalM3": 4.0096294473934695e-05,
+          "signedVolumeWorldM3": 4.0096294473934695e-05,
+          "winding": {
+            "uniqueEdges": 1472,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1472,
+            "oppositeDirection": 1472,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "V6EvaluatedMountingWall": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.00015515540333144173,
+          "signedVolumeWorldM3": 0.00015515540333144173,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.00015515540333144173,
+          "signedVolumeWorldM3": 0.00015515540333144173,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "mountRawEvaluatedGeometryParity": {
+        "exactCanonicalWorldTriangleSetMatch": true,
+        "rawTriangleCount": 1792,
+        "evaluatedTriangleCount": 1792,
+        "modifierStack": []
+      },
+      "mountObjectScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mountWorldLinearDeterminant": 1.0,
+      "normalOffset": {
+        "method": "reproduced executed-generator.py: bm.normal_update(); vertex.co += vertex.normal * .001 in copied mount mesh local coordinates",
+        "vertexCount": 896,
+        "worldDisplacementRangeM": [
+          0.000999999885050777,
+          0.0010000001728205767
+        ],
+        "worldNormalComponentRangeM": [
+          0.000999999865598511,
+          0.0010000002075685188
+        ],
+        "worldTangentialComponentRangeM": [
+          0.0,
+          2.8515813671787943e-10
+        ],
+        "faceVertexNormalProjectionRangeLocalM": [
+          -0.0007584753548144363,
+          0.0009999954781960696
+        ],
+        "faceVertexProjectionAtOrBelowZeroCount": 6,
+        "faceVertexProjectionCount": 3584,
+        "inwardFaceVertexExamples": [
+          {
+            "faceIndex": 318,
+            "vertexIndex": 167,
+            "faceVertexNormalProjectionLocalM": -0.00019047655223403126,
+            "vertexNativeWorldXYZ": [
+              0.110288002,
+              -0.44756484,
+              1.842872024
+            ],
+            "faceCenterNativeWorldXYZ": [
+              0.118285879,
+              -0.440175444,
+              1.84256804
+            ],
+            "faceNormalLocalXYZ": [
+              0.647337854,
+              -0.582497358,
+              0.491579652
+            ]
+          },
+          {
+            "faceIndex": 319,
+            "vertexIndex": 615,
+            "faceVertexNormalProjectionLocalM": -0.0007584753548144363,
+            "vertexNativeWorldXYZ": [
+              0.102270454,
+              -0.448093355,
+              1.842882395
+            ],
+            "faceCenterNativeWorldXYZ": [
+              0.108927816,
+              -0.439958841,
+              1.841795325
+            ],
+            "faceNormalLocalXYZ": [
+              -0.647338033,
+              0.58249718,
+              -0.491579682
+            ]
+          },
+          {
+            "faceIndex": 326,
+            "vertexIndex": 163,
+            "faceVertexNormalProjectionLocalM": -0.0003033250104635954,
+            "vertexNativeWorldXYZ": [
+              0.141195118,
+              -0.418366462,
+              1.834336042
+            ],
+            "faceCenterNativeWorldXYZ": [
+              0.135835022,
+              -0.424548656,
+              1.838378072
+            ],
+            "faceNormalLocalXYZ": [
+              -0.644663215,
+              0.716881573,
+              0.26549986
+            ]
+          },
+          {
+            "faceIndex": 327,
+            "vertexIndex": 611,
+            "faceVertexNormalProjectionLocalM": -0.00030332503956742585,
+            "vertexNativeWorldXYZ": [
+              0.130941123,
+              -0.418080658,
+              1.832804441
+            ],
+            "faceCenterNativeWorldXYZ": [
+              0.126208156,
+              -0.424940348,
+              1.836611271
+            ],
+            "faceNormalLocalXYZ": [
+              0.644663215,
+              -0.716881573,
+              -0.26549986
+            ]
+          },
+          {
+            "faceIndex": 332,
+            "vertexIndex": 174,
+            "faceVertexNormalProjectionLocalM": -0.00014284889584814664,
+            "vertexNativeWorldXYZ": [
+              0.101743408,
+              -0.455943584,
+              1.861943841
+            ],
+            "faceCenterNativeWorldXYZ": [
+              0.110680275,
+              -0.447831392,
+              1.85043931
+            ],
+            "faceNormalLocalXYZ": [
+              -0.639149666,
+              0.768734932,
+              0.023114631
+            ]
+          },
+          {
+            "faceIndex": 333,
+            "vertexIndex": 622,
+            "faceVertexNormalProjectionLocalM": -0.000649826160952216,
+            "vertexNativeWorldXYZ": [
+              0.09173394,
+              -0.455743909,
+              1.861683011
+            ],
+            "faceCenterNativeWorldXYZ": [
+              0.101590775,
+              -0.44827354,
+              1.849452019
+            ],
+            "faceNormalLocalXYZ": [
+              0.639149666,
+              -0.768734932,
+              -0.023114631
+            ]
+          }
+        ]
+      },
+      "offsetRawCutter": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.00020450945589452663,
+          "signedVolumeWorldM3": 0.00020450945589452663,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 896,
+          "polygons": 896,
+          "triangles": 1792,
+          "signedVolumeObjectLocalM3": 0.00020450945589452663,
+          "signedVolumeWorldM3": 0.00020450945589452663,
+          "winding": {
+            "uniqueEdges": 1792,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1792,
+            "oppositeDirection": 1792,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "sourceWallVsOffsetCutterSurface": {
+        "bvhTrianglePairCandidateCount": 66,
+        "strictCrossing": {
+          "method": "Strict noncoplanar edge-through-face tests on evaluated triangles; tangent/coplanar contacts excluded",
+          "confirmedSubjectTriangleCount": 27,
+          "confirmedTargetTriangleCount": 25,
+          "subjectEvaluatedTriangleIndices": [
+            614,
+            615,
+            626,
+            636,
+            638,
+            642,
+            643,
+            649,
+            652,
+            653,
+            655,
+            658,
+            662,
+            663,
+            664,
+            665,
+            666,
+            667,
+            670,
+            671,
+            686,
+            687,
+            690,
+            691,
+            692,
+            695,
+            719
+          ],
+          "targetEvaluatedTriangleIndices": [
+            614,
+            615,
+            625,
+            637,
+            638,
+            642,
+            643,
+            650,
+            652,
+            655,
+            658,
+            662,
+            663,
+            664,
+            665,
+            666,
+            667,
+            670,
+            671,
+            686,
+            687,
+            690,
+            691,
+            695,
+            719
+          ],
+          "subjectCrossingRestWorldBoundsNativeXYZ": [
+            [
+              0.0924179,
+              0.1444863
+            ],
+            [
+              -0.4628906,
+              -0.4153198
+            ],
+            [
+              1.8314983,
+              1.8609999
+            ]
+          ],
+          "targetCrossingRestWorldBoundsNativeXYZ": [
+            [
+              0.0917339,
+              0.1437501
+            ],
+            [
+              -0.4559436,
+              -0.4128909
+            ],
+            [
+              1.8308239,
+              1.8619438
+            ]
+          ],
+          "examples": [
+            {
+              "subjectEvaluatedTriangle": 653,
+              "targetEvaluatedTriangle": 652,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1405681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  0.129709,
+                  -0.4315919,
+                  1.843299
+                ],
+                [
+                  0.1375037,
+                  -0.4234558,
+                  1.8373986
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1411951,
+                  -0.4183665,
+                  1.834336
+                ],
+                [
+                  0.1344158,
+                  -0.4254394,
+                  1.8366681
+                ],
+                [
+                  0.1299158,
+                  -0.4312116,
+                  1.8442005
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 653,
+              "targetEvaluatedTriangle": 625,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1405681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  0.129709,
+                  -0.4315919,
+                  1.843299
+                ],
+                [
+                  0.1375037,
+                  -0.4234558,
+                  1.8373986
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1437501,
+                  -0.4128909,
+                  1.8365411
+                ],
+                [
+                  0.1344158,
+                  -0.4254394,
+                  1.8366681
+                ],
+                [
+                  0.1411951,
+                  -0.4183665,
+                  1.834336
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 652,
+              "targetEvaluatedTriangle": 652,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1405681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  0.1343056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  0.129709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1411951,
+                  -0.4183665,
+                  1.834336
+                ],
+                [
+                  0.1344158,
+                  -0.4254394,
+                  1.8366681
+                ],
+                [
+                  0.1299158,
+                  -0.4312116,
+                  1.8442005
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 652,
+              "targetEvaluatedTriangle": 625,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1405681,
+                  -0.4182236,
+                  1.8335702
+                ],
+                [
+                  0.1343056,
+                  -0.4257067,
+                  1.8357109
+                ],
+                [
+                  0.129709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1437501,
+                  -0.4128909,
+                  1.8365411
+                ],
+                [
+                  0.1344158,
+                  -0.4254394,
+                  1.8366681
+                ],
+                [
+                  0.1411951,
+                  -0.4183665,
+                  1.834336
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 615,
+              "targetEvaluatedTriangle": 658,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1164771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  0.1254771,
+                  -0.4294688,
+                  1.844996
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ],
+                [
+                  0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ],
+                [
+                  0.118088,
+                  -0.4334942,
+                  1.8368993
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 615,
+              "targetEvaluatedTriangle": 687,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1164771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  0.1177122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  0.1254771,
+                  -0.4294688,
+                  1.844996
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1194274,
+                  -0.4362772,
+                  1.8365959
+                ],
+                [
+                  0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ],
+                [
+                  0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 658,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1164771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  0.1087122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  0.1177122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1205021,
+                  -0.4319721,
+                  1.8423976
+                ],
+                [
+                  0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ],
+                [
+                  0.118088,
+                  -0.4334942,
+                  1.8368993
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 614,
+              "targetEvaluatedTriangle": 663,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1164771,
+                  -0.4294688,
+                  1.844996
+                ],
+                [
+                  0.1087122,
+                  -0.43925,
+                  1.8434964
+                ],
+                [
+                  0.1177122,
+                  -0.43925,
+                  1.8434964
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1117921,
+                  -0.4401212,
+                  1.8482985
+                ],
+                [
+                  0.1100915,
+                  -0.4409967,
+                  1.8390462
+                ],
+                [
+                  0.118088,
+                  -0.4334942,
+                  1.8368993
+                ]
+              ]
+            }
+          ],
+          "limits": "Surface penetration evidence only; no containment depth or continuous sweep proof."
+        }
+      },
+      "originalMountMinusOffsetCutterBooleanResidual": {
+        "vertices": 21,
+        "polygons": 16,
+        "triangles": 26,
+        "signedVolumeObjectLocalM3": 8.834083094674505e-10,
+        "winding": {
+          "uniqueEdges": 29,
+          "boundaryEdges": 0,
+          "twoFaceEdges": 29,
+          "oppositeDirection": 29,
+          "sameDirection": 0,
+          "nonManifoldEdges": 0
+        },
+        "worldBoundsNativeXYZ": [
+          [
+            0.1022530198097229,
+            0.13962404429912567
+          ],
+          [
+            -0.4553214907646179,
+            -0.42000558972358704
+          ],
+          [
+            1.8340972661972046,
+            1.860507845878601
+          ]
+        ]
+      },
+      "V7Brow": {
+        "objectScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrixLocal": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.335000008
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.637999892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldLinearDeterminant": 1.0,
+        "raw": {
+          "vertices": 803,
+          "polygons": 773,
+          "triangles": 1602,
+          "signedVolumeObjectLocalM3": 4.009570348711961e-05,
+          "signedVolumeWorldM3": 4.009570348711961e-05,
+          "winding": {
+            "uniqueEdges": 1574,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1574,
+            "oppositeDirection": 1574,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        },
+        "evaluated": {
+          "vertices": 803,
+          "polygons": 773,
+          "triangles": 1602,
+          "signedVolumeObjectLocalM3": 4.009570348711961e-05,
+          "signedVolumeWorldM3": 4.009570348711961e-05,
+          "winding": {
+            "uniqueEdges": 1574,
+            "boundaryEdges": 0,
+            "twoFaceEdges": 1574,
+            "oppositeDirection": 1574,
+            "sameDirection": 0,
+            "nonManifoldEdges": 0
+          }
+        }
+      },
+      "V7BrowVsEvaluatedMountingWallRest": {
+        "bvhTrianglePairCandidateCount": 107,
+        "strictCrossing": {
+          "method": "Strict noncoplanar edge-through-face tests on evaluated triangles; tangent/coplanar contacts excluded",
+          "confirmedSubjectTriangleCount": 89,
+          "confirmedTargetTriangleCount": 12,
+          "subjectEvaluatedTriangleIndices": [
+            1327,
+            1348,
+            1359,
+            1360,
+            1368,
+            1369,
+            1370,
+            1371,
+            1372,
+            1373,
+            1374,
+            1375,
+            1381,
+            1390,
+            1391,
+            1401,
+            1402,
+            1404,
+            1405,
+            1409,
+            1410,
+            1412,
+            1413,
+            1414,
+            1423,
+            1426,
+            1427,
+            1428,
+            1429,
+            1432,
+            1433,
+            1435,
+            1436,
+            1442,
+            1443,
+            1450,
+            1452,
+            1453,
+            1454,
+            1455,
+            1456,
+            1457,
+            1458,
+            1467,
+            1468,
+            1469,
+            1481,
+            1487,
+            1498,
+            1499,
+            1501,
+            1502,
+            1503,
+            1506,
+            1507,
+            1508,
+            1512,
+            1513,
+            1522,
+            1524,
+            1525,
+            1536,
+            1538,
+            1539,
+            1540,
+            1541,
+            1544,
+            1550,
+            1551,
+            1552,
+            1556,
+            1557,
+            1564,
+            1565,
+            1566,
+            1572,
+            1576,
+            1577,
+            1582,
+            1583,
+            1589,
+            1590,
+            1591,
+            1595,
+            1597,
+            1598,
+            1599,
+            1600,
+            1601
+          ],
+          "targetEvaluatedTriangleIndices": [
+            658,
+            660,
+            662,
+            663,
+            664,
+            665,
+            666,
+            667,
+            686,
+            687,
+            690,
+            691
+          ],
+          "subjectCrossingRestWorldBoundsNativeXYZ": [
+            [
+              0.092875,
+              0.1177603
+            ],
+            [
+              -0.4507867,
+              -0.434952
+            ],
+            [
+              1.8460001,
+              1.854872
+            ]
+          ],
+          "targetCrossingRestWorldBoundsNativeXYZ": [
+            [
+              0.0924179,
+              0.1271052
+            ],
+            [
+              -0.456,
+              -0.4315919
+            ],
+            [
+              1.8369427,
+              1.8609999
+            ]
+          ],
+          "examples": [
+            {
+              "subjectEvaluatedTriangle": 1327,
+              "targetEvaluatedTriangle": 687,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  0.117176,
+                  -0.434952,
+                  1.8481519
+                ],
+                [
+                  0.113683,
+                  -0.439286,
+                  1.847491
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1201947,
+                  -0.4368166,
+                  1.8369427
+                ],
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.120709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1327,
+              "targetEvaluatedTriangle": 663,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  0.117176,
+                  -0.434952,
+                  1.8481519
+                ],
+                [
+                  0.113683,
+                  -0.439286,
+                  1.847491
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  0.1181052,
+                  -0.4331899,
+                  1.8378518
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1327,
+              "targetEvaluatedTriangle": 658,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  0.117176,
+                  -0.434952,
+                  1.8481519
+                ],
+                [
+                  0.113683,
+                  -0.439286,
+                  1.847491
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.120709,
+                  -0.4315919,
+                  1.843299
+                ],
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.1181052,
+                  -0.4331899,
+                  1.8378518
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1375,
+              "targetEvaluatedTriangle": 687,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  0.1122142,
+                  -0.4397262,
+                  1.8480126
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1201947,
+                  -0.4368166,
+                  1.8369427
+                ],
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.120709,
+                  -0.4315919,
+                  1.843299
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1375,
+              "targetEvaluatedTriangle": 663,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  0.1122142,
+                  -0.4397262,
+                  1.8480126
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  0.1181052,
+                  -0.4331899,
+                  1.8378518
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1375,
+              "targetEvaluatedTriangle": 686,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ],
+                [
+                  0.113683,
+                  -0.439286,
+                  1.847491
+                ],
+                [
+                  0.1122142,
+                  -0.4397262,
+                  1.8480126
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1201947,
+                  -0.4368166,
+                  1.8369427
+                ],
+                [
+                  0.1112907,
+                  -0.4455079,
+                  1.8420815
+                ],
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1374,
+              "targetEvaluatedTriangle": 663,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1122142,
+                  -0.4397262,
+                  1.8480126
+                ],
+                [
+                  0.1119474,
+                  -0.4399576,
+                  1.8480172
+                ],
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ],
+                [
+                  0.1181052,
+                  -0.4331899,
+                  1.8378518
+                ]
+              ]
+            },
+            {
+              "subjectEvaluatedTriangle": 1374,
+              "targetEvaluatedTriangle": 662,
+              "subjectRestWorldNativeXYZ": [
+                [
+                  0.1122142,
+                  -0.4397262,
+                  1.8480126
+                ],
+                [
+                  0.1119474,
+                  -0.4399576,
+                  1.8480172
+                ],
+                [
+                  0.1105911,
+                  -0.4391608,
+                  1.849214
+                ]
+              ],
+              "targetRestWorldNativeXYZ": [
+                [
+                  0.1119764,
+                  -0.4397279,
+                  1.8491993
+                ],
+                [
+                  0.1024316,
+                  -0.447864,
+                  1.8550997
+                ],
+                [
+                  0.1100926,
+                  -0.4406731,
+                  1.8399924
+                ]
+              ]
+            }
+          ],
+          "limits": "Surface penetration evidence only; no containment depth or continuous sweep proof."
+        },
+        "savedExampleTriangleIndices": {
+          "brow": 1327,
+          "mountingPlate": 687
+        },
+        "independentIntersectionCheck": {
+          "independentSegmentTriangleHitsNativeXYZ": [
+            [
+              0.112967938,
+              -0.439257026,
+              1.847889543
+            ],
+            [
+              0.113516934,
+              -0.438292593,
+              1.84815836
+            ]
+          ],
+          "browTriangleNativeXYZ": [
+            [
+              0.110591121,
+              -0.439160794,
+              1.849213958
+            ],
+            [
+              0.117176004,
+              -0.434951991,
+              1.848151922
+            ],
+            [
+              0.113683,
+              -0.439285994,
+              1.847491026
+            ]
+          ],
+          "mountTriangleNativeXYZ": [
+            [
+              0.120194733,
+              -0.436816603,
+              1.836942673
+            ],
+            [
+              0.111976363,
+              -0.439727932,
+              1.849199295
+            ],
+            [
+              0.120708957,
+              -0.431591868,
+              1.843299031
+            ]
+          ],
+          "browPlaneSignedVertexDistancesM": [
+            0.0066790025,
+            -0.0008278032,
+            0.0038645156
+          ],
+          "mountPlaneSignedVertexDistancesM": [
+            0.0013436924,
+            -0.0009711582,
+            -0.0004042506
+          ]
+        },
+        "predictedBooleanParity": {
+          "predictedTriangleCount": 1602,
+          "actualTriangleCount": 1602,
+          "exactCanonicalTriangleSetMatch": true,
+          "matchingTriangleCount": 1602
+        }
+      }
+    }
+  },
+  "limits": [
+    "Offset containment is evaluated by exact temporary Boolean residual plus surface crossings; it is not a general proof of mathematical set containment.",
+    "Canonical triangle parity is orientation-independent and compares rounded world-space evaluated triangle coordinates.",
+    "The saved-example recheck independently tests segment-through-triangle intersections; it does not establish penetration depth or correct design intent.",
+    "All temporary duplicates and modifiers remained in memory; no source file was saved."
+  ],
+  "blenderVersion": "5.2.1 LTS"
+}

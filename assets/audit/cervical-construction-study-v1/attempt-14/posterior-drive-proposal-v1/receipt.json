@@ -1,0 +1,109 @@
+{
+  "schema": "murderbird-posterior-drive-proposal-receipt/v1",
+  "status": "one bounded candidate screen; centerline pierces the body shell, so proposal is held/rejected for this placement",
+  "proposal": {
+    "lowerDriveAnchor": {
+      "owner": "neck",
+      "localNativeXYZ": [
+        -0.16,
+        0.18,
+        0.06
+      ]
+    },
+    "upperHornTip": {
+      "owner": "cervical-upper",
+      "localNativeXYZ": [
+        -0.16,
+        0.08,
+        0.015
+      ]
+    },
+    "envelopeRadiusM": 0.012,
+    "changedOnlyProposedAnchors": true
+  },
+  "inputs": {
+    "native": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-14/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "ef9e28ddbce9d62aabc8181a058640ea1e8b7a339b673df37b913d96699f9440",
+      "bytes": 1946382
+    },
+    "pivotNameComparison": {
+      "attempt07Path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "attempt07Sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+      "attempt14AndAttempt07NativeEmptyCounts": 52,
+      "sortedNameSetsEqual": true
+    },
+    "runtimePosePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "poses": 21,
+      "nativePivots": 52
+    },
+    "upperSweep": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/measured-upper-sweep.json",
+      "sha256": "3ca72f0dfe5d8bde703cf30951f7fb85091e5bdd8e157032606d88c94ce15228",
+      "rangeRad": [
+        -0.091,
+        0.4225
+      ]
+    }
+  },
+  "results": {
+    "upperPitchStrokeM": 0.03321508228524511,
+    "minimumSignedLeverageM": -0.07674876053351909,
+    "maximumSignedLeverageM": -0.04811883775983006,
+    "sampledSignReversal": false,
+    "operatingBodyRayPierceSamples": 18,
+    "operatingPoseCount": 21,
+    "openingBodyRayPierceSamples": 101,
+    "openingSampleCount": 101,
+    "piercedMeshes": {
+      "operatingPoses": {
+        "body": {
+          "sampleCount": 18,
+          "firstPoseOrOpen": "runtime-rest",
+          "lastPoseOrOpen": "inspection-open-1-separation-1",
+          "meshes": [
+            "Short dorsal shell"
+          ]
+        }
+      },
+      "normalBreastOpening": {
+        "body": {
+          "sampleCount": 101,
+          "firstPoseOrOpen": 0.0,
+          "lastPoseOrOpen": 1.0,
+          "meshes": [
+            "Short dorsal shell"
+          ]
+        }
+      }
+    }
+  },
+  "outputs": {
+    "analyze-posterior-drive.py": {
+      "sha256": "20822e6da59d7191ac428eabd7ff145e49dd911d0fdd0f47cdab58fc1da1c22e",
+      "bytes": 20167
+    },
+    "posterior-drive-clearance-final.json": {
+      "sha256": "52c3d545bf28a1fe53ed101b45e234b1714eab471c2deae71f988d42744938bf",
+      "bytes": 1093122
+    },
+    "posterior-drive-clearance-initial.json": {
+      "sha256": "a71ef96deb80a11540edf8ea140843ee7f315398a7dbd446db7eee13997e4c07",
+      "bytes": 1052789
+    },
+    "report.md": {
+      "sha256": "d951ef12e197cda8935457db18d24a94c8559fdc72f250748c3f3e3601bc44c6",
+      "bytes": 2317
+    }
+  },
+  "limits": [
+    "BVH point/segment-distance screen plus exact BVH ray hits at discrete samples",
+    "No interpolation guarantee between pose/opening samples",
+    "12mm is a straight-envelope proxy only",
+    "No actuator body/fittings, full solid-containment or physical support/load proof",
+    "No runtime or artistic acceptance"
+  ]
+}

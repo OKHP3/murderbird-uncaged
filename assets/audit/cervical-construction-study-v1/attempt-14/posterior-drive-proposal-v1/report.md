@@ -1,0 +1,11 @@
+# Posterior drive anchor screen
+
+This read-only screen tests the one requested posterior anchor pair on attempt 14. The proposed lower anchor is neck-local `(-0.160, +0.180, +0.060)` and the upper anchor is cervical-upper-local `(-0.160, +0.080, +0.015)`. Attempt 14 has the same 52 native pivot names as attempt 07, so the captured 21-pose packet was replayed after that exact name-set check. No hardware, panel path, native model, Maker control, or application was changed.
+
+Over the specified absolute upper-pitch interval, −0.091 to +0.4225 rad, the sampled center-to-center link length ranges from 272.5 mm to 305.7 mm, a 33.2 mm stroke. The signed moment arm about the upper pivot's local +X axis remains negative throughout, from −48.1 mm to −76.7 mm, with no sampled sign reversal. This is a kinematic line calculation, not actuator force, load, or attachment validation.
+
+The proposal is geometrically rejected by the current body shell. The straight centerline ray pierces `Short dorsal shell` in 18 of the 21 captured operating poses and all 101 standard breast-opening samples. The 12 mm envelope proxy also overlaps the body's sampled surface distance in all 21 operating poses and all 101 opening samples; the minimum sampled centerline-to-surface distance is 0.153 mm during Advanced jump and 0.417 mm in the opening sweep. These are direct sampled surface results, not a full solid-containment analysis.
+
+Among the other queried groups, the smallest sampled operating distances are 39.5 mm to the right mantle, 49.2 mm to the upper cervical group, and 53.7 mm to the neck. During the opening sweep, the minima are 47.3 mm, 49.2 mm, and 53.7 mm respectively. The 12 mm proxy has no sampled direct proximity to those three groups. Full per-pose and per-opening results, including ray hits, are in [posterior-drive-clearance-final.json](posterior-drive-clearance-final.json).
+
+The line screen does not prove clearance between samples, full solid containment, or fit/support of a real actuator and its end fittings. The unaugmented first run is preserved as [posterior-drive-clearance-initial.json](posterior-drive-clearance-initial.json); the final run adds BVH segment ray tests to identify centerline surface piercings. Exact input and output hashes are recorded in [receipt.json](receipt.json).

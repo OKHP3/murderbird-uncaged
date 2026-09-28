@@ -29,7 +29,7 @@ Attempt07 native is `751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3
 
 Attempt08 native is `1703786958ca2fc188ffeb4b0c43f79f0b8327556427723738ad47e333e5f558`; diagnostic GLB is `cff0d74b12f6f92960f6182e623f7bd6931adf64d35aa0d76ceb1d053dcccfa5`. Primary review rejected its visible pointed flaps, jagged rim strips, hollow side window and detached-looking lower pieces. Removing interfering faces did not produce credible construction.
 
-Attempts09–12 tried closed sector interfaces and whole side guards. They remain held: the resulting bowl-like bands, projecting strips and hollow transitions lose the intended curved neck. Attempt12 native is `d5fb38f474b708d4e0c305efdb12b0df4e601c6ef1a023aa0947038b8560fbc5`. The primary agent reviewed its profile and agrees with the worker's hold. No attempt13 was started. The [consolidation report](../assets/audit/cervical-construction-study-v1/construction-consolidation-v1.md) and [index](../assets/audit/cervical-construction-study-v1/study-index.json) preserve exact versions, strict penetrating triangle evidence, editable neighborhoods and the limits of replaying attempt07 poses on later variants.
+Attempts09–12 tried closed sector interfaces and whole side guards. They remain held: the resulting bowl-like bands, projecting strips and hollow transitions lose the intended curved neck. Attempt12 native is `d5fb38f474b708d4e0c305efdb12b0df4e601c6ef1a023aa0947038b8560fbc5`. The primary agent reviewed its profile and agrees with the worker's hold. At that consolidation checkpoint, attempt13 had not started; subsequent 13–14 are recorded below. The [consolidation report](../assets/audit/cervical-construction-study-v1/construction-consolidation-v1.md) and [index](../assets/audit/cervical-construction-study-v1/study-index.json) preserve exact versions, strict penetrating triangle evidence, editable neighborhoods and the limits of replaying attempt07 poses on later variants.
 
 Attempt07 independently matches its diagnostic export across all106 groups,52 pivots and261,828 triangles. Its contact interference spans substantial parts of courses3/4 and the backing, so shortening a lip is insufficient. Later annular journal seats are useful proposed construction, but attempt07's overlapping solid rail/race endpoints are not certified bearing interfaces.
 
@@ -55,3 +55,14 @@ The [attempt14 review](../assets/audit/cervical-construction-study-v1/attempt-14
 Native14 is `ef9e28ddbce9d62aabc8181a058640ea1e8b7a339b673df37b913d96699f9440`. Its52 pivots and462 guide curves remain exact. Five meshes changed from13, with704 other meshes preserved. The21 poses replay the verified07 runtime hierarchy; they are not a fresh14 browser capture or a continuous sweep proof.
 
 A separate [breast access proposal](../assets/audit/cervical-construction-study-v1/breast-access-proposal-v1/report.md) identifies the existing lateral swing as the proposed actuator conflict. Its first route reused the global separation parameter and remains diagnostic only. Any follow-up must move only the breast panel during opening, preserve the independent global separation control, and provide real support for a sliding panel. No access-path code has been changed.
+
+
+## Drive and access routes ruled out
+
+The [panel-only staged slide](../assets/audit/cervical-construction-study-v1/breast-access-proposal-v2/report.md) still crosses the proposed actuator during its middle stage. Its closest sampled surface distance is about 0.072 mm, below the 12 mm line-envelope screen. It is a rejected diagnostic, with no production access-path change.
+
+The [opposite-side placement](../assets/audit/cervical-construction-study-v1/attempt-07/control-mount-proposal-v5-opposite-side/report.md) also conflicts with the standard breast opening, with 12 directly close samples between 26% and 37% opening. Mirroring a drive does not solve the access conflict and must not mirror away the anatomical-left restriction.
+
+The [posterior proposal on14](../assets/audit/cervical-construction-study-v1/attempt-14/posterior-drive-proposal-v1/report.md) keeps a signed moment arm without sampled reversal, but its centerline pierces the short dorsal shell in 18 of 21 operating poses and all 101 standard opening samples. Its 33.2 mm stroke is a line calculation, not proof of a viable actuator. No hardware or model change was made.
+
+These failures motivate a compact drive around the existing transverse intermediate hinge. Available space, fixed versus moving mount ownership, Maker external operation and Mechanic passive restraint must be established before adding that proposed Advanced rotary drive. This is reconstructed engineering, not hidden topology recovered from an illustration.
