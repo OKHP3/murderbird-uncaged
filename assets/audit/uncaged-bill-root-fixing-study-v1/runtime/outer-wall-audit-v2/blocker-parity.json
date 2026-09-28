@@ -1,0 +1,120 @@
+{
+  "status": "targeted read-only parity/proximity for the only two exterior blockers identified by the v2 line-of-sight audit",
+  "generatedAtUtc": "2026-09-28T15:20:26.143657+00:00",
+  "blenderVersion": "5.2.1 LTS",
+  "native": {
+    "path": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.blend",
+    "bytes": 1956186,
+    "sha256": "4d7568d1c2ba7cab716876f57a6c20cb6a788d4daeef1d5d34f85c1910ed2bbe"
+  },
+  "visibilityAudit": {
+    "path": "assets/audit/uncaged-bill-root-fixing-study-v1/runtime/outer-wall-audit-v2/visibility-audit.json",
+    "bytes": 17222,
+    "sha256": "59ee59e117f27d8c45386229b224c87c72b2866aa1364b3df077103259fcb8dc"
+  },
+  "script": {
+    "path": "assets/audit/uncaged-bill-root-fixing-study-v1/runtime/outer-wall-audit-v2/run-blocker-parity.py",
+    "bytes": 6648,
+    "sha256": "1202d48de2c36e0386b7723e4543144d09b19035a2904b561af6d74697d8666d"
+  },
+  "directions": [
+    [
+      0.40824830532073975,
+      0.5773502588272095,
+      0.7071067690849304
+    ],
+    [
+      0.6201736927032471,
+      -0.2773500978946686,
+      0.7337993383407593
+    ],
+    [
+      -0.6633250117301941,
+      0.7211102843284607,
+      0.20000000298023224
+    ],
+    [
+      -0.16439898312091827,
+      -0.6778343319892883,
+      0.7165985703468323
+    ]
+  ],
+  "method": "Parity and nearest evaluated surface distance use only the named pin/blocker pairs. Both evaluated surfaces are tessellated with calc_loop_triangles().",
+  "pairs": [
+    {
+      "pin": "Bill root fixing",
+      "blocker": "Forged orbital mounting plate -1",
+      "blockerOwner": "head",
+      "pinTopology": {
+        "vertices": 20,
+        "polygons": 12,
+        "evaluatedLoopTriangles": 36
+      },
+      "blockerTopology": {
+        "vertices": 896,
+        "polygons": 896,
+        "evaluatedLoopTriangles": 1792
+      },
+      "parityAgainstExactBlocker": {
+        "vertices": {
+          "inside": 0,
+          "outside": 20,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 0,
+          "outside": 12,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside",
+        "ambiguousExamples": []
+      },
+      "nearestBlockerSurfaceDistanceFromPinVerticesM": {
+        "min": 0.017419885843992233,
+        "median": 0.02150535024702549,
+        "p90": 0.025056390091776848,
+        "max": 0.025894170626997948
+      }
+    },
+    {
+      "pin": "Bill root fixing.002",
+      "blocker": "Forged orbital mounting plate 1",
+      "blockerOwner": "head",
+      "pinTopology": {
+        "vertices": 20,
+        "polygons": 12,
+        "evaluatedLoopTriangles": 36
+      },
+      "blockerTopology": {
+        "vertices": 896,
+        "polygons": 896,
+        "evaluatedLoopTriangles": 1792
+      },
+      "parityAgainstExactBlocker": {
+        "vertices": {
+          "inside": 0,
+          "outside": 20,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 0,
+          "outside": 12,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside",
+        "ambiguousExamples": []
+      },
+      "nearestBlockerSurfaceDistanceFromPinVerticesM": {
+        "min": 0.017459221184253693,
+        "median": 0.021511631086468697,
+        "p90": 0.025091487914323807,
+        "max": 0.025943193584680557
+      }
+    }
+  ],
+  "limits": [
+    "Finite odd/even parity samples do not prove absence of local triangle crossing when every sample is outside.",
+    "Nearest sampled pin-vertex distance is unsigned; it distinguishes a sampled gap from sampled coincidence but is not a complete surface separation certificate.",
+    "No other head geometry was swept or classified in this follow-up."
+  ]
+}

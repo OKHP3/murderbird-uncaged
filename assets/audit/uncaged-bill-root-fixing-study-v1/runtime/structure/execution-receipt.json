@@ -1,0 +1,60 @@
+{
+  "label": "structural contact and motion regressions",
+  "generatedAtUtc": "2026-09-28T14:55:40.504401+00:00",
+  "command": [
+    "node",
+    "scripts/verify-structural-motion.mjs"
+  ],
+  "cwd": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged",
+  "environment": {
+    "UNCAGED_MODEL": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.glb",
+    "UNCAGED_AUDIT": "assets/audit/uncaged-bill-root-fixing-study-v1/runtime/structure"
+  },
+  "exitCode": 0,
+  "status": "passed",
+  "modelBefore": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.glb",
+    "bytes": 4636460,
+    "sha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e"
+  },
+  "modelAfterSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+  "executedVerifierCopy": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/structure/executed-verify-structural-motion.mjs",
+    "bytes": 12669,
+    "sha256": "8597990d5d818ddc17f4a349b6a80b3893c790ebbf381abe4cc35e7b3a5cb725"
+  },
+  "executedLoaderCopy": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/structure/executed-load-rigid-validation.mjs",
+    "bytes": 1376,
+    "sha256": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62"
+  },
+  "inputHashesBefore": {
+    "scripts/verify-structural-motion.mjs": "8597990d5d818ddc17f4a349b6a80b3893c790ebbf381abe4cc35e7b3a5cb725",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/era-mechanisms.js": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+    "src/scene/era-motion.js": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "inputHashesAfter": {
+    "scripts/verify-structural-motion.mjs": "8597990d5d818ddc17f4a349b6a80b3893c790ebbf381abe4cc35e7b3a5cb725",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/era-mechanisms.js": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+    "src/scene/era-motion.js": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "sourceInputsUnchanged": true,
+  "output": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/structure/command-output.txt",
+    "bytes": 19,
+    "sha256": "c8014b031ddc14de84b4cb682386e8f765d466d722b08cd5f27b7f257b808862"
+  },
+  "report": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/structure/structural-motion-validation.json",
+    "bytes": 4452,
+    "sha256": "d3e35f9c22f808a7a3be7816e7e1b8bddbc7c4122dd12e3bbe88bb93f50cf808"
+  },
+  "reportedModelSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+  "reportedStatus": "passed"
+}

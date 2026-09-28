@@ -1,0 +1,487 @@
+{
+  "status": "read-only outside-in wall-order and blade1 containment diagnosis",
+  "generatedAtUtc": "2026-09-28T15:07:46.385514+00:00",
+  "blenderVersion": "5.2.1 LTS",
+  "native": {
+    "path": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.blend",
+    "bytes": 1956186,
+    "sha256": "4d7568d1c2ba7cab716876f57a6c20cb6a788d4daeef1d5d34f85c1910ed2bbe"
+  },
+  "glb": {
+    "path": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.glb",
+    "bytes": 4636460,
+    "sha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e"
+  },
+  "script": {
+    "path": "assets/audit/uncaged-bill-root-fixing-study-v1/runtime/outer-wall-audit-v1/run-audit.py",
+    "bytes": 9371,
+    "sha256": "275de3bf47d5b98f328942ab62ef66e4e496e74a3b7b80d4f72b38be1b109c7b"
+  },
+  "sideConvention": "+X anatomical LEFT; -X anatomical RIGHT.",
+  "surfaceRepresentation": "Evaluated meshes from the pinned native, explicitly tessellated with Blender Mesh.calc_loop_triangles(); BVH and odd/even tests use those exact evaluated loop triangles. Polygon centers remain samples on original evaluated faces.",
+  "targets": {
+    "Profiled upper bill blade 0": {
+      "parent": "upper-bill",
+      "topology": {
+        "vertices": 2280,
+        "polygons": 2242,
+        "evaluatedLoopTriangles": 4556,
+        "triangulatedBoundaryEdges": 0,
+        "triangulatedNonManifoldEdges": 0
+      }
+    },
+    "Profiled upper bill blade 1": {
+      "parent": "upper-bill",
+      "topology": {
+        "vertices": 2280,
+        "polygons": 2242,
+        "evaluatedLoopTriangles": 4556,
+        "triangulatedBoundaryEdges": 0,
+        "triangulatedNonManifoldEdges": 0
+      }
+    }
+  },
+  "parityDirections": [
+    [
+      0.40824830532073975,
+      0.5773502588272095,
+      0.7071067690849304
+    ],
+    [
+      0.6201736927032471,
+      -0.2773500978946686,
+      0.7337993383407593
+    ],
+    [
+      -0.6633250117301941,
+      0.7211102843284607,
+      0.20000000298023224
+    ],
+    [
+      -0.16439898312091827,
+      -0.6778343319892883,
+      0.7165985703468323
+    ]
+  ],
+  "outsideInRayOriginAbsXM": 0.4,
+  "pins": [
+    {
+      "pin": "Bill root fixing",
+      "anatomicalSide": "right",
+      "centroidWorldXYZM": [
+        -0.08799701929092407,
+        -0.4494796395301819,
+        1.7883415222167969
+      ],
+      "outsideInRay": {
+        "originWorldXYZM": [
+          -0.4000000059604645,
+          -0.4494796395301819,
+          1.7883415222167969
+        ],
+        "directionWorldXYZ": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "targetHits": {
+          "Profiled upper bill blade 0": [
+            {
+              "pointWorldXYZM": [
+                -0.08649700880050659,
+                -0.4494796395301819,
+                1.7883415222167969
+              ],
+              "normalWorldXYZ": [
+                -0.9900551438331604,
+                0.13883858919143677,
+                0.022686893120408058
+              ],
+              "triangleIndex": 1343,
+              "distanceFromRayOriginM": 0.3135029971599579
+            },
+            {
+              "pointWorldXYZM": [
+                0.08649703860282898,
+                -0.4494796395301819,
+                1.7883415222167969
+              ],
+              "normalWorldXYZ": [
+                0.9945947527885437,
+                0.10155756026506424,
+                0.021621040999889374
+              ],
+              "triangleIndex": 1297,
+              "distanceFromRayOriginM": 0.48649704618549344
+            }
+          ],
+          "Profiled upper bill blade 1": []
+        },
+        "firstHitAcrossTwoBlades": {
+          "mesh": "Profiled upper bill blade 0",
+          "pointWorldXYZM": [
+            -0.08649700880050659,
+            -0.4494796395301819,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            -0.9900551438331604,
+            0.13883858919143677,
+            0.022686893120408058
+          ],
+          "triangleIndex": 1343,
+          "distanceFromRayOriginM": 0.3135029971599579
+        }
+      },
+      "blade1Containment": {
+        "vertices": {
+          "inside": 0,
+          "outside": 20,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 0,
+          "outside": 12,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside",
+        "ambiguousExamples": []
+      },
+      "blade0ParityCrossCheck": {
+        "vertices": {
+          "inside": 10,
+          "outside": 10,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 1,
+          "outside": 11,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside"
+      },
+      "pinTopology": {
+        "vertices": 20,
+        "polygons": 12,
+        "evaluatedLoopTriangles": 36,
+        "triangulatedBoundaryEdges": 0,
+        "triangulatedNonManifoldEdges": 0
+      }
+    },
+    {
+      "pin": "Bill root fixing.001",
+      "anatomicalSide": "right",
+      "centroidWorldXYZM": [
+        -0.08920913934707642,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "outsideInRay": {
+        "originWorldXYZM": [
+          -0.4000000059604645,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "directionWorldXYZ": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "targetHits": {
+          "Profiled upper bill blade 0": [
+            {
+              "pointWorldXYZM": [
+                -0.08770918846130371,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "normalWorldXYZ": [
+                -0.9969106316566467,
+                -0.07811927795410156,
+                -0.008160268887877464
+              ],
+              "triangleIndex": 3102,
+              "distanceFromRayOriginM": 0.31229081749916077
+            },
+            {
+              "pointWorldXYZM": [
+                0.08770878612995148,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "normalWorldXYZ": [
+                0.9970030784606934,
+                -0.07694413512945175,
+                -0.008037514053285122
+              ],
+              "triangleIndex": 3056,
+              "distanceFromRayOriginM": 0.48770879371261594
+            }
+          ],
+          "Profiled upper bill blade 1": []
+        },
+        "firstHitAcrossTwoBlades": {
+          "mesh": "Profiled upper bill blade 0",
+          "pointWorldXYZM": [
+            -0.08770918846130371,
+            -0.5017147660255432,
+            1.7734512090682983
+          ],
+          "normalWorldXYZ": [
+            -0.9969106316566467,
+            -0.07811927795410156,
+            -0.008160268887877464
+          ],
+          "triangleIndex": 3102,
+          "distanceFromRayOriginM": 0.31229081749916077
+        }
+      },
+      "blade1Containment": {
+        "vertices": {
+          "inside": 0,
+          "outside": 20,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 0,
+          "outside": 12,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside",
+        "ambiguousExamples": []
+      },
+      "blade0ParityCrossCheck": {
+        "vertices": {
+          "inside": 10,
+          "outside": 10,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 1,
+          "outside": 11,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside"
+      },
+      "pinTopology": {
+        "vertices": 20,
+        "polygons": 12,
+        "evaluatedLoopTriangles": 36,
+        "triangulatedBoundaryEdges": 0,
+        "triangulatedNonManifoldEdges": 0
+      }
+    },
+    {
+      "pin": "Bill root fixing.002",
+      "anatomicalSide": "left",
+      "centroidWorldXYZM": [
+        0.08799701184034348,
+        -0.4494795501232147,
+        1.7883415222167969
+      ],
+      "outsideInRay": {
+        "originWorldXYZM": [
+          0.4000000059604645,
+          -0.4494795501232147,
+          1.7883415222167969
+        ],
+        "directionWorldXYZ": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "targetHits": {
+          "Profiled upper bill blade 0": [
+            {
+              "pointWorldXYZM": [
+                0.0864969789981842,
+                -0.4494795501232147,
+                1.7883415222167969
+              ],
+              "normalWorldXYZ": [
+                0.9858425855636597,
+                0.16602587699890137,
+                0.023447399958968163
+              ],
+              "triangleIndex": 1216,
+              "distanceFromRayOriginM": 0.3135030269622803
+            },
+            {
+              "pointWorldXYZM": [
+                -0.0864969938993454,
+                -0.4494795501232147,
+                1.7883415222167969
+              ],
+              "normalWorldXYZ": [
+                -0.9935934543609619,
+                0.11087286472320557,
+                0.021889837458729744
+              ],
+              "triangleIndex": 1262,
+              "distanceFromRayOriginM": 0.48649700148200986
+            }
+          ],
+          "Profiled upper bill blade 1": []
+        },
+        "firstHitAcrossTwoBlades": {
+          "mesh": "Profiled upper bill blade 0",
+          "pointWorldXYZM": [
+            0.0864969789981842,
+            -0.4494795501232147,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            0.9858425855636597,
+            0.16602587699890137,
+            0.023447399958968163
+          ],
+          "triangleIndex": 1216,
+          "distanceFromRayOriginM": 0.3135030269622803
+        }
+      },
+      "blade1Containment": {
+        "vertices": {
+          "inside": 0,
+          "outside": 20,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 0,
+          "outside": 12,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside",
+        "ambiguousExamples": []
+      },
+      "blade0ParityCrossCheck": {
+        "vertices": {
+          "inside": 10,
+          "outside": 10,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 1,
+          "outside": 11,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside"
+      },
+      "pinTopology": {
+        "vertices": 20,
+        "polygons": 12,
+        "evaluatedLoopTriangles": 36,
+        "triangulatedBoundaryEdges": 0,
+        "triangulatedNonManifoldEdges": 0
+      }
+    },
+    {
+      "pin": "Bill root fixing.003",
+      "anatomicalSide": "left",
+      "centroidWorldXYZM": [
+        0.08920877426862717,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "outsideInRay": {
+        "originWorldXYZM": [
+          0.4000000059604645,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "directionWorldXYZ": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "targetHits": {
+          "Profiled upper bill blade 0": [
+            {
+              "pointWorldXYZM": [
+                0.08770871162414551,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "normalWorldXYZ": [
+                0.9970030784606934,
+                -0.07694413512945175,
+                -0.008037514053285122
+              ],
+              "triangleIndex": 3056,
+              "distanceFromRayOriginM": 0.31229129433631897
+            },
+            {
+              "pointWorldXYZM": [
+                -0.08770912885665894,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "normalWorldXYZ": [
+                -0.9969106316566467,
+                -0.07811927795410156,
+                -0.008160268887877464
+              ],
+              "triangleIndex": 3102,
+              "distanceFromRayOriginM": 0.4877091364393234
+            }
+          ],
+          "Profiled upper bill blade 1": []
+        },
+        "firstHitAcrossTwoBlades": {
+          "mesh": "Profiled upper bill blade 0",
+          "pointWorldXYZM": [
+            0.08770871162414551,
+            -0.5017147660255432,
+            1.7734512090682983
+          ],
+          "normalWorldXYZ": [
+            0.9970030784606934,
+            -0.07694413512945175,
+            -0.008037514053285122
+          ],
+          "triangleIndex": 3056,
+          "distanceFromRayOriginM": 0.31229129433631897
+        }
+      },
+      "blade1Containment": {
+        "vertices": {
+          "inside": 0,
+          "outside": 20,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 0,
+          "outside": 12,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside",
+        "ambiguousExamples": []
+      },
+      "blade0ParityCrossCheck": {
+        "vertices": {
+          "inside": 10,
+          "outside": 10,
+          "direction-disagreement": 0
+        },
+        "polygonCenters": {
+          "inside": 1,
+          "outside": 11,
+          "direction-disagreement": 0
+        },
+        "centroid": "outside"
+      },
+      "pinTopology": {
+        "vertices": 20,
+        "polygons": 12,
+        "evaluatedLoopTriangles": 36,
+        "triangulatedBoundaryEdges": 0,
+        "triangulatedNonManifoldEdges": 0
+      }
+    }
+  ],
+  "limits": [
+    "Finite four-direction point parity is a sampled inside/outside classification, not a Boolean volume proof.",
+    "Outside-in axis rays identify the first wall on the pin YZ line; they do not establish design intent or fastening strength.",
+    "This checks only the two upper bill blades and the four root fixings. It is not a full head clearance or motion test.",
+    "The earlier V1 seating generator used its existing surface path; this independent audit uses explicit evaluated loop-triangle tessellation and does not overwrite or revise that historical receipt."
+  ]
+}

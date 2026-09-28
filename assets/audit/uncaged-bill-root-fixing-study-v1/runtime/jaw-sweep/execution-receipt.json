@@ -1,0 +1,54 @@
+{
+  "label": "33-sample jaw against fixed head geometry",
+  "generatedAtUtc": "2026-09-28T14:55:35.839071+00:00",
+  "command": [
+    "node",
+    "scripts/verify-alignment-v4-jaw-sweep.mjs"
+  ],
+  "cwd": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged",
+  "environment": {
+    "UNCAGED_MODEL": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.glb",
+    "UNCAGED_AUDIT": "assets/audit/uncaged-bill-root-fixing-study-v1/runtime/jaw-sweep"
+  },
+  "exitCode": 0,
+  "status": "passed",
+  "modelBefore": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.glb",
+    "bytes": 4636460,
+    "sha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e"
+  },
+  "modelAfterSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+  "executedVerifierCopy": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/jaw-sweep/executed-verify-alignment-v4-jaw-sweep.mjs",
+    "bytes": 6175,
+    "sha256": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e"
+  },
+  "executedLoaderCopy": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/jaw-sweep/executed-load-rigid-validation.mjs",
+    "bytes": 1376,
+    "sha256": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62"
+  },
+  "inputHashesBefore": {
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "inputHashesAfter": {
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "sourceInputsUnchanged": true,
+  "output": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/jaw-sweep/command-output.txt",
+    "bytes": 85,
+    "sha256": "3d7f017c0c221e239690b3b48c91bd213da2fac14b1aca8cc03c17871dcddc50"
+  },
+  "report": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/uncaged-bill-root-fixing-study-v1/runtime/jaw-sweep/jaw-sweep.json",
+    "bytes": 6855,
+    "sha256": "0d1e3d9fb5a4d82d33eaa8f121b801f2e41481658cecf035b189160edbdc450f"
+  },
+  "reportedModelSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+  "reportedStatus": "no-crossings-detected"
+}

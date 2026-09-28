@@ -1,0 +1,571 @@
+{
+  "status": "read-only signed-X axis visibility audit across all meshes tagged region=head",
+  "generatedAtUtc": "2026-09-28T15:16:16.201688+00:00",
+  "blenderVersion": "5.2.1 LTS",
+  "native": {
+    "path": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.blend",
+    "bytes": 1956186,
+    "sha256": "4d7568d1c2ba7cab716876f57a6c20cb6a788d4daeef1d5d34f85c1910ed2bbe"
+  },
+  "glb": {
+    "path": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.glb",
+    "bytes": 4636460,
+    "sha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e"
+  },
+  "script": {
+    "path": "assets/audit/uncaged-bill-root-fixing-study-v1/runtime/outer-wall-audit-v2/run-visibility-audit.py",
+    "bytes": 6958,
+    "sha256": "1f5478c70e4ff388d6aa59f741e97c574bba3e8993dea3efedf6ee974fc5d05b"
+  },
+  "scope": {
+    "headRegionMeshCount": 140,
+    "excludedOnly": [
+      "Bill root fixing",
+      "Bill root fixing.001",
+      "Bill root fixing.002",
+      "Bill root fixing.003"
+    ],
+    "selectionRule": "Every evaluated MESH with region == 'head'; no parent, era, role, collider, or surface-pair simplification.",
+    "representation": "Evaluated native mesh; Blender calc_loop_triangles() triangles; BVH one-hit per opaque head-region mesh."
+  },
+  "rayOriginAbsXM": 0.4,
+  "pins": [
+    {
+      "pin": "Bill root fixing",
+      "anatomicalSide": "right",
+      "pinParent": "upper-bill",
+      "pinWorldCentroidXYZM": [
+        -0.08799701929092407,
+        -0.4494796395301819,
+        1.7883415222167969
+      ],
+      "ray": {
+        "originWorldXYZM": [
+          -0.4000000059604645,
+          -0.4494796395301819,
+          1.7883415222167969
+        ],
+        "directionWorldXYZ": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "pinOutwardSurfaceHit": {
+        "pointWorldXYZM": [
+          -0.09049701690673828,
+          -0.4494796395301819,
+          1.7883415222167969
+        ],
+        "normalWorldXYZ": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "triangleIndex": 15,
+        "distanceFromOutsideOriginM": 0.3095029890537262
+      },
+      "firstOtherHeadMeshHit": {
+        "mesh": "Forged orbital mounting plate -1",
+        "owner": "head",
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "pointWorldXYZM": [
+          -0.12865948677062988,
+          -0.4494796395301819,
+          1.7883415222167969
+        ],
+        "normalWorldXYZ": [
+          -0.7299057245254517,
+          -0.6798190474510193,
+          -0.07129940390586853
+        ],
+        "triangleIndex": 876,
+        "distanceFromOutsideOriginM": 0.2713405191898346,
+        "beforePinOutwardSurface": true,
+        "afterPinOutwardSurface": false
+      },
+      "firstOccludingMeshBeforePinHead": {
+        "mesh": "Forged orbital mounting plate -1",
+        "owner": "head",
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "pointWorldXYZM": [
+          -0.12865948677062988,
+          -0.4494796395301819,
+          1.7883415222167969
+        ],
+        "normalWorldXYZ": [
+          -0.7299057245254517,
+          -0.6798190474510193,
+          -0.07129940390586853
+        ],
+        "triangleIndex": 876,
+        "distanceFromOutsideOriginM": 0.2713405191898346,
+        "beforePinOutwardSurface": true,
+        "afterPinOutwardSurface": false
+      },
+      "allOtherHeadMeshHitsSorted": [
+        {
+          "mesh": "Forged orbital mounting plate -1",
+          "owner": "head",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            -0.12865948677062988,
+            -0.4494796395301819,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            -0.7299057245254517,
+            -0.6798190474510193,
+            -0.07129940390586853
+          ],
+          "triangleIndex": 876,
+          "distanceFromOutsideOriginM": 0.2713405191898346,
+          "beforePinOutwardSurface": true,
+          "afterPinOutwardSurface": false
+        },
+        {
+          "mesh": "Profiled upper bill blade 0",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            -0.08649700880050659,
+            -0.4494796395301819,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            -0.9900551438331604,
+            0.13883858919143677,
+            0.022686893120408058
+          ],
+          "triangleIndex": 1343,
+          "distanceFromOutsideOriginM": 0.3135029971599579,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        },
+        {
+          "mesh": "Bill root fixing.002",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "bearing",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            0.08549705147743225,
+            -0.4494796395301819,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            -1.0,
+            -0.0,
+            0.0
+          ],
+          "triangleIndex": 7,
+          "distanceFromOutsideOriginM": 0.48549705743789673,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        },
+        {
+          "mesh": "Forged orbital mounting plate 1",
+          "owner": "head",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            0.11965945363044739,
+            -0.4494796395301819,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            -0.7299060225486755,
+            0.6798188090324402,
+            0.07129866629838943
+          ],
+          "triangleIndex": 878,
+          "distanceFromOutsideOriginM": 0.5196594595909119,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        }
+      ]
+    },
+    {
+      "pin": "Bill root fixing.001",
+      "anatomicalSide": "right",
+      "pinParent": "upper-bill",
+      "pinWorldCentroidXYZM": [
+        -0.08920913934707642,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "ray": {
+        "originWorldXYZM": [
+          -0.4000000059604645,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "directionWorldXYZ": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "pinOutwardSurfaceHit": {
+        "pointWorldXYZM": [
+          -0.09170916676521301,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "normalWorldXYZ": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "triangleIndex": 15,
+        "distanceFromOutsideOriginM": 0.30829083919525146
+      },
+      "firstOtherHeadMeshHit": {
+        "mesh": "Profiled upper bill blade 0",
+        "owner": "upper-bill",
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "pointWorldXYZM": [
+          -0.08770918846130371,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "normalWorldXYZ": [
+          -0.9969106316566467,
+          -0.07811927795410156,
+          -0.008160268887877464
+        ],
+        "triangleIndex": 3102,
+        "distanceFromOutsideOriginM": 0.31229081749916077,
+        "beforePinOutwardSurface": false,
+        "afterPinOutwardSurface": true
+      },
+      "firstOccludingMeshBeforePinHead": null,
+      "allOtherHeadMeshHitsSorted": [
+        {
+          "mesh": "Profiled upper bill blade 0",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            -0.08770918846130371,
+            -0.5017147660255432,
+            1.7734512090682983
+          ],
+          "normalWorldXYZ": [
+            -0.9969106316566467,
+            -0.07811927795410156,
+            -0.008160268887877464
+          ],
+          "triangleIndex": 3102,
+          "distanceFromOutsideOriginM": 0.31229081749916077,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        },
+        {
+          "mesh": "Bill root fixing.003",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "bearing",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            0.08670878410339355,
+            -0.5017147660255432,
+            1.7734512090682983
+          ],
+          "normalWorldXYZ": [
+            -1.0,
+            -0.0,
+            0.0
+          ],
+          "triangleIndex": 7,
+          "distanceFromOutsideOriginM": 0.48670879006385803,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        }
+      ]
+    },
+    {
+      "pin": "Bill root fixing.002",
+      "anatomicalSide": "left",
+      "pinParent": "upper-bill",
+      "pinWorldCentroidXYZM": [
+        0.08799701184034348,
+        -0.4494795501232147,
+        1.7883415222167969
+      ],
+      "ray": {
+        "originWorldXYZM": [
+          0.4000000059604645,
+          -0.4494795501232147,
+          1.7883415222167969
+        ],
+        "directionWorldXYZ": [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "pinOutwardSurfaceHit": {
+        "pointWorldXYZM": [
+          0.09049701690673828,
+          -0.4494795501232147,
+          1.7883415222167969
+        ],
+        "normalWorldXYZ": [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        "triangleIndex": 15,
+        "distanceFromOutsideOriginM": 0.3095029890537262
+      },
+      "firstOtherHeadMeshHit": {
+        "mesh": "Forged orbital mounting plate 1",
+        "owner": "head",
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "pointWorldXYZM": [
+          0.12864336371421814,
+          -0.4494795501232147,
+          1.7883415222167969
+        ],
+        "normalWorldXYZ": [
+          0.7402742505073547,
+          -0.6686875820159912,
+          -0.06964921951293945
+        ],
+        "triangleIndex": 876,
+        "distanceFromOutsideOriginM": 0.27135664224624634,
+        "beforePinOutwardSurface": true,
+        "afterPinOutwardSurface": false
+      },
+      "firstOccludingMeshBeforePinHead": {
+        "mesh": "Forged orbital mounting plate 1",
+        "owner": "head",
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "pointWorldXYZM": [
+          0.12864336371421814,
+          -0.4494795501232147,
+          1.7883415222167969
+        ],
+        "normalWorldXYZ": [
+          0.7402742505073547,
+          -0.6686875820159912,
+          -0.06964921951293945
+        ],
+        "triangleIndex": 876,
+        "distanceFromOutsideOriginM": 0.27135664224624634,
+        "beforePinOutwardSurface": true,
+        "afterPinOutwardSurface": false
+      },
+      "allOtherHeadMeshHitsSorted": [
+        {
+          "mesh": "Forged orbital mounting plate 1",
+          "owner": "head",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            0.12864336371421814,
+            -0.4494795501232147,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            0.7402742505073547,
+            -0.6686875820159912,
+            -0.06964921951293945
+          ],
+          "triangleIndex": 876,
+          "distanceFromOutsideOriginM": 0.27135664224624634,
+          "beforePinOutwardSurface": true,
+          "afterPinOutwardSurface": false
+        },
+        {
+          "mesh": "Profiled upper bill blade 0",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            0.0864969789981842,
+            -0.4494795501232147,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            0.9858425855636597,
+            0.16602587699890137,
+            0.023447399958968163
+          ],
+          "triangleIndex": 1216,
+          "distanceFromOutsideOriginM": 0.3135030269622803,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        },
+        {
+          "mesh": "Bill root fixing",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "bearing",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            -0.08549705147743225,
+            -0.4494795501232147,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            1.0,
+            -0.0,
+            0.0
+          ],
+          "triangleIndex": 7,
+          "distanceFromOutsideOriginM": 0.48549705743789673,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        },
+        {
+          "mesh": "Forged orbital mounting plate -1",
+          "owner": "head",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            -0.11964336037635803,
+            -0.4494795501232147,
+            1.7883415222167969
+          ],
+          "normalWorldXYZ": [
+            0.7402742505073547,
+            0.6686875820159912,
+            0.06964850425720215
+          ],
+          "triangleIndex": 878,
+          "distanceFromOutsideOriginM": 0.5196433663368225,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        }
+      ]
+    },
+    {
+      "pin": "Bill root fixing.003",
+      "anatomicalSide": "left",
+      "pinParent": "upper-bill",
+      "pinWorldCentroidXYZM": [
+        0.08920877426862717,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "ray": {
+        "originWorldXYZM": [
+          0.4000000059604645,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "directionWorldXYZ": [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "pinOutwardSurfaceHit": {
+        "pointWorldXYZM": [
+          0.09170874953269958,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "normalWorldXYZ": [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        "triangleIndex": 15,
+        "distanceFromOutsideOriginM": 0.3082912564277649
+      },
+      "firstOtherHeadMeshHit": {
+        "mesh": "Profiled upper bill blade 0",
+        "owner": "upper-bill",
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "pointWorldXYZM": [
+          0.08770871162414551,
+          -0.5017147660255432,
+          1.7734512090682983
+        ],
+        "normalWorldXYZ": [
+          0.9970030784606934,
+          -0.07694413512945175,
+          -0.008037514053285122
+        ],
+        "triangleIndex": 3056,
+        "distanceFromOutsideOriginM": 0.31229129433631897,
+        "beforePinOutwardSurface": false,
+        "afterPinOutwardSurface": true
+      },
+      "firstOccludingMeshBeforePinHead": null,
+      "allOtherHeadMeshHitsSorted": [
+        {
+          "mesh": "Profiled upper bill blade 0",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            0.08770871162414551,
+            -0.5017147660255432,
+            1.7734512090682983
+          ],
+          "normalWorldXYZ": [
+            0.9970030784606934,
+            -0.07694413512945175,
+            -0.008037514053285122
+          ],
+          "triangleIndex": 3056,
+          "distanceFromOutsideOriginM": 0.31229129433631897,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        },
+        {
+          "mesh": "Bill root fixing.001",
+          "owner": "upper-bill",
+          "region": "head",
+          "surfaceRole": "bearing",
+          "exteriorEras": "maker,mechanic,builder",
+          "pointWorldXYZM": [
+            -0.08670914173126221,
+            -0.5017147660255432,
+            1.7734512090682983
+          ],
+          "normalWorldXYZ": [
+            0.9999999403953552,
+            -0.0,
+            0.0
+          ],
+          "triangleIndex": 7,
+          "distanceFromOutsideOriginM": 0.4867091476917267,
+          "beforePinOutwardSurface": false,
+          "afterPinOutwardSurface": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "This is a single world-X line per fastener through its vertex-average YZ, not a projected area, multi-view visibility, or rendered occlusion test.",
+    "Every region=head mesh is treated as opaque regardless of era visibility; exteriorEras is reported for interpreting hits.",
+    "Only exact first intersections are measured; no collision, containment, or design-intent claim."
+  ]
+}
