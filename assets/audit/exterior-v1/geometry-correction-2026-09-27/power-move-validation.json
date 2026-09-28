@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-09-28T02:52:10.561Z",
+  "model": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb",
+  "report": "assets/audit/exterior-v1/geometry-correction-2026-09-27/power-move-validation.json",
+  "checks": [
+    {
+      "name": "jump-height-foot-clearance-and-grounded-landing",
+      "status": "passed",
+      "result": {
+        "peakHeight": 0.3599833402748855,
+        "peakBodyTop": 2.3861832986470013,
+        "peakFeetGroundMin": [
+          0.38963501035599024,
+          0.38963501035599024
+        ],
+        "landingFeetGroundMin": [
+          0.001999999999999844,
+          0.001999999999999844
+        ],
+        "maxFootError": 4.577566798522237e-16,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      }
+    },
+    {
+      "name": "jump-pause-midair-freezes-and-resumes",
+      "status": "passed",
+      "result": {
+        "frozenForSeconds": 0.5,
+        "phase": 0.4285714285714287,
+        "root": [
+          0,
+          0.3599833402748855,
+          -0.25
+        ],
+        "feetFrozen": true,
+        "resumedAndLanded": true
+      }
+    },
+    {
+      "name": "inspection-request-midair-waits-for-landing",
+      "status": "passed",
+      "result": {
+        "completedBeforeInspection": true,
+        "grounded": true,
+        "settled": true
+      }
+    },
+    {
+      "name": "thrust-planted-feet-asymmetric-wing-drive-and-envelope",
+      "status": "passed",
+      "result": {
+        "stagedRoot": {
+          "x": 0.07329510537467324,
+          "z": -0.21362391066590292,
+          "yaw": 0.63,
+          "speed": 0.43301311765589173
+        },
+        "actionRoot": {
+          "x": 0.1322989120663954,
+          "z": -0.18434053993741856,
+          "yaw": 0.63,
+          "speed": 0
+        },
+        "rightShoulder": -0.64,
+        "rightElbow": 0.72,
+        "leftShoulder": 0.07,
+        "leftElbow": 0.18,
+        "maxFootError": 2.830524433501838e-16,
+        "plantedFeet": [
+          0.0020000000000002013,
+          0.0019999999999997797
+        ],
+        "root": {
+          "x": 0.1322989120663954,
+          "z": -0.18434053993741856,
+          "yaw": 0.63,
+          "speed": 0
+        },
+        "bounds": {
+          "min": [
+            -0.5719743932927261,
+            0.0019999999999997797,
+            -0.8098771246228613
+          ],
+          "max": [
+            0.6932489266278329,
+            2.0261999583721155,
+            0.41213075790364484
+          ]
+        }
+      }
+    }
+  ],
+  "status": "passed"
+}

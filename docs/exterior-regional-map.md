@@ -1,6 +1,8 @@
 # Exterior regional map — version 1 proposal
 
-This map assigns reference authority and rigid ownership for the modular exterior proposal. It separates visible source evidence from reconstructed geometry. The references are illustrations, not engineering drawings. Exact thicknesses, hidden surfaces, fasteners, and fabrication remain proposed. Source-level placement checks and motion checks have distinct scope; neither establishes likeness approval. The rejected intermediate geometry is preserved under `assets/audit/exterior-v1/provisional/`; current top-level renders and dated receipts refer to the frozen review model.
+This map assigns reference authority and rigid ownership for the modular exterior proposal. It separates visible source evidence from reconstructed geometry. The references are illustrations, not engineering drawings. Exact thicknesses, hidden surfaces, fasteners, and fabrication remain proposed. Source-level placement checks and motion checks have distinct scope; neither establishes likeness approval. The rejected intermediate geometry is preserved under `assets/audit/exterior-v1/provisional/`; top-level renders and receipts remain the frozen baseline, while the dated local correction is documented in the [silhouette correction record](exterior-silhouette-correction-2026-09-27.md).
+
+> For the corrected local candidate, that record supersedes the neck, breast, and shoulder/folded-wing surface details in the table below: the breast has 20 plates in five courses, the visible neck follows a revised S-curve, and the mantle has 16 broader overlap leaves per shoulder. Other regional contracts remain as documented; all values are proposals, not recovered dimensions.
 
 ## Regional assignments
 

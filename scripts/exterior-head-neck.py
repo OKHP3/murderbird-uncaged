@@ -362,8 +362,8 @@ def build(ctx):
     # service gaps at each hinge instead of presenting bare fork rails.
     for side in (-1, 1):
         mk_tube('Cervical load-bearing side rail', [
-            (side * .061, .012, .028), (side * .079, -.044, .124),
-            (side * .071, -.119, .232), (side * .059, -.164, .335),
+            (side * .061, .012, .028), (side * .079, -.055, .124),
+            (side * .071, -.140, .232), (side * .059, -.185, .335),
             (side * .047, -.198, .423),
         ], [.020, .023, .022, .020, .017], mats['frame'], neck, region='neck', role='frame', sides=12)
         mk_rod('Cervical lower cross-pin', (side * .050, .012, .025), (side * .091, .012, .025), .050, mats['bearing'], neck, region='neck', role='bearing', sides=24)
@@ -374,25 +374,25 @@ def build(ctx):
     # Segment cross-rings follow the S-shaped axis; overlapping axial spans
     # keep the external form continuous while leaving the base service wedge.
     mk_loft('Cervical lower curved shingle', [
-        (-.018, .016, .077, .078), (.002, .012, .097, .091),
-        (.047, -.002, .111, .101), (.105, -.040, .116, .104),
-        (.151, -.070, .105, .098), (.174, -.080, .084, .081),
+        (-.018, .016, .081, .081), (.002, .010, .102, .096),
+        (.047, -.006, .120, .109), (.105, -.055, .128, .113),
+        (.151, -.090, .116, .106), (.174, -.102, .094, .087),
     ], mats['shell'], neck, region='neck', role='shell', thickness=.014,
        segments=28, start=-math.pi / 2 + .40, span=math.tau - .80)
     mk_loft('Cervical middle curved shingle', [
-        (.148, -.068, .077, .074), (.165, -.081, .100, .095),
-        (.211, -.110, .111, .102), (.259, -.136, .102, .096),
-        (.286, -.151, .083, .079),
+        (.148, -.088, .085, .079), (.165, -.102, .108, .101),
+        (.211, -.135, .123, .113), (.259, -.162, .114, .106),
+        (.286, -.180, .093, .085),
     ], mats['shell'], neck, region='neck', role='shell', thickness=.014, segments=28)
     mk_loft('Cervical middle upper overlap shingle', [
-        (.264, -.140, .070, .068), (.279, -.148, .090, .084),
-        (.317, -.165, .101, .092), (.350, -.180, .094, .086),
-        (.369, -.187, .076, .071),
+        (.264, -.170, .078, .073), (.279, -.182, .100, .092),
+        (.317, -.194, .109, .098), (.350, -.199, .100, .091),
+        (.369, -.199, .080, .073),
     ], mats['frame'], neck, region='neck', role='frame', thickness=.012, segments=28)
     mk_loft('Cervical upper curved shingle', [
-        (.346, -.179, .070, .068), (.361, -.185, .088, .083),
-        (.388, -.196, .097, .089), (.414, -.199, .089, .082),
-        (.429, -.200, .070, .066),
+        (.346, -.198, .073, .071), (.361, -.199, .094, .087),
+        (.388, -.200, .102, .092), (.414, -.200, .092, .084),
+        (.429, -.200, .073, .068),
     ], mats['shell'], neck, region='neck', role='shell', thickness=.013, segments=28)
 
     # A short skull-attached socket overlaps the neck shingle across the top
@@ -408,14 +408,14 @@ def build(ctx):
     # S-curve upward. They remain on the neck rig, stop before the skull joint,
     # and avoid the negative-X lower service aperture.
     neck_rings = [
-        (-.018, .016, .077, .078), (.002, .012, .097, .091),
-        (.047, -.002, .111, .101), (.105, -.040, .116, .104),
-        (.151, -.070, .105, .098), (.174, -.080, .084, .081),
-        (.211, -.110, .111, .102), (.259, -.136, .102, .096),
-        (.286, -.151, .083, .079), (.317, -.165, .101, .092),
-        (.350, -.180, .094, .086), (.369, -.187, .076, .071),
-        (.388, -.196, .097, .089), (.414, -.199, .089, .082),
-        (.429, -.200, .070, .066),
+        (-.018, .016, .081, .081), (.002, .010, .102, .096),
+        (.047, -.006, .120, .109), (.105, -.055, .128, .113),
+        (.151, -.090, .116, .106), (.174, -.102, .094, .087),
+        (.211, -.135, .123, .113), (.259, -.162, .114, .106),
+        (.286, -.180, .093, .085), (.317, -.194, .109, .098),
+        (.350, -.199, .100, .091), (.369, -.199, .080, .073),
+        (.388, -.200, .102, .092), (.414, -.200, .092, .084),
+        (.429, -.200, .073, .068),
     ]
 
     def neck_ring_at(z):
@@ -471,7 +471,7 @@ def build(ctx):
 
     # Three exposed restraint links follow the cervical curve. They are short
     # and local to the neck assembly, not a continuous flexible hose.
-    for idx, (y, z, radius) in enumerate([(.018, .050, .023), (-.055, .160, .025), (-.145, .305, .021)]):
+    for idx, (y, z, radius) in enumerate([(-.006, .050, .023), (-.078, .160, .025), (-.173, .305, .021)]):
         mk_ring(f'Cervical restraint bearing link {idx + 1}', (0, y, z), radius, .005, mats['bearing'], neck, region='neck', role='bearing', axis='Y', segments=20)
 
     # Group metadata allows downstream era/material transforms to recognize

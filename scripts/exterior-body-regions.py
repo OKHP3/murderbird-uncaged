@@ -128,7 +128,7 @@ def build(ctx):
                 cy = lo[1] + (hi[1] - lo[1]) * f
                 rx = lo[2] + (hi[2] - lo[2]) * f
                 ry = lo[3] + (hi[3] - lo[3]) * f
-                taper = .92 + .08 * math.sin(math.pi * j / rows) ** .7
+                taper = .86 + .14 * math.sin(math.pi * j / rows) ** .7
                 for i in range(cols + 1):
                     amid = (a0 + a1) * .5
                     a = amid + (a0 + (a1 - a0) * i / cols - amid) * taper
@@ -338,7 +338,7 @@ def build(ctx):
         return obj
 
     def mantle_leaf(name, profiles, side, parent, angle, top, length, layer):
-        """A short swept armor leaf, sampled on the actual shoulder envelope."""
+        """A broad compact armor leaf sampled on the shoulder envelope."""
         def surface(theta, z, offset):
             a, b = profiles[0], profiles[-1]
             for lo, hi in zip(profiles, profiles[1:]):
@@ -356,7 +356,7 @@ def build(ctx):
             for j in range(rows+1):
                 t=j/rows
                 for i in range(cols+1):
-                    theta=angle+.17*t+(i/cols-.5)*.56*taper[j]
+                    theta=angle+.17*t+(i/cols-.5)*.76*taper[j]
                     pts.append(tuple(surface(theta,top-length*t,offset)))
         stride=cols+1;n=(rows+1)*stride;faces=[]
         for j in range(rows):
@@ -401,27 +401,31 @@ def build(ctx):
     # Broad breast access shell: full breast volume, waist narrowing and a
     # rounded top into the shoulder bridge. The separate back stays passive.
     breast = [
-        (.965, .025, .170, .205),
-        (1.035, .008, .235, .285),
-        (1.155, -.006, .305, .365),
-        (1.285, -.004, .295, .365),
-        (1.400, .012, .245, .305),
-        (1.485, .035, .155, .215),
+        (.965, .045, .135, .160),
+        (1.025, .022, .195, .245),
+        (1.110, -.010, .265, .330),
+        (1.205, -.025, .315, .385),
+        (1.290, -.018, .303, .365),
+        (1.375, .010, .260, .325),
+        (1.440, .035, .205, .270),
+        (1.485, .055, .145, .205),
     ]
     world_elliptical_shell('Shaped breastplate access shell', breast,
                            -math.pi / 2, math.pi, chest, 'breast', 'shell', .014, 40)
-    # Four staggered armor courses use irregularly offset fitted panels. Each
-    # seam breaks against the course above/below, avoiding ruler-straight rows
-    # while keeping the broad plate scale of the selected full-body reference.
+    # Five staggered armor courses track the fuller upper sternum and narrowed
+    # waist. Tapered plate ends break the horizontal barrel rhythm without
+    # changing the separate rear shell or any internal assembly.
     breast_bands = [
-        (1.405, .125, [(-1.18, -.48, -.010), (-.54, .13, .018),
-                       (.08, .72, -.012), (.66, 1.19, .010)]),
-        (1.300, .150, [(-1.22, -.70, .018), (-.76, -.13, -.018),
-                       (-.18, .48, .008), (.43, 1.20, -.006)]),
-        (1.185, .160, [(-1.21, -.74, -.018), (-.80, -.16, .014),
-                       (-.22, .43, -.010), (.37, 1.20, .020)]),
-        (1.070, .150, [(-1.10, -.53, .015), (-.59, .06, -.014),
-                       (.02, .67, .012), (.62, 1.10, -.008)]),
+        (1.420, .118, [(-1.05, -.42, -.008), (-.50, .08, .014),
+                       (-.06, .50, -.010), (.42, 1.04, .008)]),
+        (1.330, .128, [(-1.16, -.54, .014), (-.66, -.08, -.014),
+                       (-.10, .48, .010), (.42, 1.14, -.006)]),
+        (1.235, .145, [(-1.20, -.68, -.015), (-.74, -.12, .015),
+                       (-.18, .43, -.012), (.37, 1.18, .018)]),
+        (1.130, .142, [(-1.15, -.62, .012), (-.70, -.10, -.016),
+                       (-.14, .47, .011), (.43, 1.14, -.009)]),
+        (1.025, .104, [(-1.05, -.45, .010), (-.53, .08, -.012),
+                       (.02, .54, .010), (.48, 1.02, -.006)]),
     ]
     plate_index = 0
     for band, (center_z, height, spans) in enumerate(breast_bands, 1):
@@ -512,34 +516,35 @@ def build(ctx):
         # bearing center; the forewing remains a second rigid assembly.
         shoulder_profiles = [
             (-.320, .060, .145, .165),
-            (-.245, .055, .170, .190),
-            (-.165, .045, .180, .195),
-            (-.075, .030, .165, .175),
-            (.055, .020, .140, .155),
+            (-.245, .055, .185, .198),
+            (-.165, .045, .198, .210),
+            (-.075, .030, .178, .190),
+            (.055, .020, .148, .165),
             (.110, .010, .105, .180),
             (.130, .010, .002, .002),
         ]
         outside_half = 0 if side > 0 else math.pi
         local_shell(label.title() + ' upper shoulder mantle shell', [
-                        (-.075, .030, .165, .175),
-                        (.055, .020, .140, .155),
+                        (-.075, .030, .178, .190),
+                        (.055, .020, .148, .165),
                         (.110, .010, .105, .180),
                         (.130, .010, .002, .002),
                     ], mantle, 'shoulder', 'shell', outside_half, math.pi,
                     .014, 20, center_x=side * .025)
         local_shell(label.title() + ' lower shoulder mantle shell', [
                         (-.320, .060, .145, .165),
-                        (-.245, .055, .170, .190),
-                        (-.165, .045, .180, .195),
-                        (-.075, .030, .165, .175),
+                        (-.245, .055, .185, .198),
+                        (-.165, .045, .198, .210),
+                        (-.075, .030, .178, .190),
                     ], mantle, 'shoulder', 'shell', outside_half, math.pi,
                     .014, 20, center_x=side * .025)
         # Only the flightless mantle receives these compact directional leaves.
-        # Their seven-millimetre layer steps clear the three-millimetre walls;
+        # Broader, fewer leaves overlap across the shoulder arc. Their
+        # seven-millimetre layer steps clear the three-millimetre walls;
         # every leaf belongs to this shoulder, never to both sides of an elbow.
-        for row,(top,length) in enumerate([(.112,.120),(.014,.130),(-.088,.130),(-.190,.125)]):
-            for column,angle in enumerate([.32,.88,1.44,2.00,2.56]):
-                mantle_leaf(label.title()+' upper-arm overlap '+str(row*5+column+1),
+        for row,(top,length) in enumerate([(.115,.150),(.012,.165),(-.100,.175),(-.205,.160)]):
+            for column,angle in enumerate([.40,1.18,1.96,2.74]):
+                mantle_leaf(label.title()+' upper-arm overlap '+str(row*4+column+1),
                             shoulder_profiles,side,mantle,angle,top,length,3-row)
 
         # Parent-local section centers follow the original elbow spar, but the

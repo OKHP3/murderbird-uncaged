@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-09-28T02:52:14.215Z",
+  "model": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Bill contact landmark lies on the new hard bill surface",
+      "status": "passed",
+      "detail": {
+        "distanceMeters": 0.0003474439172221258,
+        "triangles": 2026,
+        "scope": "Static exported surface proximity; dynamic contact is checked separately"
+      }
+    },
+    {
+      "name": "Opening covers and joint armor retain independent rigid owners",
+      "status": "passed",
+      "detail": {
+        "pairs": {
+          "cranial-cover": "head",
+          "breastplate": "body",
+          "left-wing-shield": "left-mantle",
+          "right-wing-shield": "right-mantle"
+        },
+        "editableParts": 1323,
+        "scope": "Rigid ownership, not a full swept collision solver"
+      }
+    },
+    {
+      "name": "Earlier exteriors exclude awakened lenses, power and processing",
+      "status": "passed",
+      "detail": {
+        "advancedOnlyParts": 35,
+        "laterRepairParts": 12
+      }
+    }
+  ]
+}
