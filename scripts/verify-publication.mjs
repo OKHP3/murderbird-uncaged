@@ -5,8 +5,8 @@ import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {assertPublicationBoundary} from './publication-boundary.mjs';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
-const alignmentVersion = process.env.UNCAGED_ALIGNMENT_VERSION || 'v8';
-assert(['v4', 'v5', 'v6', 'v7', 'v8'].includes(alignmentVersion), 'Only the versioned v4/v5/v6/v7/v8 runtime contracts are supported.');
+const alignmentVersion = process.env.UNCAGED_ALIGNMENT_VERSION || 'v9';
+assert(['v4', 'v5', 'v6', 'v7', 'v8', 'v9'].includes(alignmentVersion), 'Only the versioned v4/v5/v6/v7/v8/v9 runtime contracts are supported.');
 const modelDirectory = `assets/models/uncaged-alignment-${alignmentVersion}`;
 async function files(dir,prefix='') {
   const result=[];

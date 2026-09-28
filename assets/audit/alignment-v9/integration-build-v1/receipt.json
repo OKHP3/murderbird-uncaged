@@ -1,0 +1,98 @@
+{
+  "atUtc": "2026-09-28T16:02:02.814332+00:00",
+  "baseCommit": "cc0664d99cd91d60d4b304463edbb02e36fa2043",
+  "workingTreeDirty": true,
+  "sourceFiles": [
+    {
+      "path": "src/main.js",
+      "sha256": "bae5546c40f3d1682c4b191d2eb04c6f8708de5885ed1aa9b7c814cf8bc2332c",
+      "bytes": 29441
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "sha256": "0d084541236cef8d6af78251c2090bb3995f33cdd551e44c8ccfc615dc07ddb8",
+      "bytes": 24858
+    },
+    {
+      "path": "src/scene/fallback.js",
+      "sha256": "abd5979964f54052dff4f0455d5ab1463b386e488d649de76499a7fa5872c8ec",
+      "bytes": 4847
+    },
+    {
+      "path": "scripts/verify-publication.mjs",
+      "sha256": "43b0ddb301cdeabbd95981bb9c894b84fb7262dc45a3fb5019a09dfc80f0fdac",
+      "bytes": 5598
+    },
+    {
+      "path": "scripts/publication-boundary.mjs",
+      "sha256": "e09a6bf0a39767e613bf044a0684db49ace14d8d2866bb0ce49ef4f2f65cb10c",
+      "bytes": 634
+    },
+    {
+      "path": "package.json",
+      "sha256": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+      "bytes": 677
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+      "bytes": 25338
+    },
+    {
+      "path": "assets/models/uncaged-alignment-v9/alignment-inventory.json",
+      "sha256": "3d8e859b634fc1b9ac9cef6b13a17231f4c54808dba6976aefe33c3ebfd88145",
+      "bytes": 1288665
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "assets/audit/alignment-v9/integration-build-v1/build.txt",
+        "sha256": "e51abfa32ef0e11f99a2d844d1d905b843e8b2c739596d64101915f792318e30",
+        "bytes": 4004
+      }
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-publication.mjs"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "assets/audit/alignment-v9/integration-build-v1/publication-boundary.txt",
+        "sha256": "f99abdbe205aca776eba1daeb85949e52685933eee0798f68b4aeeb2b34cbb8c",
+        "bytes": 715
+      }
+    }
+  ],
+  "npmCi": {
+    "exitCode": 0,
+    "packagesAdded": 17,
+    "packagesAudited": 18,
+    "reportedVulnerabilities": 0,
+    "note": "Ran in this integration turn before checks. Existing optional fsevents install script remained unapproved; no settings changed."
+  },
+  "publicationBoundaryTests": "2/2 passed, including isolated unexpected-private-output rejection",
+  "limits": [
+    "Local dirty-tree build, not remote CI or deployment.",
+    "Raw runtime and native visual review recorded separately."
+  ],
+  "emittedManifest": {
+    "path": "assets/audit/alignment-v9/integration-build-v1/release.json",
+    "sha256": "899992679497999e1aab803c54d00baefde4492d3e24d45b23a09d00b4abca69",
+    "bytes": 24153
+  },
+  "boundary": {
+    "path": "assets/audit/alignment-v9/integration-build-v1/build-validation.json",
+    "sha256": "a6a31ab534b2e21efeac9a3e8081533053dc6bbfb055b846ba88038fbb05fb78",
+    "bytes": 11408
+  },
+  "status": "passed",
+  "sourcesUnchanged": true
+}

@@ -1,6 +1,6 @@
 # Correction v2 — accountable backlog
 
-> Current continuation: [Alignment V8](alignment-v8-review.md) is selected locally, with isolated [paired bill/mandible](../assets/audit/paired-bill-mandible-study-v2/index.html) and [cervical construction](cervical-construction-study-v1.md) follow-ups. The original v2 and v6 rows below remain stage-history records. The latest table at the end records current progress without closing artistic findings.
+> Current continuation: [Alignment V9](alignment-v9-review.md) is selected locally, with isolated [paired bill/mandible](../assets/audit/paired-bill-mandible-study-v2/index.html) and [cervical construction](cervical-construction-study-v1.md) follow-ups. The original v2 and v6 rows below remain stage-history records. The latest table at the end records current progress without closing artistic findings.
 
 The frozen inspector assessed `4b1c726f5d9bbd1ba1048f89049a5b422001c506`, model `3ec668b0…baacdc5`. Its scores remain historical. This work starts from that commit on `codex/neutral-correction-v2`; the public release is not replaced. Source/reference ownership is in the [integration contract](correction-v2-integration-contract.md) and [feature packet](correction-v2-reference-packet.md). The current neutral model and generated parts/pivots are recorded in [its inventory](../assets/models/uncaged-neutral-v2/neutral-inventory.json).
 
@@ -62,3 +62,9 @@ The selected V8 runtime remains `c8c30cc46059…`, with native `b12c442e2f51…`
 | F10 | TARGETED CHECKS PASS | Build at `10372e2` emitted134 files, with16 exact selected-model/folio/fallback assets. Experimental head/neck natives, diagnostic GLBs and audit trees were excluded. [Receipt](../assets/audit/paired-bill-mandible-study-v2/integration-build-v1/receipt.json). No remote CI or publication claimed. |
 
 The whole-candidate neutral owner gate remains ahead of finishing and publication. V10 repair chronology and V12 historical movement scope remain the same owner decisions; no story wording or reference approval scope has been silently changed.
+
+## V9 bounded integration
+
+V9 adopts the verified bill derivative `f5c0f5ad99ac…` into the local whole-bird exhibit. Five mesh geometries and four fixing positions differ from V8; other 690 meshes and all 51 pivots remain unchanged. The seven affected checks, build and publication boundary pass. The gallery supplies 42 new neutral views and 18 matched comparisons; the actual browser response carries the same GLB hash.
+
+F02 now includes the deeper bill, shorter mandible and reseated root fixings in the selected candidate. Its brow/optic fit and whole-head likeness remain OPEN. F01, F03 and F04 remain OPEN; separate neck and lower-leg workers are implementing bounded candidates. F05/F06 remain GATED on the whole-bird structural review. F07/F08 keep prior recording scope and require final-candidate encounter review. F09 retains earlier layout evidence plus bounded new inspection checks. F10 passes the current local boundary with version9 enabled; no new deployment is claimed. The [V9 review](alignment-v9-review.md) identifies exact files, checks and remaining decisions.
