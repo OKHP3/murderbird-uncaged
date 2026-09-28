@@ -1,0 +1,85 @@
+{
+  "status": "regional geometry candidate for later composition; not selected in app",
+  "reviewer": "primary agent",
+  "native": {
+    "path": "assets/models/uncaged-bill-cross-section-study-v2/murderbird-bill-cross-section-study-v2.blend",
+    "sha256": "33d001a7fdf7a025b1592b247dbbd5a97b56206211043e65e11a967d97c9f017",
+    "bytes": 1956183
+  },
+  "reviewedViews": [
+    "after-front.png",
+    "after-three-quarter.png",
+    "after-right-profile.png"
+  ],
+  "findings": [
+    "The broad lateral face and chamfer shoulders produce a more constructed bill in three-quarter and front views.",
+    "Exact side silhouette, maximum width by section, root attachment and distal apex are retained.",
+    "This is a limited regional improvement. Generic orbital housing, thin brow, rounded crown ends and overall head likeness remain unresolved."
+  ],
+  "selectedAppModel": "Alignment V8 c8c30cc46059; unchanged",
+  "limits": [
+    "No owner approval, finished surface pass or publication.",
+    "No browser appearance review of this derivative, no continuous collision certification, no all-region likeness acceptance.",
+    "Native/export comparison checks geometry positions, group identity and pivots, not all shading attributes."
+  ],
+  "runtime": {
+    "path": "assets/models/uncaged-bill-cross-section-study-v2/murderbird-bill-cross-section-study-v2.glb",
+    "sha256": "e414eafc0d4c2d1e2a5f919f48bf647026b8a804840eb14dd44a3d0d929aa629",
+    "bytes": 4636416
+  },
+  "evidence": [
+    {
+      "path": "assets/audit/bill-cross-section-study-v2/runtime/jaw-sweep/jaw-sweep.json",
+      "sha256": "14c2684a5e220ffd71ed8395367c4431dd6619c5fdde47a5e1a72c639b8842b6",
+      "bytes": 6859
+    },
+    {
+      "path": "assets/audit/bill-cross-section-study-v2/runtime/jaw-neck-matrix/jaw-neck-era-matrix.json",
+      "sha256": "c65f6a451c565fc44fbd9d8e3cc0b0b02d43edcbfb35595b45025c0f25c8fec6",
+      "bytes": 74818
+    },
+    {
+      "path": "assets/audit/bill-cross-section-study-v2/runtime/structure/structural-motion-validation.json",
+      "sha256": "e7ebe0ab790f40226ddb2d381ff60f0c8bdede7391f845ca0ac0601ed7c16019",
+      "bytes": 4451
+    },
+    {
+      "path": "assets/audit/bill-cross-section-study-v2/native-export-parity/comparison/geometry-parity.json",
+      "sha256": "ed569b3dc7194690ddb6403cc0a875d942c2e4aa8bf3803df43fc222badfca08",
+      "bytes": 69719
+    }
+  ],
+  "checkedSources": [
+    {
+      "path": "src/scene/cervical-articulation.js",
+      "sha256": "ce44ac4c0c57a2152fccef739b2abfd59bc7742799f63897603eb0fae7b25304",
+      "bytes": 1459
+    },
+    {
+      "path": "src/scene/era-motion.js",
+      "sha256": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+      "bytes": 34741
+    },
+    {
+      "path": "scripts/verify-alignment-v4-jaw-sweep.mjs",
+      "sha256": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+      "bytes": 6175
+    },
+    {
+      "path": "scripts/verify-alignment-jaw-neck-matrix.mjs",
+      "sha256": "47d4edc3417082ecea8e95ac7832ea178b23dd3c241d5261c220398e1dbac4d8",
+      "bytes": 20316
+    },
+    {
+      "path": "scripts/verify-structural-motion.mjs",
+      "sha256": "8597990d5d818ddc17f4a349b6a80b3893c790ebbf381abe4cc35e7b3a5cb725",
+      "bytes": 12669
+    }
+  ],
+  "confirmedChecks": [
+    "33 sampled jaw poses: no crossings outside existing journal envelope.",
+    "Nine actual runtime jaw/neck states: no proper crossings.",
+    "Four structural checks pass, including bill triangle contact on three cage rails and fixed cervical attachments.",
+    "Independent evaluated native-to-GLB point matching:102/102 groups,51/51 pivots,235788 triangles."
+  ]
+}

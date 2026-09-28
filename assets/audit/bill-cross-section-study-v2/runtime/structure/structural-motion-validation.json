@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-09-28T12:46:10.663Z",
+  "model": "assets/models/uncaged-bill-cross-section-study-v2/murderbird-bill-cross-section-study-v2.glb",
+  "checks": [
+    {
+      "name": "three-front-rails-use-articulated-cervical-contact-through-recovery",
+      "status": "passed",
+      "result": {
+        "rails": [
+          {
+            "normalizedX": -1,
+            "targetX": -1.2,
+            "root": {
+              "x": -1.197579544256477,
+              "z": 1.040970677569624,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              -1.2,
+              1.221516454510855,
+              2.0790004781801543
+            ],
+            "radial": 0.020999521819845768,
+            "maxPitch": 0.5610137939453126,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009379439961437,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497270196486629,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 0,
+            "targetX": 0,
+            "root": {
+              "x": 0,
+              "z": 1.0399058199488025,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              0,
+              1.2194819764047746,
+              2.0790000780857496
+            ],
+            "radial": 0.020999921914250486,
+            "maxPitch": 0.5661018371582032,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009382445945324,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497269809442745,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 1,
+            "targetX": 1.2,
+            "root": {
+              "x": 1.197579544256477,
+              "z": 1.040970677569624,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              1.2,
+              1.221516454510855,
+              2.0790004781801543
+            ],
+            "radial": 0.020999521819845768,
+            "maxPitch": 0.5610137939453126,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.23991766383720647,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06503899041031656,
+            "finishedState": "recover"
+          }
+        ],
+        "noTelescoping": true,
+        "allThreeRailsContacted": true
+      }
+    },
+    {
+      "name": "maker-five-controls-have-visible-structural-response",
+      "status": "passed",
+      "result": {
+        "channels": {
+          "leg": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "wing": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "tail": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": "compact-articulated-tail"
+          },
+          "neck": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "jaw": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          }
+        },
+        "rootRemainsFixed": true
+      }
+    },
+    {
+      "name": "mechanic-turn-retains-grounded-motion-without-builder-contact",
+      "status": "passed",
+      "result": {
+        "maxYaw": 1.5707963267948966,
+        "steps": 8,
+        "maxFootError": 2.8307370550558283e-16,
+        "routineRunning": true
+      }
+    },
+    {
+      "name": "jump-and-thrust-inspection-wait-for-safe-pose",
+      "status": "passed",
+      "result": {
+        "jumpPhaseAtRequest": 0.30952380952380953,
+        "jumpInspectionWaitedForLanding": true,
+        "thrustPhaseAtRequest": 0.303030303030303,
+        "thrustInspectionWaitedForSettle": true
+      }
+    }
+  ],
+  "modelSha256": "e414eafc0d4c2d1e2a5f919f48bf647026b8a804840eb14dd44a3d0d929aa629",
+  "modelBytes": 4636416,
+  "status": "passed",
+  "report": "assets/audit/bill-cross-section-study-v2/runtime/structure/structural-motion-validation.json"
+}
