@@ -5,6 +5,7 @@ V8 is the active **local** neutral candidate. It combines the reviewed head, sho
 ## Exact candidate
 
 - Checkout: `/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged`, branch `codex/review-regression-v4`.
+- Integrated source checkpoint: `35568b88fc2d3eb65f19d3afa9e83c4223f31b64`. Later isolated studies are separate from this selected model.
 - [Editable Blender source](../assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend): SHA-256 `b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478`, 1,962,303 bytes.
 - [Runtime GLB](../assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb): SHA-256 `c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385`, 4,636,416 bytes.
 - [Construction inventory](../assets/models/uncaged-alignment-v8/alignment-inventory.json) and [explicit transfer contract](../assets/audit/alignment-v8-transfer-contract.json).
@@ -46,6 +47,10 @@ The browser [loaded-response receipt](../assets/audit/alignment-v8/browser-c8c30
 Local conditions: Mac with Apple M4 Max, Chromium 154 in Codex's browser, ANGLE Metal, loopback, 1280×720 page, 856×648 canvas at device-pixel ratio 1. The record is not a sustained/thermal/mobile or constrained-network performance result. Audio was not enabled.
 
 `npm ci`, the production build, dynamic publication-boundary check and both boundary fixtures passed. The build contains 134 paths and sixteen byte-identical active model/folio/fallback matches. The local gallery, editable native, provenance, source archives and `.local/` remain outside the shipped derivative. Existing large-Three.js-chunk warning remains; no dependency or runtime architecture change was made.
+
+The [checkpoint build receipt](../assets/audit/alignment-v8/local-build-35568b88/build-receipt.json) binds the emitted files to source commit `35568b88`. Build metadata reports a locally modified tree because untracked subsequent studies were present; the active application source was committed. The [independent browser-data audit](../assets/audit/alignment-v8/browser-c8c30cc46059/bounded-browser-audit.md) confirms the covered stages and explicitly identifies the absence of a deliberate complete cage-test cycle in this movie. [Supervisor playback spot checks](../assets/audit/alignment-v8/browser-c8c30cc46059/supervisor-playback-review.json) remain separate from continuous human acting acceptance.
+
+Subsequent isolated proposals do not change V8: a deeper bill study was held for a bulbous inner profile; correcting the earlier six neck guards' coordinate placement fills a lateral opening but still leaves an angular neck and uneven overlaps. A more substantial regional cervical construction study is in progress. No held proposal is silently integrated.
 
 ## Finding status
 
