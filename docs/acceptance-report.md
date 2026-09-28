@@ -4,7 +4,9 @@
 
 **2026-09-27 · PARTIAL · revised proportions awaiting owner review.** The integrated local study demonstrates genuine 3D, a scripted cage response and reversible interior inspection. It does not yet establish the unmistakable MurderBird likeness or physical credibility required for finished character production. The owner rejected the first proportion direction with **“Rework the proportions first.”** The revised geometry is implemented; no subsequent owner acceptance is recorded.
 
-This report is the current local verification record. It supersedes source-presence-only status in earlier handoff drafts. Technical checks, artistic acceptance, remote CI and publication are separate gates.
+**Historical status clarification (2026-09-27):** This report preserves an earlier local acceptance checkpoint. The owner subsequently authorized publication of the current assessment exhibit, selected review derivative, and source/evidence package; see the [publication review](publication-review-2026-09-27.md). That authorization does not accept the model's likeness or change this report's findings.
+
+At its checkpoint, this report served as the local verification record and superseded source-presence-only status in earlier handoff drafts. The later exterior-v1 record is the current model/runtime review. Technical checks, artistic acceptance, remote CI and publication remain separate gates.
 
 ## Review the revision
 

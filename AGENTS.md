@@ -15,7 +15,7 @@ These instructions govern work in this repository only. They do not replace or m
 - Keep story-source snapshots under `content/story/`. Record the canonical published URL, source repository and revision or retrieval date, file hashes, and known rights/status in the matching `provenance/` ledger. Do not silently replace an earlier snapshot.
 - Keep imported historical support material in its source-relative location when that preserves references. Use `provenance/website-support/` for copied scripts, tests, and configuration so they cannot be mistaken for the active Vite app.
 - Record facts from the files and source system. Mark unknown provenance, licensing, production status, and technical dependencies as unknown; do not infer them from names, dates, or appearance.
-- Preserve the source's draft, working, and final labels. No finished 3D model or recorded vocal take is established by the current repository guidance. Do not upgrade an asset's status without supporting evidence.
+- Preserve the source's draft, working, and final labels. The exterior-v1 three-era model is an implemented review study; owner likeness acceptance remains pending, and it is not validated engineering. The owner-accepted Iron Verdict v3 is a synthesized sung performance; no human vocalist recording is claimed. Keep its release status distinct from historical instrumental/GarageBand material and the optional soundscape. Do not upgrade any other asset's status without supporting evidence.
 
 ## Privacy, licensing, and publication
 
