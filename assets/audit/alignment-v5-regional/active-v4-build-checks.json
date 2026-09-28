@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-09-28T06:06:29.169712+00:00",
+  "scope": "Current unchanged V4 runtime build and existing tests; not acceptance of new regional geometry.",
+  "buildRevision": "ec5962f694eec1ba271b4f810542031b7488edd6",
+  "commands": [
+    {
+      "command": "npm ci",
+      "status": "passed",
+      "observations": [
+        "0 reported vulnerabilities",
+        "npm reported an fsevents install script not covered by allowScripts; no approval was granted by this task"
+      ]
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "observations": [
+        "existing Three.js chunk exceeds 500kB warning",
+        "dist contains active V4 model and approved historical review assets"
+      ]
+    },
+    {
+      "command": "node --test tests/*.test.mjs",
+      "status": "passed",
+      "passed": 56,
+      "failed": 0
+    },
+    {
+      "command": "node scripts/verify-publication.mjs",
+      "status": "passed",
+      "observedOutputFiles": 134,
+      "exactRuntimeAssetCount": 16
+    },
+    {
+      "command": "node scripts/verify-presentation.mjs",
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "No dependency versions changed.",
+    "No remote CI, deployment, or public publication.",
+    "Regional native sources, studies and audit assets are not referenced by the active app or copied into dist."
+  ]
+}

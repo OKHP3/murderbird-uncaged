@@ -1,0 +1,1366 @@
+{
+  "status": "local talon profile study; visual/contact review pending",
+  "scope": "Only the six existing distal talon sheath meshes; no knuckle, hinge, guard, joint, pivot, or other region changes.",
+  "source": {
+    "native": {
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-alignment-v5/iterations/c8a7a7e14253/murderbird-alignment-v5.blend",
+      "bytes": 1827441,
+      "sha256": "cc6bfafc9ab044bba1abcbec86761afb9ef67ee60e252ec7ee838948ea7dfd04"
+    },
+    "exportedGLB": {
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-alignment-v5/iterations/c8a7a7e14253/murderbird-alignment-v5.glb",
+      "bytes": 3844888,
+      "sha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3"
+    },
+    "inventory": {
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-alignment-v5/iterations/c8a7a7e14253/alignment-inventory.json",
+      "bytes": 913225,
+      "sha256": "5fda3638038b0a5d4c040544a2b419962cd33c55c9a3f0edc416aef4c18b7ee0"
+    },
+    "productionDiagnosticGLB": {
+      "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-v5-diagnostics/c8a7a7e14253/murderbird-alignment-v5.glb",
+      "bytes": 3844888,
+      "sha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3"
+    }
+  },
+  "sourceNativeSha256Required": "cc6bfafc9ab044bba1abcbec86761afb9ef67ee60e252ec7ee838948ea7dfd04",
+  "sourceExportSha256Required": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3",
+  "executedScriptSnapshot": {
+    "path": ".local/alignment-limb-study/talon-profile-study-01/study-alignment-talon-profiles.py",
+    "bytes": 41732,
+    "sha256": "7d5b5eda32244dfc503bc8e55bed7c9ab1d1c621ee2a43258c518a63c850dfdb"
+  },
+  "profileMethod": {
+    "description": "Topology-derived swept rings; subtle asymmetric D/teardrop superellipse on proximal profile, smoothly returning to exact source surface at t=.85.",
+    "ventralPower": 2.55,
+    "dorsalPower": 1.88,
+    "centerlineSamplesPreserved": true,
+    "ringDerivation": "Two 16-vertex cap faces and 16 side-quads per ring interval; cyclic correspondence followed through native quad topology, no hard-coded vertex ring indices.",
+    "sourceRings": 17,
+    "verticesPerRing": 16,
+    "terminal15PercentExact": true,
+    "interpolatedBoundaryT": 0.85,
+    "lateralEnvelopeExpanded": false,
+    "ventralEnvelopeExtended": false
+  },
+  "changedTalons": [
+    {
+      "name": "left digit 1 tapered claw sheath",
+      "parent": "left-digit-1-distal",
+      "region": "foot",
+      "role": "edge",
+      "sourceMeshSha256": "0459291b184b2ec8a0b1b4e031165851de7b87ae320935221581f39563c81126",
+      "sourceTopology": {
+        "vertices": 272,
+        "faces": 258,
+        "rings": 17,
+        "verticesPerRing": 16,
+        "facesPerInterval": 16
+      },
+      "profile": {
+        "ventralSuperellipsePower": 2.55,
+        "dorsalSuperellipsePower": 1.88,
+        "fadeFromT": 0.75,
+        "fadeToExactSourceT": 0.85,
+        "modifiedExistingRingIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "sourceTerminalRingIndicesPreserved": [
+          14,
+          15,
+          16
+        ],
+        "insertedExactSourceSurfaceRingT": 0.85
+      },
+      "changedOriginalVertexRanges": [
+        [
+          0,
+          223
+        ]
+      ],
+      "addedVertexRange": [
+        272,
+        287
+      ],
+      "centerlineMaxError": 6.006850114687196e-08,
+      "maxLateralEnvelopeOverrun": 0.0,
+      "maxVentralEnvelopeOverrun": 0.0,
+      "terminalRingsExact": true,
+      "rootAndTipCenterlineBefore": [
+        [
+          0.1309359073638916,
+          -0.3450000286102295,
+          0.06399999558925629
+        ],
+        [
+          0.11848590523004532,
+          -0.4549999535083771,
+          0.006999999284744263
+        ]
+      ],
+      "sourceExport": {
+        "meshName": "left digit 1 tapered claw sheath",
+        "triangles": 540,
+        "vertexCount": 272
+      },
+      "outputExport": {
+        "meshName": "left digit 1 tapered claw sheath",
+        "primitives": [
+          {
+            "attributes": {
+              "NORMAL": {
+                "count": 288,
+                "min": null,
+                "max": null,
+                "sha256": "6b3d5ff5075b9774f228d833376541888089b9c3d42eb147514a61450cf2d8c5"
+              },
+              "POSITION": {
+                "count": 288,
+                "min": [
+                  -0.0586928054690361,
+                  -0.03448721766471863,
+                  0.07791626453399658
+                ],
+                "max": [
+                  -0.000634998083114624,
+                  0.062056928873062134,
+                  0.19925981760025024
+                ],
+                "sha256": "082ce6fbc06b173bed96976d73eafa174df1e520c5db691299560d678f50def3"
+              }
+            },
+            "indexCount": 1716,
+            "triangleCount": 572,
+            "mode": 4
+          }
+        ],
+        "triangles": 572,
+        "positionVertexCount": 288,
+        "positionBounds": [
+          {
+            "count": 288,
+            "min": [
+              -0.0586928054690361,
+              -0.03448721766471863,
+              0.07791626453399658
+            ],
+            "max": [
+              -0.000634998083114624,
+              0.062056928873062134,
+              0.19925981760025024
+            ],
+            "sha256": "082ce6fbc06b173bed96976d73eafa174df1e520c5db691299560d678f50def3"
+          }
+        ]
+      }
+    },
+    {
+      "name": "left digit 2 tapered claw sheath",
+      "parent": "left-digit-2-distal",
+      "region": "foot",
+      "role": "edge",
+      "sourceMeshSha256": "099b712bd54af07b20ca87b1d09d2765725fe55287cd23c97db1b81ced3dacbf",
+      "sourceTopology": {
+        "vertices": 272,
+        "faces": 258,
+        "rings": 17,
+        "verticesPerRing": 16,
+        "facesPerInterval": 16
+      },
+      "profile": {
+        "ventralSuperellipsePower": 2.55,
+        "dorsalSuperellipsePower": 1.88,
+        "fadeFromT": 0.75,
+        "fadeToExactSourceT": 0.85,
+        "modifiedExistingRingIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "sourceTerminalRingIndicesPreserved": [
+          14,
+          15,
+          16
+        ],
+        "insertedExactSourceSurfaceRingT": 0.85
+      },
+      "changedOriginalVertexRanges": [
+        [
+          0,
+          223
+        ]
+      ],
+      "addedVertexRange": [
+        272,
+        287
+      ],
+      "centerlineMaxError": 6.006850114687196e-08,
+      "maxLateralEnvelopeOverrun": 0.0,
+      "maxVentralEnvelopeOverrun": 0.0,
+      "terminalRingsExact": true,
+      "rootAndTipCenterlineBefore": [
+        [
+          0.2512859106063843,
+          -0.38999998569488525,
+          0.06400000303983688
+        ],
+        [
+          0.25128594040870667,
+          -0.5230000019073486,
+          0.006999998353421688
+        ]
+      ],
+      "sourceExport": {
+        "meshName": "left digit 2 tapered claw sheath",
+        "triangles": 540,
+        "vertexCount": 272
+      },
+      "outputExport": {
+        "meshName": "left digit 2 tapered claw sheath",
+        "primitives": [
+          {
+            "attributes": {
+              "NORMAL": {
+                "count": 288,
+                "min": null,
+                "max": null,
+                "sha256": "99c9c891a190308fa625b0cb6f4ec748b8b43aa560d200fa35a8070cb7b8747c"
+              },
+              "POSITION": {
+                "count": 288,
+                "min": [
+                  -0.02799999713897705,
+                  -0.034586839377880096,
+                  0.09958487749099731
+                ],
+                "max": [
+                  0.02799999713897705,
+                  0.062100350856781006,
+                  0.24291276931762695
+                ],
+                "sha256": "cf783302561222d8bf166976f7ccef75333a545d654e34a7f252602578b54afc"
+              }
+            },
+            "indexCount": 1716,
+            "triangleCount": 572,
+            "mode": 4
+          }
+        ],
+        "triangles": 572,
+        "positionVertexCount": 288,
+        "positionBounds": [
+          {
+            "count": 288,
+            "min": [
+              -0.02799999713897705,
+              -0.034586839377880096,
+              0.09958487749099731
+            ],
+            "max": [
+              0.02799999713897705,
+              0.062100350856781006,
+              0.24291276931762695
+            ],
+            "sha256": "cf783302561222d8bf166976f7ccef75333a545d654e34a7f252602578b54afc"
+          }
+        ]
+      }
+    },
+    {
+      "name": "left digit 3 tapered claw sheath",
+      "parent": "left-digit-3-distal",
+      "region": "foot",
+      "role": "edge",
+      "sourceMeshSha256": "0bdac8b733f567868e81a395f057e98a47488ab987ec1148e68d30a4f1893f3a",
+      "sourceTopology": {
+        "vertices": 272,
+        "faces": 258,
+        "rings": 17,
+        "verticesPerRing": 16,
+        "facesPerInterval": 16
+      },
+      "profile": {
+        "ventralSuperellipsePower": 2.55,
+        "dorsalSuperellipsePower": 1.88,
+        "fadeFromT": 0.75,
+        "fadeToExactSourceT": 0.85,
+        "modifiedExistingRingIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "sourceTerminalRingIndicesPreserved": [
+          14,
+          15,
+          16
+        ],
+        "insertedExactSourceSurfaceRingT": 0.85
+      },
+      "changedOriginalVertexRanges": [
+        [
+          0,
+          223
+        ]
+      ],
+      "addedVertexRange": [
+        272,
+        287
+      ],
+      "centerlineMaxError": 6.664001874625056e-08,
+      "maxLateralEnvelopeOverrun": 0.0,
+      "maxVentralEnvelopeOverrun": 0.0,
+      "terminalRingsExact": true,
+      "rootAndTipCenterlineBefore": [
+        [
+          0.38178592920303345,
+          -0.32500001788139343,
+          0.06400000303983688
+        ],
+        [
+          0.3952859342098236,
+          -0.4220000207424164,
+          0.006999999284744263
+        ]
+      ],
+      "sourceExport": {
+        "meshName": "left digit 3 tapered claw sheath",
+        "triangles": 540,
+        "vertexCount": 272
+      },
+      "outputExport": {
+        "meshName": "left digit 3 tapered claw sheath",
+        "primitives": [
+          {
+            "attributes": {
+              "NORMAL": {
+                "count": 288,
+                "min": null,
+                "max": null,
+                "sha256": "9bddfd6d494c4e240a0322660165bd3c4d0dbc80e1f05d7db347a8c422ef6cf4"
+              },
+              "POSITION": {
+                "count": 288,
+                "min": [
+                  0.0030501186847686768,
+                  -0.03442547097802162,
+                  0.06808951497077942
+                ],
+                "max": [
+                  0.061534374952316284,
+                  0.062020108103752136,
+                  0.1770838499069214
+                ],
+                "sha256": "97deff6749c4a41ee5335c694c0aa3f3aa9790e7e437a06dab85d4c626065ef5"
+              }
+            },
+            "indexCount": 1716,
+            "triangleCount": 572,
+            "mode": 4
+          }
+        ],
+        "triangles": 572,
+        "positionVertexCount": 288,
+        "positionBounds": [
+          {
+            "count": 288,
+            "min": [
+              0.0030501186847686768,
+              -0.03442547097802162,
+              0.06808951497077942
+            ],
+            "max": [
+              0.061534374952316284,
+              0.062020108103752136,
+              0.1770838499069214
+            ],
+            "sha256": "97deff6749c4a41ee5335c694c0aa3f3aa9790e7e437a06dab85d4c626065ef5"
+          }
+        ]
+      }
+    },
+    {
+      "name": "right digit 1 tapered claw sheath",
+      "parent": "right-digit-1-distal",
+      "region": "foot",
+      "role": "edge",
+      "sourceMeshSha256": "d8005c8f70bba2a86144ea01cebc45dffd70af149ace83f8fa8597802c4d4e49",
+      "sourceTopology": {
+        "vertices": 272,
+        "faces": 258,
+        "rings": 17,
+        "verticesPerRing": 16,
+        "facesPerInterval": 16
+      },
+      "profile": {
+        "ventralSuperellipsePower": 2.55,
+        "dorsalSuperellipsePower": 1.88,
+        "fadeFromT": 0.75,
+        "fadeToExactSourceT": 0.85,
+        "modifiedExistingRingIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "sourceTerminalRingIndicesPreserved": [
+          14,
+          15,
+          16
+        ],
+        "insertedExactSourceSurfaceRingT": 0.85
+      },
+      "changedOriginalVertexRanges": [
+        [
+          0,
+          223
+        ]
+      ],
+      "addedVertexRange": [
+        272,
+        287
+      ],
+      "centerlineMaxError": 6.664001874625056e-08,
+      "maxLateralEnvelopeOverrun": 0.0,
+      "maxVentralEnvelopeOverrun": 0.0,
+      "terminalRingsExact": true,
+      "rootAndTipCenterlineBefore": [
+        [
+          -0.3716358542442322,
+          -0.3450000286102295,
+          0.06399999558925629
+        ],
+        [
+          -0.3840859532356262,
+          -0.4549999535083771,
+          0.006999999284744263
+        ]
+      ],
+      "sourceExport": {
+        "meshName": "right digit 1 tapered claw sheath",
+        "triangles": 540,
+        "vertexCount": 272
+      },
+      "outputExport": {
+        "meshName": "right digit 1 tapered claw sheath",
+        "primitives": [
+          {
+            "attributes": {
+              "NORMAL": {
+                "count": 288,
+                "min": null,
+                "max": null,
+                "sha256": "ef665efe6661da487e5cac7a932ae57129fc80b5f9a76e41de1ad55fc40a1e60"
+              },
+              "POSITION": {
+                "count": 288,
+                "min": [
+                  -0.05869284272193909,
+                  -0.03448721766471863,
+                  0.07791629433631897
+                ],
+                "max": [
+                  -0.0006350278854370117,
+                  0.062056928873062134,
+                  0.19925981760025024
+                ],
+                "sha256": "7a9486f7e165545fe8305c6812233051c89a77897f6d0d6e338cbc98908dd6f6"
+              }
+            },
+            "indexCount": 1716,
+            "triangleCount": 572,
+            "mode": 4
+          }
+        ],
+        "triangles": 572,
+        "positionVertexCount": 288,
+        "positionBounds": [
+          {
+            "count": 288,
+            "min": [
+              -0.05869284272193909,
+              -0.03448721766471863,
+              0.07791629433631897
+            ],
+            "max": [
+              -0.0006350278854370117,
+              0.062056928873062134,
+              0.19925981760025024
+            ],
+            "sha256": "7a9486f7e165545fe8305c6812233051c89a77897f6d0d6e338cbc98908dd6f6"
+          }
+        ]
+      }
+    },
+    {
+      "name": "right digit 2 tapered claw sheath",
+      "parent": "right-digit-2-distal",
+      "region": "foot",
+      "role": "edge",
+      "sourceMeshSha256": "7ca372f3c31d1c755fc87033c5e5ace757081615b05984cc55a312c87a63a63c",
+      "sourceTopology": {
+        "vertices": 272,
+        "faces": 258,
+        "rings": 17,
+        "verticesPerRing": 16,
+        "facesPerInterval": 16
+      },
+      "profile": {
+        "ventralSuperellipsePower": 2.55,
+        "dorsalSuperellipsePower": 1.88,
+        "fadeFromT": 0.75,
+        "fadeToExactSourceT": 0.85,
+        "modifiedExistingRingIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "sourceTerminalRingIndicesPreserved": [
+          14,
+          15,
+          16
+        ],
+        "insertedExactSourceSurfaceRingT": 0.85
+      },
+      "changedOriginalVertexRanges": [
+        [
+          0,
+          223
+        ]
+      ],
+      "addedVertexRange": [
+        272,
+        287
+      ],
+      "centerlineMaxError": 6.664001874625056e-08,
+      "maxLateralEnvelopeOverrun": 0.0,
+      "maxVentralEnvelopeOverrun": 0.0,
+      "terminalRingsExact": true,
+      "rootAndTipCenterlineBefore": [
+        [
+          -0.2512859106063843,
+          -0.38999998569488525,
+          0.06400000303983688
+        ],
+        [
+          -0.2512858808040619,
+          -0.5230000019073486,
+          0.006999998353421688
+        ]
+      ],
+      "sourceExport": {
+        "meshName": "right digit 2 tapered claw sheath",
+        "triangles": 540,
+        "vertexCount": 272
+      },
+      "outputExport": {
+        "meshName": "right digit 2 tapered claw sheath",
+        "primitives": [
+          {
+            "attributes": {
+              "NORMAL": {
+                "count": 288,
+                "min": null,
+                "max": null,
+                "sha256": "bb804df4d2ed6d52e12d55622b9f170ab5046785fca798b13ea97a405a9dfd5a"
+              },
+              "POSITION": {
+                "count": 288,
+                "min": [
+                  -0.02799999713897705,
+                  -0.034586839377880096,
+                  0.09958487749099731
+                ],
+                "max": [
+                  0.02799999713897705,
+                  0.062100350856781006,
+                  0.24291276931762695
+                ],
+                "sha256": "95399b9de4f262791d579dbc44425a72aa9f206070cbd7f0ccc6b185749e0643"
+              }
+            },
+            "indexCount": 1716,
+            "triangleCount": 572,
+            "mode": 4
+          }
+        ],
+        "triangles": 572,
+        "positionVertexCount": 288,
+        "positionBounds": [
+          {
+            "count": 288,
+            "min": [
+              -0.02799999713897705,
+              -0.034586839377880096,
+              0.09958487749099731
+            ],
+            "max": [
+              0.02799999713897705,
+              0.062100350856781006,
+              0.24291276931762695
+            ],
+            "sha256": "95399b9de4f262791d579dbc44425a72aa9f206070cbd7f0ccc6b185749e0643"
+          }
+        ]
+      }
+    },
+    {
+      "name": "right digit 3 tapered claw sheath",
+      "parent": "right-digit-3-distal",
+      "region": "foot",
+      "role": "edge",
+      "sourceMeshSha256": "45a6d8abe332db4bebf4897bdc18fd971718ac4a6da996ffc4d1bdcaece1e37f",
+      "sourceTopology": {
+        "vertices": 272,
+        "faces": 258,
+        "rings": 17,
+        "verticesPerRing": 16,
+        "facesPerInterval": 16
+      },
+      "profile": {
+        "ventralSuperellipsePower": 2.55,
+        "dorsalSuperellipsePower": 1.88,
+        "fadeFromT": 0.75,
+        "fadeToExactSourceT": 0.85,
+        "modifiedExistingRingIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "sourceTerminalRingIndicesPreserved": [
+          14,
+          15,
+          16
+        ],
+        "insertedExactSourceSurfaceRingT": 0.85
+      },
+      "changedOriginalVertexRanges": [
+        [
+          0,
+          223
+        ]
+      ],
+      "addedVertexRange": [
+        272,
+        287
+      ],
+      "centerlineMaxError": 6.006850114687196e-08,
+      "maxLateralEnvelopeOverrun": 0.0,
+      "maxVentralEnvelopeOverrun": 0.0,
+      "terminalRingsExact": true,
+      "rootAndTipCenterlineBefore": [
+        [
+          -0.1207859218120575,
+          -0.32500001788139343,
+          0.06400000303983688
+        ],
+        [
+          -0.10728590935468674,
+          -0.4220000207424164,
+          0.006999999284744263
+        ]
+      ],
+      "sourceExport": {
+        "meshName": "right digit 3 tapered claw sheath",
+        "triangles": 540,
+        "vertexCount": 272
+      },
+      "outputExport": {
+        "meshName": "right digit 3 tapered claw sheath",
+        "primitives": [
+          {
+            "attributes": {
+              "NORMAL": {
+                "count": 288,
+                "min": null,
+                "max": null,
+                "sha256": "d606855cb2dc39733e3842af83c053b79cbb0b4aaf8ebb4407e552023977d444"
+              },
+              "POSITION": {
+                "count": 288,
+                "min": [
+                  0.00305001437664032,
+                  -0.03442547097802162,
+                  0.06808951497077942
+                ],
+                "max": [
+                  0.06153438985347748,
+                  0.062020108103752136,
+                  0.1770838499069214
+                ],
+                "sha256": "c96c3900836bec5016dbb2aa6913f74f835eaabf9a2be4be7a67d21ccf6aa94e"
+              }
+            },
+            "indexCount": 1716,
+            "triangleCount": 572,
+            "mode": 4
+          }
+        ],
+        "triangles": 572,
+        "positionVertexCount": 288,
+        "positionBounds": [
+          {
+            "count": 288,
+            "min": [
+              0.00305001437664032,
+              -0.03442547097802162,
+              0.06808951497077942
+            ],
+            "max": [
+              0.06153438985347748,
+              0.062020108103752136,
+              0.1770838499069214
+            ],
+            "sha256": "c96c3900836bec5016dbb2aa6913f74f835eaabf9a2be4be7a67d21ccf6aa94e"
+          }
+        ]
+      }
+    }
+  ],
+  "pivotCheck": {
+    "sourceEmptyCount": 51,
+    "outputEmptyCount": 51,
+    "allParentsAndLocalWorldTransformsExact": true
+  },
+  "unmodifiedNativeMeshes": {
+    "count": 637,
+    "allGeometrySignaturesExact": true,
+    "meshNamesSha256": "4e00287032e6d837a21666540d8365ca6c87c8bf92cfc8dfe476769dd8e1134c"
+  },
+  "unmodifiedExportMeshes": {
+    "sourceMeshCount": 90,
+    "outputMeshCount": 643,
+    "checkedNonTalonMeshCount": 84,
+    "exactPrimitivePayloadMatchCount": 30,
+    "exactPrimitiveCountAndVertexCountMatchCount": 30,
+    "exactPositionBoundsMatchCount": 30,
+    "comparison": [
+      {
+        "name": "Bill root fixing.004",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Bowed passive cervical fork",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Breast inner access shell",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Breast keel overlapping lamina 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Breast keel root fixing 0 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Ceramic cell",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Continuous temporal shell -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Crown lamina root pin",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Curved thoracic load rail",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Digit inner link",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.001",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.002",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.003",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.004",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.005",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.006",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.007",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.008",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.009",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.010",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Digit inner link.011",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Distal mantle root pin",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Distal mantle root pin.010",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Dorsal lap 0 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Forged orbital mounting plate -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Forked forged mandible -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Mandible journal cap.002",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Orbital mounting fixing -1 1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Processing lattice rail",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Profiled upper bill blade 0.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Proposed later left bearing strap v4",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Recessed orbital bearing -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Rounded swept crown lamina 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Seated Advanced optic -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Seated passive optic housing -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Short dorsal shell",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Shoulder covert root pin",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Shoulder covert root pin.017",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Throat formed lamina 1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "Toe hinge",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.001",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.002",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.003",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.004",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.005",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.006",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.007",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.008",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.009",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.010",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "Toe hinge.011",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "V4 cranial inner shell",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "left articulated ankle sheath 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left articulated bearing core",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left articulated bearing core.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left distal mantle plume 0 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left metatarsal passive rail",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left open stepped bearing race -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left open stepped bearing race -1.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left open stepped bearing race -1.002",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left profiled mantle backing v4 left-mantle",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left profiled mantle backing v4 left-wing-shield",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "left recessed axle cap -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left recessed axle cap -1.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left recessed axle cap -1.002",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left shoulder covert 0 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left tapered limb sheath left-shin 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "left tapered limb sheath left-thigh 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right articulated ankle sheath 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right articulated bearing core",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right articulated bearing core.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right distal mantle plume 0 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right metatarsal passive rail",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right open stepped bearing race -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right open stepped bearing race -1.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right open stepped bearing race -1.002",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right profiled mantle backing v4 right-mantle",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right profiled mantle backing v4 right-wing-shield",
+        "primitiveCountsAndVertexCountsExact": true,
+        "positionBoundsExact": true,
+        "allPrimitivePayloadHashesExact": true
+      },
+      {
+        "name": "right recessed axle cap -1",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right recessed axle cap -1.001",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right recessed axle cap -1.002",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right shoulder covert 0 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right tapered limb sheath right-shin 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      },
+      {
+        "name": "right tapered limb sheath right-thigh 0",
+        "primitiveCountsAndVertexCountsExact": false,
+        "positionBoundsExact": false,
+        "allPrimitivePayloadHashesExact": false
+      }
+    ]
+  },
+  "savedForkTerminalChecks": [
+    {
+      "name": "left digit 1 tapered claw sheath",
+      "terminalRingExact": true,
+      "ringsAfterInsert": 18
+    },
+    {
+      "name": "left digit 2 tapered claw sheath",
+      "terminalRingExact": true,
+      "ringsAfterInsert": 18
+    },
+    {
+      "name": "left digit 3 tapered claw sheath",
+      "terminalRingExact": true,
+      "ringsAfterInsert": 18
+    },
+    {
+      "name": "right digit 1 tapered claw sheath",
+      "terminalRingExact": true,
+      "ringsAfterInsert": 18
+    },
+    {
+      "name": "right digit 2 tapered claw sheath",
+      "terminalRingExact": true,
+      "ringsAfterInsert": 18
+    },
+    {
+      "name": "right digit 3 tapered claw sheath",
+      "terminalRingExact": true,
+      "ringsAfterInsert": 18
+    }
+  ],
+  "sceneCounts": {
+    "sourceNativeMeshes": 643,
+    "outputNativeMeshes": 643,
+    "sourceOutputGLBMeshes": 90,
+    "studyOutputGLBMeshes": 643
+  },
+  "outputs": {
+    "native": {
+      "path": ".local/alignment-limb-study/talon-profile-study-01/murderbird-talon-profile-study-01.blend",
+      "bytes": 1830831,
+      "sha256": "67fff92d0c08d097692dc610c89d253d3af8253d641844dfd3aa7055bb5797be"
+    },
+    "glb": {
+      "path": ".local/alignment-limb-study/talon-profile-study-01/murderbird-talon-profile-study-01.glb",
+      "bytes": 3501848,
+      "sha256": "c17272ed6b689e7794d9f5988c8b634121e4deaf090b6b3a713c2f47b370632f"
+    }
+  },
+  "limitations": [
+    "Authored geometric study only; no source dimensional metrology or final-likeness approval.",
+    "No grip-force, load-bearing, traction, or physical contact certification.",
+    "Changed cross-section may affect side contact/collision within the existing tip envelope; root owns contact retesting.",
+    "Terminal source geometry, sampled centerlines, endpoint reach, and all joint pivots are preserved by checks recorded here."
+  ]
+}

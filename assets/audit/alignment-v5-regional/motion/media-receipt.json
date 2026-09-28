@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-09-28T06:35:30.271104+00:00",
+  "modelIdentity": {
+    "path": "assets/models/uncaged-alignment-v5-regional/candidate/murderbird-v5-sixth-guard-talon-study.glb",
+    "bytes": 4490664,
+    "sha256": "8f8ec3290eba430d17af0f2f50fe24fa3ba318e783869d0e8ad08dcf87d7f1ee"
+  },
+  "status": "measured media; bounded root visual inspection",
+  "media": [
+    {
+      "path": "assets/audit/alignment-v5-regional/motion/alignment-motion-demonstration.mp4",
+      "sha256": "956b3ae7dd553e067e0f66687e9772a6ee44c2d0048ded8d5d5e5e8841d1a4e7",
+      "bytes": 14591814,
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1600,
+            "height": 1400,
+            "avg_frame_rate": "25/1",
+            "duration": "126.120000",
+            "nb_frames": "3153"
+          }
+        ],
+        "format": {
+          "duration": "126.120000"
+        }
+      }
+    },
+    {
+      "path": "assets/audit/alignment-v5-regional/motion/alignment-motion-demonstration.webm",
+      "sha256": "64d5355833bdc9fccaeb6023953119a38b011be5162fa45472a5977c012a4f73",
+      "bytes": 14514269,
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "vp8",
+            "codec_type": "video",
+            "width": 1600,
+            "height": 1400,
+            "avg_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "126.120000"
+        }
+      }
+    }
+  ],
+  "transcode": {
+    "source": "alignment-motion-demonstration.webm",
+    "output": "alignment-motion-demonstration.mp4",
+    "videoCodec": "libx264",
+    "crf": 20,
+    "preset": "fast",
+    "audio": "-an; source has no audio stream",
+    "fastStart": true,
+    "editing": "No trim or cuts; setup retained"
+  },
+  "sequenceEventRangeSeconds": [
+    0.941,
+    124.791
+  ],
+  "events": 39,
+  "samples": 412,
+  "frozenPoseCount": 12,
+  "frozenImageCount": 44,
+  "markerActivations": 18,
+  "scope": "Normal-speed uncut media retained; root inspected selected native, motion and frozen images. No continuous human acting review or exhaustive collision certification.",
+  "measuredSequenceSeconds": 124.794
+}

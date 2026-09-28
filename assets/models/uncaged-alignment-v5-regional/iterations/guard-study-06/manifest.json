@@ -1,0 +1,217 @@
+{
+  "schema": "alignment-limb-profile-study/v2",
+  "status": "isolated instep refinement; review and motion checks pending",
+  "scope": "Exactly two existing curved instep guard meshes changed relative to guard-study-05. No rig empties or pivots moved. The complete original c8 replacement contract remains 26 replaced guard/sheath names and 10 new guard objects; this study adds a two-mesh delta only.",
+  "source": {
+    "native": {
+      "path": "assets/models/uncaged-alignment-v5-regional/iterations/guard-study-05/murderbird-limb-profile-study.blend",
+      "bytes": 1674765,
+      "sha256": "c1ea75d32edcc2a356589549651553b52fc7b641a17de9a2b9c532ce7050dcc1"
+    },
+    "glb": {
+      "path": "assets/models/uncaged-alignment-v5-regional/iterations/guard-study-05/murderbird-limb-profile-study.glb",
+      "bytes": 3540204,
+      "sha256": "d7074699b566dac07d40b226865db766c48cb36be104b0845cec5c2ddf059268"
+    },
+    "manifest": {
+      "path": "assets/models/uncaged-alignment-v5-regional/iterations/guard-study-05/manifest.json",
+      "bytes": 60471,
+      "sha256": "49493ba6ff530bc93ae58420a5ea50aa6c40cccc4f9c6999ee099f99f8b81ebd"
+    }
+  },
+  "executedScriptSnapshot": {
+    "path": "assets/models/uncaged-alignment-v5-regional/iterations/guard-study-06/generator-script-at-build.py",
+    "bytes": 9786,
+    "sha256": "f165b2e6259ccdcef2092191c90443f2dd311661a891fa591b38e8eedacc983b"
+  },
+  "outputs": {
+    "native": {
+      "path": "assets/models/uncaged-alignment-v5-regional/iterations/guard-study-06/murderbird-limb-profile-study-06.blend",
+      "bytes": 1676834,
+      "sha256": "6541f629bf3dd5c94dc01cacd260cbffef73f6fde867256385c15e6a6476746d"
+    },
+    "glb": {
+      "path": "assets/models/uncaged-alignment-v5-regional/iterations/guard-study-06/murderbird-limb-profile-study-06.glb",
+      "bytes": 3513796,
+      "sha256": "3147e19da27707e8484ff0787b256142b487e38129f6517b8e0322cc2cd7ba65"
+    }
+  },
+  "baseReplacementContract": {
+    "sourceIteration": "c8a7a7e14253",
+    "replacedObjects": [
+      "left ankle sheath lap rib 0.27",
+      "left ankle sheath lap rib 0.53",
+      "left ankle sheath lap rib 0.78",
+      "left articulated ankle sheath 0",
+      "left articulated ankle sheath 1",
+      "left articulated ankle sheath 2",
+      "left articulated ankle sheath 3",
+      "left tapered limb sheath left-shin 0",
+      "left tapered limb sheath left-shin 1",
+      "left tapered limb sheath left-shin 2",
+      "left tapered limb sheath left-thigh 0",
+      "left tapered limb sheath left-thigh 1",
+      "left tapered limb sheath left-thigh 2",
+      "right ankle sheath lap rib 0.27",
+      "right ankle sheath lap rib 0.53",
+      "right ankle sheath lap rib 0.78",
+      "right articulated ankle sheath 0",
+      "right articulated ankle sheath 1",
+      "right articulated ankle sheath 2",
+      "right articulated ankle sheath 3",
+      "right tapered limb sheath right-shin 0",
+      "right tapered limb sheath right-shin 1",
+      "right tapered limb sheath right-shin 2",
+      "right tapered limb sheath right-thigh 0",
+      "right tapered limb sheath right-thigh 1",
+      "right tapered limb sheath right-thigh 2"
+    ],
+    "newObjects": [
+      "left shaped thigh guard proximal",
+      "left shaped thigh guard distal-overlap",
+      "left shaped shin guard proximal",
+      "left shaped shin guard distal-overlap",
+      "left curved instep guard",
+      "right shaped thigh guard proximal",
+      "right shaped thigh guard distal-overlap",
+      "right shaped shin guard proximal",
+      "right shaped shin guard distal-overlap",
+      "right curved instep guard"
+    ],
+    "changedNewObjects": []
+  },
+  "deltaFromGuardStudy05": {
+    "changedObjects": [
+      "left curved instep guard",
+      "right curved instep guard"
+    ],
+    "count": 2,
+    "replacementAllowlistFromC8Unchanged": true
+  },
+  "changes": [
+    {
+      "name": "left curved instep guard",
+      "owner": "left-foot",
+      "role": "plate",
+      "region": "foot",
+      "vertexCount": 289,
+      "maxSourceProfileVertexDeltaM": 0.014624235405603713,
+      "evaluatedBeforeSave": {
+        "vertices": 894,
+        "triangles": 1784,
+        "bounds": {
+          "min": [
+            0.2134941816329956,
+            -0.12669551372528076,
+            0.07676461338996887
+          ],
+          "max": [
+            0.28907763957977295,
+            0.01957489177584648,
+            0.2576766312122345
+          ]
+        },
+        "finite": true
+      },
+      "profile": {
+        "method": "17x17 monotonic crowned panel; single shallow center crest; removed paired raised returns and center channel",
+        "domePeakM": 0.0175,
+        "crestPeakM": 0.001,
+        "crestWidthTheta": 0.22,
+        "widthEnvelopePreserved": true,
+        "rowCentersAndHingeReliefPreserved": true
+      },
+      "exported": {
+        "triangles": 1784,
+        "position": [
+          {
+            "min": [
+              0.2134941816329956,
+              0.07676461338996887,
+              -0.01957489177584648
+            ],
+            "max": [
+              0.28907763957977295,
+              0.2576766312122345,
+              0.12669551372528076
+            ],
+            "count": 894
+          }
+        ],
+        "evaluatedModifierGeometryMatched": true
+      }
+    },
+    {
+      "name": "right curved instep guard",
+      "owner": "right-foot",
+      "role": "plate",
+      "region": "foot",
+      "vertexCount": 289,
+      "maxSourceProfileVertexDeltaM": 0.014624235405603713,
+      "evaluatedBeforeSave": {
+        "vertices": 894,
+        "triangles": 1784,
+        "bounds": {
+          "min": [
+            -0.2890775799751282,
+            -0.12669551372528076,
+            0.07676461338996887
+          ],
+          "max": [
+            -0.2134941965341568,
+            0.01957489177584648,
+            0.2576766312122345
+          ]
+        },
+        "finite": true
+      },
+      "profile": {
+        "method": "17x17 monotonic crowned panel; single shallow center crest; removed paired raised returns and center channel",
+        "domePeakM": 0.0175,
+        "crestPeakM": 0.001,
+        "crestWidthTheta": 0.22,
+        "widthEnvelopePreserved": true,
+        "rowCentersAndHingeReliefPreserved": true
+      },
+      "exported": {
+        "triangles": 1784,
+        "position": [
+          {
+            "min": [
+              -0.2890775799751282,
+              0.07676461338996887,
+              -0.01957489177584648
+            ],
+            "max": [
+              -0.2134941965341568,
+              0.2576766312122345,
+              0.12669551372528076
+            ],
+            "count": 894
+          }
+        ],
+        "evaluatedModifierGeometryMatched": true
+      }
+    }
+  ],
+  "unchangedMeshes": {
+    "count": 625,
+    "allSourceSignaturesExact": true
+  },
+  "pivots": {
+    "emptyCount": 51,
+    "allWorldMatricesExact": true
+  },
+  "exportContract": {
+    "selectedTypes": [
+      "MESH",
+      "EMPTY"
+    ],
+    "exportApply": true,
+    "camerasAndLights": false,
+    "evaluatedModifierTriangleAndBoundsChecks": true
+  },
+  "limitations": [
+    "No likeness acceptance, dimensional metrology, collision clearance or mechanical certification. Runtime motion/contact review remains outstanding."
+  ]
+}

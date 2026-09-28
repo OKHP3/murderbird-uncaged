@@ -1,0 +1,157 @@
+import {createHash} from 'node:crypto';
+import {readFile, writeFile, mkdir} from 'node:fs/promises';
+import os from 'node:os';
+import {pathToFileURL} from 'node:url';
+
+const {chromium} = await import(pathToFileURL('/Users/okh/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
+const out = '.local/alignment-limb-study/browser-profile-study-05';
+await mkdir(out);
+const modelPath = '.local/alignment-limb-study/v5-fourth-limb-profile-study-05/murderbird-limb-profile-study.glb';
+const modelBytes = await readFile(modelPath);
+const hash = (data) => createHash('sha256').update(data).digest('hex');
+const sourcePaths = [
+  'src/main.js',
+  'src/scene/presence-exhibit.js',
+  'src/scene/era-motion.js',
+  'src/scene/era-controller.js',
+  'src/scene/era-mechanisms.js',
+  'src/scene/rigid-leg-kinematics.js',
+];
+const scriptBytes=await readFile(new URL(import.meta.url));
+await writeFile(`${out}/executed-browser-script.mjs.txt`,scriptBytes,{flag:'wx'});
+const sourceHashes = {};
+for (const path of sourcePaths) sourceHashes[path] = hash(await readFile(path));
+const report = {
+  date: new Date().toISOString(),
+  candidateModel: {path: modelPath, bytes: modelBytes.length, sha256: hash(modelBytes)},
+  appModelUrl: null,
+  routeOverride: {enabled: true, matcher: '/assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb', fulfilledFrom: modelPath, requests: []},
+  servedResponse: null,
+  sourceHashes,
+  executedScriptSha256:hash(scriptBytes),
+  scope:'Four paused WebGL views of a regional guard study with an explicit temporary model-response override; no integrated runtime or full-browser acceptance.',
+  host: {platform: os.platform(), architecture: os.arch(), cpu: os.cpus()[0]?.model, totalMemoryBytes: os.totalmem()},
+  browser: null,
+  webgl: null,
+  observations: [],
+  screenshots: [],
+  errors: [],
+  externalRequests: [],
+};
+const browser = await chromium.launch({headless: false});
+report.browser = {name: 'Chromium', version: browser.version(), headless: false};
+const context = await browser.newContext({viewport: {width: 1440, height: 1100}, deviceScaleFactor: 1});
+const page = await context.newPage();
+page.on('pageerror', e => report.errors.push({type: 'pageerror', message: e.message}));
+page.on('console', m => { if (m.type() === 'error') report.errors.push({type: 'console', message: m.text()}); });
+page.on('requestfailed', r => report.externalRequests.push({url: r.url(), error: r.failure()?.errorText}));
+await page.route('**/assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb', async route => {
+  const request = route.request();
+  const pathname = new URL(request.url()).pathname;
+  if (pathname !== '/assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb') return route.fallback();
+  report.routeOverride.requests.push({url: request.url(), method: request.method(), resourceType: request.resourceType(), overridden: true});
+  await route.fulfill({status: 200, contentType: 'model/gltf-binary', body: modelBytes, headers: {'cache-control': 'no-store'}});
+});
+const modelResponse = page.waitForResponse(r => new URL(r.url()).pathname === '/assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb', {timeout: 30000});
+await page.goto('http://127.0.0.1:5177/');
+await page.locator('#loading').waitFor({state: 'hidden', timeout: 30000});
+await page.waitForFunction(() => window.__uncaged?.metrics()?.kind === 'webgl' && window.__uncaged.metrics().exterior.taggedObjectCount > 0, undefined, {timeout: 30000});
+const response = await modelResponse;
+const responseBytes = await response.body();
+report.appModelUrl = await page.evaluate(() => __uncaged.metrics().modelUrl);
+report.servedResponse = {url: response.url(), status: response.status(), contentType: response.headers()['content-type'], bytes: responseBytes.length, sha256: hash(responseBytes), matchesFrozenCandidate: hash(responseBytes) === report.candidateModel.sha256};
+report.webgl = await page.evaluate(() => {
+  const canvas = document.querySelector('#scene canvas');
+  const gl = canvas?.getContext('webgl2') || canvas?.getContext('webgl');
+  const debug = gl?.getExtension('WEBGL_debug_renderer_info');
+  return {
+    contextType: gl ? (gl instanceof WebGL2RenderingContext ? 'webgl2' : 'webgl') : null,
+    renderer: debug ? gl.getParameter(debug.UNMASKED_RENDERER_WEBGL) : (gl ? gl.getParameter(gl.RENDERER) : null),
+    vendor: debug ? gl.getParameter(debug.UNMASKED_VENDOR_WEBGL) : (gl ? gl.getParameter(gl.VENDOR) : null),
+    version: gl?.getParameter(gl.VERSION) ?? null,
+    shadingLanguageVersion: gl?.getParameter(gl.SHADING_LANGUAGE_VERSION) ?? null,
+    viewport: [innerWidth, innerHeight],
+    drawingBuffer: canvas ? [canvas.width, canvas.height] : null,
+    pixelRatio: devicePixelRatio,
+  };
+});
+async function ensureEra(id) {
+  if ((await page.evaluate(() => __uncaged.getSnapshot().era)) !== id) {
+    await page.locator(`[data-era="${id}"]`).click();
+    await page.waitForFunction(id => __uncaged.getSnapshot().era === id && !__uncaged.getSnapshot().pendingEra, id, {timeout: 15000});
+  }
+}
+async function pause(value) {
+  if ((await page.evaluate(() => __uncaged.getSnapshot().paused)) !== value) await page.locator('#pause').click();
+  await page.waitForFunction(value => __uncaged.getSnapshot().paused === value, value, {timeout: 5000});
+  await page.waitForTimeout(450);
+}
+async function applyLever(id, value) {
+  await pause(false);
+  await page.locator(`#lever-${id}`).fill(String(value));
+  await page.waitForFunction(({id, value}) => {
+    const m = __uncaged.metrics().motion;
+    return Math.abs((m.actualArticulation[id] ?? -1) - value / 100) < .03;
+  }, {id, value}, {timeout: 8000});
+  await page.waitForTimeout(300);
+}
+async function setCamera(name) {
+  await page.evaluate(name => __uncaged.reviewCamera(name), name);
+  await page.waitForTimeout(650);
+}
+async function capture(label, camera, zoom = 0) {
+  await setCamera(camera);
+  for (let i = 0; i < zoom; i++) await page.locator('[data-view="in"]').click();
+  await page.waitForTimeout(250);
+  await pause(true);
+  const file = `${out}/${label}.png`;
+  await page.locator('#viewer').screenshot({path: file});
+  const bytes = await readFile(file);
+  const metrics = await page.evaluate(() => {
+    const m = __uncaged.metrics(), s = __uncaged.getSnapshot();
+    return {
+      era: s.era, state:s.state, phase:s.phase, paused: s.paused, inspection: s.inspection,
+      root:m.motion.root, feet:m.motion.feet, powerMove:m.motion.powerMove, clawAction:m.motion.clawAction,
+      articulation: {...m.motion.actualArticulation}, jawHinge: {...m.motion.jawHinge},
+      cervical: {...m.motion.cervical}, camera: {position: [...m.review.camera], target: [...m.review.target]},
+      externalControlTargets: [...m.mechanisms.externalControlTargets],
+      makerJawTargetPresent: m.mechanisms.externalControlTargets.includes('jaw'),
+      leverValues: Object.fromEntries(['leg', 'jaw', 'neck'].map(id => [id, Number(document.querySelector(`#lever-${id}`).value)])),
+      appModelUrl: m.modelUrl,
+      runtime: {renderer: m.performance.renderer, softwareRenderer: m.performance.softwareRenderer, triangles: m.performance.triangles, drawCalls: m.performance.drawCalls},
+    };
+  });
+  const row = {label, camera, path: file, bytes: bytes.length, sha256: hash(bytes), metrics};
+  report.screenshots.push(row);
+  report.observations.push({label, metrics});
+}
+try {
+  await ensureEra('maker');
+  await page.evaluate(() => __uncaged.reviewLighting('neutral'));
+  await applyLever('leg', 0);
+  await capture('maker-legs-rest', 'feet');
+  await applyLever('leg', 100);
+  await capture('maker-leg-maximum', 'feet');
+  await pause(false);
+  await page.locator('#release-levers').click();
+  await ensureEra('builder');
+  await page.waitForFunction(()=>__uncaged.getSnapshot().canReach,undefined,{timeout:30000});
+  await page.locator('#power-jump').click();
+  await page.waitForFunction(()=>{const a=__uncaged.metrics().motion.powerMove;if(a?.kind==='jump'&&a.phase>.40&&a.phase<.58){document.querySelector('#pause').click();return true;}return false;},undefined,{polling:8,timeout:20000});
+  await capture('advanced-jump-airborne', 'feet');
+  await pause(false);
+  await page.waitForFunction(()=>__uncaged.getSnapshot().canClawAction,undefined,{timeout:30000});
+  await page.locator('#claw-scrape').click();
+  await page.waitForFunction(()=>{const a=__uncaged.getSnapshot().clawAction;if(a?.stage==='contact'&&a.phase>.30&&__uncaged.metrics().motion.clawAction?.contact){document.querySelector('#pause').click();return true;}return false;},undefined,{polling:8,timeout:20000});
+  await capture('advanced-claw-contact', 'feet');
+  report.status = report.errors.length === 0 && report.servedResponse.matchesFrozenCandidate && report.routeOverride.requests.length === 1 ? 'diagnostic-captured' : 'diagnostic-with-errors';
+} catch (error) {
+  report.status = 'diagnostic-failed';
+  report.failure = error.stack || String(error);
+} finally {
+  report.routeOverride.requestCount = report.routeOverride.requests.length;
+  await writeFile(`${out}/visual-preflight.json`, JSON.stringify(report, null, 2) + '\n');
+  await context.close();
+  await browser.close();
+  console.log(JSON.stringify({status: report.status, routeOverride: report.routeOverride, servedResponse: report.servedResponse, webgl: report.webgl, screenshots: report.screenshots.map(x => ({label: x.label, sha256: x.sha256, bytes: x.bytes})), errors: report.errors, failure: report.failure}, null, 2));
+}

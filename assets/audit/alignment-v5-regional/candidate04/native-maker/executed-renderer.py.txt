@@ -1,0 +1,79 @@
+"""Read-only native rendering with fixed, unwarped comparison cameras."""
+import argparse
+import hashlib
+import json
+import sys
+import shutil
+from pathlib import Path
+import bpy
+from mathutils import Vector
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--blend', required=True)
+parser.add_argument('--glb', required=True)
+parser.add_argument('--out', required=True)
+parser.add_argument('--era', choices=['maker','mechanic','builder'], default='builder')
+args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:])
+native, model, out = Path(args.blend), Path(args.glb), Path(args.out)
+assert native.is_file() and model.is_file()
+assert not out.exists(), 'Preserve prior renders; use a new output directory.'
+out.mkdir(parents=True)
+shutil.copy2(__file__, out / 'executed-renderer.py.txt')
+digest = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+identity = {'native': {'path': str(native.resolve()), 'sha256': digest(native)},
+            'model': {'path': str(model.resolve()), 'sha256': digest(model)},
+            'rendererSha256': digest(Path(__file__))}
+bpy.ops.wm.open_mainfile(filepath=str(native.resolve()))
+scene = bpy.context.scene
+scene.frame_set(1)
+scene.render.engine = 'BLENDER_WORKBENCH'
+sh = scene.display.shading
+sh.light = 'STUDIO'
+sh.studio_light = 'paint.sl'
+sh.color_type = 'MATERIAL'
+sh.show_shadows = True
+sh.show_cavity = True
+sh.cavity_type = 'BOTH'
+sh.curvature_ridge_factor = 1.2
+sh.curvature_valley_factor = 1.1
+sh.background_type = 'WORLD'
+scene.world.color = (.11, .12, .13)
+scene.render.resolution_x = scene.render.resolution_y = 1100
+scene.render.resolution_percentage = 100
+scene.render.image_settings.file_format = 'PNG'
+scene.render.film_transparent = False
+for obj in scene.objects:
+    if obj.type == 'MESH':
+        obj.hide_render = args.era not in obj.get('exteriorEras', 'maker,mechanic,builder').split(',')
+        obj.hide_set(False)
+camera_data = bpy.data.cameras.new('Limb comparison camera')
+camera = bpy.data.objects.new('Limb comparison camera', camera_data)
+scene.collection.objects.link(camera)
+scene.camera = camera
+camera_data.type = 'ORTHO'
+camera_data.lens = 70
+views = [
+    ('full-three-quarter', (-4.7, -6.5, 2.3), (0, -.1, 1.08), 2.4),
+    ('full-front', (0, -6, 1.08), (0, -.1, 1.08), 2.4),
+    ('full-rear', (0, 6, 1.08), (0, -.1, 1.08), 2.4),
+    ('head-three-quarter', (-4.7, -6.5, 2.1), (0, -.28, 1.77), .78),
+    ('head-side', (-6, 0, 1.77), (0, -.28, 1.77), .78),
+    ('feet-three-quarter', (-4, -6, 1.1), (0, -.17, .16), 1.00),
+    ('full-side', (-6, 0, 1.08), (0, -.1, 1.08), 2.4),
+    ('limbs-three-quarter', (-4, -6, 1.1), (0, -.06, .46), 1.15),
+    ('limbs-front', (0, -6, .49), (0, -.06, .46), 1.15),
+]
+records = []
+for name, location, target, scale in views:
+    camera.location = location
+    camera.rotation_euler = (Vector(target) - camera.location).to_track_quat('-Z', 'Y').to_euler()
+    camera_data.ortho_scale = scale
+    image = out / (name + '.png')
+    scene.render.filepath = str(image.resolve())
+    bpy.ops.render.render(write_still=True)
+    records.append({'image': image.name, 'sha256': digest(image), 'bytes': image.stat().st_size,
+                    'location': location, 'target': target, 'orthographicScale': scale})
+assert digest(native) == identity['native']['sha256']
+assert digest(model) == identity['model']['sha256']
+(out / 'views.json').write_text(json.dumps({**identity, 'era':args.era, 'views': records,
+    'scope': 'Fixed-camera neutral rigid-geometry study; source files unchanged; no dimensional or final-likeness acceptance.'}, indent=2) + '\n')

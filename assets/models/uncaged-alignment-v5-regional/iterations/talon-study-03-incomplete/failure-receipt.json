@@ -1,0 +1,36 @@
+{
+  "status": "incomplete preserved failure; not a candidate",
+  "failureStage": "post-save native pivot-signature assertion; run stopped before GLB export or study manifest creation",
+  "reason": "The first script compared raw object transform tuples with dictionary equality after saving. A separate direct source-vs-saved comparison found exact equality across all 51 EMPTY names, parent links, location, Euler rotation, scale, and flattened world matrix; maximum absolute delta was 0.0 for every compared field. The assertion failure is therefore a verifier representation/inventory discrepancy, not an observed pivot change. The study output below is retained as failed-run evidence and is not used for composition.",
+  "sourceNative": {
+    "path": "assets/models/uncaged-alignment-v5-regional/iterations/talon-study-02/murderbird-talon-profile-study-02.blend",
+    "bytes": 1830933,
+    "sha256": "40322c404bef7a1d281658d80f315e36c87efdd981d8358cdc43fd32af49655c"
+  },
+  "partialNative": {
+    "path": "assets/models/uncaged-alignment-v5-regional/iterations/talon-study-03-incomplete/murderbird-talon-profile-study-03.blend",
+    "bytes": 1831997,
+    "sha256": "9ae573089ee78dd263e6ce2ae3bad974603701d88984bd0e419eaec13fc613d7"
+  },
+  "executedScript": {
+    "path": "assets/models/uncaged-alignment-v5-regional/iterations/talon-study-03-incomplete/study-alignment-talon-profiles-03.py",
+    "bytes": 18008,
+    "sha256": "0ea119e2dfef1aea6cf78295500c4480f6c169b3deb4245cef72fc82f72d8098"
+  },
+  "pivotComparisonAgainstInputStudy02": {
+    "inputEmptyCount": 51,
+    "outputEmptyCount": 51,
+    "nameSetDifference": [],
+    "maxAbsDelta": {
+      "location": 0.0,
+      "rotation": 0.0,
+      "scale": 0.0,
+      "worldMatrix": 0.0
+    },
+    "changedCount": 0
+  },
+  "missingOutputs": [
+    "GLB",
+    "final study manifest"
+  ]
+}

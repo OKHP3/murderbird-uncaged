@@ -1,0 +1,5 @@
+# Talon study 03: flattened sheath profile
+
+Compared with talon study 02 at the same neutral cameras, the six distal sheaths show a broader, flatter dorsal blade face and a less swollen proximal sheath profile. The hook and terminal shape read more clearly as a blade-like talon in the front and three-quarter views. The actual roots still meet visibly rounded toe knuckles and rigid digit links; those remain unchanged and outside this mesh-only study.
+
+The native study reports six edited talon sheaths, exact preservation of the input rings at/after t=.85, and all 51 pivot signatures unchanged. Its sampled proximal centerlines have a measured maximum error of about 1.1e-7 m (not literal zero); the measured c8 lateral and ventral envelope overruns are both zero. Evaluated mesh triangle counts and bounds matched for the six GLB talons; all 637 same-named untouched export payloads matched. This is source-study evidence only; root-owned combined composition, contact retest, and independent candidate review remain pending. See `source-view-receipt.json` for hashes and camera records.

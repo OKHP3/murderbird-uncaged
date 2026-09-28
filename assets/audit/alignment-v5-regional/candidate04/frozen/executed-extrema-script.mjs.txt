@@ -1,0 +1,72 @@
+/** Freeze actual live poses through the existing pause control before orbiting. */
+import {pathToFileURL} from 'node:url';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const {chromium}=await import(pathToFileURL(process.argv[2]).href);
+const dir=process.env.UNCAGED_AUDIT,modelPath=process.env.UNCAGED_MODEL;assert(dir&&modelPath,'Provide UNCAGED_AUDIT and UNCAGED_MODEL');await mkdir(dir);const raw=await readFile(modelPath);
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const executedScript=await readFile(new URL(import.meta.url));await writeFile(dir+'/executed-extrema-script.mjs.txt',executedScript,{flag:'wx'});
+const sourcePaths=['src/main.js','src/scene/presence-exhibit.js','src/scene/era-motion.js','src/scene/era-controller.js','src/scene/era-mechanisms.js','src/scene/presence-state.js','src/scene/rigid-leg-kinematics.js'];
+const sourceHashes=Object.fromEntries(await Promise.all(sourcePaths.map(async p=>[p,hash(await readFile(p))])));
+const browser=await chromium.launch({headless:false});const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+const report={generatedAt:new Date().toISOString(),model:modelPath,sourceHashes,executedScriptSha256:hash(executedScript),scope:'Regional geometry candidate via explicit temporary model response override; no active application switch.',routeOverride:{url:'/assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb',requests:[]},modelSha256:createHash('sha256').update(raw).digest('hex'),browser:browser.version(),network:'Loopback unthrottled; analytics stubbed',method:'Existing pause control is activated in the same polling function that observes the requested live phase. Cameras then orbit the frozen articulated model. These views do not certify swept collisions.',poses:[],screenshots:[],errors:[]};
+page.on('pageerror',e=>report.errors.push(e.message));await page.route('**/*googletagmanager.com/**',r=>r.fulfill({body:''}));
+await page.route('**/*google-analytics.com/**',r=>r.fulfill({status:204,body:''}));
+await page.route('**/assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb',async route=>{assert.equal(new URL(route.request().url()).pathname,report.routeOverride.url);report.routeOverride.requests.push({url:route.request().url(),method:route.request().method()});await route.fulfill({status:200,contentType:'model/gltf-binary',body:raw,headers:{'cache-control':'no-store'}});});
+const modelResponse=page.waitForResponse(r=>new URL(r.url()).pathname===report.routeOverride.url);
+async function record(name,views){
+ const before=await page.evaluate(()=>{const snapshot=__uncaged.getSnapshot(),motion=__uncaged.metrics().motion;return{snapshot,motion,clawAction:snapshot.clawAction?{...snapshot.clawAction}:null,motionClawAction:motion.clawAction?{...motion.clawAction}:null,feet:motion.feet.map(f=>({side:f.side,actual:[...f.actual],target:[...f.target]}))};});assert(before.snapshot.paused);
+ for(const view of views){await page.evaluate(v=>__uncaged.reviewCamera(v),view);if(view==='head'){await page.locator('[data-part=beak]').click();await page.locator('#focus-part').click();}await page.waitForTimeout(180);const file=name+'-frozen-'+view+'.png';await page.locator('#viewer').screenshot({path:dir+'/'+file});const bytes=await readFile(dir+'/'+file);report.screenshots.push({filename:file,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),pose:name,view});}
+ const after=await page.evaluate(()=>{const snapshot=__uncaged.getSnapshot(),motion=__uncaged.metrics().motion;return{snapshot,motion,clawAction:snapshot.clawAction?{...snapshot.clawAction}:null,motionClawAction:motion.clawAction?{...motion.clawAction}:null,feet:motion.feet.map(f=>({side:f.side,actual:[...f.actual],target:[...f.target]}))};});
+ assert.equal(after.snapshot.powerMove?.phase,before.snapshot.powerMove?.phase);assert.equal(after.snapshot.state,before.snapshot.state);
+ assert.deepEqual(after.clawAction,before.clawAction,`${name} claw phase changed while viewing paused captures`);
+ assert.deepEqual(after.motionClawAction,before.motionClawAction,`${name} measured claw/contact/support anchor changed while viewing paused captures`);
+ assert.deepEqual(after.feet,before.feet,`${name} foot targets moved while viewing paused captures`);
+ report.poses.push({name,views,before,after});
+}
+try{
+ await page.goto((process.env.UNCAGED_BASE_URL||'http://127.0.0.1:5177/'));await page.locator('#loading').waitFor({state:'hidden'});
+ const served=await modelResponse,servedBytes=await served.body();report.servedModelSha256=hash(servedBytes);report.actualResponse={url:served.url(),status:served.status(),bytes:servedBytes.length,sha256:hash(servedBytes)};report.appModelUrl=await page.evaluate(()=>__uncaged.metrics().modelUrl);assert.equal(report.servedModelSha256,report.modelSha256);assert.equal(report.routeOverride.requests.length,1);
+ await page.evaluate(()=>__uncaged.reviewLighting('neutral'));
+ for(const kind of ['jump','thrust']){
+  await page.waitForFunction(()=>{const s=__uncaged.getSnapshot();return s.canReach&&!s.visitorPresent&&!s.powerMove&&!s.paused;},undefined,{timeout:30000});
+  await page.locator(kind==='jump'?'#power-jump':'#shield-thrust').click();
+  await page.waitForFunction(kind=>{const p=__uncaged.getSnapshot().powerMove;const low=kind==='jump'?.42:.49;if(p?.kind===kind&&p.phase>low&&p.phase<low+.08){document.querySelector('#pause').click();return true;}return false;},kind,{polling:8,timeout:12000});
+  await record('builder-'+kind,['threeQuarter','left','right']);
+  await page.locator('#pause').click();await page.waitForFunction(()=>!__uncaged.getSnapshot().powerMove&&!__uncaged.getSnapshot().powerMovePending,undefined,{timeout:10000});
+ }
+ await page.waitForFunction(()=>__uncaged.getSnapshot().canReach,undefined,{timeout:30000});await page.locator('#reach-position').selectOption('0');await page.locator('#reach').click();
+ await page.waitForFunction(()=>{if(__uncaged.getSnapshot().state==='contact'&&__uncaged.metrics().motion.contact){document.querySelector('#pause').click();return true;}return false;},undefined,{polling:8,timeout:30000});
+ await record('builder-contact',['threeQuarter','left','right','head']);
+ await page.evaluate(()=>__uncaged.reviewLighting('exhibit'));await record('builder-contact-exhibit',['threeQuarter','left','right','head']);await page.evaluate(()=>__uncaged.reviewLighting('neutral'));
+ await page.locator('#pause').click();await page.locator('#retreat').click();
+ await page.waitForFunction(()=>__uncaged.getSnapshot().canReach&&!__uncaged.getSnapshot().visitorPresent,undefined,{timeout:15000});
+ // Freeze every stage only after the controller reports that exact phase;
+ // viewing must not advance either the action or its planted support anchor.
+ await page.waitForFunction(()=>__uncaged.getSnapshot().canClawAction&&!__uncaged.getSnapshot().paused,undefined,{timeout:30000});
+ await page.locator('#claw-scrape').click();
+ for(const stage of ['approach','lift','contact','scrape','release','recovery']){
+  await page.waitForFunction(stage=>{const s=__uncaged.getSnapshot();if(s.clawAction?.stage===stage&&s.clawAction.phase>=(stage==='contact'?.92:.3)){document.querySelector('#pause').click();return true;}return false;},stage,{polling:8,timeout:12000});
+  await record('builder-claw-'+stage,['threeQuarter','left','right','feet']);
+  await page.locator('#pause').click();
+ }
+ await page.waitForFunction(()=>!__uncaged.getSnapshot().clawAction&&!__uncaged.metrics().motion.clawAction,undefined,{timeout:12000});
+ await page.locator('[data-era=maker]').click();await page.waitForFunction(()=>__uncaged.getSnapshot().era==='maker'&&!__uncaged.getSnapshot().pendingEra);
+ for(const value of [0,100]){
+  await page.locator('#lever-jaw').fill(String(value));await page.waitForFunction(v=>Math.abs(__uncaged.metrics().motion.actualArticulation.jaw-v/100)<.02,value);
+  await page.locator('#pause').click();await record('maker-jaw-'+value,['head','left','right']);await page.locator('#pause').click();
+ }
+ // Focus every visible projected control and activate it with Enter.
+ // This is bounded keyboard activation evidence, not a screen-reader journey.
+ report.keyboardMarkers=[];
+ for(const era of ['maker','mechanic','builder']){
+  await page.locator('[data-era='+era+']').click();await page.waitForFunction(e=>__uncaged.getSnapshot().era===e&&!__uncaged.getSnapshot().pendingEra,era);
+  await page.locator('#section-toggle').click();await page.waitForFunction(()=>__uncaged.getSnapshot().inspection&&__uncaged.metrics().open>.99,undefined,{timeout:15000});
+  await page.locator('#separation').fill('50');await page.evaluate(()=>__uncaged.reviewCamera('threeQuarter'));await page.waitForTimeout(900);
+  const ids=await page.locator('#hotspots button:not([hidden])').evaluateAll(bs=>bs.map(b=>b.dataset.marker));assert(ids.length>=4);
+  for(const id of ids){const button=page.locator('[data-marker='+id+']');await button.focus();await page.keyboard.press('Enter');assert.equal(await page.locator('[data-part='+id+']').getAttribute('aria-pressed'),'true');report.keyboardMarkers.push({era,id,focused:await button.evaluate(b=>b===document.activeElement),selected:true});}
+  await page.locator('#reassemble').click();await page.waitForFunction(()=>!__uncaged.getSnapshot().inspection,undefined,{timeout:12000});
+ }
+ assert.deepEqual(report.errors,[]);report.status='passed';
+}catch(e){report.status='failed';report.error=e.stack;process.exitCode=1;}finally{await browser.close();await writeFile(dir+'/frozen-extrema.json',JSON.stringify(report,null,2)+'\n');console.log(report.status,report.error||'',report.poses.map(p=>p.name));}

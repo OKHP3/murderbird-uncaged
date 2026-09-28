@@ -1,0 +1,158 @@
+{
+  "schema": "alignment-regional-composer-legacy-v1-compatibility/v1",
+  "status": "passed",
+  "scope": "Diagnostic only. Confirms current composer entrypoint accepts guard-study05/talon-study02 legacy manifests. Output is not selected and is not candidate04.",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/blender",
+    "-b",
+    "-t",
+    "2",
+    "--python",
+    "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/compose-alignment-regional-study.py",
+    "--",
+    "--out",
+    "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-composed-study/legacy-v1-compatibility-check",
+    "--base-blend",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/base-v5-sixth/murderbird-alignment-v5.blend",
+    "--base-glb",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/base-v5-sixth/murderbird-alignment-v5.glb",
+    "--base-manifest",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/base-v5-sixth/alignment-inventory.json",
+    "--base-generation-source-dir",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/v5-sixth-generation-source",
+    "--c8-blend",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/c8-limb-compatibility-source/murderbird-alignment-v5.blend",
+    "--c8-glb",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/c8-limb-compatibility-source/murderbird-alignment-v5.glb",
+    "--c8-manifest",
+    "assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/c8-limb-compatibility-source/alignment-inventory.json",
+    "--guard-blend",
+    ".local/alignment-limb-study/v5-fourth-limb-profile-study-05/murderbird-limb-profile-study.blend",
+    "--guard-glb",
+    ".local/alignment-limb-study/v5-fourth-limb-profile-study-05/murderbird-limb-profile-study.glb",
+    "--guard-manifest",
+    ".local/alignment-limb-study/v5-fourth-limb-profile-study-05/manifest.json",
+    "--talon-blend",
+    ".local/alignment-limb-study/talon-profile-study-02/murderbird-talon-profile-study-02.blend",
+    "--talon-glb",
+    ".local/alignment-limb-study/talon-profile-study-02/murderbird-talon-profile-study-02.glb",
+    "--talon-manifest",
+    ".local/alignment-limb-study/talon-profile-study-02/study-manifest.json",
+    "--shared-input-snapshots"
+  ],
+  "entrypoint": {
+    "path": "scripts/compose-alignment-regional-study.py",
+    "sha256": "c6a0643d196d90b0e9bc0d5a58eb20e72546c3baaad6c7fc9ff674aa57e5b546"
+  },
+  "inputs": {
+    "base": {
+      "blend": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/base-v5-sixth/murderbird-alignment-v5.blend",
+        "bytes": 2094769,
+        "sha256": "fd5c8a21e8e7808fa94c9baa3499574bac3d0c1ed5a44573637286c359cea0e4"
+      },
+      "glb": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/base-v5-sixth/murderbird-alignment-v5.glb",
+        "bytes": 4385348,
+        "sha256": "1e7febcc03d9f8d1a644580c8422b124403cf4e5768aa01df747e3d9b6af9f1e"
+      },
+      "manifest": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/base-v5-sixth/alignment-inventory.json",
+        "bytes": 1255677,
+        "sha256": "b9cfaf8cd7681396311d61537d2381ff6ef54f9cdc515c1aa1b77b34bd58beee"
+      }
+    },
+    "guardStudy": {
+      "label": "v5-fourth-limb-profile-study-05",
+      "blend": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/v5-fourth-limb-profile-study-05/murderbird-limb-profile-study.blend",
+        "bytes": 1674765,
+        "sha256": "c1ea75d32edcc2a356589549651553b52fc7b641a17de9a2b9c532ce7050dcc1"
+      },
+      "glb": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/v5-fourth-limb-profile-study-05/murderbird-limb-profile-study.glb",
+        "bytes": 3540204,
+        "sha256": "d7074699b566dac07d40b226865db766c48cb36be104b0845cec5c2ddf059268"
+      },
+      "manifest": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/v5-fourth-limb-profile-study-05/manifest.json",
+        "bytes": 60471,
+        "sha256": "49493ba6ff530bc93ae58420a5ea50aa6c40cccc4f9c6999ee099f99f8b81ebd"
+      }
+    },
+    "talonStudy": {
+      "label": "talon-profile-study-02",
+      "blend": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/talon-profile-study-02/murderbird-talon-profile-study-02.blend",
+        "bytes": 1830933,
+        "sha256": "40322c404bef7a1d281658d80f315e36c87efdd981d8358cdc43fd32af49655c"
+      },
+      "glb": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/talon-profile-study-02/murderbird-talon-profile-study-02.glb",
+        "bytes": 3501840,
+        "sha256": "c0c98700bfd7b043e20a85d7e65132fd363ce68dfc1b4cd87ac0c6650ebc5765"
+      },
+      "manifest": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/talon-profile-study-02/study-manifest.json",
+        "bytes": 41727,
+        "sha256": "60fd52622cbf3bf1ec24a6ba4319ac433eadeff9755d84aa14f7e6264883d155"
+      },
+      "executedScript": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/talon-profile-study-02/study-alignment-talon-profiles-02.py",
+        "bytes": 44899,
+        "sha256": "c07bb504cf126ae74a4a7cc67c61cdfe59f8fa19ae30f47fd6217c1f4f7d83ae"
+      }
+    },
+    "c8LimbCompatibilitySource": {
+      "blend": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/c8-limb-compatibility-source/murderbird-alignment-v5.blend",
+        "bytes": 1827441,
+        "sha256": "cc6bfafc9ab044bba1abcbec86761afb9ef67ee60e252ec7ee838948ea7dfd04"
+      },
+      "glb": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/c8-limb-compatibility-source/murderbird-alignment-v5.glb",
+        "bytes": 3844888,
+        "sha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3"
+      },
+      "manifest": {
+        "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/assets/models/uncaged-alignment-v5-regional/candidate/input-snapshots/c8-limb-compatibility-source/alignment-inventory.json",
+        "bytes": 913225,
+        "sha256": "5fda3638038b0a5d4c040544a2b419962cd33c55c9a3f0edc416aef4c18b7ee0"
+      }
+    }
+  },
+  "outputs": {
+    "native": {
+      "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-composed-study/legacy-v1-compatibility-check/murderbird-v5-sixth-guard-talon-study.blend",
+      "sha256": "ab238a13abefbd0e93eda1ce38470dd77390ac0c44c313c3dc66e1be24c6096c"
+    },
+    "glb": {
+      "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-composed-study/legacy-v1-compatibility-check/murderbird-v5-sixth-guard-talon-study.glb",
+      "sha256": "6bbd0efc0f86bcaa37b80b9d58309a8c3cc9967d393a8bb66383ca0b164a4dfc"
+    },
+    "manifest": {
+      "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-composed-study/legacy-v1-compatibility-check/manifest.json",
+      "sha256": "d69d9e0d108963eecf556b3aff91f7fa99ab5983103dfc9ae81c025cfe75d4a4"
+    },
+    "executedComposerSnapshot": {
+      "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-composed-study/legacy-v1-compatibility-check/compose-alignment-regional-study.py",
+      "bytes": 72324,
+      "sha256": "c6a0643d196d90b0e9bc0d5a58eb20e72546c3baaad6c7fc9ff674aa57e5b546"
+    }
+  },
+  "checks": {
+    "legacyGuard05ManifestSchema": "passed",
+    "legacyTalon02ManifestSchema": "passed",
+    "guardCount": 10,
+    "talonCount": 6,
+    "replacementCount": 32,
+    "batchGroups": 90,
+    "triangleCount": 232660,
+    "nativePivotMatrixMaxDelta": 0.0,
+    "batchPivotMatrixMaxDelta": 0.0,
+    "c8ReplacementSurfacesCompared": 32,
+    "maxDirectGlbGeometryErrorMetres": 0.0,
+    "allDirectGlbBatchChecksWithinTolerance": true,
+    "limitation": "Exporter compatibility only. Legacy guard05/talon02 output is not candidate04 and has no candidate selection or new visual/runtime acceptance."
+  }
+}

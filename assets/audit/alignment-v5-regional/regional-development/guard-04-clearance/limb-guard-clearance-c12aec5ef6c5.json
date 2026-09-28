@@ -1,0 +1,5118 @@
+{
+  "generatedAt": "2026-09-28T05:34:28.093Z",
+  "model": {
+    "path": ".local/alignment-limb-study/v5-fourth-limb-profile-study-04/murderbird-limb-profile-study.glb",
+    "sha256": "c12aec5ef6c59e95d4db6bfe276ac94af1e732953f8fa0a23993d972b6f9f05a",
+    "bytes": 3534684
+  },
+  "diagnosticSource": {
+    "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/.local/alignment-limb-study/clearance-profile-study-04/verify-limb-guard-clearance-a0eeb275e319.mjs",
+    "sha256": "a0eeb275e3193c073007168112dd5b01222499dbce94d9fc48b666017ccdcd83",
+    "bytes": 18277,
+    "archivedBeforeExecution": true
+  },
+  "controllerSourceHashes": {
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/presence-state.js": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62"
+  },
+  "kernel": {
+    "planeToleranceMetres": 0.000001,
+    "barycentricInteriorTolerance": 0.0001,
+    "gridCellMetres": 0.025,
+    "fixtures": {
+      "planeToleranceMetres": 0.000001,
+      "barycentricInteriorTolerance": 0.0001,
+      "fixtures": [
+        {
+          "name": "crossing",
+          "expected": "proper-crossing",
+          "actual": "proper-crossing"
+        },
+        {
+          "name": "separated",
+          "expected": "separated-or-nonintersecting",
+          "actual": "separated-or-nonintersecting"
+        },
+        {
+          "name": "grazing",
+          "expected": "grazing-or-boundary",
+          "actual": "grazing-or-boundary"
+        },
+        {
+          "name": "coplanar",
+          "expected": "coplanar-overlap-candidate",
+          "actual": "coplanar-overlap-candidate"
+        }
+      ]
+    }
+  },
+  "ownerSelection": {
+    "method": "direct mesh children only where extras surfaceRole=plate and region is leg/foot",
+    "owners": [
+      [
+        "left-thigh",
+        "left-shin"
+      ],
+      [
+        "left-shin",
+        "left-foot"
+      ],
+      [
+        "right-thigh",
+        "right-shin"
+      ],
+      [
+        "right-shin",
+        "right-foot"
+      ]
+    ],
+    "pairs": [
+      "left-knee",
+      "left-ankle",
+      "right-knee",
+      "right-ankle"
+    ],
+    "excludedRoles": [
+      "bearing",
+      "frame"
+    ],
+    "sameOwnerOverlapTested": false
+  },
+  "diagnostic": "Strict discrete armor-plate surface-crossing candidates across neighboring rigid knee (thigh/shin) and ankle (shin/foot) owners. Includes loaded rest, actual Maker leg max, a real Mechanic raised step, Advanced jump airborne/settled landing, and actual claw contact/recovery. Selected poses are replayed from seeded controller setup and asserted against state/phase/root/foot/pivot snapshots before geometry evaluation.",
+  "limits": [
+    "Only plate-role meshes directly owned by the two adjacent pivot nodes are tested. Bearing and frame roles are deliberately excluded; this is not a full limb collision audit.",
+    "Samples are actual controller-reachable states; no exhaustive or continuous sweep is implied.",
+    "Proper crossings require strict edge-plane endpoint separation above 1e-6 m and an interior barycentric hit margin of 1e-4. Boundary, coplanar, contained, volume, forces, and response behavior are not certified.",
+    "Pair counts are mesh-triangle pairs and may count adjacent tessellation triangles separately."
+  ],
+  "samples": [
+    {
+      "label": "loaded-neutral-rest",
+      "setup": "initial builder state",
+      "tick": 0,
+      "controller": {
+        "era": "builder",
+        "state": "watch",
+        "phase": 0.005967994405433531,
+        "actionKind": null,
+        "goal": null,
+        "powerMove": null,
+        "clawAction": null,
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "steps": 0
+      },
+      "motionMetrics": {
+        "powerMove": null,
+        "clawAction": null,
+        "contact": false,
+        "settled": true
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.16708367265320515,
+            -0.11322380524573912,
+            -0.00778259505704159,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.33725909888744354
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.3737059987280086,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.23074631177471128,
+            0.4983409020629243,
+            -0.12528131675714071
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.20643100710439236,
+            0.11293951343769153,
+            -0.011186538251984039,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.16708367265320515,
+            0.11322380524573912,
+            0.00778259505704159,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.33725909888744354
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.3737059987280086,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.23074631177471128,
+            0.4983409020629243,
+            -0.12528131675714071
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.20643100710439236,
+            -0.11293951343769153,
+            0.011186538251984039,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0019999999999998908
+        },
+        {
+          "side": "right",
+          "target": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            -0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0019999999999998908
+        }
+      ],
+      "clawMetrics": null,
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.16708367265320515,
+              -0.11322380524573912,
+              -0.00778259505704159,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.20643100710439236,
+              0.11293951343769153,
+              -0.011186538251984039,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 42432,
+              "aabbOverlaps": 154,
+              "properCrossingPairs": 22,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": [
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 620,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0005311722478854052,
+                      -0.24231738138441727,
+                      -0.07551247165660405
+                    ],
+                    [
+                      -0.00016381823399800206,
+                      -0.2423553572351721,
+                      -0.07559280355035852
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 621,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0001638182339980019,
+                      -0.2423553572351721,
+                      -0.07559280355035852
+                    ],
+                    [
+                      0.0003971661806338888,
+                      -0.24239696495580856,
+                      -0.07577972757911686
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 622,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0011341657631812796,
+                      -0.24221057958130304,
+                      -0.07555497410402394
+                    ],
+                    [
+                      -0.0014985513479988375,
+                      -0.2421394801319599,
+                      -0.07560638036466343
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 622,
+                  "triangleB": 1105,
+                  "pointsOwnerA": [
+                    [
+                      -0.0016323877352052848,
+                      -0.24211332177450803,
+                      -0.07562521742909022
+                    ],
+                    [
+                      -0.001498551347998837,
+                      -0.2421394801319599,
+                      -0.07560638036466343
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 623,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0011341657631812796,
+                      -0.24221057958130304,
+                      -0.07555497410402394
+                    ],
+                    [
+                      -0.0005311722478854052,
+                      -0.24231738138441727,
+                      -0.07551247165660405
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 1164,
+                  "triangleB": 1107,
+                  "pointsOwnerA": [
+                    [
+                      -0.0009335175495594743,
+                      -0.24259641387120573,
+                      -0.07701611384017465
+                    ],
+                    [
+                      -0.0025361513026156066,
+                      -0.24239614146096156,
+                      -0.07673858792331385
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 1165,
+                  "triangleB": 1107,
+                  "pointsOwnerA": [
+                    [
+                      -0.0025361513026156066,
+                      -0.24239614146096156,
+                      -0.07673858792331385
+                    ],
+                    [
+                      -0.003151122922076959,
+                      -0.24231945841663363,
+                      -0.07663237901634383
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 1166,
+                  "triangleB": 1105,
+                  "pointsOwnerA": [
+                    [
+                      -0.0016323877352052848,
+                      -0.24211332177450803,
+                      -0.07562521742909022
+                    ],
+                    [
+                      -0.002618576145366215,
+                      -0.24189130933697672,
+                      -0.0758783859465363
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 42432,
+            "aabbOverlaps": 154,
+            "properCrossingPairs": 22,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.16708367265320515,
+              0.11322380524573912,
+              0.00778259505704159,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.20643100710439236,
+              -0.11293951343769153,
+              0.011186538251984039,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 48682,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 48682,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "maker-leg-maximum",
+      "setup": "maker-leg-maximum",
+      "tick": 89,
+      "controller": {
+        "era": "maker",
+        "state": "puppet-articulation",
+        "phase": 0,
+        "actionKind": null,
+        "goal": null,
+        "powerMove": null,
+        "clawAction": null,
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "steps": 0
+      },
+      "motionMetrics": {
+        "powerMove": null,
+        "clawAction": null,
+        "contact": false,
+        "settled": false
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.6543729434585065,
+            -0.10614662320945195,
+            -0.03513617225747954,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.33725909888744354
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.9874469570930511,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.22428673366775934,
+            0.6251284007768247,
+            -0.0336221962636955
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.463622495998028,
+            0.1094603494461457,
+            -0.022748983645803435,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2512859106063843,
+            0.42643186149647055,
+            -0.22339581603028602
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.16708367265320515,
+            0.11322380524573912,
+            0.00778259505704159,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.33725909888744354
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.3737059987280086,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.23074631177471128,
+            0.4983409020629243,
+            -0.12528131675714071
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.20643100710439236,
+            -0.11293951343769153,
+            0.011186538251984039,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.2512859106063843,
+            0.4264318614964706,
+            -0.22339581603028613
+          ],
+          "actual": [
+            0.2512859106063843,
+            0.42643186149647055,
+            -0.22339581603028602
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.09645969857921839
+        },
+        {
+          "side": "right",
+          "target": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            -0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0019999999999998908
+        }
+      ],
+      "clawMetrics": null,
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.6543729434585065,
+              -0.10614662320945195,
+              -0.03513617225747954,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.9874469570930511,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.9874469570930511,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.463622495998028,
+              0.1094603494461457,
+              -0.022748983645803435,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 55490,
+              "aabbOverlaps": 1419,
+              "properCrossingPairs": 209,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": [
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 872,
+                  "triangleB": 1682,
+                  "pointsOwnerA": [
+                    [
+                      0.0009203841139227899,
+                      -0.23867825255538413,
+                      -0.07944749695357686
+                    ],
+                    [
+                      -0.00010031328971595016,
+                      -0.2381661278100822,
+                      -0.07906077013678399
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 872,
+                  "triangleB": 2137,
+                  "pointsOwnerA": [
+                    [
+                      0.0009301636799202597,
+                      -0.233485929905984,
+                      -0.07706414295776716
+                    ],
+                    [
+                      0.0007304601371005744,
+                      -0.23346045620919936,
+                      -0.07702279935118393
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 873,
+                  "triangleB": 1682,
+                  "pointsOwnerA": [
+                    [
+                      -0.00010031328971595011,
+                      -0.2381661278100822,
+                      -0.07906077013678399
+                    ],
+                    [
+                      -0.00025020309159576705,
+                      -0.238090860736128,
+                      -0.07900413934101572
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 873,
+                  "triangleB": 1683,
+                  "pointsOwnerA": [
+                    [
+                      -0.00038460596699628545,
+                      -0.23802449876466156,
+                      -0.0789538777728476
+                    ],
+                    [
+                      -0.0002502030915957675,
+                      -0.238090860736128,
+                      -0.07900413934101572
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 873,
+                  "triangleB": 2137,
+                  "pointsOwnerA": [
+                    [
+                      0.0007304601371005746,
+                      -0.23346045620919936,
+                      -0.07702279935118393
+                    ],
+                    [
+                      -0.00037653879739431344,
+                      -0.23331880132632063,
+                      -0.07679472362220709
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 874,
+                  "triangleB": 1678,
+                  "pointsOwnerA": [
+                    [
+                      -0.00131409755547582,
+                      -0.23763627356509845,
+                      -0.07897644217298065
+                    ],
+                    [
+                      -0.0007972700147224036,
+                      -0.23777151606991984,
+                      -0.07892693238598442
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 874,
+                  "triangleB": 1683,
+                  "pointsOwnerA": [
+                    [
+                      -0.00038460596699628545,
+                      -0.23802449876466156,
+                      -0.0789538777728476
+                    ],
+                    [
+                      -0.0007972700147224037,
+                      -0.23777151606991984,
+                      -0.07892693238598442
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 874,
+                  "triangleB": 2137,
+                  "pointsOwnerA": [
+                    [
+                      -0.00037653879739431344,
+                      -0.23331880132632063,
+                      -0.07679472362220709
+                    ],
+                    [
+                      -0.0005343739678039887,
+                      -0.2332789140974429,
+                      -0.0768104921708632
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 55490,
+            "aabbOverlaps": 1419,
+            "properCrossingPairs": 209,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.16708367265320515,
+              0.11322380524573912,
+              0.00778259505704159,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.20643100710439236,
+              -0.11293951343769153,
+              0.011186538251984039,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 48682,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 48682,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "mechanic-raised-step",
+      "setup": "mechanic-routine-raised-step",
+      "tick": 800,
+      "controller": {
+        "era": "mechanic",
+        "state": "mechanical-run",
+        "phase": 0,
+        "actionKind": null,
+        "goal": {
+          "x": 0.55,
+          "z": 0.32
+        },
+        "powerMove": null,
+        "clawAction": null,
+        "mechanicalStage": "release",
+        "mechanicalPhase": 0.4617117117117116,
+        "root": {
+          "x": 0.55,
+          "z": -0.25,
+          "yaw": 1.398812337346136,
+          "speed": 0
+        },
+        "steps": 8
+      },
+      "motionMetrics": {
+        "powerMove": null,
+        "clawAction": null,
+        "contact": false,
+        "settled": false
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.207539793796688,
+            0.7315928642242971,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.1963547140122134,
+            -0.07201633189733686,
+            -0.04908058990281542,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.4995460413026398,
+            0.7315928642242971,
+            -0.4694112905016182
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.7146075545478058,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.7170412003776786,
+            0.48730549708672544,
+            -0.45023927439649575
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.651663413025185,
+            0.0750336789406831,
+            0.044325228065023,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.4983112675697813,
+            0.3265064228136778,
+            -0.500480405389444
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.20781995496855352,
+            0.7389624581819961,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.26233744763729083,
+            0.12300561844182234,
+            0.002884507988360159,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.4284624519262522,
+            0.7389624581819961,
+            -0.06017927291783523
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.380526231089683,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.6560964442338821,
+            0.5117897676427979,
+            0.002457476557930674
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.12162765380764703,
+            0.05238142049402372,
+            0.0290777661441986,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.5116401344537739,
+            0.2765148241519928,
+            0.0012859106063843138
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.4983112675697813,
+            0.3265064228136778,
+            -0.500480405389444
+          ],
+          "actual": [
+            0.4983112675697813,
+            0.3265064228136778,
+            -0.500480405389444
+          ],
+          "swinging": true,
+          "phase": 0.5058352630845897,
+          "groundMin": 0.0366206558505862
+        },
+        {
+          "side": "right",
+          "target": [
+            0.5116401344537735,
+            0.2765148241519928,
+            0.0012859106063842773
+          ],
+          "actual": [
+            0.5116401344537739,
+            0.2765148241519928,
+            0.0012859106063843138
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0020000000000000503
+        }
+      ],
+      "clawMetrics": null,
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.207539793796688,
+              0.7315928642242971,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.1963547140122134,
+              -0.07201633189733686,
+              -0.04908058990281542,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.7146075545478058,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.7146075545478058,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.651663413025185,
+              0.0750336789406831,
+              0.044325228065023,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 64490,
+              "aabbOverlaps": 1518,
+              "properCrossingPairs": 326,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": [
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 258,
+                  "triangleB": 1089,
+                  "pointsOwnerA": [
+                    [
+                      -0.015720375300206927,
+                      -0.22762764605093563,
+                      -0.08219897190612888
+                    ],
+                    [
+                      -0.01630065144124391,
+                      -0.22759009427864288,
+                      -0.08261740118061128
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 259,
+                  "triangleB": 1089,
+                  "pointsOwnerA": [
+                    [
+                      -0.01630065144124391,
+                      -0.2275900942786429,
+                      -0.08261740118061128
+                    ],
+                    [
+                      -0.01635398567287544,
+                      -0.22758673904247725,
+                      -0.08265628431012152
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 259,
+                  "triangleB": 1090,
+                  "pointsOwnerA": [
+                    [
+                      -0.01635398567287544,
+                      -0.22758673904247725,
+                      -0.08265628431012152
+                    ],
+                    [
+                      -0.016366122719516128,
+                      -0.22763606933851227,
+                      -0.08268875788656056
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 259,
+                  "triangleB": 1091,
+                  "pointsOwnerA": [
+                    [
+                      -0.016366122719516128,
+                      -0.22763606933851227,
+                      -0.08268875788656056
+                    ],
+                    [
+                      -0.01657206158820428,
+                      -0.2284932554684107,
+                      -0.08324927053204124
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 259,
+                  "triangleB": 1668,
+                  "pointsOwnerA": [
+                    [
+                      -0.016363276875222852,
+                      -0.22913346156380796,
+                      -0.08339279442024577
+                    ],
+                    [
+                      -0.016439365473090297,
+                      -0.2289035975554071,
+                      -0.08334211624206068
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 259,
+                  "triangleB": 1669,
+                  "pointsOwnerA": [
+                    [
+                      -0.016439365473090297,
+                      -0.2289035975554071,
+                      -0.08334211624206068
+                    ],
+                    [
+                      -0.01657206158820428,
+                      -0.2284932554684107,
+                      -0.08324927053204124
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 260,
+                  "triangleB": 1094,
+                  "pointsOwnerA": [
+                    [
+                      -0.01290057865276532,
+                      -0.22814028940856979,
+                      -0.08086497538255447
+                    ],
+                    [
+                      -0.012865492431281919,
+                      -0.22813942930513934,
+                      -0.08084518655230062
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 260,
+                  "triangleB": 1095,
+                  "pointsOwnerA": [
+                    [
+                      -0.012165624708442454,
+                      -0.2281161028762075,
+                      -0.08044759256224995
+                    ],
+                    [
+                      -0.012865492431281917,
+                      -0.22813942930513934,
+                      -0.08084518655230062
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 64490,
+            "aabbOverlaps": 1518,
+            "properCrossingPairs": 326,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.20781995496855352,
+              0.7389624581819961,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.26233744763729083,
+              0.12300561844182234,
+              0.002884507988360159,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.380526231089683,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.380526231089683,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.12162765380764703,
+              0.05238142049402372,
+              0.0290777661441986,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 38165,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 38165,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "advanced-jump-airborne",
+      "setup": "advanced-jump-airborne",
+      "tick": 63,
+      "controller": {
+        "era": "builder",
+        "state": "power-jump",
+        "phase": 0.4285714285714287,
+        "actionKind": null,
+        "goal": null,
+        "powerMove": {
+          "kind": "jump",
+          "phase": 0.4285714285714287,
+          "duration": 1.4,
+          "stage": "flight"
+        },
+        "clawAction": null,
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "steps": 0
+      },
+      "motionMetrics": {
+        "powerMove": {
+          "kind": "jump",
+          "phase": 0.4285714285714287,
+          "height": 0.3599833402748855,
+          "stage": "airborne",
+          "grounded": false
+        },
+        "clawAction": null,
+        "contact": false,
+        "settled": false
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.25287805066882146,
+            -0.10144667826353833,
+            -0.014910061830188916,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2077125608921051,
+            1.1070869693871292,
+            -0.33725909888744354
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.5528095454097465,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.23072877558828936,
+            0.8770001959128579,
+            -0.10514197608329365
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.36546486178682885,
+            0.10244337803328342,
+            -0.004288822557524484,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2512859106063843,
+            0.6714961662266659,
+            -0.28835986554622645
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.25287805066882146,
+            0.10144667826353833,
+            0.014910061830188916,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2077125608921051,
+            1.1070869693871292,
+            -0.33725909888744354
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.5528095454097465,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.23072877558828936,
+            0.8770001959128579,
+            -0.10514197608329365
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.36546486178682885,
+            -0.10244337803328342,
+            0.004288822557524484,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2512859106063843,
+            0.6714961662266659,
+            -0.28835986554622645
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.2512859106063843,
+            0.6714961662266659,
+            -0.2883598655462265
+          ],
+          "actual": [
+            0.2512859106063843,
+            0.6714961662266659,
+            -0.28835986554622645
+          ],
+          "swinging": true,
+          "phase": 0.999942908565361,
+          "groundMin": 0.3681284070861024
+        },
+        {
+          "side": "right",
+          "target": [
+            -0.2512859106063843,
+            0.6714961662266659,
+            -0.2883598655462265
+          ],
+          "actual": [
+            -0.2512859106063843,
+            0.6714961662266659,
+            -0.28835986554622645
+          ],
+          "swinging": true,
+          "phase": 0.999942908565361,
+          "groundMin": 0.3681284070861024
+        }
+      ],
+      "clawMetrics": null,
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.25287805066882146,
+              -0.10144667826353833,
+              -0.014910061830188916,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.5528095454097465,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.5528095454097465,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.36546486178682885,
+              0.10244337803328342,
+              -0.004288822557524484,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 50108,
+              "aabbOverlaps": 1124,
+              "properCrossingPairs": 127,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": [
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 586,
+                  "triangleB": 567,
+                  "pointsOwnerA": [
+                    [
+                      -0.00040448434508100716,
+                      -0.24067922773773753,
+                      -0.07977817620930616
+                    ],
+                    [
+                      -0.0004520469082667294,
+                      -0.24091941358892793,
+                      -0.07956310223960476
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 586,
+                  "triangleB": 1682,
+                  "pointsOwnerA": [
+                    [
+                      -0.0004106688542880205,
+                      -0.2409808827496088,
+                      -0.07949327181542451
+                    ],
+                    [
+                      -0.0004520469082667294,
+                      -0.24091941358892793,
+                      -0.07956310223960476
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 587,
+                  "triangleB": 1682,
+                  "pointsOwnerA": [
+                    [
+                      -0.0004106688542880205,
+                      -0.2409808827496088,
+                      -0.07949327181542451
+                    ],
+                    [
+                      -0.00009724800896379824,
+                      -0.24128710455602803,
+                      -0.07928543271611699
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 588,
+                  "triangleB": 561,
+                  "pointsOwnerA": [
+                    [
+                      -0.001586974559188714,
+                      -0.23969379680370223,
+                      -0.0799786293225481
+                    ],
+                    [
+                      -0.0015884520997878808,
+                      -0.2396983534630016,
+                      -0.07997895086175322
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 588,
+                  "triangleB": 562,
+                  "pointsOwnerA": [
+                    [
+                      -0.0015884520997878804,
+                      -0.2396983534630016,
+                      -0.07997895086175322
+                    ],
+                    [
+                      -0.0010155884880942486,
+                      -0.2399985704303092,
+                      -0.0798803910618758
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 588,
+                  "triangleB": 567,
+                  "pointsOwnerA": [
+                    [
+                      -0.00041703333300177847,
+                      -0.240663188951221,
+                      -0.07978184353940444
+                    ],
+                    [
+                      -0.0010155884880942486,
+                      -0.2399985704303092,
+                      -0.0798803910618758
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 589,
+                  "triangleB": 567,
+                  "pointsOwnerA": [
+                    [
+                      -0.0004170333330017783,
+                      -0.240663188951221,
+                      -0.07978184353940444
+                    ],
+                    [
+                      -0.0004044843450810072,
+                      -0.24067922773773753,
+                      -0.07977817620930616
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 622,
+                  "triangleB": 1678,
+                  "pointsOwnerA": [
+                    [
+                      -0.0014326934443331138,
+                      -0.24239303524411349,
+                      -0.07583837242730829
+                    ],
+                    [
+                      -0.0008582823644120022,
+                      -0.24253966544414196,
+                      -0.07579196976334666
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 50108,
+            "aabbOverlaps": 1124,
+            "properCrossingPairs": 127,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.25287805066882146,
+              0.10144667826353833,
+              0.014910061830188916,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.5528095454097465,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.5528095454097465,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.36546486178682885,
+              -0.10244337803328342,
+              0.004288822557524484,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 54330,
+              "aabbOverlaps": 431,
+              "properCrossingPairs": 61,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": [
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 586,
+                  "triangleB": 1686,
+                  "pointsOwnerA": [
+                    [
+                      0.000624183451477467,
+                      -0.24110201454645933,
+                      -0.07897396966706256
+                    ],
+                    [
+                      0.00041994384616599663,
+                      -0.24111336228578248,
+                      -0.07921653269875731
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 587,
+                  "triangleB": 1686,
+                  "pointsOwnerA": [
+                    [
+                      0.00041994384616599663,
+                      -0.24111336228578248,
+                      -0.07921653269875731
+                    ],
+                    [
+                      0.00003095564765451204,
+                      -0.24116465156762415,
+                      -0.07961910237238758
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 589,
+                  "triangleB": 1686,
+                  "pointsOwnerA": [
+                    [
+                      0.000624183451477467,
+                      -0.24110201454645933,
+                      -0.07897396966706256
+                    ],
+                    [
+                      0.001052671454624744,
+                      -0.2408758771812563,
+                      -0.07887011304813946
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 589,
+                  "triangleB": 1690,
+                  "pointsOwnerA": [
+                    [
+                      0.001424850679298845,
+                      -0.24078788122294384,
+                      -0.07888679939527647
+                    ],
+                    [
+                      0.001248940356218405,
+                      -0.24082945742963985,
+                      -0.07887889777513174
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 589,
+                  "triangleB": 1691,
+                  "pointsOwnerA": [
+                    [
+                      0.0012489403562184048,
+                      -0.24082945742963985,
+                      -0.07887889777513174
+                    ],
+                    [
+                      0.001052671454624744,
+                      -0.2408758771812563,
+                      -0.07887011304813946
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 872,
+                  "triangleB": 2141,
+                  "pointsOwnerA": [
+                    [
+                      -0.0009058200710523446,
+                      -0.23676328578694525,
+                      -0.07697088047722328
+                    ],
+                    [
+                      -0.0006939890004601298,
+                      -0.23663636524592677,
+                      -0.07686984889340243
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 872,
+                  "triangleB": 2142,
+                  "pointsOwnerA": [
+                    [
+                      -0.0006939890004601298,
+                      -0.23663636524592677,
+                      -0.07686984889340243
+                    ],
+                    [
+                      -0.00044974016757628674,
+                      -0.23661764892688505,
+                      -0.07681198424520616
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 872,
+                  "triangleB": 2143,
+                  "pointsOwnerA": [
+                    [
+                      -0.0002662728909786164,
+                      -0.23660359706962886,
+                      -0.07676852243427698
+                    ],
+                    [
+                      -0.0004497401675762861,
+                      -0.23661764892688505,
+                      -0.07681198424520616
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 54330,
+            "aabbOverlaps": 431,
+            "properCrossingPairs": 61,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "advanced-jump-landed",
+      "setup": "advanced-jump-landed",
+      "tick": 112,
+      "controller": {
+        "era": "builder",
+        "state": "watch",
+        "phase": 0,
+        "actionKind": null,
+        "goal": null,
+        "powerMove": null,
+        "clawAction": null,
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "steps": 0
+      },
+      "motionMetrics": {
+        "powerMove": null,
+        "clawAction": null,
+        "contact": false,
+        "settled": true
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.16708367265320515,
+            -0.11322380524573912,
+            -0.00778259505704159,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2077125608921051,
+            0.7471036291122437,
+            -0.33725909888744354
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.3737059987280086,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.23074631177471128,
+            0.4983409020629243,
+            -0.12528131675714071
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.20643100710439236,
+            0.11293951343769153,
+            -0.011186538251984039,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.16708367265320515,
+            0.11322380524573912,
+            0.00778259505704159,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2077125608921051,
+            0.7471036291122437,
+            -0.33725909888744354
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.3737059987280086,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.23074631177471128,
+            0.4983409020629243,
+            -0.12528131675714071
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.20643100710439236,
+            -0.11293951343769153,
+            0.011186538251984039,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ],
+          "swinging": false,
+          "phase": 0,
+          "groundMin": 0.0019999999999998908
+        },
+        {
+          "side": "right",
+          "target": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            -0.2512859106063843,
+            0.27651482415199274,
+            -0.28835986554622656
+          ],
+          "swinging": false,
+          "phase": 0,
+          "groundMin": 0.0019999999999998908
+        }
+      ],
+      "clawMetrics": null,
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.16708367265320515,
+              -0.11322380524573912,
+              -0.00778259505704159,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.20643100710439236,
+              0.11293951343769153,
+              -0.011186538251984039,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 42432,
+              "aabbOverlaps": 154,
+              "properCrossingPairs": 22,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": [
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 620,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0005311722478854052,
+                      -0.24231738138441727,
+                      -0.07551247165660405
+                    ],
+                    [
+                      -0.00016381823399800206,
+                      -0.2423553572351721,
+                      -0.07559280355035852
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 621,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0001638182339980019,
+                      -0.2423553572351721,
+                      -0.07559280355035852
+                    ],
+                    [
+                      0.0003971661806338888,
+                      -0.24239696495580856,
+                      -0.07577972757911686
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 622,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0011341657631812796,
+                      -0.24221057958130304,
+                      -0.07555497410402394
+                    ],
+                    [
+                      -0.0014985513479988375,
+                      -0.2421394801319599,
+                      -0.07560638036466343
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 622,
+                  "triangleB": 1105,
+                  "pointsOwnerA": [
+                    [
+                      -0.0016323877352052848,
+                      -0.24211332177450803,
+                      -0.07562521742909022
+                    ],
+                    [
+                      -0.001498551347998837,
+                      -0.2421394801319599,
+                      -0.07560638036466343
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 623,
+                  "triangleB": 1104,
+                  "pointsOwnerA": [
+                    [
+                      -0.0011341657631812796,
+                      -0.24221057958130304,
+                      -0.07555497410402394
+                    ],
+                    [
+                      -0.0005311722478854052,
+                      -0.24231738138441727,
+                      -0.07551247165660405
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 1164,
+                  "triangleB": 1107,
+                  "pointsOwnerA": [
+                    [
+                      -0.0009335175495594743,
+                      -0.24259641387120573,
+                      -0.07701611384017465
+                    ],
+                    [
+                      -0.0025361513026156066,
+                      -0.24239614146096156,
+                      -0.07673858792331385
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 1165,
+                  "triangleB": 1107,
+                  "pointsOwnerA": [
+                    [
+                      -0.0025361513026156066,
+                      -0.24239614146096156,
+                      -0.07673858792331385
+                    ],
+                    [
+                      -0.003151122922076959,
+                      -0.24231945841663363,
+                      -0.07663237901634383
+                    ]
+                  ]
+                },
+                {
+                  "kind": "proper-crossing",
+                  "triangleA": 1166,
+                  "triangleB": 1105,
+                  "pointsOwnerA": [
+                    [
+                      -0.0016323877352052848,
+                      -0.24211332177450803,
+                      -0.07562521742909022
+                    ],
+                    [
+                      -0.002618576145366215,
+                      -0.24189130933697672,
+                      -0.0758783859465363
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 42432,
+            "aabbOverlaps": 154,
+            "properCrossingPairs": 22,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.2077125608921051,
+              0.7471036291122437,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.16708367265320515,
+              0.11322380524573912,
+              0.00778259505704159,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.3737059987280086,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.20643100710439236,
+              -0.11293951343769153,
+              0.011186538251984039,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 48682,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 48682,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "advanced-claw-contact",
+      "setup": "advanced-claw-contact",
+      "tick": 49,
+      "controller": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "phase": 0.9722222222222222,
+        "actionKind": "claw-scrape",
+        "goal": null,
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0.9722222222222222,
+          "stage": "contact",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "steps": 0
+      },
+      "motionMetrics": {
+        "powerMove": null,
+        "clawAction": {
+          "stage": "contact",
+          "phase": 0.9722222222222222,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.0019999999999998908,
+          "contact": true,
+          "supportSide": "right",
+          "supportError": 1.1102230246251565e-16,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0020000000000000365,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "contact": false,
+        "settled": false
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.19560285167649763,
+            0.8096117067336918,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            -0.2357390119298118,
+            -0.1362412571385694,
+            0.02094392295563024,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.19560285167649763,
+            0.8096117067336918,
+            -0.33725909888744354
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            0.28793716729339736,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.22273826047633108,
+            0.5776262607143798,
+            -0.10748866869655688
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            -0.04741545824487389,
+            0.12748842439391012,
+            -0.05252885249495514,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2512859106063843,
+            0.33356731186728117,
+            -0.23335986554622662
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.21979235985786968,
+            0.8145966885535286,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            0.03183806143771917,
+            0.15703084682450955,
+            0.004001218673219312,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.21979235985786968,
+            0.8145966885535286,
+            -0.33725909888744354
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            -0.04484663766306318,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.23650942651927592,
+            0.5289778814420918,
+            -0.17760176309576672
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            0.011979632709212089,
+            -0.1568203856324649,
+            -0.009088991089143123,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462266
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.2512859106063843,
+            0.3335673118672812,
+            -0.2333598655462265
+          ],
+          "actual": [
+            0.2512859106063843,
+            0.33356731186728117,
+            -0.23335986554622662
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0019999999999998908
+        },
+        {
+          "side": "right",
+          "target": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462266
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0020000000000000365
+        }
+      ],
+      "clawMetrics": {
+        "stage": "contact",
+        "phase": 0.9722222222222222,
+        "side": "left",
+        "target": "floor-scrape",
+        "tipMinY": 0.0019999999999998908,
+        "contact": true,
+        "supportSide": "right",
+        "supportError": 1.1102230246251565e-16,
+        "supportTargetError": 0,
+        "supportGroundMin": 0.0020000000000000365,
+        "supportTarget": [
+          -0.2512859106063843,
+          0.2765148241519928,
+          -0.2883598655462265
+        ]
+      },
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.19560285167649763,
+              0.8096117067336918,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              -0.2357390119298118,
+              -0.1362412571385694,
+              0.02094392295563024,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.28793716729339736,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              0.28793716729339736,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              -0.04741545824487389,
+              0.12748842439391012,
+              -0.05252885249495514,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 13603,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 13603,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.21979235985786968,
+              0.8145966885535286,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              0.03183806143771917,
+              0.15703084682450955,
+              0.004001218673219312,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              -0.04484663766306318,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              -0.04484663766306318,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              0.011979632709212089,
+              -0.1568203856324649,
+              -0.009088991089143123,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "advanced-claw-recovery",
+      "setup": "advanced-claw-recovery",
+      "tick": 116,
+      "controller": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "phase": 0.992063492063492,
+        "actionKind": "claw-scrape",
+        "goal": null,
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0.992063492063492,
+          "stage": "recovery",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "steps": 0
+      },
+      "motionMetrics": {
+        "powerMove": null,
+        "clawAction": {
+          "stage": "recovery",
+          "phase": 0.992063492063492,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.002006563417094355,
+          "contact": false,
+          "supportSide": "right",
+          "supportError": 1.1102230246251565e-16,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0020000000000000018,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "contact": false,
+        "settled": false
+      },
+      "nodes": {
+        "left-thigh": {
+          "localPosition": [
+            0.20771028750477685,
+            0.8121031606008066,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            0.029255869834594536,
+            -0.15449640915863141,
+            0.017626243579937993,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.20771028750477685,
+            0.8121031606008066,
+            -0.33725909888744354
+          ]
+        },
+        "left-shin": {
+          "localPosition": [
+            0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            -0.03240727453920301,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2308363342474192,
+            0.5278642292579376,
+            -0.17594746249149332
+          ]
+        },
+        "left-foot": {
+          "localPosition": [
+            -0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            0.005546279176183204,
+            0.15492738418144428,
+            -0.013276565127291012,
+            "XYZ"
+          ],
+          "worldPosition": [
+            0.2512859106063843,
+            0.27652141241718564,
+            -0.2883391894377505
+          ]
+        },
+        "right-thigh": {
+          "localPosition": [
+            -0.2077148342783766,
+            0.8121040976237209,
+            -0.08725909888744354
+          ],
+          "localRotation": [
+            0.02931209773894815,
+            0.15449911655056803,
+            -0.01762073944477759,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2077148342783766,
+            0.8121040976237209,
+            -0.33725909888744354
+          ]
+        },
+        "right-shin": {
+          "localPosition": [
+            -0.04401037096977234,
+            -0.28021788597106934,
+            0.16397881507873535
+          ],
+          "localRotation": [
+            -0.03244662401445508,
+            0,
+            0,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.23083890243246338,
+            0.5278558323497017,
+            -0.17596362676768992
+          ]
+        },
+        "right-foot": {
+          "localPosition": [
+            0.00043702125549316406,
+            -0.25095775723457336,
+            -0.11507958173751831
+          ],
+          "localRotation": [
+            0.005527901137868807,
+            -0.15493068827280906,
+            0.013262141680270779,
+            "XYZ"
+          ],
+          "worldPosition": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462266
+          ]
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "target": [
+            0.2512859106063843,
+            0.2765214124171857,
+            -0.28833918943775055
+          ],
+          "actual": [
+            0.2512859106063843,
+            0.27652141241718564,
+            -0.2883391894377505
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.002006563417094355
+        },
+        {
+          "side": "right",
+          "target": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ],
+          "actual": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462266
+          ],
+          "swinging": false,
+          "phase": 1,
+          "groundMin": 0.0020000000000000018
+        }
+      ],
+      "clawMetrics": {
+        "stage": "recovery",
+        "phase": 0.992063492063492,
+        "side": "left",
+        "target": "floor-scrape",
+        "tipMinY": 0.002006563417094355,
+        "contact": false,
+        "supportSide": "right",
+        "supportError": 1.1102230246251565e-16,
+        "supportTargetError": 0,
+        "supportGroundMin": 0.0020000000000000018,
+        "supportTarget": [
+          -0.2512859106063843,
+          0.2765148241519928,
+          -0.2883598655462265
+        ]
+      },
+      "groups": [
+        {
+          "joint": "left-knee",
+          "ownerA": {
+            "name": "left-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              0.20771028750477685,
+              0.8121031606008066,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              0.029255869834594536,
+              -0.15449640915863141,
+              0.017626243579937993,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              -0.03240727453920301,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_distal-overlap",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1638,
+              "possiblePairs": 2699424,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_distal-overlap",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1648,
+              "possiblePairs": 2603840,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_thigh_guard_proximal",
+              "ownerA": "left-thigh",
+              "roleA": "plate",
+              "meshB": "left_shaped_shin_guard_proximal",
+              "ownerB": "left-shin",
+              "roleB": "plate",
+              "trianglesA": 1580,
+              "trianglesB": 1638,
+              "possiblePairs": 2588040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10607208,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "left-ankle",
+          "ownerA": {
+            "name": "left-shin",
+            "parent": "left-thigh",
+            "localPosition": [
+              0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              -0.03240727453920301,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "left-foot",
+            "parent": "left-shin",
+            "localPosition": [
+              -0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              0.005546279176183204,
+              0.15492738418144428,
+              -0.013276565127291012,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "left_shaped_shin_guard_distal-overlap",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "left_shaped_shin_guard_proximal",
+              "ownerA": "left-shin",
+              "roleA": "plate",
+              "meshB": "left_curved_instep_guard",
+              "ownerB": "left-foot",
+              "roleB": "plate",
+              "trianglesA": 1638,
+              "trianglesB": 2480,
+              "possiblePairs": 4062240,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8149280,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-knee",
+          "ownerA": {
+            "name": "right-thigh",
+            "parent": "murderbird",
+            "localPosition": [
+              -0.2077148342783766,
+              0.8121040976237209,
+              -0.08725909888744354
+            ],
+            "localRotation": [
+              0.02931209773894815,
+              0.15449911655056803,
+              -0.01762073944477759,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              -0.03244662401445508,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_distal-overlap",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 1648,
+              "possiblePairs": 2715904,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_distal-overlap",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_thigh_guard_proximal",
+              "ownerA": "right-thigh",
+              "roleA": "plate",
+              "meshB": "right_shaped_shin_guard_proximal",
+              "ownerB": "right-shin",
+              "roleB": "plate",
+              "trianglesA": 1618,
+              "trianglesB": 1648,
+              "possiblePairs": 2666464,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 10764736,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        },
+        {
+          "joint": "right-ankle",
+          "ownerA": {
+            "name": "right-shin",
+            "parent": "right-thigh",
+            "localPosition": [
+              -0.04401037096977234,
+              -0.28021788597106934,
+              0.16397881507873535
+            ],
+            "localRotation": [
+              -0.03244662401445508,
+              0,
+              0,
+              "XYZ"
+            ]
+          },
+          "ownerB": {
+            "name": "right-foot",
+            "parent": "right-shin",
+            "localPosition": [
+              0.00043702125549316406,
+              -0.25095775723457336,
+              -0.11507958173751831
+            ],
+            "localRotation": [
+              0.005527901137868807,
+              -0.15493068827280906,
+              0.013262141680270779,
+              "XYZ"
+            ]
+          },
+          "coordinateSpace": "each mesh transformed into ownerA local space after matrixWorld update",
+          "includedRoles": [
+            "plate"
+          ],
+          "excludedRoles": [
+            "bearing",
+            "frame"
+          ],
+          "sameOwnerPairsTested": false,
+          "meshPairs": [
+            {
+              "meshA": "right_shaped_shin_guard_distal-overlap",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            },
+            {
+              "meshA": "right_shaped_shin_guard_proximal",
+              "ownerA": "right-shin",
+              "roleA": "plate",
+              "meshB": "right_curved_instep_guard",
+              "ownerB": "right-foot",
+              "roleB": "plate",
+              "trianglesA": 1648,
+              "trianglesB": 2480,
+              "possiblePairs": 4087040,
+              "gridCandidates": 0,
+              "aabbOverlaps": 0,
+              "properCrossingPairs": 0,
+              "grazingPairs": 0,
+              "coplanarOverlapCandidates": 0,
+              "examples": []
+            }
+          ],
+          "totals": {
+            "possiblePairs": 8174080,
+            "gridCandidates": 0,
+            "aabbOverlaps": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0
+          }
+        }
+      ]
+    }
+  ]
+}

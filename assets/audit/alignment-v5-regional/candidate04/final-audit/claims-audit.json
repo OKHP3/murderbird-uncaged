@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "audit": "candidate04-regional-review-claims",
+  "reviewedAt": "2026-09-28",
+  "scope": "Read-only source and receipt audit of docs/alignment-v5-regional-review.md and docs/alignment-regional-transfer.md against frozen candidate04 identities and receipts. No model, runtime, app, or document edits.",
+  "documentSnapshots": [
+    {
+      "path": "docs/alignment-v5-regional-review.md",
+      "sha256": "431f327d12b43655c6ea1f80a39bf5e8c6da5f24a2970dca0c67394af8ec88b2"
+    },
+    {
+      "path": "docs/alignment-regional-transfer.md",
+      "sha256": "f76b71456b91a73e51fbb484158a15286d7461f0b82939923ac05ff1bed1cc04"
+    }
+  ],
+  "candidate04": {
+    "glbSha256": "829d416a9eb65226543ce619ffc37ce8f135f3f8869ffb291b65da2a5c664c67",
+    "nativeSha256": "376718193b9859cf7e454a0e148dde420c74061e6cdfbec7dd84ae6a4d3c960b",
+    "manifestSha256": "321fd2e01420e9fc06132822badedb79d2c6b0d27e26da0b8919ed434e4dc9ed"
+  },
+  "findings": [
+    {
+      "id": "transfer-study-lineage-and-table-labels",
+      "severity": "material-document-inaccuracy",
+      "path": "docs/alignment-regional-transfer.md",
+      "claim": "The bound studies table labels guard-study06 and talon-study03 outputs as their native/GLB sources, while the preceding text says both studies start from c8.",
+      "evidence": "guard-study06 manifest source.native/source.glb point to guard-study05; talon-study03 manifest source.native/source.glb point to talon-study02. Their c8 replacement/compatibility contract is inherited lineage, not their direct input. The table's Study output column points to manifests rather than native/GLB study outputs.",
+      "recommendation": "Label columns as direct input, study output, and manifest; state the c8 lineage through the previous studies explicitly."
+    },
+    {
+      "id": "transfer-target-version",
+      "severity": "needs-owner-confirmation",
+      "path": "docs/alignment-regional-transfer.md",
+      "claim": "The recipe repeatedly names a future V6 transfer/target.",
+      "evidence": "The parent task states V6 has now been committed and the planned selective recipient is V7. Candidate04 remains independent of either integration and its receipts do not certify either target.",
+      "recommendation": "Retain candidate04 as a standalone regional transfer study and update the recipe's recipient to the currently intended head/neck composition only after that target identity is confirmed; do not describe V6 as a future destination."
+    },
+    {
+      "id": "envelope-scope",
+      "severity": "scope-clarification",
+      "path": "docs/alignment-v5-regional-review.md",
+      "claim": "“The original c8 lateral and ventral envelopes are not exceeded.”",
+      "evidence": "Talon-study03 records zero lateral/ventral overrun for its six talon meshes. That claim does not establish the same envelope condition for all ten guards or all candidate04 replacement geometry.",
+      "recommendation": "Explicitly scope this sentence to the six talon sheaths."
+    }
+  ],
+  "verifiedClaims": [
+    {
+      "claim": "Candidate04 identity, 90-group direct GLB parity, 230900 triangles, 116693 unique positions, and 51 unchanged pivots.",
+      "receipt": "assets/audit/alignment-v5-regional/export-parity-candidate04/regional-export-parity-829d416a9eb6.json",
+      "result": "confirmed"
+    },
+    {
+      "claim": "65 rig checks pass across the six candidate-bound rig receipts.",
+      "receiptsDirectory": "assets/audit/alignment-v5-regional/candidate04/rig-checks/",
+      "result": "confirmed"
+    },
+    {
+      "claim": "Seven sampled limb states cover four adjacent knee/ankle owner pairs per state and report zero proper crossings, grazes, or coplanar candidates.",
+      "receipt": "assets/audit/alignment-v5-regional/candidate04/limb-clearance/limb-guard-clearance-829d416a9eb6.json",
+      "result": "confirmed; discrete plate-only surface test"
+    },
+    {
+      "claim": "Nine reachable jaw/neck states report zero strict proper crossings with nonempty mesh inventories.",
+      "receipt": "assets/audit/alignment-v5-regional/candidate04/neck-clearance/jaw-neck-era-matrix.json",
+      "result": "confirmed; sampled states only"
+    },
+    {
+      "claim": "125.122-second candidate04 motion sequence with served GLB SHA bound; not a no-input run and not runtime integration.",
+      "receipt": "assets/audit/alignment-v5-regional/candidate04/motion/motion-demonstration.json",
+      "result": "confirmed; temporary route override and multi-control demonstration"
+    },
+    {
+      "claim": "12 frozen poses, 44 screenshots, and 18 keyboard markers; viewer status passed with three WebGL eras and three illustrated fallbacks.",
+      "receipts": [
+        "assets/audit/alignment-v5-regional/candidate04/frozen/frozen-extrema.json",
+        "assets/audit/alignment-v5-regional/candidate04/motion/media-receipt.json",
+        "assets/audit/alignment-v5-regional/candidate04/viewer-checks/viewer-validation.json"
+      ],
+      "result": "confirmed"
+    },
+    {
+      "claim": "The ordinary app/build remains V4 while the review viewer used an explicit local in-memory response override for candidate04.",
+      "receipts": [
+        "assets/audit/alignment-v5-regional/candidate04/viewer-checks/viewer-validation.json",
+        "assets/audit/alignment-v5-regional/active-v4-build-checks.json"
+      ],
+      "result": "confirmed; do not attribute historical V4 no-input demonstrations to candidate04"
+    }
+  ],
+  "overall": "Most candidate04 claims are supported and evidence boundaries are generally explicit. The direct-source table/lineage wording is materially inaccurate; recipient-version and envelope phrasing need clarification."
+}

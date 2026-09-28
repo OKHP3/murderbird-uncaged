@@ -1,0 +1,20 @@
+{
+  "schema": "alignment-v5-regional-superseded-review-note/v1",
+  "status": "superseded interpretation; original comparison report preserved",
+  "originalNote": "The reviewed native profile images remain this report\u2019s subject. Independent GLB comparison subsequently rejected the `8f8ec329\u2026d7f1ee` derivative for loss of retained rear-claw geometry. Its motion tests are not export-preservation acceptance. See `assets/audit/alignment-v5-regional/export-parity-v2/`.",
+  "originalComparison": {
+    "path": "assets/audit/alignment-v5-regional/export-parity-v2/regional-export-parity-8f8ec3290eba.json",
+    "candidateSha256": "8f8ec3290eba430d17af0f2f50fe24fa3ba318e783869d0e8ad08dcf87d7f1ee",
+    "historicalFinding": "The grouped owner/region/role/material comparison reported each foot-edge batch as 276 triangles versus 1080 in the frozen base GLB."
+  },
+  "adjudication": {
+    "correctedReport": "assets/audit/alignment-v5-regional/export-parity-final/regional-export-parity-8f8ec3290eba.json",
+    "nativePartitionEvidence": "assets/audit/alignment-v5-regional/edge-partition-audit/retained-foot-edge-source.json",
+    "reason": "The original comparison treated all 1080 triangles in each frozen base foot-edge batch as retained. Native inventory and Blender inspection show 804 triangles were three 268-triangle ankle sheath lap ribs per foot; all six exact ribs are included in guard-study05's 26-object replacement manifest. The retained rear hallux sheath and two axle caps total 276 triangles per foot and match the candidate's world-position point cloud exactly.",
+    "correctedParity": "The exact base-plus-guard-plus-talon comparison passes all 90 tagged groups: expected and candidate each contain 232660 triangles, 117573 unique world positions, and 697980 vertex occurrences. All 51 pivot world matrices match with maximum component delta 0. Source-coverage checks pass.",
+    "scopeLimit": "This resolves direct GLB geometry-export parity for candidate SHA above; it does not resolve the separately documented visual revision request or establish final likeness, continuous collision clearance, physical behavior, or human acceptance.",
+    "originalComparisonSha256": "85e36e18c1037925d8636b47be33f9551e4f1697aca6bb41a114e7fc3d730486",
+    "correctedParitySha256": "db84e20f47a578449eff7f36f199f0dc1dfdb82cba3695c41860f315a6f70fc4",
+    "nativePartitionEvidenceSha256": "700e9548b17dbaa491d2616b6f5f6adc10ad65e745a8876a1c92152692cf4290"
+  }
+}

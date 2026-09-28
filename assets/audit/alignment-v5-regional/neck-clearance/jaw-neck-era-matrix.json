@@ -1,0 +1,2621 @@
+{
+  "generatedAt": "2026-09-28T06:17:21.837Z",
+  "model": {
+    "path": "assets/models/uncaged-alignment-v5-regional/candidate/murderbird-v5-sixth-guard-talon-study.glb",
+    "sha256": "8f8ec3290eba430d17af0f2f50fe24fa3ba318e783869d0e8ad08dcf87d7f1ee",
+    "bytes": 4490664,
+    "expectedSha256": "8f8ec3290eba430d17af0f2f50fe24fa3ba318e783869d0e8ad08dcf87d7f1ee"
+  },
+  "worktree": {
+    "head": "ec5962f694eec1ba271b4f810542031b7488edd6",
+    "path": "/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged"
+  },
+  "sources": {
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/presence-state.js": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad"
+  },
+  "diagnosticScriptSha256": "47d4edc3417082ecea8e95ac7832ea178b23dd3c241d5261c220398e1dbac4d8",
+  "diagnostic": "Corrected reachable-state matrix for strict jaw/neck surface crossings across Maker, Mechanic, and Advanced. Maker endpoints use setArticulation; Mechanic moving/support-target sample is selected from a live requestRoutine and replayed at its exact tick; Advanced samples are actual visitor contact/recovery plus seeded autonomous gaze extrema. No force inference or exhaustive sweep claim.",
+  "kernel": {
+    "planeToleranceMetres": 0.000001,
+    "barycentricInteriorTolerance": 0.0001,
+    "fixtures": {
+      "toleranceMetres": 0.000001,
+      "barycentricInteriorTolerance": 0.0001,
+      "fixtures": [
+        {
+          "name": "crossing",
+          "expected": "proper-crossing",
+          "actual": "proper-crossing",
+          "points": [
+            [
+              0.2,
+              0.2,
+              0
+            ],
+            [
+              0.42500000000000004,
+              0.2,
+              0
+            ]
+          ]
+        },
+        {
+          "name": "separated",
+          "expected": "separated-or-nonintersecting",
+          "actual": "separated-or-nonintersecting",
+          "points": []
+        },
+        {
+          "name": "grazing",
+          "expected": "grazing-or-boundary",
+          "actual": "grazing-or-boundary",
+          "points": [
+            [
+              0.25,
+              0.25,
+              0
+            ]
+          ]
+        },
+        {
+          "name": "coplanar",
+          "expected": "coplanar-overlap-candidate",
+          "actual": "coplanar-overlap-candidate",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.2,
+              0.2,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "meshInventoryAudit": {
+    "perPose": [
+      {
+        "label": "maker-neck-minimum",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "maker-neck-maximum",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "maker-jaw-minimum",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "maker-jaw-maximum",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "mechanic-routine-moving-support-target-sample",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "advanced-visitor-contact-center-rail",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "advanced-contact-recovery",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "advanced-seeded-gaze-pitch-extreme",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      {
+        "label": "advanced-seeded-gaze-yaw-extreme",
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      }
+    ],
+    "excludedHeadDescendants": true,
+    "coordinates": "mesh triangle vertices transformed by inverse actual neck.matrixWorld times each mesh.matrixWorld"
+  },
+  "limits": [
+    "Sampled reachable states only; not an exhaustive control or animation sweep.",
+    "Counts are strict triangle edge-plane crossing pairs, not penetration depths, volumes, forces, or collision response.",
+    "Strict interior barycentric margin can omit boundary intersections; coplanar, contained, and unsampled cases are not ruled out.",
+    "A zero broadphase count is evidence only for these mesh pairs at these sampled poses."
+  ],
+  "runs": [
+    {
+      "label": "maker-neck-minimum",
+      "pose": {
+        "era": "maker",
+        "state": "puppet-rest",
+        "phase": 0,
+        "actionKind": null,
+        "goal": null,
+        "heading": null,
+        "lookTarget": null,
+        "contact": false,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "bodyPosition": [
+          0,
+          0.7549999928474427,
+          0
+        ],
+        "bodyRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0,
+          1.194999990463257,
+          -0.14999999850988388
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0,
+          "skullPitch": 0,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          0,
+          0
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "maker-neck-maximum",
+      "pose": {
+        "era": "maker",
+        "state": "puppet-articulation",
+        "phase": 0,
+        "actionKind": null,
+        "goal": null,
+        "heading": null,
+        "lookTarget": null,
+        "contact": false,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "bodyPosition": [
+          0,
+          0.7549999928474427,
+          0
+        ],
+        "bodyRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          -0.13905668742012806,
+          -0.44696792385041156,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0,
+          1.194999990463257,
+          -0.14999999850988388
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": -0.13905668742012806,
+          "skullPitch": 0,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          0,
+          0
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0.9932620530009145,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "maker-jaw-minimum",
+      "pose": {
+        "era": "maker",
+        "state": "puppet-rest",
+        "phase": 0,
+        "actionKind": null,
+        "goal": null,
+        "heading": null,
+        "lookTarget": null,
+        "contact": false,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "bodyPosition": [
+          0,
+          0.7549999928474427,
+          0
+        ],
+        "bodyRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0,
+          1.194999990463257,
+          -0.14999999850988388
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0,
+          "skullPitch": 0,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          0,
+          0
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "maker-jaw-maximum",
+      "pose": {
+        "era": "maker",
+        "state": "puppet-articulation",
+        "phase": 0,
+        "actionKind": null,
+        "goal": null,
+        "heading": null,
+        "lookTarget": null,
+        "contact": false,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "bodyPosition": [
+          0,
+          0.7549999928474427,
+          0
+        ],
+        "bodyRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0,
+          1.194999990463257,
+          -0.14999999850988388
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0.31784385696029266,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0,
+          "skullPitch": 0,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          0,
+          0
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0.9932620530009145
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 0
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 40,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 40,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "mechanic-routine-moving-support-target-sample",
+      "pose": {
+        "era": "mechanic",
+        "state": "mechanical-run",
+        "phase": 0,
+        "actionKind": null,
+        "goal": {
+          "x": 0.55,
+          "z": -0.25
+        },
+        "heading": 1.5707963267948966,
+        "lookTarget": null,
+        "contact": false,
+        "root": {
+          "x": 0.0733461131472655,
+          "z": -0.25,
+          "yaw": 1.4666282154215617,
+          "speed": 0.3338198618415558
+        },
+        "bodyPosition": [
+          0,
+          0.7431727823338203,
+          0
+        ],
+        "bodyRotation": [
+          0,
+          0,
+          -0.017740815770433387,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0.17361567494977148,
+          1.1831035397263499,
+          -0.24736525600704104
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0,
+          "skullPitch": 0,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          0,
+          0
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.10277952484490298,
+              0.3265064228136778,
+              -0.4928421558693717
+            ],
+            "actual": [
+              0.10277952484490308,
+              0.3265064228136778,
+              -0.49284215586937163
+            ],
+            "groundMin": 0.036620655850586145,
+            "phase": 0.5058352630845897,
+            "steps": 2
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.09008948336442321,
+              0.2765148241519928,
+              -0.012302770017958264
+            ],
+            "actual": [
+              -0.09008948336442328,
+              0.2765148241519928,
+              -0.012302770017958283
+            ],
+            "groundMin": 0.002000000000000071,
+            "phase": 1,
+            "steps": 2
+          }
+        ],
+        "mechanicalStage": "release",
+        "mechanicalPhase": 0.4617117117117116,
+        "sampleTick": 396,
+        "supportTargetDisplacementMetres": 0.3265064228136778,
+        "deterministicReplayVerified": true
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "advanced-visitor-contact-center-rail",
+      "pose": {
+        "era": "builder",
+        "state": "contact",
+        "phase": 0,
+        "actionKind": "visitor",
+        "goal": {
+          "x": 0,
+          "z": 1.0435798882948986
+        },
+        "heading": 0,
+        "lookTarget": {
+          "x": 0,
+          "y": 1.2,
+          "z": 2.65
+        },
+        "contact": true,
+        "root": {
+          "x": 0,
+          "z": 1.0399058199488025,
+          "yaw": 0,
+          "speed": 0
+        },
+        "bodyPosition": [
+          0.00018658330574618034,
+          0.7095328950813302,
+          0.12
+        ],
+        "bodyRotation": [
+          0.12621797895751916,
+          0,
+          -0.0001026208181603992,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0.5667366027832031,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0.00023173646541283733,
+          1.1334444138320992,
+          1.3144989001029554
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          -0.6487782891055907,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0.025392792943327247,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0.5667366027832031,
+          "skullPitch": -0.6487782891055907,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          1.219184397978982,
+          2.0790003108334916
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.2765148241519928,
+              0.99031557740932
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.2765148241519928,
+              0.9903155774093197
+            ],
+            "groundMin": 0.0020000000000000018,
+            "phase": 1,
+            "steps": 4
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              1.0112385750054371
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              1.0112385750054371
+            ],
+            "groundMin": 0.0020000000000000018,
+            "phase": 1,
+            "steps": 4
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "advanced-contact-recovery",
+      "pose": {
+        "era": "builder",
+        "state": "recover",
+        "phase": 0,
+        "actionKind": "visitor",
+        "goal": null,
+        "heading": 0,
+        "lookTarget": {
+          "x": 0,
+          "y": 1.2,
+          "z": 2.65
+        },
+        "contact": false,
+        "root": {
+          "x": 0,
+          "z": 1.0399058199488025,
+          "yaw": 0,
+          "speed": 0
+        },
+        "bodyPosition": [
+          0.00006315199789720221,
+          0.7128245838764374,
+          0.12
+        ],
+        "bodyRotation": [
+          0.1246818575198024,
+          0,
+          -0.00003473359884346122,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0.5721122741699219,
+          0,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          0.00007843478130244088,
+          1.1369730781684986,
+          1.3138475386482948
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          -0.6531554815577935,
+          0,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0.005572248900051776,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0.5721122741699219,
+          "skullPitch": -0.6531554815577935,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          0,
+          1.221303174717866,
+          2.0790013286390523
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              0.2512859106063843,
+              0.2765148241519928,
+              0.99031557740932
+            ],
+            "actual": [
+              0.2512859106063843,
+              0.2765148241519928,
+              0.9903155774093201
+            ],
+            "groundMin": 0.001999999999999981,
+            "phase": 1,
+            "steps": 4
+          },
+          {
+            "side": "right",
+            "target": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              1.0112385750054371
+            ],
+            "actual": [
+              -0.2512859106063843,
+              0.27651482415199286,
+              1.0112385750054371
+            ],
+            "groundMin": 0.002000000000000078,
+            "phase": 1,
+            "steps": 4
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "advanced-seeded-gaze-pitch-extreme",
+      "pose": {
+        "era": "builder",
+        "state": "cage-test",
+        "phase": 0.29963685189089156,
+        "actionKind": "cage",
+        "goal": {
+          "x": -1.2,
+          "z": 1.0435798882948986
+        },
+        "heading": 0,
+        "lookTarget": {
+          "x": -1.2,
+          "y": 1.3,
+          "z": 2.15
+        },
+        "contact": true,
+        "root": {
+          "x": -1.2003775697700032,
+          "z": 1.039841140258135,
+          "yaw": 6.283185307179586,
+          "speed": 0
+        },
+        "bodyPosition": [
+          -0.0009088082603439563,
+          0.737295339208378,
+          0.11803102426043129
+        ],
+        "bodyRotation": [
+          0.11153931792610756,
+          0,
+          0.000499844543189176,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          0.6401222932784695,
+          0.00008675045301611816,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          -1.2015063096190006,
+          1.1634302757479562,
+          1.306226354518194
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          -0.7126228499304395,
+          0.0000015420305458398035,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          0.031868376550316456,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": 0.6401222932784695,
+          "skullPitch": -0.7126228499304395,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          -1.2,
+          1.225687707631988,
+          2.0778695403468506
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              -0.949091659163619,
+              0.2765148241519928,
+              1.0014812747119077
+            ],
+            "actual": [
+              -0.9490916591636189,
+              0.27651482415199274,
+              1.0014812747119077
+            ],
+            "groundMin": 0.001999999999999967,
+            "phase": 1,
+            "steps": 89
+          },
+          {
+            "side": "right",
+            "target": [
+              -1.4525244655271043,
+              0.2765148241519928,
+              1.0114429484951102
+            ],
+            "actual": [
+              -1.4525244655271043,
+              0.27651482415199274,
+              1.0114429484951104
+            ],
+            "groundMin": 0.0019999999999999254,
+            "phase": 1,
+            "steps": 90
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 0,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    },
+    {
+      "label": "advanced-seeded-gaze-yaw-extreme",
+      "pose": {
+        "era": "builder",
+        "state": "pace",
+        "phase": 0,
+        "actionKind": null,
+        "goal": {
+          "x": -1.35,
+          "z": 0.42
+        },
+        "heading": -2.9055309397408617,
+        "lookTarget": {
+          "x": -1.15,
+          "y": 1.55,
+          "z": -0.15
+        },
+        "contact": false,
+        "root": {
+          "x": -1.1968336775657649,
+          "z": 1.0419306899264251,
+          "yaw": 12.543870614359172,
+          "speed": 0
+        },
+        "bodyPosition": [
+          1.714855472958345e-23,
+          0.754999992743509,
+          5.381841337208036e-34
+        ],
+        "bodyRotation": [
+          4.850235761432078e-11,
+          0,
+          -9.431705101270899e-24,
+          "XYZ"
+        ],
+        "neckPosition": [
+          0,
+          0.4399999976158142,
+          0.10000000149011612
+        ],
+        "neckRotation": [
+          -1.8015161399604862e-10,
+          0.28799999999997916,
+          0,
+          "XYZ"
+        ],
+        "neckWorld": [
+          -1.1990834877608252,
+          1.194999990354473,
+          1.1419053800053527
+        ],
+        "headPosition": [
+          0,
+          0.3779999017715454,
+          0.23500001430511475
+        ],
+        "headRotation": [
+          -3.152653244930851e-11,
+          0.3119999999999774,
+          0,
+          "XYZ"
+        ],
+        "jawPosition": [
+          0,
+          0.06600010395050049,
+          -0.034999996423721313
+        ],
+        "jawRotation": [
+          1.45309716104617e-34,
+          0,
+          0,
+          "XYZ"
+        ],
+        "cervical": {
+          "baseTranslationError": 0,
+          "skullTranslationError": 0,
+          "neckPitch": -1.8015161399604862e-10,
+          "skullPitch": -3.152653244930851e-11,
+          "maxContactPitch": 0.65,
+          "contactMethod": "upper-bill triangle / rail-centre plane"
+        },
+        "contactPoint": [
+          -1.2,
+          1.521884555259018,
+          1.7211307034832513
+        ],
+        "actualArticulation": {
+          "leg": 0,
+          "wing": 0,
+          "tail": 0,
+          "neck": 0,
+          "jaw": 0
+        },
+        "feet": [
+          {
+            "side": "left",
+            "target": [
+              -0.9455477669593808,
+              0.2765148241519928,
+              1.0035708243801975
+            ],
+            "actual": [
+              -0.9455477669593808,
+              0.27651482415199274,
+              1.0035708243801973
+            ],
+            "groundMin": 0.0019999999999998908,
+            "phase": 1,
+            "steps": 45
+          },
+          {
+            "side": "right",
+            "target": [
+              -1.4481195881721494,
+              0.2765148241519928,
+              1.0035708243801997
+            ],
+            "actual": [
+              -1.4481195881721491,
+              0.2765148241519927,
+              1.0035708243801997
+            ],
+            "groundMin": 0.00199999999999987,
+            "phase": 1,
+            "steps": 46
+          }
+        ],
+        "mechanicalStage": "disengaged",
+        "mechanicalPhase": 0
+      },
+      "geometry": {
+        "jawMeshes": [
+          "jaw-head-edge",
+          "jaw-head-plate"
+        ],
+        "neckOwnedMeshes": [
+          "neck-neck-frame",
+          "neck-neck-plate"
+        ],
+        "jawTriangles": 3860,
+        "neckTriangles": 14656
+      },
+      "result": {
+        "kernel": {
+          "toleranceMetres": 0.000001,
+          "barycentricInteriorTolerance": 0.0001,
+          "fixtures": [
+            {
+              "name": "crossing",
+              "expected": "proper-crossing",
+              "actual": "proper-crossing",
+              "points": [
+                [
+                  0.2,
+                  0.2,
+                  0
+                ],
+                [
+                  0.42500000000000004,
+                  0.2,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "separated",
+              "expected": "separated-or-nonintersecting",
+              "actual": "separated-or-nonintersecting",
+              "points": []
+            },
+            {
+              "name": "grazing",
+              "expected": "grazing-or-boundary",
+              "actual": "grazing-or-boundary",
+              "points": [
+                [
+                  0.25,
+                  0.25,
+                  0
+                ]
+              ]
+            },
+            {
+              "name": "coplanar",
+              "expected": "coplanar-overlap-candidate",
+              "actual": "coplanar-overlap-candidate",
+              "points": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0.2,
+                  0.2,
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        "totals": {
+          "possiblePairs": 56572160,
+          "aabbGridCandidates": 54,
+          "aabbOverlapPairs": 0,
+          "properCrossingPairs": 0,
+          "grazingPairs": 0,
+          "coplanarOverlapCandidates": 0,
+          "separatedOrNonintersectingPairs": 0
+        },
+        "meshPairs": [
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 340,
+            "neckTriangles": 6304,
+            "possiblePairs": 2143360,
+            "aabbGridCandidates": 54,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-edge",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 340,
+            "neckTriangles": 8352,
+            "possiblePairs": 2839680,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-frame",
+            "jawTriangles": 3520,
+            "neckTriangles": 6304,
+            "possiblePairs": 22190080,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          },
+          {
+            "jawMesh": "jaw-head-plate",
+            "neckMesh": "neck-neck-plate",
+            "jawTriangles": 3520,
+            "neckTriangles": 8352,
+            "possiblePairs": 29399040,
+            "aabbGridCandidates": 0,
+            "aabbOverlapPairs": 0,
+            "properCrossingPairs": 0,
+            "grazingPairs": 0,
+            "coplanarOverlapCandidates": 0,
+            "separatedOrNonintersectingPairs": 0,
+            "examples": []
+          }
+        ]
+      },
+      "scope": "Strict sampled surface-crossing candidates in this exact reachable pose only. Proper crossing requires edge endpoints to straddle the target plane by more than 1e-6 m and the interpolated hit to lie inside the target triangle by 1e-4 barycentric margin. This detects no penetration volume or force; it may omit real crossings whose segment endpoints only hit target-triangle boundaries, as well as coplanar, contained, or unsampled cases."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "source-unreconstructable",
+  "reports": [
+    {
+      "path": ".local/alignment-limb-study/limb-guard-clearance-c8a7a7e14253.json",
+      "modelSha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3"
+    },
+    {
+      "path": ".local/alignment-limb-study/limb-guard-clearance-81f54eec7c80.json",
+      "modelSha256": "81f54eec7c8034f32a3d626f1b52befb389f06e44203d9820aa6d21dda5f4a3e"
+    }
+  ],
+  "reason": "These earlier reports predate diagnostic-source snapshots and contain no diagnostic script SHA-256 or source path. The script was subsequently edited, and the exact executed bytes for those runs cannot be recovered from the retained local artifacts inspected. Their reports are preserved as historical results; do not treat them as source-verified.",
+  "recoveryCheck": "No prior script copy or output matching the diagnostic was present under the retained .local/alignment-limb-study files or /tmp search. This does not prove no copy exists elsewhere.",
+  "replacement": "Rerun with the current script, which archives its exact source bytes write-once into a fresh per-run audit directory before model/runtime evaluation and records that hash in the resulting receipt.",
+  "candidateStatusNote": "The study01 GLB is a derivative export with export_apply=false and omitted modifier application; it is a failed derivative candidate, not native-matched runtime proof. Study02 has the same known export limitation. Do not use either report as a native or controlling candidate result."
+}
