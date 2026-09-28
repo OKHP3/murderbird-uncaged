@@ -12,11 +12,13 @@ export function createIllustratedExhibit(container, updateMarker) {
   const diagram=container.querySelector('.assembly-diagram');
   const img=container.querySelector('img');
   let open=false,era='builder',separation=0;
-  img.addEventListener('error',()=>{img.hidden=true;container.querySelector('.illustrated-caption').textContent='Exterior preview unavailable. The component descriptions remain available; Retry 3D also retries this image.';});
+  let imageFailed=false;
+  const caption=container.querySelector('.illustrated-caption');
+  img.addEventListener('error',()=>{imageFailed=true;img.hidden=true;caption.textContent='Exterior preview unavailable. The component descriptions remain available; Retry 3D also retries this image.';});
   function update(){
-    if (img.getAttribute('src') !== previews[era]) { img.hidden=false; img.src=previews[era]; }
+    if (img.getAttribute('src') !== previews[era]) { imageFailed=false;img.hidden=false;img.src=previews[era]; }
     img.alt=`${eraNames[era]} MurderBird exterior study, a fixed neutral-light render of the local mechanical model.`;
-    container.querySelector('.illustrated-caption').textContent=`${eraNames[era]} exterior study · fixed rendered view`;
+    caption.textContent=imageFailed?'Exterior preview unavailable. The component descriptions remain available; Retry 3D also retries this image.':`${eraNames[era]} exterior study · fixed rendered view`;
     for(const id of ['beak','joint','shell','drive','power','mind','guard'])updateMarker(id,0,0,false);
     diagram.hidden=!open;
     for(const name of ['drive','power','mind','external','transmission'])diagram.querySelector(`[data-schematic="${name}"]`).style.display=(name==='external'?era==='maker':['drive','transmission'].includes(name)?era==='mechanic':era==='builder')?'':'none';
