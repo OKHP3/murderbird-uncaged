@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "purpose": "In-memory topology and preservation preflight for the V16 orbital-field refit module. This is not a render, fit, collision, motion, or acceptance result.",
+  "baseNative": {
+    "path": "assets/models/whole-silhouette-v16/attempt-02/murderbird-whole-silhouette-v16.blend",
+    "sha256": "11e9cd683a72ba37804c15f9e7c2c0c707538b80f26026acc295506f9264f6f7"
+  },
+  "module": {
+    "path": "scripts/refit-v16-orbital-field.py",
+    "sha256": "712c125bf6bb40f454beebac28e28ff208ede66ac0617e51a540498a044c288a",
+    "status": "uncommitted proposal module; invoked in memory only"
+  },
+  "environment": {
+    "blender": "5.2.1 LTS",
+    "execution": "background, one thread, base native opened read-only; no save or export"
+  },
+  "rejectedInitialProfile": {
+    "status": "rejected before integration",
+    "finding": "The initial absolute-radius scaling profile folded the annular station order. Its scaling pulled some contracted outer stations inside unchanged seat station 1.",
+    "foldedIntervals": 168,
+    "minimumSignedRadialSpacingM": -0.0070859447232277314,
+    "firstObservedFold": {
+      "skin": 0,
+      "segment": 46,
+      "intervalStartStation": 4
+    },
+    "provenanceLimit": "The initial exploratory code version was edited in place before this receipt; no immutable source snapshot or digest for that intermediate version was retained. These are the observed pre-correction run results, not a reproducible run bound to the final module hash."
+  },
+  "correctedProfilePreflight": {
+    "result": "pass for stated in-memory invariants",
+    "method": "For each angular segment, stations 2-6 interpolate monotonically from unchanged station 1 to a contracted outer radius; the paired skins retain their original X separation.",
+    "plates": [
+      {
+        "name": "Forged orbital mounting plate -1",
+        "vertices": 896,
+        "quadFaces": 896,
+        "minimumRadialSpacingM": 0.0017636709686504742,
+        "maximumVertexDisplacementM": 0.020048190309762487
+      },
+      {
+        "name": "Forged orbital mounting plate 1",
+        "vertices": 896,
+        "quadFaces": 896,
+        "minimumRadialSpacingM": 0.0017636709686504742,
+        "maximumVertexDisplacementM": 0.020048190309762487
+      }
+    ],
+    "preservationChecks": {
+      "apertureAndSeatStations0And1LocalCoordinatesExact": true,
+      "all52PivotWorldMatricesUnchanged": true,
+      "allOtherObjectAndCurveSignaturesUnchanged": true,
+      "objectNamesUnchanged": true,
+      "opticBearingAndHousingMeshesUnchanged": true,
+      "materialsUnchanged": true,
+      "newObjects": 0,
+      "changedMeshesExactly": [
+        "Forged orbital mounting plate -1",
+        "Forged orbital mounting plate 1",
+        "Orbital mounting fixing -1 1",
+        "Orbital mounting fixing -1 13",
+        "Orbital mounting fixing -1 3",
+        "Orbital mounting fixing -1 6",
+        "Orbital mounting fixing -1 9",
+        "Orbital mounting fixing 1 1",
+        "Orbital mounting fixing 1 13",
+        "Orbital mounting fixing 1 3",
+        "Orbital mounting fixing 1 6",
+        "Orbital mounting fixing 1 9"
+      ]
+    },
+    "limits": [
+      "The angular profile factors are qualitative construction choices, not recovered source dimensions.",
+      "No visual render, brow or cheek fit, pin support assessment, collision test, or articulated-pose test was run.",
+      "This receipt verifies the module's in-memory invariants against the stated V16 attempt02 native only; it does not validate the later integrated attempt03 artifact."
+    ]
+  }
+}

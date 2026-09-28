@@ -9,8 +9,10 @@ import { layoutMarkers } from './marker-layout.js';
 
 const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
 // Local development opens the latest labeled proposal; production retains V9.
-const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v15-04') : null;
+const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v16-03') : null;
 const reviewModels = import.meta.env.DEV ? {
+  'v16-03': '/assets/models/whole-silhouette-v16/attempt-03/murderbird-whole-silhouette-v16.glb',
+  'v16-02': '/assets/models/whole-silhouette-v16/attempt-02/murderbird-whole-silhouette-v16.glb',
   'v15-04': '/assets/models/whole-character-v15/attempt-04/murderbird-whole-character-v15.glb',
   'v15-03': '/assets/models/whole-character-v15/attempt-03/murderbird-whole-character-v15.glb',
   'v10-01': '/assets/models/uncaged-whole-body-v10/attempt-01/murderbird-whole-body-v10.glb',
