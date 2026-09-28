@@ -1,0 +1,28 @@
+# V7 neck and breast visual review
+
+This review covers only the original V7 native file, SHA256 `a8fccaf024a096678415215029b34cae8270b348da2301b8872a34e72c75ed3f`. The eight neutral Workbench images apply actual controller pose matrices from the pinned runtime packet, SHA256 `874396ede48a63d37d743a1a85ae885a10e614a4461f46c50f3a62744a9e2813`. The original 51 native pivots match the converted runtime matrices with maximum world-matrix error `3.58e-7`. The exact camera matrices, pose states, image hashes, and render settings are in [review-manifest.json](review-manifest.json). No native file was saved.
+
+## What is visible
+
+| Image | Visible finding |
+| --- | --- |
+| [Rest · side](inspection-open-0-separation-0-side.png) | The lower throat course nests tightly into the breast stack; the plate edges read as shingled. No detached outer plate is visible. The crop cuts off the crown. |
+| [Rest · three-quarter](inspection-open-0-separation-0-three-quarter.png) | The internal fork/rail continues through the neck-to-breast joint beneath the plate courses. The crown is cropped, so this does not judge the whole head silhouette. |
+| [Strike · side](advanced-strike-peak-side.png) | The head folds down while the breast stays fixed. The throat moves with the neck and remains visually attached; lower plate edges compress close to the breast. The crown is inside frame. |
+| [Strike · three-quarter](advanced-strike-peak-three-quarter.png) | The curved yoke and layered throat remain connected around the joint. No unmistakable exterior plate-through-plate event is visible. The crown is inside frame. |
+| [Contact · side](advanced-contact-side.png) | The collar-like neck connection remains continuous; its lower course meets the upper breast tightly. No exterior break is apparent. |
+| [Contact · three-quarter](advanced-contact-three-quarter.png) | The same attachment reads from the opposite angle, with the inner fork under the throat. This still cannot adjudicate hidden internal overlap. |
+| [Inspection open · side](inspection-open-1-separation-0-side.png) | The breastplate moves away and exposes inner paneling while the neck stays above it. No detached neck part is visible. The crown is cropped. |
+| [Inspection open · three-quarter](inspection-open-1-separation-0-three-quarter.png) | The opened breast reveals the joint-side frame and internal layering; the neck remains a distinct articulated assembly. The crop cuts the crown and part of the lower torso. |
+
+The close cameras follow the world-space midpoint of the neck and breastplate pivots. They crop the crown and portions of the lower torso in the rest and inspection views. That is camera framing, not evidence of crown geometry clipping. These close-ups are useful for the joint but cannot assess the whole-body silhouette.
+
+The body/neck direction reference is [Candidate 03](../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png), SHA256 `538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633`, explicitly selected for common full-body illustration rather than dimension metrology or internal construction. Its visible neck forms a short, continuous curve from the head into the narrowing breast, with close overlapping courses. Compared with that direction, V7's current neck reads more like a tall open articulated yoke with broad crosswise plates and a visible layered throat stack. The reference supports shaping a compact, continuously curved outer neck envelope; it does not supply measurements or hidden joint design.
+
+## Surface diagnostic context
+
+The existing [native BVH comparison](../neck-shoulder-envelope-study-v1/actual-runtime-clearance-attempt01/native-clearance-comparison.json) uses the same native SHA and pose packet. For V7 it reports `Cervical articulated inner guards` against `Breast inner access shell` and `Breast keel overlapping lamina 0` in the exported-rest sample (542 and 194 triangle-pair candidates). It reports nine guard-to-breast mesh pairs at strike and seven at contact; the frequent pairs remain the inner access shell and keel courses. At open inspection it reports one residual inner-guard/access-shell pair (12 candidates). The diagnostic records BVH pair candidates and sample triangle centers; these are not rendered intersection points or proof of visible exterior plate-through-plate clipping. The reviewed images place the principal rest overlap inside the layered throat/breast junction, so intentional internal underlap remains plausible. The report does not establish continuous clearance.
+
+The six-side-guard study is not in these images. Its existing candidate comparison adds `Study cervical side guard left 1` against `Curved thoracic load rail.001` and `Study cervical side guard right 1` against `Curved thoracic load rail` at rest. Repeating that additive approach would increase bulk and create new conflicts. A bounded next geometry study should reprofile existing neck-owned shell and throat surfaces as one compact curved, shingled sleeve guided by Candidate 03, with a local relief at the inferior/anterior `Cervical articulated inner guards` termination where it meets the breast access shell and keel. Keep the upper curved support, existing flank and throat plates, all 51 pivots, and object ownership; add no guard objects. Recheck the exact strike/contact samples before considering composition. This is a proposal for a native study, not a clearance fix or acceptance result.
+
+The neck study remains a visual geometry review only. It does not certify physical collision safety, full swept clearance, export/runtime appearance, biological likeness, or owner acceptance.

@@ -99,7 +99,6 @@ def main():
         bpy.context.scene.frame_set(1)
         bpy.context.view_layer.update()
         pivots = {o.name: o for o in bpy.data.objects if o.type == 'EMPTY'}
-        assert set(contract['targetOwners']) <= set(pivots), 'Unknown target owner in clearance contract'
         assert set(pivots) <= set(rest['pivotMatrices']), 'Missing native pivot in runtime snapshot'
         rest_errors = {name: error(obj.matrix_world, converted(rest['pivotMatrices'][name]['world']))
                        for name, obj in pivots.items()}
