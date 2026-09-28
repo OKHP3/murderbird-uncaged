@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-09-28T06:21:09.438Z",
+  "modelSha256": "dbc90402e3fe73c150e40ec51a37af2bbed6a474962b69acfd3491dbbb7764eb",
+  "diagnostic": {
+    "path": "assets/audit/alignment-v6/rig-dbc90402e3fe/localize-crossings.mjs",
+    "sha256": "eace5e812fd1165fe2426019a934cfed41e94a9611510167cdf377076b0e690c"
+  },
+  "output": {
+    "path": "assets/audit/alignment-v6/rig-dbc90402e3fe/crossing-localization-detail-v3.json",
+    "sha256": "8b120f3eb7a0e94520947276f392ef90a393e54d139c4c3a749f7c2ab4a529ba"
+  },
+  "inputs": {
+    "validator": "scripts/verify-jaw-neck-clearance.mjs",
+    "validatorSha256": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "neckRecipe": "scripts/alignment-v5-neck.py",
+    "neckRecipeSha256": "8dd7d01c602b02f47125a56b4ec7fe75b90acebd8c846c7fd3466eac7545c19f",
+    "inventory": "assets/models/uncaged-alignment-v6/alignment-inventory.json",
+    "inventorySha256": "954eb16ecd47124ca63b530e395bdd98f8ce66c4211e507c1ac6bb41966a42dc"
+  },
+  "nativeMapping": {
+    "status": "strongly inferred from construction/export ordering, not independently inspected in Blender",
+    "trianglesPerPlate": 464,
+    "mergedTriangleCount": 8352,
+    "orderedSourcePlates": [
+      "Throat formed lamina 1",
+      "Throat formed lamina 2",
+      "Throat formed lamina 3",
+      "Throat formed lamina 4",
+      "Throat formed lamina 5",
+      "Throat formed lamina 6",
+      "Cervical flank lamina -1 1",
+      "Cervical flank lamina 1 1",
+      "Cervical flank lamina -1 2",
+      "Cervical flank lamina 1 2",
+      "Cervical flank lamina -1 3",
+      "Cervical flank lamina 1 3",
+      "Cervical flank lamina -1 4",
+      "Cervical flank lamina 1 4",
+      "Cervical flank lamina -1 5",
+      "Cervical flank lamina 1 5",
+      "Cervical flank lamina -1 6",
+      "Cervical flank lamina 1 6"
+    ],
+    "reason": "Each authored grid plate has 96 front + 96 back + 40 solidify-wall quads, or 464 triangles after triangulation. The exported neck-neck-plate has 8352 triangles (=18*464), and the recipe creates these objects in the listed order before build script groups and joins by scene order. Triangle-index ranges therefore map to native pieces if Blender join preserves that order; not independently confirmed from the .blend in this read-only diagnostic."
+  },
+  "summary": [
+    {
+      "pose": {
+        "pitch": 0,
+        "yaw": -0.35,
+        "jawOpen": 0.32
+      },
+      "contactPointCount": 600,
+      "contactPointBounds": {
+        "min": [
+          -0.104266164184253,
+          1.4629581065777069,
+          0.2995998214366965
+        ],
+        "max": [
+          0.05960014882246501,
+          1.5732285685566498,
+          0.45535674316090446
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": -1.0486450415764172,
+        "max": 0.43816998235673477
+      },
+      "highContactPointsAtOrAboveHeight1_55": {
+        "count": 54,
+        "bounds": {
+          "min": [
+            -0.1033658768613552,
+            1.5504826635773117,
+            0.2995998214366965
+          ],
+          "max": [
+            -0.09102316741257381,
+            1.5732285685566498,
+            0.3232976409861995
+          ]
+        },
+        "sourceAngleRangeRad": {
+          "min": -1.0486450415764172,
+          "max": -0.889375089023639
+        }
+      },
+      "nativePlatePairCounts": {
+        "Throat formed lamina 2": 78,
+        "Throat formed lamina 3": 80,
+        "Cervical flank lamina -1 1": 142
+      }
+    },
+    {
+      "pose": {
+        "pitch": 0,
+        "yaw": 0,
+        "jawOpen": 0.32
+      },
+      "contactPointCount": 188,
+      "contactPointBounds": {
+        "min": [
+          -0.076355483313151,
+          1.4624325966277218,
+          0.39472377393007085
+        ],
+        "max": [
+          0.07606239604335328,
+          1.5014787456009415,
+          0.4570313586090914
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": -0.6013355141159552,
+        "max": 0.6113137857335358
+      },
+      "highContactPointsAtOrAboveHeight1_55": {
+        "count": 0,
+        "bounds": null,
+        "sourceAngleRangeRad": null
+      },
+      "nativePlatePairCounts": {
+        "Throat formed lamina 2": 30,
+        "Throat formed lamina 3": 64
+      }
+    },
+    {
+      "pose": {
+        "pitch": 0,
+        "yaw": 0.35,
+        "jawOpen": 0.32
+      },
+      "contactPointCount": 528,
+      "contactPointBounds": {
+        "min": [
+          -0.056459951084396845,
+          1.4634988941228713,
+          0.2996026839688776
+        ],
+        "max": [
+          0.10424555802817918,
+          1.5731317543827175,
+          0.4544399088700283
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": -0.4032656331517776,
+        "max": 1.0486482256821428
+      },
+      "highContactPointsAtOrAboveHeight1_55": {
+        "count": 62,
+        "bounds": {
+          "min": [
+            0.091025300828192,
+            1.550331986713911,
+            0.2996026839688776
+          ],
+          "max": [
+            0.103342174621689,
+            1.5731317543827175,
+            0.32325977317001997
+          ]
+        },
+        "sourceAngleRangeRad": {
+          "min": 0.8895697327143914,
+          "max": 1.0486482256821428
+        }
+      },
+      "nativePlatePairCounts": {
+        "Throat formed lamina 2": 38,
+        "Throat formed lamina 3": 68,
+        "Cervical flank lamina 1 1": 158
+      }
+    }
+  ]
+}

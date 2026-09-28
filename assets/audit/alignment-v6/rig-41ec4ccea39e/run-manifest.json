@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-09-28T06:06:52.469Z",
+  "gitHead": "947b5ea7d6a944bc2bade9b89dff3e8f9a14446f",
+  "workingTree": "Uncommitted QA checkout; this task changed no validators, app/runtime, or geometry source. Only a frozen model copy and audit receipts were created.",
+  "declaredModel": {
+    "path": "assets/audit/alignment-v6/rig-41ec4ccea39e/model-inputs/v6-second.glb",
+    "bytes": 4385340,
+    "sha256": "41ec4ccea39eab037003ae8a7539c8ad23cd4938c186d65403c3f9abc1ef2a84",
+    "sourcePath": "assets/models/uncaged-alignment-v6/murderbird-alignment-v6.glb",
+    "sourceSnapshotHashesMatched": true
+  },
+  "commands": [
+    {
+      "command": "node scripts/verify-jaw-neck-clearance.mjs --model assets/audit/alignment-v6/rig-41ec4ccea39e/model-inputs/v6-second.glb --expected-sha256 41ec4ccea39eab037003ae8a7539c8ad23cd4938c186d65403c3f9abc1ef2a84 --label v6-second-plates-and-inherited-frames --out assets/audit/alignment-v6/rig-41ec4ccea39e/jaw-neck-structure.json",
+      "exitCode": 0,
+      "result": {
+        "status": "no-sampled-crossings-detected",
+        "sampledPoses": 27,
+        "crossingPoses": 0,
+        "crossingTrianglePairs": 0
+      }
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v6/rig-41ec4ccea39e/model-inputs/v6-second.glb UNCAGED_AUDIT=assets/audit/alignment-v6/rig-41ec4ccea39e/jaw-head-sweep node scripts/verify-alignment-v4-jaw-sweep.mjs",
+      "exitCode": 0,
+      "result": {
+        "status": "no-crossings-detected",
+        "sampledPoses": 33,
+        "crossingPoses": 0
+      }
+    }
+  ],
+  "reports": {
+    "jawNeck": {
+      "path": "assets/audit/alignment-v6/rig-41ec4ccea39e/jaw-neck-structure.json",
+      "sha256": "db46356433b23ed28d742aaf55871cab5d9db643a762233572115eaf4ca98636",
+      "modelSha256": "41ec4ccea39eab037003ae8a7539c8ad23cd4938c186d65403c3f9abc1ef2a84",
+      "scope": "27 direct head-pitch/yaw/jaw stress transforms; neck structural meshes include plate+frame."
+    },
+    "jawHead": {
+      "path": "assets/audit/alignment-v6/rig-41ec4ccea39e/jaw-head-sweep/jaw-sweep.json",
+      "sha256": "98a8e42fa020dabf77f109309e6fce9065e5dcfe6012f242f267b621147ef592",
+      "modelSha256": "41ec4ccea39eab037003ae8a7539c8ad23cd4938c186d65403c3f9abc1ef2a84",
+      "scope": "33 actual-mesh samples from closed through +0.32 rad. Jaw against every mesh beneath the fixed head subtree, excluding moving jaw descendants; includes cheek, optic, bill, crown and internal fixed surfaces. Proper segment/triangle crossings only; coplanar contact, containment, continuous between-sample clearance, forces and all other pairs remain unverified."
+    }
+  },
+  "sourceHashes": {
+    "scripts/verify-jaw-neck-clearance.mjs": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/presence-exhibit.js": "f6ef26db9d12edbc671f0d2bdb62191a4574a1cb0c247c5673f0a63c6ae95e01",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "limits": [
+    "Bounded proper triangle-crossing checks only; no continuous/all-pairs collision proof, coplanar contact, containment, force/contact, or artistic acceptance.",
+    "Jaw-neck diagnostic directly applies head pitch/yaw and jaw opening with neck held at rest; it is not a coupled animation simulation.",
+    "These jaw-specific checks do not test the reported fixed cheek versus enlarged optic overlap; a separate check is needed for that pair.",
+    "No full rig suite, browser, WebGL, render, or artistic acceptance was run in this task."
+  ]
+}

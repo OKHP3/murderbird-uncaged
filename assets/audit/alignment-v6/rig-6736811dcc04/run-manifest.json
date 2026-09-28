@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-09-28T06:23:58.582Z",
+  "gitHead": "947b5ea7d6a944bc2bade9b89dff3e8f9a14446f",
+  "workingTree": "Uncommitted QA snapshot; no runtime, validators, or geometry source modified by this diagnostic run. Only frozen model copy and receipts created.",
+  "declaredModel": {
+    "path": "assets/audit/alignment-v6/rig-6736811dcc04/model-inputs/v6-fourth.glb",
+    "sourcePath": "assets/models/uncaged-alignment-v6/murderbird-alignment-v6.glb",
+    "bytes": 4385336,
+    "sha256": "6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784",
+    "sourceSnapshotHashesMatched": true
+  },
+  "commands": [
+    {
+      "command": "node scripts/verify-jaw-neck-clearance.mjs --model assets/audit/alignment-v6/rig-6736811dcc04/model-inputs/v6-fourth.glb --expected-sha256 6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784 --label v6-fourth-plates-and-inherited-frames --out assets/audit/alignment-v6/rig-6736811dcc04/jaw-neck-structure.json",
+      "exitCode": 1,
+      "result": {
+        "status": "crossings-detected",
+        "sampledPoseCount": 27,
+        "crossingPoseCount": 2,
+        "totalCrossingTrianglePairs": 110,
+        "uniqueIntersectingMeshPairs": [
+          "jaw-head-plate / neck-neck-plate"
+        ]
+      },
+      "failurePoses": [
+        {
+          "pitch": 0,
+          "yaw": -0.35,
+          "jawOpen": 0.32,
+          "crossingTrianglePairs": 52,
+          "meshPairs": {
+            "jaw-head-plate / neck-neck-plate": 52
+          }
+        },
+        {
+          "pitch": 0,
+          "yaw": 0.35,
+          "jawOpen": 0.32,
+          "crossingTrianglePairs": 58,
+          "meshPairs": {
+            "jaw-head-plate / neck-neck-plate": 58
+          }
+        }
+      ]
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v6/rig-6736811dcc04/model-inputs/v6-fourth.glb UNCAGED_AUDIT=assets/audit/alignment-v6/rig-6736811dcc04/jaw-head-sweep node scripts/verify-alignment-v4-jaw-sweep.mjs",
+      "exitCode": 0,
+      "result": "no-crossings-detected"
+    },
+    {
+      "command": "node scripts/verify-optic-clearance.mjs --model assets/audit/alignment-v6/rig-6736811dcc04/model-inputs/v6-fourth.glb --expected-sha256 6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784 --label v6-fourth-fixed-rest-optic --out assets/audit/alignment-v6/optic-clearance-6736811dcc04/optic-clearance.json",
+      "exitCode": 0,
+      "result": {}
+    }
+  ],
+  "reports": {
+    "jawNeck": {
+      "path": "assets/audit/alignment-v6/rig-6736811dcc04/jaw-neck-structure.json",
+      "sha256": "f49e0ee39eea27d930efa5a6b6df9ef738e5b182e07be1d5c70e0e719b721b2b",
+      "modelSha256": "6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784"
+    },
+    "jawHead": {
+      "path": "assets/audit/alignment-v6/rig-6736811dcc04/jaw-head-sweep/jaw-sweep.json",
+      "sha256": "b62bd4b1934153a2f465483d96f4a0c3072346d3ee57d8bf80f0d1f45362ce2e",
+      "modelSha256": "6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784"
+    },
+    "optic": {
+      "path": "assets/audit/alignment-v6/optic-clearance-6736811dcc04/optic-clearance.json",
+      "sha256": "c2c769f00dcdb0b5e01faea48f62714f0d84cb30b97529e9ad793f3e08472a90"
+    }
+  },
+  "sourceHashes": {
+    "scripts/verify-jaw-neck-clearance.mjs": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "scripts/verify-optic-clearance.mjs": "4a1f8bab7621c9f25b9b1158953fda95100b154987ced14622029648e191ae54",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/presence-exhibit.js": "f6ef26db9d12edbc671f0d2bdb62191a4574a1cb0c247c5673f0a63c6ae95e01",
+    "scripts/alignment-v6-head.py": "6f63124bb483140495e2b6be8be3c5b8fdf6d53028b48058520774c7811e77e1",
+    "scripts/alignment-v6-neck.py": "265d7493e744e6c23cd7a1e7b21196ac479599d0c21bf2dfd641e8e4a6348bab",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "limits": [
+    "Proper triangle-crossing checks are bounded samples; no continuous/all-pairs collision proof, coplanar contact, containment, force/contact, or artistic acceptance.",
+    "Jaw-neck uses direct stress transforms with the neck fixed; the yaw±0.35 and jawOpen0.32 combinations are not asserted to occur together in production animation.",
+    "Jaw-head sweeps jaw opening against fixed head descendants, excluding the bearing journal envelope.",
+    "Optic check is fixed-rest Builder active lens versus selected fixed head/crown plates and optic bearings; it reports crossing only and cannot decide intentional bearing-seat adjacency.",
+    "No browser, WebGL, render, full rig suite, or artistic acceptance was run in this task."
+  ]
+}

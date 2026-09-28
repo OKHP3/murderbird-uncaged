@@ -1,0 +1,1093 @@
+{
+  "generatedAt": "2026-09-28T06:09:45.489Z",
+  "label": "v6-third-plates-and-inherited-frames",
+  "gitHead": "947b5ea7d6a944bc2bade9b89dff3e8f9a14446f",
+  "workingTreeSnapshot": "Local QA diagnostic; model/source status is recorded separately by its declared hashes.",
+  "model": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/rig-dbc90402e3fe/model-inputs/v6-third.glb",
+    "bytes": 4385336,
+    "sha256": "dbc90402e3fe73c150e40ec51a37af2bbed6a474962b69acfd3491dbbb7764eb",
+    "expectedSha256": "dbc90402e3fe73c150e40ec51a37af2bbed6a474962b69acfd3491dbbb7764eb"
+  },
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "runtimeHashes": {
+    "src/scene/presence-exhibit.js": "f6ef26db9d12edbc671f0d2bdb62191a4574a1cb0c247c5673f0a63c6ae95e01",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+    "scripts/verify-jaw-neck-clearance.mjs": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380"
+  },
+  "pivotTransforms": {
+    "head": {
+      "parentPath": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head"
+      ],
+      "position": [
+        0,
+        0.3779999017715454,
+        0.23500001430511475
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    "jaw": {
+      "parentPath": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head",
+        "jaw"
+      ],
+      "position": [
+        0,
+        0.06600010395050049,
+        -0.034999996423721313
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    "neck": {
+      "parentPath": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck"
+      ],
+      "position": [
+        0,
+        0.4399999976158142,
+        0.10000000149011612
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    }
+  },
+  "poseMatrix": {
+    "pitches": [
+      0,
+      -0.32,
+      -0.65
+    ],
+    "yaws": [
+      -0.35,
+      0,
+      0.35
+    ],
+    "jawOpenings": [
+      0,
+      0.16,
+      0.32
+    ],
+    "combinationCount": 27,
+    "note": "Stress combinations for clearance sensitivity; not asserted to be simultaneous production-animation poses."
+  },
+  "kernelSelfTest": {
+    "intersectingFixture": "passed",
+    "separatedFixture": "passed"
+  },
+  "comparedMeshes": {
+    "jawDescendantMovingMeshes": [
+      {
+        "name": "jaw-head-edge",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "jaw",
+          "jaw-head-edge"
+        ],
+        "region": "head",
+        "surfaceRole": "edge",
+        "triangleCount": 340
+      },
+      {
+        "name": "jaw-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "jaw",
+          "jaw-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "triangleCount": 3520
+      }
+    ],
+    "neckOwnedMeshesOutsideHeadDescendants": [
+      {
+        "name": "neck-neck-frame",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "neck-neck-frame"
+        ],
+        "region": "neck",
+        "surfaceRole": "frame",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 6304,
+        "modelSpaceBounds": {
+          "min": [
+            -0.16194698214530945,
+            1.25,
+            0.06189877539873123
+          ],
+          "max": [
+            0.16194698214530945,
+            1.6620092391967773,
+            0.42165110260248184
+          ],
+          "size": [
+            0.3238939642906189,
+            0.41200923919677734,
+            0.3597523272037506
+          ]
+        }
+      },
+      {
+        "name": "neck-neck-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "neck-neck-plate"
+        ],
+        "region": "neck",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 8352,
+        "modelSpaceBounds": {
+          "min": [
+            -0.21649016439914703,
+            1.237984538078308,
+            -0.08521383255720139
+          ],
+          "max": [
+            0.213881254196167,
+            1.6443333625793457,
+            0.4573468938469887
+          ],
+          "size": [
+            0.430371418595314,
+            0.4063488245010376,
+            0.5425607264041901
+          ]
+        }
+      }
+    ],
+    "excludedHeadDescendantNeckMeshes": []
+  },
+  "summary": {
+    "status": "crossings-detected",
+    "sampledPoseCount": 27,
+    "crossingPoseCount": 3,
+    "totalCrossingTrianglePairs": 658,
+    "uniqueIntersectingMeshPairs": [
+      "jaw-head-edge / neck-neck-plate",
+      "jaw-head-plate / neck-neck-plate"
+    ]
+  },
+  "samples": [
+    {
+      "pitch": 0,
+      "yaw": -0.35,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": 0,
+      "yaw": -0.35,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 8,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": 0,
+      "yaw": -0.35,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 2239,
+      "crossingTrianglePairs": 300,
+      "intersectingMeshPairs": 2,
+      "meshPairs": {
+        "jaw-head-edge / neck-neck-plate": 20,
+        "jaw-head-plate / neck-neck-plate": 280
+      },
+      "examples": [
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 982,
+          "pointInModelSpace": [
+            -0.04366870301246602,
+            1.4633586013265407,
+            0.445874571115779
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1007,
+          "pointInModelSpace": [
+            -0.04102575273860815,
+            1.4630905990534722,
+            0.44739056425821266
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 214,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1007,
+          "pointInModelSpace": [
+            -0.040726319265238564,
+            1.463077121631548,
+            0.4475567987527369
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 214,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1008,
+          "pointInModelSpace": [
+            -0.03821054108405659,
+            1.462958106577707,
+            0.4489518711753309
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 214,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1009,
+          "pointInModelSpace": [
+            -0.02198365697154789,
+            1.4634232221056722,
+            0.45457685986413227
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 215,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1007,
+          "pointInModelSpace": [
+            -0.040726319265238564,
+            1.463077121631548,
+            0.44755679875273685
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 216,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1010,
+          "pointInModelSpace": [
+            -0.021680685521847362,
+            1.4634640285022045,
+            0.4546382743147619
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 216,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1011,
+          "pointInModelSpace": [
+            -0.0187215031680771,
+            1.4638643218864191,
+            0.4551594166782015
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 217,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1009,
+          "pointInModelSpace": [
+            -0.021983656971547895,
+            1.4634232221056722,
+            0.45457685986413227
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 217,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1010,
+          "pointInModelSpace": [
+            -0.021680685521847362,
+            1.4634640285022045,
+            0.4546382743147619
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 305,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1011,
+          "pointInModelSpace": [
+            -0.0187215031680771,
+            1.4638643218864191,
+            0.4551594166782015
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 306,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 982,
+          "pointInModelSpace": [
+            -0.04366870301246602,
+            1.4633586013265407,
+            0.445874571115779
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 314,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1011,
+          "pointInModelSpace": [
+            -0.018739719143039506,
+            1.4639439337646387,
+            0.4551808525947672
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 982,
+          "pointInModelSpace": [
+            -0.043196356991159784,
+            1.4636755031835653,
+            0.4461587866665701
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 319,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 982,
+          "pointInModelSpace": [
+            -0.041999150425154855,
+            1.4644787215169386,
+            0.44687915840300785
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 319,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 983,
+          "pointInModelSpace": [
+            -0.04063806332142714,
+            1.4653918890070567,
+            0.4476981387763174
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": 0,
+      "yaw": 0,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": 0,
+      "yaw": 0,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": 0,
+      "yaw": 0,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 844,
+      "crossingTrianglePairs": 94,
+      "intersectingMeshPairs": 2,
+      "meshPairs": {
+        "jaw-head-edge / neck-neck-plate": 26,
+        "jaw-head-plate / neck-neck-plate": 68
+      },
+      "examples": [
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 210,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1009,
+          "pointInModelSpace": [
+            -0.023202908932959142,
+            1.4638401088825168,
+            0.4542860166324247
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 210,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1010,
+          "pointInModelSpace": [
+            -0.020355352992241584,
+            1.4634439649140025,
+            0.4548132664321906
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1011,
+          "pointInModelSpace": [
+            -0.019991688844554517,
+            1.4634190355502783,
+            0.45485499474955016
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1012,
+          "pointInModelSpace": [
+            -0.00509913995222024,
+            1.4624325966277218,
+            0.45656189536514913
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1013,
+          "pointInModelSpace": [
+            -1.2035967488390583e-17,
+            1.462441673639223,
+            0.45627484329273116
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 213,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1010,
+          "pointInModelSpace": [
+            -0.020355352992241584,
+            1.4634439649140025,
+            0.4548132664321906
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 213,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1011,
+          "pointInModelSpace": [
+            -0.019991688844554517,
+            1.4634190355502783,
+            0.45485499474955016
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 214,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1013,
+          "pointInModelSpace": [
+            0.0012104946990050339,
+            1.4624924203105045,
+            0.45621752400063953
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 214,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1014,
+          "pointInModelSpace": [
+            0.01192365526340652,
+            1.462917341037453,
+            0.4557029269863961
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 214,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1015,
+          "pointInModelSpace": [
+            0.018557283156191155,
+            1.463642016788082,
+            0.4542203710110702
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 215,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1013,
+          "pointInModelSpace": [
+            0.001210494699005035,
+            1.4624924203105045,
+            0.45621752400063953
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 306,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1015,
+          "pointInModelSpace": [
+            0.018557283156191155,
+            1.463642016788082,
+            0.4542203710110702
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 307,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1009,
+          "pointInModelSpace": [
+            -0.02320290893295914,
+            1.4638401088825168,
+            0.4542860166324247
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 984,
+          "pointInModelSpace": [
+            -0.023132709624277728,
+            1.464436031518284,
+            0.45448349908025126
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 985,
+          "pointInModelSpace": [
+            -0.022288904506810585,
+            1.4652712587066634,
+            0.4547602845214354
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1009,
+          "pointInModelSpace": [
+            -0.023194730057097875,
+            1.463909539441769,
+            0.4543090251841596
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": 0,
+      "yaw": 0.35,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": 0,
+      "yaw": 0.35,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 10,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": 0,
+      "yaw": 0.35,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 2419,
+      "crossingTrianglePairs": 264,
+      "intersectingMeshPairs": 2,
+      "meshPairs": {
+        "jaw-head-edge / neck-neck-plate": 10,
+        "jaw-head-plate / neck-neck-plate": 254
+      },
+      "examples": [
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1015,
+          "pointInModelSpace": [
+            0.027201361637286627,
+            1.4635690577199314,
+            0.4519598641980889
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 212,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1016,
+          "pointInModelSpace": [
+            0.02982572896353014,
+            1.4635180417884879,
+            0.45098389807860717
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 306,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1015,
+          "pointInModelSpace": [
+            0.027201361637286633,
+            1.4635690577199314,
+            0.4519598641980889
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 306,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1016,
+          "pointInModelSpace": [
+            0.029825728963530126,
+            1.4635180417884879,
+            0.4509838980786072
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 306,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1017,
+          "pointInModelSpace": [
+            0.029738735960334266,
+            1.4636755031835653,
+            0.45107120181545063
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1015,
+          "pointInModelSpace": [
+            0.027256547443136568,
+            1.4636755031835653,
+            0.45197727135376864
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 990,
+          "pointInModelSpace": [
+            0.027716984512405125,
+            1.464563619911366,
+            0.4521225061586616
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 991,
+          "pointInModelSpace": [
+            0.02826513907529332,
+            1.4646973018356884,
+            0.45196957407706523
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 992,
+          "pointInModelSpace": [
+            0.02849151302296885,
+            1.4647574454574346,
+            0.45190815844246623
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-edge",
+          "movingTriangle": 315,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 1017,
+          "pointInModelSpace": [
+            0.02973873596033426,
+            1.4636755031835653,
+            0.45107120181545063
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-plate",
+          "movingTriangle": 894,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 586,
+          "pointInModelSpace": [
+            -0.05402323117680959,
+            1.5053712219162416,
+            0.4132477371458554
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-plate",
+          "movingTriangle": 894,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 587,
+          "pointInModelSpace": [
+            -0.0484807601594879,
+            1.5029861919154872,
+            0.42090363188087637
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-plate",
+          "movingTriangle": 899,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 586,
+          "pointInModelSpace": [
+            -0.05402323117680959,
+            1.5053712219162416,
+            0.4132477371458554
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-plate",
+          "movingTriangle": 926,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 588,
+          "pointInModelSpace": [
+            -0.043437148300636906,
+            1.5003010970519268,
+            0.42779188059190865
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-plate",
+          "movingTriangle": 926,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 613,
+          "pointInModelSpace": [
+            -0.042597146467440866,
+            1.4997029980590055,
+            0.4289184556747172
+          ]
+        },
+        {
+          "movingMesh": "jaw-head-plate",
+          "movingTriangle": 931,
+          "fixedMesh": "neck-neck-plate",
+          "fixedTriangle": 587,
+          "pointInModelSpace": [
+            -0.0484807601594879,
+            1.5029861919154872,
+            0.42090363188087637
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": -0.32,
+      "yaw": -0.35,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": -0.35,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": -0.35,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 160,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": 0,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": 0,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": 0,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": 0.35,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 10,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": 0.35,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 10,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.32,
+      "yaw": 0.35,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 176,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": -0.35,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 96,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": -0.35,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 102,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": -0.35,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 113,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": 0,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": 0,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": 0,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 0,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": 0.35,
+      "jawOpen": 0,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 110,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": 0.35,
+      "jawOpen": 0.16,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 110,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    },
+    {
+      "pitch": -0.65,
+      "yaw": 0.35,
+      "jawOpen": 0.32,
+      "movingTriangles": 3860,
+      "fixedTriangles": 14656,
+      "testedCandidatePairs": 125,
+      "crossingTrianglePairs": 0,
+      "intersectingMeshPairs": 0,
+      "meshPairs": {},
+      "examples": []
+    }
+  ],
+  "limits": [
+    "Proper segment/triangle crossings sampled at these 27 discrete poses only; coplanar contact and full containment are not certified.",
+    "Stress pitch/yaw/jaw-opening combinations are not guaranteed to occur simultaneously in the runtime animation.",
+    "No force/contact proof, continuous between-sample clearance, all-pairs collision test, GPU/WebGL rendering, or artistic acceptance.",
+    "Neck comparison includes region=neck structural meshes with surfaceRole plate or frame; this is still pair filtering and excludes non-structural neck objects and head-descendant objects.",
+    "The v5 candidate changes the jaw hinge; runtime sources are hash-recorded for context, but this diagnostic applies transforms directly to the declared GLB nodes."
+  ]
+}

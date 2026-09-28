@@ -1,0 +1,1010 @@
+{
+  "generatedAt": "2026-09-28T06:13:00.292Z",
+  "label": "v6-first-active-optic-vs-fixed-rim",
+  "gitHead": "947b5ea7d6a944bc2bade9b89dff3e8f9a14446f",
+  "model": {
+    "path": "assets/audit/alignment-v6/rig-2b4f05883622/model-inputs/v6-first.glb",
+    "bytes": 4385340,
+    "sha256": "2b4f05883622f180fdbe0d239e40a8653b141c06a0bc6079479fb34a8fce93ef",
+    "expectedSha256": "2b4f05883622f180fdbe0d239e40a8653b141c06a0bc6079479fb34a8fce93ef"
+  },
+  "validatorSha256": "4a1f8bab7621c9f25b9b1158953fda95100b154987ced14622029648e191ae54",
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "scope": "One fixed-rest pose from the declared GLB. Every Builder-only mesh below builder-optics with region=optic and surfaceRole=optic is compared against fixed head/crown meshes with region=head and surfaceRole=plate plus fixed region=optic, surfaceRole=bearing meshes. Moving jaw descendants and passive optic housings/recesses are excluded. Proper segment/triangle crossings only.",
+  "kernelSelfTest": {
+    "positiveCrossingFixture": {
+      "status": "passed",
+      "properCrossingContacts": 1
+    },
+    "separatedNegativeFixture": {
+      "status": "passed",
+      "properCrossingContacts": 0
+    }
+  },
+  "fixedRest": {
+    "head": {
+      "path": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head"
+      ],
+      "position": [
+        0,
+        0.3779999017715454,
+        0.23500001430511475
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    "cranialCover": {
+      "path": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head",
+        "cranial-cover"
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    "builderOptics": {
+      "path": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head",
+        "builder-optics"
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    }
+  },
+  "comparedMeshes": {
+    "activeLensMeshes": [
+      {
+        "name": "builder-optics-optic-optic",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "builder-optics",
+          "builder-optics-optic-optic"
+        ],
+        "region": "optic",
+        "surfaceRole": "optic",
+        "constructionClass": "advanced-system",
+        "exteriorEras": "builder",
+        "triangleCount": 376
+      }
+    ],
+    "fixedHeadCrownPlateAndOpticBearingMeshes": [
+      {
+        "name": "cranial-cover-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "cranial-cover",
+          "cranial-cover-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 37984
+      },
+      {
+        "name": "head-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "head-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 6528
+      },
+      {
+        "name": "head-optic-bearing",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "head-optic-bearing"
+        ],
+        "region": "optic",
+        "surfaceRole": "bearing",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 1024
+      },
+      {
+        "name": "upper-bill-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "upper-bill",
+          "upper-bill-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 11098
+      }
+    ],
+    "excludedPassiveOpticHousingMeshes": [
+      {
+        "name": "head-optic-recess",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "head-optic-recess"
+        ],
+        "reason": "passive housing/recess excluded by scope"
+      }
+    ],
+    "excludedMovingJawMeshes": [
+      {
+        "name": "jaw-head-edge",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "jaw",
+          "jaw-head-edge"
+        ],
+        "reason": "jaw articulation is outside the fixed head/crown comparison scope"
+      },
+      {
+        "name": "jaw-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "jaw",
+          "jaw-head-plate"
+        ],
+        "reason": "jaw articulation is outside the fixed head/crown comparison scope"
+      }
+    ]
+  },
+  "comparison": {
+    "restPoseOnly": true,
+    "movingLensTriangleCount": 376,
+    "fixedTargetTriangleCount": 56634,
+    "testedCandidatePairs": 1690,
+    "crossingTrianglePairs": 138,
+    "exactIntersectingMeshPairs": [
+      {
+        "meshPair": "builder-optics-optic-optic / head-head-plate",
+        "crossingTrianglePairs": 138
+      }
+    ],
+    "examples": [
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 4,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2728,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7480648886892471,
+          0.38908856690055077
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 6,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2594,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7434734545873543,
+          0.36540400803436074
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 6,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2599,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7432397226336946,
+          0.3653430788511729
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 26,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2728,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7481647122269024,
+          0.3890605677412147
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 27,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2594,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7434734545873543,
+          0.36540400803436074
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 37,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2590,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7478922853498262,
+          0.36602541416663303
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 37,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2591,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7487609386444092,
+          0.3661387632037388
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 37,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2594,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7439478380991156,
+          0.36546273095385395
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 37,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2595,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.744264121608031,
+          0.3655018830124112
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 37,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2728,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7483605303646834,
+          0.3890056433880069
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2554,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7523691110090849,
+          0.36664648642048914
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2591,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7487609386444092,
+          0.3661387632037388
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2693,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7502011436369649,
+          0.3884893761278277
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2728,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7487609386444092,
+          0.3888933342524378
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2550,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7564630332679052,
+          0.3671623066612177
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2551,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7564630332679052,
+          0.3671623066612177
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2580,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7567576169967651,
+          0.36788079887628555
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2581,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7567959062181981,
+          0.3677852193373502
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2616,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.755077600479126,
+          0.3728400841355324
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2617,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7553926057890452,
+          0.3719102116172181
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2652,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.753578782081604,
+          0.3779963031411171
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2653,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.754135055709815,
+          0.37608261656052155
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2688,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.752239465713501,
+          0.38327739387750626
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2689,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7530040802092013,
+          0.38026242398217736
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2724,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7511237102389599,
+          0.3882175763534263
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 42,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2725,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.751981888424489,
+          0.38441785775010756
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 63,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2563,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.744288697378299,
+          0.3587582609111867
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 65,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2697,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7462227115270965,
+          0.3853067563751389
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 78,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2563,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.744595137465486,
+          0.35880719481191065
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 79,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2697,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7462326846027962,
+          0.38530431842648344
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 86,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2522,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7459785216502604,
+          0.3590241518391517
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 86,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2523,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7496837819634605,
+          0.3595490622775437
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 86,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2558,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7454342269396634,
+          0.35894118485676696
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 86,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2559,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7455005062550781,
+          0.35895000296722657
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 86,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2563,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7452234967275144,
+          0.35890753439224876
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 86,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2697,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.746252631181714,
+          0.3852994424246643
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2518,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7501324393046227,
+          0.3596229768130383
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2523,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7496837819634605,
+          0.3595490622775437
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2692,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7475421048820832,
+          0.38498422666086657
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2693,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7516024670485473,
+          0.38384078768889046
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2697,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7462950544531795,
+          0.3852890719270621
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2514,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.754887009691826,
+          0.3603002782561374
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2515,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7593860200801699,
+          0.3609304095909219
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2519,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7536225494246596,
+          0.36009945193643844
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2544,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.758634090423584,
+          0.36319664865732193
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2545,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7595418610566185,
+          0.36130664223607317
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2580,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7567576169967651,
+          0.36788079887628555
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2581,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.757165220881776,
+          0.36686331693386287
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2616,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.755077600479126,
+          0.3728400841355324
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2617,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7557226113518176,
+          0.37093605945517455
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2652,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.753578782081604,
+          0.3779963031411171
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2653,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7544290994763632,
+          0.3750710503427225
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2688,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.752239465713501,
+          0.38327739387750626
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2689,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7532667167998892,
+          0.3792268152946772
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2724,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7521485579153027,
+          0.38367990242156574
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 90,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2725,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7522184792296842,
+          0.3833703148283316
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 91,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2515,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7593860200801699,
+          0.3609304095909219
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 91,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2545,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15299999713897705,
+          1.7595418610566185,
+          0.36130664223607317
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 160,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2562,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.1512587430810043,
+          1.7433679103851318,
+          0.3633873537182808
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 160,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2563,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15204917791615213,
+          1.743785252537391,
+          0.3612892402898156
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 161,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2563,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15204917791615213,
+          1.743785252537391,
+          0.3612892402898156
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 162,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2599,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.15049999952316284,
+          1.7432397226336946,
+          0.3653430788511729
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 163,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2562,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.1512587430810043,
+          1.7433679103851318,
+          0.3633873537182808
+        ]
+      },
+      {
+        "activeLensMesh": "builder-optics-optic-optic",
+        "activeLensTriangle": 163,
+        "fixedTargetMesh": "head-head-plate",
+        "fixedTargetTriangle": 2599,
+        "fixedTargetRole": "plate",
+        "pointInModelSpace": [
+          -0.1509016412402702,
+          1.74330880796809,
+          0.3642890629777652
+        ]
+      }
+    ],
+    "interpretation": "Crossings detected and listed for review. Lens/optic-bearing crossings may represent intentional machined-seat adjacency; this report does not classify design intent or automatically mark them as a defect."
+  },
+  "limits": [
+    "Fixed-rest geometry comparison only; no articulation, animation, dynamic clearance, force, or contact simulation.",
+    "Proper segment/triangle crossings only; coplanar contact, shared boundaries, near-clearance distance, and complete containment are not tested.",
+    "All crossings are reported for review. Intentional machined-seat adjacency between active lens and optic bearing is not automatically a failure.",
+    "Passive optic housing/recess meshes are excluded by design; the comparison does not cover every head surface or every possible pair.",
+    "This geometric diagnostic does not establish artistic likeness, exposed-surface quality, final geometry, owner acceptance, or runtime WebGL appearance."
+  ]
+}

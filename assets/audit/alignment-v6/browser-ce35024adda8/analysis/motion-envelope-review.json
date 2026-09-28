@@ -1,0 +1,323 @@
+{
+  "model": {
+    "url": "http://127.0.0.1:5183/assets/models/uncaged-alignment-v6/murderbird-alignment-v6.glb",
+    "declared_sha256": "ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe",
+    "normal_run": {
+      "file": "motion-envelope-normal-speed.json",
+      "sha256": "00840f93e333fd35c01553640370fa5a0c8df521da9769b2d70c3484ba4fe12e",
+      "sample_count": 862,
+      "hidden_samples": 0,
+      "complete": true,
+      "sequence_complete": true,
+      "clock": "Normal browser requestAnimationFrame and performance.now; UI controls with condition waits; no accelerated step",
+      "mp4": {
+        "file": "motion-envelope-normal-speed.mp4",
+        "sha256": "f368603d5558ea92b022a64b4fc2727eb011785f87975c6d3042c9cc7cce0ca9",
+        "bytes": 3725538
+      },
+      "webm": {
+        "file": "motion-envelope-normal-speed.webm",
+        "sha256": "fcbb9bd0f4c9b3063828b54990e741466eba8d133d01768593bb64fc90964423",
+        "bytes": 11510663
+      },
+      "recorder_completion_seconds": 86.1825,
+      "sample_span_seconds": [
+        0.007099999994039536,
+        86.0215
+      ],
+      "sampled_motion_duration_seconds": 86.01440000000596,
+      "mp4_duration_seconds": 85.967
+    },
+    "separate_strike_run": {
+      "file": "visitor-strike-normal-speed.json",
+      "sha256": "bfd1a26b1c556d0986e157f53042944ddcab2d9ebd970a6cee7af8f25b04fef1",
+      "sample_count": 100,
+      "hidden_samples": 0,
+      "complete": true,
+      "sequence_complete": true,
+      "clock": "Normal browser requestAnimationFrame and performance.now; UI controls with condition waits; no accelerated step",
+      "mp4": {
+        "file": "visitor-strike-normal-speed.mp4",
+        "sha256": "ad03d6495935e890ec8277d012f56c30ad9ea98d82d7738c81e709a00167de0f",
+        "bytes": 697703
+      },
+      "webm": {
+        "file": "visitor-strike-normal-speed.webm",
+        "sha256": "fc2973d8dc4d354abfd7957d3c003911fea08eb0b94f0b2ac93a242846f8b7d2",
+        "bytes": 1382594
+      },
+      "recorder_completion_seconds": 9.89419999998808,
+      "sample_span_seconds": [
+        0.007299999997019768,
+        9.87139999999106
+      ],
+      "sampled_motion_duration_seconds": 9.86409999999404,
+      "mp4_duration_seconds": 9.876533
+    }
+  },
+  "findings": {
+    "maker": {
+      "articulation_channels": {
+        "jaw": {
+          "window_sample_count": 23,
+          "active_value_range": [
+            0.3296799539643607,
+            1
+          ],
+          "value_before_next_control_request": 0.0017450012622073797,
+          "next_control_request_seconds": 5.4415
+        },
+        "neck": {
+          "window_sample_count": 23,
+          "active_value_range": [
+            0.29495947813573503,
+            1
+          ],
+          "value_before_next_control_request": 0.0017450012622073807,
+          "next_control_request_seconds": 9.0443
+        },
+        "wing": {
+          "window_sample_count": 23,
+          "active_value_range": [
+            0.2588112775902267,
+            1
+          ],
+          "value_before_next_control_request": 0.0018344693900982888,
+          "next_control_request_seconds": 12.6451
+        },
+        "leg": {
+          "window_sample_count": 23,
+          "active_value_range": [
+            0.29566416625481506,
+            1
+          ],
+          "value_before_next_control_request": 0.001834469390098288,
+          "next_control_request_seconds": 16.2458
+        },
+        "tail": {
+          "window_sample_count": 23,
+          "active_value_range": [
+            0.2591817793182821,
+            1
+          ],
+          "value_before_next_control_request": 0,
+          "next_control_request_seconds": 22.3485
+        }
+      },
+      "later_reset_sample": {
+        "seconds": 23.613,
+        "values": {
+          "jaw": 0.001834,
+          "neck": 0.001834,
+          "leg": 0,
+          "wing": 0,
+          "tail": 0
+        }
+      },
+      "assessment": "All five controls were sampled away from rest and near-zero after release. Tail rotation node values were not exported directly."
+    },
+    "mechanic": {
+      "window_seconds": [
+        25.03,
+        44.04
+      ],
+      "sample_count": 190,
+      "state_counts": {
+        "mechanical-run": 182,
+        "mechanical-settle": 8
+      },
+      "stage_counts": {
+        "load": 45,
+        "release": 79,
+        "settle": 29,
+        "dwell": 29,
+        "disengaged": 8
+      },
+      "observed_headings_radians": [],
+      "post_stop_window_seconds": [
+        45.1,
+        48.1
+      ],
+      "post_stop_sample_count": 30,
+      "post_stop_states": [
+        "mechanical-ready"
+      ],
+      "post_stop_zero_speed": true,
+      "assessment": "The stop request allowed the active cycle to complete and settle; later samples remained mechanical-ready at zero root speed.",
+      "root_yaw_range_radians": [
+        0,
+        1.5707963267948966
+      ],
+      "distinct_sampled_yaw_values_rounded_1e-4": 68,
+      "sampled_window_seconds": [
+        25.11270000000298,
+        44.011
+      ]
+    },
+    "advanced_jump": {
+      "active_samples": 14,
+      "stage_counts": {
+        "load": 3,
+        "airborne": 6,
+        "landing": 3,
+        "recover": 2
+      },
+      "peak_reported_height_m": 0.3597334443981674
+    },
+    "advanced_thrust": {
+      "active_samples": 12,
+      "stage_counts": {
+        "load": 3,
+        "drive": 3,
+        "brace": 1,
+        "recover": 5
+      },
+      "sampled_wing_angle_ranges_radians": {
+        "left_shoulder": [
+          -0.009,
+          0.07
+        ],
+        "left_elbow": [
+          0,
+          0.18
+        ],
+        "right_shoulder": [
+          -0.64,
+          0.0241
+        ],
+        "right_elbow": [
+          0,
+          0.72
+        ]
+      },
+      "limit": "These are sampled joint angles, not continuous swept-volume clearance."
+    },
+    "advanced_claw": {
+      "window_seconds": [
+        53.95,
+        56.37
+      ],
+      "sample_count": 24,
+      "phase_counts": {
+        "scrape": 5,
+        "recovery": 4,
+        "approach": 3,
+        "lift": 3,
+        "contact": 2,
+        "release": 2
+      },
+      "claw_contact_samples": 5,
+      "minimum_distal_tip_y_m": 0.002,
+      "minimum_support_foot_y_m": 0.002,
+      "bill_to_cage_contact_samples": 0
+    },
+    "main_clip_visitor_attempt": {
+      "window_seconds": [
+        56.36,
+        63.87
+      ],
+      "state_counts": {
+        "notice": 7,
+        "approach": 31,
+        "warning": 7,
+        "agitated": 30
+      },
+      "bill_to_cage_contact_samples": 0,
+      "strike_contact_recover_state_counts": {
+        "strike": 0,
+        "contact": 0,
+        "recover": 0
+      },
+      "assessment": "The event was labeled Advanced strike, but the samples show warning/approach and retreat before kinematic upper-bill/rail-plane contact; no strike/contact/recovery is demonstrated in this clip."
+    },
+    "separate_visitor_strike": {
+      "contact_event_seconds": 4.6817,
+      "recovery_event_seconds": 4.8643,
+      "retreat_after_contact_seconds": 4.8644,
+      "sequence_complete_seconds": 9.8678,
+      "state_counts": {
+        "watch": 1,
+        "notice": 5,
+        "approach": 32,
+        "warning": 7,
+        "strike": 2,
+        "contact": 2,
+        "recover": 9,
+        "agitated": 42
+      },
+      "sampled_contact_frames": 2,
+      "contact_point_world_m": [
+        0,
+        1.2191197236990894,
+        2.079000750968537
+      ],
+      "contact_radial_offset_from_rail_center_m": 0.021,
+      "contact_root": {
+        "speed": 0,
+        "x": 0,
+        "yaw": 0,
+        "z": 1.0396489636398405
+      },
+      "cervical_contact": {
+        "neck_pitch_radians": [
+          0.5704956054687501,
+          0.5731636047363283
+        ],
+        "skull_pitch_radians": [
+          -0.6543610197468801,
+          -0.652190215282781
+        ],
+        "base_translation_error_m_max": 0,
+        "skull_translation_error_m_max": 0,
+        "configured_max_contact_pitch_radians": 0.65
+      },
+      "assessment": "The separate clip contains sampled upper-bill/rail-centre-plane kinematic contact, then recovery and retreat. Reported neck/skull pivot translation errors are zero; neck pitch stays below its configured 0.65 rad cap. This does not establish physical bar intersection.",
+      "contact_method": "upper-bill triangle / rail-centre plane kinematic contact telemetry; not proof of physical cage-bar intersection"
+    },
+    "inspection": {
+      "maker": {
+        "samples": 62,
+        "open": 51,
+        "separation_one": 14,
+        "max_separation": 1,
+        "reassembled_closed": 11,
+        "last_sample": {
+          "seconds": 71.31459999999404,
+          "open": 0,
+          "separation": 0
+        }
+      },
+      "mechanic": {
+        "samples": 62,
+        "open": 51,
+        "separation_one": 13,
+        "max_separation": 1,
+        "reassembled_closed": 11,
+        "last_sample": {
+          "seconds": 78.61259999999405,
+          "open": 0,
+          "separation": 0
+        }
+      },
+      "builder": {
+        "samples": 63,
+        "open": 51,
+        "separation_one": 13,
+        "max_separation": 1,
+        "reassembled_closed": 12,
+        "last_sample": {
+          "seconds": 86.011,
+          "open": 0,
+          "separation": 0
+        }
+      }
+    }
+  },
+  "limits": [
+    "Discrete samples do not prove every intermediate frame or input ordering.",
+    "No exhaustive collision/self-intersection, force, structural durability, or physical realism proof.",
+    "Visual quality and likeness remain separate from this motion telemetry review.",
+    "Separate contact evidence covers only the sampled center-rail kinematic contact scenario; it does not prove physical bar intersection.",
+    "Maker tail articulation is evidenced by channel telemetry and runtime mapping, not a direct node rotation measurement in this clip."
+  ]
+}

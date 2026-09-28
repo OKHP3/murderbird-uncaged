@@ -1,5 +1,7 @@
 # Correction v2 — accountable backlog
 
+> Current continuation: the sixth v6 head/neck candidate and exact-model evidence are summarized in [alignment-v6-review.md](alignment-v6-review.md). The original v2 rows below remain a stage-history record; the continuation table at the end records later progress.
+
 The frozen inspector assessed `4b1c726f5d9bbd1ba1048f89049a5b422001c506`, model `3ec668b0…baacdc5`. Its scores remain historical. This work starts from that commit on `codex/neutral-correction-v2`; the public release is not replaced. Source/reference ownership is in the [integration contract](correction-v2-integration-contract.md) and [feature packet](correction-v2-reference-packet.md). The current neutral model and generated parts/pivots are recorded in [its inventory](../assets/models/uncaged-neutral-v2/neutral-inventory.json).
 
 No finding below is closed solely by implementation or an automated pass. The [neutral review](../assets/audit/neutral-v2/neutral-review.html) carries visible evidence. Stage B is a review gate before dependent surface finishing.
@@ -22,3 +24,22 @@ No finding below is closed solely by implementation or an automated pass. The [n
 F01–F04 implementation does not make any era a visual twin. Each era requires its own likeness decision. F05/F06 remain dependent on the requested neutral review. V10's chronology and Maker/Mechanic V12 scope remain owner decisions in the packet. F07's named action and F08's recordings cannot be inferred from the new mesh or unit tests.
 
 The PRD T01–T18 definitions and proposed 50/18/12/8/6/6 weights remain unchanged. No new full index is claimed during Stage B. Physical mobile/thermal, human screen reader, audible listening/loop review and continuous human acting acceptance remain unavailable/not performed here. A local built preview is not CI, live deployment or owner acceptance.
+
+## V6 continuation — local neutral candidate
+
+Model SHA-256 `ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe`; [current gallery](../assets/audit/alignment-v6/index.html). Original priorities, PRD criteria, reference scopes and acceptance policy remain unchanged. This table supersedes only stale progress statements, not the frozen inspector results.
+
+| Finding | Current disposition | Evidence and remaining requirement |
+|---|---|---|
+| F01 | OPEN | V5 body retained; v6 adds a local jaw-clearance pocket while retaining the neck support and posterior contour. Neck layer hierarchy and whole-body likeness still need review. |
+| F02 | OPEN | Larger seated primary optic, lowered fixed cheek and deeper mandible; sampled jaw/head, jaw/neck and optic crossings clear. Crown sweep experiments were rejected and the v5 roof restored. No defining-feature likeness pass. |
+| F03 | OPEN | V5 mantle retained, with bounded v6 thrust and restricted-left travel evidence. Full reference-supported coverage and bilateral appearance remain review items. |
+| F04 | OPEN | Inherited limbs remain selected; separate regional guard/talon work is not integrated or credited to v6. |
+| F05 | GATED | Neutral regional covering exists; final hierarchy, overlap and edge refinement depend on structural review. |
+| F06 | GATED | No material integration in this candidate. Separate surface experiments remain proposals. |
+| F07 | IMPLEMENTED, bounded retest | Named articulated claw scrape is recorded on this model with contact and recovery; tests and telemetry do not certify force, complete collision freedom or artistic acceptance. |
+| F08 | IMPLEMENTED, artistic review OPEN | Two fresh uncut 120-second no-input recordings and synchronized analysis are present. Alternate seed is an explicit development probe; continuous human acting acceptance remains outstanding. |
+| F09 | PRIOR scoped evidence retained | Existing label/layout corrections unchanged. V6 captures cover open/exploded/reassembled states, not a new complete accessibility/device matrix. |
+| F10 | TARGETED CHECKS PASS | Local build inventory/hash boundary and the isolated unexpected-output negative fixture pass. No fixed permanent output count replaces the retired assumption. No remote publication claimed. |
+
+See the current review for versioned model/source identities, rejected iterations, finite test scopes, browser footage, and remaining owner decisions. No new per-era score or full acceptance index is asserted.

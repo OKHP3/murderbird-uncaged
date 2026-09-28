@@ -1,0 +1,236 @@
+{
+  "generatedAt": "2026-09-28T06:28:08.579Z",
+  "label": "v6-fifth-fixed-rest-optic",
+  "gitHead": "947b5ea7d6a944bc2bade9b89dff3e8f9a14446f",
+  "model": {
+    "path": "assets/audit/alignment-v6/rig-ab8103318d9b/model-inputs/v6-fifth.glb",
+    "bytes": 4385332,
+    "sha256": "ab8103318d9b3a20c6240c8bc8bca8fef8b9831db449f022b2c599d3f8a4cd4b",
+    "expectedSha256": "ab8103318d9b3a20c6240c8bc8bca8fef8b9831db449f022b2c599d3f8a4cd4b"
+  },
+  "validatorSha256": "4a1f8bab7621c9f25b9b1158953fda95100b154987ced14622029648e191ae54",
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "scope": "One fixed-rest pose from the declared GLB. Every Builder-only mesh below builder-optics with region=optic and surfaceRole=optic is compared against fixed head/crown meshes with region=head and surfaceRole=plate plus fixed region=optic, surfaceRole=bearing meshes. Moving jaw descendants and passive optic housings/recesses are excluded. Proper segment/triangle crossings only.",
+  "kernelSelfTest": {
+    "positiveCrossingFixture": {
+      "status": "passed",
+      "properCrossingContacts": 1
+    },
+    "separatedNegativeFixture": {
+      "status": "passed",
+      "properCrossingContacts": 0
+    }
+  },
+  "fixedRest": {
+    "head": {
+      "path": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head"
+      ],
+      "position": [
+        0,
+        0.3779999017715454,
+        0.23500001430511475
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    "cranialCover": {
+      "path": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head",
+        "cranial-cover"
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    },
+    "builderOptics": {
+      "path": [
+        "Scene",
+        "murderbird",
+        "body",
+        "neck",
+        "head",
+        "builder-optics"
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ]
+    }
+  },
+  "comparedMeshes": {
+    "activeLensMeshes": [
+      {
+        "name": "builder-optics-optic-optic",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "builder-optics",
+          "builder-optics-optic-optic"
+        ],
+        "region": "optic",
+        "surfaceRole": "optic",
+        "constructionClass": "advanced-system",
+        "exteriorEras": "builder",
+        "triangleCount": 376
+      }
+    ],
+    "fixedHeadCrownPlateAndOpticBearingMeshes": [
+      {
+        "name": "cranial-cover-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "cranial-cover",
+          "cranial-cover-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 37984
+      },
+      {
+        "name": "head-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "head-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 6528
+      },
+      {
+        "name": "head-optic-bearing",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "head-optic-bearing"
+        ],
+        "region": "optic",
+        "surfaceRole": "bearing",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 1024
+      },
+      {
+        "name": "upper-bill-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "upper-bill",
+          "upper-bill-head-plate"
+        ],
+        "region": "head",
+        "surfaceRole": "plate",
+        "exteriorEras": "maker,mechanic,builder",
+        "triangleCount": 11098
+      }
+    ],
+    "excludedPassiveOpticHousingMeshes": [
+      {
+        "name": "head-optic-recess",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "head-optic-recess"
+        ],
+        "reason": "passive housing/recess excluded by scope"
+      }
+    ],
+    "excludedMovingJawMeshes": [
+      {
+        "name": "jaw-head-edge",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "jaw",
+          "jaw-head-edge"
+        ],
+        "reason": "jaw articulation is outside the fixed head/crown comparison scope"
+      },
+      {
+        "name": "jaw-head-plate",
+        "parentPath": [
+          "Scene",
+          "murderbird",
+          "body",
+          "neck",
+          "head",
+          "jaw",
+          "jaw-head-plate"
+        ],
+        "reason": "jaw articulation is outside the fixed head/crown comparison scope"
+      }
+    ]
+  },
+  "comparison": {
+    "restPoseOnly": true,
+    "movingLensTriangleCount": 376,
+    "fixedTargetTriangleCount": 56634,
+    "testedCandidatePairs": 1273,
+    "crossingTrianglePairs": 0,
+    "exactIntersectingMeshPairs": [],
+    "examples": [],
+    "interpretation": "No proper crossings detected in this selected fixed-rest mesh comparison. This does not establish a clearance gap or confirm artistic fit."
+  },
+  "limits": [
+    "Fixed-rest geometry comparison only; no articulation, animation, dynamic clearance, force, or contact simulation.",
+    "Proper segment/triangle crossings only; coplanar contact, shared boundaries, near-clearance distance, and complete containment are not tested.",
+    "All crossings are reported for review. Intentional machined-seat adjacency between active lens and optic bearing is not automatically a failure.",
+    "Passive optic housing/recess meshes are excluded by design; the comparison does not cover every head surface or every possible pair.",
+    "This geometric diagnostic does not establish artistic likeness, exposed-surface quality, final geometry, owner acceptance, or runtime WebGL appearance."
+  ]
+}

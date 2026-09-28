@@ -1,0 +1,665 @@
+{
+  "generatedAt": "2026-09-28T06:40:33.667Z",
+  "source": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/browser-ce35024adda8/autonomy-default-927.json",
+    "sha256": "c97bef88d743f7970f2e6f0a6b1237f95f8fa3db28ca8e815ceea38dda60ae19",
+    "bytes": 6269308,
+    "run": "default-seed-927",
+    "modelUrl": "http://127.0.0.1:5183/assets/models/uncaged-alignment-v6/murderbird-alignment-v6.glb",
+    "declaredModelSha256": "ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe"
+  },
+  "analyzer": {
+    "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/browser-ce35024adda8/analysis/analyze-autonomy-run.mjs",
+    "sha256": "9d24e2eb24acfd081e27019a71219859fce2ceb5c269c79882948e193ef98fbb"
+  },
+  "capture": {
+    "complete": true,
+    "durationSeconds": 120.23059999999404,
+    "sampleCount": 1202,
+    "eventTransitionCount": 61,
+    "requestedFps": 30,
+    "canvas": {
+      "height": 648,
+      "width": 856
+    },
+    "mime": "video/webm;codecs=vp9",
+    "hiddenSamples": 0,
+    "clock": "performance.now real time; no accelerated step or user controls during recording",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+    "softwareRenderer": false
+  },
+  "plannedSchedule": {
+    "actionFamilySampleCounts": {
+      "claw-scrape": 138,
+      "edge-probe": 506,
+      "rail-press": 391,
+      "seam-rattle": 167
+    },
+    "actionFamilySeconds": {
+      "rail-press": 39.104299999997025,
+      "claw-scrape": 13.80029999999702,
+      "edge-probe": 50.40069999998808,
+      "seam-rattle": 16.70140000000596
+    },
+    "beatSampleCounts": {
+      "back-corner-right": 310,
+      "cross-left-to-center": 167,
+      "cross-right-to-center": 184,
+      "front-left-floor-scrape": 138,
+      "left-sweep": 196,
+      "right-sweep": 207
+    },
+    "familyBeatIntervals": [
+      {
+        "key": [
+          "rail-press",
+          "cross-right-to-center"
+        ],
+        "startSeconds": 0.0075,
+        "endSeconds": 18.41189999999106,
+        "durationSeconds": 18.40439999999106,
+        "sampleCount": 184,
+        "states": [
+          "watch",
+          "pace",
+          "boundary",
+          "cage-test",
+          "recover",
+          "agitated",
+          "settle"
+        ],
+        "contactTrueSamples": 9,
+        "cageActionSamples": 18,
+        "clawStages": {},
+        "powerMoveSamples": 0
+      },
+      {
+        "key": [
+          "claw-scrape",
+          "front-left-floor-scrape"
+        ],
+        "startSeconds": 18.41189999999106,
+        "endSeconds": 32.21219999998808,
+        "durationSeconds": 13.80029999999702,
+        "sampleCount": 138,
+        "states": [
+          "watch",
+          "pace",
+          "boundary",
+          "claw-scrape",
+          "settle"
+        ],
+        "contactTrueSamples": 0,
+        "cageActionSamples": 0,
+        "clawStages": {
+          "approach": 3,
+          "contact": 2,
+          "lift": 3,
+          "recovery": 4,
+          "release": 2,
+          "scrape": 5
+        },
+        "powerMoveSamples": 0
+      },
+      {
+        "key": [
+          "edge-probe",
+          "back-corner-right"
+        ],
+        "startSeconds": 32.21219999998808,
+        "endSeconds": 57.21169999998808,
+        "durationSeconds": 24.999499999999998,
+        "sampleCount": 250,
+        "states": [
+          "watch",
+          "pace",
+          "boundary",
+          "cage-test",
+          "recover",
+          "agitated",
+          "settle"
+        ],
+        "contactTrueSamples": 4,
+        "cageActionSamples": 20,
+        "clawStages": {},
+        "powerMoveSamples": 0
+      },
+      {
+        "key": [
+          "rail-press",
+          "right-sweep"
+        ],
+        "startSeconds": 57.21169999998808,
+        "endSeconds": 77.91159999999404,
+        "durationSeconds": 20.69990000000596,
+        "sampleCount": 207,
+        "states": [
+          "watch",
+          "pace",
+          "boundary",
+          "cage-test",
+          "recover",
+          "agitated",
+          "settle"
+        ],
+        "contactTrueSamples": 10,
+        "cageActionSamples": 19,
+        "clawStages": {},
+        "powerMoveSamples": 0
+      },
+      {
+        "key": [
+          "edge-probe",
+          "left-sweep"
+        ],
+        "startSeconds": 77.91159999999404,
+        "endSeconds": 97.51069999998808,
+        "durationSeconds": 19.59909999999404,
+        "sampleCount": 196,
+        "states": [
+          "watch",
+          "pace",
+          "boundary",
+          "cage-test",
+          "recover",
+          "agitated",
+          "settle"
+        ],
+        "contactTrueSamples": 4,
+        "cageActionSamples": 17,
+        "clawStages": {},
+        "powerMoveSamples": 0
+      },
+      {
+        "key": [
+          "seam-rattle",
+          "cross-left-to-center"
+        ],
+        "startSeconds": 97.51069999998808,
+        "endSeconds": 114.21209999999404,
+        "durationSeconds": 16.70140000000596,
+        "sampleCount": 167,
+        "states": [
+          "watch",
+          "pace",
+          "boundary",
+          "cage-test",
+          "recover",
+          "agitated",
+          "settle"
+        ],
+        "contactTrueSamples": 6,
+        "cageActionSamples": 18,
+        "clawStages": {},
+        "powerMoveSamples": 0
+      },
+      {
+        "key": [
+          "edge-probe",
+          "back-corner-right"
+        ],
+        "startSeconds": 114.21209999999404,
+        "endSeconds": 120.01419999998808,
+        "durationSeconds": 5.8020999999940415,
+        "sampleCount": 60,
+        "states": [
+          "watch",
+          "pace"
+        ],
+        "contactTrueSamples": 0,
+        "cageActionSamples": 0,
+        "clawStages": {},
+        "powerMoveSamples": 0
+      }
+    ]
+  },
+  "observedBehavior": {
+    "stateSampleCounts": {
+      "agitated": 183,
+      "boundary": 351,
+      "cage-test": 102,
+      "claw-scrape": 19,
+      "pace": 327,
+      "recover": 52,
+      "settle": 26,
+      "watch": 142
+    },
+    "stateSeconds": {
+      "watch": 14.208300000011926,
+      "pace": 32.502299999982114,
+      "boundary": 35.09899999999999,
+      "cage-test": 10.201200000017892,
+      "recover": 5.197499999985096,
+      "agitated": 18.301700000003,
+      "settle": 2.599099999979124,
+      "claw-scrape": 1.8976000000089392
+    },
+    "contactTrueSamples": 33,
+    "contactTrueEvents": 7,
+    "contactIntervals": [
+      {
+        "startSeconds": 11.6135,
+        "endSeconds": 12.51409999999404,
+        "durationSeconds": 0.9005999999940393,
+        "sampleCount": 9,
+        "actionFamily": "rail-press",
+        "beatId": "cross-right-to-center",
+        "state": "cage-test",
+        "tipStart": [
+          -0.00007336884466340073,
+          1.205382163194184,
+          2.0754285673428416
+        ],
+        "tipEnd": [
+          0.0021567602090887712,
+          1.20676834323572,
+          2.078074520094193
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": 0.0028366672207243114,
+          "yaw": 0,
+          "z": 1.0408361665676709
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": 0.0028366672207243114,
+          "yaw": 0,
+          "z": 1.0408361665676709
+        }
+      },
+      {
+        "startSeconds": 50.21589999999106,
+        "endSeconds": 50.61129999999702,
+        "durationSeconds": 0.39540000000596365,
+        "sampleCount": 4,
+        "actionFamily": "edge-probe",
+        "beatId": "back-corner-right",
+        "state": "cage-test",
+        "tipStart": [
+          -1.1949977215638543,
+          1.2158876735611577,
+          2.0801567076788987
+        ],
+        "tipEnd": [
+          -1.1966492550661312,
+          1.223596463949811,
+          2.0804597279818604
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": -1.1963119111520462,
+          "yaw": 0,
+          "z": 1.0426779928546446
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": -1.1963119111520462,
+          "yaw": 0,
+          "z": 1.0426779928546446
+        }
+      },
+      {
+        "startSeconds": 71.41189999999106,
+        "endSeconds": 72.41139999999106,
+        "durationSeconds": 0.9994999999999976,
+        "sampleCount": 10,
+        "actionFamily": "rail-press",
+        "beatId": "right-sweep",
+        "state": "cage-test",
+        "tipStart": [
+          1.1980888324125043,
+          1.206212608820106,
+          2.073642779021624
+        ],
+        "tipEnd": [
+          1.200275570175794,
+          1.2097861574732365,
+          2.0712076112419635
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": 1.2003983517017869,
+          "yaw": 0,
+          "z": 1.0396123243405366
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": 1.2003983517017869,
+          "yaw": 0,
+          "z": 1.0396123243405366
+        }
+      },
+      {
+        "startSeconds": 91.51069999998808,
+        "endSeconds": 91.91059999999403,
+        "durationSeconds": 0.3999000000059567,
+        "sampleCount": 4,
+        "actionFamily": "edge-probe",
+        "beatId": "left-sweep",
+        "state": "cage-test",
+        "tipStart": [
+          -1.205715876329979,
+          1.2074948293067085,
+          2.081401347989005
+        ],
+        "tipEnd": [
+          -1.201509944850205,
+          1.2155774885279775,
+          2.0757736188909677
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": -1.2003971690872903,
+          "yaw": 0,
+          "z": 1.0396226268816235
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": -1.2003971690872903,
+          "yaw": 0,
+          "z": 1.0396226268816235
+        }
+      },
+      {
+        "startSeconds": 107.81119999998808,
+        "endSeconds": 108.01069999998808,
+        "durationSeconds": 0.19950000000000045,
+        "sampleCount": 2,
+        "actionFamily": "seam-rattle",
+        "beatId": "cross-left-to-center",
+        "state": "cage-test",
+        "tipStart": [
+          0.0018599273238081755,
+          1.2217506302511552,
+          2.0738015889456847
+        ],
+        "tipEnd": [
+          0.00012703279991108226,
+          1.2233725875679304,
+          2.078559712847623
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": -0.0026700026861999357,
+          "yaw": 0,
+          "z": 1.0410392761383584
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": -0.0026700026861999357,
+          "yaw": 0,
+          "z": 1.0410392761383584
+        }
+      },
+      {
+        "startSeconds": 108.41159999999404,
+        "endSeconds": 108.61109999999404,
+        "durationSeconds": 0.19950000000000045,
+        "sampleCount": 2,
+        "actionFamily": "seam-rattle",
+        "beatId": "cross-left-to-center",
+        "state": "cage-test",
+        "tipStart": [
+          -0.002040115086734626,
+          1.219123420395975,
+          2.075677537525656
+        ],
+        "tipEnd": [
+          -0.002086532129202639,
+          1.218710173279575,
+          2.0792578736135976
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": -0.0026700026861999357,
+          "yaw": 0,
+          "z": 1.0410392761383584
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": -0.0026700026861999357,
+          "yaw": 0,
+          "z": 1.0410392761383584
+        }
+      },
+      {
+        "startSeconds": 109.01139999999106,
+        "endSeconds": 109.21079999999702,
+        "durationSeconds": 0.1994000000059657,
+        "sampleCount": 2,
+        "actionFamily": "seam-rattle",
+        "beatId": "cross-left-to-center",
+        "state": "cage-test",
+        "tipStart": [
+          -0.002106610664142045,
+          1.217037935899152,
+          2.0771593338917347
+        ],
+        "tipEnd": [
+          -0.0021058543370058537,
+          1.216029732627628,
+          2.0778725856443594
+        ],
+        "rootStart": {
+          "speed": 0,
+          "x": -0.0026700026861999357,
+          "yaw": 0,
+          "z": 1.0410392761383584
+        },
+        "rootEnd": {
+          "speed": 0,
+          "x": -0.0026700026861999357,
+          "yaw": 0,
+          "z": 1.0410392761383584
+        }
+      }
+    ],
+    "nonNullActionSamples": {
+      "cageAction": 92,
+      "clawAction": 19,
+      "powerMove": 0
+    },
+    "clawStageSampleCounts": {
+      "approach": 3,
+      "contact": 2,
+      "lift": 3,
+      "recovery": 4,
+      "release": 2,
+      "scrape": 5
+    },
+    "cageFamilySampleCounts": {
+      "edge-probe": 37,
+      "rail-press": 37,
+      "seam-rattle": 18
+    },
+    "powerMoveLabels": {},
+    "routeKindSampleCounts": {
+      "corner-check": 310,
+      "cross-inward": 351,
+      "left-sweep": 196,
+      "low-floor-probe": 138,
+      "right-sweep": 207
+    },
+    "recoveryStyleSampleCounts": {
+      "hold-low-then-turn": 207,
+      "lift-back-and-replant": 138,
+      "recenter-and-reorient": 477,
+      "step-back-and-look-up": 380
+    },
+    "rootMotion": {
+      "x": {
+        "min": -1.346702235835611,
+        "p05": -1.206306734660616,
+        "median": -0.0026700026861999357,
+        "p95": 1.3145716015924307,
+        "max": 1.3467595880149308
+      },
+      "z": {
+        "min": -0.41813861009030934,
+        "p05": -0.28532697685394937,
+        "median": 1.0337927055490108,
+        "p95": 1.0426779928546446,
+        "max": 1.0426779928546446
+      },
+      "yaw": {
+        "min": -2.5481399388232773,
+        "p05": -2.0906048319827852,
+        "median": 0,
+        "p95": 2.0922021432925133,
+        "max": 2.4188094888369154
+      },
+      "speed": {
+        "min": 0,
+        "p05": 0,
+        "median": 0,
+        "p95": 0.8043421277889118,
+        "max": 0.9000000000000002
+      },
+      "pathLengthXZ": 21.328959972568487
+    },
+    "tipMotion": {
+      "x": {
+        "min": -2.0181737241456044,
+        "p05": -1.3119599508361992,
+        "median": -0.07564280406333926,
+        "p95": 1.632980260294236,
+        "max": 2.0224873038243487
+      },
+      "height": {
+        "min": 1.204737115912998,
+        "p05": 1.4350765705448925,
+        "median": 1.5162595583790444,
+        "p95": 1.5213285508385876,
+        "max": 1.5844607925544278
+      },
+      "forward": {
+        "min": -0.5222809635051858,
+        "p05": -0.16981397667207793,
+        "median": 1.522518132310528,
+        "p95": 1.8362104818396665,
+        "max": 2.081401347989005
+      }
+    },
+    "feet": {
+      "sideSamples": 2404,
+      "kneeAngle": {
+        "min": -0.5812342279041651,
+        "p05": 0.28230939058123716,
+        "median": 0.4258119329884257,
+        "p95": 0.8811046017904964,
+        "max": 1.0805046295036134
+      },
+      "stepCounter": {
+        "min": 0,
+        "p05": 4,
+        "median": 46,
+        "p95": 91,
+        "max": 97
+      },
+      "maxFootError": {
+        "min": 7.850462293418876e-17,
+        "p05": 4.4256872386577647e-16,
+        "median": 6.661338147750939e-16,
+        "p95": 7.021666937153402e-16,
+        "max": 7.021666937153402e-16
+      }
+    },
+    "wingAngleRanges": {
+      "leftShoulder": {
+        "min": -0.009892703182725305,
+        "p05": -0.007251557183168913,
+        "median": 0.0003053377883291927,
+        "p95": 0.012254319174816822,
+        "max": 0.02991176148981411
+      },
+      "leftElbow": {
+        "min": 0,
+        "p05": 0,
+        "median": 2.926010464855559e-19,
+        "p95": 0.03380811772661933,
+        "max": 0.08277142421942563
+      },
+      "rightShoulder": {
+        "min": -0.11031017932024854,
+        "p05": -0.045151869289947126,
+        "median": -0.0025968512553857957,
+        "p95": 0.01934571211583245,
+        "max": 0.026710435562306133
+      },
+      "rightElbow": {
+        "min": 0,
+        "p05": 0,
+        "median": 6.17713320358396e-19,
+        "p95": 0.0713726929784186,
+        "max": 0.1747396733521208
+      }
+    }
+  },
+  "visibilityAndPerformance": {
+    "hiddenSampleCount": 0,
+    "fpsP05": {
+      "min": 83.33333333333333,
+      "p05": 86.20689655168088,
+      "median": 94.33962264145764,
+      "p95": 99.0099009900776,
+      "max": 100
+    },
+    "fpsP50": {
+      "min": 100,
+      "p05": 100,
+      "median": 100,
+      "p95": 100,
+      "max": 100
+    },
+    "frameMsP50": {
+      "min": 10,
+      "p05": 10,
+      "median": 10,
+      "p95": 10,
+      "max": 10
+    },
+    "frameMsP95": {
+      "min": 10,
+      "p05": 10.100000000002185,
+      "median": 10.600000000002185,
+      "p95": 11.60000000000582,
+      "max": 12
+    },
+    "drawCalls": {
+      "min": 316,
+      "p05": 316,
+      "median": 316,
+      "p95": 316,
+      "max": 316
+    },
+    "triangles": {
+      "min": 468124,
+      "p05": 468124,
+      "median": 468124,
+      "p95": 468124,
+      "max": 468124
+    },
+    "geometries": {
+      "min": 188,
+      "p05": 188,
+      "median": 188,
+      "p95": 188,
+      "max": 188
+    },
+    "gpuTextures": {
+      "min": 4,
+      "p05": 4,
+      "median": 4,
+      "p95": 4,
+      "max": 4
+    }
+  },
+  "interpretationLimits": [
+    "actionFamily and beatId are planned schedule labels from snapshot telemetry, not proof that the named action completed.",
+    "Observed completion evidence is reported separately as nonzero kinematic change, contact flags and explicit action stages; a contact flag is telemetry, not independent physical validation.",
+    "No input was sent; this is one 120-second unattended run with no hidden samples.",
+    "Performance values are browser-reported descriptive statistics on this captured device/session, not a cross-device guarantee.",
+    "No artistic acceptance or continuous human review is claimed."
+  ]
+}

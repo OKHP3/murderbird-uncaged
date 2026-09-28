@@ -1,0 +1,530 @@
+{
+  "generatedAt": "2026-09-28T06:25:00.223Z",
+  "model": {
+    "path": "assets/audit/alignment-v6/rig-6736811dcc04/model-inputs/v6-fourth.glb",
+    "sha256": "6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784",
+    "bytes": 4385336
+  },
+  "inputs": {
+    "validator": "scripts/verify-jaw-neck-clearance.mjs",
+    "validatorSha256": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "neckRecipe": "scripts/alignment-v6-neck.py",
+    "neckRecipeSha256": "137cd8815ec7543654de5e1f37db7bcdce5b68c3db35961d239f942378962666",
+    "inventory": "assets/models/uncaged-alignment-v6/alignment-inventory.json",
+    "inventorySha256": "954eb16ecd47124ca63b530e395bdd98f8ce66c4211e507c1ac6bb41966a42dc"
+  },
+  "method": "Diagnostic replay of validator triangle generation, fixed neck mesh grid, pose values, and proper segment/triangle crossing kernel. Uses all intersection points instead of validator capped examples. Bounds in GLB loader model coordinates; exported neck plate geometry is one joined mesh.",
+  "fixedMeshNames": [
+    "neck-neck-frame",
+    "neck-neck-plate"
+  ],
+  "failurePoses": [
+    {
+      "pitch": 0,
+      "yaw": -0.35,
+      "jawOpen": 0.32,
+      "crossingTrianglePairs": 52,
+      "contactPointCount": 104,
+      "contactPointBounds": {
+        "min": [
+          -0.10244316624118317,
+          1.4979706170773632,
+          0.31370136444893953
+        ],
+        "max": [
+          -0.09093585165993551,
+          1.5517300659802227,
+          0.3690600553646731
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": -1.024021114340878,
+        "max": -0.8328440189209734
+      },
+      "highContactPointsAtOrAboveHeight1_55": {
+        "count": 8,
+        "bounds": {
+          "min": [
+            -0.094482455851728,
+            1.5500234860330773,
+            0.31370136444893953
+          ],
+          "max": [
+            -0.09093585165993551,
+            1.5517300659802227,
+            0.3157805516976428
+          ]
+        },
+        "sourceAngleRangeRad": {
+          "min": -0.9905618550235726,
+          "max": -0.9579341880580364
+        }
+      },
+      "nativePlatePairCounts": {
+        "Cervical flank lamina -1 1": 52
+      },
+      "movingTriangleBounds": {
+        "min": [
+          -0.10390924521457859,
+          1.4942722923476732,
+          0.30880725144926036
+        ],
+        "max": [
+          -0.09088710916233832,
+          1.5584290509186902,
+          0.379146832086278
+        ]
+      },
+      "fixedTriangleBounds": {
+        "min": [
+          -0.10533005744218826,
+          1.493704915046692,
+          0.29386819154024124
+        ],
+        "max": [
+          -0.08754006028175354,
+          1.5673854351043701,
+          0.37299255281686783
+        ]
+      },
+      "topFixedTriangles": [
+        {
+          "triangle": 2949,
+          "pairCount": 7
+        },
+        {
+          "triangle": 2894,
+          "pairCount": 5
+        },
+        {
+          "triangle": 2872,
+          "pairCount": 4
+        },
+        {
+          "triangle": 2898,
+          "pairCount": 4
+        },
+        {
+          "triangle": 2920,
+          "pairCount": 4
+        },
+        {
+          "triangle": 2923,
+          "pairCount": 4
+        },
+        {
+          "triangle": 2945,
+          "pairCount": 4
+        },
+        {
+          "triangle": 2946,
+          "pairCount": 4
+        },
+        {
+          "triangle": 2919,
+          "pairCount": 3
+        },
+        {
+          "triangle": 2924,
+          "pairCount": 3
+        },
+        {
+          "triangle": 2870,
+          "pairCount": 2
+        },
+        {
+          "triangle": 2895,
+          "pairCount": 2
+        },
+        {
+          "triangle": 2897,
+          "pairCount": 2
+        },
+        {
+          "triangle": 2948,
+          "pairCount": 2
+        },
+        {
+          "triangle": 2871,
+          "pairCount": 1
+        },
+        {
+          "triangle": 2947,
+          "pairCount": 1
+        }
+      ],
+      "topMovingTriangles": [
+        {
+          "key": "jaw-head-plate#647",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#934",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#678",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#682",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#683",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#715",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#748",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#750",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#784",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#821",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#823",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#859",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#892",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#935",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#642",
+          "pairCount": 1
+        },
+        {
+          "key": "jaw-head-plate#679",
+          "pairCount": 1
+        }
+      ]
+    },
+    {
+      "pitch": 0,
+      "yaw": 0,
+      "jawOpen": 0.32,
+      "crossingTrianglePairs": 0,
+      "contactPointCount": 0,
+      "contactPointBounds": {
+        "min": [
+          null,
+          null,
+          null
+        ],
+        "max": [
+          null,
+          null,
+          null
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": null,
+        "max": null
+      },
+      "highContactPointsAtOrAboveHeight1_55": {
+        "count": 0,
+        "bounds": null,
+        "sourceAngleRangeRad": null
+      },
+      "nativePlatePairCounts": {},
+      "movingTriangleBounds": {
+        "min": [
+          null,
+          null,
+          null
+        ],
+        "max": [
+          null,
+          null,
+          null
+        ]
+      },
+      "fixedTriangleBounds": {
+        "min": [
+          null,
+          null,
+          null
+        ],
+        "max": [
+          null,
+          null,
+          null
+        ]
+      },
+      "topFixedTriangles": [],
+      "topMovingTriangles": []
+    },
+    {
+      "pitch": 0,
+      "yaw": 0.35,
+      "jawOpen": 0.32,
+      "crossingTrianglePairs": 58,
+      "contactPointCount": 116,
+      "contactPointBounds": {
+        "min": [
+          0.09092881527512472,
+          1.4989710119133768,
+          0.3140645196465605
+        ],
+        "max": [
+          0.10247537643132693,
+          1.551250105947173,
+          0.3681835346578148
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": 0.8351959474986069,
+        "max": 1.0234638851685907
+      },
+      "highContactPointsAtOrAboveHeight1_55": {
+        "count": 4,
+        "bounds": {
+          "min": [
+            0.09092881527512472,
+            1.5502711918024814,
+            0.31409670524463246
+          ],
+          "max": [
+            0.0931177993276614,
+            1.551250105947173,
+            0.3141697589558553
+          ]
+        },
+        "sourceAngleRangeRad": {
+          "min": 0.9633246439496561,
+          "max": 0.9801607314700979
+        }
+      },
+      "nativePlatePairCounts": {
+        "Cervical flank lamina 1 1": 58
+      },
+      "movingTriangleBounds": {
+        "min": [
+          0.09088710916233832,
+          1.4942722923476732,
+          0.30880725144926036
+        ],
+        "max": [
+          0.10383813711557034,
+          1.5584290509186902,
+          0.379146832086278
+        ]
+      },
+      "fixedTriangleBounds": {
+        "min": [
+          0.08312523365020752,
+          1.4854861497879028,
+          0.29895422607660294
+        ],
+        "max": [
+          0.11228560656309128,
+          1.565916657447815,
+          0.3738817051053047
+        ]
+      },
+      "topFixedTriangles": [
+        {
+          "triangle": 3395,
+          "pairCount": 5
+        },
+        {
+          "triangle": 3326,
+          "pairCount": 4
+        },
+        {
+          "triangle": 3348,
+          "pairCount": 4
+        },
+        {
+          "triangle": 3353,
+          "pairCount": 4
+        },
+        {
+          "triangle": 3374,
+          "pairCount": 4
+        },
+        {
+          "triangle": 3397,
+          "pairCount": 4
+        },
+        {
+          "triangle": 3349,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3352,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3370,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3371,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3372,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3375,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3377,
+          "pairCount": 3
+        },
+        {
+          "triangle": 3328,
+          "pairCount": 2
+        },
+        {
+          "triangle": 3350,
+          "pairCount": 2
+        },
+        {
+          "triangle": 3399,
+          "pairCount": 2
+        },
+        {
+          "triangle": 3327,
+          "pairCount": 1
+        },
+        {
+          "triangle": 3351,
+          "pairCount": 1
+        },
+        {
+          "triangle": 3373,
+          "pairCount": 1
+        },
+        {
+          "triangle": 3376,
+          "pairCount": 1
+        },
+        {
+          "triangle": 3396,
+          "pairCount": 1
+        },
+        {
+          "triangle": 3398,
+          "pairCount": 1
+        }
+      ],
+      "topMovingTriangles": [
+        {
+          "key": "jaw-head-plate#2406",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#2439",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#2545",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#2547",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#2653",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#2695",
+          "pairCount": 3
+        },
+        {
+          "key": "jaw-head-plate#2443",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2473",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2474",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2509",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2510",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2581",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2583",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2616",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2619",
+          "pairCount": 2
+        },
+        {
+          "key": "jaw-head-plate#2655",
+          "pairCount": 2
+        }
+      ]
+    }
+  ],
+  "nativeMapping": {
+    "status": "strongly inferred from construction/export ordering, not independently inspected in Blender",
+    "trianglesPerPlate": 464,
+    "mergedTriangleCount": 8352,
+    "orderedSourcePlates": [
+      "Throat formed lamina 1",
+      "Throat formed lamina 2",
+      "Throat formed lamina 3",
+      "Throat formed lamina 4",
+      "Throat formed lamina 5",
+      "Throat formed lamina 6",
+      "Cervical flank lamina -1 1",
+      "Cervical flank lamina 1 1",
+      "Cervical flank lamina -1 2",
+      "Cervical flank lamina 1 2",
+      "Cervical flank lamina -1 3",
+      "Cervical flank lamina 1 3",
+      "Cervical flank lamina -1 4",
+      "Cervical flank lamina 1 4",
+      "Cervical flank lamina -1 5",
+      "Cervical flank lamina 1 5",
+      "Cervical flank lamina -1 6",
+      "Cervical flank lamina 1 6"
+    ],
+    "reason": "Each authored grid plate has 96 front + 96 back + 40 solidify-wall quads, or 464 triangles after triangulation. The exported neck-neck-plate has 8352 triangles (=18*464), and the recipe creates these objects in the listed order before build script groups and joins by scene order. Triangle-index ranges therefore map to native pieces if Blender join preserves that order; not independently confirmed from the .blend in this read-only diagnostic."
+  }
+}

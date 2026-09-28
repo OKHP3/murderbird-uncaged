@@ -1,0 +1,542 @@
+{
+  "generatedAt": "2026-09-28T06:47:52.885Z",
+  "inputs": [
+    {
+      "analysisPath": "assets/audit/alignment-v6/browser-ce35024adda8/analysis/autonomy-default-927-analysis-v3.json",
+      "analysisSha256": "47a52f9e3482cf52b76c15d608adc61cc92be653d220e98388c0a94bfb016995",
+      "sourceJsonPath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/browser-ce35024adda8/autonomy-default-927.json",
+      "sourceJsonSha256": "c97bef88d743f7970f2e6f0a6b1237f95f8fa3db28ca8e815ceea38dda60ae19",
+      "webmPath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/browser-ce35024adda8/autonomy-default-927.webm",
+      "webmSha256": "aab4891d7af8cea9cf3d55ac7eef9a695d2d03979ccda66213b3e9f03bb46a1f"
+    },
+    {
+      "analysisPath": "assets/audit/alignment-v6/browser-ce35024adda8/analysis/autonomy-seed-20260928-analysis-v3.json",
+      "analysisSha256": "ee1969e6f836c77a3eed2e0fd09c6adc5cfb9ddfeb1ca498c1152a5864e61faa",
+      "sourceJsonPath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/browser-ce35024adda8/autonomy-seed-20260928.json",
+      "sourceJsonSha256": "d912fe16c0dc98d4eec7438f7c0d255d6948a3817e4c2b80e4f1fd1133cdb302",
+      "webmPath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/alignment-v6/browser-ce35024adda8/autonomy-seed-20260928.webm",
+      "webmSha256": "b799123e6ed0363efa4ff3dcfba36328e74690055415e352f03dd2c2c326006a"
+    }
+  ],
+  "runs": [
+    {
+      "run": "default-seed-927",
+      "inputSha256": "c97bef88d743f7970f2e6f0a6b1237f95f8fa3db28ca8e815ceea38dda60ae19",
+      "videoSha256": "aab4891d7af8cea9cf3d55ac7eef9a695d2d03979ccda66213b3e9f03bb46a1f",
+      "modelSha256": "ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe",
+      "durationSeconds": 120.23059999999404,
+      "samples": 1202,
+      "eventTransitions": 61,
+      "hiddenSamples": 0,
+      "actionFamilySampleCounts": {
+        "claw-scrape": 138,
+        "edge-probe": 506,
+        "rail-press": 391,
+        "seam-rattle": 167
+      },
+      "actionFamilySeconds": {
+        "rail-press": 39.104299999997025,
+        "claw-scrape": 13.80029999999702,
+        "edge-probe": 50.40069999998808,
+        "seam-rattle": 16.70140000000596
+      },
+      "beats": [
+        {
+          "start": 0.0075,
+          "end": 18.41189999999106,
+          "family": "rail-press",
+          "beat": "cross-right-to-center",
+          "duration": 18.40439999999106,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 18.41189999999106,
+          "end": 32.21219999998808,
+          "family": "claw-scrape",
+          "beat": "front-left-floor-scrape",
+          "duration": 13.80029999999702,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "claw-scrape",
+            "settle"
+          ]
+        },
+        {
+          "start": 32.21219999998808,
+          "end": 57.21169999998808,
+          "family": "edge-probe",
+          "beat": "back-corner-right",
+          "duration": 24.999499999999998,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 57.21169999998808,
+          "end": 77.91159999999404,
+          "family": "rail-press",
+          "beat": "right-sweep",
+          "duration": 20.69990000000596,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 77.91159999999404,
+          "end": 97.51069999998808,
+          "family": "edge-probe",
+          "beat": "left-sweep",
+          "duration": 19.59909999999404,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 97.51069999998808,
+          "end": 114.21209999999404,
+          "family": "seam-rattle",
+          "beat": "cross-left-to-center",
+          "duration": 16.70140000000596,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 114.21209999999404,
+          "end": 120.01419999998808,
+          "family": "edge-probe",
+          "beat": "back-corner-right",
+          "duration": 5.8020999999940415,
+          "states": [
+            "watch",
+            "pace"
+          ]
+        }
+      ],
+      "contactTrueSamples": 33,
+      "contactIntervals": [
+        {
+          "start": 11.6135,
+          "duration": 0.9005999999940393,
+          "family": "rail-press",
+          "beat": "cross-right-to-center"
+        },
+        {
+          "start": 50.21589999999106,
+          "duration": 0.39540000000596365,
+          "family": "edge-probe",
+          "beat": "back-corner-right"
+        },
+        {
+          "start": 71.41189999999106,
+          "duration": 0.9994999999999976,
+          "family": "rail-press",
+          "beat": "right-sweep"
+        },
+        {
+          "start": 91.51069999998808,
+          "duration": 0.3999000000059567,
+          "family": "edge-probe",
+          "beat": "left-sweep"
+        },
+        {
+          "start": 107.81119999998808,
+          "duration": 0.19950000000000045,
+          "family": "seam-rattle",
+          "beat": "cross-left-to-center"
+        },
+        {
+          "start": 108.41159999999404,
+          "duration": 0.19950000000000045,
+          "family": "seam-rattle",
+          "beat": "cross-left-to-center"
+        },
+        {
+          "start": 109.01139999999106,
+          "duration": 0.1994000000059657,
+          "family": "seam-rattle",
+          "beat": "cross-left-to-center"
+        }
+      ],
+      "cageActionSamples": 92,
+      "clawActionSamples": 19,
+      "clawStageSamples": {
+        "approach": 3,
+        "contact": 2,
+        "lift": 3,
+        "recovery": 4,
+        "release": 2,
+        "scrape": 5
+      },
+      "powerMoveSamples": 0,
+      "rootPathLengthXZ": 21.328959972568487,
+      "rootSpeed": {
+        "min": 0,
+        "p05": 0,
+        "median": 0,
+        "p95": 0.8043421277889118,
+        "max": 0.9000000000000002
+      },
+      "rootYawWrapped": {
+        "min": -2.5481399388232777,
+        "p05": -2.0906048319827857,
+        "median": 0,
+        "p95": 2.092202143292514,
+        "max": 2.4188094888369154
+      },
+      "footStepCounter": {
+        "min": 0,
+        "p05": 4,
+        "median": 46,
+        "p95": 91,
+        "max": 97
+      },
+      "fpsP05": {
+        "min": 83.33333333333333,
+        "p05": 86.20689655168088,
+        "median": 94.33962264145764,
+        "p95": 99.0099009900776,
+        "max": 100
+      },
+      "frameMsP95": {
+        "min": 10,
+        "p05": 10.100000000002185,
+        "median": 10.600000000002185,
+        "p95": 11.60000000000582,
+        "max": 12
+      },
+      "drawCalls": {
+        "min": 316,
+        "p05": 316,
+        "median": 316,
+        "p95": 316,
+        "max": 316
+      },
+      "triangles": {
+        "min": 468124,
+        "p05": 468124,
+        "median": 468124,
+        "p95": 468124,
+        "max": 468124
+      },
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+      "canvas": {
+        "height": 648,
+        "width": 856
+      }
+    },
+    {
+      "run": "review-seed-20260928",
+      "inputSha256": "d912fe16c0dc98d4eec7438f7c0d255d6948a3817e4c2b80e4f1fd1133cdb302",
+      "videoSha256": "b799123e6ed0363efa4ff3dcfba36328e74690055415e352f03dd2c2c326006a",
+      "modelSha256": "ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe",
+      "durationSeconds": 120.24309999999404,
+      "samples": 1202,
+      "eventTransitions": 58,
+      "hiddenSamples": 0,
+      "actionFamilySampleCounts": {
+        "claw-scrape": 136,
+        "edge-probe": 445,
+        "rail-press": 399,
+        "seam-rattle": 222
+      },
+      "actionFamilySeconds": {
+        "rail-press": 39.907699999988075,
+        "edge-probe": 44.49460000000894,
+        "claw-scrape": 13.602000000000004,
+        "seam-rattle": 22.005599999994047
+      },
+      "beats": [
+        {
+          "start": 0.007200000002980232,
+          "end": 20.31429999999702,
+          "family": "rail-press",
+          "beat": "right-sweep",
+          "duration": 20.307099999994037,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 20.31429999999702,
+          "end": 43.111,
+          "family": "edge-probe",
+          "beat": "back-corner-right",
+          "duration": 22.79670000000298,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 43.111,
+          "end": 56.713,
+          "family": "claw-scrape",
+          "beat": "front-left-floor-scrape",
+          "duration": 13.602000000000004,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "claw-scrape",
+            "settle"
+          ]
+        },
+        {
+          "start": 56.713,
+          "end": 76.31359999999404,
+          "family": "rail-press",
+          "beat": "cross-right-to-center",
+          "duration": 19.60059999999404,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 76.31359999999404,
+          "end": 98.0115,
+          "family": "edge-probe",
+          "beat": "side-step-center",
+          "duration": 21.69790000000596,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated",
+            "settle"
+          ]
+        },
+        {
+          "start": 98.0115,
+          "end": 120.01709999999404,
+          "family": "seam-rattle",
+          "beat": "back-corner-left",
+          "duration": 22.005599999994047,
+          "states": [
+            "watch",
+            "pace",
+            "boundary",
+            "cage-test",
+            "recover",
+            "agitated"
+          ]
+        }
+      ],
+      "contactTrueSamples": 31,
+      "contactIntervals": [
+        {
+          "start": 13.11039999999106,
+          "duration": 0.9029000000059604,
+          "family": "rail-press",
+          "beat": "right-sweep"
+        },
+        {
+          "start": 36.31459999999404,
+          "duration": 0.39610000000894274,
+          "family": "edge-probe",
+          "beat": "back-corner-right"
+        },
+        {
+          "start": 68.92,
+          "duration": 0.8930999999940354,
+          "family": "rail-press",
+          "beat": "cross-right-to-center"
+        },
+        {
+          "start": 91.21470000000298,
+          "duration": 0.4957999999970184,
+          "family": "edge-probe",
+          "beat": "side-step-center"
+        },
+        {
+          "start": 113.914,
+          "duration": 0.19700000000000273,
+          "family": "seam-rattle",
+          "beat": "back-corner-left"
+        },
+        {
+          "start": 114.61709999999404,
+          "duration": 0.09570000000297796,
+          "family": "seam-rattle",
+          "beat": "back-corner-left"
+        },
+        {
+          "start": 115.219200000003,
+          "duration": 0.09359999999404067,
+          "family": "seam-rattle",
+          "beat": "back-corner-left"
+        }
+      ],
+      "cageActionSamples": 102,
+      "clawActionSamples": 19,
+      "clawStageSamples": {
+        "approach": 3,
+        "contact": 2,
+        "lift": 3,
+        "recovery": 4,
+        "release": 3,
+        "scrape": 4
+      },
+      "powerMoveSamples": 0,
+      "rootPathLengthXZ": 17.611103538217165,
+      "rootSpeed": {
+        "min": 0,
+        "p05": 0,
+        "median": 0,
+        "p95": 0.4955760782769149,
+        "max": 0.9
+      },
+      "rootYawWrapped": {
+        "min": -3.114045368356301,
+        "p05": -1.7419050000000418,
+        "median": 0,
+        "p95": 2.5488581643930495,
+        "max": 3.054030939740862
+      },
+      "footStepCounter": {
+        "min": 0,
+        "p05": 5,
+        "median": 46,
+        "p95": 90,
+        "max": 93
+      },
+      "fpsP05": {
+        "min": 84.74576271186432,
+        "p05": 86.20689655178903,
+        "median": 96.15384615389996,
+        "p95": 99.00990099009545,
+        "max": 99.00990099011328
+      },
+      "frameMsP95": {
+        "min": 10.099999999998545,
+        "p05": 10.100000000000364,
+        "median": 10.39999999999418,
+        "p95": 11.599999999991269,
+        "max": 11.800000000000011
+      },
+      "drawCalls": {
+        "min": 316,
+        "p05": 316,
+        "median": 316,
+        "p95": 316,
+        "max": 316
+      },
+      "triangles": {
+        "min": 468124,
+        "p05": 468124,
+        "median": 468124,
+        "p95": 468124,
+        "max": 468124
+      },
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+      "canvas": {
+        "height": 648,
+        "width": 856
+      }
+    }
+  ],
+  "comparison": {
+    "sharedDeclaredModelSha256": true,
+    "sharedRenderer": true,
+    "sharedCanvas": true,
+    "sharedPlannedActionFamilies": [
+      "claw-scrape",
+      "edge-probe",
+      "rail-press",
+      "seam-rattle"
+    ],
+    "familySampleCountDelta": {
+      "claw-scrape": -2,
+      "edge-probe": -61,
+      "rail-press": 8,
+      "seam-rattle": 55
+    },
+    "sharedBeatIds": [
+      "back-corner-right",
+      "cross-right-to-center",
+      "front-left-floor-scrape",
+      "right-sweep"
+    ],
+    "firstOnlyBeatIds": [
+      "cross-left-to-center",
+      "left-sweep"
+    ],
+    "secondOnlyBeatIds": [
+      "back-corner-left",
+      "side-step-center"
+    ],
+    "plannedFamilySequenceDiffers": true,
+    "contactTransitionCount": [
+      7,
+      7
+    ],
+    "unattendedHiddenSamples": [
+      0,
+      0
+    ],
+    "explicitPowerMoveSamples": [
+      0,
+      0
+    ]
+  },
+  "interpretation": [
+    "actionFamily/beat are planned schedule telemetry, so counts and variation describe selected routine labels, not completed actions.",
+    "Observed dynamics are supported independently by root/foot/tip movement telemetry, explicit claw stage progression, and contact flags; contact telemetry is not independent force/contact verification.",
+    "The default-seed-927 run is the configured default-seed case. review-seed-20260928 is an explicit development diversity probe; it does not establish that public visitors receive random or varied seeds.",
+    "Both captures are unattended, 120-second real-time WebGL recordings with zero hidden samples and no injected input. The final sampled beat is cut by the fixed capture window; no complete-cycle claim is made.",
+    "Performance and visibility are descriptive for one browser/device session and are not cross-device guarantees. No artistic acceptance or continuous human review is claimed."
+  ]
+}

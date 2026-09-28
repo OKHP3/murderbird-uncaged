@@ -1,0 +1,148 @@
+{
+  "generatedAt": "2026-09-28T06:25:41.272Z",
+  "model": {
+    "path": "assets/audit/alignment-v6/rig-6736811dcc04/model-inputs/v6-fourth.glb",
+    "sha256": "6736811dcc04605eb59bf8b105a62c348dd5457c5d2b45aa39d42a55a0785784"
+  },
+  "diagnostic": {
+    "path": "assets/audit/alignment-v6/rig-6736811dcc04/localize-crossings.mjs",
+    "sha256": "212662bc868da0897a998e051eccb3af5cdaec3f7cdefd3b44c71b98dcefe20b"
+  },
+  "output": {
+    "path": "assets/audit/alignment-v6/rig-6736811dcc04/crossing-localization-detail-v3.json",
+    "sha256": "8d4a102aa952d434f76c1505b9a670e008cc2f5d64abc0a05e6709ca4a0e55cf"
+  },
+  "inputs": {
+    "validator": "scripts/verify-jaw-neck-clearance.mjs",
+    "validatorSha256": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "neckRecipe": "scripts/alignment-v6-neck.py",
+    "neckRecipeSha256": "137cd8815ec7543654de5e1f37db7bcdce5b68c3db35961d239f942378962666",
+    "inventory": "assets/models/uncaged-alignment-v6/alignment-inventory.json",
+    "inventorySha256": "954eb16ecd47124ca63b530e395bdd98f8ce66c4211e507c1ac6bb41966a42dc"
+  },
+  "summary": [
+    {
+      "pose": {
+        "pitch": 0,
+        "yaw": -0.35,
+        "jawOpen": 0.32
+      },
+      "trianglePairs": 52,
+      "contactPointBounds": {
+        "min": [
+          -0.10244316624118317,
+          1.4979706170773632,
+          0.31370136444893953
+        ],
+        "max": [
+          -0.09093585165993551,
+          1.5517300659802227,
+          0.3690600553646731
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": -1.024021114340878,
+        "max": -0.8328440189209734
+      },
+      "highContacts": {
+        "count": 8,
+        "bounds": {
+          "min": [
+            -0.094482455851728,
+            1.5500234860330773,
+            0.31370136444893953
+          ],
+          "max": [
+            -0.09093585165993551,
+            1.5517300659802227,
+            0.3157805516976428
+          ]
+        },
+        "sourceAngleRangeRad": {
+          "min": -0.9905618550235726,
+          "max": -0.9579341880580364
+        }
+      },
+      "nativePlatePairCounts": {
+        "Cervical flank lamina -1 1": 52
+      }
+    },
+    {
+      "pose": {
+        "pitch": 0,
+        "yaw": 0,
+        "jawOpen": 0.32
+      },
+      "trianglePairs": 0,
+      "contactPointBounds": {
+        "min": [
+          null,
+          null,
+          null
+        ],
+        "max": [
+          null,
+          null,
+          null
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": null,
+        "max": null
+      },
+      "highContacts": {
+        "count": 0,
+        "bounds": null,
+        "sourceAngleRangeRad": null
+      },
+      "nativePlatePairCounts": {}
+    },
+    {
+      "pose": {
+        "pitch": 0,
+        "yaw": 0.35,
+        "jawOpen": 0.32
+      },
+      "trianglePairs": 58,
+      "contactPointBounds": {
+        "min": [
+          0.09092881527512472,
+          1.4989710119133768,
+          0.3140645196465605
+        ],
+        "max": [
+          0.10247537643132693,
+          1.551250105947173,
+          0.3681835346578148
+        ]
+      },
+      "sourceAngleRangeRad": {
+        "min": 0.8351959474986069,
+        "max": 1.0234638851685907
+      },
+      "highContacts": {
+        "count": 4,
+        "bounds": {
+          "min": [
+            0.09092881527512472,
+            1.5502711918024814,
+            0.31409670524463246
+          ],
+          "max": [
+            0.0931177993276614,
+            1.551250105947173,
+            0.3141697589558553
+          ]
+        },
+        "sourceAngleRangeRad": {
+          "min": 0.9633246439496561,
+          "max": 0.9801607314700979
+        }
+      },
+      "nativePlatePairCounts": {
+        "Cervical flank lamina 1 1": 58
+      }
+    }
+  ],
+  "interpretation": "At remaining sampled crossings only, both signs of yaw implicate the first corresponding cervical flank lamina. Native piece mapping is inferred from authored plate construction order and merged triangle counts, not independently observed in Blender."
+}
