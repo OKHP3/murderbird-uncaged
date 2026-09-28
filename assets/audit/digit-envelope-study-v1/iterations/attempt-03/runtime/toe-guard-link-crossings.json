@@ -1,0 +1,4922 @@
+{
+  "generatedAt": "2026-09-28T09:22:59.905Z",
+  "candidate": {
+    "bytes": 4603608,
+    "path": "assets/models/uncaged-digit-envelope-study-v1/iterations/attempt-03/runtime/murderbird-digit-envelope-study-v1.glb",
+    "sha256": "574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4"
+  },
+  "modelSha256": "574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4",
+  "sourceHashes": {
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/diagnose-digit-guard-crossings.mjs": "1baca801fdda117cbc3b3ba42852892436fe59082ec2e1237de7562f1e7ac909"
+  },
+  "kernel": {
+    "method": "bidirectional triangle-edge ray/triangle segment crossings with 25 mm spatial-grid broad phase",
+    "selfTest": "intersecting fixture passed; separated fixture passed"
+  },
+  "poseSampling": {
+    "sampleCount": 6,
+    "steps": "actual createEraController + createEraMotion at 60 Hz",
+    "capturedLabels": [
+      {
+        "label": "planted-neutral",
+        "trigger": "initial settled Builder pose, before any action"
+      },
+      {
+        "label": "jump-flight-peak",
+        "trigger": "sample with maximum reported jump height"
+      },
+      {
+        "label": "jump-landing",
+        "trigger": "first runtime landing stage sample"
+      },
+      {
+        "label": "claw-toe-angle-extreme",
+        "trigger": "largest absolute runtime toe hinge angle during the measured action"
+      },
+      {
+        "label": "claw-contact",
+        "trigger": "first contact-stage sample at or above 90% phase"
+      },
+      {
+        "label": "claw-recovery",
+        "trigger": "first recovery-stage sample at or above 50% phase"
+      }
+    ],
+    "clawActionStagesObserved": [
+      "approach",
+      "lift",
+      "contact",
+      "scrape",
+      "release",
+      "recovery"
+    ]
+  },
+  "poses": [
+    {
+      "label": "planted-neutral",
+      "trigger": "initial settled Builder pose, before any action",
+      "runtimeState": {
+        "era": "builder",
+        "state": "watch",
+        "powerMove": null,
+        "clawAction": null,
+        "clawMetrics": null,
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.0019999999999998908,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0019999999999998908,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-edge",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-1-distal-foot-frame",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-1-proximal-foot-frame",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-distal-foot-edge",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-2-distal-foot-frame",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-proximal-foot-frame",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-distal-foot-edge",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-3-distal-foot-frame",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-proximal-foot-frame",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-distal-foot-edge",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-1-distal-foot-frame",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-proximal-foot-frame",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-distal-foot-edge",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-2-distal-foot-frame",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-proximal-foot-frame",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-distal-foot-edge",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-3-distal-foot-frame",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-proximal-foot-frame",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        }
+      ],
+      "sampledTrianglePairs": 8228,
+      "crossingTrianglePairs": 816,
+      "crossingPairs": [
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-distal-foot-plate / left-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-proximal-foot-plate / left-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-distal-foot-plate / left-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-proximal-foot-plate / left-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-distal-foot-plate / left-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-proximal-foot-plate / left-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-distal-foot-plate / right-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-proximal-foot-plate / right-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-distal-foot-plate / right-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-proximal-foot-plate / right-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-distal-foot-plate / right-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-proximal-foot-plate / right-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        }
+      ],
+      "examples": [
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.049194,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.14185,
+            0.051828,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 97,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.049194,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.14655,
+            0.053825,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.052639,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 99,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.052639,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.054214,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 61,
+          "pointModelSpace": [
+            0.150391,
+            0.054555,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.154417,
+            0.055005,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 101,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.054214,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.05469,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.16229,
+            0.05384,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 103,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.05469,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.166936,
+            0.051769,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.053638,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 105,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.053638,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.0508,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.17045,
+            0.048282,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 107,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.0508,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.04763,
+            0.031922
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 80,
+          "pointModelSpace": [
+            0.165312,
+            0.046762,
+            0.03933
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.163949,
+            0.046519,
+            0.043654
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 109,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.04763,
+            0.031922
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 111,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.046231,
+            0.048766
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 112,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.045193,
+            0.078246
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.157134,
+            0.045442,
+            0.066057
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 114,
+          "targetTriangle": 129,
+          "pointModelSpace": [
+            0.150103,
+            0.045482,
+            0.095542
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.045193,
+            0.078246
+          ]
+        }
+      ],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Same-owner guard/link embedding and same-owner talon-root intersections are reported as intentional/attachment-review categories, not treated as failures.",
+        "Frame and edge targets are parent-batched GLB meshes; frame crossing attribution is to the owner-batched frame assembly, not an isolated source link mesh."
+      ]
+    },
+    {
+      "label": "jump-flight-peak",
+      "trigger": "sample with maximum reported jump height",
+      "runtimeState": {
+        "era": "builder",
+        "state": "power-jump",
+        "powerMove": {
+          "kind": "jump",
+          "phase": 0.4285714285714287,
+          "duration": 1.4,
+          "stage": "flight"
+        },
+        "clawAction": null,
+        "clawMetrics": null,
+        "powerMetrics": {
+          "kind": "jump",
+          "phase": 0.4285714285714287,
+          "height": 0.3599833402748855,
+          "stage": "airborne",
+          "grounded": false
+        },
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.3681284070861024,
+          "swinging": true,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.04099648887677352
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.06969403109051499
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.049995718142406734
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.08499272084209145
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.043996231965317927
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.07479359434104048
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.3681284070861024,
+          "swinging": true,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0.04099648887677352
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0.06969403109051499
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0.049995718142406734
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0.08499272084209145
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0.043996231965317927
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0.07479359434104048
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.434735
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.452931
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.427793
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.450977
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.435078
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.453019
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.434735
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.452931
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.427793
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.450977
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.435078
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.453019
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-edge",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-1-distal-foot-frame",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-1-proximal-foot-frame",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-distal-foot-edge",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-2-distal-foot-frame",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-proximal-foot-frame",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-distal-foot-edge",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-3-distal-foot-frame",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-proximal-foot-frame",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-distal-foot-edge",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-1-distal-foot-frame",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-proximal-foot-frame",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-distal-foot-edge",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-2-distal-foot-frame",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-proximal-foot-frame",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-distal-foot-edge",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-3-distal-foot-frame",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-proximal-foot-frame",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        }
+      ],
+      "sampledTrianglePairs": 8366,
+      "crossingTrianglePairs": 792,
+      "crossingPairs": [
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-distal-foot-plate / left-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-proximal-foot-plate / left-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-distal-foot-plate / left-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-proximal-foot-plate / left-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-distal-foot-plate / left-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-proximal-foot-plate / left-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-distal-foot-plate / right-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-proximal-foot-plate / right-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-distal-foot-plate / right-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-proximal-foot-plate / right-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-distal-foot-plate / right-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-proximal-foot-plate / right-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        }
+      ],
+      "examples": [
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.448706,
+            0.040436
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.14185,
+            0.451322,
+            0.04074
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 97,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.448706,
+            0.040436
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.14655,
+            0.453306,
+            0.040971
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.452127,
+            0.040834
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 99,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.452127,
+            0.040834
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.453692,
+            0.041016
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 61,
+          "pointModelSpace": [
+            0.150391,
+            0.454031,
+            0.041055
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.154417,
+            0.454478,
+            0.041107
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 101,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.453692,
+            0.041016
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.454165,
+            0.041071
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.16229,
+            0.453321,
+            0.040973
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 103,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.454165,
+            0.041071
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.166936,
+            0.451263,
+            0.040734
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.45312,
+            0.040949
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 105,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.45312,
+            0.040949
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.450301,
+            0.040622
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.17045,
+            0.447799,
+            0.040331
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 107,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.450301,
+            0.040622
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.44651,
+            0.045783
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 80,
+          "pointModelSpace": [
+            0.165312,
+            0.444792,
+            0.053041
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.163949,
+            0.444052,
+            0.057308
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 109,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.44651,
+            0.045783
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.158499,
+            0.441089,
+            0.074376
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 111,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.443176,
+            0.062353
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 112,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.438742,
+            0.091516
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.158499,
+            0.441089,
+            0.074376
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.441089,
+            0.074376
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.157134,
+            0.440396,
+            0.079437
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 114,
+          "targetTriangle": 129,
+          "pointModelSpace": [
+            0.150103,
+            0.437033,
+            0.108729
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.438742,
+            0.091516
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 128,
+          "pointModelSpace": [
+            0.152719,
+            0.438156,
+            0.095801
+          ]
+        }
+      ],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Same-owner guard/link embedding and same-owner talon-root intersections are reported as intentional/attachment-review categories, not treated as failures.",
+        "Frame and edge targets are parent-batched GLB meshes; frame crossing attribution is to the owner-batched frame assembly, not an isolated source link mesh."
+      ]
+    },
+    {
+      "label": "jump-landing",
+      "trigger": "first runtime landing stage sample",
+      "runtimeState": {
+        "era": "builder",
+        "state": "power-jump",
+        "powerMove": {
+          "kind": "jump",
+          "phase": 0.6428571428571437,
+          "duration": 1.4,
+          "stage": "landing"
+        },
+        "clawAction": null,
+        "clawMetrics": null,
+        "powerMetrics": {
+          "kind": "jump",
+          "phase": 0.6428571428571437,
+          "height": 0,
+          "stage": "landing",
+          "grounded": true
+        },
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.0020000000000000087,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0020000000000000087,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-edge",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-1-distal-foot-frame",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-1-proximal-foot-frame",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-distal-foot-edge",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-2-distal-foot-frame",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-proximal-foot-frame",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-distal-foot-edge",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-3-distal-foot-frame",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-proximal-foot-frame",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-distal-foot-edge",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-1-distal-foot-frame",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-proximal-foot-frame",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-distal-foot-edge",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-2-distal-foot-frame",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-proximal-foot-frame",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-distal-foot-edge",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-3-distal-foot-frame",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-proximal-foot-frame",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        }
+      ],
+      "sampledTrianglePairs": 8228,
+      "crossingTrianglePairs": 816,
+      "crossingPairs": [
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-distal-foot-plate / left-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-proximal-foot-plate / left-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-distal-foot-plate / left-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-proximal-foot-plate / left-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-distal-foot-plate / left-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-proximal-foot-plate / left-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-distal-foot-plate / right-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-proximal-foot-plate / right-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-distal-foot-plate / right-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-proximal-foot-plate / right-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-distal-foot-plate / right-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-proximal-foot-plate / right-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        }
+      ],
+      "examples": [
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.049194,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.14185,
+            0.051828,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 97,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.049194,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.14655,
+            0.053825,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.052639,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 99,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.052639,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.054214,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 61,
+          "pointModelSpace": [
+            0.150391,
+            0.054555,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.154417,
+            0.055005,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 101,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.054214,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.05469,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.16229,
+            0.05384,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 103,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.05469,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.166936,
+            0.051769,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.053638,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 105,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.053638,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.0508,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.17045,
+            0.048282,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 107,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.0508,
+            0.026358
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.04763,
+            0.031922
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 80,
+          "pointModelSpace": [
+            0.165312,
+            0.046762,
+            0.03933
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.163949,
+            0.046519,
+            0.043654
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 109,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.04763,
+            0.031922
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 111,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.046231,
+            0.048766
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 112,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.045193,
+            0.078246
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.045546,
+            0.06095
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.157134,
+            0.045442,
+            0.066057
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 114,
+          "targetTriangle": 129,
+          "pointModelSpace": [
+            0.150103,
+            0.045482,
+            0.095542
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.045193,
+            0.078246
+          ]
+        }
+      ],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Same-owner guard/link embedding and same-owner talon-root intersections are reported as intentional/attachment-review categories, not treated as failures.",
+        "Frame and edge targets are parent-batched GLB meshes; frame crossing attribution is to the owner-batched frame assembly, not an isolated source link mesh."
+      ]
+    },
+    {
+      "label": "claw-toe-angle-extreme",
+      "trigger": "largest absolute runtime toe hinge angle during the measured action",
+      "runtimeState": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0,
+          "stage": "scrape",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "clawMetrics": {
+          "stage": "scrape",
+          "phase": 0,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.002000000000000224,
+          "contact": true,
+          "supportSide": "right",
+          "supportError": 1.1102230246251565e-16,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0020000000000000365,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.002000000000000224,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.05018399999999999
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.071094
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.0612
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.08670000000000001
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.053856
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.076296
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0020000000000000365,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.076317
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.09905
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.067188
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.096059
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.077264
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.099428
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-edge",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-1-distal-foot-frame",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-1-proximal-foot-frame",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-distal-foot-edge",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-2-distal-foot-frame",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-proximal-foot-frame",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-distal-foot-edge",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-3-distal-foot-frame",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-proximal-foot-frame",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-distal-foot-edge",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-1-distal-foot-frame",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-proximal-foot-frame",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-distal-foot-edge",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-2-distal-foot-frame",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-proximal-foot-frame",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-distal-foot-edge",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-3-distal-foot-frame",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-proximal-foot-frame",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        }
+      ],
+      "sampledTrianglePairs": 8502,
+      "crossingTrianglePairs": 804,
+      "crossingPairs": [
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-distal-foot-plate / left-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-proximal-foot-plate / left-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-distal-foot-plate / left-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-proximal-foot-plate / left-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-distal-foot-plate / left-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-proximal-foot-plate / left-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-distal-foot-plate / right-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-proximal-foot-plate / right-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-distal-foot-plate / right-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-proximal-foot-plate / right-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-distal-foot-plate / right-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-proximal-foot-plate / right-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        }
+      ],
+      "examples": [
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.093084,
+            0.080963
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.14185,
+            0.095685,
+            0.081375
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 97,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.093084,
+            0.080963
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.14655,
+            0.097658,
+            0.081687
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.096486,
+            0.081502
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 99,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.096486,
+            0.081502
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.098042,
+            0.081748
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 61,
+          "pointModelSpace": [
+            0.150391,
+            0.098379,
+            0.081801
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.154417,
+            0.098824,
+            0.081872
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 101,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.098042,
+            0.081748
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.098512,
+            0.081822
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.16229,
+            0.097673,
+            0.081689
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 103,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.098512,
+            0.081822
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.166936,
+            0.095627,
+            0.081366
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.097473,
+            0.081658
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 105,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.097473,
+            0.081658
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.09467,
+            0.081214
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.17045,
+            0.092183,
+            0.08082
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 107,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.09467,
+            0.081214
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.090669,
+            0.086214
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 80,
+          "pointModelSpace": [
+            0.165312,
+            0.088654,
+            0.093395
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.163949,
+            0.087737,
+            0.097628
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 109,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.090669,
+            0.086214
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.086654,
+            0.102632
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.084073,
+            0.114559
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 111,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.086654,
+            0.102632
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 112,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.081021,
+            0.131588
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.084073,
+            0.114559
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.157134,
+            0.083171,
+            0.119588
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 114,
+          "targetTriangle": 129,
+          "pointModelSpace": [
+            0.150103,
+            0.078602,
+            0.148716
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.081021,
+            0.131588
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 128,
+          "pointModelSpace": [
+            0.152719,
+            0.080258,
+            0.135845
+          ]
+        }
+      ],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Same-owner guard/link embedding and same-owner talon-root intersections are reported as intentional/attachment-review categories, not treated as failures.",
+        "Frame and edge targets are parent-batched GLB meshes; frame crossing attribution is to the owner-batched frame assembly, not an isolated source link mesh."
+      ]
+    },
+    {
+      "label": "claw-contact",
+      "trigger": "first contact-stage sample at or above 90% phase",
+      "runtimeState": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0.9027777777777777,
+          "stage": "contact",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "clawMetrics": {
+          "stage": "contact",
+          "phase": 0.9027777777777777,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.0020000000000001406,
+          "contact": true,
+          "supportSide": "right",
+          "supportError": 1.1102230246251565e-16,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0020000000000000365,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.0020000000000001406,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.04814064228274497
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.06819924323388872
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.05870810034481095
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.08316980882181552
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.051663128303433635
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.07318943176319766
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0020000000000000365,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.075009
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.0971
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.06625
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.094233
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.075916
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.097461
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-edge",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-1-distal-foot-frame",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-1-proximal-foot-frame",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-distal-foot-edge",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-2-distal-foot-frame",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-proximal-foot-frame",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-distal-foot-edge",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-3-distal-foot-frame",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-proximal-foot-frame",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-distal-foot-edge",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-1-distal-foot-frame",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-proximal-foot-frame",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-distal-foot-edge",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-2-distal-foot-frame",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-proximal-foot-frame",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-distal-foot-edge",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-3-distal-foot-frame",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-proximal-foot-frame",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        }
+      ],
+      "sampledTrianglePairs": 8483,
+      "crossingTrianglePairs": 804,
+      "crossingPairs": [
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-distal-foot-plate / left-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-proximal-foot-plate / left-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-distal-foot-plate / left-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-proximal-foot-plate / left-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-distal-foot-plate / left-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-proximal-foot-plate / left-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-distal-foot-plate / right-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-proximal-foot-plate / right-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-distal-foot-plate / right-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-proximal-foot-plate / right-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-distal-foot-plate / right-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-proximal-foot-plate / right-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        }
+      ],
+      "examples": [
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.091345,
+            0.081007
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.14185,
+            0.093949,
+            0.081402
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 97,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.091345,
+            0.081007
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.14655,
+            0.095924,
+            0.081701
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.094751,
+            0.081523
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 99,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.094751,
+            0.081523
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.096308,
+            0.08176
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 61,
+          "pointModelSpace": [
+            0.150391,
+            0.096645,
+            0.081811
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.154417,
+            0.097091,
+            0.081879
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 101,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.096308,
+            0.08176
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.096779,
+            0.081831
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.16229,
+            0.095938,
+            0.081704
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 103,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.096779,
+            0.081831
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.166936,
+            0.093891,
+            0.081393
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.095739,
+            0.081673
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 105,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.095739,
+            0.081673
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.092933,
+            0.081248
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.17045,
+            0.090443,
+            0.08087
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 107,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.092933,
+            0.081248
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.088964,
+            0.086273
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 80,
+          "pointModelSpace": [
+            0.165312,
+            0.086994,
+            0.093467
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.163949,
+            0.086105,
+            0.097706
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 109,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.088964,
+            0.086273
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.085054,
+            0.102717
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.082548,
+            0.11466
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 111,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.085054,
+            0.102717
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 112,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.079606,
+            0.131707
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.082548,
+            0.11466
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.157134,
+            0.081679,
+            0.119694
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 114,
+          "targetTriangle": 129,
+          "pointModelSpace": [
+            0.150103,
+            0.077297,
+            0.148851
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.079606,
+            0.131707
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 128,
+          "pointModelSpace": [
+            0.152719,
+            0.07887,
+            0.135969
+          ]
+        }
+      ],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Same-owner guard/link embedding and same-owner talon-root intersections are reported as intentional/attachment-review categories, not treated as failures.",
+        "Frame and edge targets are parent-batched GLB meshes; frame crossing attribution is to the owner-batched frame assembly, not an isolated source link mesh."
+      ]
+    },
+    {
+      "label": "claw-recovery",
+      "trigger": "first recovery-stage sample at or above 50% phase",
+      "runtimeState": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0.5158730158730158,
+          "stage": "recovery",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "clawMetrics": {
+          "stage": "recovery",
+          "phase": 0.5158730158730158,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.018628068871057522,
+          "contact": false,
+          "supportSide": "right",
+          "supportError": 7.850462293418876e-17,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0019999999999999463,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.018628068871057522,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.000054293974856185776
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.00007691646437959652
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.00006621216445876315
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.00009380056631658114
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.00005826670472371157
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.0000825444983585914
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0019999999999999463,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.059534
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.066735
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.059577
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.066807
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.059514
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.066701
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-edge",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-1-distal-foot-frame",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-1-proximal-foot-frame",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-distal-foot-edge",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-2-distal-foot-frame",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-2-proximal-foot-frame",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-distal-foot-edge",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "left-digit-3-distal-foot-frame",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "left-digit-3-proximal-foot-frame",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-distal-foot-edge",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-1-distal-foot-frame",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-1-proximal-foot-frame",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-distal-foot-edge",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-2-distal-foot-frame",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-2-proximal-foot-frame",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-distal-foot-edge",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "edge",
+          "triangleCount": 572
+        },
+        {
+          "name": "right-digit-3-distal-foot-frame",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        },
+        {
+          "name": "right-digit-3-proximal-foot-frame",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "frame",
+          "triangleCount": 164
+        }
+      ],
+      "sampledTrianglePairs": 7845,
+      "crossingTrianglePairs": 804,
+      "crossingPairs": [
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-distal-foot-plate / left-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-1-proximal-foot-plate / left-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-distal-foot-plate / left-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-2-proximal-foot-plate / left-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-distal-foot-plate / left-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: left-digit-3-proximal-foot-plate / left-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 66
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-distal-foot-plate / right-digit-1-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-1-proximal-foot-plate / right-digit-1-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-distal-foot-plate / right-digit-2-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-2-proximal-foot-plate / right-digit-2-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-distal-foot-plate / right-digit-3-distal-foot-frame",
+          "crossingTrianglePairs": 68
+        },
+        {
+          "pair": "same-owner-link-embedding-intentional :: right-digit-3-proximal-foot-plate / right-digit-3-proximal-foot-frame",
+          "crossingTrianglePairs": 68
+        }
+      ],
+      "examples": [
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.065871,
+            0.07874
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 96,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.14185,
+            0.068504,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 97,
+          "targetTriangle": 62,
+          "pointModelSpace": [
+            0.139407,
+            0.065871,
+            0.07874
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.14655,
+            0.070502,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 98,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.069315,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 99,
+          "targetTriangle": 63,
+          "pointModelSpace": [
+            0.142602,
+            0.069315,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.07089,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 61,
+          "pointModelSpace": [
+            0.150391,
+            0.071231,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 100,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.154417,
+            0.071682,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 101,
+          "targetTriangle": 60,
+          "pointModelSpace": [
+            0.148595,
+            0.07089,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.071367,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 102,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.16229,
+            0.070517,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 103,
+          "targetTriangle": 58,
+          "pointModelSpace": [
+            0.156548,
+            0.071367,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.166936,
+            0.068446,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 104,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.070315,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 105,
+          "targetTriangle": 59,
+          "pointModelSpace": [
+            0.163655,
+            0.070315,
+            0.078741
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.067476,
+            0.07874
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 106,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.17045,
+            0.064958,
+            0.07874
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 107,
+          "targetTriangle": 56,
+          "pointModelSpace": [
+            0.167913,
+            0.067476,
+            0.07874
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.064305,
+            0.084304
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 80,
+          "pointModelSpace": [
+            0.165312,
+            0.063436,
+            0.091712
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 108,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.163949,
+            0.063192,
+            0.096036
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 109,
+          "targetTriangle": 57,
+          "pointModelSpace": [
+            0.168246,
+            0.064305,
+            0.084304
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.062904,
+            0.101148
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 110,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.062216,
+            0.113332
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 111,
+          "targetTriangle": 81,
+          "pointModelSpace": [
+            0.162338,
+            0.062904,
+            0.101148
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 112,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.061861,
+            0.130627
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 104,
+          "pointModelSpace": [
+            0.158499,
+            0.062216,
+            0.113332
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 113,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.157134,
+            0.062112,
+            0.118439
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 114,
+          "targetTriangle": 129,
+          "pointModelSpace": [
+            0.150103,
+            0.062147,
+            0.147924
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 105,
+          "pointModelSpace": [
+            0.153875,
+            0.061861,
+            0.130627
+          ]
+        },
+        {
+          "classification": "same-owner-link-embedding-intentional",
+          "guardMesh": "left-digit-1-distal-foot-plate",
+          "targetMesh": "left-digit-1-distal-foot-frame",
+          "guardOwner": "left-digit-1-distal",
+          "targetOwner": "left-digit-1-distal",
+          "guardTriangle": 115,
+          "targetTriangle": 128,
+          "pointModelSpace": [
+            0.152719,
+            0.061773,
+            0.134951
+          ]
+        }
+      ],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Same-owner guard/link embedding and same-owner talon-root intersections are reported as intentional/attachment-review categories, not treated as failures.",
+        "Frame and edge targets are parent-batched GLB meshes; frame crossing attribution is to the owner-batched frame assembly, not an isolated source link mesh."
+      ]
+    }
+  ],
+  "summary": {
+    "poseCount": 6,
+    "guardGroupsPerPose": 12,
+    "posesWithAnyCrossing": [
+      "planted-neutral",
+      "jump-flight-peak",
+      "jump-landing",
+      "claw-toe-angle-extreme",
+      "claw-contact",
+      "claw-recovery"
+    ],
+    "totalCrossingTrianglePairs": 4836,
+    "guardMinimumWorldY": {
+      "planted-neutral": 0.042846,
+      "jump-flight-peak": 0.427793,
+      "jump-landing": 0.042846,
+      "claw-toe-angle-extreme": 0.042846,
+      "claw-contact": 0.042846,
+      "claw-recovery": 0.042846
+    }
+  },
+  "overallLimits": [
+    "This is a bounded diagnostic, not a pass/fail physical collision clearance proof.",
+    "Guard-to-link embedding is by design and reported separately from adjacent-owner crossing categories.",
+    "No force, contact pressure, self-collision completeness, browser/WebGL or artistic acceptance."
+  ]
+}

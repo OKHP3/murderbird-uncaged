@@ -1,0 +1,120 @@
+{
+  "capturedAtUtc": "2026-09-28T09:27:31.096200+00:00",
+  "commands": [
+    {
+      "command": "python3 -m py_compile scripts/export-digit-envelope-study.py",
+      "exitCode": 0,
+      "result": "passed"
+    },
+    {
+      "command": "Blender 5.2.1 LTS -b --python scripts/export-digit-envelope-study.py",
+      "exitCode": 0,
+      "result": "exported 4,603,608-byte GLB; exporter emitted \"No mesh data to join\" warnings for singleton join batches; explicit exported group inventory then passed"
+    },
+    {
+      "command": "node assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/verify-digit-study-export.mjs",
+      "exitCode": 0,
+      "result": "passed: 102 exported meshes, 102 grouping keys, 51 pivots, 233972 triangles"
+    },
+    {
+      "command": "UNCAGED_MODEL=<exact derivative> UNCAGED_AUDIT=<checks/kinematics> node scripts/verify-alignment-kinematics.mjs",
+      "exitCode": 0,
+      "result": "passed 4/4"
+    },
+    {
+      "command": "UNCAGED_MODEL=<exact derivative> UNCAGED_AUDIT=<checks/claw-contact> node scripts/verify-claw-contact-v4.mjs",
+      "exitCode": 0,
+      "result": "passed 32/32"
+    },
+    {
+      "command": "node assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/diagnose-digit-guard-crossings.mjs",
+      "exitCode": 0,
+      "result": "completed descriptive six-pose diagnostic; no different-owner guard/frame/edge crossings detected; same-owner guard/frame intersections are expected embedded construction"
+    }
+  ],
+  "gitHead": "8c1111d4bd6904790c318c69e267feba7fd88ca9",
+  "inputIdentity": {
+    "runtimeGlb": {
+      "bytes": 4603608,
+      "path": "assets/models/uncaged-digit-envelope-study-v1/iterations/attempt-03/runtime/murderbird-digit-envelope-study-v1.glb",
+      "sha256": "574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4"
+    },
+    "studyNative": {
+      "path": "assets/models/uncaged-digit-envelope-study-v1/iterations/attempt-03/murderbird-uncaged-digit-envelope-study-v1.blend",
+      "sha256": "5d8d101f4eee4d3bb86bae57d8de41b4aa2b9a8399d6962c91505f60bedfde54",
+      "unchangedAfterExport": true
+    },
+    "v7Native": {
+      "sha256": "a8fccaf024a096678415215029b34cae8270b348da2301b8872a34e72c75ed3f"
+    },
+    "v7RuntimeGlb": {
+      "sha256": "1c82874b86af6b493ac380536de6af72a30fafa3a4b0ebb3d8790f56ffc03018"
+    }
+  },
+  "limits": [
+    "Collision diagnostic compares exported parent-batched frame/edge meshes, not individually isolated native link surfaces; same-owner attribution is therefore to the owner batch.",
+    "Triangle crossings are sampled only at six selected actual-rig poses; coplanar contact, full containment, continuous motion and all-object collision are not certified.",
+    "No GLB was selected in application source, no browser/WebGL run or art acceptance was performed.",
+    "Claw-contact and kinematics checks are deterministic code-level motion checks; they do not prove force, load capacity, grip or physical balance."
+  ],
+  "outputs": {
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/checks/claw-contact/claw-contact-v4.json": {
+      "bytes": 115420,
+      "sha256": "092ca21de4ae97ad6a74c86897b21c3c01333dd9e7f6b9c54b9625690786f82f"
+    },
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/checks/kinematics/kinematic-alignment.json": {
+      "bytes": 17687,
+      "sha256": "2288b9c19ba0d35169fdec200030909578f501fbc7b38b572a7f45eeb9f83df5"
+    },
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/export-inventory-check.json": {
+      "bytes": 50743,
+      "sha256": "1741a7d885030f6e895198a7aba725f3ae152872c023d85ddc729ec54893e725"
+    },
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/runtime-derivative.json": {
+      "bytes": 115809,
+      "sha256": "15cdcda1942e1595561333f07ecbec27445c910d409e227201b5e30573e61e2b"
+    },
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/toe-guard-link-crossings.json": {
+      "bytes": 162465,
+      "sha256": "bf18ecfc7bb0e673bdf6ccb2193c3dce6ed8edbb721605f99777601382c038f1"
+    }
+  },
+  "sourceHashes": {
+    "clawValidator": "105a49685de7e040dc3d732bece106670f719e2b518c84befd9ce00459777c27",
+    "collisionDiagnostic": "1baca801fdda117cbc3b3ba42852892436fe59082ec2e1237de7562f1e7ac909",
+    "controllerRuntime": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "derivativeExporter": "d4f376348a9939602fc01d78212cc11a4dbdc2f4aa5cab3c6f05284256ba6654",
+    "exportInventoryVerifier": "c0f9e8822e0c084433d60f50b0270fcb160a59226abeb47cda7b93d16cd6e512",
+    "exportRecipe": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a",
+    "motionRuntime": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "motionValidator": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32",
+    "rigidLoader": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "runtimeGlb": "574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4",
+    "studyNative": "5d8d101f4eee4d3bb86bae57d8de41b4aa2b9a8399d6962c91505f60bedfde54",
+    "studyReceipt": "98279f27dc70b4ca2f70cd455ec59413d60fa225ad6fa2c04c94e21baa43c761"
+  },
+  "status": "bounded local diagnostic of an unselected native-derived runtime GLB; not application or release evidence",
+  "summary": {
+    "clawContact": "32/32 passed",
+    "exportInventory": "102 meshes, 102 batch keys, 51 pivots exact, 233972 triangles",
+    "kinematics": "4/4 passed",
+    "minimumGuardWorldYMetres": {
+      "claw-contact": 0.042846,
+      "claw-recovery": 0.042846,
+      "claw-toe-angle-extreme": 0.042846,
+      "jump-flight-peak": 0.427793,
+      "jump-landing": 0.042846,
+      "planted-neutral": 0.042846
+    },
+    "sameOwnerGuardToFrameCrossings": "66-68 triangle-pairs per guard and pose; expected because the cap is embedded 4 mm into its parent-owned frame assembly",
+    "toePoseSamples": [
+      "planted-neutral",
+      "jump-flight-peak",
+      "jump-landing-stage",
+      "claw-toe-angle-extreme",
+      "claw-contact",
+      "claw-recovery"
+    ],
+    "toeSamplesWithDifferentOwnerGuardCrossings": 0
+  }
+}

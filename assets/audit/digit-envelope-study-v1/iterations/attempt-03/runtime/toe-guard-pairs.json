@@ -1,0 +1,2779 @@
+{
+  "generatedAt": "2026-09-28T09:35:14.170Z",
+  "candidate": {
+    "bytes": 4603608,
+    "path": "assets/models/uncaged-digit-envelope-study-v1/iterations/attempt-03/runtime/murderbird-digit-envelope-study-v1.glb",
+    "sha256": "574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4"
+  },
+  "modelSha256": "574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4",
+  "sourceHashes": {
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "assets/audit/digit-envelope-study-v1/iterations/attempt-03/runtime/diagnose-digit-guard-pairs.mjs": "97112fa3a0ed942c1512c6e1b0a3c23f790cfc5a22d3065ecc84ac11ece84ac8"
+  },
+  "kernel": {
+    "method": "bidirectional triangle-edge ray/triangle segment crossings with 25 mm spatial-grid broad phase",
+    "selfTest": "intersecting fixture passed; separated fixture passed"
+  },
+  "poseSampling": {
+    "sampleCount": 6,
+    "steps": "actual createEraController + createEraMotion at 60 Hz",
+    "capturedLabels": [
+      {
+        "label": "planted-neutral",
+        "trigger": "initial settled Builder pose, before any action"
+      },
+      {
+        "label": "jump-flight-peak",
+        "trigger": "sample with maximum reported jump height"
+      },
+      {
+        "label": "jump-landing",
+        "trigger": "first runtime landing stage sample"
+      },
+      {
+        "label": "claw-toe-angle-extreme",
+        "trigger": "largest absolute runtime toe hinge angle during the measured action"
+      },
+      {
+        "label": "claw-contact",
+        "trigger": "first contact-stage sample at or above 90% phase"
+      },
+      {
+        "label": "claw-recovery",
+        "trigger": "first recovery-stage sample at or above 50% phase"
+      }
+    ],
+    "clawActionStagesObserved": [
+      "approach",
+      "lift",
+      "contact",
+      "scrape",
+      "release",
+      "recovery"
+    ]
+  },
+  "poses": [
+    {
+      "label": "planted-neutral",
+      "trigger": "initial settled Builder pose, before any action",
+      "runtimeState": {
+        "era": "builder",
+        "state": "watch",
+        "powerMove": null,
+        "clawAction": null,
+        "clawMetrics": null,
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.0019999999999998908,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0019999999999998908,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        }
+      ],
+      "intendedMeshPairs": [
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-1-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-1-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ]
+      ],
+      "sampledTrianglePairs": 0,
+      "crossingTrianglePairs": 0,
+      "crossingPairs": [],
+      "examples": [],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Only newly added digit guards against other same-foot digit guards and the existing instep plate are screened.",
+        "Instep targets are owner-batched GLB plate meshes; this does not isolate each source instep plate."
+      ]
+    },
+    {
+      "label": "jump-flight-peak",
+      "trigger": "sample with maximum reported jump height",
+      "runtimeState": {
+        "era": "builder",
+        "state": "power-jump",
+        "powerMove": {
+          "kind": "jump",
+          "phase": 0.4285714285714287,
+          "duration": 1.4,
+          "stage": "flight"
+        },
+        "clawAction": null,
+        "clawMetrics": null,
+        "powerMetrics": {
+          "kind": "jump",
+          "phase": 0.4285714285714287,
+          "height": 0.3599833402748855,
+          "stage": "airborne",
+          "grounded": false
+        },
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.3681284070861024,
+          "swinging": true,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.04099648887677352
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.06969403109051499
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.049995718142406734
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.08499272084209145
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.043996231965317927
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.07479359434104048
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.3681284070861024,
+          "swinging": true,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0.04099648887677352
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0.06969403109051499
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0.049995718142406734
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0.08499272084209145
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0.043996231965317927
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0.07479359434104048
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.434735
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.452931
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.427793
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.450977
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.435078
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.453019
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.434735
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.452931
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.427793
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.450977
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.435078
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.453019
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        }
+      ],
+      "intendedMeshPairs": [
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-1-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-1-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ]
+      ],
+      "sampledTrianglePairs": 0,
+      "crossingTrianglePairs": 0,
+      "crossingPairs": [],
+      "examples": [],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Only newly added digit guards against other same-foot digit guards and the existing instep plate are screened.",
+        "Instep targets are owner-batched GLB plate meshes; this does not isolate each source instep plate."
+      ]
+    },
+    {
+      "label": "jump-landing",
+      "trigger": "first runtime landing stage sample",
+      "runtimeState": {
+        "era": "builder",
+        "state": "power-jump",
+        "powerMove": {
+          "kind": "jump",
+          "phase": 0.6428571428571437,
+          "duration": 1.4,
+          "stage": "landing"
+        },
+        "clawAction": null,
+        "clawMetrics": null,
+        "powerMetrics": {
+          "kind": "jump",
+          "phase": 0.6428571428571437,
+          "height": 0,
+          "stage": "landing",
+          "grounded": true
+        },
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.0020000000000000087,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0020000000000000087,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        }
+      ],
+      "intendedMeshPairs": [
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-1-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-1-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ]
+      ],
+      "sampledTrianglePairs": 0,
+      "crossingTrianglePairs": 0,
+      "crossingPairs": [],
+      "examples": [],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Only newly added digit guards against other same-foot digit guards and the existing instep plate are screened.",
+        "Instep targets are owner-batched GLB plate meshes; this does not isolate each source instep plate."
+      ]
+    },
+    {
+      "label": "claw-toe-angle-extreme",
+      "trigger": "largest absolute runtime toe hinge angle during the measured action",
+      "runtimeState": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0,
+          "stage": "scrape",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "clawMetrics": {
+          "stage": "scrape",
+          "phase": 0,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.002000000000000224,
+          "contact": true,
+          "supportSide": "right",
+          "supportError": 1.1102230246251565e-16,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0020000000000000365,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.002000000000000224,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.05018399999999999
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.071094
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.0612
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.08670000000000001
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.053856
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.076296
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0020000000000000365,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.076317
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.09905
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.067188
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.096059
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.077264
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.099428
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        }
+      ],
+      "intendedMeshPairs": [
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-1-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-1-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ]
+      ],
+      "sampledTrianglePairs": 0,
+      "crossingTrianglePairs": 0,
+      "crossingPairs": [],
+      "examples": [],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Only newly added digit guards against other same-foot digit guards and the existing instep plate are screened.",
+        "Instep targets are owner-batched GLB plate meshes; this does not isolate each source instep plate."
+      ]
+    },
+    {
+      "label": "claw-contact",
+      "trigger": "first contact-stage sample at or above 90% phase",
+      "runtimeState": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0.9027777777777777,
+          "stage": "contact",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "clawMetrics": {
+          "stage": "contact",
+          "phase": 0.9027777777777777,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.0020000000000001406,
+          "contact": true,
+          "supportSide": "right",
+          "supportError": 1.1102230246251565e-16,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0020000000000000365,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.0020000000000001406,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.04814064228274497
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.06819924323388872
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.05870810034481095
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.08316980882181552
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.051663128303433635
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.07318943176319766
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0020000000000000365,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.075009
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.0971
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.06625
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.094233
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.075916
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.097461
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        }
+      ],
+      "intendedMeshPairs": [
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-1-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-1-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ]
+      ],
+      "sampledTrianglePairs": 0,
+      "crossingTrianglePairs": 0,
+      "crossingPairs": [],
+      "examples": [],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Only newly added digit guards against other same-foot digit guards and the existing instep plate are screened.",
+        "Instep targets are owner-batched GLB plate meshes; this does not isolate each source instep plate."
+      ]
+    },
+    {
+      "label": "claw-recovery",
+      "trigger": "first recovery-stage sample at or above 50% phase",
+      "runtimeState": {
+        "era": "builder",
+        "state": "claw-scrape",
+        "powerMove": null,
+        "clawAction": {
+          "phase": 0.5158730158730158,
+          "stage": "recovery",
+          "side": "left",
+          "target": "floor-scrape"
+        },
+        "clawMetrics": {
+          "stage": "recovery",
+          "phase": 0.5158730158730158,
+          "side": "left",
+          "target": "floor-scrape",
+          "tipMinY": 0.018628068871057522,
+          "contact": false,
+          "supportSide": "right",
+          "supportError": 7.850462293418876e-17,
+          "supportTargetError": 0,
+          "supportGroundMin": 0.0019999999999999463,
+          "supportTarget": [
+            -0.2512859106063843,
+            0.2765148241519928,
+            -0.2883598655462265
+          ]
+        },
+        "powerMetrics": null,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      },
+      "feet": [
+        {
+          "side": "left",
+          "groundMin": 0.018628068871057522,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "left-digit-1-proximal",
+              "angle": 0.000054293974856185776
+            },
+            {
+              "name": "left-digit-1-distal",
+              "angle": 0.00007691646437959652
+            },
+            {
+              "name": "left-digit-2-proximal",
+              "angle": 0.00006621216445876315
+            },
+            {
+              "name": "left-digit-2-distal",
+              "angle": 0.00009380056631658114
+            },
+            {
+              "name": "left-digit-3-proximal",
+              "angle": 0.00005826670472371157
+            },
+            {
+              "name": "left-digit-3-distal",
+              "angle": 0.0000825444983585914
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "groundMin": 0.0019999999999999463,
+          "swinging": false,
+          "toeAngles": [
+            {
+              "name": "right-digit-1-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-1-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-2-distal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-proximal",
+              "angle": 0
+            },
+            {
+              "name": "right-digit-3-distal",
+              "angle": 0
+            }
+          ]
+        }
+      ],
+      "comparedGuardMeshes": [
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.059534
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.066735
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.059577
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.066807
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.059514
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.066701
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042866
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050053
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042918
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050128
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "triangleCount": 136,
+          "minWorldY": 0.042846
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "triangleCount": 136,
+          "minWorldY": 0.050018
+        }
+      ],
+      "comparedTargetMeshes": [
+        {
+          "name": "left-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "left-digit-1-distal-foot-plate",
+          "owner": "left-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-1-proximal-foot-plate",
+          "owner": "left-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-distal-foot-plate",
+          "owner": "left-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-2-proximal-foot-plate",
+          "owner": "left-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-distal-foot-plate",
+          "owner": "left-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "left-digit-3-proximal-foot-plate",
+          "owner": "left-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-foot-foot-plate",
+          "owner": null,
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 1784
+        },
+        {
+          "name": "right-digit-1-distal-foot-plate",
+          "owner": "right-digit-1-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-1-proximal-foot-plate",
+          "owner": "right-digit-1-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-distal-foot-plate",
+          "owner": "right-digit-2-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-2-proximal-foot-plate",
+          "owner": "right-digit-2-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-distal-foot-plate",
+          "owner": "right-digit-3-distal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        },
+        {
+          "name": "right-digit-3-proximal-foot-plate",
+          "owner": "right-digit-3-proximal",
+          "region": "foot",
+          "surfaceRole": "plate",
+          "triangleCount": 136
+        }
+      ],
+      "intendedMeshPairs": [
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-1-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-1-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-2-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-distal-foot-plate"
+        ],
+        [
+          "left-digit-2-proximal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "left-digit-3-distal-foot-plate",
+          "left-digit-3-proximal-foot-plate"
+        ],
+        [
+          "left-digit-3-proximal-foot-plate",
+          "left-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-1-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-1-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-2-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-distal-foot-plate"
+        ],
+        [
+          "right-digit-2-proximal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-foot-foot-plate"
+        ],
+        [
+          "right-digit-3-distal-foot-plate",
+          "right-digit-3-proximal-foot-plate"
+        ],
+        [
+          "right-digit-3-proximal-foot-plate",
+          "right-foot-foot-plate"
+        ]
+      ],
+      "sampledTrianglePairs": 0,
+      "crossingTrianglePairs": 0,
+      "crossingPairs": [],
+      "examples": [],
+      "limits": [
+        "Discrete sampled production-rig poses only; no continuous motion or exhaustive all-object collision test.",
+        "Proper segment/triangle crossings only; coplanar contact and full containment are not detected.",
+        "Only newly added digit guards against other same-foot digit guards and the existing instep plate are screened.",
+        "Instep targets are owner-batched GLB plate meshes; this does not isolate each source instep plate."
+      ]
+    }
+  ],
+  "summary": {
+    "poseCount": 6,
+    "guardGroupsPerPose": 12,
+    "posesWithAnyCrossing": [],
+    "totalCrossingTrianglePairs": 0,
+    "guardMinimumWorldY": {
+      "planted-neutral": 0.042846,
+      "jump-flight-peak": 0.427793,
+      "jump-landing": 0.042846,
+      "claw-toe-angle-extreme": 0.042846,
+      "claw-contact": 0.042846,
+      "claw-recovery": 0.042846
+    }
+  },
+  "overallLimits": [
+    "This is a bounded diagnostic, not a pass/fail physical collision clearance proof.",
+    "Separate from the earlier frame/edge diagnostic; no frame or talon geometry is screened here.",
+    "No force, contact pressure, self-collision completeness, browser/WebGL or artistic acceptance."
+  ]
+}
