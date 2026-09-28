@@ -1,5 +1,7 @@
 # Cervical construction consolidation
 
+**Subsequent bounded round:** attempts13 and14 are preserved in the updated [study index](study-index.json). Attempt14 clears the tested intermediate joint in all21 poses, but retains a new same-owner backing/guard crossing and breast-interface regressions. Its collar/open-throat appearance remains held. See [attempt14 review](attempt-14/bounded-review.md). No replacement, new export or app model selection. The original consolidation below records the earlier12-trial round.
+
 No study is selected. Attempt07 retains the strongest neutral neck-to-breast continuity in this packet, but its independently moving guards penetrate. Attempts08–12 remain held: clean axle construction improved some local checks, while the visible envelope became fragmented, bowl-like, angular or hollow. Attempt12 is the final geometry trial; no attempt13 was started.
 
 ## Exact scope and preservation

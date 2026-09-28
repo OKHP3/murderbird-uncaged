@@ -46,3 +46,12 @@ The local V8 build with optional serial-joint support passes `npm ci`, `npm run 
 ## Remaining work
 
 Finish clean plate overlap and backing geometry, re-check combined controls and intermediate breast opening, then supply era-correct drive/constraint hardware. Re-export the final chosen native, verify native/export correspondence, recapture actual runtime poses, inspect WebGL and fallback output, and present matched whole-body and close-up views. The owner’s neutral whole-candidate artistic gate remains ahead of dependent surface finishing. V10 repair chronology and V12 historical footage scope remain separate unresolved owner decisions in the reference packet.
+
+
+## Subsequent bounded interface trials13–14
+
+The [attempt14 review](../assets/audit/cervical-construction-study-v1/attempt-14/bounded-review.md) records a real but narrow mechanical gain: after shortening the upper inner backing and moving the lower side lap inboard, all21 sampled poses have zero intermediate-joint surface candidates across the expanded cervical set. This does not make the neck acceptable. The same-owner lower-left guard/backing crosses, the delayed flare conflicts with the breast, and the visible contour remains cuff-like with an open throat. Both13 and14 are held; neither has a new GLB or app selection.
+
+Native14 is `ef9e28ddbce9d62aabc8181a058640ea1e8b7a339b673df37b913d96699f9440`. Its52 pivots and462 guide curves remain exact. Five meshes changed from13, with704 other meshes preserved. The21 poses replay the verified07 runtime hierarchy; they are not a fresh14 browser capture or a continuous sweep proof.
+
+A separate [breast access proposal](../assets/audit/cervical-construction-study-v1/breast-access-proposal-v1/report.md) identifies the existing lateral swing as the proposed actuator conflict. Its first route reused the global separation parameter and remains diagnostic only. Any follow-up must move only the breast panel during opening, preserve the independent global separation control, and provide real support for a sliding panel. No access-path code has been changed.

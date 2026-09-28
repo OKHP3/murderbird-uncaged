@@ -1,8 +1,8 @@
 """Versioned isolated cervical construction proposals from the pinned V8 native.
 
-One-stage attempts preserve the 51-pivot hierarchy. Two-stage attempts add the
+One-stage attempts preserve the51-pivot hierarchy. Two-stage attempts add the
 cervical-upper pivot, reparent the head and named guards with original rest-world
-transforms, and explicitly record the 52-pivot contract. Diagnostic GLB export is
+transforms, and explicitly record the52-pivot contract. Diagnostic GLB export is
 optional and always uses a reopened saved native. Read-only pose reviews never
 save posed or visibility state. No app integration, base overwrite, or publication.
 All attempts and executed generator/review snapshots are preserved independently.
@@ -887,72 +887,6 @@ def bounded_underlap14():
     review_existing('14',str(packet.relative_to(ROOT)),include_same_owner=True)
     assert sha(native)==receipt['native']['sha256'];print(json.dumps({'native':artifact(native),'changes':sorted(changed),'views':8,'stopped':True}))
 
-def finalize_underlap14():
-    """Read-only compact handoff; no geometry, pose or scene saves."""
-    from mathutils.kdtree import KDTree
-    audit=ROOT/'assets/audit/cervical-construction-study-v1/attempt-14';receipt=json.loads((audit/'receipt.json').read_text())
-    native=ROOT/receipt['native']['path'];assert sha(native)==receipt['native']['sha256']
-    diagnostic=audit/'all-cervical-roles-clearance-v1/guard-clearance-native.json'
-    diagnosis=json.loads(diagnostic.read_text());baseline=json.loads((audit/'all-cervical-roles-source13-baseline/guard-clearance-native.json').read_text())
-    changed=set(receipt['replace']);rows=[];representative=[];cache={}
-    bpy.ops.wm.open_mainfile(filepath=str(native));graph=bpy.context.evaluated_depsgraph_get()
-    h=runpy.run_path(str(ROOT/'scripts/diagnose-native-regional-clearance.py'),run_name='diagnostic_helpers')
-    strict=lambda r:[p for p in r['pairsWithOverlapCandidates'] if p['properFaceCrossing']['confirmedSubjectTriangleCount']]
-    for row,old in zip(diagnosis['rows'],baseline['rows']):
-        hits=strict(row);prior=strict(old);prior_keys={tuple(sorted((p['subject'],p['target']))) for p in prior}
-        new=[p for p in hits if tuple(sorted((p['subject'],p['target']))) not in prior_keys]
-        changed_hits=[p for p in hits if {p['subject'],p['target']}&changed]
-        rows.append({'poseId':row['poseId'],'intermediateStrictPairs':sum(p['intermediateJointPair'] for p in hits),
-            'intermediateBVHCandidatePairs':sum(p['intermediateJointPair'] for p in row['pairsWithOverlapCandidates']),
-            'sameOwnerStrictPairs':sum(p['sameOwnerPair'] for p in hits),'sameOwnerChangedStrictPairs':sum(p['sameOwnerPair'] for p in changed_hits),
-            'breastOrBodyChangedStrictPairs':sum(p['subjectOwner'] in ['breastplate','body'] or p['targetOwner'] in ['breastplate','body'] for p in changed_hits),
-            'allStrictPairs':len(hits),'source13StrictPairs':len(prior),'newPairNamesRelative13':[[p['subject'],p['target']] for p in new]})
-        if row['poseId'] not in ['runtime-rest','advanced-contact']:continue
-        for hit in changed_hits:
-            rec={'poseId':row['poseId'],'pair':[hit['subject'],hit['target']],'sameOwner':hit['sameOwnerPair'],
-                 'pairExistedIn13':tuple(sorted((hit['subject'],hit['target']))) in prior_keys,'meshes':[]}
-            for role in ['subject','target']:
-                name=hit[role]
-                if name not in changed:continue
-                if name not in cache:
-                    obj=bpy.data.objects[name];surf=h['surface'](obj,graph);tree=KDTree(len(obj.data.vertices))
-                    for v in obj.data.vertices:tree.insert(obj.matrix_world@v.co,v.index)
-                    tree.balance();cache[name]=(obj,surf,tree)
-                obj,surf,tree=cache[name];ids=hit['properFaceCrossing'][role+'EvaluatedTriangleIndices'];points=[];controls=set();zones={}
-                base=209 if name=='Cervical articulated inner guards' else 247
-                for i in ids:
-                    pts=[surf['points'][v] for v in surf['faces'][i]];points.extend(pts);near=[tree.find(p)[1] for p in pts];controls.update(near)
-                    rs=[(v%base)//19 for v in near]
-                    zone='formed-return' if len({v>=base for v in near})>1 else 'delayed-flare' if min(rs)>=10 else 'circular-underlap' if max(rs)<=9 else 'lap-flare-transition'
-                    zones[zone]=zones.get(zone,0)+1
-                rec['meshes'].append({'name':name,'nativeControlRows':sorted({(v%base)//19 for v in controls}),
-                    'evaluatedTriangleIndices':ids,'nativeControlVertexIndices':sorted(controls),'zones':zones,
-                    'radiusAboutIntermediateXM':[min(math.hypot(p.y-MID_REST.y,p.z-MID_REST.z) for p in points),max(math.hypot(p.y-MID_REST.y,p.z-MID_REST.z) for p in points)],
-                    'nativeBoundsXYZ':[[min(p[k] for p in points),max(p[k] for p in points)] for k in range(3)]})
-            representative.append(rec)
-    output=audit/'strict-clearance-summary.json';assert not output.exists()
-    output.write_text(json.dumps({'native':artifact(native),'diagnosis':artifact(diagnostic),'subjectCount':len(diagnosis['subjects']),
-        'rows':rows,'representativeChangedCrossings':representative,
-        'limits':['Strict triangle penetration is tested, not containment or continuous clearance.','Shared-owner crossings are counted without declaring seated contact clean.','Baseline pair identity distinguishes already-existing pairs, not equal penetration extent.','Editable row attribution uses nearest evaluated-to-control vertices; radii cover full triangle vertices.']},indent=2)+'\n')
-    lines=['# Attempt14 bounded review','','**HELD.** One saved native and eight matched views. The intermediate guard interface has zero BVH candidates and zero strict crossings in all21 actual poses. The whole construction is not collision-free or visually accepted.','',
-        'Native SHA256: `'+receipt['native']['sha256']+'`. No export, runtime, hardware, app, or publication changes. The native was reopened before verification and renders; diagnostic state was not saved.','',
-        'Five meshes replaced: '+', '.join('`'+n+'`' for n in sorted(changed))+'. All52 pivot contracts,462 curves,704 unrelated source13 meshes, upper external courses1–3, load rails, properties, owners and materials are preserved. Upper3 retains13’s previously raised journal return; relative07 that return is still an explicit inherited difference.','',
-        'The upper inner channel ends with a complete formed wall at nativeZ1.567m. Lower4 upper lateral width is70mm, radius108mm, finite wall6mm. Width and radius remain recessed for the first80% of the arc, then flare as complete smooth sections. The backing is independently closed. No upper exterior1–3 or load rail changes were required for14.','',
-        '## Actual21 strict results','','| Pose | Intermediate | Same-owner | Changed same-owner | Changed breast/body | All strict pairs | Source13 |','|---|---:|---:|---:|---:|---:|---:|']
-    for r in rows:lines.append('| '+r['poseId']+' | '+' | '.join(str(r[k]) for k in ['intermediateStrictPairs','sameOwnerStrictPairs','sameOwnerChangedStrictPairs','breastOrBodyChangedStrictPairs','allStrictPairs','source13StrictPairs'])+' |')
-    lines+=['','There is one **new** same-owner penetrating pair: left lower4 versus lower backing, across all21. This is a guard wall crossing, not an intended journal seat. Source13 had21 same-owner strict pairs;14 has22. Those21 preserved pairs remain recorded and have not been relabelled clean. The shortened upper channel itself has no strict pair.','',
-      'The delayed lower flare still intersects breast shells/keel/feathers/yoke. At rest all7 changed different-owner pairs also existed in13. At contact14 has12 changed breast pairs, including4 pair identities absent from13: both lower side4 versus keel lamina0 and throat4 versus both keel root fixings. These are geometry regressions even though the intermediate joint is clear.','',
-      '## Remaining shared-owner crossing','','| Mesh | Editable rows | Radius around axle (mm) | X bounds (mm) | Y bounds (mm) | Z bounds (m) |','|---|---|---|---|---|']
-    hit=next(r for r in representative if r['poseId']=='runtime-rest' and r['sameOwner'])
-    for m in hit['meshes']:
-        fmt=lambda v,scale=1000:'–'.join(f'{x*scale:.2f}' for x in v)
-        lines.append('| '+m['name']+' | '+str(m['nativeControlRows'])+' | '+fmt(m['radiusAboutIntermediateXM'])+' | '+fmt(m['nativeBoundsXYZ'][0])+' | '+fmt(m['nativeBoundsXYZ'][1])+' | '+fmt(m['nativeBoundsXYZ'][2],1)+' |')
-    lines+=['','Exact triangle/control indices and lower-flare versus return attribution for rest/contact are in `strict-clearance-summary.json`. The local side/backing wall relationship needs a separate designed return if this mechanically useful interface is retained; no further geometry attempt was made.','',
-      '## Visual and geometric limit','','Profile and3/4 still show a cuff and open throat above the breast. Narrowing the lap clears upper2/3 but does not reproduce07’s whole lower envelope. The simultaneous breast conflicts show this trial does not provide an accepted continuous three-dimensional lap in the frozen region. This is evidence of a constrained interface, not proof that every continuous lap is impossible. The next decision must address the coherent guard contour and breast interface together; brute-force further shrinking is not justified.','',
-      'The21 matrices are actual runtime attempt07 controller poses applied to an identical rest52 hierarchy. There is no14 controller/contact recapture and no continuous-sweep clearance certificate.','']
-    md=audit/'bounded-review.md';assert not md.exists();md.write_text('\n'.join(lines))
-    assert sha(native)==receipt['native']['sha256'];print(json.dumps({'summary':artifact(output),'review':artifact(md),'strictIntermediateMax':max(r['intermediateStrictPairs'] for r in rows),'sameOwnerChangedMax':max(r['sameOwnerChangedStrictPairs'] for r in rows)}))
-
 def measure_underlap14():
     """Read-only three-dimensional swept-face sections in saved lower-neck space."""
     source=ROOT/'assets/models/uncaged-cervical-construction-study-v1/attempt-13/murderbird-cervical-construction-study-v1.blend'
@@ -998,7 +932,7 @@ def review_existing(attempt,pose_packet=None,render_actual=False,include_same_ow
     bpy.ops.wm.open_mainfile(filepath=str(native));pivots={o.name:o for o in bpy.data.objects if o.type=='EMPTY'}
     assert len(pivots)==52
     meshes={o.name:o for o in bpy.data.objects if o.type=='MESH'}
-    subjects=[o for o in meshes.values() if o.parent and (o.parent.name in ['neck',NEW_JOINT] or o.name in REPLACE) and (include_same_owner or o.get('surfaceRole') in ['plate','frame'])]
+    subjects=[o for o in meshes.values() if o.parent and (o.parent.name in ['neck',NEW_JOINT] or o.name in REPLACE) and o.get('surfaceRole') in ['plate','frame']]
     targets=[o for o in meshes.values() if o.parent and o.parent.name in ['neck',NEW_JOINT,'breastplate','head','jaw','body','left-mantle','right-mantle']]
     pose_data=json.loads(packet.read_text());rows=[]
     if pose_packet:
@@ -1007,7 +941,7 @@ def review_existing(attempt,pose_packet=None,render_actual=False,include_same_ow
         bpy.ops.wm.open_mainfile(filepath=str(native));pivots={o.name:o for o in bpy.data.objects if o.type=='EMPTY'}
         assert set(source_pivots)==set(pivots) and max(abs(source_pivots[n][r][c]-pivots[n].matrix_world[r][c]) for n in pivots for r in range(4) for c in range(4))<2e-7
         meshes={o.name:o for o in bpy.data.objects if o.type=='MESH'}
-        subjects=[o for o in meshes.values() if o.parent and (o.parent.name in ['neck',NEW_JOINT] or o.name in REPLACE) and (include_same_owner or o.get('surfaceRole') in ['plate','frame'])]
+        subjects=[o for o in meshes.values() if o.parent and (o.parent.name in ['neck',NEW_JOINT] or o.name in REPLACE) and o.get('surfaceRole') in ['plate','frame']]
         targets=[o for o in meshes.values() if o.parent and o.parent.name in ['neck',NEW_JOINT,'breastplate','head','jaw','body','left-mantle','right-mantle']]
     rest_matrices={n:o.matrix_world.copy() for n,o in meshes.items()}
     for pose in pose_data['poses']:
@@ -1199,9 +1133,7 @@ def boundary_map(attempt):
     assert sha(native)==receipt['native']['sha256'];print(json.dumps({'records':len(rows),'path':str(out.relative_to(ROOT))}))
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--attempt',default='01');ap.add_argument('--two-stage',action='store_true');ap.add_argument('--export',action='store_true');ap.add_argument('--review',action='store_true');ap.add_argument('--joint-pockets',action='store_true');ap.add_argument('--clean-sections',action='store_true');ap.add_argument('--designed-transition',action='store_true');ap.add_argument('--coherent-transition',action='store_true');ap.add_argument('--full-lateral',action='store_true');ap.add_argument('--pose-packet');ap.add_argument('--render-actual',action='store_true');ap.add_argument('--mount-proposal',action='store_true');ap.add_argument('--mount-outboard',action='store_true');ap.add_argument('--mount-lower-anterior',action='store_true');ap.add_argument('--mount-front-lower',action='store_true');ap.add_argument('--boundary-map',action='store_true');ap.add_argument('--bounded-underlap13',action='store_true');ap.add_argument('--underlap13-zones',action='store_true');ap.add_argument('--measure-underlap14',action='store_true');ap.add_argument('--bounded-underlap14',action='store_true');ap.add_argument('--finalize-underlap14',action='store_true');args=ap.parse_args(sys.argv[sys.argv.index('--')+1:])
-    if args.finalize_underlap14:
-        finalize_underlap14();return
+    ap=argparse.ArgumentParser();ap.add_argument('--attempt',default='01');ap.add_argument('--two-stage',action='store_true');ap.add_argument('--export',action='store_true');ap.add_argument('--review',action='store_true');ap.add_argument('--joint-pockets',action='store_true');ap.add_argument('--clean-sections',action='store_true');ap.add_argument('--designed-transition',action='store_true');ap.add_argument('--coherent-transition',action='store_true');ap.add_argument('--full-lateral',action='store_true');ap.add_argument('--pose-packet');ap.add_argument('--render-actual',action='store_true');ap.add_argument('--mount-proposal',action='store_true');ap.add_argument('--mount-outboard',action='store_true');ap.add_argument('--mount-lower-anterior',action='store_true');ap.add_argument('--mount-front-lower',action='store_true');ap.add_argument('--boundary-map',action='store_true');ap.add_argument('--bounded-underlap13',action='store_true');ap.add_argument('--underlap13-zones',action='store_true');ap.add_argument('--measure-underlap14',action='store_true');ap.add_argument('--bounded-underlap14',action='store_true');args=ap.parse_args(sys.argv[sys.argv.index('--')+1:])
     if args.measure_underlap14:
         measure_underlap14();return
     if args.bounded_underlap14:
