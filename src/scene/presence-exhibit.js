@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { createEraMotion } from './era-motion.js';
 import { createEraMechanisms } from './era-mechanisms.js';
+import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-pose.js';
 import { layoutMarkers } from './marker-layout.js';
 
 const modelUrl = new URL('../../assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb', import.meta.url).href;
@@ -192,11 +193,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   const anchors = Object.fromEntries(Object.entries(markerNodes).map(([id,[name,p]])=>{const landmark=model.getObjectByName('anchor-'+id);if(landmark)return [id,landmark];const o=new THREE.Object3D();o.position.set(...p);nodes[name].add(o);return [id,o];}));
   const billTip = model.getObjectByName('bill-contact');
   if(!billTip)throw new Error('Model contact landmark is missing.');
-  const exploded = {
-    breastplate:[-.70,-.12,.18], 'left-mantle':[.39,.09,0], 'right-mantle':[-.39,.09,0],
-    'left-wing-shield':[.11,-.04,.12], 'right-wing-shield':[-.11,-.04,.12],
-    'winding-drive':[-.45,-.10,.22], 'power-core':[.32,-.05,.28], processing:[.28,.20,0], 'cranial-cover':[0,.14,0],
-  };
+  const exploded = INSPECTION_EXPLODED_OFFSETS;
   const lines = {};
   Object.keys(exploded).forEach(name => { const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3()]),guideMat);guides.add(line);lines[name]=line; });
   let open = 0, separation = 0, targetOpen = 0, targetSeparation = 0, armed = false, era = 'builder', pointer, frameCount=0;
@@ -318,9 +315,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       names.forEach(name=>{nodes[name].position.copy(rest[name].position);nodes[name].rotation.copy(rest[name].rotation);});
       motion.tick(dt,snapshot);
     }
-    nodes.breastplate.rotation.y=-open*1.35;
-    nodes['cranial-cover'].position.y=rest['cranial-cover'].position.y+open*.08;
-    Object.entries(exploded).forEach(([name,offset])=>{nodes[name].position.addScaledVector(vector.set(...offset),separation);});
+    applyInspectionPose(nodes,rest,open,separation);
     model.updateMatrixWorld(true);
     mechanisms.tick(dt,snapshot,motion.driveMetrics(),{open,separation});
     billTip.getWorldPosition(worldTip);
