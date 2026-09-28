@@ -1,0 +1,194 @@
+{
+  "modelSha256": "48229ba5526ccd7a227db56d225ef88643eb6b3388eb07662452cc2c67636ac7",
+  "browser": "151.0.7922.34",
+  "network": "Loopback; analytics stubbed",
+  "images": [
+    "builder-contact-exhibit-frozen-threeQuarter.png",
+    "builder-contact-exhibit-frozen-left.png",
+    "builder-contact-exhibit-frozen-right.png",
+    "builder-contact-exhibit-frozen-head.png"
+  ],
+  "note": "Gold ring is the visitor attention reticle at world y=1.60, not the physical contact point. The physical target is the vertical rail at z=2.10, radius .021. Neutral lighting hides that rail; these exhibit-light views retain it.",
+  "motion": {
+    "era": "builder",
+    "powerMove": null,
+    "root": {
+      "x": 0,
+      "z": 1.0163560168040482,
+      "yaw": 0,
+      "speed": 0
+    },
+    "distance": 1.2663560168040473,
+    "steps": 8,
+    "time": 4.812599999999972,
+    "motionFrame": 479,
+    "settled": true,
+    "arrived": true,
+    "aligned": true,
+    "contact": true,
+    "camAngle": 0,
+    "mechanicalPhase": 0,
+    "mechanicalStage": "disengaged",
+    "actualArticulation": {
+      "leg": 0,
+      "wing": 0,
+      "tail": 0,
+      "neck": 0,
+      "jaw": 0
+    },
+    "cervical": {
+      "baseTranslationError": 0,
+      "skullTranslationError": 0,
+      "neckPitch": 0.6179740905761717,
+      "skullPitch": -0.6999729447502206,
+      "maxContactPitch": 0.65,
+      "contactMethod": "upper-bill triangle / rail-centre plane"
+    },
+    "contactPoint": [
+      0,
+      1.2072191473205343,
+      2.079000664144109
+    ],
+    "pose": {
+      "load": 0.6043452384197342,
+      "extension": 1,
+      "jaw": 0.09092500425777872,
+      "gaze": 0,
+      "guard": 0.9996186106637583,
+      "counter": 0.00018981893359001656
+    },
+    "maxFootError": 2.7755575615628914e-16,
+    "reachDrop": 0,
+    "maxReachDrop": 0,
+    "feet": [
+      {
+        "side": "left",
+        "target": [
+          0.2512859106063843,
+          0.27658537369966507,
+          0.9609527963052318
+        ],
+        "actual": [
+          0.2512859106063843,
+          0.27658537369966496,
+          0.9609527963052317
+        ],
+        "swinging": false,
+        "phase": 1,
+        "yaw": 0,
+        "steps": 4,
+        "solveError": 1.5700924586837752e-16,
+        "groundMin": 0.0019999999999998908
+      },
+      {
+        "side": "right",
+        "target": [
+          -0.2512859106063843,
+          0.27658537369966507,
+          0.9875610995834032
+        ],
+        "actual": [
+          -0.2512859106063843,
+          0.27658537369966507,
+          0.9875610995834032
+        ],
+        "swinging": false,
+        "phase": 1,
+        "yaw": 0,
+        "steps": 4,
+        "solveError": 0,
+        "groundMin": 0.002000000000000071
+      }
+    ],
+    "bodyBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -0.5372997214486026,
+        "y": 0.0019999999999998908,
+        "z": 0.6208487195597612
+      },
+      "max": {
+        "x": 0.5424888937696605,
+        "y": 1.5801835495976,
+        "z": 2.079115487857269
+      }
+    },
+    "headBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -0.18114367967945796,
+        "y": 1.0653060174915268,
+        "z": 1.3649481850268907
+      },
+      "max": {
+        "x": 0.18129981701486175,
+        "y": 1.5801835495976,
+        "z": 2.079115487857269
+      }
+    }
+  },
+  "snapshot": {
+    "state": "contact",
+    "phase": 0.049999999999999996,
+    "reach": {
+      "x": 0,
+      "y": 0
+    },
+    "paused": true,
+    "inspection": false,
+    "reducedMotion": false,
+    "era": "builder",
+    "goal": {
+      "x": 0,
+      "z": 1.02
+    },
+    "heading": 0,
+    "lookTarget": {
+      "x": 0,
+      "y": 1.2,
+      "z": 2.65
+    },
+    "speed": 0,
+    "agitation": 1,
+    "visitorPresent": true,
+    "actionKind": "visitor",
+    "beatId": null,
+    "intention": "respond to the visitor at the selected rail",
+    "routeKind": "visitor-approach",
+    "actionFamily": "visitor-strike",
+    "intensity": 1,
+    "recoveryStyle": "complete committed contact, then disengage",
+    "inspectionRequested": false,
+    "canReach": false,
+    "capabilities": {
+      "autonomousLocomotion": true,
+      "externalArticulation": false,
+      "mechanicalRoutine": false,
+      "visitorTracking": true,
+      "visitorResponse": true,
+      "cageTesting": true,
+      "predatoryBehavior": true,
+      "internalPower": true,
+      "inspectionAssemblies": [
+        "power-core",
+        "distribution",
+        "actuators",
+        "sensors",
+        "processing"
+      ]
+    },
+    "energy": null,
+    "routineRunning": false,
+    "articulation": {
+      "leg": 0,
+      "wing": 0,
+      "tail": 0,
+      "neck": 0,
+      "jaw": 0
+    },
+    "powerMove": null,
+    "powerMovePending": null,
+    "pendingEra": null
+  },
+  "status": "passed"
+}

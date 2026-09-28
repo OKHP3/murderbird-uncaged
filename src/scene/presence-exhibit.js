@@ -4,8 +4,9 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { createEraMotion } from './era-motion.js';
 import { createEraMechanisms } from './era-mechanisms.js';
+import { layoutMarkers } from './marker-layout.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb', import.meta.url).href;
+const modelUrl = new URL('../../assets/models/uncaged-neutral-v2/murderbird-neutral-v2.glb', import.meta.url).href;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
@@ -221,6 +222,9 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   function reviewCamera(name) {
     const views={
       threeQuarter:{target:[0,1,0],offset:[-2.8,1.25,4.3]},
+      threeQuarterLeft:{target:[0,1,0],offset:[2.8,1.25,4.3]},
+      elevated:{target:[0,1,0],offset:[-2.8,3.4,4.3]},
+      low:{target:[0,1,0],offset:[-2.8,-.7,4.3]},
       front:{target:[0,1,0],offset:[0,1.0,5.2]},
       rear:{target:[0,1,0],offset:[0,1.0,-5.2]},
       left:{target:[0,1,0],offset:[5.2,1.0,0]},
@@ -341,13 +345,15 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       const b=nodes[name].getWorldPosition(new THREE.Vector3());
       line.geometry.setFromPoints([a,b]);line.computeLineDistances();
     });
-    Object.entries(anchors).forEach(([id,anchor])=>{
+    const projectedMarkers = Object.entries(anchors).map(([id,anchor])=>{
       const mechanism=['drive','power','mind'].includes(id);
       const point=mechanism?mechanisms.getAnchor(id):anchor.getWorldPosition(vector);
       const present=Boolean(point);
       if(point)vector.copy(point);vector.project(camera);
-      updateMarker(id,(vector.x+1)*lastWidth/2,(1-vector.y)*lastHeight/2,present&&open>.8&&vector.z<1&&Math.abs(vector.x)<.94&&Math.abs(vector.y)<.86);
+      return {id,x:(vector.x+1)*lastWidth/2,y:(1-vector.y)*lastHeight/2,visible:present&&open>.8&&vector.z<1&&Math.abs(vector.x)<.94&&Math.abs(vector.y)<.86};
     });
+    projectedMarkers.filter(marker=>!marker.visible).forEach(marker=>updateMarker(marker.id,marker.x,marker.y,false));
+    layoutMarkers(projectedMarkers,lastWidth,lastHeight).forEach(marker=>updateMarker(marker.id,marker.x,marker.y,true,marker));
     if(highlight.visible){const part=mechanisms.getPart(selected)||nodes[markerNodes[selected]?.[0]];if(part?.visible)highlight.box.setFromObject(part);else highlight.visible=false;}
     renderer.render(scene,camera);
   }

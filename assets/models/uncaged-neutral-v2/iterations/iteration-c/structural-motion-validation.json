@@ -1,0 +1,144 @@
+{
+  "generatedAt": "2026-09-27T23:35:33.781Z",
+  "model": "assets/models/uncaged-neutral-v2/murderbird-neutral-v2.glb",
+  "checks": [
+    {
+      "name": "three-front-rails-use-articulated-cervical-contact-through-recovery",
+      "status": "passed",
+      "result": {
+        "rails": [
+          {
+            "normalizedX": -1,
+            "targetX": -1.2,
+            "root": {
+              "x": -1.1974485958469823,
+              "z": 1.0172997639380565,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              -1.2,
+              1.4119681034208065,
+              2.079002317165706
+            ],
+            "radial": 0.02099768283429393,
+            "maxPitch": 0.536474957592819,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009379439961437,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497270196486629,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 0,
+            "targetX": 0,
+            "root": {
+              "x": 0,
+              "z": 1.016100666732072,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              0,
+              1.409854973909894,
+              2.079001284305498
+            ],
+            "radial": 0.020998715694501957,
+            "maxPitch": 0.5416955959216619,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009382445945324,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497269809442745,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 1,
+            "targetX": 1.2,
+            "root": {
+              "x": 1.1974485958469823,
+              "z": 1.0172997639380565,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              1.2,
+              1.4119681034208065,
+              2.079002317165706
+            ],
+            "radial": 0.02099768283429393,
+            "maxPitch": 0.536474957592819,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.23991766383720647,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06503899041031656,
+            "finishedState": "recover"
+          }
+        ],
+        "noTelescoping": true,
+        "allThreeRailsContacted": true
+      }
+    },
+    {
+      "name": "maker-five-controls-have-visible-structural-response",
+      "status": "passed",
+      "result": {
+        "channels": {
+          "leg": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "wing": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "tail": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": "compact-articulated-tail"
+          },
+          "neck": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "jaw": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          }
+        },
+        "rootRemainsFixed": true
+      }
+    },
+    {
+      "name": "mechanic-turn-retains-grounded-motion-without-builder-contact",
+      "status": "passed",
+      "result": {
+        "maxYaw": 1.5707963267948966,
+        "steps": 8,
+        "maxFootError": 3.0150272531948617e-16,
+        "routineRunning": true
+      }
+    },
+    {
+      "name": "jump-and-thrust-inspection-wait-for-safe-pose",
+      "status": "passed",
+      "result": {
+        "jumpPhaseAtRequest": 0.30952380952380953,
+        "jumpInspectionWaitedForLanding": true,
+        "thrustPhaseAtRequest": 0.303030303030303,
+        "thrustInspectionWaitedForSettle": true
+      }
+    }
+  ],
+  "status": "passed",
+  "report": "assets/audit/neutral-v2/structural-motion-validation.json"
+}

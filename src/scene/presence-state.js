@@ -8,10 +8,12 @@
  * no residual root motion. Contact states are gated on all three signals.
  *
  * Maker and Mechanic remain static interpretive studies. The Builder alone
- * receives autonomous pacing, cage tests, and visitor-directed attacks.
- * `cage-test` uses a 2.4 s normalized phase for a slow press: 0.32 build,
- * 0.43 hold, then 0.25 release. Renderer feedback remains responsible for
- * locomotion, feet, contact geometry, and articulation.
+ * receives autonomous pacing, varied route plans, cage tests, and
+ * visitor-directed attacks. Autonomous beat families choose distinct routes,
+ * attention points, intensity and timing. They still share the existing
+ * normalized cage-test motion profile until the renderer implements those
+ * family tags. Renderer feedback remains responsible for locomotion, feet,
+ * contact geometry, and articulation.
  */
 
 export const PRESENCE_DURATIONS = Object.freeze({
@@ -33,17 +35,24 @@ export const CAGE_TEST_PHASE = Object.freeze({ buildEnd: 0.32, holdEnd: 0.75, re
 
 const MAX_FRAME_DELTA = 0.1;
 const VALID_ERAS = new Set(['maker', 'mechanic', 'builder']);
-const PACE_X = [-1.35, -0.65, 0.65, 1.35];
-const PACE_Z = [-0.42, 0.08, 0.42];
 const RAIL_X = [-1.2, 0, 1.2];
 // Structural v1 bill reaches the rail through bounded cervical rotation.
 // Approach the shorter fixed-length neck before committing the planted strike.
 const FRONT_CONTACT_Z = 1.02;
+const AUTONOMOUS_BEATS = Object.freeze([
+  Object.freeze({ id:'left-sweep', intention:'Sweep the left side before testing its rail.', routeKind:'left-sweep', actionFamily:'edge-probe', intensity:.56, recoveryStyle:'step-back-and-look-up', routeGoal:{x:-1.35,z:-.42}, routeFocus:{x:-1.2,y:1.18,z:1.1}, boundaryGoal:{x:-1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:-1.2,y:1.3,z:2.15}, recoveryFocus:{x:-1.2,y:1.38,z:2.5}, watch:[1.2,2.3], boundary:[.8,1.45], action:[1.8,2.55], recovery:[.72,1.08] }),
+  Object.freeze({ id:'right-sweep', intention:'Sweep the right side, then push at the outer rail.', routeKind:'right-sweep', actionFamily:'rail-press', intensity:.72, recoveryStyle:'hold-low-then-turn', routeGoal:{x:1.35,z:-.42}, routeFocus:{x:1.2,y:1.15,z:.9}, boundaryGoal:{x:1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:1.2,y:1.3,z:2.1}, recoveryFocus:{x:.65,y:1.05,z:1.9}, watch:[1.7,3.0], boundary:[1.05,1.75], action:[2.1,2.8], recovery:[.9,1.35] }),
+  Object.freeze({ id:'cross-left-to-center', intention:'Cross inward and test the center seam.', routeKind:'cross-inward', actionFamily:'seam-rattle', intensity:.64, recoveryStyle:'recenter-and-reorient', routeGoal:{x:-.65,z:.42}, routeFocus:{x:0,y:1.42,z:.55}, boundaryGoal:{x:0,z:FRONT_CONTACT_Z}, boundaryFocus:{x:0,y:1.25,z:2.25}, recoveryFocus:{x:0,y:1.48,z:2.5}, watch:[1.4,2.8], boundary:[.75,1.3], action:[1.55,2.25], recovery:[.65,1.15] }),
+  Object.freeze({ id:'cross-right-to-center', intention:'Cross inward from the right and press the middle rail.', routeKind:'cross-inward', actionFamily:'rail-press', intensity:.82, recoveryStyle:'step-back-and-look-up', routeGoal:{x:.65,z:.42}, routeFocus:{x:0,y:1.15,z:.6}, boundaryGoal:{x:0,z:FRONT_CONTACT_Z}, boundaryFocus:{x:0,y:1.22,z:2.2}, recoveryFocus:{x:0,y:1.36,z:2.45}, watch:[1.8,3.2], boundary:[1.0,1.65], action:[1.9,2.7], recovery:[.85,1.4] }),
+  Object.freeze({ id:'back-corner-left', intention:'Check the rear-left corner before returning to the bars.', routeKind:'corner-check', actionFamily:'seam-rattle', intensity:.48, recoveryStyle:'hold-low-then-turn', routeGoal:{x:-1.35,z:.42}, routeFocus:{x:-1.15,y:1.55,z:-.15}, boundaryGoal:{x:1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:1.2,y:1.28,z:2.15}, recoveryFocus:{x:1.2,y:1.08,z:1.8}, watch:[2.0,3.4], boundary:[1.15,1.9], action:[1.45,2.1], recovery:[1.05,1.55] }),
+  Object.freeze({ id:'back-corner-right', intention:'Check the rear-right corner, then probe the opposite rail.', routeKind:'corner-check', actionFamily:'edge-probe', intensity:.68, recoveryStyle:'recenter-and-reorient', routeGoal:{x:1.35,z:.42}, routeFocus:{x:1.15,y:1.5,z:-.15}, boundaryGoal:{x:-1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:-1.2,y:1.25,z:2.1}, recoveryFocus:{x:-.6,y:1.3,z:2.15}, watch:[1.5,2.7], boundary:[1.0,1.7], action:[1.7,2.45], recovery:[.78,1.2] }),
+  Object.freeze({ id:'short-center-check', intention:'Pause near center, then make a brief direct test.', routeKind:'short-approach', actionFamily:'rail-press', intensity:.52, recoveryStyle:'recenter-and-reorient', routeGoal:{x:0,z:-.42}, routeFocus:{x:0,y:1.25,z:.7}, boundaryGoal:{x:-1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:-1.2,y:1.25,z:2.2}, recoveryFocus:{x:0,y:1.35,z:2.35}, watch:[2.2,3.8], boundary:[.65,1.1], action:[1.35,1.95], recovery:[.7,1.1] }),
+  Object.freeze({ id:'side-step-center', intention:'Side-step across the front and test the opposite seam.', routeKind:'front-crossing', actionFamily:'edge-probe', intensity:.76, recoveryStyle:'hold-low-then-turn', routeGoal:{x:.65,z:.08}, routeFocus:{x:.8,y:1.18,z:1.0}, boundaryGoal:{x:-1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:-1.2,y:1.32,z:2.2}, recoveryFocus:{x:-.5,y:1.05,z:1.9}, watch:[1.3,2.6], boundary:[.9,1.55], action:[2.0,2.65], recovery:[.88,1.3] }),
+]);
 const NORMALIZED_LIMIT = 1;
 
 const finiteNumber = (value, fallback = 0) => typeof value === 'number' && Number.isFinite(value) ? value : fallback;
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
-const lerp = (a, b, t) => a + (b - a) * t;
 const clonePoint = point => point ? { ...point } : null;
 
 function makeRandom(seed) {
@@ -89,6 +98,9 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
   let retreatRequested = false;
   let reducedStopPending = false;
   let reducedStopSpeed = 0;
+  let currentBeat = null;
+  let recentBeatIds = [];
+  let recentActionFamilies = [];
 
   function canReachNow() {
     return era === 'builder'
@@ -131,6 +143,12 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
       agitation: clamp(agitation, 0, 1),
       visitorPresent,
       actionKind,
+      beatId: currentBeat?.id ?? null,
+      intention: currentBeat?.intention ?? (visitorPresent ? 'respond to the visitor at the selected rail' : null),
+      routeKind: currentBeat?.routeKind ?? (visitorPresent ? 'visitor-approach' : null),
+      actionFamily: currentBeat?.actionFamily ?? (visitorPresent ? 'visitor-strike' : null),
+      intensity: currentBeat?.intensity ?? (visitorPresent ? 1 : null),
+      recoveryStyle: currentBeat?.recoveryStyle ?? (visitorPresent ? 'complete committed contact, then disengage' : null),
       inspectionRequested,
       canReach: canReachNow(),
     });
@@ -142,6 +160,29 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
 
   function durationBetween([min, max]) {
     return min + random() * (max - min);
+  }
+
+  function chooseAutonomousBeat() {
+    let candidates = AUTONOMOUS_BEATS.filter(beat =>
+      !recentBeatIds.includes(beat.id)
+      && !recentActionFamilies.includes(beat.actionFamily));
+    if (!candidates.length) candidates = AUTONOMOUS_BEATS.filter(beat => !recentBeatIds.includes(beat.id));
+    if (!candidates.length) candidates = AUTONOMOUS_BEATS;
+    const beat = candidates[Math.floor(random() * candidates.length)];
+    recentBeatIds = [...recentBeatIds, beat.id].slice(-3);
+    recentActionFamilies = [...recentActionFamilies, beat.actionFamily].slice(-2);
+    return beat;
+  }
+
+  function scheduleAutonomousWatch({ nextAgitation = agitation } = {}) {
+    currentBeat = chooseAutonomousBeat();
+    lookTarget = clonePoint(currentBeat.boundaryFocus);
+    enter('watch', durationBetween(currentBeat.watch), {
+      goal: null,
+      lookTarget,
+      actionKind: null,
+      agitation: nextAgitation,
+    });
   }
 
   function setGoal(nextGoal, nextHeading = heading) {
@@ -174,29 +215,15 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     return true;
   }
 
-  function chooseWatchRoute() {
-    if (random() < 0.68) {
-      const x = PACE_X[Math.floor(random() * PACE_X.length)];
-      const z = PACE_Z[Math.floor(random() * PACE_Z.length)];
-      if (Math.abs(x - lastPosition.x) < 0.1 && Math.abs(z - lastPosition.z) < 0.1) {
-        return { state: 'pace', goal: { x: -x, z: z === PACE_Z[0] ? PACE_Z[2] : PACE_Z[0] } };
-      }
-      return { state: 'pace', goal: { x, z } };
-    }
-    const x = RAIL_X[Math.floor(random() * RAIL_X.length)];
-    return { state: 'boundary', goal: { x, z: FRONT_CONTACT_Z } };
-  }
-
   function headingTo(nextGoal) {
     return Math.atan2(nextGoal.x - lastPosition.x, nextGoal.z - lastPosition.z);
   }
 
   function startBoundary() {
-    const x = RAIL_X[Math.floor(random() * RAIL_X.length)];
-    const nextGoal = { x, z: FRONT_CONTACT_Z };
+    const nextGoal = currentBeat?.boundaryGoal ?? { x: 0, z: FRONT_CONTACT_Z };
     setGoal(nextGoal, 0);
-    lookTarget = { x, y: 1.28, z: 2.1 };
-    agitation = Math.min(0.9, agitation + 0.12);
+    lookTarget = clonePoint(currentBeat?.boundaryFocus) ?? { x: nextGoal.x, y: 1.28, z: 2.1 };
+    agitation = Math.min(0.94, agitation + .04 + (currentBeat?.intensity ?? .5) * .08);
   }
 
   function visitorTarget(point) {
@@ -249,7 +276,8 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
           reducedStopSpeed = 0;
           visitorPresent = false;
           actionKind = null;
-          enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, agitation: Math.min(agitation, 0.48) });
+          currentBeat = null;
+          enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, actionKind: null, agitation: Math.min(agitation, 0.48) });
         }
         return snapshot();
       }
@@ -257,11 +285,13 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
       else if (state === 'settle' && elapsed >= stateDuration && fb.settled === true) {
         visitorPresent = false;
         actionKind = null;
-        enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null });
+        currentBeat = null;
+        enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, actionKind: null });
       } else if (state !== 'watch' && state !== 'notice' && state !== 'settle') {
         visitorPresent = false;
         actionKind = null;
-        enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null });
+        currentBeat = null;
+        enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, actionKind: null });
       }
       return snapshot();
     }
@@ -269,15 +299,12 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     switch (state) {
       case 'watch': {
         if (elapsed >= stateDuration) {
-          const route = chooseWatchRoute();
-          if (route.state === 'pace') {
-            setGoal(route.goal, headingTo(route.goal));
-            agitation = Math.min(0.82, agitation + 0.04);
-            enter('pace', Math.max(PRESENCE_DURATIONS.paceMinimum, 1.6 + Math.hypot(route.goal.x - lastPosition.x, route.goal.z - lastPosition.z)), { goal: route.goal, heading: headingTo(route.goal) });
-          } else {
-            startBoundary();
-            enter('boundary', Math.max(PRESENCE_DURATIONS.boundaryMinimum, 1.1 + Math.abs(goal.x - lastPosition.x) * 0.3), { goal, heading: 0 });
-          }
+          if (!currentBeat) currentBeat = chooseAutonomousBeat();
+          const route = currentBeat.routeGoal;
+          setGoal(route, headingTo(route));
+          lookTarget = clonePoint(currentBeat.routeFocus);
+          agitation = Math.min(0.84, agitation + currentBeat.intensity * 0.025);
+          enter('pace', Math.max(PRESENCE_DURATIONS.paceMinimum, 1.25 + Math.hypot(route.x - lastPosition.x, route.z - lastPosition.z) * 1.05), { goal: route, heading: headingTo(route), lookTarget });
         }
         break;
       }
@@ -285,19 +312,20 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
         if (elapsed >= stateDuration && settledFeedback(fb)) {
           lastPosition = goal ? { x: goal.x, z: goal.z } : lastPosition;
           startBoundary();
-          enter('boundary', Math.max(PRESENCE_DURATIONS.boundaryMinimum, 1.1 + Math.abs(goal.x - lastPosition.x) * 0.3), { goal, heading: 0 });
+          enter('boundary', durationBetween(currentBeat?.boundary ?? [1.0, 1.7]), { goal, heading: 0, lookTarget });
         }
         break;
       case 'boundary':
         if (elapsed >= stateDuration && settledFeedback(fb)) {
-          lastPosition = goal ? { x: goal.x, z: FRONT_CONTACT_Z } : lastPosition;
-          agitation = Math.min(0.94, agitation + 0.08);
-          enter('cage-test', PRESENCE_DURATIONS.cageTest, { goal: { x: lastPosition.x, z: FRONT_CONTACT_Z }, heading: 0, actionKind: 'cage', agitation });
+          lastPosition = goal ? { x: goal.x, z: goal.z } : lastPosition;
+          agitation = Math.min(0.98, agitation + (currentBeat?.intensity ?? .5) * .09);
+          enter('cage-test', durationBetween(currentBeat?.action ?? [PRESENCE_DURATIONS.cageTest, PRESENCE_DURATIONS.cageTest]), { goal: { ...lastPosition }, heading: 0, actionKind: 'cage', agitation });
         }
         break;
       case 'cage-test':
         if (elapsed >= stateDuration) {
-          enter('recover', PRESENCE_DURATIONS.recover, { goal: null, actionKind: 'cage', agitation: Math.min(1, agitation + 0.05) });
+          lookTarget = clonePoint(currentBeat?.recoveryFocus) ?? lookTarget;
+          enter('recover', durationBetween(currentBeat?.recovery ?? [PRESENCE_DURATIONS.recover, PRESENCE_DURATIONS.recover]), { goal: null, actionKind: 'cage', lookTarget, agitation: Math.min(1, agitation + (currentBeat?.intensity ?? .5) * .06) });
         }
         break;
       case 'notice':
@@ -345,12 +373,12 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
             visitorPresent = false;
             actionKind = null;
             agitation = Math.max(0.4, agitation - 0.12);
-            enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, agitation });
+            scheduleAutonomousWatch({ nextAgitation:agitation });
           }
         }
         break;
       default:
-        enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null });
+        scheduleAutonomousWatch();
     }
     emit();
     return snapshot();
@@ -364,6 +392,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     const worldX = RAIL_X.reduce((closest, candidate) => Math.abs(candidate - x * 1.2) < Math.abs(closest - x * 1.2) ? candidate : closest, RAIL_X[0]);
     reach = { x, y };
     reachWorldX = worldX;
+    currentBeat = null;
     visitorPresent = true;
     retreatRequested = false;
     lookTarget = visitorTarget(reach);
@@ -404,6 +433,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     if (next) {
       visitorPresent = false;
       retreatRequested = false;
+      currentBeat = null;
       // Inspection interrupts any reaction immediately. The renderer grounds
       // the pose during settle and only then may expose the parts.
       actionKind = null;
@@ -414,7 +444,8 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
       visitorPresent = false;
       actionKind = null;
       agitation = Math.max(0.42, agitation);
-      enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, lookTarget, actionKind: null, agitation });
+      if (era === 'builder' && !reducedMotion) scheduleAutonomousWatch({ nextAgitation:agitation });
+      else enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, lookTarget, actionKind: null, agitation });
     } else {
       emit();
     }
@@ -435,6 +466,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     if (reducedMotion === next) return snapshot();
     reducedMotion = next;
     if (next && !inspection) {
+      currentBeat = null;
       const wasTraveling = ['pace', 'boundary', 'approach'].includes(state);
       visitorPresent = false;
       retreatRequested = false;
@@ -461,6 +493,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     if (!VALID_ERAS.has(value)) return false;
     if (era === value) return true;
     era = value;
+    currentBeat = null;
     visitorPresent = false;
     retreatRequested = false;
     actionKind = null;
@@ -471,12 +504,15 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     reachWorldX = 0;
     if (inspection) enter('inspection', 0, { goal: null, actionKind: null, agitation: Math.min(agitation, 0.3) });
     else if (inspectionRequested) enter('settle', PRESENCE_DURATIONS.settle, { goal: null, actionKind: null });
+    else if (value === 'builder' && !reducedMotion) scheduleAutonomousWatch({ nextAgitation:.42 });
     else enter('watch', durationBetween(PRESENCE_DURATIONS.watch), { goal: null, actionKind: null, agitation: value === 'builder' ? 0.42 : 0.12 });
     return true;
   }
 
   function reset() {
     random = makeRandom(initialSeed);
+    recentBeatIds = [];
+    recentActionFamilies = [];
     elapsed = 0;
     stateDuration = durationBetween(PRESENCE_DURATIONS.watch);
     reach = { x: 0, y: 0 };
@@ -490,13 +526,23 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
     reducedStopSpeed = 0;
     actionKind = null;
     agitation = era === 'builder' ? 0.42 : 0.12;
+    currentBeat = null;
     state = inspection ? 'inspection' : inspectionRequested ? 'settle' : 'watch';
     if (state === 'settle') stateDuration = PRESENCE_DURATIONS.settle;
+    else if (state === 'watch' && era === 'builder' && !reducedMotion) {
+      currentBeat = chooseAutonomousBeat();
+      lookTarget = clonePoint(currentBeat.boundaryFocus);
+      stateDuration = durationBetween(currentBeat.watch);
+    } else stateDuration = durationBetween(PRESENCE_DURATIONS.watch);
     emit();
     return snapshot();
   }
 
-  stateDuration = durationBetween(PRESENCE_DURATIONS.watch);
+  if (era === 'builder' && !reducedMotion) {
+    currentBeat = chooseAutonomousBeat();
+    lookTarget = clonePoint(currentBeat.boundaryFocus);
+    stateDuration = durationBetween(currentBeat.watch);
+  } else stateDuration = durationBetween(PRESENCE_DURATIONS.watch);
 
   return Object.freeze({
     update,

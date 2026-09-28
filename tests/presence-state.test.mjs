@@ -37,6 +37,47 @@ test('autonomous Builder cycle reaches pacing, a rail contact, cage press, and r
   assert.deepEqual(CAGE_TEST_PHASE, { buildEnd: 0.32, holdEnd: 0.75, releaseEnd: 1 });
 });
 
+test('autonomous plans vary route, attention, family, intensity, and recovery with seeded cooldowns', () => {
+  const trace = seed => {
+    const machine = createPresenceState({ seed });
+    const beats = [];
+    let lastState = machine.getSnapshot().state;
+    for (let i = 0; i < 1200; i += 1) {
+      const state = machine.update(0.1, READY);
+      if (state.state === 'pace' && lastState !== 'pace') {
+        beats.push({
+          id: state.beatId,
+          intention: state.intention,
+          route: state.routeKind,
+          family: state.actionFamily,
+          intensity: state.intensity,
+          recovery: state.recoveryStyle,
+          goal: state.goal,
+          look: state.lookTarget,
+        });
+      }
+      lastState = state.state;
+    }
+    return beats;
+  };
+
+  const first = trace(20260927);
+  assert.deepEqual(first, trace(20260927), 'same seed must reproduce the same authored beat sequence');
+  assert.ok(first.length >= 7, 'two simulated minutes should contain several complete encounter plans');
+  assert.ok(new Set(first.map(beat => beat.id)).size >= 5);
+  assert.ok(new Set(first.map(beat => beat.route)).size >= 4);
+  assert.ok(new Set(first.map(beat => beat.family)).size >= 3);
+  assert.ok(new Set(first.map(beat => `${beat.goal.x},${beat.goal.z}`)).size >= 5);
+  assert.ok(new Set(first.map(beat => `${beat.look.x},${beat.look.y},${beat.look.z}`)).size >= 4);
+  assert.ok(new Set(first.map(beat => beat.intention)).size >= 5);
+  assert.ok(new Set(first.map(beat => beat.recovery)).size >= 2);
+  assert.ok(first.every(beat => beat.intensity > 0 && beat.intensity <= 1));
+  for (let index = 1; index < first.length; index += 1) {
+    assert.notEqual(first[index].id, first[index - 1].id, 'the next route must not repeat the last plan');
+    assert.notEqual(first[index].family, first[index - 1].family, 'the next plan must switch action family');
+  }
+});
+
 test('visitor reach maps normalized input to a discrete world rail and runs one gated sequence', () => {
   const machine = createPresenceState({ seed: 1 });
   assert.equal(machine.requestReach({ x: 0.9, y: -0.5 }), true);

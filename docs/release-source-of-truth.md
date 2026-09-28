@@ -12,6 +12,8 @@
 
 Local builds record whether tracked or untracked changes existed at build time. CI release builds must be clean. The manifest contains only public output paths and hashes, never local filesystem paths or archive inventories.
 
+For local boundary checks, `scripts/verify-publication.mjs` reads the emitted manifest's current path inventory, verifies each listed file's byte count and hash, and checks the active exhibit model and three era previews against the current model inventory's recorded hashes. Historical review media is checked by its separate pinned inventory. The retired exterior-v1 validator's former fixed checkpoint count is not a current release requirement.
+
 ## September 27 reconciliation
 
 Baseline `96514f4a9264dce4de4fde746385a7439b4cb587` integrated the exterior assessment, runtime, folio, and authorized gallery through PR #12. Both inspected Mac checkouts were clean at that revision.

@@ -1,5 +1,8 @@
 # MurderBird: Uncaged — local production handoff
 
+**New local correction:** [neutral v2 Stage B review](correction-v2-stage-b-review.md) supersedes the local model below for correction work. It remains an unapproved, unpublished geometry proposal. The exterior-v1 publication described below stays the historical assessed release.
+
+
 **Current stage: three exterior construction states v1, technically validated but not yet meeting the full artistic likeness criteria.** This continues the clean structural checkpoint `21ac417` in `/Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged`. The owner's subsequent exterior brief authorizes continued geometry and surfacing work; it does not retroactively approve the previous likeness study. The original evaluated checkpoint `2c22a50` and all historical production assets remain preserved. The owner subsequently authorized publication for assessment. The [publication record](publication-review-2026-09-27.md) governs the release derivative; previous local receipts retain their dated scope.
 
 ## Current deliverables
@@ -47,6 +50,6 @@ The frozen combined GLB is 16,956,956 bytes, SHA-256 `3ec668b0b9bbaf1cb546ec2e04
 
 Regeneration uses `scripts/build-uncaged-exterior-v1.py` in Blender and verifies both the historical structural source and previously generated output hashes. Preserve any manual changes under a new version before regenerating. `render-exterior-authoring.py` creates authoring and matched clay proofs without saving changes into the source scene.
 
-The original `verify-exterior-assets.py` and capture/receipt generators describe the frozen 28-file local checkpoint. They are historical workflows, not validators for the current 130-file publication, and must not overwrite the pinned exterior-v1 receipts. Use `verify-publication.mjs` and `verify-publication-browser.mjs` for this integrated release; new receipts go under ignored `.local/publication/`.
+The former `verify-exterior-assets.py` checked a fixed 28-file checkpoint and overwrote the pinned exterior-v1 asset receipt. It is now a retired guard and has no active callers; dated checkpoint facts remain in the historical stage record. Current publication validation takes its emitted path inventory from `dist/release.json`, checks byte counts and hashes, then reads the explicit model and three era preview URLs selected by the active exhibit and fallback code. Those four paths must match `generatedFiles` entries in the current model's inventory, and each must have exactly one byte-identical emitted copy. Historical review media has its own pinned validator. `verify-publication.mjs` rejects outputs outside the dynamic release and authorized source inventory; `tests/publication-boundary.test.mjs` keeps an isolated unexpected-output fixture. Use `verify-publication.mjs` and `verify-publication-browser.mjs` for current releases; new receipts go under ignored `.local/publication/`.
 
 Use the current dated receipts and stage record for the checks actually performed. Local validation does not prove remote CI, fresh remote LFS retrieval, deployment, phone performance or owner acceptance. The primary clone was used read-only for guidance and preserved source media; this work remains in the production worktree.

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
+import {assertPublicationBoundary} from './publication-boundary.mjs';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 async function files(dir,prefix='') {
   const result=[];
@@ -27,11 +28,29 @@ for(const name of await files('public')) {
   assert.equal(sha(source),sha(built),'Public asset changed: '+name);
   allowed.add(name);
 }
-const core=JSON.parse(await readFile('assets/audit/exterior-v1/asset-validation.json','utf8')).models[0];
-const sources=[{path:core.path,bytes:core.bytes,sha256:core.sha256}];
-for(const era of ['maker','mechanic','builder']) {
-  const path=`assets/models/uncaged-exterior-v1/previews/${era}.png`,bytes=await readFile(path);
-  sources.push({path,bytes:bytes.length,sha256:sha(bytes)});
+const [presenceSource,fallbackSource]=await Promise.all([
+  readFile('src/scene/presence-exhibit.js','utf8'),
+  readFile('src/scene/fallback.js','utf8'),
+]);
+const modelPaths=[...presenceSource.matchAll(/new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.glb)['"],\s*import\.meta\.url\)/g)].map(match=>match[1]);
+assert.deepEqual(modelPaths,['assets/models/uncaged-neutral-v2/murderbird-neutral-v2.glb'],'The exhibit must select the authorized neutral-v2 GLB.');
+const previewPaths=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
+assert.deepEqual(Object.keys(previewPaths).sort(),['builder','maker','mechanic'],'Fallback must select exactly one preview for each era.');
+for(const [era,path] of Object.entries(previewPaths))assert.equal(path,`assets/models/uncaged-neutral-v2/${era}-preview.png`,`${era} fallback must select its authorized neutral-v2 preview.`);
+const neutralInventory=JSON.parse(await readFile('assets/models/uncaged-neutral-v2/neutral-inventory.json','utf8'));
+assert.equal(neutralInventory.status,'neutral geometry proposal awaiting owner review');
+assert(Array.isArray(neutralInventory.generatedFiles),'Neutral inventory must enumerate generated source files.');
+const generatedFiles=new Map(neutralInventory.generatedFiles.map(file=>[file.path,file]));
+assert.equal(generatedFiles.size,neutralInventory.generatedFiles.length,'Neutral inventory contains duplicate generated paths.');
+const activeModelSources=[...modelPaths,...Object.values(previewPaths)];
+const sources=[];
+for(const path of activeModelSources) {
+  const recorded=generatedFiles.get(path);
+  assert(recorded,`Active exhibit asset is absent from neutral inventory: ${path}`);
+  const bytes=await readFile(path);
+  assert.equal(bytes.length,recorded.bytes,`Inventory byte count differs: ${path}`);
+  assert.equal(sha(bytes),recorded.sha256,`Inventory hash differs: ${path}`);
+  sources.push({path,bytes:recorded.bytes,sha256:recorded.sha256});
 }
 sources.push(...JSON.parse(await readFile('provenance/story-media-publication-2026-09-27.json','utf8')).assets);
 const emitted=new Map();
@@ -48,14 +67,9 @@ for(const source of sources) {
   assert.equal(matches.length,1,'Expected one exact emitted copy: '+source.path);
   allowed.add(matches[0][0]);proof.push({...source,emitted:matches[0][0]});
 }
-for(const name of output) {
-  if(name.startsWith('review/'))continue; // Separate pinned-media validator.
-  if(/^assets\/[a-zA-Z][a-zA-Z0-9_.-]*-[a-zA-Z0-9_-]{8}\.(?:js|css)$/.test(name))allowed.add(name);
-  assert(allowed.has(name),'Unexpected runtime file: '+name);
-  assert(!/(?:^|\/)(?:\.local|provenance|context|audit|archives)(?:\/|$)|\.(?:blend|webm|zip|wav)$/i.test(name),'Private/source material: '+name);
-}
+assertPublicationBoundary(output,allowed);
 execFileSync('python3',['scripts/prepare-review-release.py','--check'],{stdio:'inherit'});
 await mkdir('.local/publication',{recursive:true});
-const report={generatedAt:new Date().toISOString(),status:'passed',revision:process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),modelSha256:core.sha256,media:proof,files:output};
+const report={generatedAt:new Date().toISOString(),status:'passed',revision:process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),modelSha256:generatedFiles.get(modelPaths[0]).sha256,media:proof,files:output};
 await writeFile('.local/publication/build-validation.json',JSON.stringify(report,null,2)+'\n');
 console.log(`Publication verified: ${output.length} files; ${proof.length} exact model/folio/fallback assets.`);
