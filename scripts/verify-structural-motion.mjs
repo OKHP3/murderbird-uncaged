@@ -78,6 +78,19 @@ function checkFixedNeckAndHead(run, metrics = run.motion.metrics()) {
   assert.ok(metrics.cervical, 'motion metrics must expose cervical structural checks');
   assert.ok(metrics.cervical.baseTranslationError < 1e-9, `neck pivot moved ${metrics.cervical.baseTranslationError}m`);
   assert.ok(metrics.cervical.skullTranslationError < 1e-9, `head pivot moved ${metrics.cervical.skullTranslationError}m`);
+  assert.ok(metrics.cervical.upperTranslationError < 1e-9, 'intermediate neck pivot translated');
+  assert.ok(Math.abs(metrics.cervical.totalPitch) <= metrics.cervical.maxContactPitch + 1e-6,
+    'total cervical bend exceeded its bound');
+  const upper = run.nodes['cervical-upper'];
+  assert.equal(metrics.cervical.jointCount, upper ? 2 : 1);
+  if (upper) {
+    assert.equal(upper.parent, run.nodes.neck);
+    assert.equal(run.nodes.head.parent, upper);
+    assert.ok(upper.position.distanceTo(run.rest['cervical-upper'].position) < 1e-9,
+      'intermediate attachment length changed');
+    assert.ok(Math.hypot(upper.quaternion.y, upper.quaternion.z) < 1e-9,
+      'intermediate journal rotated off its local X axis');
+  }
   assert.ok(Math.abs(metrics.cervical.neckPitch - run.rest.neck.rotation.x) <= metrics.cervical.maxContactPitch + 1e-6,
     `neck pitch exceeded its ${metrics.cervical.maxContactPitch}rad bound`);
 }
@@ -214,6 +227,7 @@ async function main() {
   const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
   template = await loadRigidValidation(bytes);
   assert.ok(template.scene, 'GLB parse returned no scene');
+  if (template.scene.getObjectByName('cervical-upper')) NODE_NAMES.push('cervical-upper');
   check('three-front-rails-use-articulated-cervical-contact-through-recovery', verifyThreeRailContact);
   check('maker-five-controls-have-visible-structural-response', verifyMakerChannels);
   check('mechanic-turn-retains-grounded-motion-without-builder-contact', verifyMechanicTurn);

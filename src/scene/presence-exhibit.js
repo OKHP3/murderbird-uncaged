@@ -129,6 +129,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   clearTimeout(timeout);
   const model = gltf.scene; scene.add(model);
   const names = ['body','neck','head','jaw','breastplate','cranial-cover','winding-drive','power-core','processing','industrial-repairs','builder-optics','left-mantle','right-mantle','left-wing-shield','right-wing-shield'];
+  if (model.getObjectByName('cervical-upper')) names.push('cervical-upper');
   const nodes = Object.fromEntries(names.map(name => [name, model.getObjectByName(name)]));
   if (names.some(name => !nodes[name]) || nodes['left-wing-shield']?.parent !== nodes['left-mantle'] || nodes['right-wing-shield']?.parent !== nodes['right-mantle']) {
     controls.dispose(); environment.dispose(); renderer.dispose(); canvas.remove();

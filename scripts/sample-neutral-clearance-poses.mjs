@@ -26,6 +26,7 @@ const INPUTS = [
   MODEL_PATH, 'package-lock.json', 'scripts/load-rigid-validation.mjs',
   'src/scene/era-controller.js', 'src/scene/presence-state.js',
   'src/scene/era-motion.js', 'src/scene/rigid-leg-kinematics.js',
+  'src/scene/cervical-articulation.js',
   'src/scene/inspection-pose.js', 'src/scene/era-mechanisms.js', fileURLToPath(import.meta.url),
 ];
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -40,6 +41,7 @@ const modelSha256 = sha(modelBytes);
 assert.equal(modelSha256, EXPECTED_MODEL_SHA256, `model SHA256 mismatch: expected ${EXPECTED_MODEL_SHA256}, got ${modelSha256}`);
 const template = await loadRigidValidation(modelBytes);
 assert.ok(template.scene, 'declared GLB parsed without a scene');
+if (template.scene.getObjectByName('cervical-upper')) CONTROL_NODES.push('cervical-upper');
 
 function makeRig(seed = 927) {
   const model = clone(template.scene);
@@ -190,6 +192,18 @@ function sampleEncounter() {
   return samples;
 }
 
+function sampleMakerNeckJaw() {
+  const rig = freshRun('maker');
+  assert.equal(rig.controller.setArticulation('neck', 1), true);
+  assert.equal(rig.controller.setArticulation('jaw', 1), true);
+  let frame;
+  for (let i = 0; i < 120; i += 1) frame = rig.step();
+  assert.equal(frame.metrics.actualArticulation.neck, 1);
+  assert.equal(frame.metrics.actualArticulation.jaw, 1);
+  return capture(rig, 'maker-neck-and-jaw-combined', 'maker-articulation', frame,
+    { requestedControls: { neck: 1, jaw: 1 }, individuallyExposedControlsCombined: true });
+}
+
 function samplePowerMove(kind, targetPhase, controllerStageExpected, motionStageExpected) {
   const rig = freshRun('builder');
   if (kind === 'thrust') {
@@ -280,11 +294,12 @@ const power = [
 ];
 const mechanic = sampleMechanicTurn();
 const inspection = [
-  sampleInspection(0, 0), sampleInspection(1, 0),
+  sampleInspection(0, 0), sampleInspection(.25, 0), sampleInspection(.5, 0),
+  sampleInspection(.75, 0), sampleInspection(1, 0),
   sampleInspection(1, .5), sampleInspection(1, 1),
 ];
 
-const allPoses = [restPose, ...makerSamples, ...Object.values(encounter), ...power, mechanic, ...inspection];
+const allPoses = [restPose, ...makerSamples, sampleMakerNeckJaw(), ...Object.values(encounter), ...power, mechanic, ...inspection];
 for (const pose of allPoses) {
   assert.equal(pose.pivotMatrices.length, restPose.pivotMatrices.length, `${pose.id}: transform node inventory changed`);
   assert.ok(pose.pivotMatrices.every(row => row.localMatrix.length === 16 && row.worldMatrix.length === 16));

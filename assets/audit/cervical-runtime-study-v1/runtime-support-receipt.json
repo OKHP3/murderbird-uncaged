@@ -1,0 +1,76 @@
+{
+  "status": "runtime support tested; candidate geometry held for joint plate interference",
+  "selectedAppModel": {
+    "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb",
+    "sha256": "c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385",
+    "bytes": 4636416
+  },
+  "diagnosticModel": {
+    "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.glb",
+    "sha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+    "bytes": 5104696
+  },
+  "sources": [
+    {
+      "path": "src/scene/cervical-articulation.js",
+      "sha256": "ce44ac4c0c57a2152fccef739b2abfd59bc7742799f63897603eb0fae7b25304",
+      "bytes": 1459
+    },
+    {
+      "path": "src/scene/era-motion.js",
+      "sha256": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+      "bytes": 34741
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "sha256": "6991d0bb11685790a4b875908bee76dac011779264823f9487364c42140859f0",
+      "bytes": 24858
+    },
+    {
+      "path": "scripts/verify-structural-motion.mjs",
+      "sha256": "8597990d5d818ddc17f4a349b6a80b3893c790ebbf381abe4cc35e7b3a5cb725",
+      "bytes": 12669
+    },
+    {
+      "path": "scripts/sample-neutral-clearance-poses.mjs",
+      "sha256": "afed863b785f5871efa1477fee3595ea961b70841e8e9eeb1ac7a04b756aa61d",
+      "bytes": 19281
+    }
+  ],
+  "checks": {
+    "v8LegacyRegression": {
+      "path": "assets/audit/cervical-runtime-study-v1/v8-regression/run-manifest.json",
+      "sha256": "0e3b29944170d8d9be2f4983fd5dcc41eb1772d2bf76a5b4d2958cd6a23d0133",
+      "bytes": 8484
+    },
+    "twoStageRegression": {
+      "path": "assets/audit/cervical-runtime-study-v1/two-stage-regression/run-manifest.json",
+      "sha256": "7b6230f8b73699b49177b7d6fb76564163fdb3b17a93e8d8a7ec56d54fc02a5c",
+      "bytes": 8643
+    },
+    "runtimePosePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/runtime-poses/pose-snapshot.json",
+      "sha256": "92027e2381ae67f9de0cb41215ea8ae485eab37828fbe312e2104bd97f153245",
+      "bytes": 5666404
+    },
+    "expandedPosePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "bytes": 6943410
+    }
+  },
+  "confirmed": [
+    "The selected app still loads V8 c8c30cc46059.",
+    "All seven existing affected checks passed against V8 with optional serial-joint support.",
+    "All seven affected checks passed against diagnostic attempt07, including stricter intermediate attachment and total cervical pitch assertions in the structural checker.",
+    "The model-specific three-rail contact solver uses both serial rotations and the loaded rigid bill triangles.",
+    "The expanded packet contains21 sampled actual runtime poses, including combined Maker neck+jaw and intermediate inspection openings."
+  ],
+  "limits": [
+    "Neither clearance nor likeness is certified by motion regressions.",
+    "Attempt07 has reported upper/lower guard interference and is not selected.",
+    "Era-specific drive hardware for the new upper joint remains unimplemented.",
+    "No current candidate WebGL, fallback or build verification for a two-stage model.",
+    "No physical simulation, engineering certification, owner artistic acceptance or publication."
+  ]
+}

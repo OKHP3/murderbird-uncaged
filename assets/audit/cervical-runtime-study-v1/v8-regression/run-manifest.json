@@ -1,0 +1,178 @@
+{
+  "startedAtUtc": "2026-09-28T12:10:54.231230+00:00",
+  "gitHead": "ae6cd85cc457b08c9c84635760b7679817c18ac0",
+  "model": {
+    "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb",
+    "sha256": "c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385",
+    "snapshot": "assets/audit/cervical-runtime-study-v1/v8-regression/frozen-model.glb",
+    "bytes": 4636416
+  },
+  "sourcesFrozenBeforeChecks": {
+    "src/main.js": "71ffb743f2af269f927ab24e0c7c709b67be2fcd9160cdb69310f3a01ba62418",
+    "src/scene/cervical-articulation.js": "ce44ac4c0c57a2152fccef739b2abfd59bc7742799f63897603eb0fae7b25304",
+    "src/scene/encounter-state.js": "1817e3b339f4d1dec8974b0fa3be7c1c9aaceac08ccb744ab76eeed4aa097822",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/era-mechanisms.js": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+    "src/scene/era-motion.js": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+    "src/scene/exhibit.js": "824a7ec32c90797bc40f2c4810732f7b420ac6ff5bd9caace62c59a5f3c89d5d",
+    "src/scene/fallback.js": "5c6a1ffb735cbfd18a0cfe3cb054a96ebf2ff29304db8d1dd9c7990c3fd3c40d",
+    "src/scene/folio-fallback.js": "b85f477e009ce0b2ca6b186f8dc74d205e958f20bada2851afaef78a8a7c371b",
+    "src/scene/inspection-pose.js": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71",
+    "src/scene/marker-layout.js": "2c46368fed37fa22089af493e0509bc7e19243fe5eb8f73ef859cff25e8715f1",
+    "src/scene/presence-exhibit.js": "6991d0bb11685790a4b875908bee76dac011779264823f9487364c42140859f0",
+    "src/scene/presence-motion.js": "f900421738c4817883464d2bb1b105d5d4d797751e95e7a4a5a11e0d42408934",
+    "src/scene/presence-state.js": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad",
+    "src/scene/rigid-leg-kinematics.js": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+    "scripts/verify-era-motion.mjs": "f5e9383b7bd67cddcb7f8688046db41c9afa99b271edb6b6f1aac8d1a34f501f",
+    "scripts/verify-structural-motion.mjs": "20c80b66db65210dfbfaa212c958d354de38d3d8e6918c5a4c73c25924edf889",
+    "scripts/verify-alignment-kinematics.mjs": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32",
+    "scripts/verify-advanced-power-moves.mjs": "196837a397127a50c3296ce87e1d4a3a782eba377ca3732fb3a0f140f340d16a",
+    "scripts/verify-claw-contact-v4.mjs": "105a49685de7e040dc3d732bece106670f719e2b518c84befd9ce00459777c27",
+    "scripts/verify-inspection-pose-v4.mjs": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c",
+    "scripts/verify-alignment-limb-clearance.mjs": "30eed3a0b8999192e7ba2546679a7fe420c235f74a56654265d5949b1d65e5fd",
+    "scripts/run-alignment-v7-checks.py": "4293e0d9c936263d1b57a34a88f9b107a37a56d9e6ed417de0e01a4f035f3307"
+  },
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "Darwin",
+    "architecture": "arm64"
+  },
+  "checks": [
+    {
+      "name": "verify-era-motion",
+      "command": [
+        "node",
+        "scripts/verify-era-motion.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-era-motion.log",
+      "logSha256": "6f2a3ac6992490646a2a467a037f0ec1e0398e00367f7631389a46c94dee436d",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-era-motion/motion-validation.json",
+          "sha256": "a909c6c2cdbb2abc90a873dd41e3e95b8700b620acc48ed1cc2c302f78173952",
+          "bytes": 181565
+        }
+      ]
+    },
+    {
+      "name": "verify-structural-motion",
+      "command": [
+        "node",
+        "scripts/verify-structural-motion.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-structural-motion.log",
+      "logSha256": "c8014b031ddc14de84b4cb682386e8f765d466d722b08cd5f27b7f257b808862",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-structural-motion/structural-motion-validation.json",
+          "sha256": "a42f5b0355c2e9612a0717992c0f255faf36290d340f629cc1d7a2889917e148",
+          "bytes": 4577
+        }
+      ]
+    },
+    {
+      "name": "verify-alignment-kinematics",
+      "command": [
+        "node",
+        "scripts/verify-alignment-kinematics.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-alignment-kinematics.log",
+      "logSha256": "3ae50a7a84f77835fd31aa2f0798214bd8abe1224fc1edfdb893aa2f4e545406",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-alignment-kinematics/kinematic-alignment.json",
+          "sha256": "efc04c729de4772639e4c09f9a2c3b7377d21ad35608c40ae3d8fee5b42cb7ff",
+          "bytes": 17707
+        }
+      ]
+    },
+    {
+      "name": "verify-advanced-power-moves",
+      "command": [
+        "node",
+        "scripts/verify-advanced-power-moves.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-advanced-power-moves.log",
+      "logSha256": "c8014b031ddc14de84b4cb682386e8f765d466d722b08cd5f27b7f257b808862",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-advanced-power-moves/power-move-validation.json",
+          "sha256": "af6fd0e8ab5de047329a0f571ae62442cfd4fc0f5fdfd6baf4a833581ce4b266",
+          "bytes": 2820
+        }
+      ]
+    },
+    {
+      "name": "verify-claw-contact-v4",
+      "command": [
+        "node",
+        "scripts/verify-claw-contact-v4.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-claw-contact-v4.log",
+      "logSha256": "5af1c5ed2c7e2c072b35d877f3ee83669eb92dbc8b66393baeea1061ee251a3a",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-claw-contact-v4/claw-contact-v4.json",
+          "sha256": "55d25a0506d32a8a834e9a62ac10550c775861c98d01b07481f8bbf1c6def049",
+          "bytes": 115440
+        }
+      ]
+    },
+    {
+      "name": "verify-inspection-pose-v4",
+      "command": [
+        "node",
+        "scripts/verify-inspection-pose-v4.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-inspection-pose-v4.log",
+      "logSha256": "59b2a8a76deeba722731d1626098bc6db7539a21a87018b14395de7d22dc0085",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-inspection-pose-v4/inspection-pose-validation.json",
+          "sha256": "b922c41aea1106e7e8c3cbca00a1eb8adff481e0502ca6f90d098aaed550045e",
+          "bytes": 33384
+        }
+      ]
+    },
+    {
+      "name": "verify-alignment-limb-clearance",
+      "command": [
+        "node",
+        "scripts/verify-alignment-limb-clearance.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-alignment-limb-clearance.log",
+      "logSha256": "1578427ddd59520f6503c2347ca8f8c9590f7bafd28ab259d8cb03bc555c3a4f",
+      "evidence": [
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-alignment-limb-clearance/limb-guard-clearance-c8c30cc46059.json",
+          "sha256": "dc07a8b8713c69e64d2decfcd0d44c51cf7d38cc2dac9ad846fb968bc24668f8",
+          "bytes": 94157
+        },
+        {
+          "path": "assets/audit/cervical-runtime-study-v1/v8-regression/verify-alignment-limb-clearance/verify-limb-guard-clearance-30eed3a0b899.mjs",
+          "sha256": "30eed3a0b8999192e7ba2546679a7fe420c235f74a56654265d5949b1d65e5fd",
+          "bytes": 20075
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Deterministic kinematic/geometry checks, not physical simulation.",
+    "Limb clearance checks sampled adjacent plate pairs only, excluding frame/bearings.",
+    "No authoring, browser, device, continuous collision or artistic acceptance."
+  ],
+  "sourceHashesUnchangedAfterChecks": true,
+  "modelUnchangedAfterChecks": true,
+  "completedAtUtc": "2026-09-28T12:12:19.774767+00:00",
+  "status": "pass"
+}
