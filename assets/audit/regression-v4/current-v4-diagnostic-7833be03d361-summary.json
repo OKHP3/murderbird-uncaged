@@ -1,0 +1,118 @@
+{
+  "status": "diagnostic-complete",
+  "generatedAt": "2026-09-28T04:34:27.838Z",
+  "diagnosticReport": {
+    "path": "assets/audit/regression-v4/current-v4-diagnostic-7833be03d361.json",
+    "bytes": 6010961,
+    "sha256": "a6ef8634ade5123f3045dc90438192487532a30d8e8b2eb10464880081c90e75"
+  },
+  "sourceFreezeManifest": {
+    "path": "assets/audit/regression-v4/current-v4-diagnostic-7833be03d361-source-freeze.json",
+    "bytes": 148956,
+    "sha256": "febd71d0598e7717604f3c842007781dcad376409cc813362c615456ebd7b5c5"
+  },
+  "productionGitHead": "698c0493f7238286391755945596e9a861d02283",
+  "workingTreeSnapshot": "Uncommitted production working-tree source captured in ignored local snapshot; source/module/model hashes matched before and after copy.",
+  "combinedSourceHash": "7833be03d361216ad3665eef0b7759341f29f2de860bc1e4eea1c39977843d75",
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "model": {
+    "path": "assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb",
+    "bytes": 3951544,
+    "sha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299"
+  },
+  "runs": [
+    {
+      "seed": 927,
+      "measuredSeconds": 120,
+      "sampleCount": 1201,
+      "executedActionFamilyCounts": {
+        "rail-press": 2,
+        "claw-scrape": 1,
+        "edge-probe": 2,
+        "seam-rattle": 1
+      },
+      "rendererCageContactIntervalCount": 7,
+      "rendererClawContactIntervalCount": 1,
+      "clawActions": [
+        {
+          "start": 33.2,
+          "beatId": "front-left-floor-scrape",
+          "family": "claw-scrape",
+          "planFamily": "claw-scrape",
+          "side": "left",
+          "target": "floor-scrape",
+          "stagesObserved": [
+            "lift",
+            "contact",
+            "scrape",
+            "release",
+            "recovery"
+          ],
+          "hadRendererContact": true,
+          "end": 34.9,
+          "duration": 1.6999999999999957
+        }
+      ],
+      "clawTelemetrySamples": 20,
+      "warnings": []
+    },
+    {
+      "seed": 20260928,
+      "measuredSeconds": 120,
+      "sampleCount": 1201,
+      "executedActionFamilyCounts": {
+        "claw-scrape": 2,
+        "seam-rattle": 2,
+        "edge-probe": 1,
+        "rail-press": 1
+      },
+      "rendererCageContactIntervalCount": 8,
+      "rendererClawContactIntervalCount": 2,
+      "clawActions": [
+        {
+          "start": 9.6,
+          "beatId": "front-left-floor-scrape",
+          "family": "claw-scrape",
+          "planFamily": "claw-scrape",
+          "side": "left",
+          "target": "floor-scrape",
+          "stagesObserved": [
+            "lift",
+            "contact",
+            "scrape",
+            "release",
+            "recovery"
+          ],
+          "hadRendererContact": true,
+          "end": 11.2,
+          "duration": 1.5999999999999996
+        },
+        {
+          "start": 84.5,
+          "beatId": "front-left-floor-scrape",
+          "family": "claw-scrape",
+          "planFamily": "claw-scrape",
+          "side": "left",
+          "target": "floor-scrape",
+          "stagesObserved": [
+            "lift",
+            "contact",
+            "scrape",
+            "release",
+            "recovery"
+          ],
+          "hadRendererContact": true,
+          "end": 86.1,
+          "duration": 1.5999999999999943
+        }
+      ],
+      "clawTelemetrySamples": 38,
+      "warnings": []
+    }
+  ],
+  "limits": "No browser rendering, video, continuous human acting judgment, force simulation, audio, real-time performance, or exhaustive collision review. Renderer claw contact is based on distal-mesh proximity thresholds, not force or physical-contact proof. Distinct labels alone cannot close F08 or T06."
+}

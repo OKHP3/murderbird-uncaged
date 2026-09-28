@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-09-28T04:34:15.459605+00:00",
+  "modelSha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+  "images": [
+    {
+      "image": "alignment-front.png",
+      "sha256": "6774e34008a2adb0a310cb4204bdd74eb87b58f861260b1c922994acabc77b18",
+      "bytes": 1208801,
+      "modelSha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+      "sourceSha256": "b326481930a29e2ff6dc0203048d678f03f501582672643962707d71fc0c2333",
+      "camera": [
+        0,
+        -6,
+        1.08
+      ],
+      "target": [
+        0,
+        -0.1,
+        1.08
+      ],
+      "projection": "ORTHO",
+      "orthoScale": 2.4,
+      "lens": 70,
+      "lighting": "neutral workbench studio, no textures",
+      "scope": "authored reconstruction, not source metrology",
+      "path": "assets/audit/regression-v4/reviewed-models/bcfb03ef96c6/alignment-front.png"
+    },
+    {
+      "image": "alignment-side-right.png",
+      "sha256": "61a3ba47877abf3595bef56a495ecc6ad64023067a4328678aa75eb4c8f2fe9c",
+      "bytes": 1178711,
+      "modelSha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+      "sourceSha256": "b326481930a29e2ff6dc0203048d678f03f501582672643962707d71fc0c2333",
+      "camera": [
+        -6,
+        0,
+        1.08
+      ],
+      "target": [
+        0,
+        -0.1,
+        1.08
+      ],
+      "projection": "ORTHO",
+      "orthoScale": 2.4,
+      "lens": 70,
+      "lighting": "neutral workbench studio, no textures",
+      "scope": "authored reconstruction, not source metrology",
+      "path": "assets/audit/regression-v4/reviewed-models/bcfb03ef96c6/alignment-side-right.png"
+    },
+    {
+      "image": "alignment-rear.png",
+      "sha256": "e2898da6ecf5a7eb015dde85a497704cc61c7fab5d5d37dac6537a76f7069b94",
+      "bytes": 1170015,
+      "modelSha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+      "sourceSha256": "b326481930a29e2ff6dc0203048d678f03f501582672643962707d71fc0c2333",
+      "camera": [
+        0,
+        6,
+        1.08
+      ],
+      "target": [
+        0,
+        0.05,
+        1.08
+      ],
+      "projection": "ORTHO",
+      "orthoScale": 2.4,
+      "lens": 70,
+      "lighting": "neutral workbench studio, no textures",
+      "scope": "authored reconstruction, not source metrology",
+      "path": "assets/audit/regression-v4/reviewed-models/bcfb03ef96c6/alignment-rear.png"
+    }
+  ],
+  "method": "Direct visual inspection by root of actual front, right-side and rear neutral authoring images, after checking their manifest hashes.",
+  "findings": [
+    {
+      "region": "cheek/throat",
+      "view": "alignment-side-right.png",
+      "observation": "The thin side jaw ends above a broad unattached-looking forward lamina. The separate strips and empty space interrupt the intended cheek opening and neck connection."
+    },
+    {
+      "region": "mantle",
+      "view": "alignment-side-right.png",
+      "observation": "A wide straight horizontal band interrupts the flowing folded-wing plate courses; front view also exposes broad bare shoulder/mantle areas."
+    },
+    {
+      "region": "rear",
+      "view": "alignment-rear.png",
+      "observation": "The back remains a broad simple panel field with large pointed inset shapes; the rear neck/skull has an exposed dark channel. Rear construction is a proposal and cannot be called resolved from front/three-quarter views."
+    }
+  ],
+  "sourceDiagnosis": {
+    "attributionLimit": "Current Python modules explain plausible construction causes but were not individually hashed in the render manifest. Exact module-to-render attribution is unproven.",
+    "breast": "Body course z bounds overlap, but pointed tips/narrow angular keel and fragmented flank columns can leave gaps away from centerline. Extend local lower tip coverage while retaining course roots and silhouette; review collisions.",
+    "mantle": "Blade width tapers after t=.62 to 6% at tip over a recessed shell. Delay taper/retain modest terminal width only after bilateral fold/guard/thrust clearance review; proximal and distal plates have separate owners.",
+    "neck": "Upper throat lamina and cheek bands occupy adjacent heights with independent neck/head owners. A local central forward-contour trim needs jaw-open/head-pitch review to avoid a new exposed gap."
+  },
+  "limits": [
+    "Static qualitative review, not dimensional metrology.",
+    "No full collision, era eligibility, movement, performance or owner acceptance conclusion.",
+    "Rear anatomy is inferred where controlling references do not show it."
+  ]
+}

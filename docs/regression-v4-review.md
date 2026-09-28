@@ -66,17 +66,31 @@ Two later hash-bound reviews preserve the subsequent progress and unresolved def
 
 - [Independent review of `f937647d5bb0`](../assets/audit/regression-v4/geometry-review-f937647d5bb0.json): the optic is better seated; bill/jaw mass, torso taper and mantle integration still require correction. This reviewer identifies the mantle issue as shape and integration rather than insufficient total coverage.
 - [Supervisor review of `bcfb03ef96c6`](../assets/audit/regression-v4/geometry-review-bcfb03ef96c6.json): the fitted orbital plate remains an improvement. The long smooth hook, thin lateral mandible, forward neck/collar intrusion and broad gaps between regional armor courses remain visible. Exact [head](../assets/audit/regression-v4/reviewed-models/bcfb03ef96c6/alignment-head.png) and [three-quarter](../assets/audit/regression-v4/reviewed-models/bcfb03ef96c6/alignment-three-quarter.png) images are preserved.
+- [Front, side and rear follow-up for the same model](../assets/audit/regression-v4/geometry-envelope-review-bcfb03ef96c6.json): the side view clarifies the separated cheek/throat layers and straight mantle band; the rear still has unresolved broad panel fields. The record includes bounded source-level hypotheses and their attribution limits.
 
-The acting analyzer now distinguishes planned family labels, executed cage actions, rendered claw phases and renderer-reported claw contact. Its fixtures cover canceled approaches and legacy v3 telemetry. Those tests prepare it for v4 evidence; they do not establish that a v4 claw or autonomous run passed.
+The acting analyzer distinguishes planned family labels, executed cage actions, rendered claw phases and renderer-reported claw contact. Its fixtures cover canceled approaches and legacy v3 telemetry.
+
+## Independent v4 motion diagnostic
+
+A later [source freeze and condensed result](../assets/audit/regression-v4/current-v4-diagnostic-7833be03d361-summary.json) records an independent run against model `bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299` and production working-tree snapshot `7833be03d361216ad3665eef0b7759341f29f2de860bc1e4eea1c39977843d75`. All 35 selected production source/helper/package/model file hashes matched before, during and after copying. The snapshot includes uncommitted production source at HEAD `698c049`; it is not a released build. No source adaptation was needed.
+
+| Seed | Executed actions over 120 simulated seconds | Renderer contact intervals |
+| --- | --- | --- |
+| 927 | Rail press 2; claw scrape 1; edge probe 2; seam rattle 1. | Cage 7; claw proximity 1. |
+| 20260928 | Claw scrape 2; seam rattle 2; edge probe 1; rail press 1. | Cage 8; claw proximity 2. |
+
+Both accelerated actual-rig runs completed without analyzer warnings. All three claw episodes observed lift, contact, scrape, release and recovery. This supports a bounded improvement over the v3 action sequence. It does not establish visible acting quality, physical contact, force, collision clearance or two uninterrupted browser recordings. The raw trace's `baseCommit` names QA ancestry because the temporary snapshot resides inside that checkout; the companion source-freeze manifest supplies the actual production HEAD and source identities.
 
 ## Open findings and next integration gate
 
 F01–F06 remain open for visual integration and review. F07's new claw action and F08's revised acting are being implemented in the production worktree and require fresh evidence against the final exported geometry. The baseline traces exposed the same family sequence under both seeds: edge probe, rail press, seam rattle, edge probe, rail press. Distinct labels and passing state tests cannot close F08. Existing F09 label and F10 publication-boundary checks remain useful bounded evidence; neither supplies missing artistic acceptance.
 
-The next independent run must use a frozen geometry/runtime identity, then exercise claw contact, motion interruption, actual shell restoration, neutral and exhibit-light views, and two uncut no-input browser recordings. Regional appearance proposals must be reconciled onto that one geometry rather than shipped as a competing bird.
+The next independent integration review must exercise motion interruption, actual shell restoration, neutral and exhibit-light views, and two uncut no-input browser recordings against the final corrected geometry/runtime identity. The v4 diagnostic above adds bounded claw/action telemetry; it does not replace those reviews. Regional appearance proposals must be reconciled onto that one geometry rather than shipped as a competing bird.
 
 V10 repair chronology and V12 historical movement scope remain the documented concrete owner decisions. Physical touch-device work, human screen-reader review, continuous acting review, audible listening, sustained performance, and any future publication verification remain separate tasks. No full score or passing gate is claimed here.
 
 ## Superseded evidence
 
 The initial `assets/audit/regression-v4/interruption-validation.json` overstated exterior inspection coverage: its fixture exercised mechanisms but did not move the exported shell. It is preserved as a rejected draft and must not be cited as full shell-restoration evidence. The intermediate `regression-v4-run2` and `regression-v4-final` receipts narrow that scope but still refer to the legacy `exhibit.js` rather than active `presence-exhibit.js`. The reviewed receipt linked above corrects that reference and records non-finite API diagnostics explicitly. Historical receipts are retained without alteration.
+
+The captured Vite stderr has one original trailing space; it is retained byte-for-byte to preserve its recorded hash. Whitespace checking passes for the rest of the committed QA change when this captured log is excluded.
