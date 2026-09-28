@@ -1,0 +1,36 @@
+# Whole-silhouette direction after owner likeness rejection
+
+The owner rejected the V9/V10 appearance as Squidward-like. I reviewed the supplied [owner rejection image](../../../context/threads/assets/murderbird-owner-likeness-rejection-2026-09-28/2-Pasted-Image-2.jpg), [Candidate03](../../../assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png), and V10 attempt02 [three-quarter](../whole-body-v10/attempt-02/three-quarter.png) and [profile](../whole-body-v10/attempt-02/profile.png). This is a direction for a genuinely different whole-body silhouette, not regional polish. It uses qualitative visual comparisons only; it does not recover physical dimensions from perspective images.
+
+1. **Rebuild the head and bill silhouette first.** Candidate03 and the owner image have a broad, rounded cranium, a clearly inset eye, and a deep bill base that turns into a strongly hooked tip. V10’s face reads as a small, smooth helmet over a long narrow wedge-shaped bill. Increase the cranium’s visual mass, make the brow/cheek envelope frame a recessed optic, and give the upper bill a deeper root and a more decisive downward hook. Keep the lower mandible visibly distinct so the face reads as a raptor, not a smooth mask.
+
+2. **Bring the head into the torso and shorten the exposed neck.** The target head is carried close to the shoulder line by a thick, curved throat that flows into the breast. V10’s tall stack of throat plates separates a small head from a high, large body and creates the long anthropomorphic neck behind the rejection. Lower the head toward the shoulder mass and shorten the visible throat run; shape a forward-curved transition into the breast rather than simply adding more stacked plates.
+
+3. **Replace the upright egg body with a forward-loaded, tapered torso.** The target has a high, deep breast and a rear body that narrows and trails into the wing/tail line. V10 reads as a large upright oval balanced on long legs. Move the body’s visual center forward over the feet, strengthen the chest-to-abdomen slope, and taper the rear underside so the bird looks poised to carry weight rather than standing like a vertical capsule.
+
+4. **Make the stance visibly load-bearing.** Candidate03 places substantial articulated legs beneath the forward body, with bent joints and a broad grasping footprint. V10’s legs remain long, straight-looking supports and the feet appear small relative to the torso. Shorten the apparent exposed leg span through stance and body placement, give the knees a forward-loaded bend, and spread the toes under the front half of the body. Preserve visible mechanical joints and grounded claw contact.
+
+5. **Merge shoulders and wings into the torso contour.** In the target, the broad shoulder/wing mass wraps over the side of the chest and then tapers back; it does not sit as a separate ball outside the body. V10 still exposes round shoulder pods behind detached-looking wing plates. Make the upper torso and shoulder one continuous mass, then drape the layered wing over it with a clear rear taper. Keep the wings broad enough to preserve the bird’s side silhouette.
+
+These priorities should be judged together in whole-body side and three-quarter views. A head-only correction, added detail, or isolated armor edit cannot by itself address the owner’s whole-silhouette rejection. No dimensional measurements, collision claims, or acceptance judgments are made here.
+
+## V11 whole-body pass 01 observation
+
+Reviewed the matched [after reference-angle](attempt-01/after-reference-angle.png), [after profile](attempt-01/after-profile.png), and [after front](attempt-01/after-front.png) against the corresponding before views. The face/bill has a fuller head and a more decisive hooked bill than the preceding V10 image; the stance also has more visible knee bend and a broader planted footprint. These are directional changes, not acceptance. The highest remaining proportion fault is the **missing dorsal nape connection**: in side and three-quarter views the rear crown still perches above the shoulder line, leaving an abrupt gap instead of the continuous descending head-to-shoulder contour shown in the target image. Address that posterior connection while retaining the articulated throat curve.
+
+## V11 pass 03 likeness review
+
+Reviewed the [after reference-angle](attempt-03/after-reference-angle.png), [after profile](attempt-03/after-profile.png), and [after front](attempt-03/after-front.png) against the supplied owner target and Candidate03. The added posterior/lateral cervical envelope **does resolve the literal detached-head gap** in these stills: the rear crown now meets the shoulder through a continuous surface. This is an early whole-body visual observation only; there are no motion or clearance results here.
+
+The two largest remaining likeness faults are:
+
+1. **Head-to-neck proportion.** The head still sits high above the breast on a long, near-vertical tube. The new posterior fill closes the gap but makes the neck read more like a continuous column than the target’s shorter, forward-curving head-to-chest transition. Lower the head relative to the shoulder/breast and compress the exposed neck run; preserve a tapered nape rather than adding more neck volume.
+2. **Skull and bill mass.** Against the owner target, the head remains visually small and smooth, and the bill reads as a narrow wedge. Increase the cranium’s breadth/depth behind the eye and give the bill a deeper root with a more pronounced hooked arc and clearly separated lower mandible. Do not use a larger neck to compensate for the small head.
+
+The target-to-model comparison is qualitative and perspective-dependent; these are directional corrections, not dimension estimates or acceptance grades.
+
+## V11 pass 04 likeness review
+
+Reviewed the [after reference-angle](attempt-04/after-reference-angle.png), [after profile](attempt-04/after-profile.png), and [after front](attempt-04/after-front.png) against the supplied owner target. This is a visible improvement over pass 03: the head sits lower, the crown has more vertical depth, and the shortened rear nape removes some of the backward-stretched helmet profile while leaving the circular optic locally intact. I do not see a whole-silhouette regression in these views. The remaining dominant proportion fault is still the **long, columnar neck-to-breast run**: the head remains perched above a tall stack of throat plates, whereas the target’s neck curves forward and joins the chest sooner. This is a qualitative still-image observation only; it is not an acceptance, motion, or clearance result. The reviewed native was identified as `9a152dcb0f253f348cfab55c3e07ac439544e52b4a1f1f31f21af4adaa20ea72`.
+
+Compared the [attempt 05 reference-angle](attempt-05/after-reference-angle.png) directly with attempt 04 and the owner target. Restoring more exposed leg length improves support: the bird no longer looks as squat, and the articulated, bent legs read more plausibly beneath the body. The main remaining proportion gap is the long, upright neck-to-breast transition noted above; this judgment is limited to the matched still view. Attempt 05 native SHA: `28cf0e70e46fca5ea07b1d583ad1ec6492201ed865a0858b1c1da4fc355f9c0f`.

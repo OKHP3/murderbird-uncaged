@@ -1,0 +1,39 @@
+{
+  "status": "PASS within stated local scope",
+  "baseCommit": "753c909f4990b64b1d31e833744aa0c0ef3a13f8",
+  "treeState": "modified with V11 source, diagnostic viewer and documentation",
+  "observedAt": "2026-09-28T18:51:22.097943+00:00",
+  "checks": [
+    "npm ci",
+    "npm run build",
+    "node scripts/verify-publication.mjs",
+    "Python generator/exporter syntax",
+    "JavaScript viewer syntax",
+    "git diff --check",
+    "exact loopback-served GLB SHA256"
+  ],
+  "productionBoundary": {
+    "emittedPaths": 134,
+    "exactSelectedRuntimeAssets": 16,
+    "v11Included": false
+  },
+  "logs": {
+    "dependency-install.log": {
+      "sha256": "cce9afcb76106373786c587b7153731f3cbbad3294ca068d43f05cc50153ea7a",
+      "bytes": 449
+    },
+    "local-build.log": {
+      "sha256": "3e881b62dc03293bf96cc687252f9c4fb96e45dd3747ee6ee3c0930ad4fc15d5",
+      "bytes": 4004
+    },
+    "publication-boundary.log": {
+      "sha256": "306adbf9c81c53482a640d80fadb1cf6211f3b3429fce5665d692f9dfb11e058",
+      "bytes": 715
+    }
+  },
+  "limits": [
+    "No remote CI or deployment",
+    "V11 motion and clearance not tested",
+    "No owner likeness acceptance"
+  ]
+}
