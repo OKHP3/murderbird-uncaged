@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {loadRigidValidation} from '../../../scripts/load-rigid-validation.mjs';
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const path='assets/models/uncaged-alignment-v7/murderbird-alignment-v7.glb';
+const bytes=await readFile(path),sha256=hash(bytes);
+assert.equal(sha256,'1c82874b86af6b493ac380536de6af72a30fafa3a4b0ebb3d8790f56ffc03018');
+const doc=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)).toString());
+const {scene}=await loadRigidValidation(bytes);scene.updateMatrixWorld(true);
+const names=doc.nodes.filter(n=>n.mesh===undefined&&n.name).map(n=>n.name);
+assert.equal(names.length,51);
+const pivotMatrices=Object.fromEntries(names.map(name=>{const o=scene.getObjectByName(name);assert.ok(o);return [name,{local:o.matrix.toArray(),world:o.matrixWorld.toArray()}];}));
+const output={model:{path,sha256},poses:[{id:'exported-rest',category:'raw exported rest; no motion executed',pivotMatrices}],matrixConvention:'THREE column-major flat16; browser=(Blender X, Blender Z, -Blender Y)',sourceSha256:hash(await readFile(new URL(import.meta.url)))};
+await writeFile('assets/audit/native-clearance-harness-fixture-v1/rest-pose.json',JSON.stringify(output,null,2)+'\n',{flag:'wx'});
