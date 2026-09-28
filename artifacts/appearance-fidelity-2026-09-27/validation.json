@@ -1,0 +1,74 @@
+{
+  "status": "PASS within assessment scope",
+  "sourceAndDerivativeHashesChecked": 55,
+  "localHtmlReferencesChecked": 34,
+  "liveMediaMatches": 9,
+  "checks": [
+    {
+      "name": "Published/local selected image and GLB identity",
+      "status": "PASS",
+      "evidence": "evidence.json"
+    },
+    {
+      "name": "Source-video decode and frame provenance",
+      "status": "PASS",
+      "evidence": "video-evidence/video-evidence-manifest.json",
+      "limits": "24 sampled frames across 4 clips; no continuous motion or audio acceptance"
+    },
+    {
+      "name": "Source preservation, selected parallel copies, links, Python syntax",
+      "status": "PASS"
+    },
+    {
+      "name": "npm ci",
+      "status": "PASS",
+      "warnings": [
+        "fsevents install script not covered by allowScripts; no approval or settings change made"
+      ]
+    },
+    {
+      "name": "npm run build",
+      "status": "PASS",
+      "warnings": [
+        "Three.js bundle exceeds 500 kB chunk warning threshold"
+      ]
+    },
+    {
+      "name": "node scripts/verify-publication.mjs",
+      "status": "PASS",
+      "files": 134,
+      "exactRuntimeAssets": 16,
+      "limits": "Local build/output check only; no deployment performed"
+    },
+    {
+      "name": "Assessment report browser",
+      "status": "PASS",
+      "details": "Viewed body, head and foot comparisons at 1280px viewport; 12 eager images loaded; no horizontal overflow; grayscale toggle on/off exercised. localhost hostname succeeded after numeric-loopback timeout."
+    },
+    {
+      "name": "Independent assessment critique",
+      "status": "PASS",
+      "details": "Corrected combined-model texture wording, local/public hash binding, and nonfunctional casing ownership."
+    },
+    {
+      "name": "Future model and fresh exhibit WebGL/fallback checks",
+      "status": "NOT RUN",
+      "reason": "No app or model edits in this assessment"
+    },
+    {
+      "name": "Continuous motion, physical device performance, final artistic acceptance, remote deployment",
+      "status": "NOT RUN"
+    }
+  ],
+  "authoredPaths": [
+    "docs/appearance-fidelity-assessment-2026-09-27.md",
+    "artifacts/appearance-fidelity-2026-09-27/"
+  ],
+  "generatedLocalBuildOutputs": [
+    "dist/",
+    ".local/publication/build-validation.json"
+  ],
+  "htmlSha256": "4ada8efd3ef1b8a7c9e1c1b45c40d4ef9ecc868e397474e466ec05c6150c4f0f",
+  "assessmentSha256": "d3ae1c0946160e781d60b12764127d5442513c8ec2644aec9c7c90774c1982f0",
+  "nextAction": "New versioned Advanced head/neck/shoulder exterior proof against the structural interface; likeness remains unaccepted"
+}
