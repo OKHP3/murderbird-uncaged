@@ -1,0 +1,745 @@
+{
+  "status": "Proposed outboard neighborhoods only; no native/control hardware implemented or accepted",
+  "native": {
+    "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+    "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+    "bytes": 1907219
+  },
+  "actualRuntimePosePacket": {
+    "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+    "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+    "bytes": 6943410
+  },
+  "mounts": {
+    "upper-horn-tip": {
+      "owner": "cervical-upper",
+      "localNativeXYZ": [
+        -0.232,
+        -0.06,
+        0.015
+      ],
+      "localBrowserXYZ": [
+        -0.232,
+        0.015,
+        0.06
+      ],
+      "restWorldNativeXYZ": [
+        -0.23199999332427979,
+        -0.29499998688697815,
+        1.4670000076293945
+      ],
+      "proposedMountNeighborhoodHalfExtentM": [
+        0.012,
+        0.012,
+        0.012
+      ]
+    },
+    "lower-drive-anchor": {
+      "owner": "neck",
+      "localNativeXYZ": [
+        -0.235,
+        -0.005,
+        0.1
+      ],
+      "localBrowserXYZ": [
+        -0.235,
+        0.1,
+        0.005
+      ],
+      "restWorldNativeXYZ": [
+        -0.23499999940395355,
+        -0.10500000417232513,
+        1.3600000143051147
+      ],
+      "proposedMountNeighborhoodHalfExtentM": [
+        0.012,
+        0.012,
+        0.012
+      ]
+    },
+    "maker-outboard-line-guide": {
+      "owner": "neck",
+      "localNativeXYZ": [
+        -0.25,
+        0.02,
+        0.12
+      ],
+      "localBrowserXYZ": [
+        -0.25,
+        0.12,
+        -0.02
+      ],
+      "restWorldNativeXYZ": [
+        -0.25,
+        -0.07999999821186066,
+        1.3799999952316284
+      ],
+      "proposedMountNeighborhoodHalfExtentM": [
+        0.012,
+        0.012,
+        0.012
+      ]
+    }
+  },
+  "poses": [
+    {
+      "poseId": "runtime-rest",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012090589851140976,
+        "nominal12mmHousingMarginM": 9.05898511409757e-05
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.06754454970359802,
+          "nominal12mmHousingMarginM": 0.055544549703598026
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012090589851140976,
+          "nominal12mmHousingMarginM": 9.05898511409757e-05
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.02763299271464348,
+          "nominal12mmHousingMarginM": 0.015632992714643478
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796329538612
+    },
+    {
+      "poseId": "maker-leg-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.01230902224779129,
+        "nominal12mmHousingMarginM": 0.00030902224779129003
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675445944070816,
+          "nominal12mmHousingMarginM": 0.05554459440708161
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.01230902224779129,
+          "nominal12mmHousingMarginM": 0.00030902224779129003
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551837265491486,
+          "nominal12mmHousingMarginM": 0.015551837265491485
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796568032708
+    },
+    {
+      "poseId": "maker-tail-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.01230902224779129,
+        "nominal12mmHousingMarginM": 0.00030902224779129003
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675445944070816,
+          "nominal12mmHousingMarginM": 0.05554459440708161
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.01230902224779129,
+          "nominal12mmHousingMarginM": 0.00030902224779129003
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551837265491486,
+          "nominal12mmHousingMarginM": 0.015551837265491485
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796568032708
+    },
+    {
+      "poseId": "maker-neck-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.002816543448716402,
+        "nominal12mmHousingMarginM": -0.009183456551283598
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.06754456460475922,
+          "nominal12mmHousingMarginM": 0.05554456460475922
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.002816543448716402,
+          "nominal12mmHousingMarginM": -0.009183456551283598
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 3",
+          "centerlineDistanceM": 0.029802925884723663,
+          "nominal12mmHousingMarginM": 0.017802925884723663
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21938752614773663
+    },
+    {
+      "poseId": "maker-jaw-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.01230902224779129,
+        "nominal12mmHousingMarginM": 0.00030902224779129003
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675445944070816,
+          "nominal12mmHousingMarginM": 0.05554459440708161
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.01230902224779129,
+          "nominal12mmHousingMarginM": 0.00030902224779129003
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551837265491486,
+          "nominal12mmHousingMarginM": 0.015551837265491485
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796568032708
+    },
+    {
+      "poseId": "maker-wing-control-right-mantle",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.01230902224779129,
+        "nominal12mmHousingMarginM": 0.00030902224779129003
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675445944070816,
+          "nominal12mmHousingMarginM": 0.05554459440708161
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.01230902224779129,
+          "nominal12mmHousingMarginM": 0.00030902224779129003
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551837265491486,
+          "nominal12mmHousingMarginM": 0.015551837265491485
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796568032708
+    },
+    {
+      "poseId": "maker-neck-and-jaw-combined",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.002816543448716402,
+        "nominal12mmHousingMarginM": -0.009183456551283598
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.06754456460475922,
+          "nominal12mmHousingMarginM": 0.05554456460475922
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.002816543448716402,
+          "nominal12mmHousingMarginM": -0.009183456551283598
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 3",
+          "centerlineDistanceM": 0.029802925884723663,
+          "nominal12mmHousingMarginM": 0.017802925884723663
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21938752614773663
+    },
+    {
+      "poseId": "advanced-attention",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.01210359949618578,
+        "nominal12mmHousingMarginM": 0.00010359949618577932
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.06754458695650101,
+          "nominal12mmHousingMarginM": 0.05554458695650101
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.01210359949618578,
+          "nominal12mmHousingMarginM": 0.00010359949618577932
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.02762793004512787,
+          "nominal12mmHousingMarginM": 0.01562793004512787
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2180779700254042
+    },
+    {
+      "poseId": "advanced-recovery-entry",
+      "closestProbe": {
+        "probe": "advanced-short-actuator-1/16",
+        "nearestPlate": "Breast lateral feather -1 0 2",
+        "centerlineDistanceM": 0.004528191406279802,
+        "nominal12mmHousingMarginM": -0.007471808593720198
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 4",
+          "centerlineDistanceM": 0.06617952883243561,
+          "nominal12mmHousingMarginM": 0.05417952883243561
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.010345975868403912,
+          "nominal12mmHousingMarginM": -0.0016540241315960887
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.028775524348020554,
+          "nominal12mmHousingMarginM": 0.016775524348020553
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.20893387195452337
+    },
+    {
+      "poseId": "advanced-strike-peak",
+      "closestProbe": {
+        "probe": "advanced-short-actuator-1/16",
+        "nearestPlate": "Breast lateral feather -1 0 2",
+        "centerlineDistanceM": 0.0051111322827637196,
+        "nominal12mmHousingMarginM": -0.006888867717236281
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 4",
+          "centerlineDistanceM": 0.0665578693151474,
+          "nominal12mmHousingMarginM": 0.0545578693151474
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.010482469573616982,
+          "nominal12mmHousingMarginM": -0.0015175304263830187
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.028810642659664154,
+          "nominal12mmHousingMarginM": 0.016810642659664154
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2093860042831717
+    },
+    {
+      "poseId": "advanced-contact",
+      "closestProbe": {
+        "probe": "advanced-short-actuator-1/16",
+        "nearestPlate": "Breast lateral feather -1 0 2",
+        "centerlineDistanceM": 0.004534076899290085,
+        "nominal12mmHousingMarginM": -0.007465923100709915
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 4",
+          "centerlineDistanceM": 0.06618359684944153,
+          "nominal12mmHousingMarginM": 0.05418359684944153
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.010347539559006691,
+          "nominal12mmHousingMarginM": -0.0016524604409933093
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.02877616137266159,
+          "nominal12mmHousingMarginM": 0.01677616137266159
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2089388185078021
+    },
+    {
+      "poseId": "advanced-jump-airborne",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309110723435879,
+        "nominal12mmHousingMarginM": 0.0003091107234358785
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675445944070816,
+          "nominal12mmHousingMarginM": 0.05554459440708161
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309110723435879,
+          "nominal12mmHousingMarginM": 0.0003091107234358785
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551952749490738,
+          "nominal12mmHousingMarginM": 0.015551952749490738
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796568032708
+    },
+    {
+      "poseId": "advanced-thrust-brace",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012240175157785416,
+        "nominal12mmHousingMarginM": 0.0002401751577854154
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.06754453480243683,
+          "nominal12mmHousingMarginM": 0.05554453480243683
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012240175157785416,
+          "nominal12mmHousingMarginM": 0.0002401751577854154
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027166083455085754,
+          "nominal12mmHousingMarginM": 0.015166083455085754
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21877791248462125
+    },
+    {
+      "poseId": "mechanic-segment-turn-release",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309092096984386,
+        "nominal12mmHousingMarginM": 0.0003090920969843862
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309092096984386,
+          "nominal12mmHousingMarginM": 0.0003090920969843862
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551846578717232,
+          "nominal12mmHousingMarginM": 0.015551846578717232
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807796448547812
+    },
+    {
+      "poseId": "inspection-open-0-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    },
+    {
+      "poseId": "inspection-open-0.25-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    },
+    {
+      "poseId": "inspection-open-0.5-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    },
+    {
+      "poseId": "inspection-open-0.75-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    },
+    {
+      "poseId": "inspection-open-1-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    },
+    {
+      "poseId": "inspection-open-1-separation-0.5",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    },
+    {
+      "poseId": "inspection-open-1-separation-1",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.012309020385146141,
+        "nominal12mmHousingMarginM": 0.0003090203851461408
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0675446018576622,
+          "nominal12mmHousingMarginM": 0.055544601857662204
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.012309020385146141,
+          "nominal12mmHousingMarginM": 0.0003090203851461408
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.027551954612135887,
+          "nominal12mmHousingMarginM": 0.015551954612135887
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21807794859794818
+    }
+  ],
+  "upperHornRoot": {
+    "owner": "cervical-upper",
+    "localNativeXYZ": [
+      -0.158,
+      0,
+      0
+    ],
+    "interface": "Existing upper-owned shaft outer face; requires a rigid outboard dogleg horn, not a floating new pivot"
+  },
+  "lowerBracketRoot": {
+    "owner": "neck",
+    "localNativeXYZ": [
+      -0.146,
+      -0.113,
+      0.172
+    ],
+    "interface": "Lower clevis outer race rim; requires a rigid outboard/downward bracket to drive anchor"
+  },
+  "eraDriveProposal": {
+    "Maker": "Same external neck control routes a secondary tension line through the proposed lower-owned outboard guide to upper-owned horn. Existing lower drive remains; passive return and ratio require design.",
+    "Mechanic": "Rigid passive brace pins between lower anchor and upper horn only with both neck pitches locked. No freely bending brace is proposed.",
+    "Advanced": "Short pin-ended actuator connects lower anchor to upper horn, driving the upper journal in addition to current lower driver."
+  },
+  "limits": [
+    "Only point/line samples against native plate surfaces, not solid actuator/rod/bracket clearance.",
+    "No runtime-generated15 procedural controls or powered hardware clearance is included.",
+    "Mount interfaces and dogleg brackets remain proposals; exact historic arrangement is unknown.",
+    "Housing radius12mm is a proposal. End fitting geometry and full continuous sweeps require checks."
+  ]
+}

@@ -1,0 +1,1124 @@
+{
+  "status": "Proposed outboard neighborhoods only; no native/control hardware implemented or accepted",
+  "native": {
+    "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+    "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+    "bytes": 1907219
+  },
+  "actualRuntimePosePacket": {
+    "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+    "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+    "bytes": 6943410
+  },
+  "mounts": {
+    "upper-horn-tip": {
+      "owner": "cervical-upper",
+      "localNativeXYZ": [
+        -0.255,
+        -0.06,
+        0.015
+      ],
+      "localBrowserXYZ": [
+        -0.255,
+        0.015,
+        0.06
+      ],
+      "restWorldNativeXYZ": [
+        -0.2549999952316284,
+        -0.29499998688697815,
+        1.4670000076293945
+      ],
+      "proposedMountNeighborhoodHalfExtentM": [
+        0.012,
+        0.012,
+        0.012
+      ]
+    },
+    "lower-drive-anchor": {
+      "owner": "neck",
+      "localNativeXYZ": [
+        -0.275,
+        0.01,
+        0.16
+      ],
+      "localBrowserXYZ": [
+        -0.275,
+        0.16,
+        -0.01
+      ],
+      "restWorldNativeXYZ": [
+        -0.2750000059604645,
+        -0.09000000357627869,
+        1.4199999570846558
+      ],
+      "proposedMountNeighborhoodHalfExtentM": [
+        0.012,
+        0.012,
+        0.012
+      ]
+    },
+    "maker-outboard-line-guide": {
+      "owner": "neck",
+      "localNativeXYZ": [
+        -0.27,
+        0.035,
+        0.17
+      ],
+      "localBrowserXYZ": [
+        -0.27,
+        0.17,
+        -0.035
+      ],
+      "restWorldNativeXYZ": [
+        -0.27000001072883606,
+        -0.06499999761581421,
+        1.4299999475479126
+      ],
+      "proposedMountNeighborhoodHalfExtentM": [
+        0.012,
+        0.012,
+        0.012
+      ]
+    }
+  },
+  "poses": [
+    {
+      "poseId": "runtime-rest",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07314609736204147,
+        "nominal12mmHousingMarginM": 0.06114609736204148
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941483497619629,
+          "nominal12mmHousingMarginM": 0.07741483497619629
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07314609736204147,
+          "nominal12mmHousingMarginM": 0.06114609736204148
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.08209504187107086,
+          "nominal12mmHousingMarginM": 0.07009504187107087
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759811126866,
+          "minimumSampleDistanceM": 0.07314609736204147,
+          "continuousCenterlineDistanceLowerBoundM": 0.06654398492106432,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054543984921064326,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949992943827,
+          "minimumSampleDistanceM": 0.08209504187107086,
+          "continuousCenterlineDistanceLowerBoundM": 0.07480005749827591,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06280005749827591,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759811126866
+    },
+    {
+      "poseId": "maker-leg-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309414446353912,
+        "nominal12mmHousingMarginM": 0.06109414446353913
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309414446353912,
+          "nominal12mmHousingMarginM": 0.06109414446353913
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.08201102167367935,
+          "nominal12mmHousingMarginM": 0.07001102167367936
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.2112676146422443,
+          "minimumSampleDistanceM": 0.07309414446353912,
+          "continuousCenterlineDistanceLowerBoundM": 0.066492031505969,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054492031505969,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.08201102167367935,
+          "continuousCenterlineDistanceLowerBoundM": 0.0747160373827017,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.0627160373827017,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2112676146422443
+    },
+    {
+      "poseId": "maker-tail-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309414446353912,
+        "nominal12mmHousingMarginM": 0.06109414446353913
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309414446353912,
+          "nominal12mmHousingMarginM": 0.06109414446353913
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.08201102167367935,
+          "nominal12mmHousingMarginM": 0.07001102167367936
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.2112676146422443,
+          "minimumSampleDistanceM": 0.07309414446353912,
+          "continuousCenterlineDistanceLowerBoundM": 0.066492031505969,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054492031505969,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.08201102167367935,
+          "continuousCenterlineDistanceLowerBoundM": 0.0747160373827017,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.0627160373827017,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2112676146422443
+    },
+    {
+      "poseId": "maker-neck-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07540402561426163,
+        "nominal12mmHousingMarginM": 0.06340402561426163
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941482752561569,
+          "nominal12mmHousingMarginM": 0.0774148275256157
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07540402561426163,
+          "nominal12mmHousingMarginM": 0.06340402561426163
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 3",
+          "centerlineDistanceM": 0.08317556977272034,
+          "nominal12mmHousingMarginM": 0.07117556977272034
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21097791525204546,
+          "minimumSampleDistanceM": 0.07540402561426163,
+          "continuousCenterlineDistanceLowerBoundM": 0.0688109657626352,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05681096576263521,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.2327730417016165,
+          "minimumSampleDistanceM": 0.08317556977272034,
+          "continuousCenterlineDistanceLowerBoundM": 0.07590141221954483,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06390141221954483,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21097791525204546
+    },
+    {
+      "poseId": "maker-jaw-control",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309414446353912,
+        "nominal12mmHousingMarginM": 0.06109414446353913
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309414446353912,
+          "nominal12mmHousingMarginM": 0.06109414446353913
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.08201102167367935,
+          "nominal12mmHousingMarginM": 0.07001102167367936
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.2112676146422443,
+          "minimumSampleDistanceM": 0.07309414446353912,
+          "continuousCenterlineDistanceLowerBoundM": 0.066492031505969,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054492031505969,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.08201102167367935,
+          "continuousCenterlineDistanceLowerBoundM": 0.0747160373827017,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.0627160373827017,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2112676146422443
+    },
+    {
+      "poseId": "maker-wing-control-right-mantle",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309414446353912,
+        "nominal12mmHousingMarginM": 0.06109414446353913
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309414446353912,
+          "nominal12mmHousingMarginM": 0.06109414446353913
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.08201102167367935,
+          "nominal12mmHousingMarginM": 0.07001102167367936
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.2112676146422443,
+          "minimumSampleDistanceM": 0.07309414446353912,
+          "continuousCenterlineDistanceLowerBoundM": 0.066492031505969,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054492031505969,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.08201102167367935,
+          "continuousCenterlineDistanceLowerBoundM": 0.0747160373827017,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.0627160373827017,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2112676146422443
+    },
+    {
+      "poseId": "maker-neck-and-jaw-combined",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07540402561426163,
+        "nominal12mmHousingMarginM": 0.06340402561426163
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941482752561569,
+          "nominal12mmHousingMarginM": 0.0774148275256157
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07540402561426163,
+          "nominal12mmHousingMarginM": 0.06340402561426163
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 3",
+          "centerlineDistanceM": 0.08317556977272034,
+          "nominal12mmHousingMarginM": 0.07117556977272034
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21097791525204546,
+          "minimumSampleDistanceM": 0.07540402561426163,
+          "continuousCenterlineDistanceLowerBoundM": 0.0688109657626352,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05681096576263521,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.2327730417016165,
+          "minimumSampleDistanceM": 0.08317556977272034,
+          "continuousCenterlineDistanceLowerBoundM": 0.07590141221954483,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06390141221954483,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21097791525204546
+    },
+    {
+      "poseId": "advanced-attention",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07314345240592957,
+        "nominal12mmHousingMarginM": 0.06114345240592957
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07314345240592957,
+          "nominal12mmHousingMarginM": 0.06114345240592957
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820901170372963,
+          "nominal12mmHousingMarginM": 0.0700901170372963
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.2112676306221862,
+          "minimumSampleDistanceM": 0.07314345240592957,
+          "continuousCenterlineDistanceLowerBoundM": 0.06654133894898624,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054541338948986245,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343952174738292,
+          "minimumSampleDistanceM": 0.0820901170372963,
+          "continuousCenterlineDistanceLowerBoundM": 0.07479513198269058,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06279513198269059,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2112676306221862
+    },
+    {
+      "poseId": "advanced-recovery-entry",
+      "closestProbe": {
+        "probe": "advanced-short-actuator-5/16",
+        "nearestPlate": "Breast lateral feather -1 0 2",
+        "centerlineDistanceM": 0.06322017312049866,
+        "nominal12mmHousingMarginM": 0.05122017312049866
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 4",
+          "centerlineDistanceM": 0.08692052960395813,
+          "nominal12mmHousingMarginM": 0.07492052960395813
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07146652042865753,
+          "nominal12mmHousingMarginM": 0.059466520428657535
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "right shoulder covert 0 0",
+          "centerlineDistanceM": 0.08210904151201248,
+          "nominal12mmHousingMarginM": 0.07010904151201248
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.20865898830806995,
+          "minimumSampleDistanceM": 0.06322017312049866,
+          "continuousCenterlineDistanceLowerBoundM": 0.056699579735871475,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.04469957973587148,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23221970506859982,
+          "minimumSampleDistanceM": 0.067080058157444,
+          "continuousCenterlineDistanceLowerBoundM": 0.05982319237405025,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.04782319237405025,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.20865898830806995
+    },
+    {
+      "poseId": "advanced-strike-peak",
+      "closestProbe": {
+        "probe": "advanced-short-actuator-5/16",
+        "nearestPlate": "Breast lateral feather -1 0 2",
+        "centerlineDistanceM": 0.06385932117700577,
+        "nominal12mmHousingMarginM": 0.05185932117700577
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 4",
+          "centerlineDistanceM": 0.08729168027639389,
+          "nominal12mmHousingMarginM": 0.0752916802763939
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07160129398107529,
+          "nominal12mmHousingMarginM": 0.05960129398107529
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "right shoulder covert 0 0",
+          "centerlineDistanceM": 0.08223093301057816,
+          "nominal12mmHousingMarginM": 0.07023093301057816
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.20886865389652762,
+          "minimumSampleDistanceM": 0.06385932117700577,
+          "continuousCenterlineDistanceLowerBoundM": 0.05733217574273928,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.045332175742739275,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.2323823941506626,
+          "minimumSampleDistanceM": 0.06786978244781494,
+          "continuousCenterlineDistanceLowerBoundM": 0.060607832630606734,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.04860783263060674,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.20886865389652762
+    },
+    {
+      "poseId": "advanced-contact",
+      "closestProbe": {
+        "probe": "advanced-short-actuator-5/16",
+        "nearestPlate": "Breast lateral feather -1 0 2",
+        "centerlineDistanceM": 0.06322703510522842,
+        "nominal12mmHousingMarginM": 0.05122703510522843
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 4",
+          "centerlineDistanceM": 0.08692444115877151,
+          "nominal12mmHousingMarginM": 0.07492444115877152
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07146812975406647,
+          "nominal12mmHousingMarginM": 0.05946812975406647
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "right shoulder covert 0 0",
+          "centerlineDistanceM": 0.08211011439561844,
+          "nominal12mmHousingMarginM": 0.07011011439561844
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.20866130094933524,
+          "minimumSampleDistanceM": 0.06322703510522842,
+          "continuousCenterlineDistanceLowerBoundM": 0.0567063694505617,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.044706369450561695,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.2322214855461963,
+          "minimumSampleDistanceM": 0.0670885220170021,
+          "continuousCenterlineDistanceLowerBoundM": 0.05983160059368347,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.047831600593683465,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.20866130094933524
+    },
+    {
+      "poseId": "advanced-jump-airborne",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.2112676146422443,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213581409735,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.054492135814097356,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.2112676146422443
+    },
+    {
+      "poseId": "advanced-thrust-brace",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07294744998216629,
+        "nominal12mmHousingMarginM": 0.060947449982166294
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.0894148200750351,
+          "nominal12mmHousingMarginM": 0.0774148200750351
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07294744998216629,
+          "nominal12mmHousingMarginM": 0.060947449982166294
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.08145312964916229,
+          "nominal12mmHousingMarginM": 0.0694531296491623
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21116770747628885,
+          "minimumSampleDistanceM": 0.07294744998216629,
+          "continuousCenterlineDistanceLowerBoundM": 0.06634845912353227,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05434845912353227,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23315296085334383,
+          "minimumSampleDistanceM": 0.08145312964916229,
+          "continuousCenterlineDistanceLowerBoundM": 0.07416709962249529,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.062167099622495295,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21116770747628885
+    },
+    {
+      "poseId": "mechanic-segment-turn-release",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309427857398987,
+        "nominal12mmHousingMarginM": 0.06109427857398987
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309427857398987,
+          "nominal12mmHousingMarginM": 0.06109427857398987
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111632347107,
+          "nominal12mmHousingMarginM": 0.0700111632347107
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759604489662,
+          "minimumSampleDistanceM": 0.07309427857398987,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649216619758685,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449216619758686,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343950248525475,
+          "minimumSampleDistanceM": 0.0820111632347107,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471617878204648,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271617878204648,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759604489662
+    },
+    {
+      "poseId": "inspection-open-0-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    },
+    {
+      "poseId": "inspection-open-0.25-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    },
+    {
+      "poseId": "inspection-open-0.5-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    },
+    {
+      "poseId": "inspection-open-0.75-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Breast lateral feather -1 0 1",
+          "centerlineDistanceM": 0.08865936845541,
+          "nominal12mmHousingMarginM": 0.07665936845541
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    },
+    {
+      "poseId": "inspection-open-1-separation-0",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Breast lateral feather -1 0 1",
+          "centerlineDistanceM": 0.08583061397075653,
+          "nominal12mmHousingMarginM": 0.07383061397075653
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    },
+    {
+      "poseId": "inspection-open-1-separation-0.5",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    },
+    {
+      "poseId": "inspection-open-1-separation-1",
+      "closestProbe": {
+        "probe": "lower-drive-anchor",
+        "nearestPlate": "Dorsal lap 0 4",
+        "centerlineDistanceM": 0.07309424877166748,
+        "nominal12mmHousingMarginM": 0.061094248771667484
+      },
+      "mountPoints": [
+        {
+          "probe": "upper-horn-tip",
+          "nearestPlate": "Cervical flank lamina -1 3",
+          "centerlineDistanceM": 0.08941484987735748,
+          "nominal12mmHousingMarginM": 0.07741484987735749
+        },
+        {
+          "probe": "lower-drive-anchor",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.07309424877166748,
+          "nominal12mmHousingMarginM": 0.061094248771667484
+        },
+        {
+          "probe": "maker-outboard-line-guide",
+          "nearestPlate": "Dorsal lap 0 4",
+          "centerlineDistanceM": 0.0820111334323883,
+          "nominal12mmHousingMarginM": 0.07001113343238831
+        }
+      ],
+      "connectingSegmentConservativeBounds": [
+        {
+          "line": "advanced-short-actuator",
+          "lengthM": 0.21126759700920358,
+          "minimumSampleDistanceM": 0.07309424877166748,
+          "continuousCenterlineDistanceLowerBoundM": 0.06649213636512986,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.05449213636512987,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        },
+        {
+          "line": "maker-secondary-tension-line",
+          "lengthM": 0.23343949731128477,
+          "minimumSampleDistanceM": 0.0820111334323883,
+          "continuousCenterlineDistanceLowerBoundM": 0.07471614914141066,
+          "continuousNominal12mmHousingMarginLowerBoundM": 0.06271614914141066,
+          "method": "Distance-to-surface is1-Lipschitz; uniform17 samples bound every point by half a sample step."
+        }
+      ],
+      "actuatorEndpointDistanceM": 0.21126759700920358
+    }
+  ],
+  "upperHornRoot": {
+    "owner": "cervical-upper",
+    "localNativeXYZ": [
+      -0.158,
+      0,
+      0
+    ],
+    "interface": "Existing upper-owned shaft outer face; requires a rigid outboard dogleg horn, not a floating new pivot"
+  },
+  "lowerBracketRoot": {
+    "owner": "neck",
+    "localNativeXYZ": [
+      -0.146,
+      -0.113,
+      0.172
+    ],
+    "interface": "Lower clevis outer race rim; requires a rigid outboard/downward bracket to drive anchor"
+  },
+  "eraDriveProposal": {
+    "Maker": "Same external neck control routes a secondary tension line through the proposed lower-owned outboard guide to upper-owned horn. Existing lower drive remains; passive return and ratio require design.",
+    "Mechanic": "Rigid passive brace pins between lower anchor and upper horn only with both neck pitches locked. No freely bending brace is proposed.",
+    "Advanced": "Short pin-ended actuator connects lower anchor to upper horn, driving the upper journal in addition to current lower driver."
+  },
+  "limits": [
+    "Only point/line samples against native plate surfaces, not solid actuator/rod/bracket clearance.",
+    "Conservative segment bounds cover the full centerline against those plate surfaces at each discrete pose; no continuous pose sweep or full fitting geometry.",
+    "No runtime-generated15 procedural controls or powered hardware clearance is included.",
+    "Mount interfaces and dogleg brackets remain proposals; exact historic arrangement is unknown.",
+    "Housing radius12mm is a proposal. End fitting geometry and full continuous sweeps require checks."
+  ]
+}
