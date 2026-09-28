@@ -1,0 +1,2203 @@
+{
+  "status": "held",
+  "generatedAtUtc": "2026-09-28T15:52:32.732637+00:00",
+  "blenderVersion": "5.2.1 LTS",
+  "base": {
+    "path": "assets/models/uncaged-orbital-saddle-study-v6/murderbird-orbital-saddle-study-v6.blend",
+    "bytes": 2002018,
+    "sha256": "cb811241d241b0f18f529979b77635caecb83284b8b4df29c7564d4d2bf55eec"
+  },
+  "native": null,
+  "generator": {
+    "path": "assets/audit/orbital-saddle-study-v9/attempt-03/executed-generator.py",
+    "bytes": 26641,
+    "sha256": "ee009479c476e46f2a0afe4536aae78f1bf8fc5de05426218812eeed16c2f187"
+  },
+  "helper": {
+    "path": "scripts/build-uncaged-alignment-v7.py",
+    "bytes": 36923,
+    "sha256": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a"
+  },
+  "renderer": {
+    "path": "scripts/study-v8-bill-envelope.py",
+    "bytes": 6849,
+    "sha256": "2d3502a134cecb15c04ca0ce9f8db0f7555d6d8a52e5f7c9c74dfd55299f421a"
+  },
+  "changedMeshes": [],
+  "construction": {
+    "operation": "Boolean Difference applied to only two fixed mounting plates; brow remains exact.",
+    "cutter": "Convex hull of every evaluated brow world vertex offset by all eight Cartesian sign corners at \u00b11 mm.",
+    "cuttersRemoved": true,
+    "liveBooleanModifiers": [],
+    "cutterReceipts": [
+      {
+        "sourceEvaluatedVertices": 738,
+        "expandedCornerSamplesBeforeDeduplication": 5904,
+        "uniqueExpandedWorldPoints": 5904,
+        "cornerOffsetsM": 0.001,
+        "hullVertices": 214,
+        "hullPolygons": 424,
+        "coordinateSpace": "world coordinates in mesh data; identity object transform",
+        "side": "right",
+        "brow": "Forged orbital brow -1",
+        "mount": "Forged orbital mounting plate -1"
+      },
+      {
+        "sourceEvaluatedVertices": 738,
+        "expandedCornerSamplesBeforeDeduplication": 5904,
+        "uniqueExpandedWorldPoints": 5904,
+        "cornerOffsetsM": 0.001,
+        "hullVertices": 214,
+        "hullPolygons": 424,
+        "coordinateSpace": "world coordinates in mesh data; identity object transform",
+        "side": "left",
+        "brow": "Forged orbital brow 1",
+        "mount": "Forged orbital mounting plate 1"
+      }
+    ]
+  },
+  "preservation": {
+    "other697MeshSnapshotsExact": false,
+    "51PivotsExact": true,
+    "462GuidesExact": true,
+    "allObjectWorldMatricesMaxErrorM": 0.0,
+    "allMaterialsExact": true,
+    "fullBrowsGeometryAndTransformExact": true,
+    "opticAndPassiveHousingGeometryExact": true,
+    "saveReloadExact": false,
+    "sourceBytesUnchanged": true
+  },
+  "mountTopologyAndSlivers": [
+    {
+      "mesh": "Forged orbital mounting plate -1",
+      "before": {
+        "vertices": 896,
+        "polygons": 896,
+        "evaluatedLoopTriangles": 1792,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "connectedFaceComponentCount": 1,
+        "componentFaceCounts": [
+          896
+        ],
+        "minimumPolygonAreaM2": 1.3548640708904713e-05,
+        "minimumTriangleAreaM2": 5.643853590934966e-06,
+        "degenerateTriangleCountAreaLe1e12": 0,
+        "sliverTriangleCountAreaLe1e10AndAngleLt0p1Deg": 0
+      },
+      "after": {
+        "vertices": 98,
+        "polygons": 55,
+        "evaluatedLoopTriangles": 192,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "connectedFaceComponentCount": 1,
+        "componentFaceCounts": [
+          55
+        ],
+        "minimumPolygonAreaM2": 2.185604159876675e-07,
+        "minimumTriangleAreaM2": 1.1565937294140671e-09,
+        "degenerateTriangleCountAreaLe1e12": 0,
+        "sliverTriangleCountAreaLe1e10AndAngleLt0p1Deg": 0
+      }
+    },
+    {
+      "mesh": "Forged orbital mounting plate 1",
+      "before": {
+        "vertices": 896,
+        "polygons": 896,
+        "evaluatedLoopTriangles": 1792,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "connectedFaceComponentCount": 1,
+        "componentFaceCounts": [
+          896
+        ],
+        "minimumPolygonAreaM2": 1.3548639799410012e-05,
+        "minimumTriangleAreaM2": 5.643853590934966e-06,
+        "degenerateTriangleCountAreaLe1e12": 0,
+        "sliverTriangleCountAreaLe1e10AndAngleLt0p1Deg": 0
+      },
+      "after": {
+        "vertices": 98,
+        "polygons": 55,
+        "evaluatedLoopTriangles": 192,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "connectedFaceComponentCount": 1,
+        "componentFaceCounts": [
+          55
+        ],
+        "minimumPolygonAreaM2": 2.0763891939168388e-07,
+        "minimumTriangleAreaM2": 4.230542492269646e-10,
+        "degenerateTriangleCountAreaLe1e12": 0,
+        "sliverTriangleCountAreaLe1e10AndAngleLt0p1Deg": 0
+      }
+    }
+  ],
+  "opticSeatNeighborhood": [
+    {
+      "side": "right",
+      "housing": "Seated passive optic housing -1",
+      "housingGeometryExactBySceneSnapshot": true,
+      "beforeHousingVerticesToMountSurfaceM": {
+        "sampleCount": 128,
+        "minM": 0.0019977716729044914,
+        "medianM": 0.002926172688603401,
+        "p90M": 0.003964257426559925,
+        "maxM": 0.0041180141270160675
+      },
+      "afterHousingVerticesToMountSurfaceM": {
+        "sampleCount": 128,
+        "minM": 0.016522688791155815,
+        "medianM": 0.07634372264146805,
+        "p90M": 0.1187465637922287,
+        "maxM": 0.12091118842363358
+      },
+      "minDistanceDeltaM": 0.014524917118251324,
+      "medianDistanceDeltaM": 0.07341754995286465
+    },
+    {
+      "side": "left",
+      "housing": "Seated passive optic housing 1",
+      "housingGeometryExactBySceneSnapshot": true,
+      "beforeHousingVerticesToMountSurfaceM": {
+        "sampleCount": 128,
+        "minM": 0.0019977418705821037,
+        "medianM": 0.0029262511525303125,
+        "p90M": 0.003964375238865614,
+        "maxM": 0.0041180141270160675
+      },
+      "afterHousingVerticesToMountSurfaceM": {
+        "sampleCount": 128,
+        "minM": 0.016522957012057304,
+        "medianM": 0.07634372264146805,
+        "p90M": 0.1187492087483406,
+        "maxM": 0.12091144919395447
+      },
+      "minDistanceDeltaM": 0.0145252151414752,
+      "medianDistanceDeltaM": 0.07341747148893774
+    }
+  ],
+  "orbitalFixingSixConsequences": [
+    {
+      "side": "right",
+      "pin": "Orbital mounting fixing -1 6",
+      "owner": "head",
+      "unchangedGeometryAndTransform": true,
+      "beforePinVerticesToMountSurfaceM": {
+        "sampleCount": 20,
+        "minM": 2.6703355615609325e-05,
+        "medianM": 0.0014432267053052783,
+        "p90M": 0.0046827532351017,
+        "maxM": 0.0051088579930365086
+      },
+      "afterPinVerticesToMountSurfaceM": {
+        "sampleCount": 20,
+        "minM": 0.06041630357503891,
+        "medianM": 0.0642041340470314,
+        "p90M": 0.06709690392017365,
+        "maxM": 0.06783138960599899
+      },
+      "beforePinMountStrictCrossing": {
+        "candidateTrianglePairs": 28,
+        "confirmedTrianglesA": 6,
+        "confirmedTrianglesB": 15,
+        "examples": [
+          {
+            "triangleA": 685,
+            "triangleB": 27,
+            "worldTriangleA": [
+              [
+                -0.1291947,
+                -0.4368166,
+                1.8369427
+              ],
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.129709,
+                -0.4315919,
+                1.843299
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.43714,
+                1.8475
+              ],
+              [
+                -0.125365,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                -0.125365,
+                -0.43714,
+                1.8475
+              ]
+            ]
+          },
+          {
+            "triangleA": 685,
+            "triangleB": 26,
+            "worldTriangleA": [
+              [
+                -0.1291947,
+                -0.4368166,
+                1.8369427
+              ],
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.129709,
+                -0.4315919,
+                1.843299
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.43714,
+                1.8475
+              ],
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                -0.125365,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 685,
+            "triangleB": 29,
+            "worldTriangleA": [
+              [
+                -0.1291947,
+                -0.4368166,
+                1.8369427
+              ],
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.129709,
+                -0.4315919,
+                1.843299
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                -0.125365,
+                -0.4393512,
+                1.8444566
+              ],
+              [
+                -0.125365,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 7,
+            "worldTriangleA": [
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.1114316,
+                -0.447864,
+                1.8550997
+              ],
+              [
+                -0.1190926,
+                -0.4406731,
+                1.8399924
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                -0.120365,
+                -0.4413289,
+                1.8505434
+              ],
+              [
+                -0.120365,
+                -0.44354,
+                1.8475
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 6,
+            "worldTriangleA": [
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.1114316,
+                -0.447864,
+                1.8550997
+              ],
+              [
+                -0.1190926,
+                -0.4406731,
+                1.8399924
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                -0.120365,
+                -0.4377511,
+                1.8493809
+              ],
+              [
+                -0.120365,
+                -0.4413289,
+                1.8505434
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 5,
+            "worldTriangleA": [
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.1114316,
+                -0.447864,
+                1.8550997
+              ],
+              [
+                -0.1190926,
+                -0.4406731,
+                1.8399924
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.44354,
+                1.8475
+              ],
+              [
+                -0.120365,
+                -0.4413289,
+                1.8444566
+              ],
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 661,
+            "triangleB": 26,
+            "worldTriangleA": [
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                -0.1271052,
+                -0.4331899,
+                1.8378518
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.43714,
+                1.8475
+              ],
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                -0.125365,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 661,
+            "triangleB": 5,
+            "worldTriangleA": [
+              [
+                -0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                -0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                -0.1271052,
+                -0.4331899,
+                1.8378518
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                -0.120365,
+                -0.44354,
+                1.8475
+              ],
+              [
+                -0.120365,
+                -0.4413289,
+                1.8444566
+              ],
+              [
+                -0.120365,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          }
+        ],
+        "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+      },
+      "afterPinMountStrictCrossing": {
+        "candidateTrianglePairs": 0,
+        "confirmedTrianglesA": 0,
+        "confirmedTrianglesB": 0,
+        "examples": [],
+        "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+      },
+      "afterPinSampleParityWithinMount": {
+        "inside": 0,
+        "outside": 32,
+        "direction-disagreement": 0
+      },
+      "limits": "Pin6 remains unmoved; sampled surface distance/crossing and closed-shell parity only."
+    },
+    {
+      "side": "left",
+      "pin": "Orbital mounting fixing 1 6",
+      "owner": "head",
+      "unchangedGeometryAndTransform": true,
+      "beforePinVerticesToMountSurfaceM": {
+        "sampleCount": 20,
+        "minM": 1.7836771803558804e-05,
+        "medianM": 0.001432458870112896,
+        "p90M": 0.0046892669051885605,
+        "maxM": 0.005123520269989967
+      },
+      "afterPinVerticesToMountSurfaceM": {
+        "sampleCount": 20,
+        "minM": 0.06041436269879341,
+        "medianM": 0.06420163065195084,
+        "p90M": 0.06709450483322144,
+        "maxM": 0.06782902032136917
+      },
+      "beforePinMountStrictCrossing": {
+        "candidateTrianglePairs": 26,
+        "confirmedTrianglesA": 7,
+        "confirmedTrianglesB": 14,
+        "examples": [
+          {
+            "triangleA": 657,
+            "triangleB": 34,
+            "worldTriangleA": [
+              [
+                0.1343056,
+                -0.4257067,
+                1.8357109
+              ],
+              [
+                0.1209764,
+                -0.4397279,
+                1.8491993
+              ],
+              [
+                0.129709,
+                -0.4315919,
+                1.843299
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                0.1203737,
+                -0.43714,
+                1.8475
+              ],
+              [
+                0.1253736,
+                -0.43714,
+                1.8475
+              ]
+            ]
+          },
+          {
+            "triangleA": 656,
+            "triangleB": 34,
+            "worldTriangleA": [
+              [
+                0.1343056,
+                -0.4257067,
+                1.8357109
+              ],
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1209764,
+                -0.4397279,
+                1.8491993
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                0.1203737,
+                -0.43714,
+                1.8475
+              ],
+              [
+                0.1253736,
+                -0.43714,
+                1.8475
+              ]
+            ]
+          },
+          {
+            "triangleA": 656,
+            "triangleB": 35,
+            "worldTriangleA": [
+              [
+                0.1343056,
+                -0.4257067,
+                1.8357109
+              ],
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1209764,
+                -0.4397279,
+                1.8491993
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                0.1253736,
+                -0.43714,
+                1.8475
+              ],
+              [
+                0.1253736,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 5,
+            "worldTriangleA": [
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                0.1114316,
+                -0.447864,
+                1.8550997
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.43714,
+                1.8475
+              ],
+              [
+                0.1203737,
+                -0.4393512,
+                1.8444566
+              ],
+              [
+                0.1203737,
+                -0.4429289,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 1,
+            "worldTriangleA": [
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                0.1114316,
+                -0.447864,
+                1.8550997
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4393512,
+                1.8444566
+              ],
+              [
+                0.1203737,
+                -0.4413289,
+                1.8444566
+              ],
+              [
+                0.1203737,
+                -0.4429289,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 32,
+            "worldTriangleA": [
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                0.1114316,
+                -0.447864,
+                1.8550997
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4393512,
+                1.8444566
+              ],
+              [
+                0.1203737,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                0.1253736,
+                -0.4377511,
+                1.8456191
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 33,
+            "worldTriangleA": [
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                0.1114316,
+                -0.447864,
+                1.8550997
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4393512,
+                1.8444566
+              ],
+              [
+                0.1253736,
+                -0.4377511,
+                1.8456191
+              ],
+              [
+                0.1253736,
+                -0.4393512,
+                1.8444566
+              ]
+            ]
+          },
+          {
+            "triangleA": 660,
+            "triangleB": 30,
+            "worldTriangleA": [
+              [
+                0.1271052,
+                -0.4331899,
+                1.8378518
+              ],
+              [
+                0.1190926,
+                -0.4406731,
+                1.8399924
+              ],
+              [
+                0.1114316,
+                -0.447864,
+                1.8550997
+              ]
+            ],
+            "worldTriangleB": [
+              [
+                0.1203737,
+                -0.4413289,
+                1.8444566
+              ],
+              [
+                0.1203737,
+                -0.4393512,
+                1.8444566
+              ],
+              [
+                0.1253736,
+                -0.4393512,
+                1.8444566
+              ]
+            ]
+          }
+        ],
+        "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+      },
+      "afterPinMountStrictCrossing": {
+        "candidateTrianglePairs": 0,
+        "confirmedTrianglesA": 0,
+        "confirmedTrianglesB": 0,
+        "examples": [],
+        "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+      },
+      "afterPinSampleParityWithinMount": {
+        "inside": 0,
+        "outside": 32,
+        "direction-disagreement": 0
+      },
+      "limits": "Pin6 remains unmoved; sampled surface distance/crossing and closed-shell parity only."
+    }
+  ],
+  "openingSweep": {
+    "samples": [
+      {
+        "openingFraction": 0.0,
+        "cranialCoverLocalZDeltaM": 0.0,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.00376156996935606
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.00376156996935606
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.025,
+        "cranialCoverLocalZDeltaM": 0.002,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.005676046013832092
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.005676046013832092
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.05,
+        "cranialCoverLocalZDeltaM": 0.004,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.007585580926388502
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.007585571613162756
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.075,
+        "cranialCoverLocalZDeltaM": 0.006,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.009482800960540771
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.00948269758373499
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.1,
+        "cranialCoverLocalZDeltaM": 0.008,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.011379803530871868
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.01137969084084034
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.125,
+        "cranialCoverLocalZDeltaM": 0.01,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.013276797719299793
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.013276797719299793
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.15,
+        "cranialCoverLocalZDeltaM": 0.012,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.015173790976405144
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.015173790976405144
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.175,
+        "cranialCoverLocalZDeltaM": 0.013999999999999999,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.01707102172076702
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.01707102172076702
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.2,
+        "cranialCoverLocalZDeltaM": 0.016,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.018968014046549797
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.018968014046549797
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.225,
+        "cranialCoverLocalZDeltaM": 0.018000000000000002,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.020865008234977722
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.020865008234977722
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.25,
+        "cranialCoverLocalZDeltaM": 0.02,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.022762002423405647
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.022762002423405647
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.275,
+        "cranialCoverLocalZDeltaM": 0.022000000000000002,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.024659108370542526
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.024659108370542526
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.3,
+        "cranialCoverLocalZDeltaM": 0.024,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0265562254935503
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0265562254935503
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.325,
+        "cranialCoverLocalZDeltaM": 0.026000000000000002,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.028455112129449844
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.028455112129449844
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.35,
+        "cranialCoverLocalZDeltaM": 0.027999999999999997,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.030364520847797394
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03036452829837799
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.375,
+        "cranialCoverLocalZDeltaM": 0.03,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03227604553103447
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03227604553103447
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.4,
+        "cranialCoverLocalZDeltaM": 0.032,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0341876819729805
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.034187570214271545
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.425,
+        "cranialCoverLocalZDeltaM": 0.034,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03609932214021683
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.036099206656217575
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.45,
+        "cranialCoverLocalZDeltaM": 0.036000000000000004,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03799987956881523
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03799987956881523
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.475,
+        "cranialCoverLocalZDeltaM": 0.038,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03989687189459801
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.03989687189459801
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.5,
+        "cranialCoverLocalZDeltaM": 0.04,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04179386422038078
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04179386422038078
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.525,
+        "cranialCoverLocalZDeltaM": 0.042,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04369340091943741
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04369340091943741
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.55,
+        "cranialCoverLocalZDeltaM": 0.044000000000000004,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04560093209147453
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0456010103225708
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.575,
+        "cranialCoverLocalZDeltaM": 0.046,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04751244932413101
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.047512561082839966
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.6,
+        "cranialCoverLocalZDeltaM": 0.048,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.049424201250076294
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.04942408576607704
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.625,
+        "cranialCoverLocalZDeltaM": 0.05,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.05133572593331337
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.051335614174604416
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.65,
+        "cranialCoverLocalZDeltaM": 0.052000000000000005,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0532473661005497
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0532473661005497
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.675,
+        "cranialCoverLocalZDeltaM": 0.054000000000000006,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.05515887960791588
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.055158890783786774
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.7,
+        "cranialCoverLocalZDeltaM": 0.055999999999999994,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.057070404291152954
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.057070404291152954
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.725,
+        "cranialCoverLocalZDeltaM": 0.057999999999999996,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.05898192897439003
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.058982037007808685
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.75,
+        "cranialCoverLocalZDeltaM": 0.06,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06089354678988457
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06089344248175621
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.775,
+        "cranialCoverLocalZDeltaM": 0.062000000000000006,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06280520558357239
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06280520558357239
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.8,
+        "cranialCoverLocalZDeltaM": 0.064,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06471671909093857
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06471671909093857
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.825,
+        "cranialCoverLocalZDeltaM": 0.066,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06662824749946594
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06662824749946594
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.85,
+        "cranialCoverLocalZDeltaM": 0.068,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06853977590799332
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.06853977590799332
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.875,
+        "cranialCoverLocalZDeltaM": 0.07,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07045140862464905
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07045140862464905
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.9,
+        "cranialCoverLocalZDeltaM": 0.07200000000000001,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07236304879188538
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07236304879188538
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.925,
+        "cranialCoverLocalZDeltaM": 0.07400000000000001,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07427456229925156
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07427456229925156
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.95,
+        "cranialCoverLocalZDeltaM": 0.076,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07618717104196548
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.07618717104196548
+          }
+        ]
+      },
+      {
+        "openingFraction": 0.975,
+        "cranialCoverLocalZDeltaM": 0.078,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0781039446592331
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.0781039446592331
+          }
+        ]
+      },
+      {
+        "openingFraction": 1.0,
+        "cranialCoverLocalZDeltaM": 0.08,
+        "pairs": [
+          {
+            "brow": "Forged orbital brow -1",
+            "mount": "Forged orbital mounting plate -1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.08002491295337677
+          },
+          {
+            "brow": "Forged orbital brow 1",
+            "mount": "Forged orbital mounting plate 1",
+            "bvhTrianglePairCandidates": 0,
+            "strictCrossing": {
+              "candidateTrianglePairs": 0,
+              "confirmedTrianglesA": 0,
+              "confirmedTrianglesB": 0,
+              "examples": [],
+              "method": "Strict noncoplanar edge-through-face tests; tangency and coplanar overlap excluded."
+            },
+            "sampledBrowVerticesToMountSurfaceMinM": 0.08002491295337677
+          }
+        ]
+      }
+    ],
+    "sampleCount": 41,
+    "strictCrossingPairPoseCount": 0,
+    "limits": "Rest plus 40 additional discrete normalized lift samples; no continuous clearance certificate."
+  },
+  "views": [],
+  "failReasons": [
+    "Seated passive optic housing -1: Boolean changed sampled optic-seat neighborhood by more than 1 mm",
+    "Seated passive optic housing 1: Boolean changed sampled optic-seat neighborhood by more than 1 mm"
+  ],
+  "limits": [
+    "The cutter is a convex hull fit reconstruction, not source-exact engineering or measured metrology.",
+    "Outer projected fit still needs human visual review; a zero strict-crossing sweep does not prove continuous clearance.",
+    "No runtime export, app selection, browser test, owner acceptance, or publication."
+  ]
+}

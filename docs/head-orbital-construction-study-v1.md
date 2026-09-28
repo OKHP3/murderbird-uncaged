@@ -47,3 +47,9 @@ The [neutral image](../assets/audit/orbital-saddle-study-v8/after-three-quarter.
 ## Separate lift-back opening screen
 
 The [single lift-back path screen](../assets/audit/cranial-lift-back-proposal-v1/README.md) is held. On V6, adding 50 mm of eased rearward cover travel to the inherited 80 mm lift resolves the two cere-root crossing identities, but extends nasal-hood/crown interference to 77.5% opening. Closed interference remains. Its full head-region scope yields 111 inherited and 2 resolved strict identities, with no new identities; these totals cannot be compared directly with the earlier selected 39-pair screens. No opening code or support hardware changed. A different path alone has not solved the crown construction.
+
+## Fitted mount and nasal cap decisions
+
+Orbital V9 is held before saving a native: a convex hull around the swept brow bridges its concavity, cutting away most of the mounting plate and displacing the optic-seat relationship. The housing-to-mount median distance grows from about 2.9 to 76 mm; pin 6 also loses its support neighborhood. The [receipt](../assets/audit/orbital-saddle-study-v9/attempt-03/receipt.json) preserves that failed geometry evaluation and the two earlier script-error attempts. V10 instead tests the actual nonconvex brow plus eight translated copies; it must preserve the optical seat and remains an isolated trial.
+
+A separate [nasal/crown cap ownership trial](../assets/audit/cranial-nasal-cover-ownership-study-v1/README.md) preserves every mesh and closed transform while moving five nasal pieces with the crown. It is held: four crossing identities resolve, but inherited bill-root overlaps become moving boundaries and two other hood fixings remain fixed. The peak different-owner count rises from 7 to 9. Reparenting does not excuse those penetrations or establish a complete removable assembly. No app geometry or opening path incorporates either held study.
