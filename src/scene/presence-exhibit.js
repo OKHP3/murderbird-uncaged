@@ -7,7 +7,12 @@ import { createEraMechanisms } from './era-mechanisms.js';
 import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-pose.js';
 import { layoutMarkers } from './marker-layout.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
+const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
+// Fixed local study route only. Production retains the selected V9 asset.
+const reviewBody = import.meta.env.DEV ? new URLSearchParams(location.search).get('review-body') : null;
+const modelUrl = import.meta.env.DEV && ['v10-01', 'v10-02'].includes(reviewBody)
+  ? new URL(`/assets/models/uncaged-whole-body-v10/attempt-${reviewBody.slice(-2)}/murderbird-whole-body-v10.glb`, location.origin).href
+  : selectedModelUrl;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
