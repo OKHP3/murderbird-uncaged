@@ -1,0 +1,237 @@
+{
+  "title": "Isolated bill-root and brow construction study v1",
+  "status": "editable native-only proposal; no GLB, runtime integration, or artistic acceptance",
+  "source": {
+    "nativeBlend": {
+      "path": "assets/models/uncaged-alignment-v6/murderbird-alignment-v6.blend",
+      "sha256": "5a7a51941423dd0efcb48b9641b7a49597dad117e218ccb4e94f26315c5e9ded"
+    },
+    "headRecipe": {
+      "path": "scripts/alignment-v6-head.py",
+      "sha256": "a921130111ac27f14f1ddda10328f7dd21bf2cffa1d4e34aee8d1756fd738472"
+    },
+    "julyReference": {
+      "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "scope": "head only"
+    },
+    "priorBillStudyReview": {
+      "path": "assets/audit/bill-profile-study-v1/root-review.md",
+      "sha256": "8b092b7a41927b0a39438ea96f49423a3e9cabf83ad0be9c2f4b707f67d8b29c"
+    },
+    "nativeInventory": {
+      "path": "assets/models/uncaged-alignment-v6/alignment-inventory.json",
+      "sha256": "2cdef42ccc9e96059d23252513321a5936b5b36717bc6a5c6409246ca6d2ca3b"
+    }
+  },
+  "candidate": {
+    "path": "assets/models/uncaged-bill-root-study-v1/murderbird-bill-root-study-v1.blend",
+    "sha256": "4d81cf96c3683d762535076792a28c68aa836eefcfb4cb4be387274bbac4c3af",
+    "bytes": 2080302
+  },
+  "scriptSnapshot": {
+    "path": "assets/audit/bill-root-study-v1/study-alignment-bill-root.py",
+    "sha256": "276567ff9c27693504afb75ca87deeca295875b3c1cad67bfe8f730f6cff7a02"
+  },
+  "changeAllowlist": [
+    "Cere root transition -1",
+    "Cere root transition 1",
+    "Forged orbital brow -1",
+    "Forged orbital brow 1"
+  ],
+  "targetContracts": {
+    "Cere root transition -1": {
+      "inventory": {
+        "name": "Cere root transition -1",
+        "parent": "upper-bill",
+        "region": "head",
+        "role": "plate",
+        "eras": [
+          "maker",
+          "mechanic",
+          "builder"
+        ],
+        "class": "inherited-passive"
+      },
+      "sourceTransformPreserved": true,
+      "parentPreserved": true,
+      "materialsPreserved": true,
+      "customPropertiesPreserved": true
+    },
+    "Cere root transition 1": {
+      "inventory": {
+        "name": "Cere root transition 1",
+        "parent": "upper-bill",
+        "region": "head",
+        "role": "plate",
+        "eras": [
+          "maker",
+          "mechanic",
+          "builder"
+        ],
+        "class": "inherited-passive"
+      },
+      "sourceTransformPreserved": true,
+      "parentPreserved": true,
+      "materialsPreserved": true,
+      "customPropertiesPreserved": true
+    },
+    "Forged orbital brow -1": {
+      "inventory": {
+        "name": "Forged orbital brow -1",
+        "parent": "cranial-cover",
+        "region": "head",
+        "role": "plate",
+        "eras": [
+          "maker",
+          "mechanic",
+          "builder"
+        ],
+        "class": "inherited-passive"
+      },
+      "sourceTransformPreserved": true,
+      "parentPreserved": true,
+      "materialsPreserved": true,
+      "customPropertiesPreserved": true
+    },
+    "Forged orbital brow 1": {
+      "inventory": {
+        "name": "Forged orbital brow 1",
+        "parent": "cranial-cover",
+        "region": "head",
+        "role": "plate",
+        "eras": [
+          "maker",
+          "mechanic",
+          "builder"
+        ],
+        "class": "inherited-passive"
+      },
+      "sourceTransformPreserved": true,
+      "parentPreserved": true,
+      "materialsPreserved": true,
+      "customPropertiesPreserved": true
+    }
+  },
+  "verification": {
+    "objectNameInventoryPreserved": true,
+    "onlyAllowlistedMeshGeometryChanged": true,
+    "allOtherMeshAndCurveGeometryExactlyPreserved": true,
+    "allObjectTransformsParentsPropertiesAndModifiersExactlyPreserved": true,
+    "allMaterialSignaturesAndAssignmentsExactlyPreserved": true,
+    "candidateReloadedAndSnapshotCompared": true,
+    "beforeAfterViewsUseSameCameras": true,
+    "changedGeometry": {
+      "brow": "Wider, slightly deeper closed profile between fixed root/end stations; same 738-vertex/736-face topology and owner.",
+      "cereRoot": "Replaced small rounded patch with a closed, faceted inset shield that overlaps brow and bill root; no new objects or materials."
+    }
+  },
+  "renders": {
+    "before": [
+      {
+        "path": "assets/audit/bill-root-study-v1/before-side-biased-three-quarter-a.png",
+        "sha256": "64dce62544070cd5f88668164522d2c4dff31ea0c1979a97040d1ebef71a6248",
+        "bytes": 1330569,
+        "camera": {
+          "name": "side-biased-three-quarter-a",
+          "position": [
+            -6.0,
+            -3.0,
+            2.4
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/bill-root-study-v1/before-side-biased-three-quarter-b.png",
+        "sha256": "cc1b60cfc3b1e28b804eb0ef4a5976045b38fa5e308eedcfdba711e2c09dcb22",
+        "bytes": 1318750,
+        "camera": {
+          "name": "side-biased-three-quarter-b",
+          "position": [
+            -6.0,
+            -4.2,
+            2.1
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      }
+    ],
+    "after": [
+      {
+        "path": "assets/audit/bill-root-study-v1/after-side-biased-three-quarter-a.png",
+        "sha256": "58080be40a613205b42794ce1a357faef8c564b55f8b99339db39729d8e91535",
+        "bytes": 1334629,
+        "camera": {
+          "name": "side-biased-three-quarter-a",
+          "position": [
+            -6.0,
+            -3.0,
+            2.4
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/bill-root-study-v1/after-side-biased-three-quarter-b.png",
+        "sha256": "68ad375a80d8eb32327d34c8b51912f0230d9d7b54a723685a5a157eab27b071",
+        "bytes": 1322366,
+        "camera": {
+          "name": "side-biased-three-quarter-b",
+          "position": [
+            -6.0,
+            -4.2,
+            2.1
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      }
+    ]
+  },
+  "limits": [
+    "July illustration guides the head only and is not exact-dimensional evidence.",
+    "Neutral Workbench images are static authoring views, not runtime shader or animation evidence.",
+    "Intentional rigid plate overlap is proposed visually; no jaw/head, jaw/neck, optic-clearance, or strike-contact validation has been run on this new geometry.",
+    "The candidate must be reviewed for broad silhouette and bill opening before any export or integration."
+  ]
+}

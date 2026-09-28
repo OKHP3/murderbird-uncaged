@@ -1,0 +1,10 @@
+{
+  "status": "source review correction required before first execution",
+  "scriptSha256": "4377f97034eb803748353df4993984f58e4b8424e03658525ac12fe5c50d0438",
+  "findings": [
+    "base_materials_by_signature passed to mapper without definition",
+    "mapper still scans all materials, including appended source materials, rather than captured V6 material identities",
+    "inventory inherits obsolete no-purposeful-claw-action limit from V6; limit must distinguish geometry and runtime evidence"
+  ],
+  "action": "Root corrects these before executing. Worker syntax-only check did not detect undefined runtime variable."
+}

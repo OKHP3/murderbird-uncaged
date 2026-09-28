@@ -1,0 +1,132 @@
+{
+  "review": "independent asset and provenance review",
+  "reviewDate": "2026-09-28",
+  "scope": "Read-only verification of V7 binary hashes, inventory metadata, generated GLB extras and hierarchy, source references, and generation-source binding. No browser, visual, artistic, physical, or owner acceptance.",
+  "candidate": {
+    "blend": {
+      "path": "assets/models/uncaged-alignment-v7/murderbird-alignment-v7.blend",
+      "bytes": 1945914,
+      "sha256": "a8fccaf024a096678415215029b34cae8270b348da2301b8872a34e72c75ed3f",
+      "actualFileHashMatchesInventory": true,
+      "binaryPresent": true
+    },
+    "glb": {
+      "path": "assets/models/uncaged-alignment-v7/murderbird-alignment-v7.glb",
+      "bytes": 4426968,
+      "sha256": "1c82874b86af6b493ac380536de6af72a30fafa3a4b0ebb3d8790f56ffc03018",
+      "actualFileHashMatchesInventory": true,
+      "glb2HeaderAndJsonChunkRead": true
+    },
+    "inventory": {
+      "path": "assets/models/uncaged-alignment-v7/alignment-inventory.json",
+      "declaredGeneratedFileCount": 5,
+      "allDeclaredGeneratedFilePathsExist": true,
+      "allDeclaredByteCountsAndSha256Match": true
+    }
+  },
+  "sourceBinding": {
+    "baseV6BlendSha256": "5a7a51941423dd0efcb48b9641b7a49597dad117e218ccb4e94f26315c5e9ded",
+    "baseV6GlbSha256": "ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe",
+    "regionalCandidate04BlendSha256": "376718193b9859cf7e454a0e148dde420c74061e6cdfbec7dd84ae6a4d3c960b",
+    "regionalManifestSha256": "321fd2e01420e9fc06132822badedb79d2c6b0d27e26da0b8919ed434e4dc9ed",
+    "allSixRecordedInputSnapshotsMatchDisk": true,
+    "allEightSourceEntriesAndStoryAuthorityMatchRecordedSha256": true,
+    "storyAuthority": {
+      "path": "content/story/index.main.html",
+      "sha256": "89564989c55cfb2a6315763a76172ea9643e9dc29fc388e636f7849330593c7d",
+      "actualFileHashMatches": true,
+      "scope": "Preserved local story snapshot, not a claim about the live page."
+    },
+    "generationSource": {
+      "path": "assets/audit/alignment-v7/build-uncaged-alignment-v7.py",
+      "sha256": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a",
+      "inventoryGenerationSourceAndScriptSnapshotMatch": true,
+      "executedAuditCopyMatchesRepositoryGenerator": true,
+      "executionEventLog": "No separate process invocation log inspected; the inventory records the copied source hash, and that copy byte-matches scripts/build-uncaged-alignment-v7.py."
+    }
+  },
+  "classification": {
+    "nativeInventoryParts": 687,
+    "nativeInventoryCounts": {
+      "inherited-passive:maker,mechanic,builder": 651,
+      "advanced-system:builder": 35,
+      "later-repair:mechanic,builder": 1
+    },
+    "glbMeshGroups": 90,
+    "glbMeshGroupCounts": {
+      "inherited-passive:maker,mechanic,builder": 86,
+      "advanced-system:builder": 3,
+      "later-repair:mechanic,builder": 1
+    },
+    "everyGlbMeshGroupHasEraAndConstructionClassExtras": true,
+    "makerHasNoAdvancedSystemClass": true,
+    "mechanicHasNoAdvancedSystemClass": true,
+    "advancedSystemClassIsBuilderOnly": true,
+    "qualification": "Era and construction classes are explicit source/inventory/GLB metadata. This review does not infer eligibility from material color or establish story, appearance, or owner acceptance."
+  },
+  "transfers": {
+    "guardAdditions": [
+      {"name":"left curved instep guard","parent":"left-foot","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"left shaped shin guard distal-overlap","parent":"left-shin","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"left shaped shin guard proximal","parent":"left-shin","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"left shaped thigh guard distal-overlap","parent":"left-thigh","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"left shaped thigh guard proximal","parent":"left-thigh","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"right curved instep guard","parent":"right-foot","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"right shaped shin guard distal-overlap","parent":"right-shin","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"right shaped shin guard proximal","parent":"right-shin","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"right shaped thigh guard distal-overlap","parent":"right-thigh","eras":["maker","mechanic","builder"],"class":"inherited-passive"},
+      {"name":"right shaped thigh guard proximal","parent":"right-thigh","eras":["maker","mechanic","builder"],"class":"inherited-passive"}
+    ],
+    "allTenGuardInventoryRecordsMatchContract": true,
+    "talons": [
+      {"name":"left digit 1 tapered claw sheath","parent":"left-digit-1-distal"},
+      {"name":"left digit 2 tapered claw sheath","parent":"left-digit-2-distal"},
+      {"name":"left digit 3 tapered claw sheath","parent":"left-digit-3-distal"},
+      {"name":"right digit 1 tapered claw sheath","parent":"right-digit-1-distal"},
+      {"name":"right digit 2 tapered claw sheath","parent":"right-digit-2-distal"},
+      {"name":"right digit 3 tapered claw sheath","parent":"right-digit-3-distal"}
+    ],
+    "allSixTalonInventoryRecordsMatchExpectedDigitOwners": true,
+    "glbGrouping": "Exact guard and talon object names are combined into parent/era/region/role mesh groups in the GLB. Export extras preserve the combined era and class; the inventory retains the individual names and owners."
+  },
+  "leftShoulder": {
+    "inventoryRetainsOriginalLeftShoulderPlates": true,
+    "inventoryRetainsLaterRepairAsProposedLaterLeftBearingStrapV4": true,
+    "inventoryRetainsOriginalTravelStop": {
+      "name": "Original anatomical-left travel stop v4",
+      "parent": "left-mantle",
+      "region": "shoulder",
+      "role": "frame",
+      "eras": ["maker", "mechanic", "builder"],
+      "class": "inherited-passive"
+    },
+    "glbRetainsLeftMantleShoulderPlateGroup": true,
+    "glbRetainsLeftMantleShoulderFrameGroup": {
+      "name": "left-mantle-shoulder-frame",
+      "parent": "left-mantle",
+      "extras": {"region":"shoulder","surfaceRole":"frame","exteriorEras":"maker,mechanic,builder","constructionClass":"inherited-passive"}
+    },
+    "glbRetainsSeparateMechanicBuilderShoulderRepairGroup": true,
+    "glbRepairNodeName": "industrial-repairs-shoulder-repair",
+    "glbRepairNodeHasExplicitLeftSideIdentity": false,
+    "dedicatedStopPivotRequired": false,
+    "runtimeBehavior": {
+      "runtimeSource": "src/scene/era-motion.js",
+      "asymmetricPowerMoveRule": "left-mantle rotation.x = 0.07*drive + 0.035*air; right-mantle rotation.x = -0.64*drive - 0.12*air",
+      "boundedTest": "assets/audit/alignment-v7/rig-suite/verify-advanced-power-moves/power-move-validation.json",
+      "testModelSha256": "1c82874b86af6b493ac380536de6af72a30fafa3a4b0ebb3d8790f56ffc03018",
+      "testStatus": "passed",
+      "measuredPeakRadians": {"leftShoulder":0.07,"rightShoulder":-0.64},
+      "assertion": "absolute left shoulder rotation remains below absolute right shoulder rotation during the tested thrust move",
+      "suiteModelMatchesCandidate": true
+    },
+    "behavioralFinding": "Restriction remains in the bounded runtime sense tested here: the original stop object remains in the left-mantle shoulder-frame inventory/group, and the V7-hash-bound thrust check applies substantially less left than right shoulder rotation. This evidence supports asymmetric movement behavior; it does not prove a hard angular clamp, contact with the stop mesh, continuous collision behavior, or physical performance.",
+    "metadataFinding": "The separate later-repair export group name does not say left, while the native inventory calls it Proposed later left bearing strap v4. The left-side naming weakness is confined to the grouped repair node; anatomical identity is also present in the left-mantle ownership and the bounded runtime asymmetry."
+  },
+  "metadataLimits": [
+    "sourceReferences carries forward an older review packet and a machine-local, Git-ignored frozen-packet path; this is reference provenance, not a V7 owner decision or a portable source artifact.",
+    "The V7 candidate status remains neutral geometry proposal awaiting owner review. Binary identity and semantic tags do not establish all-era story eligibility, visual/artistic acceptance, or publication approval.",
+    "The aggregate GLB comparison receipt reports 90/90 groups, 51/51 pivots, and 230900/230900 triangles; its own limits exclude topology/normal/UV equivalence, native names/modifier stacks, motion, physical simulation, browser appearance, and artistic acceptance."
+  ],
+  "result": "Hashes, generated-file declarations, local source-reference hashes, source-copy binding, and GLB semantic tags verified. V7 retains the left-mantle travel-stop source record and grouping, and the V7-hash-bound runtime check confirms asymmetric shoulder travel in its tested thrust move. The exported repair-group label omits the explicit left-side token; evidence does not establish a hard stop contact or continuous physical limit."
+}

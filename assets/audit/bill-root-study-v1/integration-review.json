@@ -1,0 +1,126 @@
+{
+  "schema": "murderbird-bill-root-study-review/v1",
+  "status": "held-not-integrated",
+  "candidate": {
+    "path": "assets/models/uncaged-bill-root-study-v1/murderbird-bill-root-study-v1.blend",
+    "sha256": "4d81cf96c3683d762535076792a28c68aa836eefcfb4cb4be387274bbac4c3af",
+    "bytes": 2080302
+  },
+  "source": {
+    "nativeBlend": {
+      "path": "assets/models/uncaged-alignment-v6/murderbird-alignment-v6.blend",
+      "sha256": "5a7a51941423dd0efcb48b9641b7a49597dad117e218ccb4e94f26315c5e9ded"
+    },
+    "julyReference": {
+      "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "scope": "head only"
+    },
+    "priorBillStudyReview": {
+      "path": "assets/audit/bill-profile-study-v1/root-review.md",
+      "sha256": "8b092b7a41927b0a39438ea96f49423a3e9cabf83ad0be9c2f4b707f67d8b29c"
+    }
+  },
+  "generatorScriptSnapshot": {
+    "path": "assets/audit/bill-root-study-v1/study-alignment-bill-root.py",
+    "sha256": "276567ff9c27693504afb75ca87deeca295875b3c1cad67bfe8f730f6cff7a02"
+  },
+  "reviewBasis": {
+    "cameraA": {
+      "path": "assets/audit/bill-root-study-v1/after-side-biased-three-quarter-a.png",
+      "sha256": "58080be40a613205b42794ce1a357faef8c564b55f8b99339db39729d8e91535",
+      "bytes": 1334629,
+      "camera": {
+        "name": "side-biased-three-quarter-a",
+        "position": [
+          -6.0,
+          -3.0,
+          2.4
+        ],
+        "target": [
+          0.0,
+          -0.29,
+          1.78
+        ],
+        "orthoScale": 0.8,
+        "projection": "ORTHO",
+        "resolution": [
+          1100,
+          1100
+        ]
+      }
+    },
+    "cameraB": {
+      "path": "assets/audit/bill-root-study-v1/after-side-biased-three-quarter-b.png",
+      "sha256": "68ad375a80d8eb32327d34c8b51912f0230d9d7b54a723685a5a157eab27b071",
+      "bytes": 1322366,
+      "camera": {
+        "name": "side-biased-three-quarter-b",
+        "position": [
+          -6.0,
+          -4.2,
+          2.1
+        ],
+        "target": [
+          0.0,
+          -0.29,
+          1.78
+        ],
+        "orthoScale": 0.8,
+        "projection": "ORTHO",
+        "resolution": [
+          1100,
+          1100
+        ]
+      }
+    },
+    "referenceScope": "July illustration controls head only; no exact camera/dimensional metrology.",
+    "independentVisualInspection": "Neutral same-camera before/after renders were inspected against the July head-only reference; root reviewer also inspected camera A and the reference."
+  },
+  "observations": [
+    "The expanded Cere root transition reads as an oversized, isolated angular plaque on the forehead instead of an integrated bill-root surface. It worsens the brow-to-cere construction relationship seen in the reference.",
+    "The broader orbital brow is visible, but four changed surfaces cannot form the reference\u2019s long, connected sweep from upper orbit/crown into the bill bridge and integrated cheek arc.",
+    "The lower-jaw opening remains visually open in both neutral camera views; no collision or clearance validator was run on this candidate."
+  ],
+  "integrationDecision": "Do not integrate this candidate. Preserve it as a held proposal; it has no GLB, runtime route, or artistic acceptance.",
+  "minimumMeaningfulScopeExpansion": {
+    "reason": "A single connected construction transition needs coordinated adjacent root geometry. Changing the four current brow/cere surfaces alone produced a detached plaque.",
+    "additionalExistingSurfacesToAllowlist": [
+      {
+        "name": "Broad swept cheek band -1",
+        "role": "fixed orbital cheek support; join the brow into an integrated cheek arc"
+      },
+      {
+        "name": "Broad swept cheek band 1",
+        "role": "mirrored fixed orbital cheek support"
+      },
+      {
+        "name": "Overlapping nasal hood",
+        "role": "central brow-to-bill bridge"
+      },
+      {
+        "name": "Profiled upper bill blade 0",
+        "role": "root-region envelope only; retain outer dorsal apex and bill-contact landmark"
+      },
+      {
+        "name": "Profiled upper bill blade 1",
+        "role": "mirrored root-region envelope only; retain outer dorsal apex and bill-contact landmark"
+      }
+    ],
+    "existingFourTargetsMayRemain": [
+      "Cere root transition -1",
+      "Cere root transition 1",
+      "Forged orbital brow -1",
+      "Forged orbital brow 1"
+    ],
+    "notIncluded": "Do not change the lower mandible, optic seat/lens, crown roof, pivots, neck, body, limbs, materials, runtime model, or distal bill contact tip."
+  },
+  "limits": [
+    "This is a qualitative fixed-camera proposal review, not owner acceptance or dimensional measurement.",
+    "No export, jaw/head, jaw/neck, optic-clearance, strike-contact, browser, or runtime checks were run on the held candidate."
+  ],
+  "preservedFailedAttempts": [
+    "assets/audit/bill-root-study-v1/iterations/attempt-01/attempt-01-failure.json",
+    "assets/audit/bill-root-study-v1/iterations/attempt-02/attempt-02-failure.json"
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "title": "Isolated upper-bill profile study v1",
+  "status": "editable static candidate only; no GLB, runtime switch, or artistic approval",
+  "sourceBlend": {
+    "path": "assets/models/uncaged-alignment-v6/murderbird-alignment-v6.blend",
+    "sha256": "5a7a51941423dd0efcb48b9641b7a49597dad117e218ccb4e94f26315c5e9ded"
+  },
+  "candidateBlend": {
+    "path": "assets/models/uncaged-bill-profile-study-v1/murderbird-bill-profile-study-v1.blend",
+    "sha256": "49ebe42be6814966ab14590f63583970dc9b1fb9505e05585db5248aa902d726",
+    "bytes": 2096979
+  },
+  "studyScript": {
+    "path": "scripts/study-alignment-bill-profile.py",
+    "sha256": "d8ee051865dc2db672bb059e9a2481be1d306e2423675ba89f9244f7dfc0ba20"
+  },
+  "reference": {
+    "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+    "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+    "scope": "July reference: head only"
+  },
+  "changeAllowlist": [
+    "Profiled upper bill blade 0",
+    "Profiled upper bill blade 1"
+  ],
+  "unchangedNativeCheck": {
+    "objectInventoryPreserved": true,
+    "onlyAllowlistedObjectDataChanged": true,
+    "allNonTargetObjectsExactlyMatchAtInspectedNativeFields": true,
+    "targetTopologyAndTransformsPreserved": true,
+    "checkedFields": [
+      "all object names/types/parents/transforms/custom properties/hide-render state",
+      "all mesh vertex coordinates/topology/material slots",
+      "curve spline coordinates/handles"
+    ],
+    "note": "The allowlist modifies only the target meshes' vertex-coordinate fields; the original v6 source remains hash-identical."
+  },
+  "targetMeshes": {
+    "Profiled upper bill blade 0": {
+      "vertexCount": 2280,
+      "beforeVertexSha256": "d753cbdd4369bcb15c5cc41eaa7b049561129942a90d6bdd3414ed31af2596f9",
+      "afterVertexSha256": "2b32dbb48ebd3fa3a55f94f14e57a115071493e787c5327f0add515310fa181e",
+      "localInnerOffsetsByLandmarkMeters": [
+        0.0,
+        0.0,
+        0.025,
+        0.035,
+        0.03,
+        0.012,
+        0.0,
+        0.0
+      ],
+      "meshOwner": "upper-bill",
+      "objectTransformPreserved": true
+    },
+    "Profiled upper bill blade 1": {
+      "vertexCount": 2280,
+      "beforeVertexSha256": "3b1e920454cc437a9b1b1376065216fc1f8e433c32bbea2becb66d8e5f7ba72f",
+      "afterVertexSha256": "79f01244bea11ee5b9974dd1794c0bdfa322633e82b3aec5b03439973cbfc2b9",
+      "localInnerOffsetsByLandmarkMeters": [
+        0.0,
+        0.0,
+        0.025,
+        0.035,
+        0.03,
+        0.012,
+        0.0,
+        0.0
+      ],
+      "meshOwner": "upper-bill",
+      "objectTransformPreserved": true
+    }
+  },
+  "profileAdjustment": {
+    "method": "move existing inner-side samples posteriorly and blend the same displacement continuously to zero at the unchanged convex outer surface; preserve each existing 57x40 closed quad grid",
+    "posteriorInnerStationOffsetsMeters": [
+      0.0,
+      0.0,
+      0.025,
+      0.035,
+      0.03,
+      0.012,
+      0.0,
+      0.0
+    ],
+    "stationOrder": "root to terminal tip; indices 0, 1, 6, and 7 stay fixed",
+    "outerDorsalProfilePreserved": true,
+    "transverseWidthPreserved": true,
+    "sharpTerminalPointPreserved": true,
+    "materialsSensorsOwnersAndRigidTransformsChanged": false
+  },
+  "renders": {
+    "before": [
+      {
+        "image": "assets/audit/bill-profile-study-v1/before-side-biased-three-quarter-a.png",
+        "sha256": "e9566ba608ef033c746ddca1f4a331e0318780e840f89b0ae892f362abceace2",
+        "bytes": 1330572,
+        "camera": {
+          "name": "side-biased-three-quarter-a",
+          "position": [
+            -6.0,
+            -3.0,
+            2.4
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "image": "assets/audit/bill-profile-study-v1/before-side-biased-three-quarter-b.png",
+        "sha256": "df535e092d28944c4f444aec7277919e8724139a06754e0318dadf079339d41f",
+        "bytes": 1318753,
+        "camera": {
+          "name": "side-biased-three-quarter-b",
+          "position": [
+            -6.0,
+            -4.2,
+            2.1
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      }
+    ],
+    "after": [
+      {
+        "image": "assets/audit/bill-profile-study-v1/after-side-biased-three-quarter-a.png",
+        "sha256": "c545f2d4ba1fea0824e4f8a703b704d561357406b15f19447325ae4887888ed7",
+        "bytes": 1332002,
+        "camera": {
+          "name": "side-biased-three-quarter-a",
+          "position": [
+            -6.0,
+            -3.0,
+            2.4
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "image": "assets/audit/bill-profile-study-v1/after-side-biased-three-quarter-b.png",
+        "sha256": "67c51d163a609aeab59503c1daa1562f9f9363a417d3199d232863db24e78ca2",
+        "bytes": 1320064,
+        "camera": {
+          "name": "side-biased-three-quarter-b",
+          "position": [
+            -6.0,
+            -4.2,
+            2.1
+          ],
+          "target": [
+            0.0,
+            -0.29,
+            1.78
+          ],
+          "orthoScale": 0.8,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      }
+    ]
+  },
+  "limits": [
+    "Render pair is a neutral Workbench authoring comparison at identical approximate three-quarter cameras.",
+    "The July image guides head-only form; it does not provide exact dimensions or calibrated camera placement.",
+    "The changed contour must be visually assessed for jaw-opening clearance before any further acceptance or export."
+  ]
+}
