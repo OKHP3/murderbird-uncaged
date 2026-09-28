@@ -148,7 +148,7 @@ function verifyMakerChannels() {
       wing: run.nodes['right-mantle'].rotation.x < -.3,
       tail: Boolean(tail && tail.rotation.x < -.2),
       neck: run.nodes.neck.rotation.y < -.4,
-      jaw: run.nodes.jaw.rotation.x < -.3,
+      jaw: run.nodes.jaw.rotation.x > .3,
     }[id];
     assert.ok(visible, `${id} control did not move its visible linkage`);
     channels[id] = { applied: m.actualArticulation[id], visible, tailPivot: id === 'tail' ? tail.name : null };

@@ -257,7 +257,7 @@ function testMaker(){
     const m=run.motion.metrics();assert.deepEqual(m.root,fixed);assert(m.actualArticulation[id]>.99);assert(m.maxFootError<.002);
     effects[id]=m.actualArticulation[id];
     if(id==='leg')assert(m.feet[0].actual[1]-m.feet[1].actual[1]>.14);
-    if(id==='jaw')assert(run.nodes.jaw.rotation.x<-.3);
+    if(id==='jaw')assert(run.nodes.jaw.rotation.x>.3);
     if(id==='neck')assert(run.nodes.neck.rotation.y<-.4);
     run.machine.setArticulation(id,0);run.advanceFor(1.8);
   }

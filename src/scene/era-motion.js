@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { solveTransverseLeg } from './rigid-leg-kinematics.js';
 
 // Metres; Y up, bird forward +Z. Motion is a kinematic production proposal.
 // Each support foot is stored in world space. A swing is the only operation
@@ -8,6 +9,8 @@ const clamp = THREE.MathUtils.clamp;
 const smooth = t => t * t * (3 - 2 * t);
 const angleDelta = (a, b) => Math.atan2(Math.sin(b - a), Math.cos(b - a));
 const approach = (a, b, amount) => a + clamp(b - a, -amount, amount);
+const MAX_CONTACT_PITCH = .65;
+const RAIL_INNER_Z = 2.1 - .021;
 
 export function createEraMotion(model, nodes, rest) {
   model.updateMatrixWorld(true);
@@ -21,7 +24,11 @@ export function createEraMotion(model, nodes, rest) {
     const minY = new THREE.Box3().setFromObject(foot, true).min.y;
     const floorHeight = origin.y - minY + .002;
     const ideal = origin.clone(); ideal.y = floorHeight;
-    return { label, thigh, shin, foot, toes, hipRest: thigh.position.clone(), upper: shin.position.clone(), lower: foot.position.clone(), toeRest: toes.rotation.clone(), ideal, position: ideal.clone(), from: ideal.clone(), to: ideal.clone(), yaw: 0, fromYaw: 0, toYaw: 0, phase: 1, swinging: false, plantedFrames: 0, steps: 0, solveError: 0, groundY: floorHeight };
+    const digits = [1, 2, 3].flatMap(digit => ['proximal', 'distal'].map(segment => {
+      const node = model.getObjectByName(`${label}-digit-${digit}-${segment}`);
+      return node ? { node, rest: node.rotation.clone(), segment, weight: [.82, 1, .88][digit - 1] } : null;
+    })).filter(Boolean);
+    return { label, thigh, shin, foot, toes, digits, manualLift: 0, hipRest: thigh.position.clone(), upper: shin.position.clone(), lower: foot.position.clone(), toeRest: toes.rotation.clone(), ideal, position: ideal.clone(), from: ideal.clone(), to: ideal.clone(), yaw: 0, fromYaw: 0, toYaw: 0, phase: 1, swinging: false, plantedFrames: 0, steps: 0, solveError: 0, groundY: floorHeight };
   });
   let x = 0, z = -.25, yaw = 0, speed = 0, velocityX = 0, velocityZ = 0, yawVelocity = 0, time = 0, stride = 0;
   let nextFoot = 0, motionFrame = 0, distance = 0, settled = true, arrived = false, aligned = true;
@@ -63,6 +70,28 @@ export function createEraMotion(model, nodes, rest) {
     });
     return Number.isFinite(front);
   }
+  // Derive the approach distance from the loaded rigid bill surface. The
+  // controller's fallback goal cannot know whether a new bill is shorter.
+  // Test both cage and visitor loads at the existing maximum cervical angle;
+  // the final contact still solves the actual triangle/rail intersection.
+  const contactApproach = (() => {
+    const saved=[model,nodes.body,nodes.neck,nodes.head].map(node=>({node,position:node.position.clone(),rotation:node.rotation.clone()}));
+    let minimumReach=Infinity;
+    model.position.set(0,0,0);model.rotation.set(0,0,0);
+    for(const load of [.27,.55,1]){
+      nodes.body.position.copy(rest.body.position).add(new THREE.Vector3(0,-.065-load*.075,.12));
+      nodes.body.rotation.set(.105+load*.035,0,0);
+      nodes.neck.position.copy(rest.neck.position);nodes.neck.rotation.set(MAX_CONTACT_PITCH,0,0);
+      nodes.head.position.copy(rest.head.position);nodes.head.rotation.set(-nodes.body.rotation.x*.65-MAX_CONTACT_PITCH,0,0);
+      model.updateMatrixWorld(true);
+      if(billSurfaceAtRail(0))minimumReach=Math.min(minimumReach,contactPoint.z);
+    }
+    for(const item of saved){item.node.position.copy(item.position);item.node.rotation.copy(item.rotation);}
+    model.updateMatrixWorld(true);contactPoint.set(0,0,0);
+    if(!Number.isFinite(minimumReach))throw new Error('Upper bill does not intersect its centre contact plane.');
+    const margin=.008,requestedZ=RAIL_INNER_Z-minimumReach+margin;
+    return {z:clamp(requestedZ,-.65,1.08),requestedZ,minimumSurfaceReach:minimumReach,arrivalMargin:margin,maximumPitch:MAX_CONTACT_PITCH,clamped:requestedZ<-.65||requestedZ>1.08};
+  })();
   for (const foot of feet) foot.position.z += z;
 
   function idealFoot(f, ahead = 0) {
@@ -78,26 +107,28 @@ export function createEraMotion(model, nodes, rest) {
     f.thigh.position.copy(f.hipRest).sub(rest.body.position).applyEuler(nodes.body.rotation).add(nodes.body.position);
     f.thigh.quaternion.identity(); f.shin.quaternion.identity(); f.foot.quaternion.identity();
     model.updateMatrixWorld(true);
-    // Solve in model coordinates. The knee bends toward the bird's front.
+    // Solve in model coordinates about the visible local-X knee journal.
     const hip = f.thigh.position.clone();
     const target = model.worldToLocal(f.position.clone());
-    const axis = target.clone().sub(hip);
-    const upperLength = f.upper.length(), lowerLength = f.lower.length();
-    const length = clamp(axis.length(), .05, upperLength + lowerLength - .001);
-    axis.normalize();
-    const along = (upperLength ** 2 - lowerLength ** 2 + length ** 2) / (2 * length);
-    const height = Math.sqrt(Math.max(0, upperLength ** 2 - along ** 2));
-    const bend = new THREE.Vector3(0, 0, 1).addScaledVector(axis, -axis.z).normalize();
-    const knee = hip.clone().addScaledVector(axis, along).addScaledVector(bend, height);
-    f.thigh.quaternion.setFromUnitVectors(f.upper.clone().normalize(), knee.clone().sub(hip).normalize());
-    const lowerDirection = target.clone().sub(knee).applyQuaternion(inverse.copy(f.thigh.quaternion).invert()).normalize();
-    f.shin.quaternion.setFromUnitVectors(f.lower.clone().normalize(), lowerDirection);
+    const solution = solveTransverseLeg(f.upper, f.lower, target.clone().sub(hip));
+    f.thigh.quaternion.copy(solution.hipQuaternion);
+    f.shin.quaternion.copy(solution.kneeQuaternion);
     model.updateMatrixWorld(true);
     f.foot.parent.getWorldQuaternion(inverse).invert();
     q.setFromAxisAngle(UP, f.yaw);
     q.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), -.13 * lift));
     f.foot.quaternion.copy(inverse).multiply(q);
     f.toes.rotation.copy(f.toeRest); f.toes.rotation.x = .14 * lift;
+    // Modest free-air flexion tucks the individually hinged digits during a
+    // lifted step. Planting restores their recorded geometry exactly; this is
+    // toe clearance choreography, not a supported grasp or force simulation.
+    // The Mechanic's lift is lower than the Advanced step; scale its tuck by
+    // actual free-air clearance as well as phase so claws stay above the floor.
+    const flex = Math.min(smooth(clamp(lift, 0, 1)), clamp((f.position.y - f.groundY) / .105, 0, 1));
+    for (const digit of f.digits) {
+      digit.node.rotation.copy(digit.rest);
+      digit.node.rotation.x += (digit.segment === 'proximal' ? .10 : .17) * digit.weight * flex;
+    }
     model.updateMatrixWorld(true);
     f.solveError = f.foot.getWorldPosition(a).distanceTo(f.position);
     maxFootError = Math.max(maxFootError, f.solveError);
@@ -119,7 +150,7 @@ export function createEraMotion(model, nodes, rest) {
       neededDrop=Math.max(neededDrop,hip.y-target.y-Math.sqrt(Math.max(.01,reach*reach-(hip.x-target.x)**2-(hip.z-target.z)**2)));
     }
     reachDrop=Math.max(0,Math.min(.12,neededDrop));maxReachDrop=Math.max(maxReachDrop,reachDrop);nodes.body.position.y-=reachDrop;
-    for(const f of feet)solveLeg(f,null,f.swinging?Math.sin(Math.PI*f.phase):0);
+    for(const f of feet)solveLeg(f,null,f.manualLift||(f.swinging?Math.sin(Math.PI*f.phase):0));
     model.updateMatrixWorld(true);contact=false;Object.keys(pose).forEach(k=>pose[k]=0);
   }
   function tickMaker(dt,s){
@@ -132,10 +163,10 @@ export function createEraMotion(model, nodes, rest) {
     x=0;z=-.25;yaw=0;speed=0;
     nodes.body.position.copy(rest.body.position).add(new THREE.Vector3(0,-.065,0));
     nodes.neck.rotation.y=-.45*articulation.neck;nodes.neck.rotation.x=-.14*articulation.neck;
-    nodes.jaw.rotation.x=-.32*articulation.jaw;
+    nodes.jaw.rotation.x=.32*articulation.jaw;
     nodes['right-mantle'].rotation.x=-.38*articulation.wing;nodes['right-wing-shield'].rotation.x=.16*articulation.wing;
     for(const f of feet){f.position.copy(f.ideal).add(new THREE.Vector3(0,0,z));f.yaw=0;f.swinging=false;f.phase=1;}
-    feet[0].position.y+=articulation.leg*.15;feet[0].position.z+=articulation.leg*.065;
+    feet[0].position.y+=articulation.leg*.15;feet[0].position.z+=articulation.leg*.065;feet[0].manualLift=articulation.leg;
     finishEarlyEra();arrived=true;aligned=true;settled=Object.values(articulation).every(v=>Math.abs(v)<.003);
   }
   function tickMechanic(dt,s){
@@ -221,6 +252,7 @@ export function createEraMotion(model, nodes, rest) {
       return;
     }
     if(s.era!==currentEra)resetEra(s.era);
+    for(const f of feet)f.manualLift=0;
     // Fixed structural attachments, including when a caller omits a pose reset.
     nodes.neck.position.copy(rest.neck.position);
     nodes.head.position.copy(rest.head.position);
@@ -296,7 +328,7 @@ export function createEraMotion(model, nodes, rest) {
     nodes.neck.rotation.y = pose.gaze * .48;
     nodes.head.rotation.y = pose.gaze * .52 * (1 - pose.extension);
     nodes.head.rotation.x = -nodes.body.rotation.x * .65;
-    nodes.jaw.rotation.x = -pose.jaw * .27;
+    nodes.jaw.rotation.x = pose.jaw * .27;
     nodes['right-mantle'].rotation.x = -pose.guard * .24 - pose.counter;
     nodes['right-wing-shield'].rotation.x = pose.guard * .38;
     nodes['left-mantle'].rotation.x = pose.guard * .065 - pose.counter * .35;
@@ -328,12 +360,12 @@ export function createEraMotion(model, nodes, rest) {
         model.updateMatrixWorld(true);
         return billSurfaceAtRail(railX);
       };
-      let low=0, high=.65;
-      const reachable=applyPitch(high)&&contactPoint.z>=2.079;
+      let low=0, high=MAX_CONTACT_PITCH;
+      const reachable=applyPitch(high)&&contactPoint.z>=RAIL_INNER_Z;
       if(reachable){
         for(let i=0;i<16;i++){
           const mid=(low+high)/2;
-          if(applyPitch(mid)&&contactPoint.z>=2.079)high=mid;else low=mid;
+          if(applyPitch(mid)&&contactPoint.z>=RAIL_INNER_Z)high=mid;else low=mid;
         }
       }
       const pitch=THREE.MathUtils.lerp(basePitch,high,clamp(pose.extension,0,1));
@@ -353,10 +385,10 @@ export function createEraMotion(model, nodes, rest) {
   return {
     tick, resetEra,
     driveMetrics:()=>({root:{x,z,yaw,speed},camAngle,mechanicalPhase,mechanicalStage,actualArticulation:{...articulation}}),
-    feedback: () => ({ arrived, settled, aligned, contact }),
+    feedback: () => ({ arrived, settled, aligned, contact, contactApproachZ:contactApproach.z }),
     metrics() {
       model.updateMatrixWorld(true);
-      return { era:currentEra,powerMove:powerPose?{...powerPose}:null,root: { x, z, yaw, speed }, distance, steps: stride, time, motionFrame, settled, arrived, aligned, contact,camAngle,mechanicalPhase,mechanicalStage,actualArticulation:{...articulation}, cervical:{baseTranslationError:nodes.neck.position.distanceTo(rest.neck.position),skullTranslationError:nodes.head.position.distanceTo(rest.head.position),neckPitch:nodes.neck.rotation.x,skullPitch:nodes.head.rotation.x,maxContactPitch:.65,contactMethod:'upper-bill triangle / rail-centre plane'}, contactPoint: contactPoint.toArray(), pose: { ...pose }, maxFootError, reachDrop, maxReachDrop, feet: feet.map(f => ({ side: f.label, target: f.position.toArray(), actual: f.foot.getWorldPosition(new THREE.Vector3()).toArray(), swinging: f.swinging, phase: f.phase, yaw: f.yaw, steps: f.steps, solveError: f.solveError, groundMin: new THREE.Box3().setFromObject(f.foot, true).min.y })), bodyBounds: visibleModelBounds(), headBounds: new THREE.Box3().setFromObject(nodes.head, true) };
+      return { era:currentEra,powerMove:powerPose?{...powerPose}:null,root: { x, z, yaw, speed }, distance, steps: stride, time, motionFrame, settled, arrived, aligned, contact,camAngle,mechanicalPhase,mechanicalStage,actualArticulation:{...articulation}, cervical:{baseTranslationError:nodes.neck.position.distanceTo(rest.neck.position),skullTranslationError:nodes.head.position.distanceTo(rest.head.position),neckPitch:nodes.neck.rotation.x,skullPitch:nodes.head.rotation.x,maxContactPitch:MAX_CONTACT_PITCH,contactMethod:'upper-bill triangle / rail-centre plane'}, contactApproach:{...contactApproach}, jawHinge:{axis:'local X',openingSign:1,angle:nodes.jaw.rotation.x,makerMaximum:.32}, contactPoint: contactPoint.toArray(), pose: { ...pose }, maxFootError, reachDrop, maxReachDrop, feet: feet.map(f => ({ side: f.label, target: f.position.toArray(), actual: f.foot.getWorldPosition(new THREE.Vector3()).toArray(), swinging: f.swinging, phase: f.phase, yaw: f.yaw, steps: f.steps, solveError: f.solveError, kneeHinge:{axis:'local X',angle:f.shin.rotation.x,offAxisQuaternion:Math.hypot(f.shin.quaternion.y,f.shin.quaternion.z)}, digits:f.digits.map(d=>({name:d.node.name,angle:d.node.rotation.x,restAngle:d.rest.x})), groundMin: new THREE.Box3().setFromObject(f.foot, true).min.y })), bodyBounds: visibleModelBounds(), headBounds: new THREE.Box3().setFromObject(nodes.head, true) };
     },
   };
 }

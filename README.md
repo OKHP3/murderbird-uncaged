@@ -10,6 +10,8 @@ Meet a flightless mechanical creature whose construction changes across centurie
 
 **Published for assessment.** This is a working 3D interpretation, not an owner-approved final character. The banner is reference artwork, not a screenshot. The gallery separates reference images, authoring renders, browser captures, and recorded motion so reviewers can compare what was intended with what was built.
 
+**Local correction branch:** the current checkout loads the separate [alignment-v3 geometry and articulation candidate](docs/alignment-v3-review.md). Its [local comparison gallery](assets/audit/alignment-v3/alignment-review.html) and [editable model](assets/models/uncaged-alignment-v3/README.md) preserve v2 as a historical checkpoint. The public links above do not establish publication of this correction.
+
 ## Three eras, three ways to move
 
 | Era | What you can do | Construction |
@@ -32,7 +34,7 @@ The [story and media folio](https://okhp3.github.io/murderbird-uncaged/folio.htm
 
 ## What is ready, and what is still being assessed
 
-The current checkpoint includes three exterior configurations, regional UV/PBR surfaces, rigid articulated assemblies, era-specific controls, reversible inspection, the theme player, and a published comparison gallery.
+The historical published checkpoint includes three exterior configurations, regional UV/PBR surfaces and its comparison gallery. The active local alignment candidate uses neutral rigid geometry with no image maps or final wear. Both retain era-specific controls, reversible inspection and the theme player.
 
 Likeness, proportions, armor rhythm, wear placement, and character acting remain open artistic questions. Motion is kinematic, not a validated force or collision simulation. Human accessibility acceptance and broader physical-device/browser coverage are separate from automated checks. Do not infer final approval from a passing build or a published page.
 

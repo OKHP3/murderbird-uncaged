@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-09-28T02:56:03.624Z",
+  "model": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+  "checks": [
+    {
+      "name": "three-front-rails-use-articulated-cervical-contact-through-recovery",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: condition not reached within 12s; state=watch\n    at Object.advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-structural-motion.mjs:65:12)\n    at verifyThreeRailContact (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-structural-motion.mjs:91:30)\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-structural-motion.mjs:24:62)\n    at main (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-structural-motion.mjs:214:3)\n    at async file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-structural-motion.mjs:229:1"
+    },
+    {
+      "name": "maker-five-controls-have-visible-structural-response",
+      "status": "passed",
+      "result": {
+        "channels": {
+          "leg": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "wing": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "tail": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": "compact-articulated-tail"
+          },
+          "neck": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "jaw": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          }
+        },
+        "rootRemainsFixed": true
+      }
+    },
+    {
+      "name": "mechanic-turn-retains-grounded-motion-without-builder-contact",
+      "status": "passed",
+      "result": {
+        "maxYaw": 1.5707963267948966,
+        "steps": 8,
+        "maxFootError": 3.0548869515534283e-16,
+        "routineRunning": true
+      }
+    },
+    {
+      "name": "jump-and-thrust-inspection-wait-for-safe-pose",
+      "status": "passed",
+      "result": {
+        "jumpPhaseAtRequest": 0.30952380952380953,
+        "jumpInspectionWaitedForLanding": true,
+        "thrustPhaseAtRequest": 0.303030303030303,
+        "thrustInspectionWaitedForSettle": true
+      }
+    }
+  ],
+  "status": "failed",
+  "report": "assets/audit/alignment-v3/structural-motion-validation.json"
+}

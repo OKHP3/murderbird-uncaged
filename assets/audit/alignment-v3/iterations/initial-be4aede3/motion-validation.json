@@ -1,0 +1,369 @@
+{
+  "generatedAt": "2026-09-28T02:56:03.613Z",
+  "model": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+  "report": "assets/audit/alignment-v3/motion-validation.json",
+  "checks": [
+    {
+      "name": "exported-head-animation",
+      "status": "passed",
+      "result": {
+        "name": "attention-export-proof",
+        "duration": 1.0333333015441895,
+        "tracks": 1,
+        "headRotationY": 0.11847110565319377
+      }
+    },
+    {
+      "name": "maker-fixed-external-articulation",
+      "status": "passed",
+      "result": {
+        "stationaryRoot": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "manualChannels": {
+          "leg": 0.9998765901959132,
+          "wing": 0.9998765901959132,
+          "tail": 0.9998765901959132,
+          "neck": 0.9998765901959132,
+          "jaw": 0.9998765901959132
+        },
+        "inspectionGrounded": true
+      }
+    },
+    {
+      "name": "mechanic-phased-traversal-and-stop",
+      "status": "passed",
+      "result": {
+        "distance": 2.2199999999999993,
+        "steps": 34,
+        "camStages": [
+          "load",
+          "release",
+          "settle",
+          "dwell",
+          "disengaged"
+        ],
+        "maxInstantaneousSpeed": 0.33381986184156,
+        "stationaryFraction": 0.7777777777777778,
+        "turnRadians": 2.5907963267948966,
+        "energy": 0.34933333333329664,
+        "inspectionGrounded": true
+      }
+    },
+    {
+      "name": "unattended-927-0.016666666666666666",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "unattended-42-0.016666666666666666",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "unattended-2026-0.016666666666666666",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "unattended-927-0.1",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "visitor-rail--1",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "visitor-rail-0",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "visitor-rail-1",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "retreat-before-commit",
+      "status": "passed",
+      "result": {
+        "time": 1.8499999999999983,
+        "endState": "agitated",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 0.016666666666666666,
+          "agitated": 1.2000000000000006
+        },
+        "distance": 0.00037500000000000006,
+        "steps": 0,
+        "stepOrder": [],
+        "maxFootError": 2.0014830212433605e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 1.8561541192951836e-16,
+        "plantedGroundY": [
+          0.0019999999999998144,
+          0.0020000000000001544
+        ],
+        "bounds": {
+          "minX": -0.4994130831332149,
+          "maxX": 0.5047770567511991,
+          "minZ": -0.6885994297942367,
+          "maxZ": 0.42958855748798924
+        },
+        "contacts": [],
+        "endRoot": {
+          "x": -0.0002575468392314557,
+          "z": -0.2497274295951467,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.0020000000000000642
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.001999999999999995
+          }
+        ]
+      }
+    },
+    {
+      "name": "retreat-after-commit",
+      "status": "failed",
+      "error": "no physical bill contact was reported"
+    },
+    {
+      "name": "inspection-during-pace",
+      "status": "passed",
+      "result": {
+        "time": 2.416666666666663,
+        "endState": "watch",
+        "stateTimes": {
+          "watch": 1.9333333333333313,
+          "pace": 0.016666666666666666,
+          "settle": 0.44999999999999996,
+          "inspection": 0.016666666666666666
+        },
+        "distance": 0.0002604541123345528,
+        "steps": 0,
+        "stepOrder": [],
+        "maxFootError": 1.3597399555105182e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 1.1622647289044608e-16,
+        "plantedGroundY": [
+          0.001999999999999884,
+          0.0020000000000000226
+        ],
+        "bounds": {
+          "minX": -0.4999143677941642,
+          "maxX": 0.5040488839149475,
+          "minZ": -0.6862027386492304,
+          "maxZ": 0.42953135494933203
+        },
+        "contacts": [],
+        "endRoot": {
+          "x": 0.00023330184683237746,
+          "z": -0.249884213157498,
+          "yaw": 0.022500000000000003,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.2512859106063843,
+              0.276585373699665,
+              -0.2883598655462265
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 5.551115123125783e-17,
+            "groundMin": 0.001999999999999884
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.25128591060638433,
+              0.27658537369966496,
+              -0.28835986554622645
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 1.3597399555105182e-16,
+            "groundMin": 0.001999999999999988
+          }
+        ]
+      }
+    },
+    {
+      "name": "inspection-during-strike",
+      "status": "passed",
+      "result": {
+        "time": 5.449999999999986,
+        "endState": "watch",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 3.1999999999999935,
+          "warning": 0.7500000000000007,
+          "strike": 0.016666666666666666,
+          "settle": 0.8333333333333343,
+          "inspection": 0.016666666666666666
+        },
+        "distance": 1.2661006667320711,
+        "steps": 8,
+        "stepOrder": [
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.8082297488136827,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.6997975854389932,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.5852613917490205,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.4645685512232985,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.33761092512915186,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.1980102767156572,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.0562353673980966,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 3.510833468576701e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 2.931682674400804e-16,
+        "plantedGroundY": [
+          0.0019999999999997867,
+          0.002000000000000293
+        ],
+        "bounds": {
+          "minX": -0.530158016072315,
+          "maxX": 0.5328646207026442,
+          "minZ": -0.6789379864931107,
+          "maxZ": 1.6958169036214343
+        },
+        "contacts": [],
+        "endRoot": {
+          "x": 0,
+          "z": 1.016100666732072,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.2512859106063843,
+              0.27658537369966507,
+              0.9700665636402274
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              0.9700665636402273
+            ],
+            "swinging": false,
+            "solveError": 1.1102230246251565e-16,
+            "groundMin": 0.0020000000000000087
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.2512859106063843,
+              0.2765853736996651,
+              0.9869915615652947
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              0.9869915615652947
+            ],
+            "swinging": false,
+            "solveError": 5.551115123125783e-17,
+            "groundMin": 0.002000000000000085
+          }
+        ]
+      }
+    }
+  ],
+  "status": "failed"
+}

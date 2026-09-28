@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-09-28T03:05:34.910051+00:00",
+  "model": {
+    "path": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+    "sha256": "9a97991164d9d6c2a2d471b856ddffd54eee511d7ac5528ccf607fd4a53c08b5"
+  },
+  "scope": "Node kinematic and mechanism checks on final geometry; browser, visual likeness, continuous collision, physical dynamics, supported claw grip and human motion approval are separate.",
+  "checks": {
+    "unitTests": "44/44 passed",
+    "kinematicAlignment": "4/4 passed",
+    "jawSweep": "0 proper triangle crossings in 33 sampled poses outside documented journal envelope",
+    "eraMotion": "14/14 passed",
+    "structuralMotion": "4/4 passed",
+    "powerMoves": "4/4 passed",
+    "mechanisms": "7/7 passed"
+  },
+  "sources": [
+    {
+      "path": "src/scene/era-motion.js",
+      "sha256": "39575587da8938df0ab9f2258fb44c734759e91a568d1bcc40dc92ddfef9d0de"
+    },
+    {
+      "path": "src/scene/presence-state.js",
+      "sha256": "f1f9b261f6010475153a93eed7097bfb950968dc7aaf22d7d112b2d027067fa4"
+    },
+    {
+      "path": "src/scene/rigid-leg-kinematics.js",
+      "sha256": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd"
+    },
+    {
+      "path": "scripts/verify-alignment-kinematics.mjs",
+      "sha256": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32"
+    },
+    {
+      "path": "scripts/verify-jaw-sweep.mjs",
+      "sha256": "d39e29f45c351e4bc4d85b39475cff2112eccc719ab3972dffd3e7fe2ffc217e"
+    },
+    {
+      "path": "scripts/verify-alignment-v3-mechanisms.mjs",
+      "sha256": "a540f860f425493cdba38b424fcc112516b372406984dd8c52d5480cfdc2ca9d"
+    },
+    {
+      "path": "scripts/verify-era-motion.mjs",
+      "sha256": "7b24ca4f53c3525161a280ced7d751190acb731ad5a3dd542753c076d51014d6"
+    },
+    {
+      "path": "scripts/verify-structural-motion.mjs",
+      "sha256": "682012b6c0383feda025a80d488861750dce615c6d5feda55704cddc14b45d73"
+    },
+    {
+      "path": "scripts/verify-advanced-power-moves.mjs",
+      "sha256": "e22f3e84a51b269263b2730ce58a36cc0ee3b9e3e44bc95011e5dd3bfe8ba745"
+    },
+    {
+      "path": "tests/rigid-leg-kinematics.test.mjs",
+      "sha256": "e8bbb9fed4dee2f611615041e8e97e8ec408155511205db25832a0b5a1c413df"
+    },
+    {
+      "path": "tests/contact-approach.test.mjs",
+      "sha256": "cec270b2b16575a5621d46e63cc5022c3cb93bd8db062c588fbecfcdc05d9800"
+    }
+  ],
+  "reports": [
+    {
+      "path": "assets/audit/alignment-v3/kinematic-alignment.json",
+      "sha256": "dbf275d58ba2b21c35e3b1fcba3059a515ff370da3454226cdf0c7f373d58713"
+    },
+    {
+      "path": "assets/audit/alignment-v3/jaw-sweep.json",
+      "sha256": "b7396ab9dadcd96dfecab4fa367874cad1ebe029b89954fef26a309142a81d26"
+    },
+    {
+      "path": "assets/audit/alignment-v3/motion-validation.json",
+      "sha256": "4e8b1261327cdc9444e874b63f692af41f0a9e818d4ca5d1057957d339280eca"
+    },
+    {
+      "path": "assets/audit/alignment-v3/structural-motion-validation.json",
+      "sha256": "4386de3f75973348d679032f84d8afc961581985d2a5839ff121079084dda00a"
+    },
+    {
+      "path": "assets/audit/alignment-v3/power-move-validation.json",
+      "sha256": "e71835e788f16274c4d820e759dd1af476e5799239c2a60ce6904f0e8b5dd1d0"
+    },
+    {
+      "path": "assets/audit/alignment-v3/mechanism-validation.json",
+      "sha256": "4a42250db1e4036962405c821eeb7697e8683966c9475bacf43c6ac843fb08f2"
+    }
+  ]
+}

@@ -1,0 +1,5711 @@
+{
+  "generatedAt": "2026-09-28T03:04:01.607Z",
+  "model": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+  "report": "assets/audit/alignment-v3/motion-validation.json",
+  "checks": [
+    {
+      "name": "exported-head-animation",
+      "status": "passed",
+      "result": {
+        "name": "attention-export-proof",
+        "duration": 1.0333333015441895,
+        "tracks": 1,
+        "headRotationY": 0.11847110565319377
+      }
+    },
+    {
+      "name": "maker-fixed-external-articulation",
+      "status": "passed",
+      "result": {
+        "stationaryRoot": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "manualChannels": {
+          "leg": 0.9998765901959132,
+          "wing": 0.9998765901959132,
+          "tail": 0.9998765901959132,
+          "neck": 0.9998765901959132,
+          "jaw": 0.9998765901959132
+        },
+        "inspectionGrounded": true
+      }
+    },
+    {
+      "name": "mechanic-phased-traversal-and-stop",
+      "status": "passed",
+      "result": {
+        "distance": 2.2199999999999993,
+        "steps": 34,
+        "camStages": [
+          "load",
+          "release",
+          "settle",
+          "dwell",
+          "disengaged"
+        ],
+        "maxInstantaneousSpeed": 0.33381986184156,
+        "stationaryFraction": 0.7777777777777778,
+        "turnRadians": 2.5907963267948966,
+        "energy": 0.34933333333329664,
+        "inspectionGrounded": true
+      }
+    },
+    {
+      "name": "unattended-927-0.016666666666666666",
+      "status": "passed",
+      "result": {
+        "time": 59.999999999997875,
+        "endState": "agitated",
+        "stateTimes": {
+          "watch": 7.6333333333333115,
+          "pace": 12.96666666666689,
+          "boundary": 22.28333333333335,
+          "cage-test": 6.499999999999982,
+          "recover": 2.5999999999999956,
+          "agitated": 7.0833333333333135,
+          "settle": 0.9333333333333346
+        },
+        "distance": 9.615673241537655,
+        "steps": 95,
+        "stepOrder": [
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.5680131176558918,
+            "yaw": 0.7649999999999998,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.8999999999999999,
+            "yaw": 1.1101160681351656,
+            "yawDelta": 0.3451160681351658
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7977342691274473,
+            "yaw": 1.1101160681351656,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6892959570830135,
+            "yaw": 1.1101160681351656,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.574750758550721,
+            "yaw": 1.1101160681351658,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.4540435366717443,
+            "yaw": 1.1101160681351654,
+            "yawDelta": -4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.3270594034175989,
+            "yaw": 1.1101160681351647,
+            "yawDelta": -6.661338147750939e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.18738862022633793,
+            "yaw": 1.1101160681351658,
+            "yawDelta": 1.1102230246251565e-15
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.04628785690083634,
+            "yaw": 1.269177280528657,
+            "yawDelta": 0.15906121239349114
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.269177280528657,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.269177280528657,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0.5041772805286582,
+            "yawDelta": -0.7649999999999988
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": -0.013322719471342039,
+            "yawDelta": -0.5175000000000002
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.05855471796577622,
+            "yaw": -0.5308227194713422,
+            "yawDelta": -0.5175000000000002
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.31619322026685914,
+            "yaw": -1.0483227194713414,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": -0.2817690237217781
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": -2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.38229054803567075,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.2490044603505626,
+            "yaw": -1.3300917431931174,
+            "yawDelta": 1.9984014443252818e-15
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.0026816658886744177,
+            "yaw": -1.0825917431931147,
+            "yawDelta": 0.24750000000000272
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.05047646616411367,
+            "yaw": -0.5650917431931155,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": -0.04759174319311535,
+            "yawDelta": 0.5175000000000002
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0.047591743193115356
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 0.7649999999999998,
+            "yawDelta": 0.7649999999999998
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.005917000505903324,
+            "yaw": 1.282499999999999,
+            "yawDelta": 0.5174999999999993
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.25706216598145354,
+            "yaw": 1.7999999999999983,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7745621659814536,
+            "yaw": 2.3174999999999977,
+            "yawDelta": 0.5174999999999994
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.9,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0.13850701528040332
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.9000000000000001,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.805477187136496,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.6970434279860054,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.5825049016778728,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.46180834672049537,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.3348439095859942,
+            "yaw": 2.4560070152804014,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.19522546134220992,
+            "yaw": 2.4560070152804014,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.053334342024491034,
+            "yaw": 2.454830368071689,
+            "yawDelta": -0.0011766472087124669
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 2.454830368071689,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 3.2423303680716877,
+            "yawDelta": 0.7874999999999988
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 3.759830368071687,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 4.277330368071686,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.05782661067398533,
+            "yaw": 4.794830368071685,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.31503818990003934,
+            "yaw": 5.3123303680716845,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0.28409040862733814
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699022,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699021,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 5.59642077669902,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 5.596420776699019,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.3828510712010503,
+            "yaw": 5.59642077669902,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.24956736199735377,
+            "yaw": 5.59642077669902,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.0779129037455632,
+            "yaw": 5.843920776699022,
+            "yawDelta": 0.24750000000000225
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0.439264530480564
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "cage-test",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 7.048185307179585,
+            "yawDelta": 0.7649999999999988
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.007952808628578346,
+            "yaw": 7.565685307179584,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.2497763410486188,
+            "yaw": 8.083185307179587,
+            "yawDelta": 0.5175000000000027
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6392759460514249,
+            "yaw": 8.600685307179607,
+            "yawDelta": 0.5175000000000196
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.5441935135174462,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0.10116071575076901
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.4173977282229647,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.28424515119696003,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.14420960987995537,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0.00014877308612604168
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.04555041050098764,
+            "yaw": 7.936994796016475,
+            "yawDelta": -0.7650000000000263
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.2931673665331132,
+            "yaw": 7.419494796016476,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.093089107107415,
+            "yawDelta": -0.32640568890906074
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.0930891071074145,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.0930891071074145,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.093089107107413,
+            "yawDelta": -1.7763568394002505e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.29579398424794,
+            "yaw": 7.093089107107413,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.09030910182232832,
+            "yaw": 7.003089107107412,
+            "yawDelta": -0.09000000000000073
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.07175165936353332,
+            "yaw": 6.485589107107413,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": -0.20240379992782653
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "cage-test",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 7.938288718631387e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 4.666406150377611e-16,
+        "plantedGroundY": [
+          0.0019999999999997173,
+          0.0020000000000004667
+        ],
+        "bounds": {
+          "minX": -1.778769906992209,
+          "maxX": 2.0255652883344037,
+          "minZ": -1.0929526288879665,
+          "maxZ": 2.0803120325242808
+        },
+        "contacts": [
+          {
+            "state": "cage-test",
+            "radial": 0.028165477125039917,
+            "point": [
+              -1.2,
+              1.2350010499048008,
+              2.07183452287496
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.026721370698020053,
+            "point": [
+              -1.2,
+              1.2329830708218226,
+              2.07327862930198
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.025442446975137756,
+            "point": [
+              -1.2,
+              1.231186495166034,
+              2.0745575530248623
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.024309214477353347,
+            "point": [
+              -1.2,
+              1.229587136389625,
+              2.0756907855226467
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02330460133149259,
+            "point": [
+              -1.2,
+              1.2281634247400315,
+              2.0766953986685075
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.023002811392272893,
+            "point": [
+              -1.2,
+              1.2290027548285047,
+              2.076997188607727
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02279086007708342,
+            "point": [
+              -1.2,
+              1.2299408742262101,
+              2.0772091399229167
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022599156776647256,
+            "point": [
+              -1.2,
+              1.2307562555630516,
+              2.077400843223353
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022427940969859783,
+            "point": [
+              -1.2,
+              1.2314731779777743,
+              2.0775720590301403
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022273090752691793,
+            "point": [
+              -1.2,
+              1.232097623728922,
+              2.0777269092473083
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022135451442729437,
+            "point": [
+              -1.2,
+              1.2326500906855573,
+              2.0778645485572707
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022012189057789122,
+            "point": [
+              -1.2,
+              1.233136171435206,
+              2.077987810942211
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021902672179835214,
+            "point": [
+              -1.2,
+              1.2335670908287015,
+              2.078097327820165
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021803416689455624,
+            "point": [
+              -1.2,
+              1.2339427931002014,
+              2.0781965833105445
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02171663520183742,
+            "point": [
+              -1.2,
+              1.2342810266831743,
+              2.0782833647981627
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02163772164377331,
+            "point": [
+              -1.2,
+              1.234575359225642,
+              2.0783622783562268
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021567607116045995,
+            "point": [
+              -1.2,
+              1.234836901765113,
+              2.078432392883954
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021506477040658556,
+            "point": [
+              -1.2,
+              1.2350732821543202,
+              2.0784935229593415
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021449894913495804,
+            "point": [
+              -1.2,
+              1.235275936713812,
+              2.0785501050865043
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021401368727070658,
+            "point": [
+              -1.2,
+              1.2354620169904746,
+              2.0785986312729294
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021357150646347467,
+            "point": [
+              -1.2,
+              1.2356239327683665,
+              2.0786428493536526
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021317574238064463,
+            "point": [
+              -1.2,
+              1.235767095366833,
+              2.0786824257619356
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02128323482427108,
+            "point": [
+              -1.2,
+              1.2358972730954942,
+              2.078716765175729
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021251127352836185,
+            "point": [
+              -1.2,
+              1.2360079183843389,
+              2.078748872647164
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02122354504341617,
+            "point": [
+              -1.2,
+              1.2361095879777944,
+              2.078776454956584
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02119912915372435,
+            "point": [
+              -1.2,
+              1.236200451285927,
+              2.0788008708462757
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021176670232517125,
+            "point": [
+              -1.2,
+              1.2362788840852503,
+              2.078823329767483
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02115765753842158,
+            "point": [
+              -1.2,
+              1.2363518730574081,
+              2.0788423424615785
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021139856157965653,
+            "point": [
+              -1.2,
+              1.236413928875998,
+              2.0788601438420344
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021124986121332068,
+            "point": [
+              -1.2,
+              1.236472348589477,
+              2.078875013878668
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021111011178317707,
+            "point": [
+              -1.2,
+              1.23652191291422,
+              2.0788889888216824
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02113917907275198,
+            "point": [
+              -1.2,
+              1.2364224147004552,
+              2.078860820927248
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021448656261564558,
+            "point": [
+              -1.2,
+              1.2353151971152072,
+              2.0785513437384355
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02199851349218296,
+            "point": [
+              -1.2,
+              1.233261571705209,
+              2.078001486507817
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02274353456677769,
+            "point": [
+              -1.2,
+              1.2302532703368128,
+              2.0772564654332224
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.024783086716006153,
+            "point": [
+              -1.2,
+              1.230324336301768,
+              2.075216913283994
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.028775519261164728,
+            "point": [
+              -1.2,
+              1.2359371618324588,
+              2.0712244807388354
+            ],
+            "targetX": -1.2
+          }
+        ],
+        "endRoot": {
+          "x": -0.0025960442280969676,
+          "z": 1.0411080603659093,
+          "yaw": 6.283185307179586,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.24868986637828722,
+              0.2765853736996651,
+              1.0027481948196821
+            ],
+            "target": [
+              0.2486898663782872,
+              0.27658537369966507,
+              1.0027481948196821
+            ],
+            "swinging": false,
+            "solveError": 6.206335383118183e-17,
+            "groundMin": 0.0020000000000000365
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.25388195483448134,
+              0.27658537369966496,
+              1.0027481948196832
+            ],
+            "target": [
+              -0.25388195483448134,
+              0.27658537369966507,
+              1.0027481948196835
+            ],
+            "swinging": false,
+            "solveError": 2.482534153247273e-16,
+            "groundMin": 0.0020000000000000018
+          }
+        ]
+      }
+    },
+    {
+      "name": "unattended-42-0.016666666666666666",
+      "status": "passed",
+      "result": {
+        "time": 59.999999999997875,
+        "endState": "cage-test",
+        "stateTimes": {
+          "watch": 6.833333333333314,
+          "pace": 13.050000000000228,
+          "boundary": 24.06666666666658,
+          "cage-test": 5.2166666666666535,
+          "recover": 2.166666666666664,
+          "agitated": 7.733333333333311,
+          "settle": 0.9333333333333346
+        },
+        "distance": 10.23919374760179,
+        "steps": 99,
+        "stepOrder": [
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.5680131176558918,
+            "yaw": -0.7649999999999998,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.8999999999999999,
+            "yaw": -1.1101160681351656,
+            "yawDelta": -0.3451160681351658
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.7977342691274473,
+            "yaw": -1.1101160681351656,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.6892959570830135,
+            "yaw": -1.1101160681351656,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.574750758550721,
+            "yaw": -1.1101160681351658,
+            "yawDelta": -2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.4540435366717443,
+            "yaw": -1.1101160681351654,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.3270594034175989,
+            "yaw": -1.1101160681351647,
+            "yawDelta": 6.661338147750939e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.18738862022633793,
+            "yaw": -1.1101160681351658,
+            "yawDelta": -1.1102230246251565e-15
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.04628785690083634,
+            "yaw": -1.269177280528657,
+            "yawDelta": -0.15906121239349114
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": -1.269177280528657,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": -1.269177280528657,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": -0.5041772805286582,
+            "yawDelta": 0.7649999999999988
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0.013322719471342039,
+            "yawDelta": 0.5175000000000002
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.05855471796577622,
+            "yaw": 0.5308227194713422,
+            "yawDelta": 0.5175000000000002
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.31619322026685914,
+            "yaw": 1.0483227194713414,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0.2817690237217781
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931192,
+            "yawDelta": -2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.38229054803567075,
+            "yaw": 1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.2490044603505626,
+            "yaw": 1.3300917431931174,
+            "yawDelta": -1.9984014443252818e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.0026816658886744177,
+            "yaw": 1.0825917431931147,
+            "yawDelta": -0.24750000000000272
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.05047646616411367,
+            "yaw": 0.5650917431931155,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0.04759174319311535,
+            "yawDelta": -0.5175000000000002
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": -0.047591743193115356
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 0.7649999999999998,
+            "yawDelta": 0.7649999999999998
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.282499999999999,
+            "yawDelta": 0.5174999999999993
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.7999999999999983,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.195884155265289,
+            "yaw": 2.3174999999999977,
+            "yawDelta": 0.5174999999999994
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7110811631325705,
+            "yaw": 2.834999999999997,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.8530049096557313,
+            "yaw": 3.036964723853241,
+            "yawDelta": 0.20196472385324424
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7445971456768467,
+            "yaw": 3.0369647238532416,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6300962366318172,
+            "yaw": 3.036964723853241,
+            "yawDelta": -4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.5094586712058341,
+            "yaw": 3.0369647238532407,
+            "yawDelta": -4.440892098500626e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.3825996056757766,
+            "yaw": 3.036964723853241,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.24931483053074643,
+            "yaw": 3.036964723853242,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.1088284142109955,
+            "yaw": 3.0394608242126973,
+            "yawDelta": 0.0024961003594552444
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 3.0394608242126973,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 2.3194608242126984,
+            "yawDelta": -0.7199999999999989
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 1.8019608242126992,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 1.2844608242127,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.03912682936779785,
+            "yaw": 0.7669608242127008,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.27953701063716613,
+            "yaw": 0.24946082421270102,
+            "yawDelta": -0.5174999999999998
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -0.10212581223414831,
+            "yawDelta": -0.35158663644684934
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -0.10212581223414806,
+            "yawDelta": 2.498001805406602e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -0.10212581223414771,
+            "yawDelta": 3.469446951953614e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -0.10212581223414725,
+            "yawDelta": 4.579669976578771e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -0.10212581223414659,
+            "yawDelta": 6.661338147750939e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -0.10212581223414556,
+            "yawDelta": 1.0269562977782698e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -0.10212581223414374,
+            "yawDelta": 1.817990202823694e-15
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -0.10212581223413976,
+            "yawDelta": 3.982925100842749e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.2847675511039616,
+            "yaw": -0.10212581223413932,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.145068087793766,
+            "yaw": 0,
+            "yawDelta": 0.1021258122341393
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "cage-test",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": -0.7649999999999998,
+            "yawDelta": -0.7649999999999998
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": -1.282499999999999,
+            "yawDelta": -0.5174999999999993
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.11523900579791245,
+            "yaw": -1.7999999999999983,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.603904851482426,
+            "yaw": -2.3174999999999977,
+            "yawDelta": -0.5174999999999994
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7219249726168181,
+            "yaw": -2.621102706838271,
+            "yawDelta": -0.3036027068382734
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6074068088468639,
+            "yaw": -2.621102706838271,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.4867424246759274,
+            "yaw": -2.621102706838272,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.35983618205839285,
+            "yaw": -2.621102706838272,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.2264468199819124,
+            "yaw": -2.6211027068382733,
+            "yawDelta": -1.3322676295501878e-15
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.08552637001258204,
+            "yaw": -2.622929437526338,
+            "yawDelta": -0.001826730688064604
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": -2.622929437526338,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.07793298812548011,
+            "yaw": -1.8354294375263391,
+            "yawDelta": 0.7874999999999988
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.3424162785213619,
+            "yaw": -1.31792943752634,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.0923703039339636,
+            "yawDelta": 0.22555913359237634
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.0923703039339636,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -1.0923703039339634,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -1.0923703039339634,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -1.0923703039339632,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -1.092370303933963,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -1.092370303933963,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -1.0923703039339627,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -1.0923703039339616,
+            "yawDelta": 1.1102230246251565e-15
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -1.0923703039339607,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.0923703039339607,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.0923703039339605,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.28566825165019155,
+            "yaw": -1.0923703039339592,
+            "yawDelta": 1.3322676295501878e-15
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.06371903362170929,
+            "yaw": -0.9798703039339598,
+            "yawDelta": 0.11249999999999938
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.06286592422154395,
+            "yaw": -0.4623703039339605,
+            "yawDelta": 0.5174999999999993
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0.4623703039339605
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 7.938288718631387e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 4.666406150377611e-16,
+        "plantedGroundY": [
+          0.0019999999999996895,
+          0.0020000000000004667
+        ],
+        "bounds": {
+          "minX": -2.025565288318404,
+          "maxX": 2.0061511459737837,
+          "minZ": -1.0968992541799814,
+          "maxZ": 2.080054539785795
+        },
+        "contacts": [
+          {
+            "state": "cage-test",
+            "radial": 0.02855100035065794,
+            "point": [
+              1.2,
+              1.2353733458214586,
+              2.071448999649342
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.027067546846002433,
+            "point": [
+              1.2,
+              1.233313059813536,
+              2.0729324531539977
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02575371336887855,
+            "point": [
+              1.2,
+              1.2314788492184772,
+              2.0742462866311215
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.024589474405467993,
+            "point": [
+              1.2,
+              1.229846019315932,
+              2.075410525594532
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.023557294194318068,
+            "point": [
+              1.2,
+              1.2283925458373914,
+              2.076442705805682
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.023043144672117766,
+            "point": [
+              1.2,
+              1.2285354411306244,
+              2.0769568553278823
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022827517879189685,
+            "point": [
+              1.2,
+              1.2295173902075183,
+              2.0771724821208104
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02263267511346001,
+            "point": [
+              1.2,
+              1.2303718859874357,
+              2.07736732488654
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022457245469893028,
+            "point": [
+              1.2,
+              1.2311185194288452,
+              2.077542754530107
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02230036564753357,
+            "point": [
+              1.2,
+              1.2317752882064896,
+              2.0776996343524665
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02216019127451485,
+            "point": [
+              1.2,
+              1.232354011569892,
+              2.0778398087254852
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022033627571946823,
+            "point": [
+              1.2,
+              1.2328599557315776,
+              2.0779663724280533
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021921045990370924,
+            "point": [
+              1.2,
+              1.23330824534457,
+              2.078078954009629
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02182126824105568,
+            "point": [
+              1.2,
+              1.2337069686461986,
+              2.0781787317589444
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021731390482485402,
+            "point": [
+              1.2,
+              1.234056950855946,
+              2.0782686095175147
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02165164586049073,
+            "point": [
+              1.2,
+              1.2343683359956934,
+              2.0783483541395094
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02158035510115308,
+            "point": [
+              1.2,
+              1.23464371906209,
+              2.078419644898847
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021516332317982112,
+            "point": [
+              1.2,
+              1.2348864021616022,
+              2.078483667682018
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02146009183879949,
+            "point": [
+              1.2,
+              1.2351045060035073,
+              2.0785399081612006
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02141001444708346,
+            "point": [
+              1.2,
+              1.2352982953399372,
+              2.0785899855529166
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021656779515603297,
+            "point": [
+              1.2,
+              1.2343937768518922,
+              2.078343220484397
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022231882714196072,
+            "point": [
+              1.2,
+              1.232195840526628,
+              2.077768117285804
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02306970080907611,
+            "point": [
+              1.2,
+              1.2286810226097409,
+              2.076930299190924
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.026663306383956087,
+            "point": [
+              1.2,
+              1.2329143096884057,
+              2.073336693616044
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.027652992207713112,
+            "point": [
+              1.2,
+              1.2329669781695995,
+              2.072347007792287
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.026390204833085296,
+            "point": [
+              1.2,
+              1.2312272916744869,
+              2.073609795166915
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.025270518040820367,
+            "point": [
+              1.2,
+              1.229678774080791,
+              2.0747294819591797
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.024277246675179054,
+            "point": [
+              1.2,
+              1.2283004983470525,
+              2.075722753324821
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.023395743323852525,
+            "point": [
+              1.2,
+              1.227073810058808,
+              2.0766042566761476
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022710178748624354,
+            "point": [
+              1.2,
+              1.22633499509909,
+              2.0772898212513757
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022528786672612267,
+            "point": [
+              1.2,
+              1.2272294728834146,
+              2.077471213327388
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022366053332837588,
+            "point": [
+              1.2,
+              1.2280144446840107,
+              2.0776339466671625
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02221897550312546,
+            "point": [
+              1.2,
+              1.2287003446846092,
+              2.0777810244968746
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022087348641025795,
+            "point": [
+              1.2,
+              1.2292258196913168,
+              2.0779126513589743
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021969391472583144,
+            "point": [
+              1.2,
+              1.229678495003408,
+              2.078030608527417
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021863520638881973,
+            "point": [
+              1.2,
+              1.2300747534004592,
+              2.078136479361118
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.0217700861838388,
+            "point": [
+              1.2,
+              1.2304272857388112,
+              2.0782299138161613
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021685328351430222,
+            "point": [
+              1.2,
+              1.2307330579931068,
+              2.07831467164857
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021610917351236214,
+            "point": [
+              1.2,
+              1.2310067293235958,
+              2.078389082648764
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021544217204314098,
+            "point": [
+              1.2,
+              1.2312469456533204,
+              2.078455782795686
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021484255633147598,
+            "point": [
+              1.2,
+              1.2314572261876229,
+              2.0785157443668525
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021431691715971812,
+            "point": [
+              1.2,
+              1.2316458948357838,
+              2.0785683082840283
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021383866691587983,
+            "point": [
+              1.2,
+              1.2318091569710217,
+              2.078616133308412
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02134211062494451,
+            "point": [
+              1.2,
+              1.2319563062110894,
+              2.0786578893750556
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02130434197471409,
+            "point": [
+              1.2,
+              1.232084386025418,
+              2.078695658025286
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021271180942957546,
+            "point": [
+              1.2,
+              1.2321992180363335,
+              2.0787288190570425
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021240992451460716,
+            "point": [
+              1.2,
+              1.2322984891741613,
+              2.0787590075485394
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02121480053482605,
+            "point": [
+              1.2,
+              1.2323885946849022,
+              2.078785199465174
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02119132102167187,
+            "point": [
+              1.2,
+              1.2324677218171736,
+              2.078808678978328
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02116941188212529,
+            "point": [
+              1.2,
+              1.2325342616623145,
+              2.078830588117875
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02115054316641407,
+            "point": [
+              1.2,
+              1.232595238564441,
+              2.078849456833586
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021133818249321035,
+            "point": [
+              1.2,
+              1.2326493892926245,
+              2.078866181750679
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021119684231198477,
+            "point": [
+              1.2,
+              1.232699819448861,
+              2.0788803157688016
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02110618920677121,
+            "point": [
+              1.2,
+              1.2327413055322365,
+              2.078893810793229
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021308467495355643,
+            "point": [
+              1.2,
+              1.2319567783620824,
+              2.0786915325046444
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021764154920021372,
+            "point": [
+              1.2,
+              1.2301393239042104,
+              2.0782358450799787
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022427583750152635,
+            "point": [
+              1.2,
+              1.2272959865067479,
+              2.0775724162498475
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02477387184859081,
+            "point": [
+              1.2,
+              1.228924412775337,
+              2.0752261281514093
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02855901347547629,
+            "point": [
+              1.2,
+              1.2342633785683055,
+              2.071440986524524
+            ],
+            "targetX": 1.2
+          }
+        ],
+        "endRoot": {
+          "x": -1.1968188681830148,
+          "z": 1.0419301154808043,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              -0.9455329575766305,
+              0.276585373699665,
+              1.0035702499345778
+            ],
+            "target": [
+              -0.9455329575766305,
+              0.27658537369966507,
+              1.0035702499345778
+            ],
+            "swinging": false,
+            "solveError": 5.551115123125783e-17,
+            "groundMin": 0.0019999999999999463
+          },
+          {
+            "side": "right",
+            "actual": [
+              -1.448104778789399,
+              0.27658537369966507,
+              1.0035702499345778
+            ],
+            "target": [
+              -1.448104778789399,
+              0.27658537369966507,
+              1.0035702499345778
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.0020000000000000642
+          }
+        ]
+      }
+    },
+    {
+      "name": "unattended-2026-0.016666666666666666",
+      "status": "passed",
+      "result": {
+        "time": 59.999999999997875,
+        "endState": "pace",
+        "stateTimes": {
+          "watch": 8.466666666666667,
+          "pace": 12.000000000000176,
+          "boundary": 18.533333333333562,
+          "cage-test": 5.916666666666651,
+          "recover": 2.633333333333329,
+          "agitated": 11.050000000000129,
+          "settle": 1.4
+        },
+        "distance": 7.646208966352725,
+        "steps": 81,
+        "stepOrder": [
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7221381886324731,
+            "yaw": 0.7424999999999998,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6122485013388672,
+            "yaw": 0.7702478075226785,
+            "yawDelta": 0.02774780752267869
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.4915900285660091,
+            "yaw": 0.7702478075226785,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.36469428701665335,
+            "yaw": 0.7702478075226791,
+            "yawDelta": 5.551115123125783e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.23132867872056953,
+            "yaw": 0.7702478075226777,
+            "yawDelta": -1.3322676295501878e-15
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.0933923153636907,
+            "yaw": 0.9971296586267359,
+            "yawDelta": 0.22688185110405812
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 0.9971296586267359,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.00939279580811979,
+            "yaw": 0.2546296586267364,
+            "yawDelta": -0.7424999999999995
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.17382218799748167,
+            "yaw": -0.26287034137326354,
+            "yawDelta": -0.5175
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39806932211721335,
+            "yaw": -0.7803703413732633,
+            "yawDelta": -0.5174999999999998
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.3999999999999999,
+            "yaw": -0.8018558860714835,
+            "yawDelta": -0.021485544698220168
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -0.8018558860714842,
+            "yawDelta": -6.661338147750939e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -0.8018558860714853,
+            "yawDelta": -1.1102230246251565e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.3531064098945938,
+            "yaw": -0.8018558860714872,
+            "yawDelta": -1.887379141862766e-15
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.21968271285301558,
+            "yaw": -0.8018558860714888,
+            "yawDelta": -1.6653345369377348e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.0720631547624786,
+            "yaw": -0.44185588607148946,
+            "yawDelta": 0.3599999999999994
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0.4418558860714894
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "cage-test",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 0.7649999999999998,
+            "yawDelta": 0.7649999999999998
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.19524370400164,
+            "yaw": 1.282499999999999,
+            "yawDelta": 0.5174999999999993
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7103687272943382,
+            "yaw": 1.7999999999999983,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.8583274535617796,
+            "yaw": 2.0026787099890466,
+            "yawDelta": 0.20267870998904838
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7499224076812864,
+            "yaw": 2.0026787099890466,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.635425385637788,
+            "yaw": 2.002678709989047,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.5147938068516448,
+            "yaw": 2.002678709989048,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.38794511221106753,
+            "yaw": 2.002678709989047,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.25468261524802227,
+            "yaw": 2.0026787099890466,
+            "yawDelta": -4.440892098500626e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.1142787805130054,
+            "yaw": 2.0035111992809123,
+            "yawDelta": 0.0008324892918656347
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 2.0035111992809123,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 2.791011199280911,
+            "yawDelta": 0.7874999999999988
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 3.30851119928091,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.00462820091838502,
+            "yaw": 3.8260111992809094,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.1372997805304247,
+            "yaw": 4.343511199280909,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.3873050161445293,
+            "yaw": 4.861011199280908,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498853,
+            "yawDelta": 0.09095963621794567
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 4.951970835498853,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.9519708354988525,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498852,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 4.951970835498852,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498851,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498851,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.95197083549885,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498849,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498849,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498849,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498849,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 4.951970835498849,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 4.951970835498849,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 4.951970835498849,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.33638405083418166,
+            "yaw": 4.95197083549885,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.1967755600134805,
+            "yaw": 4.951970835498847,
+            "yawDelta": -2.6645352591003757e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.013299219965553648,
+            "yaw": 5.40197083549885,
+            "yawDelta": 0.45000000000000284
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.06824755872370945,
+            "yaw": 5.919470835498849,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0.363714471680737
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 7.003185307179585,
+            "yawDelta": 0.7199999999999989
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 7.520685307179584,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.2080269315381024,
+            "yaw": 8.038185307179585,
+            "yawDelta": 0.517500000000001
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6281531066457308,
+            "yaw": 8.555685307179605,
+            "yawDelta": 0.5175000000000196
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.5571050247475068,
+            "yaw": 8.704736060668726,
+            "yawDelta": 0.14905075348912075
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.43637225972136046,
+            "yaw": 8.704736060668726,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.303280775472258,
+            "yaw": 8.704736060668726,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.16342611923516032,
+            "yaw": 8.701994796016502,
+            "yawDelta": -0.002741264652224018
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.04557491534360328,
+            "yaw": 7.936994796016475,
+            "yawDelta": -0.7650000000000263
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.2932161138030275,
+            "yaw": 7.419494796016476,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 7.093180527052123,
+            "yawDelta": -0.326314268964353
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 7.093180527052123,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 7.093180527052123,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 7.093180527052123,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.29575769672169167,
+            "yaw": 7.093180527052122,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.09027257459382712,
+            "yaw": 7.003180527052122,
+            "yawDelta": -0.08999999999999986
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.07172771029950863,
+            "yaw": 6.485680527052123,
+            "yawDelta": -0.5174999999999992
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": -0.20249521987253694
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "cage-test",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 7.048185307179585,
+            "yawDelta": 0.7649999999999988
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 7.565685307179584,
+            "yawDelta": 0.5174999999999992
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.083185307179587,
+            "yawDelta": 0.5175000000000027
+          }
+        ],
+        "maxFootError": 7.021666937153402e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 4.3194614551822497e-16,
+        "plantedGroundY": [
+          0.0019999999999996618,
+          0.002000000000000432
+        ],
+        "bounds": {
+          "minX": -1.7730856307410479,
+          "maxX": 1.9557840640522715,
+          "minZ": -0.74001626851092,
+          "maxZ": 2.0799441390833207
+        },
+        "contacts": [
+          {
+            "state": "cage-test",
+            "radial": 0.027906261522136155,
+            "point": [
+              0,
+              1.2333302260937682,
+              2.072093738477864
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02664071680150526,
+            "point": [
+              0,
+              1.2315102506244975,
+              2.073359283198495
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02552018936829281,
+            "point": [
+              0,
+              1.2298898304255008,
+              2.0744798106317073
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.024527604113222523,
+            "point": [
+              0,
+              1.228447159233166,
+              2.0754723958867776
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.023647990814119613,
+            "point": [
+              0,
+              1.2271627948711092,
+              2.0763520091858805
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022868205927214724,
+            "point": [
+              0,
+              1.22601940773061,
+              2.0771317940727854
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022580972468047467,
+            "point": [
+              0,
+              1.226474384412418,
+              2.0774190275319526
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022411957901615764,
+            "point": [
+              0,
+              1.2271862369019158,
+              2.0775880420983843
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022260192091450026,
+            "point": [
+              0,
+              1.2278079802264243,
+              2.07773980790855
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022123924555862207,
+            "point": [
+              0,
+              1.2283515065906254,
+              2.077876075444138
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022002569908155856,
+            "point": [
+              0,
+              1.2288304987989833,
+              2.0779974300918442
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021892982333477473,
+            "point": [
+              0,
+              1.2292476011833708,
+              2.0781070176665226
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021796432144914224,
+            "point": [
+              0,
+              1.2296193152976125,
+              2.078203567855086
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021708953957784605,
+            "point": [
+              0,
+              1.2299422867769134,
+              2.0782910460422155
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02163201098164258,
+            "point": [
+              0,
+              1.2302308966526079,
+              2.0783679890183575
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021562806169193482,
+            "point": [
+              0,
+              1.2304835487905754,
+              2.0784371938308066
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.0215014358711616,
+            "point": [
+              0,
+              1.2307077623699307,
+              2.0784985641288385
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021445989727577608,
+            "point": [
+              0,
+              1.2309032587225206,
+              2.0785540102724225
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021397363594056973,
+            "point": [
+              0,
+              1.2310787214052337,
+              2.078602636405943
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02135434033863115,
+            "point": [
+              0,
+              1.2312348809854754,
+              2.078645659661369
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021314753684503085,
+            "point": [
+              0,
+              1.2313686556450327,
+              2.078685246315497
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021280369628459805,
+            "point": [
+              0,
+              1.2314899799390946,
+              2.0787196303715403
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021249492659452418,
+            "point": [
+              0,
+              1.231596448652496,
+              2.0787505073405477
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02122184891057799,
+            "point": [
+              0,
+              1.2316901531527604,
+              2.078778151089422
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021197337560554974,
+            "point": [
+              0,
+              1.2317734306257229,
+              2.078802662439445
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02117601108623024,
+            "point": [
+              0,
+              1.2318488352220431,
+              2.07882398891377
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.0211568196935783,
+            "point": [
+              0,
+              1.2319148853948463,
+              2.078843180306422
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021138829781177204,
+            "point": [
+              0,
+              1.2319702656010885,
+              2.078861170218823
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021123691192566074,
+            "point": [
+              0,
+              1.2320222652346913,
+              2.078876308807434
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021169016179831246,
+            "point": [
+              0,
+              1.2318398204085974,
+              2.078830983820169
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021493822629565784,
+            "point": [
+              0,
+              1.2305635828841581,
+              2.0785061773704343
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.022054415974877895,
+            "point": [
+              0,
+              1.228244245689748,
+              2.077945584025122
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.023165018749847555,
+            "point": [
+              0,
+              1.2261762834580416,
+              2.0768349812501525
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02664207615879821,
+            "point": [
+              0,
+              1.2311226124594492,
+              2.073357923841202
+            ],
+            "targetX": 0
+          }
+        ],
+        "endRoot": {
+          "x": -0.002595166258581041,
+          "z": 1.041109348625781,
+          "yaw": 8.128185307179589,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.08583435952541517,
+              0.28432572220672286,
+              0.8036128649777098
+            ],
+            "target": [
+              0.08583435952541485,
+              0.28432572220672275,
+              0.8036128649777097
+            ],
+            "swinging": true,
+            "solveError": 3.5571561302006606e-16,
+            "groundMin": 0.008208324273102668
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.03989837214102704,
+              0.2765853736996651,
+              1.2925542908793413
+            ],
+            "target": [
+              -0.0398983721410269,
+              0.27658537369966507,
+              1.292554290879341
+            ],
+            "swinging": false,
+            "solveError": 2.6766507790745728e-16,
+            "groundMin": 0.0020000000000001267
+          }
+        ]
+      }
+    },
+    {
+      "name": "unattended-927-0.1",
+      "status": "passed",
+      "result": {
+        "time": 60,
+        "endState": "cage-test",
+        "stateTimes": {
+          "watch": 7.699999999999989,
+          "pace": 13.199999999999969,
+          "boundary": 23.20000000000006,
+          "cage-test": 6.199999999999994,
+          "recover": 2.0000000000000004,
+          "agitated": 6.699999999999992,
+          "settle": 0.9999999999999999
+        },
+        "distance": 9.615673241537655,
+        "steps": 95,
+        "stepOrder": [
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.6130131176558917,
+            "yaw": 0.8099999999999997,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.8999999999999999,
+            "yaw": 1.1101160681351656,
+            "yawDelta": 0.3001160681351659
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.7917115339003047,
+            "yaw": 1.1101160681351656,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6832696136709077,
+            "yaw": 1.1101160681351656,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.574750758550721,
+            "yaw": 1.1101160681351658,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.4298794745948484,
+            "yaw": 1.1101160681351654,
+            "yawDelta": -4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.32100333413044885,
+            "yaw": 1.110116068135165,
+            "yawDelta": -4.440892098500626e-16
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.16440488986458093,
+            "yaw": 1.1326160681351651,
+            "yawDelta": 0.022500000000000187
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.269177280528657,
+            "yawDelta": 0.13656121239349187
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.269177280528657,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 1.269177280528657,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0.45917728052865814,
+            "yawDelta": -0.8099999999999989
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": -0.08082271947134205,
+            "yawDelta": -0.5400000000000001
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.09118130041027173,
+            "yaw": -0.620822719471342,
+            "yawDelta": -0.54
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.36465695088742056,
+            "yaw": -1.1608227194713412,
+            "yawDelta": -0.5399999999999991
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": -0.1692690237217782
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931192,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": -2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.38229054803567075,
+            "yaw": -1.3300917431931194,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.23685439247383477,
+            "yaw": -1.3300917431931178,
+            "yawDelta": 1.5543122344752192e-15
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.004969094348711271,
+            "yaw": -1.0150917431931148,
+            "yawDelta": 0.31500000000000306
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.06056298551777955,
+            "yaw": -0.47509174319311553,
+            "yawDelta": 0.5399999999999994
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0.47509174319311553
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 0.8099999999999997,
+            "yawDelta": 0.8099999999999998
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.01292736728045119,
+            "yaw": 1.349999999999999,
+            "yawDelta": 0.5399999999999994
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.3470621659814535,
+            "yaw": 1.8899999999999981,
+            "yawDelta": 0.5399999999999991
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.8870621659814535,
+            "yaw": 2.4299999999999975,
+            "yawDelta": 0.5399999999999994
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.9,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0.0260070152804035
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.9000000000000001,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.7994546721057323,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.6910173799280663,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.5825049016778728,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.4376471381284236,
+            "yaw": 2.456007015280401,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.32878916781396783,
+            "yaw": 2.4560070152804014,
+            "yawDelta": 4.440892098500626e-16
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.18303199574544665,
+            "yaw": 2.4560070152804014,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 2.454830368071689,
+            "yawDelta": -0.0011766472087124669
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 2.454830368071689,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 3.2648303680716877,
+            "yawDelta": 0.8099999999999987
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 3.804830368071687,
+            "yawDelta": 0.5399999999999991
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 4.344830368071686,
+            "yawDelta": 0.5399999999999991
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.09023353906966726,
+            "yaw": 4.884830368071685,
+            "yawDelta": 0.5399999999999991
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.3638310186767602,
+            "yaw": 5.424830368071684,
+            "yawDelta": 0.5399999999999991
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0.17159040862733832
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.39999999999999997,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699023,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 5.596420776699022,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 5.596420776699021,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 5.59642077669902,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 5.596420776699019,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.3707547575123144,
+            "yaw": 5.596420776699019,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.22525995755868977,
+            "yaw": 5.596420776699022,
+            "yawDelta": 2.6645352591003757e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.08496517539165903,
+            "yaw": 5.956420776699022,
+            "yawDelta": 0.3600000000000004
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0.3267645304805642
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 7.093185307179585,
+            "yawDelta": 0.8099999999999987
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.016130933005416834,
+            "yaw": 7.633185307179584,
+            "yawDelta": 0.5399999999999991
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.33503524175507793,
+            "yaw": 8.17318530717959,
+            "yawDelta": 0.5400000000000063
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.6344553458395296,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0.5286607157507851
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.5260920283409073,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.4173977282229647,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0.2721143118881674,
+            "yaw": 8.701846022930376,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0.12579995633097193,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0.00014877308612604168
+          },
+          {
+            "side": "right",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "pace",
+            "speed": 0,
+            "yaw": 8.701994796016502,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.058669196517520415,
+            "yaw": 7.891994796016475,
+            "yawDelta": -0.8100000000000263
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.32728201160121406,
+            "yaw": 7.351994796016476,
+            "yawDelta": -0.5399999999999991
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.093089107107415,
+            "yawDelta": -0.25890568890906085
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.0930891071074145,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.4,
+            "yaw": 7.0930891071074145,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.4000000000000001,
+            "yaw": 7.093089107107413,
+            "yawDelta": -1.7763568394002505e-15
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.29579398424794,
+            "yaw": 7.093089107107413,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0.06780910182232833,
+            "yaw": 6.980589107107412,
+            "yawDelta": -0.11250000000000071
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0.0649245122095977,
+            "yaw": 6.440589107107413,
+            "yawDelta": -0.5399999999999991
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": -0.15740379992782663
+          },
+          {
+            "side": "right",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "boundary",
+            "speed": 0,
+            "yaw": 6.283185307179586,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 5.79553433516819e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 3.41740524767431e-16,
+        "plantedGroundY": [
+          0.0019999999999996895,
+          0.0020000000000003418
+        ],
+        "bounds": {
+          "minX": -1.7763392725825546,
+          "maxX": 2.0166734492639966,
+          "minZ": -1.0904375054742275,
+          "maxZ": 2.080314462198569
+        },
+        "contacts": [
+          {
+            "state": "cage-test",
+            "radial": 0.02776480630917355,
+            "point": [
+              -1.2,
+              1.2344703043237149,
+              2.0722351936908265
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02274066609680636,
+            "point": [
+              -1.2,
+              1.2301988080612205,
+              2.0772593339031937
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02187606701611111,
+            "point": [
+              -1.2,
+              1.2336887388500062,
+              2.078123932983889
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021437607318735452,
+            "point": [
+              -1.2,
+              1.235340954698643,
+              2.0785623926812646
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.02121731505853619,
+            "point": [
+              -1.2,
+              1.2361428068867542,
+              2.078782684941464
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "cage-test",
+            "radial": 0.021107108893337667,
+            "point": [
+              -1.2,
+              1.2365366959846993,
+              2.0788928911066624
+            ],
+            "targetX": -1.2
+          }
+        ],
+        "endRoot": {
+          "x": -0.0025960442280969676,
+          "z": 1.0411080603659093,
+          "yaw": 6.283185307179586,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.24868986637828722,
+              0.2765853736996651,
+              1.002748194819682
+            ],
+            "target": [
+              0.2486898663782872,
+              0.27658537369966507,
+              1.0027481948196821
+            ],
+            "swinging": false,
+            "solveError": 2.3055512673781017e-16,
+            "groundMin": 0.002000000000000078
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.25388195483448134,
+              0.27658537369966507,
+              1.0027481948196832
+            ],
+            "target": [
+              -0.25388195483448134,
+              0.27658537369966507,
+              1.0027481948196835
+            ],
+            "swinging": false,
+            "solveError": 2.220446049250313e-16,
+            "groundMin": 0.0020000000000001336
+          }
+        ]
+      }
+    },
+    {
+      "name": "visitor-rail--1",
+      "status": "passed",
+      "result": {
+        "time": 6.133333333333317,
+        "endState": "recover",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 4.333333333333323,
+          "warning": 0.7500000000000007,
+          "strike": 0.18333333333333332,
+          "contact": 0.21666666666666665,
+          "recover": 0.016666666666666666
+        },
+        "distance": 1.7609094397969833,
+        "steps": 12,
+        "stepOrder": [
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.7425000000000005,
+            "yaw": -0.7424999999999998,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.964728051735721,
+            "yaw": -0.7478874367729782,
+            "yawDelta": -0.005387436772978371
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.8623916427377244,
+            "yaw": -0.7478874367729781,
+            "yawDelta": 1.1102230246251565e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.7539886480250683,
+            "yaw": -0.747887436772978,
+            "yawDelta": 1.1102230246251565e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.6394945535160319,
+            "yaw": -0.7478874367729778,
+            "yawDelta": 2.220446049250313e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.5188674704597194,
+            "yaw": -0.7478874367729776,
+            "yawDelta": 1.1102230246251565e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.39202652623091194,
+            "yaw": -0.7478874367729785,
+            "yawDelta": -8.881784197001252e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.25878051720893336,
+            "yaw": -0.7478874367729768,
+            "yawDelta": 1.7763568394002505e-15
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.06565051341882017,
+            "yaw": -0.5228874367729803,
+            "yawDelta": 0.2249999999999964
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": -0.0053874367729801545,
+            "yawDelta": 0.5175000000000002
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0.0053874367729801545
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 6.77599954797753e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 2.723515857283587e-16,
+        "plantedGroundY": [
+          0.0019999999999998005,
+          0.0020000000000002724
+        ],
+        "bounds": {
+          "minX": -1.7253126610456349,
+          "maxX": 0.50993827615575,
+          "minZ": -0.7406747527652067,
+          "maxZ": 2.0802226274972284
+        },
+        "contacts": [
+          {
+            "state": "contact",
+            "radial": 0.02099973792096721,
+            "point": [
+              -1.2,
+              1.218739843591213,
+              2.079000262079033
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999190016320224,
+            "point": [
+              -1.2,
+              1.2190409830533784,
+              2.07900080998368
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999270672341197,
+            "point": [
+              -1.2,
+              1.2193116956021335,
+              2.079000729327659
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099990359621673,
+            "point": [
+              -1.2,
+              1.2195552952575834,
+              2.0790000964037834
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.0209994847580508,
+            "point": [
+              -1.2,
+              1.2197700768492101,
+              2.0790005152419493
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999060602273634,
+            "point": [
+              -1.2,
+              1.219961979722117,
+              2.0790009393977265
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099955946524812,
+            "point": [
+              -1.2,
+              1.2201362897882824,
+              2.079000440534752
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999039231797578,
+            "point": [
+              -1.2,
+              1.220289326732864,
+              2.0790009607682025
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099961915768711,
+            "point": [
+              -1.2,
+              1.220429467883088,
+              2.079000380842313
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099918825435676,
+            "point": [
+              -1.2,
+              1.2205520526929947,
+              2.0790008117456433
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099970975909704,
+            "point": [
+              -1.2,
+              1.2206645881792901,
+              2.079000290240903
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998939018763707,
+            "point": [
+              -1.2,
+              1.2207616376825505,
+              2.0790010609812364
+            ],
+            "targetX": -1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998715771917364,
+            "point": [
+              -1.2,
+              1.2208500191230465,
+              2.0790012842280827
+            ],
+            "targetX": -1.2
+          }
+        ],
+        "endRoot": {
+          "x": -1.197579544256477,
+          "z": 1.040970677569624,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              -0.9492967876455981,
+              0.2765853736996651,
+              0.9864568176465973
+            ],
+            "target": [
+              -0.949296787645598,
+              0.27658537369966507,
+              0.9864568176465973
+            ],
+            "swinging": false,
+            "solveError": 1.2412670766236366e-16,
+            "groundMin": 0.0020000000000001197
+          },
+          {
+            "side": "right",
+            "actual": [
+              -1.4488654548628612,
+              0.27658537369966507,
+              1.0026108120233976
+            ],
+            "target": [
+              -1.4488654548628612,
+              0.27658537369966507,
+              1.0026108120233974
+            ],
+            "swinging": false,
+            "solveError": 2.220446049250313e-16,
+            "groundMin": 0.0020000000000000018
+          }
+        ]
+      }
+    },
+    {
+      "name": "visitor-rail-0",
+      "status": "passed",
+      "result": {
+        "time": 4.999999999999988,
+        "endState": "recover",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 3.1999999999999935,
+          "warning": 0.7500000000000007,
+          "strike": 0.18333333333333332,
+          "contact": 0.21666666666666665,
+          "recover": 0.016666666666666666
+        },
+        "distance": 1.2899058199488018,
+        "steps": 8,
+        "stepOrder": [
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.8181932113185119,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.709766727109625,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.5952388098833231,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.4745590875981305,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.34762532242759847,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.20808586743584642,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.06667235474157453,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 3.510833468576701e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 2.203098814490545e-16,
+        "plantedGroundY": [
+          0.0019999999999997797,
+          0.002000000000000196
+        ],
+        "bounds": {
+          "minX": -0.530158016072315,
+          "maxX": 0.5328646207026442,
+          "minZ": -0.678870752453804,
+          "maxZ": 2.079129935135205
+        },
+        "contacts": [
+          {
+            "state": "contact",
+            "radial": 0.020999689166508517,
+            "point": [
+              0,
+              1.219184397978982,
+              2.0790003108334916
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099871977712242,
+            "point": [
+              0,
+              1.2194764777091165,
+              2.0790012802228777
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099962824766255,
+            "point": [
+              0,
+              1.2197423558886937,
+              2.0790003717523375
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099956196973629,
+            "point": [
+              0,
+              1.2199769665833753,
+              2.079000438030264
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099970453252009,
+            "point": [
+              0,
+              1.220186983189581,
+              2.07900029546748
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099971995700578,
+            "point": [
+              0,
+              1.2203741535364245,
+              2.0790002800429943
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999159632403952,
+            "point": [
+              0,
+              1.2205395700953923,
+              2.079000840367596
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998858398261877,
+            "point": [
+              0,
+              1.2206879343133696,
+              2.079001141601738
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999557288503556,
+            "point": [
+              0,
+              1.2208234303214776,
+              2.0790004427114965
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999150083368168,
+            "point": [
+              0,
+              1.2209413965921403,
+              2.079000849916632
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099960721362315,
+            "point": [
+              0,
+              1.2210493383150252,
+              2.079000392786377
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998688111220964,
+            "point": [
+              0,
+              1.2211418179466844,
+              2.079001311888779
+            ],
+            "targetX": 0
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999618873729364,
+            "point": [
+              0,
+              1.2212298450421775,
+              2.0790003811262707
+            ],
+            "targetX": 0
+          }
+        ],
+        "endRoot": {
+          "x": 0,
+          "z": 1.0399058199488025,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.2512859106063843,
+              0.27658537369966507,
+              0.99031557740932
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              0.99031557740932
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.001999999999999953
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              1.0112385750054371
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              1.0112385750054371
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.0020000000000000018
+          }
+        ]
+      }
+    },
+    {
+      "name": "visitor-rail-1",
+      "status": "passed",
+      "result": {
+        "time": 6.133333333333317,
+        "endState": "recover",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 4.333333333333323,
+          "warning": 0.7500000000000007,
+          "strike": 0.18333333333333332,
+          "contact": 0.21666666666666665,
+          "recover": 0.016666666666666666
+        },
+        "distance": 1.7609094397969833,
+        "steps": 12,
+        "stepOrder": [
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.7425000000000005,
+            "yaw": 0.7424999999999998,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.964728051735721,
+            "yaw": 0.7478874367729782,
+            "yawDelta": 0.005387436772978371
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.8623916427377244,
+            "yaw": 0.7478874367729781,
+            "yawDelta": -1.1102230246251565e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.7539886480250683,
+            "yaw": 0.747887436772978,
+            "yawDelta": -1.1102230246251565e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.6394945535160319,
+            "yaw": 0.7478874367729778,
+            "yawDelta": -2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.5188674704597194,
+            "yaw": 0.7478874367729776,
+            "yawDelta": -1.1102230246251565e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.39202652623091194,
+            "yaw": 0.7478874367729785,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.25878051720893336,
+            "yaw": 0.7478874367729768,
+            "yawDelta": -1.7763568394002505e-15
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.06565051341882017,
+            "yaw": 0.5228874367729803,
+            "yawDelta": -0.2249999999999964
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0.0053874367729801545,
+            "yawDelta": -0.5175000000000002
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": -0.0053874367729801545
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 6.77599954797753e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 2.723515857283587e-16,
+        "plantedGroundY": [
+          0.0019999999999998005,
+          0.0020000000000002724
+        ],
+        "bounds": {
+          "minX": -0.5049385329245004,
+          "maxX": 1.7302296166404687,
+          "minZ": -0.7391333188969663,
+          "maxZ": 2.0802226274972284
+        },
+        "contacts": [
+          {
+            "state": "contact",
+            "radial": 0.02099973792096721,
+            "point": [
+              1.2,
+              1.218739843591213,
+              2.079000262079033
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999190016320224,
+            "point": [
+              1.2,
+              1.2190409830533784,
+              2.07900080998368
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999270672341197,
+            "point": [
+              1.2,
+              1.2193116956021335,
+              2.079000729327659
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099990359621673,
+            "point": [
+              1.2,
+              1.2195552952575834,
+              2.0790000964037834
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.0209994847580508,
+            "point": [
+              1.2,
+              1.2197700768492101,
+              2.0790005152419493
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999060602273634,
+            "point": [
+              1.2,
+              1.219961979722117,
+              2.0790009393977265
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099955946524812,
+            "point": [
+              1.2,
+              1.2201362897882824,
+              2.079000440534752
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999039231797578,
+            "point": [
+              1.2,
+              1.220289326732864,
+              2.0790009607682025
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099961915768711,
+            "point": [
+              1.2,
+              1.220429467883088,
+              2.079000380842313
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099918825435676,
+            "point": [
+              1.2,
+              1.2205520526929947,
+              2.0790008117456433
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099970975909704,
+            "point": [
+              1.2,
+              1.2206645881792901,
+              2.079000290240903
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998939018763707,
+            "point": [
+              1.2,
+              1.2207616376825505,
+              2.0790010609812364
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998715771917364,
+            "point": [
+              1.2,
+              1.2208500191230465,
+              2.0790012842280827
+            ],
+            "targetX": 1.2
+          }
+        ],
+        "endRoot": {
+          "x": 1.197579544256477,
+          "z": 1.040970677569624,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              1.4488654548628612,
+              0.27658537369966507,
+              1.0026108120233976
+            ],
+            "target": [
+              1.4488654548628612,
+              0.27658537369966507,
+              1.0026108120233974
+            ],
+            "swinging": false,
+            "solveError": 2.220446049250313e-16,
+            "groundMin": 0.0020000000000000018
+          },
+          {
+            "side": "right",
+            "actual": [
+              0.9492967876455981,
+              0.2765853736996651,
+              0.9864568176465973
+            ],
+            "target": [
+              0.949296787645598,
+              0.27658537369966507,
+              0.9864568176465973
+            ],
+            "swinging": false,
+            "solveError": 1.2412670766236366e-16,
+            "groundMin": 0.0020000000000001197
+          }
+        ]
+      }
+    },
+    {
+      "name": "retreat-before-commit",
+      "status": "passed",
+      "result": {
+        "time": 1.8499999999999983,
+        "endState": "agitated",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 0.016666666666666666,
+          "agitated": 1.2000000000000006
+        },
+        "distance": 0.000375,
+        "steps": 0,
+        "stepOrder": [],
+        "maxFootError": 2.0014830212433605e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 1.9949319973733282e-16,
+        "plantedGroundY": [
+          0.0019999999999998005,
+          0.0020000000000001752
+        ],
+        "bounds": {
+          "minX": -0.4994105706069053,
+          "maxX": 0.5047795692775087,
+          "minZ": -0.6885080161901888,
+          "maxZ": 0.42958855748798924
+        },
+        "contacts": [],
+        "endRoot": {
+          "x": -0.0002550343129218247,
+          "z": -0.2497250772849827,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.25128591060638433,
+              0.27658537369966496,
+              -0.28835986554622645
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 1.3597399555105182e-16,
+            "groundMin": 0.0019999999999998908
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.0020000000000000087
+          }
+        ]
+      }
+    },
+    {
+      "name": "retreat-after-commit",
+      "status": "passed",
+      "result": {
+        "time": 6.133333333333317,
+        "endState": "recover",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 4.333333333333323,
+          "warning": 0.7500000000000007,
+          "strike": 0.18333333333333332,
+          "contact": 0.21666666666666665,
+          "recover": 0.016666666666666666
+        },
+        "distance": 1.7609094397969833,
+        "steps": 12,
+        "stepOrder": [
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.7425000000000005,
+            "yaw": 0.7424999999999998,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.964728051735721,
+            "yaw": 0.7478874367729782,
+            "yawDelta": 0.005387436772978371
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.8623916427377244,
+            "yaw": 0.7478874367729781,
+            "yawDelta": -1.1102230246251565e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.7539886480250683,
+            "yaw": 0.747887436772978,
+            "yawDelta": -1.1102230246251565e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.6394945535160319,
+            "yaw": 0.7478874367729778,
+            "yawDelta": -2.220446049250313e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.5188674704597194,
+            "yaw": 0.7478874367729776,
+            "yawDelta": -1.1102230246251565e-16
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.39202652623091194,
+            "yaw": 0.7478874367729785,
+            "yawDelta": 8.881784197001252e-16
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.25878051720893336,
+            "yaw": 0.7478874367729768,
+            "yawDelta": -1.7763568394002505e-15
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.06565051341882017,
+            "yaw": 0.5228874367729803,
+            "yawDelta": -0.2249999999999964
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0.0053874367729801545,
+            "yawDelta": -0.5175000000000002
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": -0.0053874367729801545
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 6.77599954797753e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 2.723515857283587e-16,
+        "plantedGroundY": [
+          0.0019999999999998005,
+          0.0020000000000002724
+        ],
+        "bounds": {
+          "minX": -0.5049385329245004,
+          "maxX": 1.7302296166404687,
+          "minZ": -0.7391333188969663,
+          "maxZ": 2.080244954168152
+        },
+        "contacts": [
+          {
+            "state": "contact",
+            "radial": 0.020999909357070745,
+            "point": [
+              1.2,
+              1.2186651983573307,
+              2.0790000906429293
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999342627782802,
+            "point": [
+              1.2,
+              1.2189616824890033,
+              2.0790006573722173
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099931783390474,
+            "point": [
+              1.2,
+              1.2192277691880025,
+              2.0790006821660953
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999764052528125,
+            "point": [
+              1.2,
+              1.2194667706465678,
+              2.079000235947472
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999083128631746,
+            "point": [
+              1.2,
+              1.2196769796989455,
+              2.0790009168713683
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999710321005338,
+            "point": [
+              1.2,
+              1.219868526025743,
+              2.0790002896789948
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.0209998075231681,
+            "point": [
+              1.2,
+              1.2200383110272313,
+              2.079000192476832
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020998823869780026,
+            "point": [
+              1.2,
+              1.220186843920545,
+              2.07900117613022
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.02099888132300709,
+            "point": [
+              1.2,
+              1.2203225010970769,
+              2.079001118676993
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999254178068583,
+            "point": [
+              1.2,
+              1.2204448135176473,
+              2.0790007458219315
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999146485828568,
+            "point": [
+              1.2,
+              1.2205529013036664,
+              2.0790008535141715
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999078352011757,
+            "point": [
+              1.2,
+              1.2206497127749083,
+              2.0790009216479883
+            ],
+            "targetX": 1.2
+          },
+          {
+            "state": "contact",
+            "radial": 0.020999511293686712,
+            "point": [
+              1.2,
+              1.2207378719371096,
+              2.0790004887063134
+            ],
+            "targetX": 1.2
+          }
+        ],
+        "endRoot": {
+          "x": 1.197579544256477,
+          "z": 1.040970677569624,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              1.4488654548628612,
+              0.27658537369966507,
+              1.0026108120233976
+            ],
+            "target": [
+              1.4488654548628612,
+              0.27658537369966507,
+              1.0026108120233974
+            ],
+            "swinging": false,
+            "solveError": 2.220446049250313e-16,
+            "groundMin": 0.0020000000000000018
+          },
+          {
+            "side": "right",
+            "actual": [
+              0.9492967876455981,
+              0.2765853736996651,
+              0.9864568176465973
+            ],
+            "target": [
+              0.949296787645598,
+              0.27658537369966507,
+              0.9864568176465973
+            ],
+            "swinging": false,
+            "solveError": 1.2412670766236366e-16,
+            "groundMin": 0.0020000000000001197
+          }
+        ]
+      }
+    },
+    {
+      "name": "inspection-during-pace",
+      "status": "passed",
+      "result": {
+        "time": 2.416666666666663,
+        "endState": "watch",
+        "stateTimes": {
+          "watch": 1.9333333333333313,
+          "pace": 0.016666666666666666,
+          "settle": 0.44999999999999996,
+          "inspection": 0.016666666666666666
+        },
+        "distance": 0.0002604541123345528,
+        "steps": 0,
+        "stepOrder": [],
+        "maxFootError": 1.3597399555105182e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 1.1622647289044608e-16,
+        "plantedGroundY": [
+          0.001999999999999884,
+          0.0020000000000000226
+        ],
+        "bounds": {
+          "minX": -0.4999143677941642,
+          "maxX": 0.5040488839149475,
+          "minZ": -0.6860570901216041,
+          "maxZ": 0.42953135494933203
+        },
+        "contacts": [],
+        "endRoot": {
+          "x": 0.00023330184683237746,
+          "z": -0.249884213157498,
+          "yaw": 0.022500000000000003,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.2512859106063843,
+              0.276585373699665,
+              -0.2883598655462265
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 5.551115123125783e-17,
+            "groundMin": 0.001999999999999884
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.25128591060638433,
+              0.27658537369966496,
+              -0.28835986554622645
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              -0.2883598655462265
+            ],
+            "swinging": false,
+            "solveError": 1.3597399555105182e-16,
+            "groundMin": 0.001999999999999988
+          }
+        ]
+      }
+    },
+    {
+      "name": "inspection-during-strike",
+      "status": "passed",
+      "result": {
+        "time": 5.449999999999986,
+        "endState": "watch",
+        "stateTimes": {
+          "notice": 0.6333333333333336,
+          "approach": 3.1999999999999935,
+          "warning": 0.7500000000000007,
+          "strike": 0.016666666666666666,
+          "settle": 0.8333333333333343,
+          "inspection": 0.016666666666666666
+        },
+        "distance": 1.2899058199488018,
+        "steps": 8,
+        "stepOrder": [
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.8181932113185119,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.709766727109625,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.5952388098833231,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.4745590875981305,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.34762532242759847,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0.20808586743584642,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "left",
+            "state": "approach",
+            "speed": 0.06667235474157453,
+            "yaw": 0,
+            "yawDelta": 0
+          },
+          {
+            "side": "right",
+            "state": "approach",
+            "speed": 0,
+            "yaw": 0,
+            "yawDelta": 0
+          }
+        ],
+        "maxFootError": 3.510833468576701e-16,
+        "maxSupportTargetShift": 0,
+        "maxFloorOffsetFrom2mm": 2.3418766925686896e-16,
+        "plantedGroundY": [
+          0.001999999999999766,
+          0.002000000000000182
+        ],
+        "bounds": {
+          "minX": -0.530158016072315,
+          "maxX": 0.5328646207026442,
+          "minZ": -0.678870752453804,
+          "maxZ": 1.7196220568381648
+        },
+        "contacts": [],
+        "endRoot": {
+          "x": 0,
+          "z": 1.0399058199488025,
+          "yaw": 0,
+          "speed": 0
+        },
+        "finalFeet": [
+          {
+            "side": "left",
+            "actual": [
+              0.2512859106063843,
+              0.27658537369966507,
+              0.9903155774093197
+            ],
+            "target": [
+              0.2512859106063843,
+              0.27658537369966507,
+              0.99031557740932
+            ],
+            "swinging": false,
+            "solveError": 2.220446049250313e-16,
+            "groundMin": 0.001999999999999995
+          },
+          {
+            "side": "right",
+            "actual": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              1.0112385750054371
+            ],
+            "target": [
+              -0.2512859106063843,
+              0.27658537369966507,
+              1.0112385750054371
+            ],
+            "swinging": false,
+            "solveError": 0,
+            "groundMin": 0.0020000000000000365
+          }
+        ]
+      }
+    }
+  ],
+  "status": "passed"
+}

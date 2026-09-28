@@ -36,8 +36,8 @@ export const CAGE_TEST_PHASE = Object.freeze({ buildEnd: 0.32, holdEnd: 0.75, re
 const MAX_FRAME_DELTA = 0.1;
 const VALID_ERAS = new Set(['maker', 'mechanic', 'builder']);
 const RAIL_X = [-1.2, 0, 1.2];
-// Structural v1 bill reaches the rail through bounded cervical rotation.
-// Approach the shorter fixed-length neck before committing the planted strike.
+// Fallback for renderer-independent state tests. A loaded model supplies its
+// calibrated approach through feedback before either contact route is chosen.
 const FRONT_CONTACT_Z = 1.02;
 const AUTONOMOUS_BEATS = Object.freeze([
   Object.freeze({ id:'left-sweep', intention:'Sweep the left side before testing its rail.', routeKind:'left-sweep', actionFamily:'edge-probe', intensity:.56, recoveryStyle:'step-back-and-look-up', routeGoal:{x:-1.35,z:-.42}, routeFocus:{x:-1.2,y:1.18,z:1.1}, boundaryGoal:{x:-1.2,z:FRONT_CONTACT_Z}, boundaryFocus:{x:-1.2,y:1.3,z:2.15}, recoveryFocus:{x:-1.2,y:1.38,z:2.5}, watch:[1.2,2.3], boundary:[.8,1.45], action:[1.8,2.55], recovery:[.72,1.08] }),
@@ -99,6 +99,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
   let reducedStopPending = false;
   let reducedStopSpeed = 0;
   let currentBeat = null;
+  let contactApproachZ = FRONT_CONTACT_Z;
   let recentBeatIds = [];
   let recentActionFamilies = [];
 
@@ -220,7 +221,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
   }
 
   function startBoundary() {
-    const nextGoal = currentBeat?.boundaryGoal ?? { x: 0, z: FRONT_CONTACT_Z };
+    const nextGoal = { x: currentBeat?.boundaryGoal.x ?? 0, z: contactApproachZ };
     setGoal(nextGoal, 0);
     lookTarget = clonePoint(currentBeat?.boundaryFocus) ?? { x: nextGoal.x, y: 1.28, z: 2.1 };
     agitation = Math.min(0.94, agitation + .04 + (currentBeat?.intensity ?? .5) * .08);
@@ -250,6 +251,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
   function update(dtSeconds, feedback = {}) {
     const dt = clamp(finiteNumber(dtSeconds), 0, MAX_FRAME_DELTA);
     const fb = feedback && typeof feedback === 'object' ? feedback : {};
+    if (Number.isFinite(fb.contactApproachZ) && fb.contactApproachZ >= -.65 && fb.contactApproachZ <= 1.08) contactApproachZ = fb.contactApproachZ;
 
     // An inspection request is allowed to settle even while paused. The scene
     // integrator must let the grounding controller finish this safe transition.
@@ -332,7 +334,7 @@ export function createPresenceState({ seed = 927, onChange } = {}) {
         if (elapsed >= stateDuration) {
           if (reducedMotion) enter('settle', PRESENCE_DURATIONS.settle, { goal: null, actionKind: null });
           else enter('approach', Math.max(PRESENCE_DURATIONS.approachMinimum, 0.4 + Math.abs(reachWorldX) * 0.15), {
-            goal: { x: reachWorldX, z: FRONT_CONTACT_Z }, heading: 0,
+            goal: { x: reachWorldX, z: contactApproachZ }, heading: 0,
             lookTarget: visitorTarget(reach), actionKind: 'visitor', agitation: 0.92,
           });
         }
