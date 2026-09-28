@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-09-28T05:14:39.392Z",
+  "gitHead": "b6c0c17aed5873955f439edb573f6d2f1e6690e1",
+  "workingTree": "Uncommitted shared QA workspace; diagnostic script modified only to add region=neck surfaceRole=frame comparisons alongside plate comparisons; no model/runtime edits by this diagnostic task.",
+  "declaredModel": {
+    "path": "assets/audit/alignment-v5/clearance-c8a7a7e14253/model-inputs/v5-fourth.glb",
+    "bytes": 3844888,
+    "sha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3",
+    "expectedSha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3",
+    "sourceAndSnapshotHashesMatched": true
+  },
+  "command": {
+    "text": "node scripts/verify-jaw-neck-clearance.mjs --model <v5-fourth snapshot> --expected-sha256 c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3 --label v5-fourth-plates-and-inherited-frames --out jaw-neck-structure-v5-fourth.json",
+    "exitCode": 0
+  },
+  "result": {
+    "status": "no-sampled-crossings-detected",
+    "poses": 27,
+    "crossingPoses": 0,
+    "crossingTrianglePairs": 0,
+    "meshPairs": [],
+    "comparedMeshes": {
+      "jawDescendantMovingMeshes": [
+        {
+          "name": "jaw-head-edge",
+          "parentPath": [
+            "Scene",
+            "murderbird",
+            "body",
+            "neck",
+            "head",
+            "jaw",
+            "jaw-head-edge"
+          ],
+          "region": "head",
+          "surfaceRole": "edge",
+          "triangleCount": 340
+        },
+        {
+          "name": "jaw-head-plate",
+          "parentPath": [
+            "Scene",
+            "murderbird",
+            "body",
+            "neck",
+            "head",
+            "jaw",
+            "jaw-head-plate"
+          ],
+          "region": "head",
+          "surfaceRole": "plate",
+          "triangleCount": 3520
+        }
+      ],
+      "neckOwnedMeshesOutsideHeadDescendants": [
+        {
+          "name": "neck-neck-frame",
+          "parentPath": [
+            "Scene",
+            "murderbird",
+            "body",
+            "neck",
+            "neck-neck-frame"
+          ],
+          "region": "neck",
+          "surfaceRole": "frame",
+          "exteriorEras": "maker,mechanic,builder",
+          "triangleCount": 1600,
+          "modelSpaceBounds": {
+            "min": [
+              -0.16194698214530945,
+              1.25,
+              0.06189877539873123
+            ],
+            "max": [
+              0.16194698214530945,
+              1.6620092391967773,
+              0.42100001126527786
+            ],
+            "size": [
+              0.3238939642906189,
+              0.41200923919677734,
+              0.35910123586654663
+            ]
+          }
+        },
+        {
+          "name": "neck-neck-plate",
+          "parentPath": [
+            "Scene",
+            "murderbird",
+            "body",
+            "neck",
+            "neck-neck-plate"
+          ],
+          "region": "neck",
+          "surfaceRole": "plate",
+          "exteriorEras": "maker,mechanic,builder",
+          "triangleCount": 8352,
+          "modelSpaceBounds": {
+            "min": [
+              -0.21649926900863647,
+              1.237984538078308,
+              -0.08521383255720139
+            ],
+            "max": [
+              0.2139064222574234,
+              1.6443333625793457,
+              0.45490244776010513
+            ],
+            "size": [
+              0.4304056912660599,
+              0.4063488245010376,
+              0.5401162803173065
+            ]
+          }
+        }
+      ],
+      "excludedHeadDescendantNeckMeshes": []
+    }
+  },
+  "runtimePoseInterpretation": {
+    "stressAxes": {
+      "pitches": [
+        0,
+        -0.32,
+        -0.65
+      ],
+      "yaws": [
+        -0.35,
+        0,
+        0.35
+      ],
+      "jawOpenings": [
+        0,
+        0.16,
+        0.32
+      ],
+      "combinationCount": 27,
+      "note": "Stress combinations for clearance sensitivity; not asserted to be simultaneous production-animation poses."
+    },
+    "actualAssignmentRangesFromEraMotionSource": "Separately inspect src/scene/era-motion.js; this structural stress matrix writes the head and jaw directly while holding neck rest pose, so it does not claim a simulation of coupled neck/head runtime assignments."
+  },
+  "limits": [
+    "Proper segment/triangle crossings sampled at these 27 discrete poses only; coplanar contact and full containment are not certified.",
+    "Stress pitch/yaw/jaw-opening combinations are not guaranteed to occur simultaneously in the runtime animation.",
+    "No force/contact proof, continuous between-sample clearance, all-pairs collision test, GPU/WebGL rendering, or artistic acceptance.",
+    "Neck comparison includes region=neck structural meshes with surfaceRole plate or frame; this is still pair filtering and excludes non-structural neck objects and head-descendant objects.",
+    "The v5 candidate changes the jaw hinge; runtime sources are hash-recorded for context, but this diagnostic applies transforms directly to the declared GLB nodes."
+  ],
+  "inputHashes": {
+    "scripts/verify-jaw-neck-clearance.mjs": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/presence-exhibit.js": "752be05d20f273f470c977d4ac637d7cf6b33eaa69936b34b05c65755c542500",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+    "assets/audit/alignment-v5/clearance-c8a7a7e14253/model-inputs/v5-fourth.glb": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3",
+    "assets/audit/alignment-v5/clearance-c8a7a7e14253/jaw-neck-structure-v5-fourth.json": "ecf8a8d69f743e8623cf2ed75b19f68b4873a43e5528383bfb0c060545f10b25"
+  },
+  "jawHeadSweep": {
+    "modelSha256": "c8a7a7e14253075414d8e55390ebad2bf605ad09962fa62769417834000ccaa3",
+    "reportPath": "assets/audit/alignment-v5/clearance-c8a7a7e14253/jaw-head-sweep/jaw-sweep.json",
+    "reportSha256": "194a0fd3dbb193ef237dc91a72d7a64b1f319adb2f72cce670702a6fa8c71cf4",
+    "verifierSource": "scripts/verify-alignment-v4-jaw-sweep.mjs",
+    "verifierSourceSha256": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "loaderSource": "scripts/load-rigid-validation.mjs",
+    "loaderSourceSha256": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "result": {
+      "status": "no-crossings-detected",
+      "sampledPoses": 33,
+      "crossingPoses": 0,
+      "scope": "33 actual-mesh samples from closed through +0.32 rad. Jaw against every mesh beneath the fixed head subtree, excluding moving jaw descendants; includes cheek, optic, bill, crown and internal fixed surfaces. Proper segment/triangle crossings only; coplanar contact, containment, continuous between-sample clearance, forces and all other pairs remain unverified."
+    }
+  },
+  "relatedPriorCandidateContext": {
+    "v5ThirdModelSha256": "45e27b5787a2038cfdc1856c3e531b1cdb82b2e6ad6e9851bf0e802d08857f6a",
+    "plateOnly": {
+      "poses": 27,
+      "crossingPoses": 21,
+      "restCrossings": 0
+    },
+    "withInheritedFrame": {
+      "poses": 27,
+      "crossingPoses": 27,
+      "restFrameCrossingTrianglePairs": 75
+    },
+    "note": "Third-candidate plate-only clear at rest is not a full-neck clearance result; inherited frame intersects jaw at rest. This fourth-candidate expanded run includes frames."
+  }
+}

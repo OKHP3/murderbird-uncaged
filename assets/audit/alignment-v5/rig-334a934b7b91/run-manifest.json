@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-09-28T05:20:39.614Z",
+  "gitHead": "b6c0c17aed5873955f439edb573f6d2f1e6690e1",
+  "workingTree": "Uncommitted shared QA checkout; this task created only the frozen model copy and audit outputs/manifest. Other workspace source edits are present and separately identified by hashes.",
+  "declaredModel": {
+    "path": "assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb",
+    "bytes": 3844888,
+    "sha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1",
+    "sourcePath": "assets/models/uncaged-alignment-v5/murderbird-alignment-v5.glb",
+    "sourceAndSnapshotHashesMatched": true,
+    "description": "Fifth v5 geometry candidate; sixth build began after this input was frozen. This is historical exact-SHA evidence for fifth model only."
+  },
+  "validators": [
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-era-motion UNCAGED_EXPECTED_MODEL_SHA256=334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 node scripts/verify-era-motion.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-era-motion/motion-validation.json",
+        "reportSha256": "1b234232adfbe0197143e78e9e6406575e495c33ddf352dd926ba10655ee6cd9",
+        "status": "passed",
+        "checks": 14,
+        "failedChecks": [],
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-structural-motion UNCAGED_EXPECTED_MODEL_SHA256=334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 node scripts/verify-structural-motion.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-structural-motion/structural-motion-validation.json",
+        "reportSha256": "db985ed802c3dc7e274c0e5de97164cee1d7e9eabec8582258ee21cb615e9b42",
+        "status": "passed",
+        "checks": 4,
+        "failedChecks": [],
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-alignment-kinematics UNCAGED_EXPECTED_MODEL_SHA256=334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 node scripts/verify-alignment-kinematics.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-alignment-kinematics/kinematic-alignment.json",
+        "reportSha256": "7a75739b2805788c0d3d6edd1cbd5eddaa024a5eca642224c42db5520e00663a",
+        "status": "passed",
+        "checks": 4,
+        "failedChecks": [],
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-advanced-power-moves UNCAGED_EXPECTED_MODEL_SHA256=334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 node scripts/verify-advanced-power-moves.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-advanced-power-moves/power-move-validation.json",
+        "reportSha256": "f11be85f0118438e1d8718657bf6657f30f557c8f3af65e809e9c77168f0b9f9",
+        "status": "passed",
+        "checks": 4,
+        "failedChecks": [],
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-claw-contact-v4 UNCAGED_EXPECTED_MODEL_SHA256=334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 node scripts/verify-claw-contact-v4.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-claw-contact-v4/claw-contact-v4.json",
+        "reportSha256": "3f7bcde427b76f369d04d460f45165764e9586e7fea4d900daf042fad5ae06e4",
+        "status": "passed",
+        "checks": 32,
+        "failedChecks": [],
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-inspection-pose-v4 UNCAGED_EXPECTED_MODEL_SHA256=334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 node scripts/verify-inspection-pose-v4.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-inspection-pose-v4/inspection-pose-validation.json",
+        "reportSha256": "7adb69e33ebc08792a393590c8faedc7967875d5ec2288f8f47188ce84e745d5",
+        "status": "passed",
+        "checks": 1,
+        "failedChecks": [],
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    },
+    {
+      "command": "node scripts/verify-jaw-neck-clearance.mjs --model assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb --expected-sha256 334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1 --label v5-fifth-plates-and-inherited-frames --out assets/audit/alignment-v5/rig-334a934b7b91/jaw-neck-structure.json",
+      "exitCode": 0,
+      "status": "no-sampled-crossings-detected"
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb UNCAGED_AUDIT=assets/audit/alignment-v5/rig-334a934b7b91/jaw-head-sweep node scripts/verify-alignment-v4-jaw-sweep.mjs",
+      "exitCode": 0,
+      "status": "no-crossings-detected",
+      "result": {
+        "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/jaw-head-sweep/jaw-sweep.json",
+        "reportSha256": "62ba6960bcc8dd56fdcf77f9c7d189cd26c5c453b33f2ae39a33979332116c09",
+        "status": "no-crossings-detected",
+        "failedChecks": [],
+        "crossingPoses": 0,
+        "sampledPoses": 33,
+        "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+      }
+    }
+  ],
+  "reports": {
+    "verify-era-motion": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-era-motion/motion-validation.json",
+      "reportSha256": "1b234232adfbe0197143e78e9e6406575e495c33ddf352dd926ba10655ee6cd9",
+      "status": "passed",
+      "checks": 14,
+      "failedChecks": [],
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "verify-structural-motion": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-structural-motion/structural-motion-validation.json",
+      "reportSha256": "db985ed802c3dc7e274c0e5de97164cee1d7e9eabec8582258ee21cb615e9b42",
+      "status": "passed",
+      "checks": 4,
+      "failedChecks": [],
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "verify-alignment-kinematics": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-alignment-kinematics/kinematic-alignment.json",
+      "reportSha256": "7a75739b2805788c0d3d6edd1cbd5eddaa024a5eca642224c42db5520e00663a",
+      "status": "passed",
+      "checks": 4,
+      "failedChecks": [],
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "verify-advanced-power-moves": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-advanced-power-moves/power-move-validation.json",
+      "reportSha256": "f11be85f0118438e1d8718657bf6657f30f557c8f3af65e809e9c77168f0b9f9",
+      "status": "passed",
+      "checks": 4,
+      "failedChecks": [],
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "verify-claw-contact-v4": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-claw-contact-v4/claw-contact-v4.json",
+      "reportSha256": "3f7bcde427b76f369d04d460f45165764e9586e7fea4d900daf042fad5ae06e4",
+      "status": "passed",
+      "checks": 32,
+      "failedChecks": [],
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "verify-inspection-pose-v4": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/validators/verify-inspection-pose-v4/inspection-pose-validation.json",
+      "reportSha256": "7adb69e33ebc08792a393590c8faedc7967875d5ec2288f8f47188ce84e745d5",
+      "status": "passed",
+      "checks": 1,
+      "failedChecks": [],
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "jaw-neck-expanded": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/jaw-neck-structure.json",
+      "reportSha256": "0da4c23b06ca40a1570b394c04df6f418749c7a16f6e7a919994113e0488e01b",
+      "status": "no-sampled-crossings-detected",
+      "failedChecks": [],
+      "crossingPoses": 0,
+      "sampledPoses": 27,
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    },
+    "jaw-head-sweep": {
+      "reportPath": "assets/audit/alignment-v5/rig-334a934b7b91/jaw-head-sweep/jaw-sweep.json",
+      "reportSha256": "62ba6960bcc8dd56fdcf77f9c7d189cd26c5c453b33f2ae39a33979332116c09",
+      "status": "no-crossings-detected",
+      "failedChecks": [],
+      "crossingPoses": 0,
+      "sampledPoses": 33,
+      "modelSha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1"
+    }
+  },
+  "sourceHashes": {
+    "src/main.js": "e2615256ffd5d573dd69e39b6aa8671ba08f23d446e0e65e3188ea35141de594",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/era-mechanisms.js": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+    "src/scene/presence-exhibit.js": "752be05d20f273f470c977d4ac637d7cf6b33eaa69936b34b05c65755c542500",
+    "src/scene/inspection-pose.js": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "scripts/verify-era-motion.mjs": "f5e9383b7bd67cddcb7f8688046db41c9afa99b271edb6b6f1aac8d1a34f501f",
+    "scripts/verify-structural-motion.mjs": "20c80b66db65210dfbfaa212c958d354de38d3d8e6918c5a4c73c25924edf889",
+    "scripts/verify-alignment-kinematics.mjs": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32",
+    "scripts/verify-advanced-power-moves.mjs": "196837a397127a50c3296ce87e1d4a3a782eba377ca3732fb3a0f140f340d16a",
+    "scripts/verify-claw-contact-v4.mjs": "105a49685de7e040dc3d732bece106670f719e2b518c84befd9ce00459777c27",
+    "scripts/verify-inspection-pose-v4.mjs": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c",
+    "scripts/verify-jaw-neck-clearance.mjs": "b0b583d54ba3a434c9a09654fb52a39c6e8f7ee0542345129bb3c6ff34934380",
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+  },
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "limits": [
+    "Deterministic actual-GLB rig and sampled geometric validators only; no browser, GPU/WebGL scene, or artistic acceptance.",
+    "Jaw-neck validator checks 27 direct head-pitch/yaw/jaw stress transforms against neck plate and frame meshes with neck otherwise held at rest; not a coupled runtime animation simulation or continuous/all-pairs collision proof.",
+    "Jaw-head validator samples 33 jaw angles and detects proper triangle crossings only; coplanar contact, containment, continuous clearance, force/contact, and human acceptance are not established.",
+    "Validator success means the listed script assertions passed for this declared fifth model and hashed current sources; it does not claim sixth or later model results."
+  ]
+}

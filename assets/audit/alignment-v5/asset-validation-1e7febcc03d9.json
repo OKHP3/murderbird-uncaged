@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-28T05:23:46.230580+00:00",
+  "status": "passed",
+  "modelPath": "assets/models/uncaged-alignment-v5/murderbird-alignment-v5.glb",
+  "modelSha256": "1e7febcc03d9f8d1a644580c8422b124403cf4e5768aa01df747e3d9b6af9f1e",
+  "modelBytes": 4385348,
+  "nodes": 141,
+  "meshes": 90,
+  "triangles": 231704,
+  "editableParts": 703,
+  "referenceFiles": [
+    "assets/img/library/murderbird-unified-heart-candidate-2026-09-06.png",
+    "assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png",
+    "assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+    "assets/img/library/murderbird-unified-mechanic-candidate-2026-09-06.png",
+    "assets/img/library/murderbird-unified-sentinel-candidate-2026-09-06.png",
+    "assets/img/library/murderbird-unified-water-candidate-2026-09-06.png",
+    "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.blend",
+    "assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb",
+    "assets/murderbird/production/video/murderbird-first-choice-controlled-pilot-03.mp4",
+    "assets/murderbird/production/video/murderbird-maker-legacy-original-copy-02.mp4",
+    "assets/murderbird/production/video/murderbird-maker-legacy-original.mp4",
+    "assets/murderbird/production/video/murderbird-mechanic-legacy-original.mp4",
+    "content/story/index.main.html",
+    "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"
+  ],
+  "checks": [
+    "Native source, runtime GLB and explicit previews match inventory bytes/SHA; actual binary files",
+    "Frozen v2 source/runtime hashes and all v2 generated asset hashes are unchanged",
+    "Frozen v3 native/runtime hashes and every v3 generated inventory asset are unchanged",
+    "Native and recorded joint transforms match the fixed reconstruction contract: jaw world (0,-0.300,1.704); all other joints preserve v3, except the surface bill-contact landmark; unit scales retained",
+    "14 distinct provenance/reference files exist and match their recorded hashes",
+    "Rigid neutral geometry; no skinning, image maps or external buffers; finite attributes/transforms, unit node scales and orthonormal matrix bases",
+    "Opening panels, cervical/skull joints, inventory pivots and 12 independent digit hinges have unique rigid ownership",
+    "Inventory and exported eligibility exclude Advanced systems and later repairs from earlier eras",
+    "Every exported rest joint has identity orientation and matches native/inventory local and world positions after Z-up to Y-up conversion at 1e-6 m tolerance, including jaw and bill contact",
+    "Every preserved v4 generated file matches its frozen inventory hash"
+  ],
+  "limits": "No artistic likeness, swept collision, physical balance, force, acting or final surface certification",
+  "jawContract": {
+    "world": [
+      0.0,
+      -0.3,
+      1.704
+    ],
+    "parent": "head",
+    "status": "proposed mechanical reconstruction",
+    "reason": "Attach the forked mandible to the lower cheek rather than below the skull"
+  },
+  "validatorSources": [
+    {
+      "path": "scripts/verify-alignment-v5-assets.py",
+      "sha256": "4846a25bb7ba537641f87d9cbffbd87fa443be62bc8420119987523b439be4d3"
+    },
+    {
+      "path": "scripts/verify-alignment-v4-assets.py",
+      "sha256": "5c568bf15559224c980f7dbf4c984b2f066d9fe7d60f3124d10026557d3273b3"
+    }
+  ]
+}

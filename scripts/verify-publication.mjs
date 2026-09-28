@@ -5,6 +5,9 @@ import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {assertPublicationBoundary} from './publication-boundary.mjs';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+const alignmentVersion = process.env.UNCAGED_ALIGNMENT_VERSION || 'v5';
+assert(['v4', 'v5'].includes(alignmentVersion), 'Only the versioned v4/v5 runtime contracts are supported.');
+const modelDirectory = `assets/models/uncaged-alignment-${alignmentVersion}`;
 async function files(dir,prefix='') {
   const result=[];
   for (const entry of await readdir(dir,{withFileTypes:true})) {
@@ -33,11 +36,11 @@ const [presenceSource,fallbackSource]=await Promise.all([
   readFile('src/scene/fallback.js','utf8'),
 ]);
 const modelPaths=[...presenceSource.matchAll(/new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.glb)['"],\s*import\.meta\.url\)/g)].map(match=>match[1]);
-assert.deepEqual(modelPaths,['assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb'],'The exhibit must select the alignment-v4 GLB.');
+assert.deepEqual(modelPaths,[`${modelDirectory}/murderbird-alignment-${alignmentVersion}.glb`],`The exhibit must select the declared alignment-${alignmentVersion} GLB.`);
 const previewPaths=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
 assert.deepEqual(Object.keys(previewPaths).sort(),['builder','maker','mechanic'],'Fallback must select exactly one preview for each era.');
-for(const [era,path] of Object.entries(previewPaths))assert.equal(path,`assets/models/uncaged-alignment-v4/${era}-preview.png`,`${era} fallback must select its alignment-v4 preview.`);
-const alignmentInventory=JSON.parse(await readFile('assets/models/uncaged-alignment-v4/alignment-inventory.json','utf8'));
+for(const [era,path] of Object.entries(previewPaths))assert.equal(path,`${modelDirectory}/${era}-preview.png`,`${era} fallback must select its declared ${alignmentVersion} preview.`);
+const alignmentInventory=JSON.parse(await readFile(`${modelDirectory}/alignment-inventory.json`,'utf8'));
 assert.equal(alignmentInventory.status,'neutral geometry proposal awaiting owner review');
 assert(Array.isArray(alignmentInventory.generatedFiles),'Alignment inventory must enumerate generated source files.');
 const generatedFiles=new Map(alignmentInventory.generatedFiles.map(file=>[file.path,file]));
@@ -72,4 +75,4 @@ execFileSync('python3',['scripts/prepare-review-release.py','--check'],{stdio:'i
 await mkdir('.local/publication',{recursive:true});
 const report={generatedAt:new Date().toISOString(),status:'passed',revision:process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),modelSha256:generatedFiles.get(modelPaths[0]).sha256,media:proof,files:output};
 await writeFile('.local/publication/build-validation.json',JSON.stringify(report,null,2)+'\n');
-console.log(`Publication verified: ${output.length} files; ${proof.length} exact model/folio/fallback assets.`);
+console.log(`Local build boundary verified: ${output.length} files; ${proof.length} exact model/folio/fallback assets. This does not verify deployment.`);

@@ -1,0 +1,3910 @@
+{
+  "generatedAt": "2026-09-28T05:19:06.729Z",
+  "model": "assets/audit/alignment-v5/rig-334a934b7b91/model-inputs/v5-fifth.glb",
+  "sha256": "334a934b7b91630173a1d628d140ff09a449b7af3ca6dfdd5278bd4df670c1c1",
+  "scope": "Deterministic exported-rig claw-cycle samples at 60/120 Hz and bounded state interruptions. This is kinematic floor/support evidence only; it does not establish force, grip, balance, anatomy, full swept collision clearance, or human motion acceptance.",
+  "thresholds": {
+    "maxSingleFrameAnkleTravelAt60Hz": 0.025,
+    "maxSupportAnkleDrift": 0.002,
+    "minimumDistalFloor": -0.008,
+    "minimumSupportFootFloor": -0.003,
+    "maximumSupportFootFloor": 0.01,
+    "contactPlaneY": 0.002,
+    "contactTipTolerance": 0.003,
+    "pivotLocalDrift": 1e-8,
+    "rigidBasisError": 0.000001,
+    "neutralAnkleReturn": 0.015
+  },
+  "checks": [
+    {
+      "name": "complete-claw-contact-cycle-at-60hz",
+      "status": "passed",
+      "result": {
+        "elapsedSeconds": 1.9833,
+        "stages": [
+          "approach",
+          "lift",
+          "contact",
+          "scrape",
+          "release",
+          "recovery"
+        ],
+        "stageTransitions": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.056,
+            "timeSeconds": 0.017,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "approach",
+            "phase": 0.5,
+            "timeSeconds": 0.15,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.27651482415199274,
+              -0.2883598655462267
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.2883598655462264
+            ],
+            "supportFootMinY": 0.001999999999999884,
+            "activeDistalMinY": 0.001999999999999884,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "approach",
+            "phase": 0.944,
+            "timeSeconds": 0.283,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622645
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199286,
+              -0.2883598655462265
+            ],
+            "supportFootMinY": 0.001999999999999995,
+            "activeDistalMinY": 0.0020000000000000573,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "lift",
+            "phase": 0.389,
+            "timeSeconds": 0.417,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.31516365817119707,
+              -0.2698756405805201
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.04064883401920427,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "lift",
+            "phase": 0.833,
+            "timeSeconds": 0.55,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3829963056334743,
+              -0.23743393962030057
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.10848148148148154,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "contact",
+            "phase": 0.347,
+            "timeSeconds": 0.683,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.38126441214375706,
+              -0.2333598655462264
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.10156872248707602,
+            "activeToeAngles": [
+              0.00447,
+              0.00634,
+              0.00546,
+              0.00773,
+              0.0048,
+              0.0068
+            ]
+          },
+          {
+            "stage": "contact",
+            "phase": 0.903,
+            "timeSeconds": 0.817,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.33148079634853145,
+              -0.23335986554622645
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000001406,
+            "activeToeAngles": [
+              0.04814,
+              0.0682,
+              0.05871,
+              0.08317,
+              0.05166,
+              0.07319
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.238,
+            "timeSeconds": 0.95,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.33376535987546696,
+              -0.2254908449221038
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000085,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.556,
+            "timeSeconds": 1.083,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3337653598754669,
+              -0.20129539366693983
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000573,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.873,
+            "timeSeconds": 1.217,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3337653598754668,
+              -0.18079524769438268
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0019999999999999463,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "release",
+            "phase": 0.278,
+            "timeSeconds": 1.35,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.32956858530485267,
+              -0.1783682536949061
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.00842519968526409,
+            "activeToeAngles": [
+              0.04072,
+              0.05768,
+              0.04966,
+              0.07035,
+              0.0437,
+              0.06191
+            ]
+          },
+          {
+            "stage": "release",
+            "phase": 0.833,
+            "timeSeconds": 1.483,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3131630119833612,
+              -0.17836063132818553
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03434188033471721,
+            "activeToeAngles": [
+              0.00372,
+              0.00527,
+              0.00453,
+              0.00642,
+              0.00399,
+              0.00565
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.198,
+            "timeSeconds": 1.617,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.30797336992062674,
+              -0.18963276732516168
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.28835986554622667
+            ],
+            "supportFootMinY": 0.00199999999999987,
+            "activeDistalMinY": 0.03333990045764049,
+            "activeToeAngles": [
+              0.0001,
+              0.00014,
+              0.00012,
+              0.00018,
+              0.00011,
+              0.00016
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.516,
+            "timeSeconds": 1.75,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.293205843578621,
+              -0.23597804451540677
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "supportFootMinY": 0.0019999999999999463,
+            "activeDistalMinY": 0.018628068871057522,
+            "activeToeAngles": [
+              0.00005,
+              0.00008,
+              0.00007,
+              0.00009,
+              0.00006,
+              0.00008
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.833,
+            "timeSeconds": 1.883,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.2791111613414245,
+              -0.28021171913789505
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.001999999999999884,
+            "activeDistalMinY": 0.004586544942728865,
+            "activeToeAngles": [
+              0.00001,
+              0.00001,
+              0.00001,
+              0.00001,
+              0.00001,
+              0.00001
+            ]
+          }
+        ],
+        "maxFrameAnkleTravel": 0.014927501704630752,
+        "maxSupportAnkleDrift": 2.482534153247273e-16,
+        "maxPivotLocalDrift": 0,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "minimumDistalFloorY": 0.0019999999999998075,
+        "maximumSupportFootMinY": 0.002000000000000092,
+        "maximumContactTipFloorY": 0.002000000000000224,
+        "violations": [],
+        "distalJointAngles": {
+          "left": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "contactToeAngles": [
+          0.050184,
+          0.071094,
+          0.0612,
+          0.0867,
+          0.053856,
+          0.076296
+        ],
+        "recoveredNearBaseline": true,
+        "fullRestRotationRestored": true,
+        "actionCleared": true
+      }
+    },
+    {
+      "name": "complete-claw-contact-cycle-at-120hz",
+      "status": "passed",
+      "result": {
+        "elapsedSeconds": 1.9417,
+        "stages": [
+          "approach",
+          "lift",
+          "contact",
+          "scrape",
+          "release",
+          "recovery"
+        ],
+        "stageTransitions": [
+          {
+            "stage": "approach",
+            "phase": 0.02777777777777778,
+            "timeSeconds": 0.0083,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622656
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199286,
+              -0.2883598655462264
+            ],
+            "supportFootMinY": 0.002000000000000092,
+            "activeDistalMinY": 0.001999999999999995
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.8417,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2667,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5083,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.028,
+            "timeSeconds": 0.008,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622656
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199286,
+              -0.2883598655462264
+            ],
+            "supportFootMinY": 0.002000000000000092,
+            "activeDistalMinY": 0.001999999999999995,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "approach",
+            "phase": 0.444,
+            "timeSeconds": 0.133,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622645
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "supportFootMinY": 0.0020000000000000018,
+            "activeDistalMinY": 0.0020000000000000573,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "approach",
+            "phase": 0.861,
+            "timeSeconds": 0.258,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462267
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462265
+            ],
+            "supportFootMinY": 0.0020000000000000018,
+            "activeDistalMinY": 0.0020000000000000018,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "lift",
+            "phase": 0.278,
+            "timeSeconds": 0.383,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.29820549630562787,
+              -0.27798606582057495
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.023690672153635073,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "lift",
+            "phase": 0.694,
+            "timeSeconds": 0.508,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3658656043303193,
+              -0.2456268837218095
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.09135078017832649,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "contact",
+            "phase": 0.139,
+            "timeSeconds": 0.633,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988,
+            "activeToeAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "stage": "contact",
+            "phase": 0.66,
+            "timeSeconds": 0.758,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3212329098085971,
+              -0.23335986554622654
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.011468428924629931,
+            "activeToeAngles": [
+              0.03067,
+              0.04345,
+              0.0374,
+              0.05299,
+              0.03291,
+              0.04663
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.099,
+            "timeSeconds": 0.883,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3337653598754668,
+              -0.23184335377543958
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0019999999999999463,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.397,
+            "timeSeconds": 1.008,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3337653598754667,
+              -0.21425095802084138
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0019999999999998075,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.694,
+            "timeSeconds": 1.133,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.33376535987546696,
+              -0.19062688372180944
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "scrape",
+            "phase": 0.992,
+            "timeSeconds": 1.258,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.33376535987546685,
+              -0.17837020360267186
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0019999999999999046,
+            "activeToeAngles": [
+              0.05018,
+              0.07109,
+              0.0612,
+              0.0867,
+              0.05386,
+              0.0763
+            ]
+          },
+          {
+            "stage": "release",
+            "phase": 0.486,
+            "timeSeconds": 1.383,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.32310352561475186,
+              -0.17836524989523
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.018502761050526277,
+            "activeToeAngles": [
+              0.02614,
+              0.03703,
+              0.03187,
+              0.04516,
+              0.02805,
+              0.03974
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.508,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121,
+            "activeToeAngles": [
+              0.00011,
+              0.00016,
+              0.00014,
+              0.0002,
+              0.00012,
+              0.00017
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.298,
+            "timeSeconds": 1.633,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.3040993692357932,
+              -0.20179063529951
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622667
+            ],
+            "supportFootMinY": 0.001999999999999981,
+            "activeDistalMinY": 0.029480510193459326,
+            "activeToeAngles": [
+              0.00009,
+              0.00013,
+              0.00011,
+              0.00016,
+              0.0001,
+              0.00014
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.595,
+            "timeSeconds": 1.758,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.28909343442761404,
+              -0.24888411541781594
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199286,
+              -0.2883598655462265
+            ],
+            "supportFootMinY": 0.002000000000000092,
+            "activeDistalMinY": 0.014531169618777873,
+            "activeToeAngles": [
+              0.00004,
+              0.00006,
+              0.00005,
+              0.00007,
+              0.00004,
+              0.00006
+            ]
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.893,
+            "timeSeconds": 1.883,
+            "leftAnkle": [
+              0.2512859106063843,
+              0.27763570095338874,
+              -0.2848421913702172
+            ],
+            "rightAnkle": [
+              -0.2512859106063843,
+              0.27651482415199274,
+              -0.28835986554622656
+            ],
+            "supportFootMinY": 0.0019999999999999463,
+            "activeDistalMinY": 0.003116649340404551,
+            "activeToeAngles": [
+              0,
+              0.00001,
+              0,
+              0.00001,
+              0,
+              0.00001
+            ]
+          }
+        ],
+        "maxFrameAnkleTravel": 0.00747954730961381,
+        "maxSupportAnkleDrift": 2.482534153247273e-16,
+        "maxPivotLocalDrift": 0,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "minimumDistalFloorY": 0.0019999999999997103,
+        "maximumSupportFootMinY": 0.0020000000000001752,
+        "maximumContactTipFloorY": 0.002000000000000224,
+        "violations": [],
+        "distalJointAngles": {
+          "left": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "contactToeAngles": [
+          0.050184,
+          0.071094,
+          0.0612,
+          0.0867,
+          0.053856,
+          0.076296
+        ],
+        "recoveredNearBaseline": true,
+        "fullRestRotationRestored": true,
+        "actionCleared": true
+      }
+    },
+    {
+      "name": "approach-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.1333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.28835986554622645
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0020000000000000365
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "approach-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.1333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.28835986554622645
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0020000000000000365
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "approach-interrupted-by-pause",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "pause",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": {
+          "driftMetersOrRadians": 0,
+          "frames": 18
+        },
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.9,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 1.15,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.5833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.8333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "approach-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "approach-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "lift-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.4333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31498590695193807,
+              -0.2699606520332092
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.04047108279994527
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "lift-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.4333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31498590695193807,
+              -0.2699606520332092
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.04047108279994527
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "lift-interrupted-by-pause",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "pause",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": {
+          "driftMetersOrRadians": 0,
+          "frames": 18
+        },
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.9,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 1.15,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.5833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.8333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "lift-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "lift-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "contact-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.7167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3703444426020547,
+              -0.23361281799116684
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0854087847225811
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "contact-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.7167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3703444426020547,
+              -0.23361281799116684
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0854087847225811
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "contact-interrupted-by-pause",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "pause",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": {
+          "driftMetersOrRadians": 0,
+          "frames": 18
+        },
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 1.15,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.5833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.8333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "contact-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "contact-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "scrape-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "scrape",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 1.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33350755342981814,
+              -0.217651579636922
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0020000000000000434
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "scrape-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "scrape",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 1.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33350755342981814,
+              -0.217651579636922
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0020000000000000434
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "scrape-interrupted-by-pause",
+      "status": "passed",
+      "result": {
+        "phase": "scrape",
+        "interruption": "pause",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": {
+          "driftMetersOrRadians": 0,
+          "frames": 18
+        },
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.5833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.8333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "scrape-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "scrape",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "scrape-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "scrape",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "release-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "release",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 1.4,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.32517084648179206,
+              -0.17887219009474714
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.014845692155054074
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "release-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "release",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 1.4,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.32517084648179206,
+              -0.17887219009474714
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.014845692155054074
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "release-interrupted-by-pause",
+      "status": "passed",
+      "result": {
+        "phase": "release",
+        "interruption": "pause",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": {
+          "driftMetersOrRadians": 0,
+          "frames": 18
+        },
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.8333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "release-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "release",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "release-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "release",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "recovery-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "recovery",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "recovery-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "recovery",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "recovery-interrupted-by-pause",
+      "status": "passed",
+      "result": {
+        "phase": "recovery",
+        "interruption": "pause",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": {
+          "driftMetersOrRadians": 0,
+          "frames": 18
+        },
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "recovery-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "recovery",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    },
+    {
+      "name": "recovery-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "recovery",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.357,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "scrape",
+            "phase": 0,
+            "timeSeconds": 0.85,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.33376535987546707,
+              -0.2333598655462265
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000224
+          },
+          {
+            "stage": "release",
+            "phase": 0,
+            "timeSeconds": 1.2833,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.333765359875467,
+              -0.17837020360267186
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.0020000000000000434
+          },
+          {
+            "stage": "recovery",
+            "phase": 0,
+            "timeSeconds": 1.5333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31156537620932073,
+              -0.17835988903375177
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.03691835991569121
+          }
+        ],
+        "violations": []
+      }
+    }
+  ],
+  "status": "passed"
+}

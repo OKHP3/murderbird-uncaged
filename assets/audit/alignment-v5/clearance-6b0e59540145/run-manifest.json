@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-09-28T05:07:37.357Z",
+  "gitHead": "b6c0c17aed5873955f439edb573f6d2f1e6690e1",
+  "workingTree": "Uncommitted QA checkout; new diagnostic script and audit files only authored by this bounded check, other alignment-v5 files were present in shared QA workspace.",
+  "commands": [
+    {
+      "command": "node scripts/verify-jaw-neck-clearance.mjs --model <v4 snapshot> --expected-sha256 bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299 --label v4-baseline --out jaw-neck-v4.json",
+      "exitCode": 1,
+      "meaning": "Expected diagnostic finding; sampled crossings detected."
+    },
+    {
+      "command": "node scripts/verify-jaw-neck-clearance.mjs --model <v5-first snapshot> --expected-sha256 6b0e5954014557782087ef2c3aa5b931cb0392e71dc075d9ad3a843575f6e2e2 --label v5-first --out jaw-neck-v5-first.json",
+      "exitCode": 1,
+      "meaning": "Expected diagnostic finding; sampled crossings detected."
+    },
+    {
+      "command": "UNCAGED_MODEL=<v5-first snapshot> UNCAGED_AUDIT=<unique v5-first-jaw-head-sweep dir> node scripts/verify-alignment-v4-jaw-sweep.mjs",
+      "exitCode": 1,
+      "meaning": "Expected diagnostic finding; sampled jaw/head crossings detected."
+    }
+  ],
+  "summary": {
+    "jawNeckV4": {
+      "status": "crossings-detected",
+      "poses": 27,
+      "crossingPoses": 27,
+      "crossingTrianglePairs": 24846,
+      "meshPairs": [
+        "jaw-head-edge / neck-neck-plate",
+        "jaw-head-plate / neck-neck-plate"
+      ]
+    },
+    "jawNeckV5First": {
+      "status": "crossings-detected",
+      "poses": 27,
+      "crossingPoses": 20,
+      "crossingTrianglePairs": 2664,
+      "meshPairs": [
+        "jaw-head-plate / neck-neck-plate"
+      ]
+    },
+    "jawHeadV5First": {
+      "status": "crossings-detected",
+      "poses": 33,
+      "crossingPoses": 32,
+      "restTrianglePairs": 516,
+      "open016TrianglePairs": 184,
+      "open032TrianglePairs": 0
+    }
+  },
+  "limitations": [
+    "Jaw-vs-neck diagnostic tests proper segment/triangle crossings at 27 declared stress combinations; it is not continuous, all-pairs, coplanar-contact, containment, force, rendering, or artistic proof.",
+    "Jaw-vs-head results are from existing 33-sample verifier; same geometric limits apply and no current corrected derivative was tested.",
+    "Both tested v5 inputs are frozen first-candidate model SHA 6b0e...; later source edits are not represented."
+  ],
+  "inputHashes": {
+    "scripts/verify-jaw-neck-clearance.mjs": "756fce15f83715d2b007d4084145690ac05d60c05168907ec17563e33c56eeaf",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "scripts/verify-alignment-v4-jaw-sweep.mjs": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+    "src/scene/presence-exhibit.js": "752be05d20f273f470c977d4ac637d7cf6b33eaa69936b34b05c65755c542500",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+    "assets/audit/alignment-v5/clearance-6b0e59540145/model-inputs/v4-baseline.glb": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+    "assets/audit/alignment-v5/clearance-6b0e59540145/model-inputs/v5-first.glb": "6b0e5954014557782087ef2c3aa5b931cb0392e71dc075d9ad3a843575f6e2e2",
+    "assets/audit/alignment-v5/clearance-6b0e59540145/jaw-neck-v4.json": "05d28adca2f4193902feda01cbee2787329c12fc9c8b54b091980ff898c56fb4",
+    "assets/audit/alignment-v5/clearance-6b0e59540145/jaw-neck-v5-first.json": "0f9cd47b72420f99c7f5c7d5bb49bb60ea9d18508e54ea513e14b0d403154ae2",
+    "assets/audit/alignment-v5/clearance-6b0e59540145/v5-first-jaw-head-sweep/jaw-sweep.json": "698c4d09fc46de64c8bbafa1b2055305d495feedbf4d3f122a1523e9556e77ca"
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "status": "local bounded browser evidence; revision required artistically",
+  "model": {
+    "path": "assets/models/uncaged-alignment-v5/murderbird-alignment-v5.glb",
+    "bytes": 4385348,
+    "sha256": "1e7febcc03d9f8d1a644580c8422b124403cf4e5768aa01df747e3d9b6af9f1e"
+  },
+  "browserRecord": {
+    "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/browser-review.json",
+    "bytes": 295238,
+    "sha256": "83ad6e469a30e989c63b9c061d39a9ec2cee52db16096652958d1cba45debada"
+  },
+  "recordings": [
+    {
+      "name": "motion-normal-speed",
+      "durationSeconds": 115.00829999999702,
+      "samples": 460,
+      "hiddenSamples": 0,
+      "failedDispatches": [
+        {
+          "error": "Error: claw-scrape unavailable",
+          "name": "Advanced claw scrape",
+          "seconds": 65.00389999999106
+        },
+        {
+          "error": "Error: reach unavailable",
+          "name": "Advanced reach",
+          "seconds": 78.0035
+        },
+        {
+          "error": "Error: retreat unavailable",
+          "name": "Advanced retreat",
+          "seconds": 88.00320000000298
+        }
+      ],
+      "observedStates": [
+        "agitated",
+        "boundary",
+        "cage-test",
+        "inspection",
+        "mechanical-ready",
+        "mechanical-run",
+        "mechanical-settle",
+        "pace",
+        "power-jump",
+        "power-thrust",
+        "puppet-articulation",
+        "puppet-rest",
+        "recover",
+        "settle",
+        "watch"
+      ],
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 856,
+            "height": 648,
+            "avg_frame_rate": "103500/3451"
+          }
+        ],
+        "format": {
+          "duration": "115.033333",
+          "size": "6130030"
+        }
+      }
+    },
+    {
+      "name": "claw-normal-speed",
+      "durationSeconds": 20.00430000001192,
+      "samples": 200,
+      "hiddenSamples": 0,
+      "failedDispatches": [],
+      "observedStates": [
+        "boundary",
+        "cage-test",
+        "claw-scrape",
+        "pace",
+        "recover",
+        "settle",
+        "watch"
+      ],
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 856,
+            "height": 648,
+            "avg_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "20.000000",
+          "size": "1056378"
+        }
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/main.js",
+      "bytes": 29279,
+      "sha256": "e2615256ffd5d573dd69e39b6aa8671ba08f23d446e0e65e3188ea35141de594"
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "bytes": 24781,
+      "sha256": "f6ef26db9d12edbc671f0d2bdb62191a4574a1cb0c247c5673f0a63c6ae95e01"
+    },
+    {
+      "path": "src/scene/fallback.js",
+      "bytes": 4847,
+      "sha256": "088450c8197cbb9f674fa35bff1e9a29754ae2482d1e12ca79479e4094fecac7"
+    },
+    {
+      "path": "scripts/record-alignment-v5-browser.js",
+      "bytes": 4222,
+      "sha256": "b904d350c59466d818e19cba0f9bb8241c96952500177f94c4441e2756e2ca41"
+    },
+    {
+      "path": "scripts/record-alignment-v5-claw.js",
+      "bytes": 1829,
+      "sha256": "a4b4ad1b6da99212f92a1fd47c03fbe43fe1d2711bde9fe80fe15822f589142b"
+    },
+    {
+      "path": "scripts/freeze-alignment-v5-browser.py",
+      "bytes": 4113,
+      "sha256": "f5557a718dd1d4f42eb5bca78d1c4bdd4e793c357bbda3cbbe02b967359c7585"
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-contact-exhibit.png",
+      "bytes": 244453,
+      "sha256": "90ca9f0d407dd274c832cbcf626923d624a7cdf9b97edc83956f69a9bfb6eaa6",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-contact-head-centered.png",
+      "bytes": 293825,
+      "sha256": "801acbd9347db1e75d690e3cace087a4b5b5154cc44ddd7d125d421b664fde62",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-contact-head.png",
+      "bytes": 254303,
+      "sha256": "fbf76e75042ca9707d651dde365023be4d7492d8889d3e5a0c377c1e6adfa972",
+      "reviewUse": "fixed head camera clipped lowered head"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-exploded.png",
+      "bytes": 203879,
+      "sha256": "3e8ebb39d2f7c13bc371204fdd335f40be683470bf655d446452f74a755222db",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-jump.png",
+      "bytes": 183212,
+      "sha256": "4da0ae197f57295d7d7631e1349f257d99f48e867216a60cf58c77680e31eea0",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-open-settled.png",
+      "bytes": 181349,
+      "sha256": "33202a272a279c1a350e7329c42b31564c661f5595b8f8595608d7b565036db0",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-open.png",
+      "bytes": 167664,
+      "sha256": "1fe7feacf73bcab7a4afd6b6808bb0c7f3c4bb36e63050e515c627fbcab51523",
+      "reviewUse": "inspection had not settled"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-reassembled.png",
+      "bytes": 164550,
+      "sha256": "e164309d5fbd946d0a7fc705cbca0a6dc06018d7cc27a0fef1919a33a2569904",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-review-ready.png",
+      "bytes": 241287,
+      "sha256": "a7c7184e61b5a2556e145831b30040bf07b09eb06e1e753ff0f5fa054ff15edb",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/advanced-thrust.png",
+      "bytes": 160735,
+      "sha256": "9d63f374b406386b2549caa79fd40512025218613b175fa3b9394913f5057c3a",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/browser-review.json",
+      "bytes": 295238,
+      "sha256": "83ad6e469a30e989c63b9c061d39a9ec2cee52db16096652958d1cba45debada",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/claw-contact-at-0-904s.png",
+      "bytes": 116488,
+      "sha256": "6021ca3082e746acf7f235c39565cbd491c66cbcd818da6631ffad4d4d21b578",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/claw-normal-speed.json",
+      "bytes": 1577655,
+      "sha256": "1198a6f1a119dd45ca2775253d1c714d9f3f734981cb7b36f1c3c2e4b205395b",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/claw-normal-speed.mp4",
+      "bytes": 1056378,
+      "sha256": "e7b7a7fb4b68df3e8e4409fe8060a538e6c1e58fcfe697a5040d2f5bb4541707",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/claw-normal-speed.webm",
+      "bytes": 2896677,
+      "sha256": "2c692c6cc9d2fbb2d26cc771c4dc7a93bf71c645a5f5dc65c14375778ff8ee24",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/fallback-builder.png",
+      "bytes": 62347,
+      "sha256": "24d86d9e7b918aa7c4859e9167fa76e526106ce0b5ab467b91fe8a7aed114989",
+      "reviewUse": "captured during era transition"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/fallback-maker.png",
+      "bytes": 288609,
+      "sha256": "45289118b9f6e3dd62e238de74d585bf9029420b5c56fbb8eb98f84140b8bccd",
+      "reviewUse": "captured during era transition"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/fallback-mechanic.png",
+      "bytes": 62090,
+      "sha256": "23abf7bab4da70dcc27bdceeadd60884f7c16036b3e7b781a6720d01fc0645dc",
+      "reviewUse": "captured during era transition"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/fallback-settled-builder.png",
+      "bytes": 288753,
+      "sha256": "547ce7f77442d9c2b91b0dc4bf7241c3875030bdce6ee071bfc488865f097201",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/fallback-settled-maker.png",
+      "bytes": 291145,
+      "sha256": "3f57d99fa199b974435e70ee7e2ee4503a4c6629516046e3a6d63a228ef80c75",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/fallback-settled-mechanic.png",
+      "bytes": 291150,
+      "sha256": "4c98f6ca0df8476680dfe72377bb04e09273c8dc21f9dc1d7cbbf952ba2b4454",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-exploded.png",
+      "bytes": 204779,
+      "sha256": "31e3f4bf5a6ed821d6bff94682851e859cc70b5bf1169b82a3e1dbde3dc1d748",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-jaw.png",
+      "bytes": 187812,
+      "sha256": "75dc4b0ffa1e538645d75e499cde785fdc004cdad7f03458e5388502da5f8601",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-leg.png",
+      "bytes": 187188,
+      "sha256": "c1ebc152792df71700c722ebf767d75a4c0a7fe70e2501f4d77320f3848f562c",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-neck.png",
+      "bytes": 184338,
+      "sha256": "857e1343d13d4d3a2f9b99ca997b505fc82fc384e1278dbfeecb6be740127963",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-open.png",
+      "bytes": 196776,
+      "sha256": "3b391f8a945fe4123d301da8da551161fa7dc7403308f0b1206231c6d9922467",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-rear.png",
+      "bytes": 185691,
+      "sha256": "8caddea4d34caf7b992ba3cb28960f0c867e673e7f8da6a0564a4d0ea12b69b0",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-reassembled.png",
+      "bytes": 186335,
+      "sha256": "20e9cbe5f89555f625de50aadbbe186258b5ccd3fe17a10217ffe1349ad00bee",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/maker-wing.png",
+      "bytes": 185455,
+      "sha256": "e799c25ab56f1e461bcd21cbd65a5f3b3e9f29be9a60ef7489108b14472d0580",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/mechanic-exploded.png",
+      "bytes": 189100,
+      "sha256": "90896616020e80584a7013ff65c0ea5f818228dead23f4f570ded31eccbc80af",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/mechanic-open.png",
+      "bytes": 172306,
+      "sha256": "68874fe0376640ad3787649b9f12b9414dbb974b95e51519c2f7a7a1e274ecf4",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/mechanic-reassembled.png",
+      "bytes": 163084,
+      "sha256": "d93a98ef658d3c40c51efd43ab04417c27a8bda2c897bbe5e82a2ab37683a6a1",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/mechanic-release.png",
+      "bytes": 176553,
+      "sha256": "5e9fe74bb92790106bf79285fbeb7039d164adca00efa597f7fce56df62c7237",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/mechanic-stopped.png",
+      "bytes": 178976,
+      "sha256": "db85187dbb063e7317ca0c5ffde7aa8e32eb0414a265db3c04ed75c469e73402",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/motion-normal-speed.json",
+      "bytes": 3700771,
+      "sha256": "60635035638128d5c4583f428a6d863e3d5bfe9e69a0d877076e8ba98b349e2a",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/motion-normal-speed.mp4",
+      "bytes": 6130030,
+      "sha256": "23c33d1245c3521b17b5cc63c611d329c40dddd9e8f8ce49b2481eac358622fd",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/motion-normal-speed.webm",
+      "bytes": 14812209,
+      "sha256": "3255119f08518c99ea3f14e9fc87c6d8d869fb1fe440a9a3261347a616218977",
+      "reviewUse": "evidence; interpret with receipt scope"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-crops/maker-jaw.png",
+      "bytes": 44759,
+      "sha256": "6bcefa917e1b4f5c0195c1126339c4c3b62b14b778f241f430f41fbde697d40a",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-crops/maker-leg.png",
+      "bytes": 43742,
+      "sha256": "5f0758cb1e0b921c1be06352f0bcea31060dac98c93eb3751422805cf8a88de3",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-crops/maker-neck.png",
+      "bytes": 40467,
+      "sha256": "50f8dda79e2722e5db039736aa296abc4650d0ee003fc792dcee9f2e66f77c96",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-crops/maker-rear.png",
+      "bytes": 41743,
+      "sha256": "deec082494e47927363128a61a98e78974350744af183f365c2f66217a295064",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-crops/maker-wing.png",
+      "bytes": 45401,
+      "sha256": "bfa531e61595dd1a3e39ea083cc82182153d53231baa65190e78d37f73e7c8a0",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-stale-paint/maker-jaw.png",
+      "bytes": 43221,
+      "sha256": "4b634b782192d1133f86276626f45ca47725db0e170034f1e2f4b316e9d174f9",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-stale-paint/maker-leg.png",
+      "bytes": 43679,
+      "sha256": "81e2bf35510917fcdbf97eeb3ebfad62389172d240fb55106f74d784633854b5",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-stale-paint/maker-neck.png",
+      "bytes": 45421,
+      "sha256": "361cfc279e891238d5ed898765d67f36354d911f54994cbc76004c230e660c7f",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-stale-paint/maker-rear.png",
+      "bytes": 45250,
+      "sha256": "5fc7fbb7f62d7fa6e412e1af6fef5ed8dd8b604c25d255596d73485fd2d2d802",
+      "reviewUse": "rejected capture; retained for audit"
+    },
+    {
+      "path": "assets/audit/alignment-v5/browser-1e7febcc03d9/rejected-stale-paint/maker-wing.png",
+      "bytes": 43754,
+      "sha256": "426ee1573d20a0067aac84428530de45d1d7c1a9bfd4b42dcf9007f406e85ff2",
+      "reviewUse": "rejected capture; retained for audit"
+    }
+  ],
+  "boundedChecks": [
+    "served GLB SHA and bytes",
+    "all three era exploded/reassembled state values",
+    "all three current fallback images loaded",
+    "no hidden samples in recordings"
+  ],
+  "limitations": [
+    "Static poses used accelerated settling via the existing DEV step hook; recordings use the normal clock.",
+    "The broad recording missed claw, reach and retreat dispatches when controls were unavailable. The separate claw recording fills claw motion only.",
+    "Captures are not a complete all-pair collision, human acting, device, accessibility or T01-T18 assessment.",
+    "Performance is a short rolling sample on Apple M4 Max, loopback, 856x648 canvas at DPR1, not sustained or physical-mobile certification.",
+    "No new deployment, owner approval, full score or finished surfaces are established."
+  ]
+}
