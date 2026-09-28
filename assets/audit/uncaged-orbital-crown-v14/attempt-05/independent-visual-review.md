@@ -1,0 +1,3 @@
+# Independent visual review
+
+Compared the [before head](before-head.png) and [after head](after-head.png) with attempt 03 and the July head reference. Moving the optic inward improves how it sits against the face, but the orbital assembly still reads as an oversized, regular goggle rather than a recessed eye framed by brow and cheek structure. The crown plates remain broad and similarly shaped, so they read as repeated leaves instead of a tighter, graded sweep that follows the skull. The review supports a local seating improvement only; it does not establish likeness acceptance or motion clearance.

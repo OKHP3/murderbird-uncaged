@@ -14,6 +14,10 @@ const reviewModels = import.meta.env.DEV ? {
   'v10-01': '/assets/models/uncaged-whole-body-v10/attempt-01/murderbird-whole-body-v10.glb',
   'v10-02': '/assets/models/uncaged-whole-body-v10/attempt-02/murderbird-whole-body-v10.glb',
   'v12-02': '/assets/models/uncaged-cervical-envelope-v12/attempt-02/murderbird-cervical-envelope-v12.glb',
+  'v14-11': '/assets/models/uncaged-orbital-crown-v14/attempt-11/murderbird-orbital-crown-v14.glb',
+  'v14-09': '/assets/models/uncaged-orbital-crown-v14/attempt-09/murderbird-orbital-crown-v14.glb',
+  'v14-05': '/assets/models/uncaged-orbital-crown-v14/attempt-05/murderbird-orbital-crown-v14.glb',
+  'v14-03': '/assets/models/uncaged-orbital-crown-v14/attempt-03/murderbird-orbital-crown-v14.glb',
   'v13-01': '/assets/models/uncaged-constructed-head-v13/attempt-01/murderbird-constructed-head-v13.glb',
 } : {};
 const modelUrl = Object.hasOwn(reviewModels, reviewBody)

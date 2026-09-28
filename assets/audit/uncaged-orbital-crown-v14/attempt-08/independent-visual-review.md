@@ -1,0 +1,3 @@
+# Independent visual review
+
+Compared attempt 08 with V13, attempt 05, and the supplied July head reference. Moving the optic upward and inward improves its separation from the jaw and gives the brow/crown a clearer return above it; that relationship is closer to the reference than in V13 and attempt 05. The dominant remaining mismatch is still the orbital assembly’s scale and projection: the regular cylindrical housing reads as a goggle set on the cheek, while the reference optic is nested within a compact, layered brow and cheek field. This is a local visual improvement, not a likeness or motion-clearance acceptance.

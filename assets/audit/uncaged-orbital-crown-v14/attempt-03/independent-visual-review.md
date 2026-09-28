@@ -1,0 +1,3 @@
+# Independent visual review
+
+Compared the [attempt 03 head](after-head.png) and [reference-angle](after-reference-angle.png) with attempt 01, V13, and the July head reference. The reduced crown flare and rear orbital surround make the side silhouette less sprawling than attempt 01, but the optic still projects as a conspicuous cylindrical goggle with exposed horizontal supports, rather than sitting inside the reference’s compact layered brow-and-cheek assembly. The crown plates also remain broad and leaf-like instead of closely following a rounded skull. This is a specific shape improvement over attempt 01, not a likeness pass; no motion or clearance judgment is made.
