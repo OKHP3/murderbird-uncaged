@@ -1,0 +1,3560 @@
+{
+  "status": "read-only strict self-intersection and annular map complete",
+  "blenderVersion": "5.2.1 LTS",
+  "inputs": {
+    "v6Native": {
+      "path": "assets/models/uncaged-orbital-saddle-study-v6/murderbird-orbital-saddle-study-v6.blend",
+      "sha256": "cb811241d241b0f18f529979b77635caecb83284b8b4df29c7564d4d2bf55eec"
+    },
+    "v3Recipe": {
+      "path": "scripts/study-orbital-saddle-v3.py",
+      "sha256": "2243a61ba5b03c7d2e649ec39b37a63e9f07d4db80b283d891e95b59e43adf40"
+    },
+    "priorBroadPhaseAndCrossingReceipt": {
+      "path": "assets/audit/orbital-saddle-study-v10/boolean-diagnostic-v1/self-crossing-followup.json",
+      "sha256": "3233e1807bf7d6c9d8df15047b91c564564f67df0892afc64925ca5ac3c04f67"
+    },
+    "script": {
+      "path": "assets/audit/orbital-saddle-study-v10/boolean-diagnostic-v1/diagnose-annular-self-crossings.py",
+      "sha256": "09ea72fd3c5d61c8cf2cbb8c49892ec168d0a32bc0c7e80008134dec420334f3"
+    }
+  },
+  "method": "Exact evaluated loop triangles; candidates are self-BVH pairs with no shared vertex. Count only noncoplanar segment crossings that land strictly inside the opposite triangle using barycentric face coordinates. No model data changed; no file saved/exported.",
+  "results": [
+    {
+      "side": "right",
+      "mount": "Forged orbital mounting plate -1",
+      "loopTriangleCount": 1792,
+      "nonadjacentSelfBvhCandidates": 17,
+      "strictFaceInteriorCrossingPairCount": 17,
+      "crossingPairs": [
+        {
+          "triangleIndices": [
+            614,
+            658
+          ],
+          "vertexIndices": [
+            [
+              153,
+              160,
+              608
+            ],
+            [
+              612,
+              613,
+              620
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 658,
+              "toTriangle": 614,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.5322931709684717,
+              "barycentricFaceWeights": [
+                0.18985484784482326,
+                0.5463820642322834,
+                0.2637630879228934
+              ],
+              "worldPointM": [
+                -0.11484285444021225,
+                -0.43667006492614746,
+                1.843891978263855
+              ]
+            },
+            {
+              "fromTriangle": 658,
+              "toTriangle": 614,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.3693650196839892,
+              "barycentricFaceWeights": [
+                0.014449388602832514,
+                0.5049343683061874,
+                0.48061624309098006
+              ],
+              "worldPointM": [
+                -0.11689971387386322,
+                -0.4345489740371704,
+                1.8442171812057495
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            659
+          ],
+          "vertexIndices": [
+            [
+              153,
+              160,
+              608
+            ],
+            [
+              612,
+              620,
+              619
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 659,
+              "toTriangle": 614,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.6306349933975941,
+              "barycentricFaceWeights": [
+                0.014449388602832514,
+                0.5049343683061874,
+                0.48061624309098006
+              ],
+              "worldPointM": [
+                -0.11689971387386322,
+                -0.4345489740371704,
+                1.8442171812057495
+              ]
+            },
+            {
+              "fromTriangle": 614,
+              "toTriangle": 659,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.5522787804603093,
+              "barycentricFaceWeights": [
+                0.4103238833661182,
+                0.40577630557798017,
+                0.18389981105590159
+              ],
+              "worldPointM": [
+                -0.11797108501195908,
+                -0.4338480234146118,
+                1.8443245887756348
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            662
+          ],
+          "vertexIndices": [
+            [
+              153,
+              160,
+              608
+            ],
+            [
+              613,
+              614,
+              621
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 614,
+              "toTriangle": 662,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.6760298594312918,
+              "barycentricFaceWeights": [
+                0.22213806981586806,
+                0.2996977167027982,
+                0.47816421348133376
+              ],
+              "worldPointM": [
+                -0.11162794381380081,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            },
+            {
+              "fromTriangle": 662,
+              "toTriangle": 614,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.6628428253168736,
+              "barycentricFaceWeights": [
+                0.24461274361898966,
+                0.6416376262968021,
+                0.11374963008420824
+              ],
+              "worldPointM": [
+                -0.11282072216272354,
+                -0.43813738226890564,
+                1.8436670303344727
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            663
+          ],
+          "vertexIndices": [
+            [
+              153,
+              160,
+              608
+            ],
+            [
+              613,
+              621,
+              620
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 663,
+              "toTriangle": 614,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.3371571459046468,
+              "barycentricFaceWeights": [
+                0.24461274361898966,
+                0.6416376262968021,
+                0.11374963008420824
+              ],
+              "worldPointM": [
+                -0.11282072216272354,
+                -0.43813738226890564,
+                1.8436670303344727
+              ]
+            },
+            {
+              "fromTriangle": 663,
+              "toTriangle": 614,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.4677068377317339,
+              "barycentricFaceWeights": [
+                0.18985484784482326,
+                0.5463820642322834,
+                0.2637630879228934
+              ],
+              "worldPointM": [
+                -0.11484285444021225,
+                -0.43667006492614746,
+                1.843891978263855
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            686
+          ],
+          "vertexIndices": [
+            [
+              153,
+              160,
+              608
+            ],
+            [
+              619,
+              620,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 614,
+              "toTriangle": 686,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.28993429006420174,
+              "barycentricFaceWeights": [
+                0.13118457287656507,
+                0.473610413469393,
+                0.395205013654042
+              ],
+              "worldPointM": [
+                -0.11510280519723892,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            },
+            {
+              "fromTriangle": 614,
+              "toTriangle": 686,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.611004937776081,
+              "barycentricFaceWeights": [
+                0.19067853198913332,
+                0.00936794605336815,
+                0.7999535219574986
+              ],
+              "worldPointM": [
+                -0.11895561963319778,
+                -0.4332736134529114,
+                1.8444126844406128
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            615,
+            659
+          ],
+          "vertexIndices": [
+            [
+              153,
+              608,
+              601
+            ],
+            [
+              612,
+              620,
+              619
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 615,
+              "toTriangle": 659,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.4477228607299676,
+              "barycentricFaceWeights": [
+                0.41032991211524145,
+                0.40576472205444175,
+                0.18390536583031675
+              ],
+              "worldPointM": [
+                -0.11797104775905609,
+                -0.4338480234146118,
+                1.8443245887756348
+              ]
+            },
+            {
+              "fromTriangle": 659,
+              "toTriangle": 615,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.8081223037649429,
+              "barycentricFaceWeights": [
+                0.3766649954336978,
+                0.01432830369096222,
+                0.6090067008753399
+              ],
+              "worldPointM": [
+                -0.11903337389230728,
+                -0.4331530034542084,
+                1.8444311618804932
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            615,
+            686
+          ],
+          "vertexIndices": [
+            [
+              153,
+              608,
+              601
+            ],
+            [
+              619,
+              620,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 615,
+              "toTriangle": 686,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.38899507152329726,
+              "barycentricFaceWeights": [
+                0.19067853198913332,
+                0.00936794605336815,
+                0.7999535219574986
+              ],
+              "worldPointM": [
+                -0.11895561963319778,
+                -0.4332736134529114,
+                1.8444126844406128
+              ]
+            },
+            {
+              "fromTriangle": 686,
+              "toTriangle": 615,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.19187769110440422,
+              "barycentricFaceWeights": [
+                0.3766649954336978,
+                0.01432830369096222,
+                0.6090067008753399
+              ],
+              "worldPointM": [
+                -0.11903337389230728,
+                -0.4331530034542084,
+                1.8444311618804932
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            642,
+            686
+          ],
+          "vertexIndices": [
+            [
+              160,
+              167,
+              615
+            ],
+            [
+              619,
+              620,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 686,
+              "toTriangle": 642,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.9266780057171133,
+              "barycentricFaceWeights": [
+                0.4640019830133909,
+                0.1910616547861034,
+                0.3449363622005057
+              ],
+              "worldPointM": [
+                -0.11134099960327148,
+                -0.4450841546058655,
+                1.8426034450531006
+              ]
+            },
+            {
+              "fromTriangle": 642,
+              "toTriangle": 686,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.74808835689748,
+              "barycentricFaceWeights": [
+                0.10892955642614408,
+                0.6478444680962263,
+                0.24322597547762959
+              ],
+              "worldPointM": [
+                -0.11365616321563721,
+                -0.44149357080459595,
+                1.8431529998779297
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            642,
+            691
+          ],
+          "vertexIndices": [
+            [
+              160,
+              167,
+              615
+            ],
+            [
+              620,
+              628,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 691,
+              "toTriangle": 642,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.9293611809772371,
+              "barycentricFaceWeights": [
+                0.5906117028702743,
+                0.18097186098318677,
+                0.22841643614653892
+              ],
+              "worldPointM": [
+                -0.11060439050197601,
+                -0.4461219012737274,
+                1.8424445390701294
+              ]
+            },
+            {
+              "fromTriangle": 691,
+              "toTriangle": 642,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.07332199693037199,
+              "barycentricFaceWeights": [
+                0.4640019830133909,
+                0.1910616547861034,
+                0.3449363622005057
+              ],
+              "worldPointM": [
+                -0.11134099960327148,
+                -0.4450841546058655,
+                1.8426034450531006
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            642,
+            718
+          ],
+          "vertexIndices": [
+            [
+              160,
+              167,
+              615
+            ],
+            [
+              627,
+              628,
+              635
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 26,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 718,
+              "toTriangle": 642,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.07063882307571051,
+              "barycentricFaceWeights": [
+                0.5906117028702743,
+                0.18097186098318677,
+                0.22841643614653892
+              ],
+              "worldPointM": [
+                -0.11060439050197601,
+                -0.4461219012737274,
+                1.8424445390701294
+              ]
+            },
+            {
+              "fromTriangle": 642,
+              "toTriangle": 718,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.17475344811092164,
+              "barycentricFaceWeights": [
+                0.0911156387346617,
+                0.13068986290401088,
+                0.7781944983613275
+              ],
+              "worldPointM": [
+                -0.1090383529663086,
+                -0.4481562376022339,
+                1.8421331644058228
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            662
+          ],
+          "vertexIndices": [
+            [
+              160,
+              615,
+              608
+            ],
+            [
+              613,
+              614,
+              621
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 662,
+              "toTriangle": 643,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.2027547863555955,
+              "barycentricFaceWeights": [
+                0.3234855647053753,
+                0.4404918762058616,
+                0.23602255908876302
+              ],
+              "worldPointM": [
+                -0.10853932052850723,
+                -0.44213104248046875,
+                1.8430554866790771
+              ]
+            },
+            {
+              "fromTriangle": 643,
+              "toTriangle": 662,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.32397018548199547,
+              "barycentricFaceWeights": [
+                0.22213806981586806,
+                0.2996977167027982,
+                0.47816421348133376
+              ],
+              "worldPointM": [
+                -0.11162794381380081,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            667
+          ],
+          "vertexIndices": [
+            [
+              160,
+              615,
+              608
+            ],
+            [
+              614,
+              622,
+              621
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 667,
+              "toTriangle": 643,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.14071423288244378,
+              "barycentricFaceWeights": [
+                0.40194298793543703,
+                0.4038876203250573,
+                0.19416939173950565
+              ],
+              "worldPointM": [
+                -0.10760550945997238,
+                -0.44282978773117065,
+                1.8429484367370605
+              ]
+            },
+            {
+              "fromTriangle": 667,
+              "toTriangle": 643,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.7972451733573185,
+              "barycentricFaceWeights": [
+                0.3234855647053753,
+                0.4404918762058616,
+                0.23602255908876302
+              ],
+              "worldPointM": [
+                -0.10853932052850723,
+                -0.44213104248046875,
+                1.8430554866790771
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            686
+          ],
+          "vertexIndices": [
+            [
+              160,
+              615,
+              608
+            ],
+            [
+              619,
+              620,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 643,
+              "toTriangle": 686,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.2519116108757494,
+              "barycentricFaceWeights": [
+                0.10892955642614408,
+                0.6478444680962263,
+                0.24322597547762959
+              ],
+              "worldPointM": [
+                -0.11365616321563721,
+                -0.44149357080459595,
+                1.8431529998779297
+              ]
+            },
+            {
+              "fromTriangle": 643,
+              "toTriangle": 686,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.7100657773057292,
+              "barycentricFaceWeights": [
+                0.13118457287656507,
+                0.473610413469393,
+                0.395205013654042
+              ],
+              "worldPointM": [
+                -0.11510280519723892,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            671,
+            690
+          ],
+          "vertexIndices": [
+            [
+              167,
+              622,
+              615
+            ],
+            [
+              620,
+              621,
+              628
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 690,
+              "toTriangle": 671,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.591301401479795,
+              "barycentricFaceWeights": [
+                0.4403281021189675,
+                0.0750360959812811,
+                0.48463580189975136
+              ],
+              "worldPointM": [
+                -0.1019248217344284,
+                -0.4516100585460663,
+                1.8504407405853271
+              ]
+            },
+            {
+              "fromTriangle": 690,
+              "toTriangle": 671,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.25683211428747205,
+              "barycentricFaceWeights": [
+                0.2965831940310627,
+                0.10769526318612657,
+                0.5957215427828108
+              ],
+              "worldPointM": [
+                -0.10424607247114182,
+                -0.450482577085495,
+                1.8477287292480469
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            671,
+            691
+          ],
+          "vertexIndices": [
+            [
+              167,
+              622,
+              615
+            ],
+            [
+              620,
+              628,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 691,
+              "toTriangle": 671,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.7431678623764314,
+              "barycentricFaceWeights": [
+                0.2965831940310627,
+                0.10769526318612657,
+                0.5957215427828108
+              ],
+              "worldPointM": [
+                -0.10424607247114182,
+                -0.450482577085495,
+                1.8477287292480469
+              ]
+            },
+            {
+              "fromTriangle": 691,
+              "toTriangle": 671,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.5992520083721762,
+              "barycentricFaceWeights": [
+                0.1064217877959977,
+                0.14199873494599496,
+                0.7515794772580073
+              ],
+              "worldPointM": [
+                -0.10739699006080627,
+                -0.44899097084999084,
+                1.8441410064697266
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            671,
+            695
+          ],
+          "vertexIndices": [
+            [
+              167,
+              622,
+              615
+            ],
+            [
+              621,
+              629,
+              628
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 695,
+              "toTriangle": 671,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.3515436709629285,
+              "barycentricFaceWeights": [
+                0.6362071599961011,
+                0.054075293069893796,
+                0.3097175469340051
+              ],
+              "worldPointM": [
+                -0.09854979813098907,
+                -0.45314648747444153,
+                1.854136347770691
+              ]
+            },
+            {
+              "fromTriangle": 695,
+              "toTriangle": 671,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.408698598520205,
+              "barycentricFaceWeights": [
+                0.4403281021189675,
+                0.0750360959812811,
+                0.48463580189975136
+              ],
+              "worldPointM": [
+                -0.1019248217344284,
+                -0.4516100585460663,
+                1.8504407405853271
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            671,
+            718
+          ],
+          "vertexIndices": [
+            [
+              167,
+              622,
+              615
+            ],
+            [
+              627,
+              628,
+              635
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 26,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 718,
+              "toTriangle": 671,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.4007480194194645,
+              "barycentricFaceWeights": [
+                0.1064217877959977,
+                0.14199873494599496,
+                0.7515794772580073
+              ],
+              "worldPointM": [
+                -0.10739699006080627,
+                -0.44899097084999084,
+                1.8441410064697266
+              ]
+            },
+            {
+              "fromTriangle": 671,
+              "toTriangle": 718,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.8252465182040585,
+              "barycentricFaceWeights": [
+                0.0911156387346617,
+                0.13068986290401088,
+                0.7781944983613275
+              ],
+              "worldPointM": [
+                -0.1090383529663086,
+                -0.4481562376022339,
+                1.8421331644058228
+              ]
+            }
+          ]
+        }
+      ],
+      "crossingPointBoundsM": {
+        "min": [
+          -0.11903337389230728,
+          -0.45314648747444153,
+          1.8421331644058228
+        ],
+        "max": [
+          -0.09854979813098907,
+          -0.4331530034542084,
+          1.854136347770691
+        ]
+      },
+      "involvedStations": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "adjacentRadialProfileRows": [
+        {
+          "station": 20,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05571155159412942,
+              "outerRadiusAtRadial6M": 0.07860110566789964,
+              "currentRadialWidthM": 0.022889554073770225,
+              "radiusByRadialSampleM": [
+                0.05571155159412942,
+                0.05903919839372789,
+                0.06260735991969496,
+                0.06637747930266065,
+                0.07031697847632716,
+                0.07439886101986765,
+                0.07860110566789964
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05571155159412942,
+              "outerRadiusAtRadial6M": 0.07860110566789964,
+              "currentRadialWidthM": 0.022889554073770225,
+              "radiusByRadialSampleM": [
+                0.05571155159412942,
+                0.05903919839372789,
+                0.06260735991969496,
+                0.06637747930266065,
+                0.07031697847632716,
+                0.07439886101986765,
+                0.07860110566789964
+              ]
+            }
+          ]
+        },
+        {
+          "station": 21,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05556179323468332,
+              "outerRadiusAtRadial6M": 0.08448073725075754,
+              "currentRadialWidthM": 0.02891894401607422,
+              "radiusByRadialSampleM": [
+                0.05556179323468332,
+                0.05982480488848078,
+                0.0643748987865391,
+                0.06915559982351278,
+                0.07412221868469249,
+                0.07923961078187758,
+                0.08448073725075754
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05556179323468332,
+              "outerRadiusAtRadial6M": 0.08448073725075754,
+              "currentRadialWidthM": 0.02891894401607422,
+              "radiusByRadialSampleM": [
+                0.05556179323468332,
+                0.05982480488848078,
+                0.0643748987865391,
+                0.06915559982351278,
+                0.07412221868469249,
+                0.07923961078187758,
+                0.08448073725075754
+              ]
+            }
+          ]
+        },
+        {
+          "station": 22,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05539041391667051,
+              "outerRadiusAtRadial6M": 0.09077941535645649,
+              "currentRadialWidthM": 0.03538900143978598,
+              "radiusByRadialSampleM": [
+                0.05539041391667051,
+                0.06073407450015606,
+                0.066376268332901,
+                0.07224687118535955,
+                0.07829481823442637,
+                0.0844817318037164,
+                0.09077941535645649
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05539041391667051,
+              "outerRadiusAtRadial6M": 0.09077941535645649,
+              "currentRadialWidthM": 0.03538900143978598,
+              "radiusByRadialSampleM": [
+                0.05539041391667051,
+                0.06073407450015606,
+                0.066376268332901,
+                0.07224687118535955,
+                0.07829481823442637,
+                0.0844817318037164,
+                0.09077941535645649
+              ]
+            }
+          ]
+        },
+        {
+          "station": 23,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.055203824901194666,
+              "outerRadiusAtRadial6M": 0.09703938425996132,
+              "currentRadialWidthM": 0.04183555935876666,
+              "radiusByRadialSampleM": [
+                0.055203824901194666,
+                0.061693523833638866,
+                0.06845353724999217,
+                0.07541105184057603,
+                0.08251637551068797,
+                0.08973408634544486,
+                0.09703938425996132
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.055203824901194666,
+              "outerRadiusAtRadial6M": 0.09703938425996132,
+              "currentRadialWidthM": 0.04183555935876666,
+              "radiusByRadialSampleM": [
+                0.055203824901194666,
+                0.061693523833638866,
+                0.06845353724999217,
+                0.07541105184057603,
+                0.08251637551068797,
+                0.08973408634544486,
+                0.09703938425996132
+              ]
+            }
+          ]
+        },
+        {
+          "station": 24,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05500910592837355,
+              "outerRadiusAtRadial6M": 0.11486510051085237,
+              "currentRadialWidthM": 0.059855994582478825,
+              "radiusByRadialSampleM": [
+                0.05500910592837355,
+                0.06492777563730726,
+                0.07488163287573502,
+                0.0848582404539331,
+                0.09485036262146851,
+                0.10485366314133412,
+                0.11486510051085237
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05500910592837355,
+              "outerRadiusAtRadial6M": 0.11486510051085237,
+              "currentRadialWidthM": 0.059855994582478825,
+              "radiusByRadialSampleM": [
+                0.05500910592837355,
+                0.06492777563730726,
+                0.07488163287573502,
+                0.0848582404539331,
+                0.09485036262146851,
+                0.10485366314133412,
+                0.11486510051085237
+              ]
+            }
+          ]
+        },
+        {
+          "station": 25,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05481369208779579,
+              "outerRadiusAtRadial6M": 0.11497400272527597,
+              "currentRadialWidthM": 0.06016031063748018,
+              "radiusByRadialSampleM": [
+                0.05481369208779579,
+                0.06478592856452162,
+                0.07479160788801502,
+                0.08481891027281818,
+                0.09486097895419736,
+                0.1049136433997763,
+                0.11497400272527597
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05481369208779579,
+              "outerRadiusAtRadial6M": 0.11497400272527597,
+              "currentRadialWidthM": 0.06016031063748018,
+              "radiusByRadialSampleM": [
+                0.05481369208779579,
+                0.06478592856452162,
+                0.07479160788801502,
+                0.08481891027281818,
+                0.09486097895419736,
+                0.1049136433997763,
+                0.11497400272527597
+              ]
+            }
+          ]
+        },
+        {
+          "station": 26,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05462515291085533,
+              "outerRadiusAtRadial6M": 0.11511985260901839,
+              "currentRadialWidthM": 0.060494699698163054,
+              "radiusByRadialSampleM": [
+                0.05462515291085533,
+                0.06465827009873534,
+                0.07472179530199648,
+                0.08480486021363663,
+                0.09490117590453433,
+                0.10500702555323846,
+                0.11511985260901839
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05462515291085533,
+              "outerRadiusAtRadial6M": 0.11511985260901839,
+              "currentRadialWidthM": 0.060494699698163054,
+              "radiusByRadialSampleM": [
+                0.05462515291085533,
+                0.06465827009873534,
+                0.07472179530199648,
+                0.08480486021363663,
+                0.09490117590453433,
+                0.10500702555323846,
+                0.11511985260901839
+              ]
+            }
+          ]
+        },
+        {
+          "station": 27,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05445076176842469,
+              "outerRadiusAtRadial6M": 0.11505545700079765,
+              "currentRadialWidthM": 0.06060469523237296,
+              "radiusByRadialSampleM": [
+                0.05445076176842469,
+                0.06451051310707676,
+                0.07459558223610112,
+                0.08469688213397264,
+                0.09480919195304842,
+                0.10492941688090966,
+                0.11505545700079765
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05445076176842469,
+              "outerRadiusAtRadial6M": 0.11505545700079765,
+              "currentRadialWidthM": 0.06060469523237296,
+              "radiusByRadialSampleM": [
+                0.05445076176842469,
+                0.06451051310707676,
+                0.07459558223610112,
+                0.08469688213397264,
+                0.09480919195304842,
+                0.10492941688090966,
+                0.11505545700079765
+              ]
+            }
+          ]
+        }
+      ],
+      "stationMappingBasis": "scripts/study-orbital-saddle-v3.py: points[i*7+j] and points[448+i*7+j], with j=0 inner and j=6 outer; topology-index mapping is inferred from that retained 896-vertex annulus recipe.",
+      "radialWidthBasis": "Radius in world YZ about the authored V3 optic center (-0.369, 1.786), measured between retained j=0 inner loop and current j=6 outer edge; this is current V6 geometry, not independent engineering metrology."
+    },
+    {
+      "side": "left",
+      "mount": "Forged orbital mounting plate 1",
+      "loopTriangleCount": 1792,
+      "nonadjacentSelfBvhCandidates": 16,
+      "strictFaceInteriorCrossingPairCount": 16,
+      "crossingPairs": [
+        {
+          "triangleIndices": [
+            614,
+            658
+          ],
+          "vertexIndices": [
+            [
+              601,
+              608,
+              160
+            ],
+            [
+              619,
+              620,
+              613
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 658,
+              "toTriangle": 614,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.4677068377317339,
+              "barycentricFaceWeights": [
+                0.2826189285326648,
+                0.45361801476255914,
+                0.26376305670477607
+              ],
+              "worldPointM": [
+                0.11484285444021225,
+                -0.43667006492614746,
+                1.843891978263855
+              ]
+            },
+            {
+              "fromTriangle": 614,
+              "toTriangle": 658,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.4611030584712651,
+              "barycentricFaceWeights": [
+                0.34546566697039344,
+                0.2110258546726945,
+                0.443508478356912
+              ],
+              "worldPointM": [
+                0.1171426773071289,
+                -0.4347398281097412,
+                1.84418785572052
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            663
+          ],
+          "vertexIndices": [
+            [
+              601,
+              608,
+              160
+            ],
+            [
+              620,
+              614,
+              613
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 614,
+              "toTriangle": 663,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.36265606581341603,
+              "barycentricFaceWeights": [
+                0.4492678363652727,
+                0.13804704646632088,
+                0.41268511716840645
+              ],
+              "worldPointM": [
+                0.11197611689567566,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            },
+            {
+              "fromTriangle": 663,
+              "toTriangle": 614,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.5322931709684717,
+              "barycentricFaceWeights": [
+                0.2826189285326648,
+                0.45361801476255914,
+                0.26376305670477607
+              ],
+              "worldPointM": [
+                0.11484285444021225,
+                -0.43667006492614746,
+                1.843891978263855
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            686
+          ],
+          "vertexIndices": [
+            [
+              601,
+              608,
+              160
+            ],
+            [
+              626,
+              627,
+              620
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 614,
+              "toTriangle": 686,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.7163937900014579,
+              "barycentricFaceWeights": [
+                0.11734711217458595,
+                0.48551198309702087,
+                0.3971409047283932
+              ],
+              "worldPointM": [
+                0.11515975743532181,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            },
+            {
+              "fromTriangle": 686,
+              "toTriangle": 614,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.454705832970739,
+              "barycentricFaceWeights": [
+                0.210231986344621,
+                0.7032908908475302,
+                0.0864771228078488
+              ],
+              "worldPointM": [
+                0.11571331322193146,
+                -0.4384041428565979,
+                1.8436261415481567
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            614,
+            687
+          ],
+          "vertexIndices": [
+            [
+              601,
+              608,
+              160
+            ],
+            [
+              626,
+              620,
+              619
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 687,
+              "toTriangle": 614,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.545294181099275,
+              "barycentricFaceWeights": [
+                0.210231986344621,
+                0.7032908908475302,
+                0.0864771228078488
+              ],
+              "worldPointM": [
+                0.11571331322193146,
+                -0.4384041428565979,
+                1.8436261415481567
+              ]
+            },
+            {
+              "fromTriangle": 614,
+              "toTriangle": 687,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.34149842491096255,
+              "barycentricFaceWeights": [
+                0.37741365766770063,
+                0.3838789016845015,
+                0.23870744064779786
+              ],
+              "worldPointM": [
+                0.11729041486978531,
+                -0.4359097182750702,
+                1.8440085649490356
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            615,
+            658
+          ],
+          "vertexIndices": [
+            [
+              601,
+              160,
+              153
+            ],
+            [
+              619,
+              620,
+              613
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 615,
+              "toTriangle": 658,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.5388969038034205,
+              "barycentricFaceWeights": [
+                0.34546566697039344,
+                0.2110258546726945,
+                0.443508478356912
+              ],
+              "worldPointM": [
+                0.1171426773071289,
+                -0.4347398281097412,
+                1.84418785572052
+              ]
+            },
+            {
+              "fromTriangle": 658,
+              "toTriangle": 615,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.19187769110440422,
+              "barycentricFaceWeights": [
+                0.3766649774464391,
+                0.23234171898896816,
+                0.3909933035645927
+              ],
+              "worldPointM": [
+                0.11903337389230728,
+                -0.4331530034542084,
+                1.8444311618804932
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            615,
+            687
+          ],
+          "vertexIndices": [
+            [
+              601,
+              160,
+              153
+            ],
+            [
+              626,
+              620,
+              619
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 21,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 21,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 3
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 615,
+              "toTriangle": 687,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.6585015002100042,
+              "barycentricFaceWeights": [
+                0.37741365766770063,
+                0.3838789016845015,
+                0.23870744064779786
+              ],
+              "worldPointM": [
+                0.11729041486978531,
+                -0.4359097182750702,
+                1.8440085649490356
+              ]
+            },
+            {
+              "fromTriangle": 687,
+              "toTriangle": 615,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.8081223037649429,
+              "barycentricFaceWeights": [
+                0.3766649774464391,
+                0.23234171898896816,
+                0.3909933035645927
+              ],
+              "worldPointM": [
+                0.11903337389230728,
+                -0.4331530034542084,
+                1.8444311618804932
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            642,
+            662
+          ],
+          "vertexIndices": [
+            [
+              608,
+              615,
+              167
+            ],
+            [
+              620,
+              621,
+              614
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 662,
+              "toTriangle": 642,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.7972451733573185,
+              "barycentricFaceWeights": [
+                0.08746280913930876,
+                0.2360229240530277,
+                0.6765142668076635
+              ],
+              "worldPointM": [
+                0.10853932052850723,
+                -0.44213104248046875,
+                1.8430554866790771
+              ]
+            },
+            {
+              "fromTriangle": 642,
+              "toTriangle": 662,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.7372537188157593,
+              "barycentricFaceWeights": [
+                0.1418431824337694,
+                0.7492221673050425,
+                0.10893465026118809
+              ],
+              "worldPointM": [
+                0.10921114683151245,
+                -0.4415900707244873,
+                1.8431382179260254
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            642,
+            719
+          ],
+          "vertexIndices": [
+            [
+              608,
+              615,
+              167
+            ],
+            [
+              634,
+              628,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 26,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 642,
+              "toTriangle": 719,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.8271381790956156,
+              "barycentricFaceWeights": [
+                0.22124780496358568,
+                0.6348851594626438,
+                0.14386703557377056
+              ],
+              "worldPointM": [
+                0.10905537754297256,
+                -0.4481562376022339,
+                1.8421331644058228
+              ]
+            },
+            {
+              "fromTriangle": 642,
+              "toTriangle": 719,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.17922789876640516,
+              "barycentricFaceWeights": [
+                0.10307480960418916,
+                0.8659470281074446,
+                0.03097816228836625
+              ],
+              "worldPointM": [
+                0.11027079820632935,
+                -0.44655999541282654,
+                1.8423775434494019
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            662
+          ],
+          "vertexIndices": [
+            [
+              608,
+              167,
+              160
+            ],
+            [
+              620,
+              621,
+              614
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 643,
+              "toTriangle": 662,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.2627462811842407,
+              "barycentricFaceWeights": [
+                0.1418431824337694,
+                0.7492221673050425,
+                0.10893465026118809
+              ],
+              "worldPointM": [
+                0.10921114683151245,
+                -0.4415900707244873,
+                1.8431382179260254
+              ]
+            },
+            {
+              "fromTriangle": 662,
+              "toTriangle": 643,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.3626298044192101,
+              "barycentricFaceWeights": [
+                0.12130035416420423,
+                0.2036841437648353,
+                0.6750155020709605
+              ],
+              "worldPointM": [
+                0.11077570915222168,
+                -0.4403303265571594,
+                1.8433310985565186
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            663
+          ],
+          "vertexIndices": [
+            [
+              608,
+              167,
+              160
+            ],
+            [
+              620,
+              614,
+              613
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 663,
+              "toTriangle": 643,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.6373701939877987,
+              "barycentricFaceWeights": [
+                0.12130035416420423,
+                0.2036841437648353,
+                0.6750155020709605
+              ],
+              "worldPointM": [
+                0.11077570915222168,
+                -0.4403303265571594,
+                1.8433310985565186
+              ]
+            },
+            {
+              "fromTriangle": 643,
+              "toTriangle": 663,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.6373439790998713,
+              "barycentricFaceWeights": [
+                0.4492678363652727,
+                0.13804704646632088,
+                0.41268511716840645
+              ],
+              "worldPointM": [
+                0.11197611689567566,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            686
+          ],
+          "vertexIndices": [
+            [
+              608,
+              167,
+              160
+            ],
+            [
+              626,
+              627,
+              620
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 3
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 686,
+              "toTriangle": 643,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.07332199693037199,
+              "barycentricFaceWeights": [
+                0.6550635712604733,
+                0.153874811815654,
+                0.1910616169238727
+              ],
+              "worldPointM": [
+                0.11134099960327148,
+                -0.4450841546058655,
+                1.8426034450531006
+              ]
+            },
+            {
+              "fromTriangle": 643,
+              "toTriangle": 686,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.2836062549118294,
+              "barycentricFaceWeights": [
+                0.11734711217458595,
+                0.48551198309702087,
+                0.3971409047283932
+              ],
+              "worldPointM": [
+                0.11515975743532181,
+                -0.43924999237060547,
+                1.8434964418411255
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            690
+          ],
+          "vertexIndices": [
+            [
+              608,
+              167,
+              160
+            ],
+            [
+              627,
+              628,
+              621
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 690,
+              "toTriangle": 643,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.07063882307571051,
+              "barycentricFaceWeights": [
+                0.7715835087474634,
+                0.04744468486421906,
+                0.18097180638831756
+              ],
+              "worldPointM": [
+                0.11060439050197601,
+                -0.4461219012737274,
+                1.8424445390701294
+              ]
+            },
+            {
+              "fromTriangle": 690,
+              "toTriangle": 643,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.9658434528355764,
+              "barycentricFaceWeights": [
+                0.7116827491109802,
+                0.1027204157933865,
+                0.18559683509563332
+              ],
+              "worldPointM": [
+                0.11098812520503998,
+                -0.4455884099006653,
+                1.8425261974334717
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            691
+          ],
+          "vertexIndices": [
+            [
+              608,
+              167,
+              160
+            ],
+            [
+              627,
+              621,
+              620
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 691,
+              "toTriangle": 643,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.034156820891156854,
+              "barycentricFaceWeights": [
+                0.7116827503809302,
+                0.10271958462962374,
+                0.18559766498944605
+              ],
+              "worldPointM": [
+                0.11098811775445938,
+                -0.4455884099006653,
+                1.8425261974334717
+              ]
+            },
+            {
+              "fromTriangle": 691,
+              "toTriangle": 643,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.9266780057171133,
+              "barycentricFaceWeights": [
+                0.6550635712604733,
+                0.153874811815654,
+                0.1910616169238727
+              ],
+              "worldPointM": [
+                0.11134099960327148,
+                -0.4450841546058655,
+                1.8426034450531006
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            643,
+            719
+          ],
+          "vertexIndices": [
+            [
+              608,
+              167,
+              160
+            ],
+            [
+              634,
+              628,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 22,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 22,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 26,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 643,
+              "toTriangle": 719,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.8207721240284505,
+              "barycentricFaceWeights": [
+                0.10307480960418916,
+                0.8659470281074446,
+                0.03097816228836625
+              ],
+              "worldPointM": [
+                0.11027079820632935,
+                -0.44655999541282654,
+                1.8423775434494019
+              ]
+            },
+            {
+              "fromTriangle": 719,
+              "toTriangle": 643,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.9293611809772371,
+              "barycentricFaceWeights": [
+                0.7715835087474634,
+                0.04744468486421906,
+                0.18097180638831756
+              ],
+              "worldPointM": [
+                0.11060439050197601,
+                -0.4461219012737274,
+                1.8424445390701294
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            671,
+            690
+          ],
+          "vertexIndices": [
+            [
+              615,
+              174,
+              167
+            ],
+            [
+              627,
+              628,
+              621
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 24,
+                "radialSample": 5
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 690,
+              "toTriangle": 671,
+              "fromEdgeIndex": 0,
+              "segmentFraction": 0.4007480194194645,
+              "barycentricFaceWeights": [
+                0.10642178902004044,
+                0.6451576095766756,
+                0.24842060140328404
+              ],
+              "worldPointM": [
+                0.10739699006080627,
+                -0.44899097084999084,
+                1.8441410064697266
+              ]
+            },
+            {
+              "fromTriangle": 690,
+              "toTriangle": 671,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.408698598520205,
+              "barycentricFaceWeights": [
+                0.44032812435774926,
+                0.044307355582535464,
+                0.5153645200597152
+              ],
+              "worldPointM": [
+                0.1019248217344284,
+                -0.4516100585460663,
+                1.8504407405853271
+              ]
+            }
+          ]
+        },
+        {
+          "triangleIndices": [
+            671,
+            719
+          ],
+          "vertexIndices": [
+            [
+              615,
+              174,
+              167
+            ],
+            [
+              634,
+              628,
+              627
+            ]
+          ],
+          "stationMapping": [
+            [
+              {
+                "skin": 1,
+                "station": 23,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 24,
+                "radialSample": 6
+              },
+              {
+                "skin": 0,
+                "station": 23,
+                "radialSample": 6
+              }
+            ],
+            [
+              {
+                "skin": 1,
+                "station": 26,
+                "radialSample": 4
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 5
+              },
+              {
+                "skin": 1,
+                "station": 25,
+                "radialSample": 4
+              }
+            ]
+          ],
+          "properInteriorCrossings": [
+            {
+              "fromTriangle": 719,
+              "toTriangle": 671,
+              "fromEdgeIndex": 1,
+              "segmentFraction": 0.5992520083721762,
+              "barycentricFaceWeights": [
+                0.10642178902004044,
+                0.6451576095766756,
+                0.24842060140328404
+              ],
+              "worldPointM": [
+                0.10739699006080627,
+                -0.44899097084999084,
+                1.8441410064697266
+              ]
+            },
+            {
+              "fromTriangle": 671,
+              "toTriangle": 719,
+              "fromEdgeIndex": 2,
+              "segmentFraction": 0.17286183213272438,
+              "barycentricFaceWeights": [
+                0.22124780496358568,
+                0.6348851594626438,
+                0.14386703557377056
+              ],
+              "worldPointM": [
+                0.10905537754297256,
+                -0.4481562376022339,
+                1.8421331644058228
+              ]
+            }
+          ]
+        }
+      ],
+      "crossingPointBoundsM": {
+        "min": [
+          0.1019248217344284,
+          -0.4516100585460663,
+          1.8421331644058228
+        ],
+        "max": [
+          0.11903337389230728,
+          -0.4331530034542084,
+          1.8504407405853271
+        ]
+      },
+      "involvedStations": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "adjacentRadialProfileRows": [
+        {
+          "station": 20,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05571155159412942,
+              "outerRadiusAtRadial6M": 0.07860110566789964,
+              "currentRadialWidthM": 0.022889554073770225,
+              "radiusByRadialSampleM": [
+                0.05571155159412942,
+                0.05903919839372789,
+                0.06260735991969496,
+                0.06637747930266065,
+                0.07031697847632716,
+                0.07439886101986765,
+                0.07860110566789964
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05571155159412942,
+              "outerRadiusAtRadial6M": 0.07860110566789964,
+              "currentRadialWidthM": 0.022889554073770225,
+              "radiusByRadialSampleM": [
+                0.05571155159412942,
+                0.05903919839372789,
+                0.06260735991969496,
+                0.06637747930266065,
+                0.07031697847632716,
+                0.07439886101986765,
+                0.07860110566789964
+              ]
+            }
+          ]
+        },
+        {
+          "station": 21,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05556179323468332,
+              "outerRadiusAtRadial6M": 0.08448073725075754,
+              "currentRadialWidthM": 0.02891894401607422,
+              "radiusByRadialSampleM": [
+                0.05556179323468332,
+                0.05982480488848078,
+                0.0643748987865391,
+                0.06915559982351278,
+                0.07412221868469249,
+                0.07923961078187758,
+                0.08448073725075754
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05556179323468332,
+              "outerRadiusAtRadial6M": 0.08448073725075754,
+              "currentRadialWidthM": 0.02891894401607422,
+              "radiusByRadialSampleM": [
+                0.05556179323468332,
+                0.05982480488848078,
+                0.0643748987865391,
+                0.06915559982351278,
+                0.07412221868469249,
+                0.07923961078187758,
+                0.08448073725075754
+              ]
+            }
+          ]
+        },
+        {
+          "station": 22,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05539041391667051,
+              "outerRadiusAtRadial6M": 0.09077941535645649,
+              "currentRadialWidthM": 0.03538900143978598,
+              "radiusByRadialSampleM": [
+                0.05539041391667051,
+                0.06073407450015606,
+                0.066376268332901,
+                0.07224687118535955,
+                0.07829481823442637,
+                0.0844817318037164,
+                0.09077941535645649
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05539041391667051,
+              "outerRadiusAtRadial6M": 0.09077941535645649,
+              "currentRadialWidthM": 0.03538900143978598,
+              "radiusByRadialSampleM": [
+                0.05539041391667051,
+                0.06073407450015606,
+                0.066376268332901,
+                0.07224687118535955,
+                0.07829481823442637,
+                0.0844817318037164,
+                0.09077941535645649
+              ]
+            }
+          ]
+        },
+        {
+          "station": 23,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.055203824901194666,
+              "outerRadiusAtRadial6M": 0.09703938425996132,
+              "currentRadialWidthM": 0.04183555935876666,
+              "radiusByRadialSampleM": [
+                0.055203824901194666,
+                0.061693523833638866,
+                0.06845353724999217,
+                0.07541105184057603,
+                0.08251637551068797,
+                0.08973408634544486,
+                0.09703938425996132
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.055203824901194666,
+              "outerRadiusAtRadial6M": 0.09703938425996132,
+              "currentRadialWidthM": 0.04183555935876666,
+              "radiusByRadialSampleM": [
+                0.055203824901194666,
+                0.061693523833638866,
+                0.06845353724999217,
+                0.07541105184057603,
+                0.08251637551068797,
+                0.08973408634544486,
+                0.09703938425996132
+              ]
+            }
+          ]
+        },
+        {
+          "station": 24,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05500910592837355,
+              "outerRadiusAtRadial6M": 0.11486510051085237,
+              "currentRadialWidthM": 0.059855994582478825,
+              "radiusByRadialSampleM": [
+                0.05500910592837355,
+                0.06492777563730726,
+                0.07488163287573502,
+                0.0848582404539331,
+                0.09485036262146851,
+                0.10485366314133412,
+                0.11486510051085237
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05500910592837355,
+              "outerRadiusAtRadial6M": 0.11486510051085237,
+              "currentRadialWidthM": 0.059855994582478825,
+              "radiusByRadialSampleM": [
+                0.05500910592837355,
+                0.06492777563730726,
+                0.07488163287573502,
+                0.0848582404539331,
+                0.09485036262146851,
+                0.10485366314133412,
+                0.11486510051085237
+              ]
+            }
+          ]
+        },
+        {
+          "station": 25,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05481369208779579,
+              "outerRadiusAtRadial6M": 0.11497400272527597,
+              "currentRadialWidthM": 0.06016031063748018,
+              "radiusByRadialSampleM": [
+                0.05481369208779579,
+                0.06478592856452162,
+                0.07479160788801502,
+                0.08481891027281818,
+                0.09486097895419736,
+                0.1049136433997763,
+                0.11497400272527597
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05481369208779579,
+              "outerRadiusAtRadial6M": 0.11497400272527597,
+              "currentRadialWidthM": 0.06016031063748018,
+              "radiusByRadialSampleM": [
+                0.05481369208779579,
+                0.06478592856452162,
+                0.07479160788801502,
+                0.08481891027281818,
+                0.09486097895419736,
+                0.1049136433997763,
+                0.11497400272527597
+              ]
+            }
+          ]
+        },
+        {
+          "station": 26,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05462515291085533,
+              "outerRadiusAtRadial6M": 0.11511985260901839,
+              "currentRadialWidthM": 0.060494699698163054,
+              "radiusByRadialSampleM": [
+                0.05462515291085533,
+                0.06465827009873534,
+                0.07472179530199648,
+                0.08480486021363663,
+                0.09490117590453433,
+                0.10500702555323846,
+                0.11511985260901839
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05462515291085533,
+              "outerRadiusAtRadial6M": 0.11511985260901839,
+              "currentRadialWidthM": 0.060494699698163054,
+              "radiusByRadialSampleM": [
+                0.05462515291085533,
+                0.06465827009873534,
+                0.07472179530199648,
+                0.08480486021363663,
+                0.09490117590453433,
+                0.10500702555323846,
+                0.11511985260901839
+              ]
+            }
+          ]
+        },
+        {
+          "station": 27,
+          "skins": [
+            {
+              "skin": 0,
+              "innerRadiusAtRadial0M": 0.05445076176842469,
+              "outerRadiusAtRadial6M": 0.11505545700079765,
+              "currentRadialWidthM": 0.06060469523237296,
+              "radiusByRadialSampleM": [
+                0.05445076176842469,
+                0.06451051310707676,
+                0.07459558223610112,
+                0.08469688213397264,
+                0.09480919195304842,
+                0.10492941688090966,
+                0.11505545700079765
+              ]
+            },
+            {
+              "skin": 1,
+              "innerRadiusAtRadial0M": 0.05445076176842469,
+              "outerRadiusAtRadial6M": 0.11505545700079765,
+              "currentRadialWidthM": 0.06060469523237296,
+              "radiusByRadialSampleM": [
+                0.05445076176842469,
+                0.06451051310707676,
+                0.07459558223610112,
+                0.08469688213397264,
+                0.09480919195304842,
+                0.10492941688090966,
+                0.11505545700079765
+              ]
+            }
+          ]
+        }
+      ],
+      "stationMappingBasis": "scripts/study-orbital-saddle-v3.py: points[i*7+j] and points[448+i*7+j], with j=0 inner and j=6 outer; topology-index mapping is inferred from that retained 896-vertex annulus recipe.",
+      "radialWidthBasis": "Radius in world YZ about the authored V3 optic center (-0.369, 1.786), measured between retained j=0 inner loop and current j=6 outer edge; this is current V6 geometry, not independent engineering metrology."
+    }
+  ],
+  "limits": [
+    "Strict crossing count excludes tangencies, coplanar overlap, and intersections that occur only on a triangle boundary.",
+    "V3 radial mapping is a topology recipe inference checked against current 896-vertex mesh count; no V3 source was regenerated.",
+    "Radial widths describe current geometry, not a recommended design width or owner acceptance."
+  ]
+}

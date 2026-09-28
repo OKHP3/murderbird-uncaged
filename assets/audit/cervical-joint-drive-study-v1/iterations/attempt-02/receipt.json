@@ -1,0 +1,96 @@
+{
+  "status": "held native proposal; active Mechanic brace clearance failure",
+  "source": {
+    "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-14/murderbird-cervical-construction-study-v1.blend",
+    "sha256": "ef9e28ddbce9d62aabc8181a058640ea1e8b7a339b673df37b913d96699f9440",
+    "bytes": 1946382
+  },
+  "native": {
+    "path": "assets/models/uncaged-cervical-joint-drive-study-v1/iterations/attempt-02/murderbird-cervical-joint-drive-study-v1.blend",
+    "sha256": "dff9cf74e0b10819f86efed1bdf5c292ae38619d962d18afeba2b2cca291b9d1",
+    "bytes": 1952016
+  },
+  "addedMeshes": [
+    "Advanced cervical keyed output collar +X",
+    "Advanced cervical rotary reaction housing +X",
+    "Joint-drive fixed bearing liner +1",
+    "Joint-drive fixed bearing liner -1",
+    "Maker cable attachment eye \u2212X",
+    "Maker external cervical sector \u2212X",
+    "Mechanic passive cervical lock brace +X"
+  ],
+  "unchangedObjectCount": 1223,
+  "pivotCount": 52,
+  "preservation": "Existing scene objects, parents, rest matrices, curves, materials, and pivot identities were checked before save; no original mesh was altered.",
+  "loadPath": "The paired inherited upper-owned axles are separated trunnions, not one continuous shaft. Each is supported by its corresponding neck-owned clevis. New races are independent liners. Existing curved upper rails carry trunnion load into cervical-upper.",
+  "eraParts": {
+    "Joint-drive fixed bearing liner -1 / Joint-drive fixed bearing liner +1": "all eras; neck fixed",
+    "Maker external cervical sector \u2212X / Maker cable attachment eye \u2212X": "Maker only; upper moving; external cable route unbuilt",
+    "Mechanic passive cervical lock brace +X": "Mechanic only; neck fixed passive brace/stop, no actuation",
+    "Advanced cervical rotary reaction housing +X": "Advanced only; neck-fixed reaction housing",
+    "Advanced cervical keyed output collar +X": "Advanced only; upper-moving keyed output interface"
+  },
+  "limits": [
+    "No application/runtime integration or GLB export.",
+    "No physical load or material-strength claim.",
+    "Clearance checks and neutral renders are still pending.",
+    "The prior sampled point envelope is not evidence of clearance for these complete solids."
+  ],
+  "attempt": "02; indexed closed-ring sector correction; first two drafts preserved separately",
+  "evidence": {
+    "generator": {
+      "path": "scripts/study-cervical-joint-drive-v1.py",
+      "bytes": 9752,
+      "sha256": "b01978b74f11d974b7f28020d75c37f4f5019ca77ef98f3e7fddd40d60faf56a"
+    },
+    "clearanceRunner": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/verify-native-joint-drive.py",
+      "bytes": 7948,
+      "sha256": "6a111272a86e6c9103efa2ca1780aa5d343ebacfbc46eb14c3470a0e1ac0b467"
+    },
+    "clearanceResult": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/corrected-inspection-sweep/clearance.json",
+      "bytes": 209335,
+      "sha256": "521b5ce4c3057848dd967d5a60c47ece46c14264db5dffd20ae2f0cef76688dd"
+    },
+    "interfaceRunner": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/check-new-part-interfaces.py",
+      "bytes": 3386,
+      "sha256": "76f671a31f286c1aa5c5e2252fde1f170a72eb2263649bc0485dca80aeda95de"
+    },
+    "interfaceResult": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/new-part-interfaces.json",
+      "bytes": 1189,
+      "sha256": "b1bd53403b51e9a1c6c38baa72dd7b1b9df7ad67f1ab06679d46d86495137ddb"
+    },
+    "frameProof": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/inspection-frame-proof-complete.json",
+      "bytes": 7699,
+      "sha256": "8980e5b431a8733f0626807976d50fc65a1a0259ed8b7a0f0660ba59b159fab9"
+    },
+    "applicationInspectionAnchorProof": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/inspection-contract-v1/anchor-proof.json",
+      "bytes": 1746,
+      "sha256": "8685399f19fdb28aedfc711d9203d42ba5ba5407c2552c84590c6b5128f1ba65"
+    },
+    "renderRunner": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/render-native-joint-drive.py",
+      "bytes": 2470,
+      "sha256": "8ecc3f386b42d3ffe17ee869e6dc05646f7281dcb78b60a45b5cd5abf06329ce"
+    },
+    "renderManifest": {
+      "path": "assets/audit/cervical-joint-drive-study-v1/iterations/attempt-02/render-manifest.json",
+      "bytes": 2300,
+      "sha256": "8a17f434ec6da9a8f796faf187c0b6c4884cf2bf7e5d2a5455afb8aaf84dbcb9"
+    }
+  },
+  "testSummary": {
+    "sampleSet": "21 deterministic Node execution samples plus 41 app-derived inspection matrix samples; no claim of browser capture",
+    "inspectionContractSha256": "3ae1b5a0f81adcb70a567e66c906c4631eebf75758171fc7aeddc7bdf8033781",
+    "strictSurfaceCrossings": "Mechanic brace crosses flank lamina 1 2/3, upper load rail 1, axle 1 and clevis 1 in the Mechanic pose; fixed +X liner also crosses Mechanic brace. Candidate held.",
+    "intendedContacts": "Maker sector/axle and eye/sector; Advanced housing/clevis and output-collar/axle are intended contacts with raw overlap/crossing counts retained.",
+    "containment": "Not run as a whole-scene classification. Candidate already fails strict same-era Mechanic crossings; containment, continuous sweep and bearing load are not established.",
+    "topology": "All seven new meshes have zero boundary and non-manifold edges in recorded topology profile.",
+    "firstDirectSweep": "The original direct-axis 41-sample result is erroneous and preserved at clearance.json only; the corrected matrix-packet run is the evidence at corrected-inspection-sweep/clearance.json."
+  }
+}

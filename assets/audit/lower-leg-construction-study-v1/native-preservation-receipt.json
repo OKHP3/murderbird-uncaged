@@ -1,0 +1,117 @@
+{
+  "status": "saved single authored native proposal; held for integrated fit and visual review",
+  "source": {
+    "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+    "sha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478"
+  },
+  "native": {
+    "path": "assets/models/uncaged-lower-leg-construction-study-v1/murderbird-lower-leg-construction-study-v1.blend",
+    "sha256": "415a3aa7976c271c28187eb4ee1440dbcd858f4dfb5b84cb6ed69e381def982f",
+    "bytes": 1952184
+  },
+  "builder": {
+    "path": "scripts/study-lower-leg-construction-v1.py",
+    "sha256": "f4ee25225cd5ca66d3aa8a1b0c6a21b6165dffd3b3b0dd1f7f5fc223cb2e4b55"
+  },
+  "blender": "5.2.1 LTS",
+  "preservation": {
+    "sourceObjectCount": 1212,
+    "candidateObjectCount": 1222,
+    "added": [
+      "left lower-leg distal shaped bearing saddle",
+      "left lower-leg inboard boxed load spar",
+      "left lower-leg outboard boxed load spar",
+      "left lower-leg partial anterior inspection guard",
+      "left lower-leg proximal shaped bearing saddle",
+      "right lower-leg distal shaped bearing saddle",
+      "right lower-leg inboard boxed load spar",
+      "right lower-leg outboard boxed load spar",
+      "right lower-leg partial anterior inspection guard",
+      "right lower-leg proximal shaped bearing saddle"
+    ],
+    "modifiedOrRemovedSourceObjects": [],
+    "pivotNames": [
+      "left-foot",
+      "left-shin",
+      "left-thigh",
+      "right-foot",
+      "right-shin",
+      "right-thigh"
+    ],
+    "meshCountSource": 699,
+    "newMeshCount": 10,
+    "materialCount": 10,
+    "curveCount": 462
+  },
+  "design": {
+    "existingGeometryAllowlist": [],
+    "addedParts": [
+      "left lower-leg outboard boxed load spar",
+      "left lower-leg inboard boxed load spar",
+      "left lower-leg proximal shaped bearing saddle",
+      "left lower-leg distal shaped bearing saddle",
+      "left lower-leg partial anterior inspection guard",
+      "right lower-leg outboard boxed load spar",
+      "right lower-leg inboard boxed load spar",
+      "right lower-leg proximal shaped bearing saddle",
+      "right lower-leg distal shaped bearing saddle",
+      "right lower-leg partial anterior inspection guard"
+    ],
+    "ownership": {
+      "left lower-leg outboard boxed load spar": "left-shin",
+      "left lower-leg inboard boxed load spar": "left-shin",
+      "left lower-leg proximal shaped bearing saddle": "left-shin",
+      "left lower-leg distal shaped bearing saddle": "left-shin",
+      "left lower-leg partial anterior inspection guard": "left-shin",
+      "right lower-leg outboard boxed load spar": "right-shin",
+      "right lower-leg inboard boxed load spar": "right-shin",
+      "right lower-leg proximal shaped bearing saddle": "right-shin",
+      "right lower-leg distal shaped bearing saddle": "right-shin",
+      "right lower-leg partial anterior inspection guard": "right-shin"
+    },
+    "eraVisibility": {
+      "left lower-leg outboard boxed load spar": "maker,mechanic,builder",
+      "left lower-leg inboard boxed load spar": "maker,mechanic,builder",
+      "left lower-leg proximal shaped bearing saddle": "maker,mechanic,builder",
+      "left lower-leg distal shaped bearing saddle": "maker,mechanic,builder",
+      "left lower-leg partial anterior inspection guard": "maker,mechanic,builder",
+      "right lower-leg outboard boxed load spar": "maker,mechanic,builder",
+      "right lower-leg inboard boxed load spar": "maker,mechanic,builder",
+      "right lower-leg proximal shaped bearing saddle": "maker,mechanic,builder",
+      "right lower-leg distal shaped bearing saddle": "maker,mechanic,builder",
+      "right lower-leg partial anterior inspection guard": "maker,mechanic,builder"
+    },
+    "contactAndTalonGeometry": "all source objects preserved byte-equivalent by mesh/transform/object signature"
+  },
+  "limits": [
+    "Authored neutral native geometry; not a finished or accepted model.",
+    "References support paired load members and bearing brackets; hidden construction is reconstructed.",
+    "Passive additions only; exact procedural drive clearances remain unverified."
+  ],
+  "decision": {
+    "holdReason": "The front guards add some paired-member presence, but look like stand-off handles and strictly cross inherited shin plates/fixings. A fitted integrated V2 should replace those conflicting inherited parts under an explicit allowlist.",
+    "restGuardStrictPairs": {
+      "left": 6,
+      "right": 4,
+      "differentOwner": 0
+    },
+    "intendedFixedContacts": [
+      "each side guard to its new paired shin-owned load spars"
+    ],
+    "notValidated": [
+      "full regional clearance for every addition",
+      "full containment",
+      "continuous motion sweep",
+      "runtime mechanism clearance",
+      "six requested dynamic poses",
+      "engineering loads",
+      "human likeness acceptance"
+    ]
+  },
+  "buildGeneratorRetention": {
+    "buildTimeSha256": "f4ee25225cd5ca66d3aa8a1b0c6a21b6165dffd3b3b0dd1f7f5fc223cb2e4b55",
+    "buildTimeSourceBytesRetained": false,
+    "currentScriptSha256": "ba9eefebfa904bfab649bfab9bd72ae2eca4baddee079d0d29a21057540fb4f2",
+    "currentScriptContains": "diagnostic-only modes added after native save; current source is not claimed as frozen build-time generator"
+  }
+}

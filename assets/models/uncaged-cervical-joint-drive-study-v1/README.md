@@ -1,0 +1,5 @@
+# Cervical joint-drive native study
+
+This folder holds isolated native-only reconstruction proposals based on attempt 14. The current review candidate is [attempt 02](iterations/attempt-02/murderbird-cervical-joint-drive-study-v1.blend), SHA-256 `dff9cf74e0b10819f86efed1bdf5c292ae38619d962d18afeba2b2cca291b9d1`. Its complete evidence and held status are in [the attempt 02 report](../../audit/cervical-joint-drive-study-v1/iterations/attempt-02/report.md). Earlier attachment trials are preserved under `iterations/initial-attachment-check/` and `iterations/sector-gap-candidate/` in the model/audit trees.
+
+Attempt 02 adds seven rigid meshes around the existing paired upper-owned trunnions and neck-owned clevises. The Maker sector and cable eye are upper-frame owned; the cable route is not built. The Mechanic brace is a neck-fixed passive stop and does not actuate the joint. The Advanced housing is neck-fixed and the keyed collar moves with the upper frame. This remains a held proposal: the brace crosses existing same-side guards and joint hardware. It is not integrated into the application or exported as GLB.

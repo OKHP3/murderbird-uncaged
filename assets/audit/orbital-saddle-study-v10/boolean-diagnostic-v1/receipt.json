@@ -1,0 +1,480 @@
+{
+  "status": "diagnostic complete; no candidate saved or exported",
+  "blenderVersion": "5.2.1 LTS",
+  "inputs": {
+    "v6Native": {
+      "path": "assets/models/uncaged-orbital-saddle-study-v6/murderbird-orbital-saddle-study-v6.blend",
+      "sha256": "cb811241d241b0f18f529979b77635caecb83284b8b4df29c7564d4d2bf55eec"
+    },
+    "v10Script": {
+      "path": "scripts/study-orbital-saddle-v10.py",
+      "sha256": "c6f046ac47bfebb2d79abb9c53f8e47404bab15ff6e797e3cdd912d3c33de001"
+    },
+    "v10HeldReceipt": {
+      "path": "assets/audit/orbital-saddle-study-v10/attempt-03/receipt.json",
+      "sha256": "c7672596ed9bf2a5f9d9f096bfece132c2eaca7505081ccdc954ab03ec404116"
+    }
+  },
+  "method": "Inspect original evaluated brow and mount topology/normals/volume and mesh bounds; compare direct EXACT Boolean on disposable copies with one controlled exact Boolean using triangulated, recalc-normal disposable copies. No render, native save, export, runtime change, or parameter grid.",
+  "results": [
+    {
+      "side": "right",
+      "sourceObjects": {
+        "brow": "Forged orbital brow -1",
+        "mount": "Forged orbital mounting plate -1",
+        "opticHousing": "Seated passive optic housing -1"
+      },
+      "brow": {
+        "vertices": 738,
+        "polygons": 736,
+        "loopTriangles": 1472,
+        "edges": 1472,
+        "boundaryEdges": 0,
+        "nonTwoFaceEdges": 0,
+        "nonContiguousManifoldEdges": 0,
+        "looseVertices": 0,
+        "looseEdges": 0,
+        "connectedFaceComponents": [
+          736
+        ],
+        "eulerCharacteristic": 2,
+        "signedVolumeM3": 4.006100422297235e-05,
+        "absoluteSignedVolumeM3": 4.006100422297235e-05,
+        "worldBoundsM": {
+          "min": [
+            -0.15412500500679016,
+            -0.45100000500679016,
+            1.846000075340271
+          ],
+          "max": [
+            -0.08473600447177887,
+            -0.257999986410141,
+            1.9169199466705322
+          ]
+        },
+        "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+        "selfIntersectionClues": {
+          "nonAdjacentTriangleBVHCandidatePairs": 0,
+          "method": "Broad-phase only; not a self-intersection proof or count."
+        }
+      },
+      "mountBefore": {
+        "vertices": 896,
+        "polygons": 896,
+        "loopTriangles": 1792,
+        "edges": 1792,
+        "boundaryEdges": 0,
+        "nonTwoFaceEdges": 0,
+        "nonContiguousManifoldEdges": 0,
+        "looseVertices": 0,
+        "looseEdges": 0,
+        "connectedFaceComponents": [
+          896
+        ],
+        "eulerCharacteristic": 0,
+        "signedVolumeM3": 0.00015590373846900303,
+        "absoluteSignedVolumeM3": 0.00015590373846900303,
+        "worldBoundsM": {
+          "min": [
+            -0.17579205334186554,
+            -0.4791874885559082,
+            1.7114686965942383
+          ],
+          "max": [
+            -0.08895708620548248,
+            -0.2514374852180481,
+            1.871005654335022
+          ]
+        },
+        "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+        "selfIntersectionClues": {
+          "nonAdjacentTriangleBVHCandidatePairs": 17,
+          "method": "Broad-phase only; not a self-intersection proof or count."
+        }
+      },
+      "opticHousingVerticesToMountBefore": {
+        "sampleCount": 128,
+        "missingCount": 0,
+        "minM": 0.0019977716729044914,
+        "medianM": 0.002926172688603401,
+        "p90M": 0.003964257426559925,
+        "maxM": 0.0041180141270160675
+      },
+      "directExactBooleanOnTemporaryCopies": {
+        "operation": {
+          "operatorResult": [
+            "FINISHED"
+          ],
+          "exception": null
+        },
+        "result": {
+          "vertices": 0,
+          "polygons": 0,
+          "loopTriangles": 0,
+          "edges": 0,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [],
+          "eulerCharacteristic": 0,
+          "signedVolumeM3": 0.0,
+          "absoluteSignedVolumeM3": 0.0,
+          "worldBoundsM": null,
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 0,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "opticHousingVerticesToMount": {
+          "sampleCount": 128,
+          "missingCount": 128,
+          "minM": null,
+          "medianM": null,
+          "p90M": null,
+          "maxM": null
+        }
+      },
+      "triangulatedAndNormalRecalculatedOperandsExactBoolean": {
+        "targetBefore": {
+          "vertices": 896,
+          "polygons": 1792,
+          "loopTriangles": 1792,
+          "edges": 2688,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [
+            1792
+          ],
+          "eulerCharacteristic": 0,
+          "signedVolumeM3": 0.00015554228072763455,
+          "absoluteSignedVolumeM3": 0.00015554228072763455,
+          "worldBoundsM": {
+            "min": [
+              -0.17579205334186554,
+              -0.4791874885559082,
+              1.7114686965942383
+            ],
+            "max": [
+              -0.08895708620548248,
+              -0.2514374852180481,
+              1.871005654335022
+            ]
+          },
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 17,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "cutterBefore": {
+          "vertices": 738,
+          "polygons": 1472,
+          "loopTriangles": 1472,
+          "edges": 2208,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [
+            1472
+          ],
+          "eulerCharacteristic": 2,
+          "signedVolumeM3": 3.9943061130050654e-05,
+          "absoluteSignedVolumeM3": 3.9943061130050654e-05,
+          "worldBoundsM": {
+            "min": [
+              -0.15412500500679016,
+              -0.45100000500679016,
+              1.846000075340271
+            ],
+            "max": [
+              -0.08473600447177887,
+              -0.257999986410141,
+              1.9169199466705322
+            ]
+          },
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 0,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "operation": {
+          "operatorResult": [
+            "FINISHED"
+          ],
+          "exception": null
+        },
+        "result": {
+          "vertices": 0,
+          "polygons": 0,
+          "loopTriangles": 0,
+          "edges": 0,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [],
+          "eulerCharacteristic": 0,
+          "signedVolumeM3": 0.0,
+          "absoluteSignedVolumeM3": 0.0,
+          "worldBoundsM": null,
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 0,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "opticHousingVerticesToMount": {
+          "sampleCount": 128,
+          "missingCount": 128,
+          "minM": null,
+          "medianM": null,
+          "p90M": null,
+          "maxM": null
+        },
+        "procedure": "Separate temporary copies; triangulate all polygons with BMesh BEAUTY, recalculate face normals, then Blender EXACT Boolean Difference. No source object or file saved."
+      }
+    },
+    {
+      "side": "left",
+      "sourceObjects": {
+        "brow": "Forged orbital brow 1",
+        "mount": "Forged orbital mounting plate 1",
+        "opticHousing": "Seated passive optic housing 1"
+      },
+      "brow": {
+        "vertices": 738,
+        "polygons": 736,
+        "loopTriangles": 1472,
+        "edges": 1472,
+        "boundaryEdges": 0,
+        "nonTwoFaceEdges": 0,
+        "nonContiguousManifoldEdges": 0,
+        "looseVertices": 0,
+        "looseEdges": 0,
+        "connectedFaceComponents": [
+          736
+        ],
+        "eulerCharacteristic": 2,
+        "signedVolumeM3": 4.006100422297231e-05,
+        "absoluteSignedVolumeM3": 4.006100422297231e-05,
+        "worldBoundsM": {
+          "min": [
+            0.08473600447177887,
+            -0.45100000500679016,
+            1.846000075340271
+          ],
+          "max": [
+            0.15412500500679016,
+            -0.257999986410141,
+            1.9169199466705322
+          ]
+        },
+        "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+        "selfIntersectionClues": {
+          "nonAdjacentTriangleBVHCandidatePairs": 0,
+          "method": "Broad-phase only; not a self-intersection proof or count."
+        }
+      },
+      "mountBefore": {
+        "vertices": 896,
+        "polygons": 896,
+        "loopTriangles": 1792,
+        "edges": 1792,
+        "boundaryEdges": 0,
+        "nonTwoFaceEdges": 0,
+        "nonContiguousManifoldEdges": 0,
+        "looseVertices": 0,
+        "looseEdges": 0,
+        "connectedFaceComponents": [
+          896
+        ],
+        "eulerCharacteristic": 0,
+        "signedVolumeM3": 0.00015512031593326907,
+        "absoluteSignedVolumeM3": 0.00015512031593326907,
+        "worldBoundsM": {
+          "min": [
+            0.08895708620548248,
+            -0.4791874885559082,
+            1.7114686965942383
+          ],
+          "max": [
+            0.17579205334186554,
+            -0.2514374852180481,
+            1.871005654335022
+          ]
+        },
+        "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+        "selfIntersectionClues": {
+          "nonAdjacentTriangleBVHCandidatePairs": 16,
+          "method": "Broad-phase only; not a self-intersection proof or count."
+        }
+      },
+      "opticHousingVerticesToMountBefore": {
+        "sampleCount": 128,
+        "missingCount": 0,
+        "minM": 0.0019977418705821037,
+        "medianM": 0.0029262511525303125,
+        "p90M": 0.003964375238865614,
+        "maxM": 0.0041180141270160675
+      },
+      "directExactBooleanOnTemporaryCopies": {
+        "operation": {
+          "operatorResult": [
+            "FINISHED"
+          ],
+          "exception": null
+        },
+        "result": {
+          "vertices": 0,
+          "polygons": 0,
+          "loopTriangles": 0,
+          "edges": 0,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [],
+          "eulerCharacteristic": 0,
+          "signedVolumeM3": 0.0,
+          "absoluteSignedVolumeM3": 0.0,
+          "worldBoundsM": null,
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 0,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "opticHousingVerticesToMount": {
+          "sampleCount": 128,
+          "missingCount": 128,
+          "minM": null,
+          "medianM": null,
+          "p90M": null,
+          "maxM": null
+        }
+      },
+      "triangulatedAndNormalRecalculatedOperandsExactBoolean": {
+        "targetBefore": {
+          "vertices": 896,
+          "polygons": 1792,
+          "loopTriangles": 1792,
+          "edges": 2688,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [
+            1792
+          ],
+          "eulerCharacteristic": 0,
+          "signedVolumeM3": 0.00015554135856632424,
+          "absoluteSignedVolumeM3": 0.00015554135856632424,
+          "worldBoundsM": {
+            "min": [
+              0.08895708620548248,
+              -0.4791874885559082,
+              1.7114686965942383
+            ],
+            "max": [
+              0.17579205334186554,
+              -0.2514374852180481,
+              1.871005654335022
+            ]
+          },
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 16,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "cutterBefore": {
+          "vertices": 738,
+          "polygons": 1472,
+          "loopTriangles": 1472,
+          "edges": 2208,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [
+            1472
+          ],
+          "eulerCharacteristic": 2,
+          "signedVolumeM3": 3.9989468438269355e-05,
+          "absoluteSignedVolumeM3": 3.9989468438269355e-05,
+          "worldBoundsM": {
+            "min": [
+              0.08473600447177887,
+              -0.45100000500679016,
+              1.846000075340271
+            ],
+            "max": [
+              0.15412500500679016,
+              -0.257999986410141,
+              1.9169199466705322
+            ]
+          },
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 0,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "operation": {
+          "operatorResult": [
+            "FINISHED"
+          ],
+          "exception": null
+        },
+        "result": {
+          "vertices": 0,
+          "polygons": 0,
+          "loopTriangles": 0,
+          "edges": 0,
+          "boundaryEdges": 0,
+          "nonTwoFaceEdges": 0,
+          "nonContiguousManifoldEdges": 0,
+          "looseVertices": 0,
+          "looseEdges": 0,
+          "connectedFaceComponents": [],
+          "eulerCharacteristic": 0,
+          "signedVolumeM3": 0.0,
+          "absoluteSignedVolumeM3": 0.0,
+          "worldBoundsM": null,
+          "limits": "Signed triangle volume is meaningful only for a closed consistently oriented shell; edge metrics are exact topology checks.",
+          "selfIntersectionClues": {
+            "nonAdjacentTriangleBVHCandidatePairs": 0,
+            "method": "Broad-phase only; not a self-intersection proof or count."
+          }
+        },
+        "opticHousingVerticesToMount": {
+          "sampleCount": 128,
+          "missingCount": 128,
+          "minM": null,
+          "medianM": null,
+          "p90M": null,
+          "maxM": null
+        },
+        "procedure": "Separate temporary copies; triangulate all polygons with BMesh BEAUTY, recalculate face normals, then Blender EXACT Boolean Difference. No source object or file saved."
+      }
+    }
+  ],
+  "limits": [
+    "Self-BVH values are broad-phase candidates only, not self-intersection counts.",
+    "Nonempty/watertight output plus housing-distance retention is a plausibility screen, not full optical fit or artistic acceptance.",
+    "Triangulation and normal recalculation are diagnostic-only transformations."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "status": "authored neutral construction proposal; not selected, not finished, visual/human acceptance pending",
+  "sourceNative": {
+    "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+    "sha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478"
+  },
+  "candidateNative": {
+    "path": "assets/models/uncaged-lower-leg-construction-study-v1/murderbird-lower-leg-construction-study-v1.blend",
+    "sha256": "415a3aa7976c271c28187eb4ee1440dbcd858f4dfb5b84cb6ed69e381def982f"
+  },
+  "ownership": {
+    "changedExistingGeometryAllowlist": [],
+    "allAdditionsParent": "side-specific existing shin pivot",
+    "allEraEligibility": "maker,mechanic,builder",
+    "function": "passive load-frame and partial guard; no powered actuation or sensing"
+  },
+  "regions": [
+    {
+      "side": "left",
+      "owner": "left-shin",
+      "parts": [
+        "left lower-leg outboard boxed load spar",
+        "left lower-leg inboard boxed load spar",
+        "left lower-leg proximal shaped bearing saddle",
+        "left lower-leg distal shaped bearing saddle",
+        "left lower-leg partial anterior inspection guard"
+      ]
+    },
+    {
+      "side": "right",
+      "owner": "right-shin",
+      "parts": [
+        "right lower-leg outboard boxed load spar",
+        "right lower-leg inboard boxed load spar",
+        "right lower-leg proximal shaped bearing saddle",
+        "right lower-leg distal shaped bearing saddle",
+        "right lower-leg partial anterior inspection guard"
+      ]
+    }
+  ],
+  "referenceEvidence": [
+    {
+      "path": "assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+      "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+      "use": "paired shank load members and large bearing-bracket character; image is visual reference, not dimensioned source"
+    },
+    {
+      "path": "assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png",
+      "sha256": "93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9",
+      "use": "Maker-era visual context"
+    },
+    {
+      "path": "assets/img/library/murderbird-unified-mechanic-candidate-2026-09-06.png",
+      "sha256": "0bd7c79510be9eeef024f8861a7576b777a7f5de5710523e8d2ab039d03c65f9",
+      "use": "Mechanic-era visual context; service stand is external to the bird"
+    }
+  ],
+  "constructionComponents": [
+    {
+      "type": "paired closed-section load spars",
+      "count": 4,
+      "owner": "each side shin",
+      "eraBehavior": "passive, same static members in all eras"
+    },
+    {
+      "type": "proximal and distal cross-saddles with short returns",
+      "count": 4,
+      "owner": "each side shin",
+      "eraBehavior": "passive fixed fittings"
+    },
+    {
+      "type": "partial anterior guard frame with open inspection window and diagonal returns to spars",
+      "count": 2,
+      "owner": "each side shin",
+      "eraBehavior": "passive guard; tied to proposed spars, not an inherited source guard"
+    }
+  ],
+  "dynamicMechanismSource": {
+    "path": "src/scene/era-mechanisms.js",
+    "sha256": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+    "finding": "Builder and Mechanic procedural hip-to-knee mechanism/drive surfaces terminate at knee; exact moving surfaces are not included in the native study. Lower-shank dynamic clearance remains unverified."
+  },
+  "poseCaptureEvidence": [
+    {
+      "path": "assets/audit/neutral-runtime-clearance-poses-v1/pose-snapshot.json",
+      "sha256": "874396ede48a63d37d743a1a85ae885a10e614a4461f46c50f3a62744a9e2813",
+      "status": "V7 packet; V8 raw-rest pivot matrices exactly preserved, but not an actual V8 runtime capture and contains no exact step/crouch/landing/claw transform rows"
+    },
+    {
+      "path": "assets/audit/alignment-v8/browser-c8c30cc46059/motion-envelope.json",
+      "sha256": "b0e8dd6e867390c4633a52a61112d3e9d71375002978c2c40a3e79211e242859",
+      "status": "V8 browser telemetry; metric/event data, not per-frame pivot matrices; not used to claim posed native geometry"
+    },
+    {
+      "path": "assets/audit/alignment-v8/browser-c8c30cc46059/motion-envelope.mp4",
+      "sha256": "19a79f75f82e4568d5239f08bcfd92eecf0bebe4419c8b9c1493509533379a30",
+      "status": "V8 runtime visual capture; candidate additions are absent because no GLB export/runtime edit was allowed"
+    }
+  ],
+  "clearanceStatus": {
+    "restStrictDifferentOwnerGuardPairs": 0,
+    "restStrictSameOwnerGuardPairs": {
+      "left": 6,
+      "right": 4
+    },
+    "intendedFitPairs": [
+      "each new guard to its own paired spars"
+    ],
+    "unintendedSameOwnerIntersections": [
+      "left guard with left proximal and distal inherited shin guard plates; left guard with two Limb sheath fixing meshes; right guard with two Limb sheath fixing meshes"
+    ],
+    "containment": "not tested",
+    "continuousSweep": "not tested",
+    "restStrictSameOwnerPairsDetail": {
+      "left": [
+        "left lower-leg partial anterior inspection guard \u2194 left lower-leg inboard boxed load spar (intended fixed assembly fit)",
+        "left lower-leg partial anterior inspection guard \u2194 left lower-leg outboard boxed load spar (intended fixed assembly fit)",
+        "left lower-leg partial anterior inspection guard \u2194 left shaped shin guard proximal (unintended overlap)",
+        "left lower-leg partial anterior inspection guard \u2194 left shaped shin guard distal-overlap (unintended overlap)",
+        "left lower-leg partial anterior inspection guard \u2194 Limb sheath fixing.010 (unintended overlap)",
+        "left lower-leg partial anterior inspection guard \u2194 Limb sheath fixing.011 (unintended overlap)"
+      ],
+      "right": [
+        "right lower-leg partial anterior inspection guard \u2194 right lower-leg inboard boxed load spar (intended fixed assembly fit)",
+        "right lower-leg partial anterior inspection guard \u2194 right lower-leg outboard boxed load spar (intended fixed assembly fit)",
+        "right lower-leg partial anterior inspection guard \u2194 Limb sheath fixing.022 (unintended overlap)",
+        "right lower-leg partial anterior inspection guard \u2194 Limb sheath fixing.023 (unintended overlap)"
+      ]
+    },
+    "restDifferentOwner": {
+      "guardStrictPairs": 0,
+      "limits": "guard-only scope; no full added-geometry regional clearance or pose sweep"
+    }
+  },
+  "limits": [
+    "Screen is a bounded native geometry proposal and fixed-rest inspection, not a validated engineering structure.",
+    "No browser app, exported runtime asset, or dynamic drive clearance was tested.",
+    "Foot/talon likeness remains outside scope and open."
+  ],
+  "diagnosticIntegrity": {
+    "validStrictReceipt": "guard-strict-crossings.json",
+    "strictReceiptSha256": "d155d9e9b5cdda8b250416e78227e358e57f035b49a0a619105ee0c9a0c1294f",
+    "executedDiagnosticScript": "guard-strict-check-executed.py",
+    "executedDiagnosticScriptSha256": "ba9eefebfa904bfab649bfab9bd72ae2eca4baddee079d0d29a21057540fb4f2",
+    "coordinateConvention": "surface() evaluated triangle vertices already transformed to native scene/world XYZ; identity rest matrix for this fixed rest-state test",
+    "invalidRetainedReceipt": "guard-attachment-check.json",
+    "invalidReason": "FromObject returned local-frame BVHs but the diagnostic mixed separate local trees with world-coordinate guard samples."
+  }
+}
