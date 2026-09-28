@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-09-28T03:44:39.037958+00:00",
+  "status": "passed-within-declared-scope",
+  "baseCommit": "3e6d340e616e79708d2a62ec9255fd997d14ea4f",
+  "workingTree": "Local fallback fix plus new QA artifacts; not a published build",
+  "url": "http://127.0.0.1:5184/",
+  "upstream": "http://127.0.0.1:5183/",
+  "browser": "Codex in-app browser controlled via CUA; viewport 1280x720; device/GPU not independently measured",
+  "checks": [
+    {
+      "name": "first-two-model-requests-fail-then-third-retry-restores-3d",
+      "status": "PASS",
+      "observed": "Two labeled illustrated states with Retry 3D; third request displays actual 3D canvas/model, restores camera/power controls and hides Retry."
+    },
+    {
+      "name": "missing-maker-preview-through-inspection-and-separation",
+      "status": "PASS",
+      "observed": "Intentional Maker PNG503 hides failed image and keeps the unavailable explanation visible after Open for inspection and separation75%."
+    },
+    {
+      "name": "successful-era-preview-clears-old-failure",
+      "status": "PASS",
+      "observed": "Switch to Mechanic reassembles to0%, renders a loaded nonhidden image, and restores Mechanic fixed-view caption."
+    },
+    {
+      "name": "supporting-content-after-failure",
+      "status": "PASS",
+      "observed": "Story & media folio link loads folio.html with story, images, historical model/media, and links back to current exhibit."
+    },
+    {
+      "name": "context-loss-and-unavailable-webgl",
+      "status": "NOT RUN in this CUA session"
+    },
+    {
+      "name": "audio-failure-retry",
+      "status": "NOT RUN in this CUA session"
+    }
+  ],
+  "fixture": {
+    "kind": "controlled-local-failure-fixture",
+    "upstream": "http://127.0.0.1:5183/",
+    "modelRequests": 4,
+    "events": [
+      {
+        "at": "2026-09-28T03:36:48.906Z",
+        "path": "/assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+        "status": 503,
+        "reason": "First two model requests fail; later retries pass"
+      },
+      {
+        "at": "2026-09-28T03:36:54.313Z",
+        "path": "/assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+        "status": 503,
+        "reason": "First two model requests fail; later retries pass"
+      },
+      {
+        "at": "2026-09-28T03:37:57.907Z",
+        "path": "/assets/models/uncaged-alignment-v3/maker-preview.png",
+        "status": 503,
+        "reason": "Maker preview intentionally unavailable"
+      }
+    ]
+  },
+  "identities": [
+    {
+      "path": "src/scene/fallback.js",
+      "sha256": "6b6d6893242759c4bb8597fb2fd8152cc9dcaff6aec151c69635f1a46ac4ea7f",
+      "bytes": 4847
+    },
+    {
+      "path": "tests/recovery-lifecycle.test.mjs",
+      "sha256": "4d4285cc704d02d6a99191587caa4fd08f59a286c36990257f55d995ed43bb5c",
+      "bytes": 3469
+    },
+    {
+      "path": "scripts/serve-recovery-fixture.mjs",
+      "sha256": "979a027f485ac006c176e1cd7e9535d23eb99730dfe5320d9ce4f02497ea9955",
+      "bytes": 2775
+    },
+    {
+      "path": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+      "sha256": "c4dc308f77399410368b82443a1b21b9113cfedb258aa055906b4f13c92dda21",
+      "bytes": 3370292
+    },
+    {
+      "path": "assets/audit/regression-v4/browser-model-recovered.png",
+      "sha256": "2ce4d6c1850b6d9d1a9eb2b65400b7f4aec893fb8052cffdc11e08d5a504040a",
+      "bytes": 72355
+    },
+    {
+      "path": "assets/audit/regression-v4/browser-model-recovered-full.png",
+      "sha256": "dfb0762b9012d18656d813c218a33ba611ff52a96949278b2d0b91909d350daa",
+      "bytes": 79305
+    },
+    {
+      "path": "assets/audit/regression-v4/browser-failed-image-inspection.png",
+      "sha256": "c344085cc4d7468b880492c933ad959b8faf1e7c9deb92e2e76c2f94ffb4f6d8",
+      "bytes": 64976
+    }
+  ],
+  "scopeLimits": [
+    "Controlled local503 responses, not a production outage.",
+    "Model/source references remain unchanged.",
+    "Screenshots demonstrate bounded UI states, not full T14, GPU performance, likeness or owner acceptance.",
+    "Live geometry and final exterior under correction in other isolated worktrees."
+  ]
+}

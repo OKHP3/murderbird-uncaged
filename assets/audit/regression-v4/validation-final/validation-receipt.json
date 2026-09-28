@@ -1,0 +1,406 @@
+{
+  "generatedAt": "2026-09-28T04:28:16.593932+00:00",
+  "scope": "Final local QA validation for the current QA checkout; this does not imply remote CI, deployment, or owner acceptance.",
+  "repository": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged",
+  "gitHead": "4c95de4573205d2f34d905ba34c57c9a41f49c72",
+  "runtime": {
+    "python": "3.14.7",
+    "nodeVersion": "v26.10.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "npmCi": {
+    "status": "NOT_RECAPTURED",
+    "note": "npm ci was reported as previously completed, but its command output is not retained in this receipt; it was not repeated."
+  },
+  "identities": {
+    "currentRuntimeGlb": {
+      "path": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+      "bytes": 3370292,
+      "sha256": "c4dc308f77399410368b82443a1b21b9113cfedb258aa055906b4f13c92dda21"
+    },
+    "historicalPublicReviewGalleryGlb": {
+      "path": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb",
+      "bytes": 16956956,
+      "sha256": "3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5",
+      "manifestSha256": "3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5",
+      "role": "Pinned historical public review gallery model; independent of current runtime GLB."
+    }
+  },
+  "inputHashes": {
+    "assets/models/uncaged-alignment-v3/alignment-inventory.json": {
+      "bytes": 340852,
+      "sha256": "16be9303543464a0835b89bd1622e297755e70ab14514785943fddf5ad706de2"
+    },
+    "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb": {
+      "bytes": 3370292,
+      "sha256": "c4dc308f77399410368b82443a1b21b9113cfedb258aa055906b4f13c92dda21"
+    },
+    "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb": {
+      "bytes": 16956956,
+      "sha256": "3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5"
+    },
+    "assets/review/exterior-v1-publication.json": {
+      "bytes": 22283,
+      "sha256": "e283278eacebebc6c1adff56f6467f7fd780537d43f86dcd62dadfed70744008"
+    },
+    "package-lock.json": {
+      "bytes": 25338,
+      "sha256": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+    },
+    "package.json": {
+      "bytes": 677,
+      "sha256": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc"
+    },
+    "provenance/iron-verdict-v3-release.json": {
+      "bytes": 4036,
+      "sha256": "29d4d09ef3258fc49333cc141ca09cc192f99f4c8bbf89d6b861be6f8867757f"
+    },
+    "provenance/story-media-publication-2026-09-27.json": {
+      "bytes": 2767,
+      "sha256": "2a639439a9ef4acf9d072c0e6f138254aa14e7f44979d207f7ccdd4a77c33546"
+    },
+    "scripts/prepare-review-release.py": {
+      "bytes": 14910,
+      "sha256": "3570a700d3332aba92bb348f8d9dcba51c1bd9374f4c43d1054338e4bf0901fd"
+    },
+    "scripts/publication-boundary.mjs": {
+      "bytes": 634,
+      "sha256": "e09a6bf0a39767e613bf044a0684db49ace14d8d2866bb0ce49ef4f2f65cb10c"
+    },
+    "scripts/verify-publication.mjs": {
+      "bytes": 5252,
+      "sha256": "da186cf6d6cd871f3a16d0d63c69edeb41d7fb4679bda89ae8d2dbcfcabf27b5"
+    },
+    "scripts/verify-theme-release.mjs": {
+      "bytes": 3441,
+      "sha256": "3ff6d7ddce9dbb18b231302b3b0e77117c062849f5bc99b8852ff0e7368adb69"
+    },
+    "scripts/write-release-manifest.mjs": {
+      "bytes": 1281,
+      "sha256": "85647dc0252507360d5846d9b8df2ed0e485c91f772a43431b7cf758b1a217fa"
+    },
+    "src/audio/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/audio/soundscape.js": {
+      "bytes": 3773,
+      "sha256": "b3469f40d0c77200d7a20c3e37d3987f0fbd5d76e7b5001a458fc24a8f8248ec"
+    },
+    "src/audio/theme-player.css": {
+      "bytes": 2047,
+      "sha256": "4782842b3404f96978b48ba3ac30ccf86e414d0b4cdfb3049bca84544498e235"
+    },
+    "src/audio/theme-player.js": {
+      "bytes": 7364,
+      "sha256": "ebec5e30ba3852f2b2f97cf1c353493cdcafa95d1f21dfbcf3a3f94de7295165"
+    },
+    "src/fallback.css": {
+      "bytes": 798,
+      "sha256": "0ddfa07e3392f9ccc6043ce6c15f7a651acb3d4ef6ac05ea64cce5943f385fb5"
+    },
+    "src/folio-content.js": {
+      "bytes": 5406,
+      "sha256": "f7d9c45d852211ea2c48d4ee59af4f5373f96b1514fbecce4b5c7a9e9f1e24f6"
+    },
+    "src/folio-fallback.css": {
+      "bytes": 477,
+      "sha256": "e0cafa51cc5f378d821dff540ce0938066f285d4920d3fcd5fdb92ef039a15bd"
+    },
+    "src/folio-main.js": {
+      "bytes": 23509,
+      "sha256": "7959878a989d13e166910a949f75d7fe0ddfa805455ff63b65d271e59bd5f0dd"
+    },
+    "src/folio-style.css": {
+      "bytes": 9827,
+      "sha256": "48764fba4e1dbed7e665c410cead16fb0ba31db315e37d17b16600007a92a52b"
+    },
+    "src/folio.css": {
+      "bytes": 5854,
+      "sha256": "96bc8e7041ca34f2a221d3005f5e39600c2886e82fbbcf8153671d1c63b57bfe"
+    },
+    "src/main.js": {
+      "bytes": 28052,
+      "sha256": "25a1ff65446389f657c74a60d812f3663af3ab2e1e9d5cc29b707afaa97f5757"
+    },
+    "src/media.css": {
+      "bytes": 4234,
+      "sha256": "aedb020f2b995e55b0cbcda67605903b55391cc355cc841de6ffd493a75b3872"
+    },
+    "src/media.js": {
+      "bytes": 2790,
+      "sha256": "0155b578d6544085e69b483269288e3ee15f9e8f078637a7b0906f64ac21bdc9"
+    },
+    "src/review-navigation.css": {
+      "bytes": 656,
+      "sha256": "e483eda6b1afb5c11111c28d61a93f4475e836d305785bd2185cb89ed6258d98"
+    },
+    "src/scene/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/scene/encounter-state.js": {
+      "bytes": 4964,
+      "sha256": "1817e3b339f4d1dec8974b0fa3be7c1c9aaceac08ccb744ab76eeed4aa097822"
+    },
+    "src/scene/era-controller.js": {
+      "bytes": 18169,
+      "sha256": "3f2b429fa74d8d8927bb25eaf25176ca58ee8538b3794d5f57e1ef6e85d12e2d"
+    },
+    "src/scene/era-mechanisms.js": {
+      "bytes": 25850,
+      "sha256": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44"
+    },
+    "src/scene/era-motion.js": {
+      "bytes": 26621,
+      "sha256": "39575587da8938df0ab9f2258fb44c734759e91a568d1bcc40dc92ddfef9d0de"
+    },
+    "src/scene/exhibit.js": {
+      "bytes": 24430,
+      "sha256": "824a7ec32c90797bc40f2c4810732f7b420ac6ff5bd9caace62c59a5f3c89d5d"
+    },
+    "src/scene/fallback.js": {
+      "bytes": 4847,
+      "sha256": "6b6d6893242759c4bb8597fb2fd8152cc9dcaff6aec151c69635f1a46ac4ea7f"
+    },
+    "src/scene/folio-fallback.js": {
+      "bytes": 2040,
+      "sha256": "b85f477e009ce0b2ca6b186f8dc74d205e958f20bada2851afaef78a8a7c371b"
+    },
+    "src/scene/inspection-pose.js": {
+      "bytes": 1184,
+      "sha256": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71"
+    },
+    "src/scene/marker-layout.js": {
+      "bytes": 2561,
+      "sha256": "2c46368fed37fa22089af493e0509bc7e19243fe5eb8f73ef859cff25e8715f1"
+    },
+    "src/scene/presence-exhibit.js": {
+      "bytes": 24781,
+      "sha256": "051608ffeb27fb6ca015aff37329f017c00bba8e2ffad0ac28df3281deb11396"
+    },
+    "src/scene/presence-motion.js": {
+      "bytes": 13120,
+      "sha256": "f900421738c4817883464d2bb1b105d5d4d797751e95e7a4a5a11e0d42408934"
+    },
+    "src/scene/presence-state.js": {
+      "bytes": 25385,
+      "sha256": "f1f9b261f6010475153a93eed7097bfb950968dc7aaf22d7d112b2d027067fa4"
+    },
+    "src/scene/rigid-leg-kinematics.js": {
+      "bytes": 2814,
+      "sha256": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd"
+    },
+    "src/style.css": {
+      "bytes": 9824,
+      "sha256": "95644aeb98cf751269498640030e8b45de169a6f6043137cd6135f4697e6e31a"
+    },
+    "src/ui/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/vocal-score.js": {
+      "bytes": 4328,
+      "sha256": "fe8f65b8187698de335bf836158eeb3b1a86ec6ae6bbb6248e42178efccbf837"
+    },
+    "tests/acting-trace.test.mjs": {
+      "bytes": 6988,
+      "sha256": "be08d86b52240d503a522afdf0052ed6e39fc020d3f45506e279dd9ca5b27bb3"
+    },
+    "tests/contact-approach.test.mjs": {
+      "bytes": 1255,
+      "sha256": "cec270b2b16575a5621d46e63cc5022c3cb93bd8db062c588fbecfcdc05d9800"
+    },
+    "tests/encounter-state.test.mjs": {
+      "bytes": 7224,
+      "sha256": "561454502b1f17a5c0923b85e314ec2094705246bef4956f9f31a079b1064bef"
+    },
+    "tests/era-controller.test.mjs": {
+      "bytes": 19918,
+      "sha256": "d2f4994f575c2ef510110759ab974b71f7bfe0f971a75f1e66cfe5acec065f58"
+    },
+    "tests/fixtures/publication-unexpected-output.json": {
+      "bytes": 110,
+      "sha256": "ac64d0503a2398f32f5f03c5f9bafe94c90a18bef69edda15b695845f84cf440"
+    },
+    "tests/marker-layout.test.mjs": {
+      "bytes": 1715,
+      "sha256": "e2c9c5274da15c38d09fcb802815b181f5f6e2566fd17e299cba20e8a247a890"
+    },
+    "tests/presence-state.test.mjs": {
+      "bytes": 10103,
+      "sha256": "f09d46b6a954922c6edcc637920a202eb0683a8d531d0cac04897d617f333ed2"
+    },
+    "tests/publication-boundary.test.mjs": {
+      "bytes": 779,
+      "sha256": "d9b3db5b10378086b2e26ade13d39e9e19892ca2751278e2552177f59af3cef9"
+    },
+    "tests/recovery-lifecycle.test.mjs": {
+      "bytes": 3469,
+      "sha256": "4d4285cc704d02d6a99191587caa4fd08f59a286c36990257f55d995ed43bb5c"
+    },
+    "tests/rigid-leg-kinematics.test.mjs": {
+      "bytes": 2021,
+      "sha256": "e8bbb9fed4dee2f611615041e8e97e8ec408155511205db25832a0b5a1c413df"
+    },
+    "scripts/analyze-acting-trace.mjs": {
+      "bytes": 7731,
+      "sha256": "f650a46e81528e5b57033824ca6cdf4399f76a8fd289af932cdcd51fc618aff5"
+    }
+  },
+  "dirtyScopeBeforeRun": {
+    "porcelainLines": [
+      "?? assets/audit/regression-v4-final/interruption-validation.json",
+      "?? assets/audit/regression-v4-inspection-run1/inspection-pose-validation.json",
+      "?? assets/audit/regression-v4-inspection-run2/inspection-pose-validation.json",
+      "?? assets/audit/regression-v4-run2/interruption-validation.json",
+      "?? assets/audit/regression-v4/baseline-acting-envelope-reviewed.json",
+      "?? assets/audit/regression-v4/baseline-acting-envelope.json",
+      "?? assets/audit/regression-v4/browser-audio-failure.png",
+      "?? assets/audit/regression-v4/browser-audio-recovered.png",
+      "?? assets/audit/regression-v4/browser-context-loss.png",
+      "?? assets/audit/regression-v4/browser-context-recovered-full.png",
+      "?? assets/audit/regression-v4/browser-context-recovered.png",
+      "?? assets/audit/regression-v4/browser-evidence-binding.json",
+      "?? assets/audit/regression-v4/browser-failed-image-inspection.png",
+      "?? assets/audit/regression-v4/browser-fault-observations.json",
+      "?? assets/audit/regression-v4/browser-inspection-helper-reassembled.png",
+      "?? assets/audit/regression-v4/browser-inspection-helper-separated.png",
+      "?? assets/audit/regression-v4/browser-model-recovered-full.png",
+      "?? assets/audit/regression-v4/browser-model-recovered.png",
+      "?? assets/audit/regression-v4/browser-webgl-unavailable.png",
+      "?? assets/audit/regression-v4/evidence-index.json",
+      "?? assets/audit/regression-v4/geometry-review-038aa7eeb563.json",
+      "?? assets/audit/regression-v4/geometry-review-f937647d5bb0.json",
+      "?? assets/audit/regression-v4/inspection-pose-final-v2/inspection-pose-validation.json",
+      "?? assets/audit/regression-v4/inspection-pose-final/inspection-pose-validation.json",
+      "?? assets/audit/regression-v4/interruption-validation.json",
+      "?? assets/audit/regression-v4/recovery-browser-receipt.json",
+      "?? assets/audit/regression-v4/reviewed-models/038aa7eeb563/alignment-feet.png",
+      "?? assets/audit/regression-v4/reviewed-models/038aa7eeb563/alignment-head.png",
+      "?? assets/audit/regression-v4/reviewed-models/038aa7eeb563/alignment-three-quarter.png",
+      "?? assets/audit/regression-v4/reviewed-models/f937647d5bb0/alignment-head.png",
+      "?? assets/audit/regression-v4/reviewed-models/f937647d5bb0/alignment-three-quarter.png",
+      "?? assets/audit/regression-v4/reviewed/interruption-validation.json",
+      "?? docs/regression-v4-review.md",
+      "?? scripts/analyze-acting-trace.mjs",
+      "?? scripts/serve-recovery-fixture.mjs",
+      "?? scripts/verify-acting-envelope-v4.mjs",
+      "?? scripts/verify-interruption-v4.mjs",
+      "?? scripts/verify-recovery-v4.mjs",
+      "?? tests/acting-trace.test.mjs"
+    ],
+    "count": 39
+  },
+  "commands": [
+    {
+      "command": "node --test tests/*.test.mjs",
+      "exitCode": 0,
+      "status": "PASS",
+      "stdout": {
+        "path": "assets/audit/regression-v4/validation-final/node-tests.stdout.txt",
+        "bytes": 5269,
+        "sha256": "6fdfdc8cf1e9f020470cfc9c7fadf0a97b85a0de711aa29b6b576920ce63e4b2"
+      },
+      "stderr": {
+        "path": "assets/audit/regression-v4/validation-final/node-tests.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "status": "PASS",
+      "stdout": {
+        "path": "assets/audit/regression-v4/validation-final/vite-build.stdout.txt",
+        "bytes": 3644,
+        "sha256": "c25f6e9fac2efb5529590e8e56903660ea88d0647253a90c1a6d2bac48298160"
+      },
+      "stderr": {
+        "path": "assets/audit/regression-v4/validation-final/vite-build.stderr.txt",
+        "bytes": 360,
+        "sha256": "351b524197fb492920789369e7f1a271420c757633fbb553b280a181ac4c31a4"
+      }
+    },
+    {
+      "command": "node scripts/verify-publication.mjs",
+      "exitCode": 0,
+      "status": "PASS",
+      "stdout": {
+        "path": "assets/audit/regression-v4/validation-final/publication-inventory.stdout.txt",
+        "bytes": 673,
+        "sha256": "933b302db864a0333dbe13ef4a860ceea634ccbc19eb1b0648273c498d88e598"
+      },
+      "stderr": {
+        "path": "assets/audit/regression-v4/validation-final/publication-inventory.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "node scripts/verify-theme-release.mjs",
+      "exitCode": 0,
+      "status": "PASS",
+      "stdout": {
+        "path": "assets/audit/regression-v4/validation-final/theme-release.stdout.txt",
+        "bytes": 74,
+        "sha256": "98da090d605de54fa66e3cbfac7380657fa0ce9f7715bb0dbd59e71cff403f9d"
+      },
+      "stderr": {
+        "path": "assets/audit/regression-v4/validation-final/theme-release.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "allPassed": true
+  },
+  "limits": [
+    "Checks are local to this checkout and declared assets.",
+    "No remote CI, deployment, browser, physical-device, audible, artistic, or owner-acceptance evidence is provided.",
+    "The historical public review gallery GLB and current runtime GLB are separate identities."
+  ],
+  "observedOutputs": {
+    "nodeTests": {
+      "tests": 54,
+      "passed": 54,
+      "failed": 0
+    },
+    "publicationInventory": {
+      "totalDistFiles": 134,
+      "exactModelFolioFallbackAssets": 16,
+      "verificationReport": {
+        "path": ".local/publication/build-validation.json",
+        "bytes": 11408,
+        "sha256": "072fa7c459b4ebdf1aab64fd9834a82bd7d006a7d566961327a759cb4bd572c9"
+      },
+      "runtimeModelSha256": "c4dc308f77399410368b82443a1b21b9113cfedb258aa055906b4f13c92dda21"
+    },
+    "themeRelease": {
+      "hydratedAudioFiles": 4,
+      "intendedBuildFiles": 134
+    },
+    "buildManifest": {
+      "path": "dist/release.json",
+      "bytes": 24153,
+      "sha256": "98936d3e9e5efafd1d974ed896d3f805af6bee007966ee7dc1cc096f1a69dcbb"
+    }
+  },
+  "warnings": [
+    {
+      "check": "npm run build",
+      "kind": "vite-large-chunk",
+      "message": "Vite reported minified chunks larger than 500 kB; build still completed successfully."
+    }
+  ],
+  "interpretation": {
+    "buildHelperHistoricalGalleryModelSha256": "3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5",
+    "source": "assets/review/exterior-v1-publication.json",
+    "note": "The prepare-review-release output verifies the pinned historical review gallery model. The publication inventory report independently identifies the active runtime alignment-v3 GLB as c4dc308f77399410368b82443a1b21b9113cfedb258aa055906b4f13c92dda21."
+  }
+}

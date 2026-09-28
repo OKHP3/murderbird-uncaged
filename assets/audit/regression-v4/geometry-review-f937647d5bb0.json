@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "f937647d5bb0",
+  "reviewType": "independent qualitative visual assessment",
+  "reviewedAt": "2026-09-27",
+  "reviewer": "Codex subagent ant_failure_coverage",
+  "scope": {
+    "model": "Neutral authored reconstruction head and common full-body silhouette, compared against July head-only reference and candidate03 full-body common-identity reference.",
+    "limits": [
+      "Qualitative image comparison only; not metrology or dimensional validation.",
+      "No motion, collision, performance, material-color or rig assessment.",
+      "Not owner acceptance or final-art approval.",
+      "July reference controls head identity only; its body, perch and hanging wing train are excluded.",
+      "Candidate03 governs visible common full-body silhouette; perspective does not establish scale or hidden construction."
+    ]
+  },
+  "identity": {
+    "model": {
+      "path": "assets/models/uncaged-alignment-v4/iterations/f937647d5bb0/murderbird-alignment-v4.glb",
+      "sha256": "f937647d5bb0a4413ca0ff10d9747380022dcec3cfbbcdaa0967cfd4aff19b62",
+      "bytes": 3315472,
+      "expectedSha256": "f937647d5bb0a4413ca0ff10d9747380022dcec3cfbbcdaa0967cfd4aff19b62"
+    },
+    "editableSource": {
+      "path": "assets/models/uncaged-alignment-v4/iterations/f937647d5bb0/murderbird-alignment-v4.blend",
+      "sha256": "a4b8b64840ba390acd05d73bdc2a52c2230ee4a3d1dd08c5f234340e3fe241a6",
+      "bytes": 1730160,
+      "expectedSha256": "a4b8b64840ba390acd05d73bdc2a52c2230ee4a3d1dd08c5f234340e3fe241a6"
+    },
+    "authoringViewsManifest": {
+      "path": "assets/audit/alignment-v4/iterations/f937647d5bb0/authoring-views.json",
+      "sha256": "e906ada813ad6a15eb5386a27bf55398306302a276ff72b8031b395c5f7de1a0",
+      "bytes": 16692
+    },
+    "views": [
+      {
+        "image": "alignment-three-quarter.png",
+        "preservedPath": "assets/audit/regression-v4/reviewed-models/f937647d5bb0/alignment-three-quarter.png",
+        "sha256": "353ac72204f695f7e8ba7c2910bc360ad51d1c352e5481db23052e827dbc627e",
+        "bytes": 1229662,
+        "modelSha256": "f937647d5bb0a4413ca0ff10d9747380022dcec3cfbbcdaa0967cfd4aff19b62",
+        "sourceSha256": "a4b8b64840ba390acd05d73bdc2a52c2230ee4a3d1dd08c5f234340e3fe241a6",
+        "camera": [
+          -4.7,
+          -6.5,
+          2.3
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.08
+        ],
+        "projection": "ORTHO",
+        "orthoScale": 2.4,
+        "lighting": "neutral workbench studio, no textures",
+        "scope": "authored reconstruction, not source metrology"
+      },
+      {
+        "image": "alignment-head.png",
+        "preservedPath": "assets/audit/regression-v4/reviewed-models/f937647d5bb0/alignment-head.png",
+        "sha256": "61bf1b7b10d7768e2d9c335b1c2b1403a794ce1f8b940e70e340eb22d36cbf7c",
+        "bytes": 1234233,
+        "modelSha256": "f937647d5bb0a4413ca0ff10d9747380022dcec3cfbbcdaa0967cfd4aff19b62",
+        "sourceSha256": "a4b8b64840ba390acd05d73bdc2a52c2230ee4a3d1dd08c5f234340e3fe241a6",
+        "camera": [
+          -4,
+          -6,
+          2.01
+        ],
+        "target": [
+          0,
+          -0.29,
+          1.88
+        ],
+        "projection": "ORTHO",
+        "orthoScale": 0.83,
+        "lighting": "neutral workbench studio, no textures",
+        "scope": "authored reconstruction, not source metrology"
+      }
+    ],
+    "references": {
+      "julyHeadOnly": {
+        "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+        "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+        "bytes": 2782772
+      },
+      "candidate03CommonBody": {
+        "path": "assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+        "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+        "bytes": 2319632
+      }
+    },
+    "referenceScopeSource": {
+      "path": "docs/creative-authority.md",
+      "claims": [
+        "July image is head identity only; body/perch/hanging wing train are excluded.",
+        "Candidate03 is the common visible full-body silhouette reference."
+      ]
+    }
+  },
+  "observations": [
+    {
+      "priority": 1,
+      "region": "head / bill / mandible",
+      "finding": "The head is recognizable, but the upper hook reads as a broad, mostly smooth and nearly uniform shell compared with the deeper convex, plated hook in the references. The lower jaw reads as a narrow rail/plate with an awkward termination rather than a substantial forked mandible framing a clear cheek opening. Optic appears inset and legible in these views; the remaining discrepancy is surrounding head mass/profile.",
+      "evidence": "Direct visual comparison of preserved head render with July head-only reference and candidate03 head."
+    },
+    {
+      "priority": 2,
+      "region": "body / neck / breast-to-pelvis",
+      "finding": "The body reads as a tall, evenly armored egg or barrel, with a narrow upright segmented neck bridge. Candidate03 conveys a deeper breast and clearer taper toward pelvis; repeated similarly sized courses reinforce the cylindrical impression.",
+      "evidence": "Direct visual comparison of preserved three-quarter render with candidate03 common-body image."
+    },
+    {
+      "priority": 3,
+      "region": "folded near-side mantle",
+      "finding": "The mantle reads as a rounded, separately attached shoulder pod with small, regular scales, rather than a swept compact wing cover integrated into the flank. This is an integration and shape-pattern mismatch; the render does show substantial coverage, so this review does not claim an area deficit.",
+      "evidence": "Direct visual comparison of preserved three-quarter render with candidate03 common-body image."
+    }
+  ],
+  "recommendations": [
+    "Reshape the bill as a deeper convex hook with several larger swept structural plates, and broaden/articulate the cheek and lower jaw into a visible forked frame around the opening while retaining the current optic seating.",
+    "Integrate the folded mantle into the shoulder and flank as a longer tapered sweep with fewer, varied curved overlaps; in the same proportion pass, break up the uniform body courses and strengthen the breast-to-pelvis taper and curved neck connection."
+  ],
+  "acceptance": "No owner acceptance is asserted."
+}

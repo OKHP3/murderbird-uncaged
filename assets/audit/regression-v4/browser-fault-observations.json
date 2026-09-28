@@ -1,0 +1,68 @@
+{
+  "capturedAt": "2026-09-28T04:00:17.075Z",
+  "url": "http://127.0.0.1:5183/",
+  "candidateModel": "assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+  "runtimeScope": "Recovery observations finished before the inspection helper hot reload at 2026-09-28T03:59:09Z; they exercise the b523c3a application source. The tab later reloaded the helper extraction.",
+  "checks": [
+    {
+      "name": "WebGL context loss and retry",
+      "cycles": 2,
+      "result": "passed",
+      "method": "Native WEBGL_lose_context extension invoked through the tab developer capability; public Retry 3D clicked; canvas/3D label and camera/part controls returned."
+    },
+    {
+      "name": "WebGL unavailable during retry",
+      "result": "passed",
+      "method": "getContext temporarily returned null for WebGL types in this isolated document; public Retry retained illustrated view and explanatory failure message. Original getContext restored and test variable deleted, then public Retry restored 3D.",
+      "limitation": "Availability failure was tested on retry; startup injection command was unsupported and not executed."
+    },
+    {
+      "name": "Theme fetch failure and retry",
+      "result": "passed",
+      "method": "Exact full-song URL blocked through Network.setBlockedURLs; audio muted via public control before Play. Failed to fetch / Press Play to retry shown. Block removed; public Play loaded the 2:27 song, clock advanced to 0:07, then public Pause stopped playback.",
+      "limitation": "Muted playback verifies fetch/decode/controls, not audible quality or loop seam."
+    }
+  ],
+  "recoveredRenderer": {
+    "kind": "webgl",
+    "modelUrl": "http://127.0.0.1:5183/assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb",
+    "performance": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+      "softwareRenderer": false,
+      "viewport": {
+        "width": 856,
+        "height": 648,
+        "bufferWidth": 856,
+        "bufferHeight": 648,
+        "pixelRatio": 1
+      },
+      "frameMsP50": 10,
+      "frameMsP95": 10.600000000002183,
+      "fpsP50": 100,
+      "fpsP05": 94.33962264149001,
+      "drawCalls": 348,
+      "triangles": 330974,
+      "geometries": 204,
+      "gpuTextures": 4
+    },
+    "frameCount": 1368
+  },
+  "expectedConsoleErrors": [
+    {
+      "message": "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.",
+      "at": "2026-09-28T03:58:19.002Z",
+      "reason": "Deliberately unavailable WebGL"
+    }
+  ],
+  "cleanup": {
+    "networkBlockRemoved": true,
+    "webglPrototypeRestored": true,
+    "testVariableDeleted": true,
+    "audioStopped": true
+  },
+  "limits": [
+    "No physical-mobile, screen-reader, sustained performance, network-throttle, human artistic or listening acceptance.",
+    "The displayed renderer statistics are a short rolling sample only.",
+    "No publication or deployed-site verification performed."
+  ]
+}
