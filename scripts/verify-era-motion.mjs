@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
+import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { loadRigidValidation } from './load-rigid-validation.mjs';
 import { clone } from 'three/addons/utils/SkeletonUtils.js';
@@ -14,6 +15,12 @@ const NODE_NAMES = [
   'power-core', 'processing', 'industrial-repairs', 'builder-optics', 'left-mantle',
   'right-mantle', 'left-wing-shield', 'right-wing-shield',
 ];
+const SUPPORT_FLOOR_Y = 0.002;
+const SUPPORT_FLOOR_OFFSET_TOLERANCE = 0.0015;
+const SUPPORT_TARGET_SHIFT_TOLERANCE = 1e-7;
+// Match the independently checked V4 claw-contact verifier's existing
+// minimum distal-geometry floor tolerance; do not loosen it here.
+const MIN_ACTING_CLAW_DISTAL_Y = -0.008;
 const OUTPUT = { generatedAt: new Date().toISOString(), model: MODEL_PATH, report: REPORT_PATH, checks: [] };
 let template;
 
@@ -44,6 +51,14 @@ function resetPose(nodes, rest) {
   }
 }
 
+function distalClawMinY(model, side) {
+  return Math.min(...[1,2,3].map(digit => {
+    const node = model.getObjectByName(`${side}-digit-${digit}-distal`);
+    assert.ok(node, `missing ${side} distal claw digit ${digit}`);
+    return new THREE.Box3().setFromObject(node, true).min.y;
+  }));
+}
+
 function createRun({ seed = 927, dt = 1 / 60 } = {}) {
   const rig = makeRig();
   const machine = createEraController({ seed });
@@ -53,6 +68,9 @@ function createRun({ seed = 927, dt = 1 / 60 } = {}) {
     maxSupportTargetShift: 0, maxFloorOffset: 0, minGroundY: Infinity, maxGroundY: -Infinity,
     bounds: { minX: Infinity, maxX: -Infinity, minZ: Infinity, maxZ: -Infinity },
     contacts: [], lastFootSteps: { left: 0, right: 0 }, lastTargets: {},
+    plantedFootSamples: 0, activeClawSamples: 0, clawSupportSamples: 0,
+    minimumActingClawDistalY: Infinity, maxClawSupportAnchorDrift: 0,
+    activeClawSide: null, clawSupportAnchor: null,
   };
   let time = 0;
 
@@ -68,19 +86,64 @@ function createRun({ seed = 927, dt = 1 / 60 } = {}) {
     tracker.bounds.minZ = Math.min(tracker.bounds.minZ, metrics.bodyBounds.min.z);
     tracker.bounds.maxZ = Math.max(tracker.bounds.maxZ, metrics.bodyBounds.max.z);
 
+    const actorSide = state.clawAction?.side ?? null;
+    if (actorSide) {
+      const supportSide = actorSide === 'left' ? 'right' : 'left';
+      const actor = metrics.feet.find(foot => foot.side === actorSide);
+      const support = metrics.feet.find(foot => foot.side === supportSide);
+      assert.ok(actor && support, `claw action feet missing for ${actorSide}`);
+      if (tracker.activeClawSide !== actorSide) {
+        tracker.activeClawSide = actorSide;
+        tracker.clawSupportAnchor = [...support.target];
+      }
+      tracker.activeClawSamples += 1;
+      const distalMinY = distalClawMinY(rig.model, actorSide);
+      tracker.minimumActingClawDistalY = Math.min(tracker.minimumActingClawDistalY, distalMinY);
+      assert.ok(distalMinY >= MIN_ACTING_CLAW_DISTAL_Y,
+        `${actorSide} acting claw distal mesh penetrated floor: ${distalMinY} m (limit ${MIN_ACTING_CLAW_DISTAL_Y} m)`);
+
+      tracker.clawSupportSamples += 1;
+      assert.equal(support.swinging, false, `${supportSide} support foot swung during ${state.clawAction.stage}`);
+      const supportFloorOffset = Math.abs(support.groundMin - SUPPORT_FLOOR_Y);
+      tracker.maxFloorOffset = Math.max(tracker.maxFloorOffset, supportFloorOffset);
+      tracker.minGroundY = Math.min(tracker.minGroundY, support.groundMin);
+      tracker.maxGroundY = Math.max(tracker.maxGroundY, support.groundMin);
+      assert.ok(supportFloorOffset < SUPPORT_FLOOR_OFFSET_TOLERANCE,
+        `${supportSide} claw support sole left the floor by ${supportFloorOffset} m`);
+      const anchorDrift = Math.hypot(...support.target.map((value, index) => value - tracker.clawSupportAnchor[index]));
+      tracker.maxClawSupportAnchorDrift = Math.max(tracker.maxClawSupportAnchorDrift, anchorDrift);
+      assert.ok(anchorDrift < SUPPORT_TARGET_SHIFT_TOLERANCE,
+        `${supportSide} claw support anchor shifted ${anchorDrift} m during ${state.clawAction.stage}`);
+      tracker.maxSupportTargetShift = Math.max(tracker.maxSupportTargetShift, anchorDrift);
+      // The selected claw target is deliberately moving. Clear its previous
+      // stationary sample so it cannot be compared as a planted support.
+      delete tracker.lastTargets[actorSide];
+      tracker.lastTargets[supportSide] = { target: support.target, swinging: support.swinging };
+    } else {
+      if (tracker.activeClawSide) {
+        // The active actor returns to its home target when the action clears;
+        // establish a fresh stationary baseline after that declared recovery.
+        delete tracker.lastTargets[tracker.activeClawSide];
+        tracker.activeClawSide = null;
+        tracker.clawSupportAnchor = null;
+      }
+      for (const foot of metrics.feet) {
+        if (!foot.swinging) {
+          const floorOffset = Math.abs(foot.groundMin - SUPPORT_FLOOR_Y);
+          tracker.maxFloorOffset = Math.max(tracker.maxFloorOffset, floorOffset);
+          tracker.minGroundY = Math.min(tracker.minGroundY, foot.groundMin);
+          tracker.maxGroundY = Math.max(tracker.maxGroundY, foot.groundMin);
+          tracker.plantedFootSamples += 1;
+        }
+        const prior = tracker.lastTargets[foot.side];
+        if (!foot.swinging && prior && !prior.swinging) {
+          const shift = Math.hypot(...foot.target.map((v, i) => v - prior.target[i]));
+          tracker.maxSupportTargetShift = Math.max(tracker.maxSupportTargetShift, shift);
+        }
+        tracker.lastTargets[foot.side] = { target: foot.target, swinging: foot.swinging };
+      }
+    }
     for (const foot of metrics.feet) {
-      if (!foot.swinging) {
-        const floorOffset = Math.abs(foot.groundMin - 0.002);
-        tracker.maxFloorOffset = Math.max(tracker.maxFloorOffset, floorOffset);
-        tracker.minGroundY = Math.min(tracker.minGroundY, foot.groundMin);
-        tracker.maxGroundY = Math.max(tracker.maxGroundY, foot.groundMin);
-      }
-      const prior = tracker.lastTargets[foot.side];
-      if (!foot.swinging && prior && !prior.swinging) {
-        const shift = Math.hypot(...foot.target.map((v, i) => v - prior.target[i]));
-        tracker.maxSupportTargetShift = Math.max(tracker.maxSupportTargetShift, shift);
-      }
-      tracker.lastTargets[foot.side] = { target: foot.target, swinging: foot.swinging };
       if (foot.steps > tracker.lastFootSteps[foot.side]) {
         const priorStep = tracker.stepOrder.at(-1);
         const yawDelta = priorStep ? Math.atan2(Math.sin(metrics.root.yaw - priorStep.yaw), Math.cos(metrics.root.yaw - priorStep.yaw)) : 0;
@@ -133,6 +196,11 @@ function createRun({ seed = 927, dt = 1 / 60 } = {}) {
       distance: metrics.distance, steps: metrics.steps, stepOrder: tracker.stepOrder,
       maxFootError: tracker.maxFootError, maxSupportTargetShift: tracker.maxSupportTargetShift,
       maxFloorOffsetFrom2mm: tracker.maxFloorOffset,
+      plantedFootSamples: tracker.plantedFootSamples,
+      activeClawSamples: tracker.activeClawSamples,
+      clawSupportSamples: tracker.clawSupportSamples,
+      minimumActingClawDistalY: Number.isFinite(tracker.minimumActingClawDistalY) ? tracker.minimumActingClawDistalY : null,
+      maxClawSupportAnchorDrift: tracker.maxClawSupportAnchorDrift,
       plantedGroundY: [tracker.minGroundY, tracker.maxGroundY], bounds: tracker.bounds,
       contacts: tracker.contacts,
       endRoot: metrics.root,
@@ -147,6 +215,14 @@ function checkPhysicalEnvelope(run, { requireTravel = false, requireContact = fa
   assert.ok(result.maxFootError < 0.002, `foot solve error ${result.maxFootError} m is not below 0.002 m`);
   assert.ok(result.maxSupportTargetShift < 1e-7, `planted foot target shifted ${result.maxSupportTargetShift} m`);
   assert.ok(result.maxFloorOffsetFrom2mm < 0.0015, `planted sole differs from 0.002 m floor by ${result.maxFloorOffsetFrom2mm} m`);
+  assert.ok(result.plantedFootSamples > 0, 'no stationary planted-foot samples were recorded');
+  if (result.activeClawSamples > 0) {
+    assert.ok(result.clawSupportSamples > 0, 'claw action recorded no opposite support-foot samples');
+    assert.ok(result.maxClawSupportAnchorDrift < SUPPORT_TARGET_SHIFT_TOLERANCE,
+      `claw support anchor drifted ${result.maxClawSupportAnchorDrift} m`);
+    assert.ok(result.minimumActingClawDistalY >= MIN_ACTING_CLAW_DISTAL_Y,
+      `acting claw distal geometry reached ${result.minimumActingClawDistalY} m`);
+  }
   assert.ok(result.bounds.minX >= -2.9 && result.bounds.maxX <= 2.9, `body exceeded cage x envelope: ${JSON.stringify(result.bounds)}`);
   assert.ok(result.bounds.minZ >= -2.1 && result.bounds.maxZ <= 2.1, `body exceeded cage z envelope: ${JSON.stringify(result.bounds)}`);
   if (requireTravel) {
@@ -285,6 +361,8 @@ function testMechanic(){
 
 async function main() {
   const bytes = await readFile(MODEL_PATH);
+  OUTPUT.modelSha256 = createHash('sha256').update(bytes).digest('hex');
+  OUTPUT.modelBytes = bytes.byteLength;
   const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
   template = await loadRigidValidation(bytes);
   assert.ok(template.scene, 'GLB parse returned no scene');

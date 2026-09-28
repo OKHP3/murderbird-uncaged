@@ -1,9 +1,9 @@
 // Fixed renders of this exterior study accompany a separate assembly diagram.
 // The image is not animated or presented as an interactive spatial view.
 const previews = {
-  maker: new URL('../../assets/models/uncaged-alignment-v3/maker-preview.png', import.meta.url).href,
-  mechanic: new URL('../../assets/models/uncaged-alignment-v3/mechanic-preview.png', import.meta.url).href,
-  builder: new URL('../../assets/models/uncaged-alignment-v3/builder-preview.png', import.meta.url).href,
+  maker: new URL('../../assets/models/uncaged-alignment-v4/maker-preview.png', import.meta.url).href,
+  mechanic: new URL('../../assets/models/uncaged-alignment-v4/mechanic-preview.png', import.meta.url).href,
+  builder: new URL('../../assets/models/uncaged-alignment-v4/builder-preview.png', import.meta.url).href,
 };
 const eraNames = { maker:'Maker', mechanic:'Mechanic', builder:'Advanced' };
 const referenceUrl = previews.builder;

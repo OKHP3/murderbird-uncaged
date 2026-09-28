@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
+import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { loadRigidValidation } from './load-rigid-validation.mjs';
 import { clone } from 'three/addons/utils/SkeletonUtils.js';
@@ -208,6 +209,8 @@ function verifyPowerInspectionLanding() {
 
 async function main() {
   const bytes = await readFile(MODEL_PATH);
+  OUTPUT.modelSha256 = createHash('sha256').update(bytes).digest('hex');
+  OUTPUT.modelBytes = bytes.byteLength;
   const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
   template = await loadRigidValidation(bytes);
   assert.ok(template.scene, 'GLB parse returned no scene');

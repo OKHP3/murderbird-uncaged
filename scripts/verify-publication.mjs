@@ -33,11 +33,11 @@ const [presenceSource,fallbackSource]=await Promise.all([
   readFile('src/scene/fallback.js','utf8'),
 ]);
 const modelPaths=[...presenceSource.matchAll(/new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.glb)['"],\s*import\.meta\.url\)/g)].map(match=>match[1]);
-assert.deepEqual(modelPaths,['assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb'],'The exhibit must select the alignment-v3 GLB.');
+assert.deepEqual(modelPaths,['assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb'],'The exhibit must select the alignment-v4 GLB.');
 const previewPaths=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
 assert.deepEqual(Object.keys(previewPaths).sort(),['builder','maker','mechanic'],'Fallback must select exactly one preview for each era.');
-for(const [era,path] of Object.entries(previewPaths))assert.equal(path,`assets/models/uncaged-alignment-v3/${era}-preview.png`,`${era} fallback must select its alignment-v3 preview.`);
-const alignmentInventory=JSON.parse(await readFile('assets/models/uncaged-alignment-v3/alignment-inventory.json','utf8'));
+for(const [era,path] of Object.entries(previewPaths))assert.equal(path,`assets/models/uncaged-alignment-v4/${era}-preview.png`,`${era} fallback must select its alignment-v4 preview.`);
+const alignmentInventory=JSON.parse(await readFile('assets/models/uncaged-alignment-v4/alignment-inventory.json','utf8'));
 assert.equal(alignmentInventory.status,'neutral geometry proposal awaiting owner review');
 assert(Array.isArray(alignmentInventory.generatedFiles),'Alignment inventory must enumerate generated source files.');
 const generatedFiles=new Map(alignmentInventory.generatedFiles.map(file=>[file.path,file]));

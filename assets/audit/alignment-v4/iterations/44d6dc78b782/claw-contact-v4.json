@@ -1,0 +1,847 @@
+{
+  "generatedAt": "2026-09-28T03:49:11.920Z",
+  "model": "assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb",
+  "sha256": "44d6dc78b782f9a0cadfa28c117deaadee0087cc6f1c972273fb5fa5909610a8",
+  "scope": "Deterministic exported-rig claw-cycle samples at 60/120 Hz and bounded state interruptions. This is kinematic floor/support evidence only; it does not establish force, grip, balance, anatomy, full swept collision clearance, or human motion acceptance.",
+  "thresholds": {
+    "maxSingleFrameAnkleTravelAt60Hz": 0.025,
+    "maxSupportAnkleDrift": 0.002,
+    "minimumDistalFloor": -0.008,
+    "minimumSupportFootFloor": -0.003,
+    "maximumSupportFootFloor": 0.01,
+    "contactPlaneY": 0.002,
+    "contactTipTolerance": 0.003,
+    "pivotLocalDrift": 1e-8,
+    "rigidBasisError": 0.000001,
+    "neutralAnkleReturn": 0.015
+  },
+  "checks": [
+    {
+      "name": "complete-claw-contact-cycle-at-60hz",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at completeCycle (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:217:3)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:246:36\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:245:1"
+    },
+    {
+      "name": "complete-claw-contact-cycle-at-120hz",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at completeCycle (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:217:3)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:249:37\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:248:1"
+    },
+    {
+      "name": "approach-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.1333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.28835986554622645
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0020000000000000365
+          }
+        ]
+      }
+    },
+    {
+      "name": "approach-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.1333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519928,
+              -0.28835986554622645
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.0020000000000000365
+          }
+        ]
+      }
+    },
+    {
+      "name": "approach-interrupted-by-pause",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:275:9\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "approach-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          }
+        ]
+      }
+    },
+    {
+      "name": "approach-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "approach",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          }
+        ]
+      }
+    },
+    {
+      "name": "lift-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.4333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31498590695193807,
+              -0.2699606520332092
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.04047108279994527
+          }
+        ]
+      }
+    },
+    {
+      "name": "lift-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.4333,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.31498590695193807,
+              -0.2699606520332092
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.04047108279994527
+          }
+        ]
+      }
+    },
+    {
+      "name": "lift-interrupted-by-pause",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:275:9\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "lift-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          }
+        ]
+      }
+    },
+    {
+      "name": "lift-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "lift",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.389,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          }
+        ]
+      }
+    },
+    {
+      "name": "contact-interrupted-by-inspection",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "inspection",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": true,
+        "inspectionReached": true,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.7167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3909859235852992,
+              -0.23361281799116668
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.013693737958664604
+          }
+        ]
+      }
+    },
+    {
+      "name": "contact-interrupted-by-reduced-motion",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "reduced-motion",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": true,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          },
+          {
+            "stage": "recovery",
+            "phase": 0.03968253968253968,
+            "timeSeconds": 0.7167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3909859235852992,
+              -0.23361281799116668
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0019999999999999393,
+            "activeDistalMinY": 0.013693737958664604
+          }
+        ]
+      }
+    },
+    {
+      "name": "contact-interrupted-by-pause",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:275:9\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "contact-interrupted-by-era-change",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "era-change",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          }
+        ]
+      }
+    },
+    {
+      "name": "contact-interrupted-by-reset",
+      "status": "passed",
+      "result": {
+        "phase": "contact",
+        "interruption": "reset",
+        "phaseAtInterrupt": 0.417,
+        "recoverySeen": false,
+        "inspectionReached": false,
+        "pausedPoseStable": null,
+        "actionCleared": true,
+        "staleRestart": false,
+        "activeFootMinY": 0.0019999999999998908,
+        "supportFootMinY": 0.0019999999999998908,
+        "trajectory": [
+          {
+            "stage": "approach",
+            "phase": 0.05555555555555556,
+            "timeSeconds": 0.0167,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.27651482415199286,
+              -0.28835986554622667
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.27651482415199263,
+              -0.2883598655462268
+            ],
+            "supportFootMinY": 0.0019999999999998352,
+            "activeDistalMinY": 0.0020000000000000573
+          },
+          {
+            "stage": "lift",
+            "phase": 0,
+            "timeSeconds": 0.3,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.2765148241519929,
+              -0.2883598655462266
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.002000000000000113
+          },
+          {
+            "stage": "contact",
+            "phase": 0,
+            "timeSeconds": 0.6,
+            "activeAnkle": [
+              0.2512859106063843,
+              0.3915148241519927,
+              -0.23335986554622648
+            ],
+            "supportAnkle": [
+              -0.2512859106063843,
+              0.2765148241519928,
+              -0.2883598655462266
+            ],
+            "supportFootMinY": 0.0020000000000000365,
+            "activeDistalMinY": 0.11699999999999988
+          }
+        ]
+      }
+    },
+    {
+      "name": "scrape-interrupted-by-inspection",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "scrape-interrupted-by-reduced-motion",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "scrape-interrupted-by-pause",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "scrape-interrupted-by-era-change",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "scrape-interrupted-by-reset",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "release-interrupted-by-inspection",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "release-interrupted-by-reduced-motion",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "release-interrupted-by-pause",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "release-interrupted-by-era-change",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "release-interrupted-by-reset",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "recovery-interrupted-by-inspection",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "recovery-interrupted-by-reduced-motion",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "recovery-interrupted-by-pause",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "recovery-interrupted-by-era-change",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    },
+    {
+      "name": "recovery-interrupted-by-reset",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: left distal geometry penetrated floor: -0.01292m\n    at Object.step (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:122:14)\n    at advanceUntil (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:209:21)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:256:21\n    at check (file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:49:62)\n    at file:///Users/okh/.codex/worktrees/uncaged-production/murderbird-uncaged/scripts/verify-claw-contact-v4.mjs:254:5"
+    }
+  ],
+  "status": "failed"
+}

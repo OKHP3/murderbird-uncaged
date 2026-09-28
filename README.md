@@ -10,7 +10,7 @@ Meet a flightless mechanical creature whose construction changes across centurie
 
 **Published for assessment.** This is a working 3D interpretation, not an owner-approved final character. The banner is reference artwork, not a screenshot. The gallery separates reference images, authoring renders, browser captures, and recorded motion so reviewers can compare what was intended with what was built.
 
-**Local correction branch:** the current checkout loads the separate [alignment-v3 geometry and articulation candidate](docs/alignment-v3-review.md). Its [local comparison gallery](assets/audit/alignment-v3/alignment-review.html) and [editable model](assets/models/uncaged-alignment-v3/README.md) preserve v2 as a historical checkpoint. The public links above do not establish publication of this correction.
+**Local correction branch:** the current checkout loads the separate [alignment-v4 geometry and articulation candidate](docs/alignment-v4-review.md). Its [local comparison gallery](assets/audit/alignment-v4/alignment-review.html) and [editable model](assets/models/uncaged-alignment-v4/README.md) preserve v2 and v3 as historical checkpoints. The public links above do not establish publication of this correction.
 
 ## Three eras, three ways to move
 

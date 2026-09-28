@@ -78,6 +78,43 @@ test('autonomous plans vary route, attention, family, intensity, and recovery wi
   }
 });
 
+test('family weighting avoids the old three-family cycle and autonomously runs a settled floor scrape', () => {
+  const traces = [927, 20260928, 42, 20260927, 1].map(seed => {
+    const machine = createPresenceState({ seed });
+    const families = [];
+    const clawStages = new Set();
+    let previousState = machine.getSnapshot().state;
+    let firstClaw = null;
+    for (let i = 0; i < 2400; i += 1) {
+      const prior = machine.getSnapshot();
+      const state = machine.update(0.1, { ...READY, clawContact: prior.clawAction?.stage === 'contact' });
+      if (state.state === 'pace' && previousState !== 'pace') families.push(state.actionFamily);
+      if (state.state === 'claw-scrape') {
+        clawStages.add(state.clawAction.stage);
+        if (!firstClaw) firstClaw = { previousState, snapshot: state };
+      }
+      previousState = state.state;
+    }
+    return { families, clawStages, firstClaw };
+  });
+
+  for (const trace of traces) {
+    assert.ok(trace.families.length >= 12);
+    assert.ok(new Set(trace.families).size >= 4);
+    for (let index = 1; index < trace.families.length; index += 1) {
+      assert.notEqual(trace.families[index], trace.families[index - 1], 'action families do not immediately repeat');
+    }
+    const periodThree = trace.families.every((family, index) => index < 3 || family === trace.families[index % 3]);
+    assert.equal(periodThree, false, 'seeded behavior is not a forced three-family cycle');
+    assert.ok(trace.firstClaw, 'the authored claw family is selected autonomously');
+    assert.equal(trace.firstClaw.previousState, 'boundary', 'the action begins only after its route settles at the boundary');
+    assert.equal(trace.firstClaw.snapshot.actionKind, 'claw-scrape');
+    assert.equal(trace.firstClaw.snapshot.clawAction.target, 'floor-scrape');
+    assert.ok(['approach','lift','contact','scrape','release','recovery'].every(stage => trace.clawStages.has(stage)));
+  }
+  assert.equal(new Set(traces.map(trace => trace.families.join('|'))).size, traces.length, 'different seeds produce different plan sequences');
+});
+
 test('visitor reach maps normalized input to a discrete world rail and runs one gated sequence', () => {
   const machine = createPresenceState({ seed: 1 });
   assert.equal(machine.requestReach({ x: 0.9, y: -0.5 }), true);
