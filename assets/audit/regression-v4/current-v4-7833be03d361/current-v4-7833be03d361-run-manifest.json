@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-09-28T04:41:29.599655+00:00",
+  "status": "passed-within-declared-scope",
+  "productionHead": "698c0493f7238286391755945596e9a861d02283",
+  "sourceSnapshot": {
+    "path": ".local/qa-runtime-snapshots/20260928T043416Z-c5386a7c",
+    "kind": "uncommitted production working-tree snapshot",
+    "stableBeforeCopyVsSnapshotVsAfterCopy": true,
+    "combinedSourceHash": "7833be03d361216ad3665eef0b7759341f29f2de860bc1e4eea1c39977843d75",
+    "model": {
+      "path": "assets/models/uncaged-alignment-v4/murderbird-alignment-v4.glb",
+      "sha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+      "bytes": 3951544
+    }
+  },
+  "qaHarnessOverlay": {
+    "path": {
+      "path": "assets/audit/regression-v4/current-v4-7833be03d361/harness-overlay.json",
+      "bytes": 1887,
+      "sha256": "92036c3ac76d51f1307ab3d7b175e5cb7976ec459e142db243f8d4f04145bc9d"
+    },
+    "originalSourceFreezeUnchanged": true,
+    "harnesses": {
+      "scripts/verify-interruption-v4.mjs": {
+        "qaBeforeCopy": {
+          "bytes": 17785,
+          "sha256": "95baca599fc14723edb2242a11522a92ccf531e87f833504bd64f155da3035c6"
+        },
+        "snapshotCopy": {
+          "bytes": 17785,
+          "sha256": "95baca599fc14723edb2242a11522a92ccf531e87f833504bd64f155da3035c6"
+        },
+        "qaAfterCopy": {
+          "bytes": 17785,
+          "sha256": "95baca599fc14723edb2242a11522a92ccf531e87f833504bd64f155da3035c6"
+        },
+        "matched": true
+      },
+      "scripts/verify-inspection-pose-v4.mjs": {
+        "qaBeforeCopy": {
+          "bytes": 10589,
+          "sha256": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c"
+        },
+        "snapshotCopy": {
+          "bytes": 10589,
+          "sha256": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c"
+        },
+        "qaAfterCopy": {
+          "bytes": 10589,
+          "sha256": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c"
+        },
+        "matched": true
+      }
+    }
+  },
+  "reports": {
+    "interruption": {
+      "path": "assets/audit/regression-v4/current-v4-7833be03d361/interruption-validation.json",
+      "bytes": 26027,
+      "sha256": "6b53b8d8ca0d064c006183973fad214d82a9741ba00224e74082c8f6f2769a29",
+      "status": "passed",
+      "expectedModelSha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+      "checks": [
+        {
+          "name": "five-era-inspection-cycles-restore-mechanism-connectors",
+          "status": "passed"
+        },
+        {
+          "name": "ten-rapid-reach-inputs-do-not-stack-or-resume-stale-attack",
+          "status": "passed"
+        },
+        {
+          "name": "each-era-supported-action-interruption-matrix",
+          "status": "passed"
+        },
+        {
+          "name": "jump-and-thrust-pause-inspection-and-reset-cancel-points",
+          "status": "passed"
+        }
+      ]
+    },
+    "inspectionPose": {
+      "path": "assets/audit/regression-v4/current-v4-7833be03d361/inspection-pose-validation.json",
+      "bytes": 33284,
+      "sha256": "6a6d779031f178d6c1278f9634c7be95fdd10c726ab55e2a935e893d1cd3805d",
+      "status": "passed",
+      "expectedModelSha256": "bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299",
+      "checks": [
+        {
+          "name": "active-exported-inspection-pose-restores-eligible-mesh-world-matrices",
+          "status": "passed"
+        }
+      ]
+    }
+  },
+  "notableResults": {
+    "interruptionChecksPassed": "4/4",
+    "fiveInspectionCyclesPerEra": true,
+    "rapidReachInputs": {
+      "accepted": 1,
+      "rejected": 9
+    },
+    "eraActionInterruptionCombinations": 12,
+    "jumpThrustCancelCases": 6,
+    "resetApiDiagnostic": [
+      {
+        "case": "jump/controller-reset-api-diagnostic",
+        "endedOnGround": false,
+        "feetGroundMin": [
+          "NaN",
+          "NaN"
+        ],
+        "inPublicResetPath": false
+      }
+    ],
+    "inspectionPoseOwnersAndMeshes": {
+      "maker": {
+        "eligibleOwners": 6,
+        "mappedMeshes": 21,
+        "cycles": 5,
+        "movedOwnersAtHalfAndFull": true,
+        "exactDescendantWorldMatrixRestoration": true
+      },
+      "mechanic": {
+        "eligibleOwners": 6,
+        "mappedMeshes": 21,
+        "cycles": 5,
+        "movedOwnersAtHalfAndFull": true,
+        "exactDescendantWorldMatrixRestoration": true
+      },
+      "builder": {
+        "eligibleOwners": 8,
+        "mappedMeshes": 21,
+        "cycles": 5,
+        "movedOwnersAtHalfAndFull": true,
+        "exactDescendantWorldMatrixRestoration": true
+      }
+    }
+  },
+  "limits": [
+    "Interruption checks are Node state and actual-GLB kinematic/mechanism checks, not browser UI, GPU, visual, or human acceptance.",
+    "The retained-rig controller-reset diagnostic is non-gating and is not the public reset path; app reload recreates the rig and Reset view changes only the camera.",
+    "Inspection eligibility is mirrored by the fixture from presence-exhibit.setEra; runtime era-switch wiring is not exercised. Inspection pose uses the fixed exported rest pose and does not prove collision freedom or artistic acceptance.",
+    "Kinematic renderer contact uses declared mesh proximity checks, not force-based physical contact."
+  ]
+}

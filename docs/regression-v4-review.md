@@ -70,6 +70,8 @@ Two later hash-bound reviews preserve the subsequent progress and unresolved def
 
 The acting analyzer distinguishes planned family labels, executed cage actions, rendered claw phases and renderer-reported claw contact. Its fixtures cover canceled approaches and legacy v3 telemetry.
 
+The separate [appearance iteration-07 review](../assets/audit/regression-v4/appearance-review-iteration-07.json) verifies ten authoring renders and source/export/reference hashes. Its continuous mantle and coherent crown improve on earlier appearance attempts, while optic integration, neck/body form, regional plate variation and legible Mechanic repairs remain open. It retains v3 proportions and kinematics and must be selectively integrated with the corrected structure. Blender renders do not establish browser material parity. Maker finish should be judged against the selected newly made state; a discrepancy is not permission to add centuries of aging.
+
 ## Independent v4 motion diagnostic
 
 A later [source freeze and condensed result](../assets/audit/regression-v4/current-v4-diagnostic-7833be03d361-summary.json) records an independent run against model `bcfb03ef96c6b64f3bf18caca7851d7b3bd5808d196c55e334ecda1e1ca04299` and production working-tree snapshot `7833be03d361216ad3665eef0b7759341f29f2de860bc1e4eea1c39977843d75`. All 35 selected production source/helper/package/model file hashes matched before, during and after copying. The snapshot includes uncommitted production source at HEAD `698c049`; it is not a released build. No source adaptation was needed.
@@ -80,6 +82,8 @@ A later [source freeze and condensed result](../assets/audit/regression-v4/curre
 | 20260928 | Claw scrape 2; seam rattle 2; edge probe 1; rail press 1. | Cage 8; claw proximity 2. |
 
 Both accelerated actual-rig runs completed without analyzer warnings. All three claw episodes observed lift, contact, scrape, release and recovery. This supports a bounded improvement over the v3 action sequence. It does not establish visible acting quality, physical contact, force, collision clearance or two uninterrupted browser recordings. The raw trace's `baseCommit` names QA ancestry because the temporary snapshot resides inside that checkout; the companion source-freeze manifest supplies the actual production HEAD and source identities.
+
+The same frozen v4 source/model also passed [four bounded interruption groups and the actual-shell restoration check](../assets/audit/regression-v4/current-v4-7833be03d361/current-v4-7833be03d361-run-manifest.json). Five inspection cycles per era moved 6/6/8 eligible owners at 50% and 100% separation and restored all 21 mapped descendant mesh world matrices exactly. Maker/Mechanic connector ineligibility, mirrored era eligibility, fixed-pose limits and the non-gating retained-rig reset diagnostic remain as described above. This is current-v4 evidence within those bounds; it does not add browser wiring, collision or artistic acceptance.
 
 ## Open findings and next integration gate
 
