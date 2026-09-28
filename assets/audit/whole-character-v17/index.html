@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MurderBird · Whole-character V17 attempt 02</title>
+  <style>
+    :root{color-scheme:light;--ink:#282a26;--paper:#e5e1d7;--panel:#f4efe3;--line:#a8a396;--accent:#997043}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+    main{max-width:1440px;margin:auto;padding:24px}h1,h2{font-family:Georgia,serif;font-weight:500}h1{font-size:2.2rem;margin:0 0 10px}h2{font-size:1.6rem;margin:30px 0 12px}
+    a{color:#76512a}.note{border-left:4px solid var(--accent);padding:12px 15px;background:var(--panel);margin:12px 0}
+    .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    figure{margin:0;background:#cecec7;min-width:0}figure img{display:block;width:100%;height:auto}figcaption{padding:10px 12px}
+    .reference{width:100%;max-height:700px;object-fit:contain;background:#171815}.visual{height:650px;background:#53575b;position:relative}.visual #viewer,.visual canvas{width:100%;height:100%;display:block;touch-action:none}.visual img{width:100%;height:100%;object-fit:contain}#viewer[hidden],#render-fallback[hidden]{display:none}
+    .controls{display:flex;gap:6px;flex-wrap:wrap;padding:10px}button,select{padding:7px 10px;background:#f4f1e7;border:1px solid #818377;color:#252d25;cursor:pointer}button[aria-pressed=true]{background:#d4bd94}button:disabled,select:disabled{opacity:.55;cursor:default}
+    #status{padding:0 12px;font-size:14px}small{color:#555}@media(max-width:820px){main{padding:14px}.pair,.gallery{grid-template-columns:1fr}.visual{height:540px}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>MurderBird · Whole-character V17</h1>
+  <p class="note"><b>Attempt 02 · local construction proposal.</b> This composition revises the breast armor courses and orbital support assembly. The six paired images compare the V16 attempt 03 base with V17 using matched native cameras. The work remains unaccepted: whole-character likeness and articulated surface clearance are outstanding.</p>
+  <p class="note"><b>Review boundary:</b> the breast layers and orbital supports are rigid passive geometry. The orbital additions do not add advanced sensors, and the existing optic remains era-gated. The exported preview below is static geometry; camera orbit and era filtering do not demonstrate runtime motion or clearance.</p>
+  <p class="note"><b>Superseded draft:</b> attempt 01 is preserved as a rejected/intermediate visual draft and has no app route or GLB. Its native stills remain available: <a href="attempt-01/after-reference-angle.png">reference angle</a>, <a href="attempt-01/after-head.png">head</a>, <a href="attempt-01/after-breast.png">breast</a>.</p>
+
+  <h2>Attempt 02 matched construction views · six pairs</h2>
+  <div class="gallery">
+    <figure><img src="attempt-02/before-reference-angle.png" alt="V16 attempt 03 base, matched reference angle"><figcaption>Base · V16 attempt 03 · reference angle</figcaption></figure>
+    <figure><img src="attempt-02/after-reference-angle.png" alt="V17 attempt 02, matched reference angle"><figcaption>V17 attempt 02 · reference angle</figcaption></figure>
+    <figure><img src="attempt-02/before-front.png" alt="V16 attempt 03 base, matched front view"><figcaption>Base · front</figcaption></figure>
+    <figure><img src="attempt-02/after-front.png" alt="V17 attempt 02, matched front view"><figcaption>V17 attempt 02 · front</figcaption></figure>
+    <figure><img src="attempt-02/before-side.png" alt="V16 attempt 03 base, matched side view"><figcaption>Base · side</figcaption></figure>
+    <figure><img src="attempt-02/after-side.png" alt="V17 attempt 02, matched side view"><figcaption>V17 attempt 02 · side</figcaption></figure>
+    <figure><img src="attempt-02/before-rear.png" alt="V16 attempt 03 base, matched rear view"><figcaption>Base · rear</figcaption></figure>
+    <figure><img src="attempt-02/after-rear.png" alt="V17 attempt 02, matched rear view"><figcaption>V17 attempt 02 · rear</figcaption></figure>
+    <figure><img src="attempt-02/before-head.png" alt="V16 attempt 03 base, matched head detail"><figcaption>Base · head detail</figcaption></figure>
+    <figure><img src="attempt-02/after-head.png" alt="V17 attempt 02, matched head detail"><figcaption>V17 attempt 02 · head detail</figcaption></figure>
+    <figure><img src="attempt-02/before-breast.png" alt="V16 attempt 03 base, matched breast detail"><figcaption>Base · breast detail</figcaption></figure>
+    <figure><img src="attempt-02/after-breast.png" alt="V17 attempt 02, matched breast detail"><figcaption>V17 attempt 02 · breast detail</figcaption></figure>
+  </div>
+
+  <h2>Owner target and exported preview</h2>
+  <div class="pair">
+    <figure><img class="reference" src="../../../context/threads/assets/murderbird-owner-likeness-rejection-2026-09-28/2-Pasted-Image-2.jpg" alt="Owner-supplied full-character MurderBird target"><figcaption>Owner-supplied full-character target. Its perspective guides qualitative construction; it does not establish exact dimensions.</figcaption></figure>
+    <figure>
+      <div class="visual"><div id="viewer" role="img" aria-label="Interactive static V17 attempt 02 exported model"></div><img id="render-fallback" hidden src="attempt-02/after-reference-angle.png" alt="Fixed V17 native render; not an interactive motion recording"></div>
+      <div class="controls" aria-label="Model camera">
+        <button data-camera="reference" aria-pressed="true">Reference angle</button><button data-camera="front">Front</button><button data-camera="side">Side</button><button data-camera="rear">Rear</button><button data-camera="head">Head</button><button data-camera="breast">Breast</button><button id="toggle-render" aria-pressed="false">Show fixed render</button>
+      </div>
+      <div class="controls"><label>Visible native parts <select id="era"><option value="builder">Advanced</option><option value="maker">Maker</option><option value="mechanic">Mechanic</option></select></label></div>
+      <p id="status" role="status">Loading the exported V17 attempt 02 model…</p>
+      <figcaption>Neutral static export. Camera movement and era filtering do not demonstrate joint motion, inspection, or clearance.</figcaption>
+    </figure>
+  </div>
+  <p><a href="/?review-body=v17-02">Open the local V17 attempt 02 runtime proposal</a> · <a href="../whole-silhouette-v16/index.html">Compare V16 attempt 03</a></p>
+
+  <h2>Movement and inspection evidence</h2>
+  <p class="note"><b>Held from the default exhibit.</b> A strict triangle-edge-through-face recheck confirmed surface crossings in four sampled poses: authoring-rest inspection, Maker neck control, Advanced contact, and a shallow inspection opening. The confirmed groups include new orbital fittings against temporal crown/root-pin surfaces, the breast access shell against passive ribs, and first-course breast plates against neck laminas and passive ribs. These are discrete-pose findings, not a continuous collision test. V16 remains the development default; joint/action checks do not establish plate clearance or owner likeness acceptance.</p>
+  <p>These are eight native illustrations driven by fresh poses from the exact attempt02 export. They omit procedural browser hardware and are not a recording or physical simulation. The linked runtime separately retains the Maker controls, Mechanic routine, Advanced actions and inspection.</p>
+  <div class="gallery">
+    <figure><img loading="lazy" src="attempt-02/motion-renders/maker-jaw-control-whole-character.png" alt="Maker jaw control pose"><figcaption>Maker · jaw control</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/maker-wing-control-right-mantle-whole-character.png" alt="Maker shield control pose"><figcaption>Maker · shield control</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/mechanic-segment-turn-release-whole-character.png" alt="Mechanic segmented turn"><figcaption>Mechanic · segmented turn</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/advanced-contact-whole-character.png" alt="Advanced contact pose"><figcaption>Advanced · contact</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/advanced-recovery-entry-whole-character.png" alt="Advanced recovery pose"><figcaption>Advanced · recovery</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/advanced-jump-airborne-whole-character.png" alt="Advanced airborne jump"><figcaption>Advanced · airborne jump</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/advanced-thrust-brace-whole-character.png" alt="Advanced braced shield thrust"><figcaption>Advanced · shield thrust</figcaption></figure>
+    <figure><img loading="lazy" src="attempt-02/motion-renders/inspection-open-1-separation-0-whole-character.png" alt="Open inspection pose"><figcaption>Inspection · open assemblies</figcaption></figure>
+  </div>
+  <p><a href="attempt-02/independent-review.md">Independent visual assessment</a> · <a href="attempt-02/check-summary.json">Bounded checks</a> · <a href="attempt-02/motion-renders/pose-render-manifest.json">Exact pose-render record</a> · <a href="attempt-02/regional-clearance-v2/native-clearance-comparison.json">Broadphase surface-screen candidates</a> · <a href="attempt-02/strict-regional-followup/strict-crossings.json">Strict sampled crossing findings</a> · <a href="attempt-02/receipt.json">Native construction record</a> · <a href="attempt-02/export/export-receipt.json">Export record</a></p>
+
+  <h2>Reference scope</h2>
+  <p><a href="../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png">July owner-preferred reference</a> governs the head only. It does not establish body, perch, or wing proportions. The broader silhouette follows the supplied whole-character target and candidate03 lineage without inferring exact measurements.</p>
+  <p><small>Local working proposal · creative content rights reserved · likeness acceptance and full clearance pending.</small></p>
+</main>
+<script type="module" src="./viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "status": "bounded local checks and native pose illustrations completed",
+  "native": {
+    "path": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+    "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b"
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.glb",
+    "sha256": "52980d9578d985737dfe7595515be494d9b1bcfa2dc17d960f18ac6f6fe6049e",
+    "bytes": 10231460
+  },
+  "posePacket": {
+    "path": "assets/audit/whole-character-v17/attempt-02/runtime-poses/pose-snapshot.json",
+    "sha256": "1964918661da857878376ff95457f3b8e0bc73479bd83225a8419fb1e2a627f9",
+    "poses": 21,
+    "namedTransformNodes": 282
+  },
+  "checks": [
+    {
+      "name": "kinematics",
+      "result": "passed",
+      "assertions": "4/4",
+      "report": "assets/audit/whole-character-v17/attempt-02/kinematics/kinematic-alignment.json",
+      "scope": "jaw rigid-distance/opening, Maker raised-foot recovery, bilateral leg travel"
+    },
+    {
+      "name": "inspection",
+      "result": "passed",
+      "assertions": "1/1",
+      "report": "assets/audit/whole-character-v17/attempt-02/inspection/inspection-pose-validation.json",
+      "scope": "eligible exported mesh world-matrix restoration"
+    },
+    {
+      "name": "Advanced power moves",
+      "result": "passed",
+      "assertions": "4/4",
+      "report": "assets/audit/whole-character-v17/attempt-02/power-moves/power-move-validation.json",
+      "scope": "jump height/landing/pause, inspection request during jump, thrust planted-foot and wing envelope behavior"
+    },
+    {
+      "name": "claw contact",
+      "result": "passed",
+      "assertions": "32/32",
+      "report": "assets/audit/whole-character-v17/attempt-02/claw/claw-contact-v4.json",
+      "scope": "contact cycle at 60/120 Hz and interruption paths"
+    }
+  ],
+  "nativePoseIllustrations": {
+    "status": "completed; packet-driven Blender illustrations, not live browser captures or acceptance evidence",
+    "manifest": "assets/audit/whole-character-v17/attempt-02/motion-renders/pose-render-manifest.json",
+    "renderedPoses": 8,
+    "nativePivots": 52,
+    "rendererSha256": "126bf5d5a643fb59093af9b579c4d50c33031168860b7e4b671584eedf365d69",
+    "logs": "assets/audit/whole-character-v17/attempt-02/motion-renders.log"
+  },
+  "limits": [
+    "These checks do not assess artistic acceptance, continuous swept-volume clearance, physical strength, biological plausibility, or browser appearance.",
+    "The kinematics and claw reports identify the supplied GLB path but do not contain an expected-hash field; this run independently verified the GLB SHA-256 before execution. Inspection, power, and native-render receipts record the expected model hash.",
+    "Blender completed all eight renders and wrote its complete manifest. The surrounding zsh command returned an error after Blender exited because it attempted to assign Blender's exit code to the reserved shell variable `status`; the renderer manifest and eight images are present."
+  ],
+  "rootAdjudication": {
+    "finalGlbHashesVerifiedInAllFourReports": true,
+    "note": "Kinematics and claw reports include actual sha256 equal to final GLB. Their lack of a separately named expectedHash field does not break exact model binding.",
+    "regionalClearance": "FAIL in strict sampled checks; candidate held.",
+    "artisticAcceptance": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "status": "Actual local hardware WebGL exercised; likeness and clearance FAIL acceptance",
+  "nativeSha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b",
+  "glbSha256": "52980d9578d985737dfe7595515be494d9b1bcfa2dc17d960f18ac6f6fe6049e",
+  "url": "http://127.0.0.1:5183/?review-body=v17-02&review-seed=927",
+  "galleryUrl": "http://127.0.0.1:5183/assets/audit/whole-character-v17/index.html",
+  "checks": {
+    "gallery": "actual GLB loads; three era filters and fixed-image toggle exercised",
+    "maker": "all five UI controls taken to maximum and returned; explicit 0.8 s debug settling per sample",
+    "mechanic": {
+      "method": "UI engaged; 120 samples with explicit 0.2 s debug stepping; cycle then stopped",
+      "stages": [
+        "disengaged",
+        "dwell",
+        "load",
+        "release",
+        "settle"
+      ]
+    },
+    "advancedLive": "V2 trace observes both accepted jump and thrust through load, airborne, landing, recover, drive and brace; 130 real-time samples without stepping",
+    "advancedStrike": {
+      "method": "UI Reach followed by explicit .02 s debug steps",
+      "states": [
+        "approach",
+        "contact",
+        "notice",
+        "strike",
+        "warning"
+      ],
+      "samples": 332,
+      "contactObserved": false,
+      "contactStateObserved": true,
+      "contactObservedScope": "motion.contact flag remained false; state machine reached contact. These are distinct diagnostics."
+    },
+    "inspection": "Maker/Mechanic/Advanced opening and Advanced full separation, reassembly exercised; this does not imply surface clearance",
+    "console": "no warning/error entries returned for either current tab"
+  },
+  "performance": {
+    "method": "360 independent requestAnimationFrame intervals during normal unpaused watch/pace, no debug stepping",
+    "durationMs": 3606.4000000059605,
+    "frameMsP50": 10,
+    "frameMsP95": 11.400000000000091,
+    "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+    "canvas": {
+      "width": 856,
+      "height": 648,
+      "bufferWidth": 856,
+      "bufferHeight": 648,
+      "pixelRatio": 1
+    },
+    "scope": "Short single-machine watch/pace sample; not sustained action, mobile or worst-case benchmark"
+  },
+  "evidenceLimits": [
+    "Early controls-only or partly framed screenshots are retained but not relied on for model appearance; use files ending -view.png and reference-and-webgl.png.",
+    "advanced-recovery-view.png is recovery, not contact; the earlier filename suggesting contact was corrected.",
+    "advanced-live-jump-thrust.json is incomplete due to an initial sampler stop condition; use -v2.json.",
+    "Main illustrated fallback still depicts V9, not V17. Gallery fixed image is explicitly labeled native V17.",
+    "Motion constraints are kinematic, not physical simulation. Strict regional native surface checks confirm crossings.",
+    "Native illustration and browser appearance are distinct. No finished era material parity or artistic acceptance established."
+  ]
+}

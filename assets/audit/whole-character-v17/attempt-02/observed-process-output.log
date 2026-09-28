@@ -1,0 +1,19 @@
+Captured stdout from the four validator processes (output files are the structured reports linked in check-summary.json):
+
+verify-alignment-kinematics.mjs
+passed: 4/4 kinematic alignment checks
+exit code: 0
+
+verify-inspection-pose-v4.mjs
+passed: 1/1 checks
+exit code: 0
+
+verify-advanced-power-moves.mjs
+passed: 4/4 checks
+exit code: 0
+
+verify-claw-contact-v4.mjs
+passed: 32/32 checks
+exit code: 0
+
+Blender pose renderer's complete stdout is preserved at motion-renders.log. Its manifest confirms all eight images and all input hashes. The wrapping zsh command later returned an error when assigning to its reserved `status` variable; Blender itself printed `Blender quit` after writing the complete manifest.

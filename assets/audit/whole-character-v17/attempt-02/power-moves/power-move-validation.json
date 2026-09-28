@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-09-28T22:47:03.941Z",
+  "model": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.glb",
+  "report": "assets/audit/whole-character-v17/attempt-02/power-moves/power-move-validation.json",
+  "checks": [
+    {
+      "name": "jump-height-foot-clearance-and-grounded-landing",
+      "status": "passed",
+      "result": {
+        "peakHeight": 0.3599833402748855,
+        "peakBodyTop": 2.094024253856734,
+        "peakFeetGroundMin": [
+          0.3903685701909283,
+          0.3903685701909283
+        ],
+        "landingFeetGroundMin": [
+          0.0020000000000000573,
+          0.0020000000000000573
+        ],
+        "maxFootError": 2.220446049250313e-16,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        }
+      }
+    },
+    {
+      "name": "jump-pause-midair-freezes-and-resumes",
+      "status": "passed",
+      "result": {
+        "frozenForSeconds": 0.5,
+        "phase": 0.4285714285714287,
+        "root": [
+          0,
+          0.3599833402748855,
+          -0.25
+        ],
+        "feetFrozen": true,
+        "resumedAndLanded": true
+      }
+    },
+    {
+      "name": "inspection-request-midair-waits-for-landing",
+      "status": "passed",
+      "result": {
+        "completedBeforeInspection": true,
+        "grounded": true,
+        "settled": true
+      }
+    },
+    {
+      "name": "thrust-planted-feet-asymmetric-wing-drive-and-envelope",
+      "status": "passed",
+      "result": {
+        "stagedRoot": {
+          "x": 0,
+          "z": -0.33334479553142415,
+          "yaw": 2.9924999999999966,
+          "speed": 0.23451341607798207
+        },
+        "actionRoot": {
+          "x": 0,
+          "z": -0.3518053648777545,
+          "yaw": 2.9924999999999966,
+          "speed": 0
+        },
+        "rightShoulder": -0.64,
+        "rightElbow": 0.72,
+        "leftShoulder": 0.07,
+        "leftElbow": 0.18,
+        "maxFootError": 2.6945789820192466e-16,
+        "plantedFeet": [
+          0.0020000000000000573,
+          0.0019999999999998908
+        ],
+        "root": {
+          "x": 0,
+          "z": -0.3518053648777545,
+          "yaw": 2.9924999999999966,
+          "speed": 0
+        },
+        "bounds": {
+          "min": [
+            -0.511099632368913,
+            0.0019999999999998908,
+            -1.0341156124701605
+          ],
+          "max": [
+            0.5320537967169775,
+            1.7340409135818482,
+            0.17447918114648153
+          ]
+        }
+      }
+    }
+  ],
+  "modelSha256": "52980d9578d985737dfe7595515be494d9b1bcfa2dc17d960f18ac6f6fe6049e",
+  "modelBytes": 10231460,
+  "status": "passed"
+}

@@ -1,0 +1,19 @@
+00:00.287  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-silhouette-v16/attempt-03/murderbird-whole-silhouette-v16.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/build-whole-character-v17.py", line 35, in <module>
+    bpy.context.view_layer.update();after=h['scene_snapshot']()
+                                          ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/build-uncaged-alignment-v7.py", line 200, in scene_snapshot
+    "modifiers": modifier_signature(obj), "props": id_properties(obj),
+                 ~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/build-uncaged-alignment-v7.py", line 140, in modifier_signature
+    require(modifier.type in fields, f"Unreviewed guard modifier type: {obj.name}/{modifier.type}")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/build-uncaged-alignment-v7.py", line 72, in require
+    raise RuntimeError(message)
+RuntimeError: Unreviewed guard modifier type: Breast inner access shell/SUBSURF
+
+Error: script failed, file: 'scripts/build-whole-character-v17.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
