@@ -1,0 +1,75 @@
+{
+  "title": "V2 attempt 02 head fit diagnostic",
+  "status": "read-only diagnostic; the native candidate remains held and is not recommended for integration",
+  "source": {
+    "v7NativeBlend": {
+      "path": "assets/models/uncaged-alignment-v7/murderbird-alignment-v7.blend",
+      "sha256": "a8fccaf024a096678415215029b34cae8270b348da2301b8872a34e72c75ed3f"
+    },
+    "candidateBlend": {
+      "path": "assets/models/uncaged-head-construction-study-v2/iterations/attempt-02/murderbird-head-construction-study-v2.blend",
+      "sha256": "ecdef9d1191f62200ce26f81c437d35a64fad79bd95ae9da90589752081fdbda"
+    },
+    "julyHeadReference": {
+      "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "scope": "head only"
+    },
+    "generatorSnapshot": {
+      "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/study-v7-head-construction.py",
+      "sha256": "e1c5b44a17a6d26b7c3bb3fb36ea39c459b1bbaf2335d0fc0358bbbd29be3c00"
+    }
+  },
+  "measurements": {
+    "seatedAdvancedOptic": {
+      "leftWorldBounds": {"x": [-0.153, -0.1505], "y": [-0.412, -0.326], "z": [1.743, 1.829]},
+      "rightWorldBounds": {"x": [0.1505, 0.153], "y": [-0.412, -0.326], "z": [1.743, 1.829]}
+    },
+    "recessedOrbitalBearingOuterBounds": {
+      "leftWorldBounds": {"x": [-0.16, -0.149], "y": [-0.426634, -0.309905], "z": [1.725722, 1.839918]},
+      "rightWorldBounds": {"x": [0.149, 0.16], "y": [-0.426634, -0.309905], "z": [1.725722, 1.839918]}
+    },
+    "browToExistingCover": {
+      "method": "For each brow vertex, nearest Euclidean distance to a world-space BVH union of Rounded swept crown lamina 0-3 and Swept temporal lamina -1/1 0 0.",
+      "outerSkinNearestGapMeters": {"min": 0.00001, "median": 0.01725, "p90": 0.05395, "max": 0.06428},
+      "backSkinNearestGapMeters": {"min": 0.00002, "median": 0.01484, "p90": 0.04997, "max": 0.06219},
+      "analyticSectionDomain": {
+        "method": "Evaluate the section-domain q=(y-cy)/ry used by the study's cranial_width profile; |q|>1 has no supported elliptical cross-section and was clamped by the generator.",
+        "verticesOutsideSupportedProfile": 916,
+        "verticesTotalPerBrow": 1482,
+        "outsideQRange": [-3.51916, -1.00034],
+        "inDomainAnalyticSurfaceOffsetMeters": {"min": 0.01698, "median": 0.028, "max": 0.037},
+        "interpretation": "The 28 mm median offset applies only to vertices within the analytic section domain. The larger cover-distance tail and unsupported forward stations explain the proud, horn-like reading; they are not a validated clearance measurement against an artist-approved shell surface."
+      }
+    },
+    "cheekToOpticProjectedKeepout": {
+      "method": "Approximate 2D outer-bearing ellipse from its world Y/Z bounds, centered at y=-0.368269,z=1.782820 with radii 0.058365m and 0.057098m; count mesh vertices inside it and in front of the lens X plane.",
+      "perSideVerticesInsideProjectedOuterRing": 356,
+      "perSideVerticesTotal": 1482,
+      "perSideInsideAndInFrontOfActiveLensPlane": 272,
+      "interpretation": "This is a projected vertex keepout diagnostic, not exact triangle-triangle collision proof. It confirms the cheek band's lower arc occupies the optic's visible footprint and matches the rendered masking."
+    }
+  },
+  "visualReview": {
+    "afterFrontBilateral": {"path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-front-bilateral.png", "sha256": "14452fdfcc77fb5e516e8d92e46537d747907b28966d8471809f90b7f3e33fac"},
+    "afterLeftProfile": {"path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-left-profile.png", "sha256": "974a06c3f622235ab608c55af2b077a0838ec456695cc7dea943f15ed6b84323"},
+    "afterThreeQuarterA": {"path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-three-quarter-a.png", "sha256": "f620169069bded659f2d9e6b05fbb34303c71dc957238f26a35c56db98ccf7fe"},
+    "afterThreeQuarterB": {"path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-three-quarter-b.png", "sha256": "4016051ad7a227a1cff6ff2cbe947b768d6ce464c076c1fe000012c2c5a20872"},
+    "observed": [
+      "The new cheek band crosses the lower optic and hides part of its visible opening.",
+      "The brow reads as two raised rails/horns instead of a fitted sweeping plate.",
+      "The existing bill retains a smooth hooked surface; this attempt changes only the root stations through t<0.34, leaving the broad middle plane unresolved."
+    ]
+  },
+  "boundedCorrectionProposal": [
+    "Rebuild the brow against the neighboring cranial-cover surfaces or a ray-validated analytic shell. Keep the outer plate skin within roughly 3-6 mm of that surface, taper endpoints into supported cover overlap, and avoid extrapolated section stations. Keep a physical plate thickness of that same small order; do not lift the whole band 33 mm.",
+    "Route the cheek arc outside the bearing/lens projected footprint and verify face-level clearance; keep the entire active lens and bearing opening visible. The ellipse above is an approximate screening envelope only.",
+    "For a later separately reviewed proposal, consider broadening/flattening the upper-bill middle region approximately t=0.34-0.82 on the existing blade mesh while preserving the dorsal outer contour and the final contact/apex zone (e.g. t>=0.88) exactly. That needs a new explicit allowlist and a separate native candidate; it was not changed here."
+  ],
+  "limits": [
+    "No jaw-opening or other authored-motion collision checks were run for this proposal.",
+    "The projected optic ellipse is derived from object bounds; it is not an exact surface-intersection test.",
+    "The July illustration is head-only guidance, not dimensional metrology.",
+    "No GLB, runtime integration, artistic acceptance, or owner acceptance is claimed."
+  ]
+}

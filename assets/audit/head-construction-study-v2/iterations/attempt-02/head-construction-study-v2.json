@@ -1,0 +1,329 @@
+{
+  "title": "V7 native head-construction study V2",
+  "status": "isolated editable native-only proposal; held for review; no GLB, runtime integration, or acceptance",
+  "source": {
+    "nativeBlend": {
+      "path": "assets/models/uncaged-alignment-v7/murderbird-alignment-v7.blend",
+      "sha256": "a8fccaf024a096678415215029b34cae8270b348da2301b8872a34e72c75ed3f"
+    },
+    "nativeInventory": {
+      "path": "assets/models/uncaged-alignment-v7/alignment-inventory.json",
+      "sha256": "9346323a07dd618dcb9680cf5d5d620aef1c6608c986a590a3a9aee90d550c5c"
+    },
+    "headRecipe": {
+      "path": "scripts/alignment-v6-head.py",
+      "sha256": "a921130111ac27f14f1ddda10328f7dd21bf2cffa1d4e34aee8d1756fd738472"
+    },
+    "julyReference": {
+      "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "scope": "head only"
+    }
+  },
+  "attempt": "attempt-02",
+  "candidate": {
+    "path": "assets/models/uncaged-head-construction-study-v2/iterations/attempt-02/murderbird-head-construction-study-v2.blend",
+    "sha256": "ecdef9d1191f62200ce26f81c437d35a64fad79bd95ae9da90589752081fdbda",
+    "bytes": 2038430
+  },
+  "scriptSnapshot": {
+    "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/study-v7-head-construction.py",
+    "sha256": "e1c5b44a17a6d26b7c3bb3fb36ea39c459b1bbaf2335d0fc0358bbbd29be3c00"
+  },
+  "preMutationContracts": {
+    "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/target-contracts-before-mutation.json",
+    "sha256": "58034b8e18998a7ce498c95e411e1985c3a3ba63324bab4a46226f4dfa128e2d"
+  },
+  "changeAllowlist": [
+    "Broad swept cheek band -1",
+    "Broad swept cheek band 1",
+    "Cere root transition -1",
+    "Cere root transition 1",
+    "Forged orbital brow -1",
+    "Forged orbital brow 1",
+    "Overlapping nasal hood",
+    "Profiled upper bill blade 0",
+    "Profiled upper bill blade 1"
+  ],
+  "targetOwners": {
+    "Forged orbital brow -1": "cranial-cover",
+    "Forged orbital brow 1": "cranial-cover",
+    "Cere root transition -1": "upper-bill",
+    "Cere root transition 1": "upper-bill",
+    "Broad swept cheek band -1": "head",
+    "Broad swept cheek band 1": "head",
+    "Overlapping nasal hood": "upper-bill",
+    "Profiled upper bill blade 0": "upper-bill",
+    "Profiled upper bill blade 1": "upper-bill"
+  },
+  "roundTripRetentionException": {
+    "materials": [
+      "Neutral / edge.001",
+      "Neutral / plate.001"
+    ],
+    "change": "fake-user flag only, to retain two source zero-user material datablocks across Blender save/reload",
+    "shaderNodesValuesAndAssignmentsPreserved": true
+  },
+  "verification": {
+    "onlyAllowlistedMeshGeometryChanged": true,
+    "allNonallowlistedNativeObjectsPreservedExactly": true,
+    "allObjectTransformsAndAssignmentsPreservedExactly": true,
+    "allMaterialShaderSignaturesAndMeshAssignmentsPreservedExactly": true,
+    "candidateReloadedAndCompared": true,
+    "beforeAfterUseMatchedCameras": true,
+    "distalBillBladeRowsAboveStudyRootT034Unchanged": true,
+    "jawOpticsCrownPivotsAndContactObjectDataUnchanged": true
+  },
+  "renders": {
+    "before": [
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/before-front-bilateral.png",
+        "sha256": "790007292f2ab20424cf2a21301bf42b2bc6edf81417918b478e7224c8689646",
+        "bytes": 1243096,
+        "camera": {
+          "name": "front-bilateral",
+          "position": [
+            0,
+            -6,
+            1.78
+          ],
+          "target": [
+            0,
+            -0.3,
+            1.78
+          ],
+          "ortho": 1.05,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/before-left-profile.png",
+        "sha256": "598bdcc106ccaf44445d0748792e3575c219618fc6f0eb9ab75c95fba4c5c098",
+        "bytes": 1240492,
+        "camera": {
+          "name": "left-profile",
+          "position": [
+            -6,
+            -0.3,
+            1.78
+          ],
+          "target": [
+            0,
+            -0.3,
+            1.78
+          ],
+          "ortho": 1.1,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/before-right-profile.png",
+        "sha256": "4c6151f36865dc9600d19cb147b8d3912faff22f40888c2226c5b97a5a5b2c70",
+        "bytes": 1264610,
+        "camera": {
+          "name": "right-profile",
+          "position": [
+            6,
+            -0.3,
+            1.78
+          ],
+          "target": [
+            0,
+            -0.3,
+            1.78
+          ],
+          "ortho": 1.1,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/before-three-quarter-a.png",
+        "sha256": "6d1e675d065b080b9e8d711c963ee49da57519d4cee59103d1f8e431ecf75979",
+        "bytes": 1307240,
+        "camera": {
+          "name": "three-quarter-a",
+          "position": [
+            -6,
+            -3,
+            2.4
+          ],
+          "target": [
+            0,
+            -0.29,
+            1.78
+          ],
+          "ortho": 0.88,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/before-three-quarter-b.png",
+        "sha256": "266c360e19dd6fab5ea7ec1ce6fb71e27bf8c60776536bd0557d0f0c60e0955d",
+        "bytes": 1298342,
+        "camera": {
+          "name": "three-quarter-b",
+          "position": [
+            -6,
+            -4.2,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.29,
+            1.78
+          ],
+          "ortho": 0.88,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      }
+    ],
+    "after": [
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-front-bilateral.png",
+        "sha256": "14452fdfcc77fb5e516e8d92e46537d747907b28966d8471809f90b7f3e33fac",
+        "bytes": 1249900,
+        "camera": {
+          "name": "front-bilateral",
+          "position": [
+            0,
+            -6,
+            1.78
+          ],
+          "target": [
+            0,
+            -0.3,
+            1.78
+          ],
+          "ortho": 1.05,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-left-profile.png",
+        "sha256": "974a06c3f622235ab608c55af2b077a0838ec456695cc7dea943f15ed6b84323",
+        "bytes": 1239122,
+        "camera": {
+          "name": "left-profile",
+          "position": [
+            -6,
+            -0.3,
+            1.78
+          ],
+          "target": [
+            0,
+            -0.3,
+            1.78
+          ],
+          "ortho": 1.1,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-right-profile.png",
+        "sha256": "a95b9b747d7905e837fbd22e92b92fe4c5e106d9e10b2397d5a2137a0b97a939",
+        "bytes": 1264361,
+        "camera": {
+          "name": "right-profile",
+          "position": [
+            6,
+            -0.3,
+            1.78
+          ],
+          "target": [
+            0,
+            -0.3,
+            1.78
+          ],
+          "ortho": 1.1,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-three-quarter-a.png",
+        "sha256": "f620169069bded659f2d9e6b05fbb34303c71dc957238f26a35c56db98ccf7fe",
+        "bytes": 1310862,
+        "camera": {
+          "name": "three-quarter-a",
+          "position": [
+            -6,
+            -3,
+            2.4
+          ],
+          "target": [
+            0,
+            -0.29,
+            1.78
+          ],
+          "ortho": 0.88,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      },
+      {
+        "path": "assets/audit/head-construction-study-v2/iterations/attempt-02/after-three-quarter-b.png",
+        "sha256": "4016051ad7a227a1cff6ff2cbe947b768d6ce464c076c1fe000012c2c5a20872",
+        "bytes": 1306124,
+        "camera": {
+          "name": "three-quarter-b",
+          "position": [
+            -6,
+            -4.2,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.29,
+            1.78
+          ],
+          "ortho": 0.88,
+          "projection": "ORTHO",
+          "resolution": [
+            1100,
+            1100
+          ]
+        }
+      }
+    ]
+  },
+  "limits": [
+    "The July illustration guides head construction only; it is not exact-dimensional evidence.",
+    "These are neutral static authoring renders, not runtime, shader, or animation evidence.",
+    "Jaw, optic and crown native data were preserved, but full authored-motion collision checks were not run on this proposal.",
+    "Visual coherence, opening clearance and likeness remain review questions; a preservation hash is not artistic acceptance."
+  ]
+}
