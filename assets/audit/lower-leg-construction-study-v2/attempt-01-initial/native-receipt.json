@@ -1,0 +1,168 @@
+{
+  "status": "single fitted bilateral shin replacement; visual and clearance review required",
+  "source": {
+    "path": "assets/models/uncaged-alignment-v9/murderbird-alignment-v9.blend",
+    "sha256": "4d7568d1c2ba7cab716876f57a6c20cb6a788d4daeef1d5d34f85c1910ed2bbe"
+  },
+  "native": {
+    "path": "assets/models/uncaged-lower-leg-construction-study-v2/murderbird-lower-leg-construction-study-v2.blend",
+    "sha256": "3ce9d6c647493481ef433a879ac8806914b074a07db6d783d90290a46495e576",
+    "bytes": 1974568
+  },
+  "generator": {
+    "path": "scripts/study-lower-leg-construction-v2.py",
+    "sha256": "677bb5549db09b99e88fce48019359d23a6e80d4af952abb6fa6ad09517056d5",
+    "frozenCopy": "assets/audit/lower-leg-construction-study-v2/executed-generator.py",
+    "frozenCopySha256": "677bb5549db09b99e88fce48019359d23a6e80d4af952abb6fa6ad09517056d5",
+    "sameBytes": true
+  },
+  "blender": "5.2.1 LTS",
+  "replacementAllowlist": [
+    "Limb sheath fixing.006",
+    "Limb sheath fixing.007",
+    "Limb sheath fixing.008",
+    "Limb sheath fixing.009",
+    "Limb sheath fixing.010",
+    "Limb sheath fixing.011",
+    "Limb sheath fixing.018",
+    "Limb sheath fixing.019",
+    "Limb sheath fixing.020",
+    "Limb sheath fixing.021",
+    "Limb sheath fixing.022",
+    "Limb sheath fixing.023",
+    "left shaped shin guard distal-overlap",
+    "left shaped shin guard proximal",
+    "left tapered passive load rail.002",
+    "left tapered passive load rail.003",
+    "right shaped shin guard distal-overlap",
+    "right shaped shin guard proximal",
+    "right tapered passive load rail.002",
+    "right tapered passive load rail.003"
+  ],
+  "addedMeshes": [
+    "left shin distal fitted bearing saddle",
+    "left shin integrated anterior wrap guard",
+    "left shin proximal fitted bearing saddle",
+    "left shin twin-bearing load cage",
+    "right shin distal fitted bearing saddle",
+    "right shin integrated anterior wrap guard",
+    "right shin proximal fitted bearing saddle",
+    "right shin twin-bearing load cage"
+  ],
+  "preservation": {
+    "unchangedSourceObjects": 1192,
+    "changedOrMissingPreservedObjects": [],
+    "sourceMeshCount": 699,
+    "removedMeshCount": 20,
+    "newMeshCount": 8,
+    "pivotCount": 51,
+    "curveCount": 462,
+    "materialCount": 10
+  },
+  "owners": {
+    "left shin distal fitted bearing saddle": "left-shin",
+    "left shin integrated anterior wrap guard": "left-shin",
+    "left shin proximal fitted bearing saddle": "left-shin",
+    "left shin twin-bearing load cage": "left-shin",
+    "right shin distal fitted bearing saddle": "right-shin",
+    "right shin integrated anterior wrap guard": "right-shin",
+    "right shin proximal fitted bearing saddle": "right-shin",
+    "right shin twin-bearing load cage": "right-shin"
+  },
+  "eraEligibility": {
+    "left shin distal fitted bearing saddle": "maker,mechanic,builder",
+    "left shin integrated anterior wrap guard": "maker,mechanic,builder",
+    "left shin proximal fitted bearing saddle": "maker,mechanic,builder",
+    "left shin twin-bearing load cage": "maker,mechanic,builder",
+    "right shin distal fitted bearing saddle": "maker,mechanic,builder",
+    "right shin integrated anterior wrap guard": "maker,mechanic,builder",
+    "right shin proximal fitted bearing saddle": "maker,mechanic,builder",
+    "right shin twin-bearing load cage": "maker,mechanic,builder"
+  },
+  "intendedFixedMatingContacts": [
+    {
+      "pair": [
+        "left shin twin-bearing load cage",
+        "left shin proximal fitted bearing saddle"
+      ],
+      "type": "fixed cage-to-saddle seat",
+      "expected": true
+    },
+    {
+      "pair": [
+        "left shin twin-bearing load cage",
+        "left shin distal fitted bearing saddle"
+      ],
+      "type": "fixed cage-to-saddle seat",
+      "expected": true
+    },
+    {
+      "pair": [
+        "left shin twin-bearing load cage",
+        "left shin integrated anterior wrap guard"
+      ],
+      "type": "formed guard hems into load rails",
+      "expected": true
+    },
+    {
+      "pair": [
+        "right shin twin-bearing load cage",
+        "right shin proximal fitted bearing saddle"
+      ],
+      "type": "fixed cage-to-saddle seat",
+      "expected": true
+    },
+    {
+      "pair": [
+        "right shin twin-bearing load cage",
+        "right shin distal fitted bearing saddle"
+      ],
+      "type": "fixed cage-to-saddle seat",
+      "expected": true
+    },
+    {
+      "pair": [
+        "right shin twin-bearing load cage",
+        "right shin integrated anterior wrap guard"
+      ],
+      "type": "formed guard hems into load rails",
+      "expected": true
+    }
+  ],
+  "centerlines": {
+    "perSide": "Existing left/right shin pivot bearing center to corresponding foot pivot bearing center; no pivot transforms changed.",
+    "railCenterOffsetsNativeM": {
+      "lateral": 0.055,
+      "frontStations": [
+        [
+          0.095,
+          0.06
+        ],
+        [
+          0.17,
+          0.049
+        ],
+        [
+          0.34,
+          0.03
+        ],
+        [
+          0.63,
+          0.023
+        ],
+        [
+          0.83,
+          0.037
+        ],
+        [
+          0.91,
+          0.052
+        ]
+      ]
+    }
+  },
+  "limits": [
+    "Authored interpretation based on reference images; dimensions are not measured from a source CAD model.",
+    "Passive geometry only; runtime actuation, continuous swept clearance and engineering loads are not validated."
+  ]
+}
