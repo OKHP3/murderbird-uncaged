@@ -1,0 +1,3 @@
+# Independent visual review
+
+Compared the [before head](before-head.png), [after head](after-head.png), [after profile](after-head-profile.png), and [after reference-angle](after-reference-angle.png) with the supplied owner target and July head reference. The upper bill is visibly improved: the profile has a deeper root and a heavier downward hook, closer to the reference than the previous narrow wedge. The main remaining mismatch is the mouth: the lower mandible stays thin and weakly separated beneath the larger upper bill, so the curved lower-jaw contour and open cheek-side gape remain less legible than in the references. This is a bounded still-image review, not an acceptance or motion/clearance result.
