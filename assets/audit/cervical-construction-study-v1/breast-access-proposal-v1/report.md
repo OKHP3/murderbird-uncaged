@@ -1,0 +1,21 @@
+# Breast access path and proposed staged opening
+
+**Status: diagnostic and trajectory proposal only.** V4 actuator hardware has not been built or integrated. This report does not select the cervical study or claim accepted clearance.
+
+The V4 Advanced actuator proposal places its upper horn on `cervical-upper` at native local `(-0.235, -0.060, 0.015)` and its lower anchor on `neck` at `(-0.235, -0.270, 0.090)`. The proposed short actuator therefore crosses the side/front region occupied by breastplate-owned parts as the panel opens. The opening is not a translation: `applyInspectionPose()` sets `breastplate.rotation.y = -1.35 * open`, rotating the plate about its authored pivot. The current eased runtime moves `open` and `separation` independently toward their targets; it does not gate the opening rotation on a prior clearance slide.
+
+The pinned V4 proposal diagnostic identifies the conflict at `inspection-open-0.75-separation-0`: the proposed Advanced actuator segment passes within **1.254 mm** of `Breast lateral feather -1 0 1`. With the diagnostic's nominal 12 mm housing radius, the sampled margin is **−10.746 mm**; its conservative 17-sample segment lower bound is **−15.089 mm**. At open 0.5 / separation 0, the same line's conservative 12 mm margin is **+15.102 mm**. At open 1 / separation 0, it is **−3.992 mm** by that bound, with the nearest sample on `Breast inner access shell` at 12.351 mm. At open 1 / separation 0.5, the lower bound is **+49.193 mm**. The mid-swing collision is thus localized to the breast assembly crossing the proposed actuator path, not a general actuator leverage failure.
+
+## Candidate rigid-panel trajectory
+
+Keep the existing closed transform exactly at `(open=0, separation=0)`. For opening, first rotate to `open=0.5` while holding `separation=0`; then hold the panel and translate it along its existing rigid exploded offset to `separation=0.5`; only then continue rotation to `open=1`, and finish the existing separation travel to `separation=1`. The endpoint remains the current fully open and fully separated state, so no closed-state repositioning or panel deformation is needed. Closing can reverse those stages: reduce rotation to 0.5 while separated, slide to separation 0, then rotate closed.
+
+This is the most bounded candidate supported by the present samples: it avoids continuing through the known 0.75 / 0 path and reaches an already sampled clear endpoint at open 1 / separation 0.5. **The intermediate slide at open 0.5 / separation 0→0.5 and the continued rotation at separation 0.5 have not been clearance-tested.** They must be sampled against the full actuator housing and fittings before this route can be treated as viable. The present poses are discrete; they do not establish continuous swept-volume clearance. If those checks fail, move/tilt the breast hinge axis while compensating the panel rest transform to preserve the exact closed pose, then repeat the sweep.
+
+## Evidence and limits
+
+The proposal's source native is `assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend` (SHA256 `751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98`). The 21-pose packet is bound to the corresponding attempt-07 GLB SHA256 `5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf` and records the captured native pivot matrices. Each row contains the full GLB node inventory; the recorded pose applies the 52 native pivot set, while procedural nodes are not additional native pivots. The opening matrices are direct evaluations of the production inspection-pose helper at the sampled open/separation values.
+
+The source helper resets nodes to rest before applying inspection transforms. It rotates the breastplate and adds `separation * (-0.70, -0.12, 0.18)` in breastplate parent-local position. The proposal report's 17-segment samples and 1-Lipschitz lower bound apply to straight actuator centerlines at each discrete pose. They do not cover the sequence proposed above, continuous interpolation, actuator end fittings, supports, forces, or runtime implementation. No native, app, or runtime file was changed for this review.
+
+Input hashes are recorded in [receipt.json](receipt.json).

@@ -1,0 +1,69 @@
+{
+  "schema": "murderbird-breast-access-proposal-review/v1",
+  "status": "read-only diagnostic; staged trajectory is an unverified proposal",
+  "createdAt": "2026-09-28",
+  "artifacts": {
+    "proposalNative": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+      "bytes": 1907219
+    },
+    "posePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "poseCount": 21,
+      "nativePivotCount": 52,
+      "note": "Packet inventories 281 GLB nodes per pose, including 67 transform rows; its captured native pivot set is 52. Procedural transform nodes are not counted as native pivots."
+    },
+    "mountingNeighborhoods": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-07/control-mount-proposal-v4/mounting-neighborhoods.json",
+      "sha256": "9957fefb1edbcbc1d9cc65d6c73f234a4eb33c327189f61664e0ff3dfb272c85"
+    },
+    "actuationLeverage": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-07/control-mount-proposal-v4/actuation-leverage.json",
+      "sha256": "4a7013aa4819e18970c06a3d8fef2c6efa8de225b56278c1b2e082a310c1740f"
+    },
+    "consolidationNotes": {
+      "path": "assets/audit/cervical-construction-study-v1/construction-consolidation-v1.md",
+      "sha256": "c81b1adec6c2d06964b4dc94bbd7dd8d9dae4004a178b3e6c0ae5fa1bebfd3d8"
+    },
+    "inspectionPoseSource": {
+      "path": "src/scene/inspection-pose.js",
+      "sha256": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71"
+    },
+    "runtimeCallSite": {
+      "path": "src/scene/presence-exhibit.js",
+      "sha256": "6991d0bb11685790a4b875908bee76dac011779264823f9487364c42140859f0"
+    }
+  },
+  "finding": {
+    "breastplateTrajectory": "rotation.y = -1.35 * open; separation adds a parent-local offset after the rotation pose is assigned",
+    "demonstratedConflict": {
+      "pose": "inspection-open-0.75-separation-0",
+      "actuator": "advanced-short-actuator",
+      "obstacle": "Breast lateral feather -1 0 1",
+      "sampledCenterlineDistanceM": 0.0012536984868347645,
+      "sampled12mmHousingMarginM": -0.010746301513165236,
+      "conservative12mmHousingMarginLowerBoundM": -0.015089264457377445
+    },
+    "clearanceContext": [
+      {"pose": "inspection-open-0.5-separation-0", "sampledCenterlineDistanceM": 0.03144450485706329, "conservative12mmHousingMarginLowerBoundM": 0.015101541912851086},
+      {"pose": "inspection-open-1-separation-0", "obstacle": "Breast inner access shell", "sampledCenterlineDistanceM": 0.012351312674582005, "conservative12mmHousingMarginLowerBoundM": -0.003991650269630205},
+      {"pose": "inspection-open-1-separation-0.5", "conservative12mmHousingMarginLowerBoundM": 0.04919285807639097}
+    ],
+    "proposedTrajectory": [
+      {"open": 0, "separation": 0, "action": "closed/rest; preserve existing transform"},
+      {"open": 0.5, "separation": 0, "action": "rotate panel to sampled clear intermediate angle"},
+      {"open": 0.5, "separation": 0.5, "action": "slide panel before entering known conflict band; unverified intermediate"},
+      {"open": 1, "separation": 0.5, "action": "rotate fully open; sampled endpoint has positive conservative margin"},
+      {"open": 1, "separation": 1, "action": "finish current separation travel; full access endpoint"}
+    ]
+  },
+  "limits": [
+    "No pose interpolation or swept-volume test of the proposed staged route was run.",
+    "The actuator itself is proposed geometry only; no hardware, supports, brackets, or end fittings are modeled here.",
+    "Discrete line-to-native-surface bounds do not establish physical, continuous, or force clearance.",
+    "No source/app/runtime changes, geometry edits, or acceptance decision were made."
+  ]
+}

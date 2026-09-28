@@ -1,0 +1,89 @@
+{
+  "schema": "murderbird-panel-only-staged-access-screen/v1",
+  "status": "specified panel-only slide rejected for V4 actuator envelope; candidate-only static screen",
+  "createdAt": "2026-09-28",
+  "artifacts": {
+    "native": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+      "bytes": 1907219
+    },
+    "posePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "poseCount": 21,
+      "nativePivotCount": 52,
+      "packetTransformRowsPerPose": 67
+    },
+    "mountingProposal": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-07/control-mount-proposal-v4/mounting-neighborhoods.json",
+      "sha256": "9957fefb1edbcbc1d9cc65d6c73f234a4eb33c327189f61664e0ff3dfb272c85"
+    },
+    "analyzer": {
+      "path": "assets/audit/cervical-construction-study-v1/breast-access-proposal-v2/analyze-panel-trajectory.py",
+      "sha256": "f3234636842962daf3b16ec6a9fd367aae5a549237da19afc04b67339abc5955"
+    },
+    "diagnostic": {
+      "path": "assets/audit/cervical-construction-study-v1/breast-access-proposal-v2/panel-trajectory-clearance.json",
+      "sha256": "5b3894a34e9a9b8f29ddb45b5609420746d7c4b622d1928db3b7b55534cd6d0c",
+      "samples": 101
+    },
+    "supersededFirstPass": {
+      "path": "assets/audit/cervical-construction-study-v1/breast-access-proposal-v2/panel-trajectory-clearance-first-pass.json",
+      "note": "Preserved output from the same 101 sampled trajectory before adding safe-scalar intervals; final diagnostic above is authoritative."
+    }
+  },
+  "trajectory": {
+    "scope": "Only breastplate and its mesh descendants move. All other native owners remain at attempt-07 rest transforms. The app's global assembly separation is not applied.",
+    "stageA": {"openRange": [0, 0.3333333333333333], "angleRadRange": [0, -0.675], "slideScalar": 0},
+    "stageB": {"openRange": [0.3333333333333333, 0.6666666666666666], "angleRad": -0.675, "slideScalarRange": [0, 0.5]},
+    "stageC": {"openRange": [0.6666666666666666, 1], "angleRadRange": [-0.675, -1.35], "slideScalar": 0.5},
+    "panelLocalRuntimeOffsetPerUnit": [-0.7, -0.12, 0.18],
+    "actuatorHousingRadiusM": 0.012,
+    "breastMeshCount": 130,
+    "breastTriangleCount": 19776,
+    "stationaryRegionalOwnerGroups": ["body", "neck", "cervical-upper", "head", "jaw", "upper-bill", "cranial-cover", "builder-optics", "processing", "left-mantle", "right-mantle", "left-wing-shield", "right-wing-shield"],
+    "localMatrixReconciliationMaxError": 0
+  },
+  "keyFindings": {
+    "panelActuatorClosestSample": {
+      "routeIndex": 38,
+      "timelineOpen": 0.38,
+      "angleRad": -0.675,
+      "panelSlideScalar": 0.07000000000000003,
+      "nearestBreastMesh": "Breast inner access shell",
+      "sampledCenterlineDistanceM": 0.0000724226629245095,
+      "sampled12mmHousingMarginM": -0.01192757733707549,
+      "conservative12mmHousingMarginM": -0.0162705402812877
+    },
+    "stageMargins": {
+      "A": {"minimumConservative12mmHousingMarginM": 0.01587571311622595, "samples": 34},
+      "B": {"minimumConservative12mmHousingMarginM": -0.0162705402812877, "samples": 33},
+      "C": {"minimumConservative12mmHousingMarginM": 0.18447568002968762, "samples": 34}
+    },
+    "stageBPanelSlideScreen": {
+      "conservativePossibleConflictScalarInterval": [0.024999999999999994, 0.10000000000000006],
+      "directlySampled12mmEnvelopeProximityScalars": [0.04000000000000001, 0.05500000000000002, 0.07000000000000003, 0.08500000000000005],
+      "sampledSafeIntervals": [[0.010000000000000064, 0.010000000000000064], [0.11499999999999999, 0.4900000000000001]],
+      "interpretation": "The safe scalar bands are disconnected; the slide from 0 to 0.5 crosses the sampled envelope conflict and is rejected."
+    },
+    "stationaryRegionalOverlapCandidates": {
+      "A": {"posesWithCandidates": 34, "owners": ["body", "left-mantle", "left-wing-shield", "neck", "right-mantle", "right-wing-shield"]},
+      "B": {"posesWithCandidates": 23, "owners": ["body", "neck", "right-mantle", "right-wing-shield"]},
+      "C": {"posesWithCandidates": 0, "owners": []},
+      "classification": "BVHTree triangle overlap broadphase candidates only; intentional laps/coplanar contacts are not adjudicated."
+    }
+  },
+  "coordinateReconciliation": {
+    "preliminaryWorldMatrixDifference": "Converted packet world matrix differed from native world by common root translation; run aborted before sampling.",
+    "finalMapping": "Verified converted packet parent-local breastplate matrix, built panel-local pose delta, and conjugated that delta by the actual native body parent world matrix. Panel, proposed actuator endpoints and stationary targets were evaluated in one native world frame.",
+    "actuatorEndpointAnchorMatch": "Both V4 mount local points transformed by their actual native owners match proposal rest-world coordinates within 0.00002 m."
+  },
+  "limits": [
+    "101 discrete samples; no continuous swept-volume proof between samples.",
+    "BVHTree overlap counts are candidate surface-pair screens, not confirmed collision classifications.",
+    "Proposed actuator mounts, fittings, brackets, slide carriage, and support structure are not modeled.",
+    "No panel geometry, native model, app/runtime file, or global separation behavior was changed."
+  ]
+}

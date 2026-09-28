@@ -1,6 +1,6 @@
 # Correction v2 — accountable backlog
 
-> Current continuation: the sixth v6 head/neck candidate and exact-model evidence are summarized in [alignment-v6-review.md](alignment-v6-review.md). The original v2 rows below remain a stage-history record; the continuation table at the end records later progress.
+> Current continuation: [Alignment V8](alignment-v8-review.md) is selected locally, with isolated [paired bill/mandible](../assets/audit/paired-bill-mandible-study-v2/index.html) and [cervical construction](cervical-construction-study-v1.md) follow-ups. The original v2 and v6 rows below remain stage-history records. The latest table at the end records current progress without closing artistic findings.
 
 The frozen inspector assessed `4b1c726f5d9bbd1ba1048f89049a5b422001c506`, model `3ec668b0…baacdc5`. Its scores remain historical. This work starts from that commit on `codex/neutral-correction-v2`; the public release is not replaced. Source/reference ownership is in the [integration contract](correction-v2-integration-contract.md) and [feature packet](correction-v2-reference-packet.md). The current neutral model and generated parts/pivots are recorded in [its inventory](../assets/models/uncaged-neutral-v2/neutral-inventory.json).
 
@@ -43,3 +43,22 @@ Model SHA-256 `ce35024adda89681a0f37e7018e2563a74af67cd06558a887222df87b78a87fe`
 | F10 | TARGETED CHECKS PASS | Local build inventory/hash boundary and the isolated unexpected-output negative fixture pass. No fixed permanent output count replaces the retired assumption. No remote publication claimed. |
 
 See the current review for versioned model/source identities, rejected iterations, finite test scopes, browser footage, and remaining owner decisions. No new per-era score or full acceptance index is asserted.
+
+## V8 and isolated correction continuation — September 28, 2026
+
+The selected V8 runtime remains `c8c30cc46059…`, with native `b12c442e2f51…`. The paired bill/mandible candidate is native `7ba7c996fbcf…`, diagnostic GLB `ad7391eede50…`, locally preserved in commit `10372e2`; it is available in its separate WebGL head viewer. Optional two-stage neck runtime support is committed at `5209bd4`, but V8 still uses its original single neck joint. None of these local records establish a new deployment or an accepted visual twin.
+
+| Finding | Current disposition | Latest bounded evidence and next requirement |
+|---|---|---|
+| F01 | OPEN | Two-stage neck maintains fixed attachments in the affected runtime checks. Attempt14 clears the intermediate joint in21 sampled poses but remains held for same-owner backing penetration, breast contacts and collar-like appearance. No replacement selected; resolve the exterior contour, drive mounting and breast access together. |
+| F02 | OPEN; regional improvement | V8 incorporates continuous head V2. The isolated paired bill/mandible candidate deepens the formed blade and shortens the lower jaw, with unchanged hinge and outer contact profile.33 jaw samples,9 runtime jaw/neck samples,4 structural checks and independent native/export comparison pass. Its four root pins are buried inside the bill, not floating. The broader orbital saddle improves construction but its41-position opening sweep reveals plate crossings; held seam/ownership studies are linked in the [local gallery](../assets/audit/orbital-saddle-study-v4/index.html). |
+| F03 | OPEN | V8 incorporates shoulder attempt02 and reseated pins, retaining compact shields and restricted anatomical-left motion. Normal-clock thrust and inspection are recorded; the shoulder still reads as a separate pod and needs a stronger body transition. |
+| F04 | OPEN | V8 incorporates digit attempt03. Grounding and contact checks do not establish reference-level toe, ankle or exposed-drive construction; neutral limb appearance remains sparse. |
+| F05 | GATED | Regional coverage is still provisional. Neck, breast and orbital seams require structural resolution before exterior finishing. |
+| F06 | GATED | No new material-history integration. Maker and Mechanic neutral native views still fail to communicate sufficiently distinct visible repairs; shared geometry and occlusion must be resolved before a finish pass. |
+| F07 | IMPLEMENTED; visual acceptance OPEN | V8's86.589-second actual-browser sequence includes claw action, contact and recovery, plus jump and thrust. This is a kinematic movement demonstration, not force simulation or exhaustive clearance. |
+| F08 | IMPLEMENTED; whole encounter review OPEN | Earlier V6 two120-second recordings retain their exact historical scope. The V8 recording is shorter and does not replace a complete new no-input cage-cycle assessment. |
+| F09 | PRIOR scoped evidence retained | V8 has static and recorded open/exploded/reassembled views. The optional two-stage neck's21-pose diagnostic reveals a proposed upper actuator crossing the access panel. Both a101-sample panel-only staged-slide proposal and a101-sample opposite-side-anchor proposal fail and are not integrated. These findings do not invalidate the separate historical label-layout checks or establish an inspection pass for new geometry. |
+| F10 | TARGETED CHECKS PASS | Build at `10372e2` emitted134 files, with16 exact selected-model/folio/fallback assets. Experimental head/neck natives, diagnostic GLBs and audit trees were excluded. [Receipt](../assets/audit/paired-bill-mandible-study-v2/integration-build-v1/receipt.json). No remote CI or publication claimed. |
+
+The whole-candidate neutral owner gate remains ahead of finishing and publication. V10 repair chronology and V12 historical movement scope remain the same owner decisions; no story wording or reference approval scope has been silently changed.

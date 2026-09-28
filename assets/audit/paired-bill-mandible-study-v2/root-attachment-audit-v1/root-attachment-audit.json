@@ -1,0 +1,1445 @@
+{
+  "status": "read-only sampled bill-root attachment and stationary-junction audit",
+  "generatedAtUtc": "2026-09-28T13:58:45Z",
+  "inputs": [
+    {
+      "label": "V8 native upstream",
+      "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+      "sha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478"
+    },
+    {
+      "label": "Bill-section V2 base",
+      "path": "assets/models/uncaged-bill-cross-section-study-v2/murderbird-bill-cross-section-study-v2.blend",
+      "sha256": "33d001a7fdf7a025b1592b247dbbd5a97b56206211043e65e11a967d97c9f017"
+    },
+    {
+      "label": "Paired bill/mandible V2 study",
+      "path": "assets/models/uncaged-paired-bill-mandible-study-v2/murderbird-paired-bill-mandible-study-v2.blend",
+      "sha256": "7ba7c996fbcffc118217ad4fcd0c1c1316a3e0a6b0cefa77be4794e6f5a4df15"
+    }
+  ],
+  "tooling": {
+    "blender": "5.2.1 LTS",
+    "script": "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/measure-attachments.py",
+    "scriptSha256": "d4c128424e9af818fb43a54a1dfb5eac82eed707896c194509eb67950be6bd43",
+    "method": "Evaluated native meshes; BVH target triangles; all source vertices, polygon centroids and edge midpoints sampled against exact target triangles. BVH overlap counts are broad-phase only."
+  },
+  "fasteners": [
+    {
+      "name": "Bill root fixing",
+      "parent": "upper-bill",
+      "worldBoundsBlenderXYZM": {
+        "min": [
+          -0.0733565017580986,
+          -0.45297956466674805,
+          1.78501296043396
+        ],
+        "max": [
+          -0.06835650652647018,
+          -0.44597959518432617,
+          1.791670322418213
+        ]
+      },
+      "meshAndTransformSha256": "9ca11642966be70e0e59eb62691b270f345f811ff87d1c6e3f7077e4d3caa851",
+      "distanceToBlade0": {
+        "v8": {
+          "sampledDistanceM": 0.006064847577363253,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            -0.0733565017580986,
+            -0.45056113600730896,
+            1.791670322418213
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            -0.07829919457435608,
+            -0.4507763087749481,
+            1.7951782941818237
+          ]
+        },
+        "billSectionV2": {
+          "sampledDistanceM": 0.012220257893204689,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            -0.0733565017580986,
+            -0.4466480314731598,
+            1.7903988361358643
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            -0.08522695302963257,
+            -0.4443301558494568,
+            1.7921465635299683
+          ]
+        },
+        "pairedBillV2": {
+          "sampledDistanceM": 0.012220257893204689,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            -0.0733565017580986,
+            -0.4466480314731598,
+            1.7903988361358643
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            -0.08522695302963257,
+            -0.4443301558494568,
+            1.7921465635299683
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bill root fixing.001",
+      "parent": "upper-bill",
+      "worldBoundsBlenderXYZM": {
+        "min": [
+          -0.07420960068702698,
+          -0.5052147507667542,
+          1.7701226472854614
+        ],
+        "max": [
+          -0.06920960545539856,
+          -0.4982147812843323,
+          1.7767800092697144
+        ]
+      },
+      "meshAndTransformSha256": "25743b2a2a35f7e61ec311b5e9c22943fe5dcc78204cb3b1ca269b726c63da09",
+      "distanceToBlade0": {
+        "v8": {
+          "sampledDistanceM": 0.005565708503127098,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            -0.07420960068702698,
+            -0.5027963519096375,
+            1.7767800092697144
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            -0.07851994037628174,
+            -0.5045003294944763,
+            1.779861330986023
+          ]
+        },
+        "billSectionV2": {
+          "sampledDistanceM": 0.013148601166903973,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            -0.07420960068702698,
+            -0.5052147507667542,
+            1.773451328277588
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            -0.087306447327137,
+            -0.5063726305961609,
+            1.7733185291290283
+          ]
+        },
+        "pairedBillV2": {
+          "sampledDistanceM": 0.013148601166903973,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            -0.07420960068702698,
+            -0.5052147507667542,
+            1.773451328277588
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            -0.087306447327137,
+            -0.5063726305961609,
+            1.7733185291290283
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bill root fixing.002",
+      "parent": "upper-bill",
+      "worldBoundsBlenderXYZM": {
+        "min": [
+          0.06835650652647018,
+          -0.45297956466674805,
+          1.78501296043396
+        ],
+        "max": [
+          0.0733565017580986,
+          -0.44597959518432617,
+          1.791670322418213
+        ]
+      },
+      "meshAndTransformSha256": "db3e3e042cb680e6062e80d933ccc28fb32a76fd6ed1d7c082401ae28418282c",
+      "distanceToBlade0": {
+        "v8": {
+          "sampledDistanceM": 0.006062646862119436,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            0.0733565017580986,
+            -0.45056113600730896,
+            1.791670322418213
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            0.07830188423395157,
+            -0.45077478885650635,
+            1.795170783996582
+          ]
+        },
+        "billSectionV2": {
+          "sampledDistanceM": 0.012287335470318794,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            0.0733565017580986,
+            -0.4466480314731598,
+            1.7903988361358643
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            0.0853380635380745,
+            -0.444222629070282,
+            1.7916390895843506
+          ]
+        },
+        "pairedBillV2": {
+          "sampledDistanceM": 0.012287335470318794,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            0.0733565017580986,
+            -0.4466480314731598,
+            1.7903988361358643
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            0.0853380635380745,
+            -0.444222629070282,
+            1.7916390895843506
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bill root fixing.003",
+      "parent": "upper-bill",
+      "worldBoundsBlenderXYZM": {
+        "min": [
+          0.06920960545539856,
+          -0.5052147507667542,
+          1.7701226472854614
+        ],
+        "max": [
+          0.07420960068702698,
+          -0.4982147812843323,
+          1.7767800092697144
+        ]
+      },
+      "meshAndTransformSha256": "375e330b07a87da5ef5c7be3412120f921791e5c8e9cc5afa603e7e33492efa5",
+      "distanceToBlade0": {
+        "v8": {
+          "sampledDistanceM": 0.005565647967159748,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            0.07420960068702698,
+            -0.5027963519096375,
+            1.7767800092697144
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            0.07852014154195786,
+            -0.5045002698898315,
+            1.7798609733581543
+          ]
+        },
+        "billSectionV2": {
+          "sampledDistanceM": 0.013148834928870201,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            0.07420960068702698,
+            -0.5052147507667542,
+            1.773451328277588
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            0.08730502426624298,
+            -0.5063909888267517,
+            1.7733163833618164
+          ]
+        },
+        "pairedBillV2": {
+          "sampledDistanceM": 0.013148834928870201,
+          "bvhFacePairCandidates": 0,
+          "pinSurfacePointBlenderXYZM": [
+            0.07420960068702698,
+            -0.5052147507667542,
+            1.773451328277588
+          ],
+          "bladeSurfacePointBlenderXYZM": [
+            0.08730502426624298,
+            -0.5063909888267517,
+            1.7733163833618164
+          ]
+        }
+      }
+    }
+  ],
+  "stationaryJunctions": [
+    {
+      "pair": "Profiled upper bill blade 0 / Profiled upper bill blade 1",
+      "sampledDistanceM": {
+        "v8": 0.00202559819445014,
+        "billSectionV2": 0.00202559819445014,
+        "pairedBillV2": 0.0010792375542223454
+      },
+      "bvhCandidateFacePairs": {
+        "v8": 0,
+        "billSectionV2": 0,
+        "pairedBillV2": 0
+      }
+    },
+    {
+      "pair": "Profiled upper bill blade 0 / Overlapping nasal hood",
+      "sampledDistanceM": {
+        "v8": 1.813247763493564e-05,
+        "billSectionV2": 1.964568582479842e-05,
+        "pairedBillV2": 1.964568582479842e-05
+      },
+      "bvhCandidateFacePairs": {
+        "v8": 62,
+        "billSectionV2": 58,
+        "pairedBillV2": 58
+      }
+    },
+    {
+      "pair": "Profiled upper bill blade 0 / Cere root transition -1",
+      "sampledDistanceM": {
+        "v8": 0.00558678200468421,
+        "billSectionV2": 5.170509780327848e-07,
+        "pairedBillV2": 5.170509780327848e-07
+      },
+      "bvhCandidateFacePairs": {
+        "v8": 0,
+        "billSectionV2": 35,
+        "pairedBillV2": 35
+      }
+    },
+    {
+      "pair": "Profiled upper bill blade 0 / Cere root transition 1",
+      "sampledDistanceM": {
+        "v8": 0.005587436258792877,
+        "billSectionV2": 6.573844757440384e-07,
+        "pairedBillV2": 6.573844757440384e-07
+      },
+      "bvhCandidateFacePairs": {
+        "v8": 0,
+        "billSectionV2": 35,
+        "pairedBillV2": 35
+      }
+    },
+    {
+      "pair": "Overlapping nasal hood / Cere root transition -1",
+      "sampledDistanceM": {
+        "v8": 0.000882557185832411,
+        "billSectionV2": 0.000882557185832411,
+        "pairedBillV2": 0.000882557185832411
+      },
+      "bvhCandidateFacePairs": {
+        "v8": 0,
+        "billSectionV2": 0,
+        "pairedBillV2": 0
+      }
+    },
+    {
+      "pair": "Overlapping nasal hood / Cere root transition 1",
+      "sampledDistanceM": {
+        "v8": 0.0008436990319751203,
+        "billSectionV2": 0.0008436990319751203,
+        "pairedBillV2": 0.0008436990319751203
+      },
+      "bvhCandidateFacePairs": {
+        "v8": 0,
+        "billSectionV2": 0,
+        "pairedBillV2": 0
+      }
+    }
+  ],
+  "meshTransformIdentityAcrossChain": {
+    "Bill root fixing": {
+      "v8": "9ca11642966be70e0e59eb62691b270f345f811ff87d1c6e3f7077e4d3caa851",
+      "billSectionV2": "9ca11642966be70e0e59eb62691b270f345f811ff87d1c6e3f7077e4d3caa851",
+      "pairedBillV2": "9ca11642966be70e0e59eb62691b270f345f811ff87d1c6e3f7077e4d3caa851"
+    },
+    "Bill root fixing.001": {
+      "v8": "25743b2a2a35f7e61ec311b5e9c22943fe5dcc78204cb3b1ca269b726c63da09",
+      "billSectionV2": "25743b2a2a35f7e61ec311b5e9c22943fe5dcc78204cb3b1ca269b726c63da09",
+      "pairedBillV2": "25743b2a2a35f7e61ec311b5e9c22943fe5dcc78204cb3b1ca269b726c63da09"
+    },
+    "Bill root fixing.002": {
+      "v8": "db3e3e042cb680e6062e80d933ccc28fb32a76fd6ed1d7c082401ae28418282c",
+      "billSectionV2": "db3e3e042cb680e6062e80d933ccc28fb32a76fd6ed1d7c082401ae28418282c",
+      "pairedBillV2": "db3e3e042cb680e6062e80d933ccc28fb32a76fd6ed1d7c082401ae28418282c"
+    },
+    "Bill root fixing.003": {
+      "v8": "375e330b07a87da5ef5c7be3412120f921791e5c8e9cc5afa603e7e33492efa5",
+      "billSectionV2": "375e330b07a87da5ef5c7be3412120f921791e5c8e9cc5afa603e7e33492efa5",
+      "pairedBillV2": "375e330b07a87da5ef5c7be3412120f921791e5c8e9cc5afa603e7e33492efa5"
+    },
+    "Profiled upper bill blade 0": {
+      "v8": "6a3fb03cebf0017a578a73422137f3f0595c5bb43dba978868f526ef968e3d03",
+      "billSectionV2": "951b4a1a647ef2cd021efa39e06a173148e3614290a39a2e96c78b165c3d6fdf",
+      "pairedBillV2": "ac329a92913a58da53c0f0f501835c1cbcdeeda2d5f129eb7cb5c7ae83ee2008"
+    },
+    "Profiled upper bill blade 1": {
+      "v8": "847186329ea8b671557f70fcb4a06f50e01f9614dff233d90d8466077bb37f89",
+      "billSectionV2": "0863892b29e85fcad665b75b10a48c8a3ad0a0a32fc7eb755b602ad8c3d136fc",
+      "pairedBillV2": "dc8a578f36180a57a4389d12581e120b0bbd0f1d1aefb0932e9fd87c98fc86ba"
+    },
+    "Overlapping nasal hood": {
+      "v8": "38f48245284b216940e6785b1e7845d18a2ec809b955236443200312bdc94c36",
+      "billSectionV2": "38f48245284b216940e6785b1e7845d18a2ec809b955236443200312bdc94c36",
+      "pairedBillV2": "38f48245284b216940e6785b1e7845d18a2ec809b955236443200312bdc94c36"
+    },
+    "Cere root transition -1": {
+      "v8": "13074a9de499ab229401152f5c566d409fc8d3b0f41b6af64b2056a410198524",
+      "billSectionV2": "13074a9de499ab229401152f5c566d409fc8d3b0f41b6af64b2056a410198524",
+      "pairedBillV2": "13074a9de499ab229401152f5c566d409fc8d3b0f41b6af64b2056a410198524"
+    },
+    "Cere root transition 1": {
+      "v8": "7dcc594c07f1e130b916995ca1ab7438647d5a2b9654ef64c4adefb20a3ce0d7",
+      "billSectionV2": "7dcc594c07f1e130b916995ca1ab7438647d5a2b9654ef64c4adefb20a3ce0d7",
+      "pairedBillV2": "7dcc594c07f1e130b916995ca1ab7438647d5a2b9654ef64c4adefb20a3ce0d7"
+    }
+  },
+  "findings": [
+    "The four Bill root fixing meshes are byte-signature unchanged across V8, Bill-section V2, and paired-bill V2. Each fastener is fully classified inside the closed evaluated Profiled upper bill blade 0 in all three sources: all vertices, face centers and centers are odd/even inside; pin/blade BVH surface-pair candidates are zero. Thus these parts are buried/occluded, not floating in exterior air. Sampled nearest blade-surface separation increases from 5.57\u20136.06 mm in V8 to 12.22\u201313.15 mm in Bill-section V2 and remains there in paired-bill V2. This suggests the section study deepens burial of the inherited root-fixing caps; owner intent should decide whether these are deliberately internal anchors or are meant to be externally visible fasteners.",
+    "Anatomical left is +X and anatomical right is -X. The fixing objects\u2019 local X basis is exactly world/native X, and the matching blade side-wall normal is nearly \u00b1X (paired study dot 0.990\u20130.997). The objects are near-isotropic small closed heads rather than elongated shafts. Rays along signed outward X from their vertex-average centers hit the blade wall 15.64\u201316.00 mm away in paired V2, versus 12.03\u201312.18 mm in V8. Therefore \u00b1X is the appropriate direction for any later reseating study; these numbers measure how deeply centers sit inside the blade, not an exterior gap.",
+    "The paired study itself leaves the stationary root fixing/support components unchanged. Its root-area stationary plate junctions are mixed: blade 0 to blade 1 has a 1.08 mm sampled seam (2.03 mm in V8 and Bill-section V2), with no BVH candidates; blade 0 to Overlapping nasal hood is about 0.02 mm with 58 broad-phase face candidates; blade 0 to each Cere root transition is about 0.001 mm with 35 candidates per side in both section-study variants, versus 5.59 mm and no candidates in V8. The latter interfaces are plausibly lapped/near-seated, but broad-phase candidates do not establish strict crossing or exclude coplanarity.",
+    "Overlapping nasal hood to each Cere root transition remains 0.84\u20130.88 mm sampled separation with no BVH candidates through the chain. This is a possible fine panel seam, not a proven defect. Nasal hood fixing samples are coincident/overlapping with the hood surface at sampled resolution (0\u20130.12 mm; 10\u201312 broad-phase candidates), consistent with that fastener family being seated at its named host, subject to the same sampling limits."
+  ],
+  "limits": [
+    "Distances are finite samples against actual evaluated triangle surfaces, not exhaustive closest-feature calculations.",
+    "BVH candidate counts are not proper crossing classifications; no strict crossing, coplanar overlap, containment, or penetration depth claim is made.",
+    "Static native rest geometry only. No full-head clearance, jaw motion, force, manufacturing tolerance, owner acceptance or publication claim.",
+    "Containment is sampled odd/even parity on a closed target mesh plus no BVH surface-pair candidates; it strongly supports burial but is not a volumetric Boolean proof for every point of the fastener solids."
+  ],
+  "measurementFiles": [
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/v8-measurements.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/bill-section-v2-measurements.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/paired-bill-v2-measurements.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/v8-containment.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/bill-section-v2-containment.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/paired-bill-v2-containment.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/v8-axis-rays.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/bill-section-v2-axis-rays.json",
+    "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/paired-bill-v2-axis-rays.json"
+  ],
+  "containmentClassification": {
+    "script": "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/classify-fastener-containment.py",
+    "scriptSha256": "d041c969496e275ab5ed3e0f1bdb263cfbb24c793b89ceebaeb12195fb223b5c",
+    "method": "Evaluated blade and each root fixing have closed edge incidence. Each pin\u2019s 20 vertices and 12 face centers plus vertex-average center were classified by odd/even BVH-ray parity along four non-axis directions; all rays agreed. Signed world-X rays from each center additionally recorded the side-wall hit and normal. BVH surface-pair broad phase recorded separately.",
+    "runs": {
+      "v8": {
+        "nativePath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+        "targetTopology": {
+          "vertices": 2280,
+          "faces": 2242,
+          "uniqueEdges": 4520,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "watertightByEdgeIncidence": true
+        },
+        "pins": {
+          "Bill root fixing": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                -0.0708565041422844,
+                -0.4494796395301819,
+                1.7883415222167969
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.001": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                -0.07170958817005157,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.002": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                0.0708565041422844,
+                -0.4494795501232147,
+                1.7883415222167969
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.003": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                0.07170958817005157,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          }
+        }
+      },
+      "billSectionV2": {
+        "nativePath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-bill-cross-section-study-v2/murderbird-bill-cross-section-study-v2.blend",
+        "targetTopology": {
+          "vertices": 2280,
+          "faces": 2242,
+          "uniqueEdges": 4520,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "watertightByEdgeIncidence": true
+        },
+        "pins": {
+          "Bill root fixing": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                -0.0708565041422844,
+                -0.4494796395301819,
+                1.7883415222167969
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.001": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                -0.07170958817005157,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.002": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                0.0708565041422844,
+                -0.4494795501232147,
+                1.7883415222167969
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.003": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                0.07170958817005157,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          }
+        }
+      },
+      "pairedBillV2": {
+        "nativePath": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/uncaged-paired-bill-mandible-study-v2/murderbird-paired-bill-mandible-study-v2.blend",
+        "targetTopology": {
+          "vertices": 2280,
+          "faces": 2242,
+          "uniqueEdges": 4520,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "watertightByEdgeIncidence": true
+        },
+        "pins": {
+          "Bill root fixing": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                -0.0708565041422844,
+                -0.4494796395301819,
+                1.7883415222167969
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.001": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                -0.07170958817005157,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.002": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                0.0708565041422844,
+                -0.4494795501232147,
+                1.7883415222167969
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          },
+          "Bill root fixing.003": {
+            "pinTopology": {
+              "vertices": 20,
+              "faces": 12,
+              "uniqueEdges": 30,
+              "boundaryEdges": 0,
+              "nonManifoldEdges": 0
+            },
+            "surfaceBVHCandidatePairsWithBlade0": 0,
+            "bboxCenterClassification": {
+              "pointBlenderXYZM": [
+                0.07170958817005157,
+                -0.5017147660255432,
+                1.7734512090682983
+              ],
+              "rayHitCounts": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "oddEvenParities": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "classification": "inside"
+            },
+            "vertexSampleCounts": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenterSampleCounts": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            }
+          }
+        }
+      }
+    },
+    "interpretation": "All root-fastener sample points are inside the closed evaluated blade-0 solid, with zero boundary face-pair candidates. This supports full burial/occlusion, not an exterior air gap. Sampled point parity plus zero surface crossings is strong evidence of burial, not a complete solid-volume proof."
+  },
+  "constructionAxisCheck": {
+    "script": "assets/audit/paired-bill-mandible-study-v2/root-attachment-audit-v1/classify-fastener-containment.py",
+    "scriptSha256": "d041c969496e275ab5ed3e0f1bdb263cfbb24c793b89ceebaeb12195fb223b5c",
+    "meaning": "The local X basis of every fixing object is exactly world/native X. Each mesh has near-isotropic dimensions 5.0 x 7.0 x 6.7 mm, so it has no distinct elongated shaft despite a clear transform axis. From each fixing vertex-average center, an outward ray along signed world X hits the intended blade 0 side wall; wall normal is nearly parallel to the ray in paired V2 (dot 0.990\u20130.997).",
+    "runs": {
+      "v8": {
+        "Bill root fixing": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              -0.08288980275392532,
+              -0.4494796395301819,
+              1.7883415222167969
+            ],
+            "normalBlenderXYZ": [
+              -0.9173951745033264,
+              0.012027931399643421,
+              0.39779558777809143
+            ],
+            "distanceM": 0.012033295817673206,
+            "normalDotRayDirection": 0.9173951745033264
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.001": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              -0.08389341831207275,
+              -0.5017147660255432,
+              1.7734512090682983
+            ],
+            "normalBlenderXYZ": [
+              -0.8920083045959473,
+              -0.23354379832744598,
+              0.38701239228248596
+            ],
+            "distanceM": 0.01218383014202118,
+            "normalDotRayDirection": 0.8920083045959473
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.002": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              0.08288980275392532,
+              -0.4494795501232147,
+              1.7883415222167969
+            ],
+            "normalBlenderXYZ": [
+              0.9176905751228333,
+              0.01677211932837963,
+              0.3969417214393616
+            ],
+            "distanceM": 0.012033296748995781,
+            "normalDotRayDirection": 0.9176905751228333
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.003": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              0.08389341831207275,
+              -0.5017147660255432,
+              1.7734512090682983
+            ],
+            "normalBlenderXYZ": [
+              0.8920029401779175,
+              -0.2335481345653534,
+              0.38702207803726196
+            ],
+            "distanceM": 0.012183827348053455,
+            "normalDotRayDirection": 0.8920029401779175
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        }
+      },
+      "billSectionV2": {
+        "Bill root fixing": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              -0.08649701625108719,
+              -0.4494796395301819,
+              1.7883415222167969
+            ],
+            "normalBlenderXYZ": [
+              -0.9924744963645935,
+              0.12138320505619049,
+              0.016137531027197838
+            ],
+            "distanceM": 0.015640512108802795,
+            "normalDotRayDirection": 0.9924744963645935
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.001": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              -0.08770876377820969,
+              -0.5017147660255432,
+              1.7734512090682983
+            ],
+            "normalBlenderXYZ": [
+              -0.9969531297683716,
+              -0.07759945094585419,
+              -0.007916608825325966
+            ],
+            "distanceM": 0.01599917560815811,
+            "normalDotRayDirection": 0.9969531297683716
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.002": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              0.08649700880050659,
+              -0.4494795501232147,
+              1.7883415222167969
+            ],
+            "normalBlenderXYZ": [
+              0.9900455474853516,
+              0.1371757686138153,
+              0.03150567784905434
+            ],
+            "distanceM": 0.0156405046582222,
+            "normalDotRayDirection": 0.9900455474853516
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.003": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              0.08770914375782013,
+              -0.5017147660255432,
+              1.7734512090682983
+            ],
+            "normalBlenderXYZ": [
+              0.9969529509544373,
+              -0.07760269194841385,
+              -0.007916844449937344
+            ],
+            "distanceM": 0.015999555587768555,
+            "normalDotRayDirection": 0.9969529509544373
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        }
+      },
+      "pairedBillV2": {
+        "Bill root fixing": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              -0.08649701625108719,
+              -0.4494796395301819,
+              1.7883415222167969
+            ],
+            "normalBlenderXYZ": [
+              -0.9924744963645935,
+              0.12138320505619049,
+              0.016137531027197838
+            ],
+            "distanceM": 0.015640512108802795,
+            "normalDotRayDirection": 0.9924744963645935
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.001": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              -0.08770876377820969,
+              -0.5017147660255432,
+              1.7734512090682983
+            ],
+            "normalBlenderXYZ": [
+              -0.9969531297683716,
+              -0.07759945094585419,
+              -0.007916608825325966
+            ],
+            "distanceM": 0.01599917560815811,
+            "normalDotRayDirection": 0.9969531297683716
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.002": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              0.08649700880050659,
+              -0.4494795501232147,
+              1.7883415222167969
+            ],
+            "normalBlenderXYZ": [
+              0.9900455474853516,
+              0.1371757686138153,
+              0.03150567784905434
+            ],
+            "distanceM": 0.0156405046582222,
+            "normalDotRayDirection": 0.9900455474853516
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        },
+        "Bill root fixing.003": {
+          "worldBoundsDimensionsM": [
+            0.004999995231628418,
+            0.006999969482421875,
+            0.00665736198425293
+          ],
+          "localXBasisInWorld": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "outerSideRay": {
+            "pointBlenderXYZM": [
+              0.08770914375782013,
+              -0.5017147660255432,
+              1.7734512090682983
+            ],
+            "normalBlenderXYZ": [
+              0.9969529509544373,
+              -0.07760269194841385,
+              -0.007916844449937344
+            ],
+            "distanceM": 0.015999555587768555,
+            "normalDotRayDirection": 0.9969529509544373
+          },
+          "pinInsideSamples": {
+            "vertices": {
+              "inside": 20,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "faceCenters": {
+              "inside": 12,
+              "outside": 0,
+              "direction-disagreement": 0
+            },
+            "center": "inside",
+            "surfaceBVHCandidatePairs": 0
+          }
+        }
+      }
+    },
+    "interpretation": "A signed \u00b1X reseating direction is geometrically aligned with the actual blade side wall. Center-to-wall ray distance is 15.64\u201316.00 mm in paired V2 (12.03\u201312.18 mm in V8); no geometry was changed.",
+    "anatomicalSideConvention": "+X is anatomical LEFT; -X is anatomical RIGHT."
+  }
+}

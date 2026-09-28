@@ -1,0 +1,839 @@
+{
+  "status": "isolated four-pin reseating proposal; not accepted, exported, or selected in app",
+  "generatedAtUtc": "2026-09-28T14:23:57.469505+00:00",
+  "blenderVersion": "5.2.1 LTS",
+  "base": {
+    "path": "assets/models/uncaged-paired-bill-mandible-study-v2/murderbird-paired-bill-mandible-study-v2.blend",
+    "bytes": 1956180,
+    "sha256": "7ba7c996fbcffc118217ad4fcd0c1c1316a3e0a6b0cefa77be4794e6f5a4df15"
+  },
+  "native": {
+    "path": "assets/models/uncaged-bill-root-fixing-study-v1/murderbird-bill-root-fixing-study-v1.blend",
+    "bytes": 1956186,
+    "sha256": "4d7568d1c2ba7cab716876f57a6c20cb6a788d4daeef1d5d34f85c1910ed2bbe"
+  },
+  "generator": {
+    "path": "assets/audit/uncaged-bill-root-fixing-study-v1/executed-generator.py",
+    "bytes": 14992,
+    "sha256": "d8061e8cb5d8a90cd72819a1b6d358dbcc8a6b723f1ca1b2e738a7af03da9ed5"
+  },
+  "helper": {
+    "path": "scripts/build-uncaged-alignment-v7.py",
+    "bytes": 36923,
+    "sha256": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a"
+  },
+  "renderer": {
+    "path": "scripts/study-v8-bill-envelope.py",
+    "bytes": 6849,
+    "sha256": "2d3502a134cecb15c04ca0ce9f8db0f7555d6d8a52e5f7c9c74dfd55299f421a"
+  },
+  "replacementObjects": [
+    "Bill root fixing",
+    "Bill root fixing.001",
+    "Bill root fixing.002",
+    "Bill root fixing.003"
+  ],
+  "addedObjects": [],
+  "deletedObjects": [],
+  "sideConvention": "+X is anatomical LEFT; -X is anatomical RIGHT.",
+  "method": "At each source pin vertex-average YZ, cast signed outward world-X ray into evaluated blade0. Translate only the object world X so its inward-most X support lies 1 mm inboard of the measured side-wall hit; expected opposite support is about 4 mm outboard. Preserve local mesh data and YZ center.",
+  "fastenerMeasurements": {
+    "Bill root fixing": {
+      "anatomicalSide": "right",
+      "parent": "upper-bill",
+      "axis": "world/native X",
+      "sourceCentroidWorldXYZM": [
+        -0.0708565041422844,
+        -0.4494796395301819,
+        1.7883415222167969
+      ],
+      "wallPointWorldXYZM": [
+        -0.08649702370166779,
+        -0.4494796395301819,
+        1.7883415222167969
+      ],
+      "wallNormalWorldXYZ": [
+        -0.9900551438331604,
+        0.13883858919143677,
+        0.022686893120408058
+      ],
+      "outwardRayDistanceM": 0.015640515834093094,
+      "worldTranslationDeltaXYZM": [
+        -0.017140517011284828,
+        0.0,
+        0.0
+      ],
+      "targetInnerEmbedM": 0.001,
+      "measuredInnerEmbedM": 0.0010000020265579224,
+      "measuredOuterProjectionM": 0.003999993205070496,
+      "sourceWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "movedWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "centerYZPreserved": true
+    },
+    "Bill root fixing.001": {
+      "anatomicalSide": "right",
+      "parent": "upper-bill",
+      "axis": "world/native X",
+      "sourceCentroidWorldXYZM": [
+        -0.07170958817005157,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "wallPointWorldXYZM": [
+        -0.08770914375782013,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "wallNormalWorldXYZ": [
+        -0.9969106316566467,
+        -0.07811927795410156,
+        -0.008160268887877464
+      ],
+      "outwardRayDistanceM": 0.015999553725123405,
+      "worldTranslationDeltaXYZM": [
+        -0.017499538138508797,
+        0.0,
+        0.0
+      ],
+      "targetInnerEmbedM": 0.001,
+      "measuredInnerEmbedM": 0.0010000020265579224,
+      "measuredOuterProjectionM": 0.003999993205070496,
+      "sourceWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "movedWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "centerYZPreserved": true
+    },
+    "Bill root fixing.002": {
+      "anatomicalSide": "left",
+      "parent": "upper-bill",
+      "axis": "world/native X",
+      "sourceCentroidWorldXYZM": [
+        0.0708565041422844,
+        -0.4494795501232147,
+        1.7883415222167969
+      ],
+      "wallPointWorldXYZM": [
+        0.08649700880050659,
+        -0.4494795501232147,
+        1.7883415222167969
+      ],
+      "wallNormalWorldXYZ": [
+        0.9858425855636597,
+        0.16602587699890137,
+        0.023447399958968163
+      ],
+      "outwardRayDistanceM": 0.01564050279557705,
+      "worldTranslationDeltaXYZM": [
+        0.017140502110123634,
+        0.0,
+        0.0
+      ],
+      "targetInnerEmbedM": 0.001,
+      "measuredInnerEmbedM": 0.0010000020265579224,
+      "measuredOuterProjectionM": 0.003999993205070496,
+      "sourceWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "movedWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "centerYZPreserved": true
+    },
+    "Bill root fixing.003": {
+      "anatomicalSide": "left",
+      "parent": "upper-bill",
+      "axis": "world/native X",
+      "sourceCentroidWorldXYZM": [
+        0.07170958817005157,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "wallPointWorldXYZM": [
+        0.08770876377820969,
+        -0.5017147660255432,
+        1.7734512090682983
+      ],
+      "wallNormalWorldXYZ": [
+        0.9970030784606934,
+        -0.07694413512945175,
+        -0.008037514053285122
+      ],
+      "outwardRayDistanceM": 0.01599917560815811,
+      "worldTranslationDeltaXYZM": [
+        0.017499158158898354,
+        0.0,
+        0.0
+      ],
+      "targetInnerEmbedM": 0.001,
+      "measuredInnerEmbedM": 0.0010000020265579224,
+      "measuredOuterProjectionM": 0.003999993205070496,
+      "sourceWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "movedWorldBoundsDimensionsM": [
+        0.004999995231628418,
+        0.006999969482421875,
+        0.00665736198425293
+      ],
+      "centerYZPreserved": true
+    }
+  },
+  "preservation": {
+    "onlyFourPinWorldXTransformsChanged": [
+      "Bill root fixing",
+      "Bill root fixing.001",
+      "Bill root fixing.002",
+      "Bill root fixing.003"
+    ],
+    "pinMeshGeometryAndModifiersPreserved": true,
+    "allOther695MeshSnapshotsExact": true,
+    "all51PivotsExact": true,
+    "all462CurvesExact": true,
+    "allMaterialsExact": true,
+    "saveReloadSnapshotExact": true,
+    "sourceNativeBytesUnchanged": true
+  },
+  "neighborSurfaceChecks": [
+    {
+      "pin": "Bill root fixing",
+      "anatomicalSide": "right",
+      "pairs": [
+        {
+          "otherMesh": "Cere root transition -1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Cere root transition 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate -1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate 1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Overlapping nasal hood",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 0",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 34,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 20,
+            "confirmedTriangleCountB": 14,
+            "boundsAWorldXYZM": [
+              [
+                -0.090497,
+                -0.085497
+              ],
+              [
+                -0.4529796,
+                -0.4459796
+              ],
+              [
+                1.785013,
+                1.7916703
+              ]
+            ],
+            "boundsBWorldXYZM": [
+              [
+                -0.0870823,
+                -0.0856302
+              ],
+              [
+                -0.4544858,
+                -0.4447371
+              ],
+              [
+                1.7816839,
+                1.7971694
+              ]
+            ],
+            "limits": "Strict noncoplanar edge-through-face evidence only; no containment depth or continuous clearance."
+          },
+          "classification": "intended shallow host embed"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        }
+      ]
+    },
+    {
+      "pin": "Bill root fixing.001",
+      "anatomicalSide": "right",
+      "pairs": [
+        {
+          "otherMesh": "Cere root transition -1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Cere root transition 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate -1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate 1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Overlapping nasal hood",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 0",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 34,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 20,
+            "confirmedTriangleCountB": 14,
+            "boundsAWorldXYZM": [
+              [
+                -0.0917091,
+                -0.0867091
+              ],
+              [
+                -0.5052148,
+                -0.4982148
+              ],
+              [
+                1.7701226,
+                1.77678
+              ]
+            ],
+            "boundsBWorldXYZM": [
+              [
+                -0.088015,
+                -0.0872906
+              ],
+              [
+                -0.5072435,
+                -0.4971634
+              ],
+              [
+                1.7664844,
+                1.7822714
+              ]
+            ],
+            "limits": "Strict noncoplanar edge-through-face evidence only; no containment depth or continuous clearance."
+          },
+          "classification": "intended shallow host embed"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        }
+      ]
+    },
+    {
+      "pin": "Bill root fixing.002",
+      "anatomicalSide": "left",
+      "pairs": [
+        {
+          "otherMesh": "Cere root transition -1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Cere root transition 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate -1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate 1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Overlapping nasal hood",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 0",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 34,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 20,
+            "confirmedTriangleCountB": 14,
+            "boundsAWorldXYZM": [
+              [
+                0.085497,
+                0.090497
+              ],
+              [
+                -0.4529796,
+                -0.4459796
+              ],
+              [
+                1.785013,
+                1.7916703
+              ]
+            ],
+            "boundsBWorldXYZM": [
+              [
+                0.0849104,
+                0.0870846
+              ],
+              [
+                -0.4542289,
+                -0.444935
+              ],
+              [
+                1.7812558,
+                1.7975508
+              ]
+            ],
+            "limits": "Strict noncoplanar edge-through-face evidence only; no containment depth or continuous clearance."
+          },
+          "classification": "intended shallow host embed"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        }
+      ]
+    },
+    {
+      "pin": "Bill root fixing.003",
+      "anatomicalSide": "left",
+      "pairs": [
+        {
+          "otherMesh": "Cere root transition -1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Cere root transition 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate -1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Forged orbital mounting plate 1",
+          "otherOwner": "head",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Overlapping nasal hood",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 0",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 36,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 20,
+            "confirmedTriangleCountB": 15,
+            "boundsAWorldXYZM": [
+              [
+                0.0867088,
+                0.0917088
+              ],
+              [
+                -0.5052148,
+                -0.4982148
+              ],
+              [
+                1.7701226,
+                1.77678
+              ]
+            ],
+            "boundsBWorldXYZM": [
+              [
+                0.0872906,
+                0.088015
+              ],
+              [
+                -0.5064523,
+                -0.4971634
+              ],
+              [
+                1.7655571,
+                1.7831995
+              ]
+            ],
+            "limits": "Strict noncoplanar edge-through-face evidence only; no containment depth or continuous clearance."
+          },
+          "classification": "intended shallow host embed"
+        },
+        {
+          "otherMesh": "Profiled upper bill blade 1",
+          "otherOwner": "upper-bill",
+          "bvhTrianglePairCandidateCount": 0,
+          "strictCrossing": {
+            "confirmedTriangleCountA": 0,
+            "confirmedTriangleCountB": 0,
+            "boundsAWorldXYZM": null,
+            "boundsBWorldXYZM": null,
+            "limits": "No BVH triangle-pair candidates."
+          },
+          "classification": "neighbor surface; strict crossings are unintended"
+        }
+      ]
+    }
+  ],
+  "nonHostStrictCrossings": [],
+  "views": [
+    {
+      "path": "assets/audit/uncaged-bill-root-fixing-study-v1/before-front.png",
+      "bytes": 1209791,
+      "sha256": "7c8754197bf78bb2146f613e63b1f9a4d8378a986885b04b70e6615bc021b403",
+      "view": "front",
+      "variant": "before",
+      "camera": {
+        "position": [
+          0,
+          -6,
+          1.78
+        ],
+        "target": [
+          0,
+          -0.3,
+          1.78
+        ],
+        "ortho": 1.05
+      }
+    },
+    {
+      "path": "assets/audit/uncaged-bill-root-fixing-study-v1/before-right-profile.png",
+      "bytes": 1206761,
+      "sha256": "b7388a510e0c66c3c130cd6bbbad21c4d214416a981f7c702a97fe3c0806e474",
+      "view": "right-profile",
+      "variant": "before",
+      "camera": {
+        "position": [
+          -6,
+          -0.3,
+          1.78
+        ],
+        "target": [
+          0,
+          -0.3,
+          1.78
+        ],
+        "ortho": 1.1
+      }
+    },
+    {
+      "path": "assets/audit/uncaged-bill-root-fixing-study-v1/before-three-quarter.png",
+      "bytes": 1279993,
+      "sha256": "665304ba8e04a5a809c87c28dd693c90b221b6f4c81571da26a1e61ec5d23889",
+      "view": "three-quarter",
+      "variant": "before",
+      "camera": {
+        "position": [
+          -6,
+          -3,
+          2.4
+        ],
+        "target": [
+          0,
+          -0.29,
+          1.78
+        ],
+        "ortho": 0.88
+      }
+    },
+    {
+      "path": "assets/audit/uncaged-bill-root-fixing-study-v1/after-front.png",
+      "bytes": 1209941,
+      "sha256": "f17c59afc22dde8628c1c46d4764cd97257a461b13cdc975217c9402ba21e43c",
+      "view": "front",
+      "variant": "after",
+      "camera": {
+        "position": [
+          0,
+          -6,
+          1.78
+        ],
+        "target": [
+          0,
+          -0.3,
+          1.78
+        ],
+        "ortho": 1.05
+      }
+    },
+    {
+      "path": "assets/audit/uncaged-bill-root-fixing-study-v1/after-right-profile.png",
+      "bytes": 1206680,
+      "sha256": "9bc0b5308effb9209577428b48641a7466deef086ff9e5fa72db44b515b83f67",
+      "view": "right-profile",
+      "variant": "after",
+      "camera": {
+        "position": [
+          -6,
+          -0.3,
+          1.78
+        ],
+        "target": [
+          0,
+          -0.3,
+          1.78
+        ],
+        "ortho": 1.1
+      }
+    },
+    {
+      "path": "assets/audit/uncaged-bill-root-fixing-study-v1/after-three-quarter.png",
+      "bytes": 1280159,
+      "sha256": "eafef7df8a0b5c8009ad2a5e7efd3af4274174dc089e5331da2a5bdcf4b246b5",
+      "view": "three-quarter",
+      "variant": "after",
+      "camera": {
+        "position": [
+          -6,
+          -3,
+          2.4
+        ],
+        "target": [
+          0,
+          -0.29,
+          1.78
+        ],
+        "ortho": 0.88
+      }
+    }
+  ],
+  "limits": [
+    "Strict triangle checks detect noncoplanar edge-through-face crossings; tangencies/coplanar overlap are not called crossings.",
+    "Intended blade0 shallow embed is allowed. No continuous-motion, force, manufacture tolerance, owner-acceptance, runtime export, app selection, or publication claim.",
+    "The three views are matched neutral authoring stills, not WebGL evidence."
+  ]
+}

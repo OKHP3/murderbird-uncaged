@@ -1,0 +1,4585 @@
+{
+  "schema": "murderbird-panel-only-staged-access-clearance/v1",
+  "status": "candidate trajectory diagnostic; not runtime integration or continuous clearance acceptance",
+  "inputs": {
+    "native": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+      "bytes": 1907219
+    },
+    "posePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "poseCount": 21,
+      "nativePivotCount": 52,
+      "packetTransformRowsPerPose": 67
+    },
+    "mountProposal": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-07/control-mount-proposal-v4/mounting-neighborhoods.json",
+      "sha256": "9957fefb1edbcbc1d9cc65d6c73f234a4eb33c327189f61664e0ff3dfb272c85"
+    },
+    "actuatorRadiusM": 0.012,
+    "actuatorOwnerEndpoints": {
+      "lowerOwner": "neck",
+      "lowerXYZ": [
+        -0.23499999940395355,
+        -0.3700000047683716,
+        1.350000023841858
+      ],
+      "upperOwner": "cervical-upper",
+      "upperXYZ": [
+        -0.23499999940395355,
+        -0.29499998688697815,
+        1.4670000076293945
+      ]
+    },
+    "breastAssemblyMeshes": [
+      "Breast field root fixing -1 0 0 0",
+      "Breast field root fixing -1 0 0 1",
+      "Breast field root fixing -1 0 1 0",
+      "Breast field root fixing -1 0 1 1",
+      "Breast field root fixing -1 0 2 0",
+      "Breast field root fixing -1 0 2 1",
+      "Breast field root fixing -1 1 0 0",
+      "Breast field root fixing -1 1 0 1",
+      "Breast field root fixing -1 1 1 0",
+      "Breast field root fixing -1 1 1 1",
+      "Breast field root fixing -1 1 2 0",
+      "Breast field root fixing -1 1 2 1",
+      "Breast field root fixing -1 2 0 0",
+      "Breast field root fixing -1 2 0 1",
+      "Breast field root fixing -1 2 1 0",
+      "Breast field root fixing -1 2 1 1",
+      "Breast field root fixing -1 2 2 0",
+      "Breast field root fixing -1 2 2 1",
+      "Breast field root fixing -1 3 0 0",
+      "Breast field root fixing -1 3 0 1",
+      "Breast field root fixing -1 3 1 0",
+      "Breast field root fixing -1 3 1 1",
+      "Breast field root fixing -1 3 2 0",
+      "Breast field root fixing -1 3 2 1",
+      "Breast field root fixing -1 4 0 0",
+      "Breast field root fixing -1 4 0 1",
+      "Breast field root fixing -1 4 1 0",
+      "Breast field root fixing -1 4 1 1",
+      "Breast field root fixing -1 4 2 0",
+      "Breast field root fixing -1 4 2 1",
+      "Breast field root fixing -1 5 0 0",
+      "Breast field root fixing -1 5 0 1",
+      "Breast field root fixing -1 5 1 0",
+      "Breast field root fixing -1 5 1 1",
+      "Breast field root fixing -1 5 2 0",
+      "Breast field root fixing -1 5 2 1",
+      "Breast field root fixing 1 0 0 0",
+      "Breast field root fixing 1 0 0 1",
+      "Breast field root fixing 1 0 1 0",
+      "Breast field root fixing 1 0 1 1",
+      "Breast field root fixing 1 0 2 0",
+      "Breast field root fixing 1 0 2 1",
+      "Breast field root fixing 1 1 0 0",
+      "Breast field root fixing 1 1 0 1",
+      "Breast field root fixing 1 1 1 0",
+      "Breast field root fixing 1 1 1 1",
+      "Breast field root fixing 1 1 2 0",
+      "Breast field root fixing 1 1 2 1",
+      "Breast field root fixing 1 2 0 0",
+      "Breast field root fixing 1 2 0 1",
+      "Breast field root fixing 1 2 1 0",
+      "Breast field root fixing 1 2 1 1",
+      "Breast field root fixing 1 2 2 0",
+      "Breast field root fixing 1 2 2 1",
+      "Breast field root fixing 1 3 0 0",
+      "Breast field root fixing 1 3 0 1",
+      "Breast field root fixing 1 3 1 0",
+      "Breast field root fixing 1 3 1 1",
+      "Breast field root fixing 1 3 2 0",
+      "Breast field root fixing 1 3 2 1",
+      "Breast field root fixing 1 4 0 0",
+      "Breast field root fixing 1 4 0 1",
+      "Breast field root fixing 1 4 1 0",
+      "Breast field root fixing 1 4 1 1",
+      "Breast field root fixing 1 4 2 0",
+      "Breast field root fixing 1 4 2 1",
+      "Breast field root fixing 1 5 0 0",
+      "Breast field root fixing 1 5 0 1",
+      "Breast field root fixing 1 5 1 0",
+      "Breast field root fixing 1 5 1 1",
+      "Breast field root fixing 1 5 2 0",
+      "Breast field root fixing 1 5 2 1",
+      "Breast inner access shell",
+      "Breast keel overlapping lamina 0",
+      "Breast keel overlapping lamina 1",
+      "Breast keel overlapping lamina 2",
+      "Breast keel overlapping lamina 3",
+      "Breast keel overlapping lamina 4",
+      "Breast keel overlapping lamina 5",
+      "Breast keel root fixing 0 0",
+      "Breast keel root fixing 0 1",
+      "Breast keel root fixing 1 0",
+      "Breast keel root fixing 1 1",
+      "Breast keel root fixing 2 0",
+      "Breast keel root fixing 2 1",
+      "Breast keel root fixing 3 0",
+      "Breast keel root fixing 3 1",
+      "Breast keel root fixing 4 0",
+      "Breast keel root fixing 4 1",
+      "Breast keel root fixing 5 0",
+      "Breast keel root fixing 5 1",
+      "Breast lateral feather -1 0 0",
+      "Breast lateral feather -1 0 1",
+      "Breast lateral feather -1 0 2",
+      "Breast lateral feather -1 1 0",
+      "Breast lateral feather -1 1 1",
+      "Breast lateral feather -1 1 2",
+      "Breast lateral feather -1 2 0",
+      "Breast lateral feather -1 2 1",
+      "Breast lateral feather -1 2 2",
+      "Breast lateral feather -1 3 0",
+      "Breast lateral feather -1 3 1",
+      "Breast lateral feather -1 3 2",
+      "Breast lateral feather -1 4 0",
+      "Breast lateral feather -1 4 1",
+      "Breast lateral feather -1 4 2",
+      "Breast lateral feather -1 5 0",
+      "Breast lateral feather -1 5 1",
+      "Breast lateral feather -1 5 2",
+      "Breast lateral feather 1 0 0",
+      "Breast lateral feather 1 0 1",
+      "Breast lateral feather 1 0 2",
+      "Breast lateral feather 1 1 0",
+      "Breast lateral feather 1 1 1",
+      "Breast lateral feather 1 1 2",
+      "Breast lateral feather 1 2 0",
+      "Breast lateral feather 1 2 1",
+      "Breast lateral feather 1 2 2",
+      "Breast lateral feather 1 3 0",
+      "Breast lateral feather 1 3 1",
+      "Breast lateral feather 1 3 2",
+      "Breast lateral feather 1 4 0",
+      "Breast lateral feather 1 4 1",
+      "Breast lateral feather 1 4 2",
+      "Breast lateral feather 1 5 0",
+      "Breast lateral feather 1 5 1",
+      "Breast lateral feather 1 5 2",
+      "Upper breast cervical yoke front",
+      "Upper breast cervical yoke left",
+      "Upper breast cervical yoke right"
+    ],
+    "breastMeshTriangleCount": 19776,
+    "stationaryOwners": {
+      "body": [
+        "Ceramic cell",
+        "Ceramic cell.001",
+        "Ceramic cell.002",
+        "Curved thoracic load rail",
+        "Curved thoracic load rail.001",
+        "Dorsal lap 0 0",
+        "Dorsal lap 0 1",
+        "Dorsal lap 0 2",
+        "Dorsal lap 0 3",
+        "Dorsal lap 0 4",
+        "Dorsal lap 1 0",
+        "Dorsal lap 1 1",
+        "Dorsal lap 1 2",
+        "Dorsal lap 1 3",
+        "Dorsal lap 1 4",
+        "Dorsal lap 2 0",
+        "Dorsal lap 2 1",
+        "Dorsal lap 2 2",
+        "Dorsal lap 2 3",
+        "Dorsal lap 2 4",
+        "Dorsal lap 3 0",
+        "Dorsal lap 3 1",
+        "Dorsal lap 3 2",
+        "Dorsal lap 3 3",
+        "Dorsal lap 3 4",
+        "Dorsal lap 4 0",
+        "Dorsal lap 4 1",
+        "Dorsal lap 4 2",
+        "Dorsal lap 4 3",
+        "Dorsal lap 4 4",
+        "Insulated power route",
+        "Insulated power route.001",
+        "Passive rib behind access cover",
+        "Passive rib behind access cover.001",
+        "Passive rib behind access cover.002",
+        "Passive rib behind access cover.003",
+        "Power retaining strap",
+        "Power retaining strap.001",
+        "Proposed later left bearing strap v4",
+        "Short dorsal shell",
+        "Surge capacitor",
+        "Surge capacitor.001"
+      ],
+      "builder-optics": [
+        "Seated Advanced optic -1",
+        "Seated Advanced optic 1"
+      ],
+      "cervical-upper": [
+        "Cervical articulated inner guards",
+        "Cervical flank lamina -1 1",
+        "Cervical flank lamina -1 2",
+        "Cervical flank lamina -1 3",
+        "Cervical flank lamina 1 1",
+        "Cervical flank lamina 1 2",
+        "Cervical flank lamina 1 3",
+        "Cervical intermediate axle -1",
+        "Cervical intermediate axle 1",
+        "Throat formed lamina 1",
+        "Throat formed lamina 2",
+        "Throat formed lamina 3",
+        "Upper cervical curved load rail -1",
+        "Upper cervical curved load rail 1"
+      ],
+      "cranial-cover": [
+        "Continuous temporal shell -1",
+        "Continuous temporal shell 1",
+        "Crown lamina root pin",
+        "Crown lamina root pin.001",
+        "Crown lamina root pin.002",
+        "Crown lamina root pin.003",
+        "Crown lamina root pin.004",
+        "Crown lamina root pin.005",
+        "Crown lamina root pin.006",
+        "Crown lamina root pin.007",
+        "Crown lamina root pin.008",
+        "Crown lamina root pin.009",
+        "Forged orbital brow -1",
+        "Forged orbital brow 1",
+        "Rounded swept crown lamina 0",
+        "Rounded swept crown lamina 1",
+        "Rounded swept crown lamina 2",
+        "Rounded swept crown lamina 3",
+        "Rounded swept crown lamina 4",
+        "Swept temporal lamina -1 0 0",
+        "Swept temporal lamina -1 0 1",
+        "Swept temporal lamina -1 0 2",
+        "Swept temporal lamina -1 1 0",
+        "Swept temporal lamina -1 1 1",
+        "Swept temporal lamina -1 1 2",
+        "Swept temporal lamina -1 2 0",
+        "Swept temporal lamina -1 2 1",
+        "Swept temporal lamina -1 2 2",
+        "Swept temporal lamina -1 3 0",
+        "Swept temporal lamina -1 3 1",
+        "Swept temporal lamina -1 3 2",
+        "Swept temporal lamina -1 4 0",
+        "Swept temporal lamina -1 4 1",
+        "Swept temporal lamina 1 0 0",
+        "Swept temporal lamina 1 0 1",
+        "Swept temporal lamina 1 0 2",
+        "Swept temporal lamina 1 1 0",
+        "Swept temporal lamina 1 1 1",
+        "Swept temporal lamina 1 1 2",
+        "Swept temporal lamina 1 2 0",
+        "Swept temporal lamina 1 2 1",
+        "Swept temporal lamina 1 2 2",
+        "Swept temporal lamina 1 3 0",
+        "Swept temporal lamina 1 3 1",
+        "Swept temporal lamina 1 3 2",
+        "Swept temporal lamina 1 4 0",
+        "Swept temporal lamina 1 4 1",
+        "Temporal lamina root pin",
+        "Temporal lamina root pin.001",
+        "Temporal lamina root pin.002",
+        "Temporal lamina root pin.003",
+        "Temporal lamina root pin.004",
+        "Temporal lamina root pin.005",
+        "Temporal lamina root pin.006",
+        "Temporal lamina root pin.007",
+        "Temporal lamina root pin.008",
+        "Temporal lamina root pin.009",
+        "Temporal lamina root pin.010",
+        "Temporal lamina root pin.011",
+        "Temporal lamina root pin.012",
+        "Temporal lamina root pin.013",
+        "Temporal lamina root pin.014",
+        "Temporal lamina root pin.015",
+        "Temporal lamina root pin.016",
+        "Temporal lamina root pin.017",
+        "Temporal lamina root pin.018",
+        "Temporal lamina root pin.019",
+        "Temporal lamina root pin.020",
+        "Temporal lamina root pin.021",
+        "Temporal lamina root pin.022",
+        "Temporal lamina root pin.023",
+        "Temporal lamina root pin.024",
+        "Temporal lamina root pin.025",
+        "Temporal lamina root pin.026",
+        "Temporal lamina root pin.027",
+        "V4 cranial inner shell"
+      ],
+      "head": [
+        "Broad swept cheek band -1",
+        "Broad swept cheek band 1",
+        "Coaxial mandible journal",
+        "Coaxial mandible journal.001",
+        "Forged orbital mounting plate -1",
+        "Forged orbital mounting plate 1",
+        "Orbital mounting fixing -1 1",
+        "Orbital mounting fixing -1 13",
+        "Orbital mounting fixing -1 3",
+        "Orbital mounting fixing -1 6",
+        "Orbital mounting fixing -1 9",
+        "Orbital mounting fixing 1 1",
+        "Orbital mounting fixing 1 13",
+        "Orbital mounting fixing 1 3",
+        "Orbital mounting fixing 1 6",
+        "Orbital mounting fixing 1 9",
+        "Recessed cheek fixing",
+        "Recessed cheek fixing.001",
+        "Recessed cheek fixing.002",
+        "Recessed cheek fixing.003",
+        "Recessed cheek fixing.004",
+        "Recessed cheek fixing.005",
+        "Recessed orbital bearing -1",
+        "Recessed orbital bearing 1",
+        "Seated passive optic housing -1",
+        "Seated passive optic housing 1"
+      ],
+      "jaw": [
+        "Distal mandible bridge",
+        "Forked forged mandible -1",
+        "Forked forged mandible 1",
+        "Mandible journal cap",
+        "Mandible journal cap.001"
+      ],
+      "left-mantle": [
+        "Original anatomical-left travel stop v4",
+        "Shoulder covert root pin",
+        "Shoulder covert root pin.001",
+        "Shoulder covert root pin.002",
+        "Shoulder covert root pin.003",
+        "Shoulder covert root pin.004",
+        "Shoulder covert root pin.005",
+        "Shoulder covert root pin.006",
+        "Shoulder covert root pin.007",
+        "Shoulder covert root pin.008",
+        "Shoulder covert root pin.009",
+        "Shoulder covert root pin.010",
+        "Shoulder covert root pin.011",
+        "Shoulder covert root pin.012",
+        "Shoulder covert root pin.013",
+        "Shoulder covert root pin.014",
+        "Shoulder covert root pin.015",
+        "Shoulder covert root pin.016",
+        "Shoulder covert root pin.017",
+        "Shoulder covert root pin.018",
+        "Shoulder covert root pin.019",
+        "Shoulder covert root pin.020",
+        "Shoulder covert root pin.021",
+        "Shoulder covert root pin.022",
+        "Shoulder covert root pin.023",
+        "Shoulder covert root pin.024",
+        "left oblique shoulder saddle v4",
+        "left profiled mantle backing v4 left-mantle",
+        "left shoulder covert 0 0",
+        "left shoulder covert 0 1",
+        "left shoulder covert 0 2",
+        "left shoulder covert 0 3",
+        "left shoulder covert 0 4",
+        "left shoulder covert 0 5",
+        "left shoulder covert 0 6",
+        "left shoulder covert 0 7",
+        "left shoulder covert 1 0",
+        "left shoulder covert 1 1",
+        "left shoulder covert 1 2",
+        "left shoulder covert 1 3",
+        "left shoulder covert 1 4",
+        "left shoulder covert 1 5",
+        "left shoulder covert 1 6",
+        "left shoulder covert 1 7",
+        "left shoulder covert 1 8",
+        "left shoulder covert 2 0",
+        "left shoulder covert 2 1",
+        "left shoulder covert 2 2",
+        "left shoulder covert 2 3",
+        "left shoulder covert 2 4",
+        "left shoulder covert 2 5",
+        "left shoulder covert 2 6",
+        "left shoulder covert 2 7",
+        "left shouldered shoulder journal",
+        "left stepped shoulder race -0.033",
+        "left stepped shoulder race -0.044",
+        "left stepped shoulder race 0.033",
+        "left stepped shoulder race 0.044",
+        "left swept upper wing load member"
+      ],
+      "left-wing-shield": [
+        "Distal mantle root pin",
+        "Distal mantle root pin.001",
+        "Distal mantle root pin.002",
+        "Distal mantle root pin.003",
+        "Distal mantle root pin.004",
+        "Distal mantle root pin.005",
+        "Distal mantle root pin.006",
+        "Distal mantle root pin.007",
+        "Distal mantle root pin.008",
+        "Distal mantle root pin.009",
+        "Distal mantle root pin.010",
+        "Distal mantle root pin.011",
+        "Distal mantle root pin.012",
+        "Distal mantle root pin.013",
+        "Distal mantle root pin.014",
+        "Distal mantle root pin.015",
+        "Distal mantle root pin.016",
+        "left coaxial elbow journal",
+        "left distal mantle plume 0 0",
+        "left distal mantle plume 0 1",
+        "left distal mantle plume 0 2",
+        "left distal mantle plume 0 3",
+        "left distal mantle plume 0 4",
+        "left distal mantle plume 0 5",
+        "left distal mantle plume 0 6",
+        "left distal mantle plume 1 0",
+        "left distal mantle plume 1 1",
+        "left distal mantle plume 1 2",
+        "left distal mantle plume 1 3",
+        "left distal mantle plume 1 4",
+        "left distal mantle plume 1 5",
+        "left distal mantle plume 2 0",
+        "left distal mantle plume 2 1",
+        "left distal mantle plume 2 2",
+        "left distal mantle plume 2 3",
+        "left profiled mantle backing v4 left-wing-shield",
+        "left stepped elbow race -0.015",
+        "left stepped elbow race 0.011"
+      ],
+      "neck": [
+        "Bowed passive cervical fork",
+        "Bowed passive cervical fork.001",
+        "Cervical flank lamina -1 4",
+        "Cervical flank lamina -1 5",
+        "Cervical flank lamina -1 6",
+        "Cervical flank lamina 1 4",
+        "Cervical flank lamina 1 5",
+        "Cervical flank lamina 1 6",
+        "Cervical intermediate clevis -1",
+        "Cervical intermediate clevis 1",
+        "Lower cervical open backing",
+        "Throat formed lamina 4",
+        "Throat formed lamina 5",
+        "Throat formed lamina 6"
+      ],
+      "processing": [
+        "Processing crosspiece",
+        "Processing crosspiece.001",
+        "Processing crosspiece.002",
+        "Processing crosspiece.003",
+        "Processing crosspiece.004",
+        "Processing crosspiece.005",
+        "Processing crosspiece.006",
+        "Processing crosspiece.007",
+        "Processing crosspiece.008",
+        "Processing crosspiece.009",
+        "Processing crosspiece.010",
+        "Processing crosspiece.011",
+        "Processing lattice rail",
+        "Processing lattice rail.001",
+        "Processing lattice rail.002",
+        "Processing lattice rail.003",
+        "Processing lattice rail.004",
+        "Processing lattice rail.005",
+        "Processing lattice rail.006",
+        "Processing lattice rail.007",
+        "Processing lattice rail.008",
+        "Processing lattice rail.009",
+        "Processing lattice rail.010",
+        "Processing lattice rail.011"
+      ],
+      "right-mantle": [
+        "Shoulder covert root pin.025",
+        "Shoulder covert root pin.026",
+        "Shoulder covert root pin.027",
+        "Shoulder covert root pin.028",
+        "Shoulder covert root pin.029",
+        "Shoulder covert root pin.030",
+        "Shoulder covert root pin.031",
+        "Shoulder covert root pin.032",
+        "Shoulder covert root pin.033",
+        "Shoulder covert root pin.034",
+        "Shoulder covert root pin.035",
+        "Shoulder covert root pin.036",
+        "Shoulder covert root pin.037",
+        "Shoulder covert root pin.038",
+        "Shoulder covert root pin.039",
+        "Shoulder covert root pin.040",
+        "Shoulder covert root pin.041",
+        "Shoulder covert root pin.042",
+        "Shoulder covert root pin.043",
+        "Shoulder covert root pin.044",
+        "Shoulder covert root pin.045",
+        "Shoulder covert root pin.046",
+        "Shoulder covert root pin.047",
+        "Shoulder covert root pin.048",
+        "Shoulder covert root pin.049",
+        "right oblique shoulder saddle v4",
+        "right profiled mantle backing v4 right-mantle",
+        "right shoulder covert 0 0",
+        "right shoulder covert 0 1",
+        "right shoulder covert 0 2",
+        "right shoulder covert 0 3",
+        "right shoulder covert 0 4",
+        "right shoulder covert 0 5",
+        "right shoulder covert 0 6",
+        "right shoulder covert 0 7",
+        "right shoulder covert 1 0",
+        "right shoulder covert 1 1",
+        "right shoulder covert 1 2",
+        "right shoulder covert 1 3",
+        "right shoulder covert 1 4",
+        "right shoulder covert 1 5",
+        "right shoulder covert 1 6",
+        "right shoulder covert 1 7",
+        "right shoulder covert 1 8",
+        "right shoulder covert 2 0",
+        "right shoulder covert 2 1",
+        "right shoulder covert 2 2",
+        "right shoulder covert 2 3",
+        "right shoulder covert 2 4",
+        "right shoulder covert 2 5",
+        "right shoulder covert 2 6",
+        "right shoulder covert 2 7",
+        "right shouldered shoulder journal",
+        "right stepped shoulder race -0.033",
+        "right stepped shoulder race -0.044",
+        "right stepped shoulder race 0.033",
+        "right stepped shoulder race 0.044",
+        "right swept upper wing load member"
+      ],
+      "right-wing-shield": [
+        "Distal mantle root pin.017",
+        "Distal mantle root pin.018",
+        "Distal mantle root pin.019",
+        "Distal mantle root pin.020",
+        "Distal mantle root pin.021",
+        "Distal mantle root pin.022",
+        "Distal mantle root pin.023",
+        "Distal mantle root pin.024",
+        "Distal mantle root pin.025",
+        "Distal mantle root pin.026",
+        "Distal mantle root pin.027",
+        "Distal mantle root pin.028",
+        "Distal mantle root pin.029",
+        "Distal mantle root pin.030",
+        "Distal mantle root pin.031",
+        "Distal mantle root pin.032",
+        "Distal mantle root pin.033",
+        "right coaxial elbow journal",
+        "right distal mantle plume 0 0",
+        "right distal mantle plume 0 1",
+        "right distal mantle plume 0 2",
+        "right distal mantle plume 0 3",
+        "right distal mantle plume 0 4",
+        "right distal mantle plume 0 5",
+        "right distal mantle plume 0 6",
+        "right distal mantle plume 1 0",
+        "right distal mantle plume 1 1",
+        "right distal mantle plume 1 2",
+        "right distal mantle plume 1 3",
+        "right distal mantle plume 1 4",
+        "right distal mantle plume 1 5",
+        "right distal mantle plume 2 0",
+        "right distal mantle plume 2 1",
+        "right distal mantle plume 2 2",
+        "right distal mantle plume 2 3",
+        "right profiled mantle backing v4 right-wing-shield",
+        "right stepped elbow race -0.015",
+        "right stepped elbow race 0.011"
+      ],
+      "upper-bill": [
+        "Bill root fixing",
+        "Bill root fixing.001",
+        "Bill root fixing.002",
+        "Bill root fixing.003",
+        "Cere root transition -1",
+        "Cere root transition 1",
+        "Nasal hood fixing",
+        "Nasal hood fixing.001",
+        "Nasal hood fixing.002",
+        "Nasal hood fixing.003",
+        "Overlapping nasal hood",
+        "Profiled upper bill blade 0",
+        "Profiled upper bill blade 1"
+      ]
+    },
+    "excludedStationaryMeshesNotInNamedRegionalOwnerSet": [
+      "Digit inner link",
+      "Digit inner link.001",
+      "Digit inner link.002",
+      "Digit inner link.003",
+      "Digit inner link.004",
+      "Digit inner link.005",
+      "Digit inner link.006",
+      "Digit inner link.007",
+      "Digit inner link.008",
+      "Digit inner link.009",
+      "Digit inner link.010",
+      "Digit inner link.011",
+      "Limb sheath fixing",
+      "Limb sheath fixing.001",
+      "Limb sheath fixing.002",
+      "Limb sheath fixing.003",
+      "Limb sheath fixing.004",
+      "Limb sheath fixing.005",
+      "Limb sheath fixing.006",
+      "Limb sheath fixing.007",
+      "Limb sheath fixing.008",
+      "Limb sheath fixing.009",
+      "Limb sheath fixing.010",
+      "Limb sheath fixing.011",
+      "Limb sheath fixing.012",
+      "Limb sheath fixing.013",
+      "Limb sheath fixing.014",
+      "Limb sheath fixing.015",
+      "Limb sheath fixing.016",
+      "Limb sheath fixing.017",
+      "Limb sheath fixing.018",
+      "Limb sheath fixing.019",
+      "Limb sheath fixing.020",
+      "Limb sheath fixing.021",
+      "Limb sheath fixing.022",
+      "Limb sheath fixing.023",
+      "Toe hinge",
+      "Toe hinge.001",
+      "Toe hinge.002",
+      "Toe hinge.003",
+      "Toe hinge.004",
+      "Toe hinge.005",
+      "Toe hinge.006",
+      "Toe hinge.007",
+      "Toe hinge.008",
+      "Toe hinge.009",
+      "Toe hinge.010",
+      "Toe hinge.011",
+      "left articulated bearing core",
+      "left articulated bearing core.001",
+      "left articulated bearing core.002",
+      "left bearing race pin -1 0",
+      "left bearing race pin -1 0.001",
+      "left bearing race pin -1 0.002",
+      "left bearing race pin -1 1",
+      "left bearing race pin -1 1.001",
+      "left bearing race pin -1 1.002",
+      "left bearing race pin -1 2",
+      "left bearing race pin -1 2.001",
+      "left bearing race pin -1 2.002",
+      "left bearing race pin -1 3",
+      "left bearing race pin -1 3.001",
+      "left bearing race pin -1 3.002",
+      "left bearing race pin 1 0",
+      "left bearing race pin 1 0.001",
+      "left bearing race pin 1 0.002",
+      "left bearing race pin 1 1",
+      "left bearing race pin 1 1.001",
+      "left bearing race pin 1 1.002",
+      "left bearing race pin 1 2",
+      "left bearing race pin 1 2.001",
+      "left bearing race pin 1 2.002",
+      "left bearing race pin 1 3",
+      "left bearing race pin 1 3.001",
+      "left bearing race pin 1 3.002",
+      "left curved instep guard",
+      "left digit 1 distal dorsal guard",
+      "left digit 1 proximal dorsal guard",
+      "left digit 1 tapered claw sheath",
+      "left digit 2 distal dorsal guard",
+      "left digit 2 proximal dorsal guard",
+      "left digit 2 tapered claw sheath",
+      "left digit 3 distal dorsal guard",
+      "left digit 3 proximal dorsal guard",
+      "left digit 3 tapered claw sheath",
+      "left metatarsal passive rail",
+      "left metatarsal passive rail.001",
+      "left open stepped bearing race -1",
+      "left open stepped bearing race -1.001",
+      "left open stepped bearing race -1.002",
+      "left open stepped bearing race 1",
+      "left open stepped bearing race 1.001",
+      "left open stepped bearing race 1.002",
+      "left rear hallux load link v4",
+      "left rear hallux sheath v4",
+      "left recessed axle cap -1",
+      "left recessed axle cap -1.001",
+      "left recessed axle cap -1.002",
+      "left recessed axle cap 1",
+      "left recessed axle cap 1.001",
+      "left recessed axle cap 1.002",
+      "left shaped shin guard distal-overlap",
+      "left shaped shin guard proximal",
+      "left shaped thigh guard distal-overlap",
+      "left shaped thigh guard proximal",
+      "left tapered passive load rail",
+      "left tapered passive load rail.001",
+      "left tapered passive load rail.002",
+      "left tapered passive load rail.003",
+      "right articulated bearing core",
+      "right articulated bearing core.001",
+      "right articulated bearing core.002",
+      "right bearing race pin -1 0",
+      "right bearing race pin -1 0.001",
+      "right bearing race pin -1 0.002",
+      "right bearing race pin -1 1",
+      "right bearing race pin -1 1.001",
+      "right bearing race pin -1 1.002",
+      "right bearing race pin -1 2",
+      "right bearing race pin -1 2.001",
+      "right bearing race pin -1 2.002",
+      "right bearing race pin -1 3",
+      "right bearing race pin -1 3.001",
+      "right bearing race pin -1 3.002",
+      "right bearing race pin 1 0",
+      "right bearing race pin 1 0.001",
+      "right bearing race pin 1 0.002",
+      "right bearing race pin 1 1",
+      "right bearing race pin 1 1.001",
+      "right bearing race pin 1 1.002",
+      "right bearing race pin 1 2",
+      "right bearing race pin 1 2.001",
+      "right bearing race pin 1 2.002",
+      "right bearing race pin 1 3",
+      "right bearing race pin 1 3.001",
+      "right bearing race pin 1 3.002",
+      "right curved instep guard",
+      "right digit 1 distal dorsal guard",
+      "right digit 1 proximal dorsal guard",
+      "right digit 1 tapered claw sheath",
+      "right digit 2 distal dorsal guard",
+      "right digit 2 proximal dorsal guard",
+      "right digit 2 tapered claw sheath",
+      "right digit 3 distal dorsal guard",
+      "right digit 3 proximal dorsal guard",
+      "right digit 3 tapered claw sheath",
+      "right metatarsal passive rail",
+      "right metatarsal passive rail.001",
+      "right open stepped bearing race -1",
+      "right open stepped bearing race -1.001",
+      "right open stepped bearing race -1.002",
+      "right open stepped bearing race 1",
+      "right open stepped bearing race 1.001",
+      "right open stepped bearing race 1.002",
+      "right rear hallux load link v4",
+      "right rear hallux sheath v4",
+      "right recessed axle cap -1",
+      "right recessed axle cap -1.001",
+      "right recessed axle cap -1.002",
+      "right recessed axle cap 1",
+      "right recessed axle cap 1.001",
+      "right recessed axle cap 1.002",
+      "right shaped shin guard distal-overlap",
+      "right shaped shin guard proximal",
+      "right shaped thigh guard distal-overlap",
+      "right shaped thigh guard proximal",
+      "right tapered passive load rail",
+      "right tapered passive load rail.001",
+      "right tapered passive load rail.002",
+      "right tapered passive load rail.003"
+    ],
+    "nativeParentLocalToPinnedRuntimeBreastMatrixMaxError": 0.0,
+    "nativeParentWorld": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.8199999928474426
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "trajectory": {
+    "stageA": {
+      "samples": 34,
+      "routeIndices": [
+        0,
+        33
+      ],
+      "timelineOpen": [
+        0,
+        0.3333333333333333
+      ],
+      "angleRad": [
+        0,
+        -0.675
+      ],
+      "panelSlideScalar": 0
+    },
+    "stageB": {
+      "samples": 35,
+      "routeIndices": [
+        33,
+        67
+      ],
+      "timelineOpen": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "angleRad": -0.675,
+      "panelSlideScalar": [
+        0,
+        0.5
+      ]
+    },
+    "stageC": {
+      "samples": 34,
+      "routeIndices": [
+        67,
+        100
+      ],
+      "timelineOpen": [
+        0.6666666666666666,
+        1
+      ],
+      "angleRad": [
+        -0.675,
+        -1.35
+      ],
+      "panelSlideScalar": 0.5
+    },
+    "panelTranslationRuntimeLocalPerUnit": [
+      -0.7,
+      -0.12,
+      0.18
+    ],
+    "totalDiscreteSamples": 101,
+    "otherNativeOwners": "held at attempt-07 rest transforms for all samples",
+    "closedTransformRestoredAt": {
+      "timelineOpen": 0,
+      "angleRad": 0,
+      "panelSlideScalar": 0
+    }
+  },
+  "method": {
+    "actuator": "V4 proposal anchor endpoints transformed by actual pinned native owners; centerline sampled at17 equal intervals against entire evaluated breastplate mesh assembly. Conservative distance lower bound is min sampled distance minus half the segment sample step (1-Lipschitz distance-to-surface bound); 12mm housing radius subtracted separately.",
+    "stationaryPanelScreen": "Per-sample Blender BVHTree triangle overlap candidate pairs between the transformed breastplate assembly and stationary meshes grouped under named regional owners. Candidate counts can include intended contact/coplanarity; they are not classified as confirmed collision.",
+    "poseMapping": "Rest breastplate world matrix is checked against packet after Blender/runtime basis conversion. Panel-only transform applies in runtime local coordinates, then maps its delta to native coordinates. No global separation offset or transform is applied to other assemblies."
+  },
+  "stageSummaries": {
+    "A": {
+      "sampleCount": 34,
+      "minimumConservative12mmHousingMarginM": 0.01587571311622595,
+      "minimumAt": {
+        "routeIndex": 33,
+        "stageProgress": 0.99,
+        "timelineOpen": 0.33,
+        "angleRad": -0.66825,
+        "slideScalar": 0.0,
+        "nearestBreastMesh": "Breast lateral feather -1 0 0",
+        "sampledCenterlineDistanceM": 0.032218676060438156
+      },
+      "minimumSampled12mmHousingMarginM": 0.020218676060438156,
+      "minimumSampledAt": {
+        "routeIndex": 33,
+        "stageProgress": 0.99,
+        "slideScalar": 0.0,
+        "nearestBreastMesh": "Breast lateral feather -1 0 0",
+        "sampledCenterlineDistanceM": 0.032218676060438156
+      },
+      "posesWithSampled12mmEnvelopeProximity": 0,
+      "posesWithConservative12mmBoundBelowZero": 0,
+      "stationaryRegionalOverlapCandidatePoseCount": 34,
+      "stationaryRegionalOverlapOwners": [
+        "body",
+        "left-mantle",
+        "left-wing-shield",
+        "neck",
+        "right-mantle",
+        "right-wing-shield"
+      ]
+    },
+    "B": {
+      "sampleCount": 33,
+      "minimumConservative12mmHousingMarginM": -0.0162705402812877,
+      "minimumAt": {
+        "routeIndex": 38,
+        "stageProgress": 0.14000000000000007,
+        "timelineOpen": 0.38,
+        "angleRad": -0.675,
+        "slideScalar": 0.07000000000000003,
+        "nearestBreastMesh": "Breast inner access shell",
+        "sampledCenterlineDistanceM": 7.24226629245095e-05
+      },
+      "minimumSampled12mmHousingMarginM": -0.01192757733707549,
+      "minimumSampledAt": {
+        "routeIndex": 38,
+        "stageProgress": 0.14000000000000007,
+        "slideScalar": 0.07000000000000003,
+        "nearestBreastMesh": "Breast inner access shell",
+        "sampledCenterlineDistanceM": 7.24226629245095e-05
+      },
+      "posesWithSampled12mmEnvelopeProximity": 4,
+      "posesWithConservative12mmBoundBelowZero": 6,
+      "stationaryRegionalOverlapCandidatePoseCount": 23,
+      "stationaryRegionalOverlapOwners": [
+        "body",
+        "neck",
+        "right-mantle",
+        "right-wing-shield"
+      ]
+    },
+    "C": {
+      "sampleCount": 34,
+      "minimumConservative12mmHousingMarginM": 0.18447568002968762,
+      "minimumAt": {
+        "routeIndex": 67,
+        "stageProgress": 0.010000000000000231,
+        "timelineOpen": 0.67,
+        "angleRad": -0.6817500000000002,
+        "slideScalar": 0.5,
+        "nearestBreastMesh": "Breast inner access shell",
+        "sampledCenterlineDistanceM": 0.20081864297389984
+      },
+      "minimumSampled12mmHousingMarginM": 0.18881864297389983,
+      "minimumSampledAt": {
+        "routeIndex": 67,
+        "stageProgress": 0.010000000000000231,
+        "slideScalar": 0.5,
+        "nearestBreastMesh": "Breast inner access shell",
+        "sampledCenterlineDistanceM": 0.20081864297389984
+      },
+      "posesWithSampled12mmEnvelopeProximity": 0,
+      "posesWithConservative12mmBoundBelowZero": 0,
+      "stationaryRegionalOverlapCandidatePoseCount": 0,
+      "stationaryRegionalOverlapOwners": []
+    }
+  },
+  "stageBPanelSlideScalarScreen": {
+    "sampleCount": 27,
+    "firstSampledScalarWithNonnegativeConservativeHousingMargin": 0.010000000000000064,
+    "allLaterSamplesRemainNonnegative": false,
+    "safeSampleScalars": [
+      0.010000000000000064,
+      0.11499999999999999,
+      0.13,
+      0.14500000000000002,
+      0.16000000000000003,
+      0.17500000000000004,
+      0.19000000000000006,
+      0.205,
+      0.22,
+      0.23500000000000001,
+      0.25,
+      0.265,
+      0.28,
+      0.29500000000000004,
+      0.31000000000000005,
+      0.32500000000000007,
+      0.3400000000000001,
+      0.355,
+      0.37,
+      0.385,
+      0.4,
+      0.41500000000000004,
+      0.43000000000000005,
+      0.44500000000000006,
+      0.4600000000000001,
+      0.4750000000000001,
+      0.4900000000000001
+    ]
+  },
+  "samples": [
+    {
+      "routeIndex": 0,
+      "routeProgress": 0.0,
+      "stage": "A",
+      "stageProgress": 0.0,
+      "timelineOpen": 0.0,
+      "runtimeOpenAngleRad": -0.0,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.08510374277830124,
+        "sampleIndex": 10,
+        "nearestTriangle": 5910,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.3231250047683716,
+          1.4231250286102295
+        ],
+        "nearestPoint": [
+          -0.1800999492406845,
+          -0.27058926224708557,
+          1.3848023414611816
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.08076077983408902,
+        "conservative12mmHousingMarginM": 0.06876077983408903,
+        "sampled12mmHousingMarginM": 0.07310374277830124,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 1054,
+        "left-mantle": 540,
+        "left-wing-shield": 206,
+        "neck": 2643,
+        "right-mantle": 528,
+        "right-wing-shield": 204
+      },
+      "stationaryCandidatePairCount": 5175
+    },
+    {
+      "routeIndex": 1,
+      "routeProgress": 0.01,
+      "stage": "A",
+      "stageProgress": 0.03,
+      "timelineOpen": 0.01,
+      "runtimeOpenAngleRad": -0.02025,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.08380068093538284,
+        "sampleIndex": 9,
+        "nearestTriangle": 5719,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.1783214658498764,
+          -0.2742162346839905,
+          1.3851932287216187
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07945771799117063,
+        "conservative12mmHousingMarginM": 0.06745771799117063,
+        "sampled12mmHousingMarginM": 0.07180068093538285,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 713,
+        "left-mantle": 526,
+        "left-wing-shield": 172,
+        "neck": 2876,
+        "right-mantle": 526,
+        "right-wing-shield": 212
+      },
+      "stationaryCandidatePairCount": 5025
+    },
+    {
+      "routeIndex": 2,
+      "routeProgress": 0.02,
+      "stage": "A",
+      "stageProgress": 0.06,
+      "timelineOpen": 0.02,
+      "runtimeOpenAngleRad": -0.0405,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.08246965706348419,
+        "sampleIndex": 9,
+        "nearestTriangle": 5910,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.17823870480060577,
+          -0.2763504087924957,
+          1.3852993249893188
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07812669411927198,
+        "conservative12mmHousingMarginM": 0.06612669411927198,
+        "sampled12mmHousingMarginM": 0.0704696570634842,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 631,
+        "left-mantle": 480,
+        "left-wing-shield": 140,
+        "neck": 2923,
+        "right-mantle": 542,
+        "right-wing-shield": 216
+      },
+      "stationaryCandidatePairCount": 4932
+    },
+    {
+      "routeIndex": 3,
+      "routeProgress": 0.03,
+      "stage": "A",
+      "stageProgress": 0.09,
+      "timelineOpen": 0.03,
+      "runtimeOpenAngleRad": -0.06075,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.08112651854753494,
+        "sampleIndex": 9,
+        "nearestTriangle": 5910,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.1782304048538208,
+          -0.27847766876220703,
+          1.385401964187622
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07678355560332273,
+        "conservative12mmHousingMarginM": 0.06478355560332273,
+        "sampled12mmHousingMarginM": 0.06912651854753495,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 700,
+        "left-mantle": 412,
+        "left-wing-shield": 100,
+        "neck": 2891,
+        "right-mantle": 540,
+        "right-wing-shield": 200
+      },
+      "stationaryCandidatePairCount": 4843
+    },
+    {
+      "routeIndex": 4,
+      "routeProgress": 0.04,
+      "stage": "A",
+      "stageProgress": 0.12,
+      "timelineOpen": 0.04,
+      "runtimeOpenAngleRad": -0.081,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07977207750082016,
+        "sampleIndex": 9,
+        "nearestTriangle": 5719,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.17829638719558716,
+          -0.28059491515159607,
+          1.3855010271072388
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07542911455660795,
+        "conservative12mmHousingMarginM": 0.06342911455660795,
+        "sampled12mmHousingMarginM": 0.06777207750082016,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 667,
+        "left-mantle": 352,
+        "left-wing-shield": 77,
+        "neck": 2587,
+        "right-mantle": 536,
+        "right-wing-shield": 198
+      },
+      "stationaryCandidatePairCount": 4417
+    },
+    {
+      "routeIndex": 5,
+      "routeProgress": 0.05,
+      "stage": "A",
+      "stageProgress": 0.15000000000000002,
+      "timelineOpen": 0.05,
+      "runtimeOpenAngleRad": -0.10125000000000002,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07840725034475327,
+        "sampleIndex": 9,
+        "nearestTriangle": 5719,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.1784355789422989,
+          -0.282699853181839,
+          1.3855963945388794
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07406428740054105,
+        "conservative12mmHousingMarginM": 0.062064287400541054,
+        "sampled12mmHousingMarginM": 0.06640725034475327,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 660,
+        "left-mantle": 176,
+        "left-wing-shield": 16,
+        "neck": 2293,
+        "right-mantle": 532,
+        "right-wing-shield": 194
+      },
+      "stationaryCandidatePairCount": 3871
+    },
+    {
+      "routeIndex": 6,
+      "routeProgress": 0.06,
+      "stage": "A",
+      "stageProgress": 0.18,
+      "timelineOpen": 0.06,
+      "runtimeOpenAngleRad": -0.1215,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07703282684087753,
+        "sampleIndex": 9,
+        "nearestTriangle": 5719,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.17864756286144257,
+          -0.28478941321372986,
+          1.3856881856918335
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07268986389666532,
+        "conservative12mmHousingMarginM": 0.06068986389666532,
+        "sampled12mmHousingMarginM": 0.06503282684087754,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 721,
+        "left-mantle": 96,
+        "neck": 1923,
+        "right-mantle": 528,
+        "right-wing-shield": 196
+      },
+      "stationaryCandidatePairCount": 3464
+    },
+    {
+      "routeIndex": 7,
+      "routeProgress": 0.07,
+      "stage": "A",
+      "stageProgress": 0.21000000000000002,
+      "timelineOpen": 0.07,
+      "runtimeOpenAngleRad": -0.14175000000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07564979791641235,
+        "sampleIndex": 9,
+        "nearestTriangle": 5719,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3278124928474426,
+          1.4158124923706055
+        ],
+        "nearestPoint": [
+          -0.17893141508102417,
+          -0.28686100244522095,
+          1.385776162147522
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07130683497220014,
+        "conservative12mmHousingMarginM": 0.05930683497220014,
+        "sampled12mmHousingMarginM": 0.06364979791641236,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 755,
+        "left-mantle": 48,
+        "neck": 1567,
+        "right-mantle": 524,
+        "right-wing-shield": 194
+      },
+      "stationaryCandidatePairCount": 3088
+    },
+    {
+      "routeIndex": 8,
+      "routeProgress": 0.08,
+      "stage": "A",
+      "stageProgress": 0.24,
+      "timelineOpen": 0.08,
+      "runtimeOpenAngleRad": -0.162,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07424069195985794,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.17861075699329376,
+          -0.2897719144821167,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06989772901564573,
+        "conservative12mmHousingMarginM": 0.05789772901564573,
+        "sampled12mmHousingMarginM": 0.062240691959857944,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 815,
+        "neck": 1412,
+        "right-mantle": 544,
+        "right-wing-shield": 196
+      },
+      "stationaryCandidatePairCount": 2967
+    },
+    {
+      "routeIndex": 9,
+      "routeProgress": 0.09,
+      "stage": "A",
+      "stageProgress": 0.27,
+      "timelineOpen": 0.09,
+      "runtimeOpenAngleRad": -0.18225000000000002,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07273682951927185,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.17943175137043,
+          -0.29131054878234863,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06839386657505964,
+        "conservative12mmHousingMarginM": 0.05639386657505964,
+        "sampled12mmHousingMarginM": 0.060736829519271854,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 854,
+        "neck": 1220,
+        "right-mantle": 548,
+        "right-wing-shield": 182
+      },
+      "stationaryCandidatePairCount": 2804
+    },
+    {
+      "routeIndex": 10,
+      "routeProgress": 0.1,
+      "stage": "A",
+      "stageProgress": 0.30000000000000004,
+      "timelineOpen": 0.1,
+      "runtimeOpenAngleRad": -0.20250000000000004,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07122955471277237,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18028371036052704,
+          -0.29283222556114197,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06688659176856016,
+        "conservative12mmHousingMarginM": 0.05488659176856016,
+        "sampled12mmHousingMarginM": 0.05922955471277237,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 828,
+        "neck": 1171,
+        "right-mantle": 540,
+        "right-wing-shield": 178
+      },
+      "stationaryCandidatePairCount": 2717
+    },
+    {
+      "routeIndex": 11,
+      "routeProgress": 0.11,
+      "stage": "A",
+      "stageProgress": 0.33,
+      "timelineOpen": 0.11,
+      "runtimeOpenAngleRad": -0.22275000000000003,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06971923261880875,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18116632103919983,
+          -0.29433637857437134,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06537626967459653,
+        "conservative12mmHousingMarginM": 0.053376269674596535,
+        "sampled12mmHousingMarginM": 0.05771923261880875,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 822,
+        "neck": 1099,
+        "right-mantle": 535,
+        "right-wing-shield": 181
+      },
+      "stationaryCandidatePairCount": 2637
+    },
+    {
+      "routeIndex": 12,
+      "routeProgress": 0.12,
+      "stage": "A",
+      "stageProgress": 0.36,
+      "timelineOpen": 0.12,
+      "runtimeOpenAngleRad": -0.243,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06820636242628098,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.1820792257785797,
+          -0.29582229256629944,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06386339948206876,
+        "conservative12mmHousingMarginM": 0.051863399482068764,
+        "sampled12mmHousingMarginM": 0.05620636242628098,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 832,
+        "neck": 1115,
+        "right-mantle": 543,
+        "right-wing-shield": 183
+      },
+      "stationaryCandidatePairCount": 2673
+    },
+    {
+      "routeIndex": 13,
+      "routeProgress": 0.13,
+      "stage": "A",
+      "stageProgress": 0.39,
+      "timelineOpen": 0.13,
+      "runtimeOpenAngleRad": -0.26325000000000004,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06669139862060547,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18302199244499207,
+          -0.2972894310951233,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06234843567639326,
+        "conservative12mmHousingMarginM": 0.05034843567639326,
+        "sampled12mmHousingMarginM": 0.05469139862060547,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 778,
+        "neck": 1009,
+        "right-mantle": 539,
+        "right-wing-shield": 185
+      },
+      "stationaryCandidatePairCount": 2511
+    },
+    {
+      "routeIndex": 14,
+      "routeProgress": 0.14,
+      "stage": "A",
+      "stageProgress": 0.42000000000000004,
+      "timelineOpen": 0.14,
+      "runtimeOpenAngleRad": -0.28350000000000003,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06517478078603745,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18399430811405182,
+          -0.29873719811439514,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06083181784182524,
+        "conservative12mmHousingMarginM": 0.048831817841825234,
+        "sampled12mmHousingMarginM": 0.05317478078603745,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 736,
+        "neck": 904,
+        "right-mantle": 529,
+        "right-wing-shield": 175
+      },
+      "stationaryCandidatePairCount": 2344
+    },
+    {
+      "routeIndex": 15,
+      "routeProgress": 0.15,
+      "stage": "A",
+      "stageProgress": 0.44999999999999996,
+      "timelineOpen": 0.15,
+      "runtimeOpenAngleRad": -0.30374999999999996,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06365707516670227,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18499574065208435,
+          -0.30016499757766724,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.05931411222249006,
+        "conservative12mmHousingMarginM": 0.04731411222249006,
+        "sampled12mmHousingMarginM": 0.051657075166702274,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 728,
+        "neck": 788,
+        "right-mantle": 519,
+        "right-wing-shield": 157
+      },
+      "stationaryCandidatePairCount": 2192
+    },
+    {
+      "routeIndex": 16,
+      "routeProgress": 0.16,
+      "stage": "A",
+      "stageProgress": 0.48,
+      "timelineOpen": 0.16,
+      "runtimeOpenAngleRad": -0.324,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06213889271020889,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18602585792541504,
+          -0.30157217383384705,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.057795929765996686,
+        "conservative12mmHousingMarginM": 0.04579592976599668,
+        "sampled12mmHousingMarginM": 0.050138892710208896,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 688,
+        "neck": 704,
+        "right-mantle": 504,
+        "right-wing-shield": 128
+      },
+      "stationaryCandidatePairCount": 2024
+    },
+    {
+      "routeIndex": 17,
+      "routeProgress": 0.17,
+      "stage": "A",
+      "stageProgress": 0.51,
+      "timelineOpen": 0.17,
+      "runtimeOpenAngleRad": -0.34425000000000006,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.06062077730894089,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18708425760269165,
+          -0.30295825004577637,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.05627781436472868,
+        "conservative12mmHousingMarginM": 0.044277814364728676,
+        "sampled12mmHousingMarginM": 0.04862077730894089,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 682,
+        "neck": 582,
+        "right-mantle": 478,
+        "right-wing-shield": 80
+      },
+      "stationaryCandidatePairCount": 1822
+    },
+    {
+      "routeIndex": 18,
+      "routeProgress": 0.18,
+      "stage": "A",
+      "stageProgress": 0.54,
+      "timelineOpen": 0.18,
+      "runtimeOpenAngleRad": -0.36450000000000005,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.05910339578986168,
+        "sampleIndex": 8,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.33249998092651367,
+          1.4084999561309814
+        ],
+        "nearestPoint": [
+          -0.18817052245140076,
+          -0.30432260036468506,
+          1.3860000371932983
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.05476043284564947,
+        "conservative12mmHousingMarginM": 0.04276043284564947,
+        "sampled12mmHousingMarginM": 0.04710339578986168,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 669,
+        "neck": 451,
+        "right-mantle": 442,
+        "right-wing-shield": 66
+      },
+      "stationaryCandidatePairCount": 1628
+    },
+    {
+      "routeIndex": 19,
+      "routeProgress": 0.19,
+      "stage": "A",
+      "stageProgress": 0.5700000000000001,
+      "timelineOpen": 0.19,
+      "runtimeOpenAngleRad": -0.3847500000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.05751999095082283,
+        "sampleIndex": 7,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3371874690055847,
+          1.401187539100647
+        ],
+        "nearestPoint": [
+          -0.18817660212516785,
+          -0.30771660804748535,
+          1.3854526281356812
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.05317702800661062,
+        "conservative12mmHousingMarginM": 0.04117702800661062,
+        "sampled12mmHousingMarginM": 0.04551999095082283,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 637,
+        "neck": 377,
+        "right-mantle": 403,
+        "right-wing-shield": 37
+      },
+      "stationaryCandidatePairCount": 1454
+    },
+    {
+      "routeIndex": 20,
+      "routeProgress": 0.2,
+      "stage": "A",
+      "stageProgress": 0.6000000000000001,
+      "timelineOpen": 0.2,
+      "runtimeOpenAngleRad": -0.4050000000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.055872686207294464,
+        "sampleIndex": 7,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3371874690055847,
+          1.401187539100647
+        ],
+        "nearestPoint": [
+          -0.18915776908397675,
+          -0.3094494044780731,
+          1.3853493928909302
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.05152972326308226,
+        "conservative12mmHousingMarginM": 0.03952972326308225,
+        "sampled12mmHousingMarginM": 0.04387268620729447,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 631,
+        "neck": 343,
+        "right-mantle": 385,
+        "right-wing-shield": 15
+      },
+      "stationaryCandidatePairCount": 1374
+    },
+    {
+      "routeIndex": 21,
+      "routeProgress": 0.21,
+      "stage": "A",
+      "stageProgress": 0.63,
+      "timelineOpen": 0.21,
+      "runtimeOpenAngleRad": -0.42525,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.05422104150056839,
+        "sampleIndex": 7,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3371874690055847,
+          1.401187539100647
+        ],
+        "nearestPoint": [
+          -0.19019654393196106,
+          -0.31113576889038086,
+          1.38525390625
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.04987807855635618,
+        "conservative12mmHousingMarginM": 0.03787807855635618,
+        "sampled12mmHousingMarginM": 0.04222104150056839,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 623,
+        "neck": 335,
+        "right-mantle": 352,
+        "right-wing-shield": 5
+      },
+      "stationaryCandidatePairCount": 1315
+    },
+    {
+      "routeIndex": 22,
+      "routeProgress": 0.22,
+      "stage": "A",
+      "stageProgress": 0.66,
+      "timelineOpen": 0.22,
+      "runtimeOpenAngleRad": -0.44550000000000006,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.05256613343954086,
+        "sampleIndex": 7,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3371874690055847,
+          1.401187539100647
+        ],
+        "nearestPoint": [
+          -0.19129101932048798,
+          -0.3127734065055847,
+          1.3851664066314697
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.048223170495328656,
+        "conservative12mmHousingMarginM": 0.03622317049532865,
+        "sampled12mmHousingMarginM": 0.040566133439540866,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 617,
+        "neck": 337,
+        "right-mantle": 312
+      },
+      "stationaryCandidatePairCount": 1266
+    },
+    {
+      "routeIndex": 23,
+      "routeProgress": 0.23,
+      "stage": "A",
+      "stageProgress": 0.6900000000000001,
+      "timelineOpen": 0.23,
+      "runtimeOpenAngleRad": -0.46575000000000005,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.0509091354906559,
+        "sampleIndex": 7,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3371874690055847,
+          1.401187539100647
+        ],
+        "nearestPoint": [
+          -0.19243885576725006,
+          -0.31436076760292053,
+          1.3850868940353394
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.04656617254644369,
+        "conservative12mmHousingMarginM": 0.03456617254644369,
+        "sampled12mmHousingMarginM": 0.0389091354906559,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 611,
+        "neck": 333,
+        "right-mantle": 307
+      },
+      "stationaryCandidatePairCount": 1251
+    },
+    {
+      "routeIndex": 24,
+      "routeProgress": 0.24,
+      "stage": "A",
+      "stageProgress": 0.72,
+      "timelineOpen": 0.24,
+      "runtimeOpenAngleRad": -0.486,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.04925132170319557,
+        "sampleIndex": 7,
+        "nearestTriangle": 5908,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3371874690055847,
+          1.401187539100647
+        ],
+        "nearestPoint": [
+          -0.19363808631896973,
+          -0.31589555740356445,
+          1.3850153684616089
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.044908358758983365,
+        "conservative12mmHousingMarginM": 0.03290835875898336,
+        "sampled12mmHousingMarginM": 0.037251321703195575,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 605,
+        "neck": 357,
+        "right-mantle": 241
+      },
+      "stationaryCandidatePairCount": 1203
+    },
+    {
+      "routeIndex": 25,
+      "routeProgress": 0.25,
+      "stage": "A",
+      "stageProgress": 0.75,
+      "timelineOpen": 0.25,
+      "runtimeOpenAngleRad": -0.5062500000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.047479502856731415,
+        "sampleIndex": 6,
+        "nearestTriangle": 5904,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.19301822781562805,
+          -0.3221438527107239,
+          1.3837499618530273
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.04313653991251921,
+        "conservative12mmHousingMarginM": 0.031136539912519207,
+        "sampled12mmHousingMarginM": 0.03547950285673142,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 599,
+        "neck": 379,
+        "right-mantle": 204
+      },
+      "stationaryCandidatePairCount": 1182
+    },
+    {
+      "routeIndex": 26,
+      "routeProgress": 0.26,
+      "stage": "A",
+      "stageProgress": 0.78,
+      "timelineOpen": 0.26,
+      "runtimeOpenAngleRad": -0.5265000000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.045665621757507324,
+        "sampleIndex": 6,
+        "nearestTriangle": 5904,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.19449172914028168,
+          -0.3233841061592102,
+          1.3837499618530273
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.04132265881329512,
+        "conservative12mmHousingMarginM": 0.029322658813295117,
+        "sampled12mmHousingMarginM": 0.03366562175750733,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 587,
+        "neck": 393,
+        "right-mantle": 142
+      },
+      "stationaryCandidatePairCount": 1122
+    },
+    {
+      "routeIndex": 27,
+      "routeProgress": 0.27,
+      "stage": "A",
+      "stageProgress": 0.81,
+      "timelineOpen": 0.27,
+      "runtimeOpenAngleRad": -0.5467500000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.043851062655448914,
+        "sampleIndex": 6,
+        "nearestTriangle": 5904,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.19599005579948425,
+          -0.32459425926208496,
+          1.3837499618530273
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.039508099711236706,
+        "conservative12mmHousingMarginM": 0.027508099711236706,
+        "sampled12mmHousingMarginM": 0.03185106265544892,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 577,
+        "neck": 367,
+        "right-mantle": 86
+      },
+      "stationaryCandidatePairCount": 1030
+    },
+    {
+      "routeIndex": 28,
+      "routeProgress": 0.28,
+      "stage": "A",
+      "stageProgress": 0.8400000000000001,
+      "timelineOpen": 0.28,
+      "runtimeOpenAngleRad": -0.5670000000000001,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.04203652963042259,
+        "sampleIndex": 6,
+        "nearestTriangle": 5904,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.19751258194446564,
+          -0.32577383518218994,
+          1.3837499618530273
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.037693566686210385,
+        "conservative12mmHousingMarginM": 0.025693566686210385,
+        "sampled12mmHousingMarginM": 0.030036529630422592,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 562,
+        "neck": 447,
+        "right-mantle": 62
+      },
+      "stationaryCandidatePairCount": 1071
+    },
+    {
+      "routeIndex": 29,
+      "routeProgress": 0.29,
+      "stage": "A",
+      "stageProgress": 0.8699999999999999,
+      "timelineOpen": 0.29,
+      "runtimeOpenAngleRad": -0.5872499999999999,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.04022280126810074,
+        "sampleIndex": 6,
+        "nearestTriangle": 5717,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.19905871152877808,
+          -0.32692235708236694,
+          1.3837499618530273
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.03587983832388853,
+        "conservative12mmHousingMarginM": 0.02387983832388853,
+        "sampled12mmHousingMarginM": 0.02822280126810074,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 560,
+        "neck": 572,
+        "right-mantle": 26
+      },
+      "stationaryCandidatePairCount": 1158
+    },
+    {
+      "routeIndex": 30,
+      "routeProgress": 0.3,
+      "stage": "A",
+      "stageProgress": 0.8999999999999999,
+      "timelineOpen": 0.3,
+      "runtimeOpenAngleRad": -0.6074999999999999,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.03841063752770424,
+        "sampleIndex": 6,
+        "nearestTriangle": 5904,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.2005864679813385,
+          -0.32816609740257263,
+          1.3837186098098755
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.03406767458349203,
+        "conservative12mmHousingMarginM": 0.02206767458349203,
+        "sampled12mmHousingMarginM": 0.02641063752770424,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 564,
+        "neck": 613,
+        "right-mantle": 10
+      },
+      "stationaryCandidatePairCount": 1187
+    },
+    {
+      "routeIndex": 31,
+      "routeProgress": 0.31,
+      "stage": "A",
+      "stageProgress": 0.9299999999999999,
+      "timelineOpen": 0.31,
+      "runtimeOpenAngleRad": -0.62775,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.036600470542907715,
+        "sampleIndex": 6,
+        "nearestTriangle": 5716,
+        "samplePoint": [
+          -0.23499998450279236,
+          -0.34187501668930054,
+          1.393875002861023
+        ],
+        "nearestPoint": [
+          -0.2021332085132599,
+          -0.3294074237346649,
+          1.3836804628372192
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.03225750759869551,
+        "conservative12mmHousingMarginM": 0.020257507598695507,
+        "sampled12mmHousingMarginM": 0.024600470542907715,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 558,
+        "neck": 669
+      },
+      "stationaryCandidatePairCount": 1227
+    },
+    {
+      "routeIndex": 32,
+      "routeProgress": 0.32,
+      "stage": "A",
+      "stageProgress": 0.96,
+      "timelineOpen": 0.32,
+      "runtimeOpenAngleRad": -0.648,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.03454244136810303,
+        "sampleIndex": 0,
+        "nearestTriangle": 5479,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.2031714767217636,
+          -0.3627550005912781,
+          1.3387024402618408
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.03019947842389082,
+        "conservative12mmHousingMarginM": 0.01819947842389082,
+        "sampled12mmHousingMarginM": 0.022542441368103027,
+        "nearestBreastMesh": "Breast lateral feather -1 0 0"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 560,
+        "neck": 723
+      },
+      "stationaryCandidatePairCount": 1283
+    },
+    {
+      "routeIndex": 33,
+      "routeProgress": 0.33,
+      "stage": "A",
+      "stageProgress": 0.99,
+      "timelineOpen": 0.33,
+      "runtimeOpenAngleRad": -0.66825,
+      "panelSlideScalar": 0.0,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.032218676060438156,
+        "sampleIndex": 0,
+        "nearestTriangle": 5662,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.20518027245998383,
+          -0.3641156852245331,
+          1.3393135070800781
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.02787571311622595,
+        "conservative12mmHousingMarginM": 0.01587571311622595,
+        "sampled12mmHousingMarginM": 0.020218676060438156,
+        "nearestBreastMesh": "Breast lateral feather -1 0 0"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 556,
+        "neck": 762
+      },
+      "stationaryCandidatePairCount": 1318
+    },
+    {
+      "routeIndex": 34,
+      "routeProgress": 0.34,
+      "stage": "B",
+      "stageProgress": 0.02000000000000013,
+      "timelineOpen": 0.34,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.010000000000000064,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.02516251988708973,
+        "sampleIndex": 0,
+        "nearestTriangle": 5454,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.21217146515846252,
+          -0.3671773374080658,
+          1.3397998809814453
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.020819556942877522,
+        "conservative12mmHousingMarginM": 0.008819556942877522,
+        "sampled12mmHousingMarginM": 0.013162519887089729,
+        "nearestBreastMesh": "Breast lateral feather -1 0 0"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 565,
+        "neck": 621
+      },
+      "stationaryCandidatePairCount": 1186
+    },
+    {
+      "routeIndex": 35,
+      "routeProgress": 0.35,
+      "stage": "B",
+      "stageProgress": 0.04999999999999999,
+      "timelineOpen": 0.35,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.024999999999999994,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.014988931827247143,
+        "sampleIndex": 4,
+        "nearestTriangle": 5711,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3512499928474426,
+          1.3792500495910645
+        ],
+        "nearestPoint": [
+          -0.22074884176254272,
+          -0.3467368185520172,
+          1.378152847290039
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.010645968883034934,
+        "conservative12mmHousingMarginM": -0.0013540311169650664,
+        "sampled12mmHousingMarginM": 0.0029889318272471425,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 542,
+        "neck": 332,
+        "right-mantle": 12
+      },
+      "stationaryCandidatePairCount": 886
+    },
+    {
+      "routeIndex": 36,
+      "routeProgress": 0.36,
+      "stage": "B",
+      "stageProgress": 0.08000000000000002,
+      "timelineOpen": 0.36,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.04000000000000001,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.0050747268833220005,
+        "sampleIndex": 4,
+        "nearestTriangle": 5711,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3512499928474426,
+          1.3792500495910645
+        ],
+        "nearestPoint": [
+          -0.23125247657299042,
+          -0.3494246006011963,
+          1.376355767250061
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.0007317639391097915,
+        "conservative12mmHousingMarginM": -0.011268236060890209,
+        "sampled12mmHousingMarginM": -0.006925273116678,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 554,
+        "neck": 140,
+        "right-mantle": 68
+      },
+      "stationaryCandidatePairCount": 762
+    },
+    {
+      "routeIndex": 37,
+      "routeProgress": 0.37,
+      "stage": "B",
+      "stageProgress": 0.11000000000000004,
+      "timelineOpen": 0.37,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.05500000000000002,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.0015123168705031276,
+        "sampleIndex": 1,
+        "nearestTriangle": 5926,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.36531251668930054,
+          1.3573124408721924
+        ],
+        "nearestPoint": [
+          -0.23462337255477905,
+          -0.366764634847641,
+          1.3571211099624634
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": -0.0028306460737090814,
+        "conservative12mmHousingMarginM": -0.014830646073709082,
+        "sampled12mmHousingMarginM": -0.010487683129496873,
+        "nearestBreastMesh": "Breast lateral feather -1 0 1"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 548,
+        "neck": 6,
+        "right-mantle": 184
+      },
+      "stationaryCandidatePairCount": 738
+    },
+    {
+      "routeIndex": 38,
+      "routeProgress": 0.38,
+      "stage": "B",
+      "stageProgress": 0.14000000000000007,
+      "timelineOpen": 0.38,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.07000000000000003,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 7.24226629245095e-05,
+        "sampleIndex": 1,
+        "nearestTriangle": 3096,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.36531251668930054,
+          1.3573124408721924
+        ],
+        "nearestPoint": [
+          -0.23493275046348572,
+          -0.3652949929237366,
+          1.3572920560836792
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": -0.0042705402812876995,
+        "conservative12mmHousingMarginM": -0.0162705402812877,
+        "sampled12mmHousingMarginM": -0.01192757733707549,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 546,
+        "right-mantle": 273
+      },
+      "stationaryCandidatePairCount": 819
+    },
+    {
+      "routeIndex": 39,
+      "routeProgress": 0.39,
+      "stage": "B",
+      "stageProgress": 0.1700000000000001,
+      "timelineOpen": 0.39,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.08500000000000005,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.0038171149790287018,
+        "sampleIndex": 1,
+        "nearestTriangle": 3672,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.36531251668930054,
+          1.3573124408721924
+        ],
+        "nearestPoint": [
+          -0.238616943359375,
+          -0.36619940400123596,
+          1.3581500053405762
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": -0.0005258479651835072,
+        "conservative12mmHousingMarginM": -0.012525847965183507,
+        "sampled12mmHousingMarginM": -0.008182885020971298,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 510,
+        "right-mantle": 295
+      },
+      "stationaryCandidatePairCount": 805
+    },
+    {
+      "routeIndex": 40,
+      "routeProgress": 0.4,
+      "stage": "B",
+      "stageProgress": 0.20000000000000012,
+      "timelineOpen": 0.4,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.10000000000000006,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.014471941627562046,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.2483218014240265,
+          -0.37410104274749756,
+          1.3538920879364014
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.010128978683349837,
+        "conservative12mmHousingMarginM": -0.0018710213166501632,
+        "sampled12mmHousingMarginM": 0.002471941627562046,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 432,
+        "right-mantle": 326
+      },
+      "stationaryCandidatePairCount": 758
+    },
+    {
+      "routeIndex": 41,
+      "routeProgress": 0.41,
+      "stage": "B",
+      "stageProgress": 0.22999999999999998,
+      "timelineOpen": 0.41,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.11499999999999999,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.024503830820322037,
+        "sampleIndex": 0,
+        "nearestTriangle": 3889,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.2579978108406067,
+          -0.3770984411239624,
+          1.3545989990234375
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.02016086787610983,
+        "conservative12mmHousingMarginM": 0.00816086787610983,
+        "sampled12mmHousingMarginM": 0.012503830820322036,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 374,
+        "right-mantle": 342,
+        "right-wing-shield": 8
+      },
+      "stationaryCandidatePairCount": 724
+    },
+    {
+      "routeIndex": 42,
+      "routeProgress": 0.42,
+      "stage": "B",
+      "stageProgress": 0.26,
+      "timelineOpen": 0.42,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.13,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.03500921279191971,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.26833492517471313,
+          -0.3803231716156006,
+          1.3528035879135132
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.0306662498477075,
+        "conservative12mmHousingMarginM": 0.0186662498477075,
+        "sampled12mmHousingMarginM": 0.023009212791919708,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 308,
+        "right-mantle": 354,
+        "right-wing-shield": 16
+      },
+      "stationaryCandidatePairCount": 678
+    },
+    {
+      "routeIndex": 43,
+      "routeProgress": 0.43,
+      "stage": "B",
+      "stageProgress": 0.29000000000000004,
+      "timelineOpen": 0.43,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.14500000000000002,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.04573630169034004,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.2786720395088196,
+          -0.38354790210723877,
+          1.351008415222168
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.041393338746127835,
+        "conservative12mmHousingMarginM": 0.029393338746127835,
+        "sampled12mmHousingMarginM": 0.033736301690340045,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 186,
+        "right-mantle": 346,
+        "right-wing-shield": 24
+      },
+      "stationaryCandidatePairCount": 556
+    },
+    {
+      "routeIndex": 44,
+      "routeProgress": 0.44,
+      "stage": "B",
+      "stageProgress": 0.32000000000000006,
+      "timelineOpen": 0.44,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.16000000000000003,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.05655906721949577,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.289009153842926,
+          -0.38677260279655457,
+          1.3492130041122437
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.052216104275283566,
+        "conservative12mmHousingMarginM": 0.04021610427528356,
+        "sampled12mmHousingMarginM": 0.04455906721949578,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 92,
+        "right-mantle": 335,
+        "right-wing-shield": 27
+      },
+      "stationaryCandidatePairCount": 454
+    },
+    {
+      "routeIndex": 45,
+      "routeProgress": 0.45,
+      "stage": "B",
+      "stageProgress": 0.3500000000000001,
+      "timelineOpen": 0.45,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.17500000000000004,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.0674314871430397,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.29934626817703247,
+          -0.38999733328819275,
+          1.3474174737930298
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.06308852419882749,
+        "conservative12mmHousingMarginM": 0.05108852419882749,
+        "sampled12mmHousingMarginM": 0.05543148714303971,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 72,
+        "right-mantle": 313,
+        "right-wing-shield": 20
+      },
+      "stationaryCandidatePairCount": 405
+    },
+    {
+      "routeIndex": 46,
+      "routeProgress": 0.46,
+      "stage": "B",
+      "stageProgress": 0.3800000000000001,
+      "timelineOpen": 0.46,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.19000000000000006,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.07833288609981537,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.3096834123134613,
+          -0.39322203397750854,
+          1.3456220626831055
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.07398992315560315,
+        "conservative12mmHousingMarginM": 0.06198992315560316,
+        "sampled12mmHousingMarginM": 0.06633288609981537,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "body": 16,
+        "right-mantle": 268,
+        "right-wing-shield": 24
+      },
+      "stationaryCandidatePairCount": 308
+    },
+    {
+      "routeIndex": 47,
+      "routeProgress": 0.47,
+      "stage": "B",
+      "stageProgress": 0.41,
+      "timelineOpen": 0.47,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.205,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.08925258368253708,
+        "sampleIndex": 0,
+        "nearestTriangle": 3889,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.32002049684524536,
+          -0.39644676446914673,
+          1.3438268899917603
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.08490962073832486,
+        "conservative12mmHousingMarginM": 0.07290962073832487,
+        "sampled12mmHousingMarginM": 0.07725258368253708,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 176,
+        "right-wing-shield": 54
+      },
+      "stationaryCandidatePairCount": 230
+    },
+    {
+      "routeIndex": 48,
+      "routeProgress": 0.48,
+      "stage": "B",
+      "stageProgress": 0.44,
+      "timelineOpen": 0.48,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.22,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.10018467158079147,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.3303576111793518,
+          -0.3996714949607849,
+          1.342031478881836
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.09584170863657926,
+        "conservative12mmHousingMarginM": 0.08384170863657926,
+        "sampled12mmHousingMarginM": 0.08818467158079148,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 152,
+        "right-wing-shield": 68
+      },
+      "stationaryCandidatePairCount": 220
+    },
+    {
+      "routeIndex": 49,
+      "routeProgress": 0.49,
+      "stage": "B",
+      "stageProgress": 0.47000000000000003,
+      "timelineOpen": 0.49,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.23500000000000001,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.11112546920776367,
+        "sampleIndex": 0,
+        "nearestTriangle": 3674,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.34069472551345825,
+          -0.4028961956501007,
+          1.3402360677719116
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.10678250626355146,
+        "conservative12mmHousingMarginM": 0.09478250626355146,
+        "sampled12mmHousingMarginM": 0.09912546920776368,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 242,
+        "right-wing-shield": 126
+      },
+      "stationaryCandidatePairCount": 368
+    },
+    {
+      "routeIndex": 50,
+      "routeProgress": 0.5,
+      "stage": "B",
+      "stageProgress": 0.5,
+      "timelineOpen": 0.5,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.25,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.12206043303012848,
+        "sampleIndex": 0,
+        "nearestTriangle": 3891,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.3487361669540405,
+          -0.41278472542762756,
+          1.3384977579116821
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.11771747008591626,
+        "conservative12mmHousingMarginM": 0.10571747008591627,
+        "sampled12mmHousingMarginM": 0.11006043303012848,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 288,
+        "right-wing-shield": 166
+      },
+      "stationaryCandidatePairCount": 454
+    },
+    {
+      "routeIndex": 51,
+      "routeProgress": 0.51,
+      "stage": "B",
+      "stageProgress": 0.53,
+      "timelineOpen": 0.51,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.265,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.13296255469322205,
+        "sampleIndex": 0,
+        "nearestTriangle": 3891,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.3588230311870575,
+          -0.4165853261947632,
+          1.3367069959640503
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.12861959174900983,
+        "conservative12mmHousingMarginM": 0.11661959174900983,
+        "sampled12mmHousingMarginM": 0.12096255469322205,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 232,
+        "right-wing-shield": 176
+      },
+      "stationaryCandidatePairCount": 408
+    },
+    {
+      "routeIndex": 52,
+      "routeProgress": 0.52,
+      "stage": "B",
+      "stageProgress": 0.56,
+      "timelineOpen": 0.52,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.28,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.14011497795581818,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.33976030349731445,
+          -0.29958540201187134,
+          1.2891783714294434
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.13577201501160596,
+        "conservative12mmHousingMarginM": 0.12377201501160597,
+        "sampled12mmHousingMarginM": 0.12811497795581817,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 172,
+        "right-wing-shield": 145
+      },
+      "stationaryCandidatePairCount": 317
+    },
+    {
+      "routeIndex": 53,
+      "routeProgress": 0.53,
+      "stage": "B",
+      "stageProgress": 0.5900000000000001,
+      "timelineOpen": 0.53,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.29500000000000004,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.1476200968027115,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.35026031732559204,
+          -0.302285373210907,
+          1.2873783111572266
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.14327713385849927,
+        "conservative12mmHousingMarginM": 0.13127713385849926,
+        "sampled12mmHousingMarginM": 0.13562009680271148,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 144,
+        "right-wing-shield": 86
+      },
+      "stationaryCandidatePairCount": 230
+    },
+    {
+      "routeIndex": 54,
+      "routeProgress": 0.54,
+      "stage": "B",
+      "stageProgress": 0.6200000000000001,
+      "timelineOpen": 0.54,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.31000000000000005,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.1555401086807251,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.36076033115386963,
+          -0.3049854040145874,
+          1.2855782508850098
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.15119714573651288,
+        "conservative12mmHousingMarginM": 0.13919714573651287,
+        "sampled12mmHousingMarginM": 0.1435401086807251,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 80,
+        "right-wing-shield": 58
+      },
+      "stationaryCandidatePairCount": 138
+    },
+    {
+      "routeIndex": 55,
+      "routeProgress": 0.55,
+      "stage": "B",
+      "stageProgress": 0.6500000000000001,
+      "timelineOpen": 0.55,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.32500000000000007,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.16381476819515228,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.37126028537750244,
+          -0.30768537521362305,
+          1.283778429031372
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.15947180525094007,
+        "conservative12mmHousingMarginM": 0.14747180525094006,
+        "sampled12mmHousingMarginM": 0.15181476819515227,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-mantle": 22,
+        "right-wing-shield": 32
+      },
+      "stationaryCandidatePairCount": 54
+    },
+    {
+      "routeIndex": 56,
+      "routeProgress": 0.56,
+      "stage": "B",
+      "stageProgress": 0.6800000000000002,
+      "timelineOpen": 0.56,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.3400000000000001,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.17239324748516083,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.38176029920578003,
+          -0.31038540601730347,
+          1.2819783687591553
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.1680502845409486,
+        "conservative12mmHousingMarginM": 0.1560502845409486,
+        "sampled12mmHousingMarginM": 0.16039324748516082,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {
+        "right-wing-shield": 23
+      },
+      "stationaryCandidatePairCount": 23
+    },
+    {
+      "routeIndex": 57,
+      "routeProgress": 0.57,
+      "stage": "B",
+      "stageProgress": 0.71,
+      "timelineOpen": 0.57,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.355,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.18123231828212738,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.3922603130340576,
+          -0.3130853772163391,
+          1.2801783084869385
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.17688935533791517,
+        "conservative12mmHousingMarginM": 0.16488935533791516,
+        "sampled12mmHousingMarginM": 0.16923231828212737,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 58,
+      "routeProgress": 0.58,
+      "stage": "B",
+      "stageProgress": 0.74,
+      "timelineOpen": 0.58,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.37,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19029563665390015,
+        "sampleIndex": 0,
+        "nearestTriangle": 18802,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4027603268623352,
+          -0.31578540802001953,
+          1.2783782482147217
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.18595267370968793,
+        "conservative12mmHousingMarginM": 0.17395267370968792,
+        "sampled12mmHousingMarginM": 0.17829563665390014,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 59,
+      "routeProgress": 0.59,
+      "stage": "B",
+      "stageProgress": 0.77,
+      "timelineOpen": 0.59,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.385,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.1949402540922165,
+        "sampleIndex": 0,
+        "nearestTriangle": 17102,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.14990688860416412,
+          -0.5292800664901733,
+          1.276578426361084
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.19059729114800428,
+        "conservative12mmHousingMarginM": 0.17859729114800427,
+        "sampled12mmHousingMarginM": 0.18294025409221648,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 60,
+      "routeProgress": 0.6,
+      "stage": "B",
+      "stageProgress": 0.8,
+      "timelineOpen": 0.6,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.4,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19354583323001862,
+        "sampleIndex": 0,
+        "nearestTriangle": 17102,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.16040684282779694,
+          -0.5319800972938538,
+          1.2747783660888672
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.1892028702858064,
+        "conservative12mmHousingMarginM": 0.1772028702858064,
+        "sampled12mmHousingMarginM": 0.1815458332300186,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 61,
+      "routeProgress": 0.61,
+      "stage": "B",
+      "stageProgress": 0.8300000000000001,
+      "timelineOpen": 0.61,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.41500000000000004,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19276876747608185,
+        "sampleIndex": 0,
+        "nearestTriangle": 17102,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.17090685665607452,
+          -0.5346800684928894,
+          1.2729783058166504
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.18842580453186963,
+        "conservative12mmHousingMarginM": 0.17642580453186962,
+        "sampled12mmHousingMarginM": 0.18076876747608184,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 62,
+      "routeProgress": 0.62,
+      "stage": "B",
+      "stageProgress": 0.8600000000000001,
+      "timelineOpen": 0.62,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.43000000000000005,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19261668622493744,
+        "sampleIndex": 0,
+        "nearestTriangle": 17102,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.1814068704843521,
+          -0.5373800992965698,
+          1.2711782455444336
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.18827372328072522,
+        "conservative12mmHousingMarginM": 0.17627372328072521,
+        "sampled12mmHousingMarginM": 0.18061668622493743,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 63,
+      "routeProgress": 0.63,
+      "stage": "B",
+      "stageProgress": 0.8900000000000001,
+      "timelineOpen": 0.63,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.44500000000000006,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19309090077877045,
+        "sampleIndex": 0,
+        "nearestTriangle": 17102,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.19190682470798492,
+          -0.5400800704956055,
+          1.269378423690796
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.18874793783455823,
+        "conservative12mmHousingMarginM": 0.17674793783455822,
+        "sampled12mmHousingMarginM": 0.18109090077877044,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 64,
+      "routeProgress": 0.64,
+      "stage": "B",
+      "stageProgress": 0.9200000000000002,
+      "timelineOpen": 0.64,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.4600000000000001,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19413529336452484,
+        "sampleIndex": 0,
+        "nearestTriangle": 17105,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.20115715265274048,
+          -0.5423063039779663,
+          1.2672128677368164
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.18979233042031263,
+        "conservative12mmHousingMarginM": 0.17779233042031262,
+        "sampled12mmHousingMarginM": 0.18213529336452483,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 65,
+      "routeProgress": 0.65,
+      "stage": "B",
+      "stageProgress": 0.9500000000000002,
+      "timelineOpen": 0.65,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.4750000000000001,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.1957729309797287,
+        "sampleIndex": 0,
+        "nearestTriangle": 17105,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.2116571068763733,
+          -0.545006275177002,
+          1.2654130458831787
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.19142996803551648,
+        "conservative12mmHousingMarginM": 0.17942996803551647,
+        "sampled12mmHousingMarginM": 0.1837729309797287,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 66,
+      "routeProgress": 0.66,
+      "stage": "B",
+      "stageProgress": 0.9800000000000002,
+      "timelineOpen": 0.66,
+      "runtimeOpenAngleRad": -0.675,
+      "panelSlideScalar": 0.4900000000000001,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.19800806045532227,
+        "sampleIndex": 0,
+        "nearestTriangle": 17105,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.22215712070465088,
+          -0.5477063059806824,
+          1.263612985610962
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.19366509751111005,
+        "conservative12mmHousingMarginM": 0.18166509751111004,
+        "sampled12mmHousingMarginM": 0.18600806045532225,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 67,
+      "routeProgress": 0.67,
+      "stage": "C",
+      "stageProgress": 0.010000000000000231,
+      "timelineOpen": 0.67,
+      "runtimeOpenAngleRad": -0.6817500000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.20081864297389984,
+        "sampleIndex": 0,
+        "nearestTriangle": 3958,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.17905789613723755,
+          -0.5579804182052612,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.19647568002968763,
+        "conservative12mmHousingMarginM": 0.18447568002968762,
+        "sampled12mmHousingMarginM": 0.18881864297389983,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 68,
+      "routeProgress": 0.68,
+      "stage": "C",
+      "stageProgress": 0.04000000000000026,
+      "timelineOpen": 0.68,
+      "runtimeOpenAngleRad": -0.7020000000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.20771169662475586,
+        "sampleIndex": 0,
+        "nearestTriangle": 3959,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.18355903029441833,
+          -0.5665604472160339,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.20336873368054365,
+        "conservative12mmHousingMarginM": 0.19136873368054363,
+        "sampled12mmHousingMarginM": 0.19571169662475585,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 69,
+      "routeProgress": 0.69,
+      "stage": "C",
+      "stageProgress": 0.06999999999999995,
+      "timelineOpen": 0.69,
+      "runtimeOpenAngleRad": -0.7222500000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2146943062543869,
+        "sampleIndex": 0,
+        "nearestTriangle": 3959,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.18823297321796417,
+          -0.5750476121902466,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2103513433101747,
+        "conservative12mmHousingMarginM": 0.19835134331017468,
+        "sampled12mmHousingMarginM": 0.2026943062543869,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 70,
+      "routeProgress": 0.7,
+      "stage": "C",
+      "stageProgress": 0.09999999999999998,
+      "timelineOpen": 0.7,
+      "runtimeOpenAngleRad": -0.7425,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2217552363872528,
+        "sampleIndex": 0,
+        "nearestTriangle": 3959,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.19307780265808105,
+          -0.5834383964538574,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2174122734430406,
+        "conservative12mmHousingMarginM": 0.20541227344304058,
+        "sampled12mmHousingMarginM": 0.2097552363872528,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 71,
+      "routeProgress": 0.71,
+      "stage": "C",
+      "stageProgress": 0.13,
+      "timelineOpen": 0.71,
+      "runtimeOpenAngleRad": -0.76275,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.22888442873954773,
+        "sampleIndex": 0,
+        "nearestTriangle": 3959,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.1980915367603302,
+          -0.5917292833328247,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.22454146579533552,
+        "conservative12mmHousingMarginM": 0.2125414657953355,
+        "sampled12mmHousingMarginM": 0.21688442873954772,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 72,
+      "routeProgress": 0.72,
+      "stage": "C",
+      "stageProgress": 0.16000000000000003,
+      "timelineOpen": 0.72,
+      "runtimeOpenAngleRad": -0.783,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.23607304692268372,
+        "sampleIndex": 0,
+        "nearestTriangle": 3959,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.20327213406562805,
+          -0.5999170541763306,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2317300839784715,
+        "conservative12mmHousingMarginM": 0.2197300839784715,
+        "sampled12mmHousingMarginM": 0.2240730469226837,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 73,
+      "routeProgress": 0.73,
+      "stage": "C",
+      "stageProgress": 0.19000000000000006,
+      "timelineOpen": 0.73,
+      "runtimeOpenAngleRad": -0.8032500000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.243312805891037,
+        "sampleIndex": 0,
+        "nearestTriangle": 3742,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.2086174488067627,
+          -0.6079981327056885,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.23896984294682477,
+        "conservative12mmHousingMarginM": 0.22696984294682476,
+        "sampled12mmHousingMarginM": 0.23131280589103698,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 74,
+      "routeProgress": 0.74,
+      "stage": "C",
+      "stageProgress": 0.22000000000000008,
+      "timelineOpen": 0.74,
+      "runtimeOpenAngleRad": -0.8235000000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2504578232765198,
+        "sampleIndex": 0,
+        "nearestTriangle": 17779,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.26429110765457153,
+          -0.6028082370758057,
+          1.2624130249023438
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.24611486033230756,
+        "conservative12mmHousingMarginM": 0.23411486033230755,
+        "sampled12mmHousingMarginM": 0.23845782327651976,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 75,
+      "routeProgress": 0.75,
+      "stage": "C",
+      "stageProgress": 0.2500000000000001,
+      "timelineOpen": 0.75,
+      "runtimeOpenAngleRad": -0.8437500000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2575034499168396,
+        "sampleIndex": 0,
+        "nearestTriangle": 17779,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.26968246698379517,
+          -0.6096532344818115,
+          1.2624130249023438
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2531604869726274,
+        "conservative12mmHousingMarginM": 0.24116048697262737,
+        "sampled12mmHousingMarginM": 0.2455034499168396,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 76,
+      "routeProgress": 0.76,
+      "stage": "C",
+      "stageProgress": 0.28000000000000014,
+      "timelineOpen": 0.76,
+      "runtimeOpenAngleRad": -0.8640000000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2645662724971771,
+        "sampleIndex": 0,
+        "nearestTriangle": 17779,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.27521130442619324,
+          -0.616387665271759,
+          1.2624130249023438
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2602233095529649,
+        "conservative12mmHousingMarginM": 0.2482233095529649,
+        "sampled12mmHousingMarginM": 0.2525662724971771,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 77,
+      "routeProgress": 0.77,
+      "stage": "C",
+      "stageProgress": 0.31000000000000016,
+      "timelineOpen": 0.77,
+      "runtimeOpenAngleRad": -0.8842500000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.27164211869239807,
+        "sampleIndex": 0,
+        "nearestTriangle": 17668,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.28087538480758667,
+          -0.6230087280273438,
+          1.2624130249023438
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26729915574818586,
+        "conservative12mmHousingMarginM": 0.25529915574818585,
+        "sampled12mmHousingMarginM": 0.25964211869239806,
+        "nearestBreastMesh": "Upper breast cervical yoke left"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 78,
+      "routeProgress": 0.78,
+      "stage": "C",
+      "stageProgress": 0.3400000000000002,
+      "timelineOpen": 0.78,
+      "runtimeOpenAngleRad": -0.9045000000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.27539339661598206,
+        "sampleIndex": 0,
+        "nearestTriangle": 18804,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4960070252418518,
+          -0.3632672131061554,
+          1.2624127864837646
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.27105043367176984,
+        "conservative12mmHousingMarginM": 0.25905043367176983,
+        "sampled12mmHousingMarginM": 0.26339339661598205,
+        "nearestBreastMesh": "Upper breast cervical yoke right"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 79,
+      "routeProgress": 0.79,
+      "stage": "C",
+      "stageProgress": 0.3700000000000002,
+      "timelineOpen": 0.79,
+      "runtimeOpenAngleRad": -0.9247500000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.27489471435546875,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.5005995631217957,
+          -0.31376808881759644,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.27055175141125654,
+        "conservative12mmHousingMarginM": 0.2585517514112565,
+        "sampled12mmHousingMarginM": 0.26289471435546874,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 80,
+      "routeProgress": 0.8,
+      "stage": "C",
+      "stageProgress": 0.40000000000000024,
+      "timelineOpen": 0.8,
+      "runtimeOpenAngleRad": -0.9450000000000003,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.27397581934928894,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.5000898241996765,
+          -0.315887451171875,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2696328564050767,
+        "conservative12mmHousingMarginM": 0.2576328564050767,
+        "sampled12mmHousingMarginM": 0.26197581934928893,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 81,
+      "routeProgress": 0.81,
+      "stage": "C",
+      "stageProgress": 0.43000000000000027,
+      "timelineOpen": 0.81,
+      "runtimeOpenAngleRad": -0.9652500000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2731109857559204,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4996230900287628,
+          -0.3180166780948639,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2687680228117082,
+        "conservative12mmHousingMarginM": 0.2567680228117082,
+        "sampled12mmHousingMarginM": 0.2611109857559204,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 82,
+      "routeProgress": 0.82,
+      "stage": "C",
+      "stageProgress": 0.45999999999999996,
+      "timelineOpen": 0.82,
+      "runtimeOpenAngleRad": -0.9855,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2723011374473572,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4991995692253113,
+          -0.32015493512153625,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26795817450314496,
+        "conservative12mmHousingMarginM": 0.25595817450314495,
+        "sampled12mmHousingMarginM": 0.26030113744735717,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 83,
+      "routeProgress": 0.83,
+      "stage": "C",
+      "stageProgress": 0.49,
+      "timelineOpen": 0.83,
+      "runtimeOpenAngleRad": -1.00575,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2715470492839813,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.49881941080093384,
+          -0.32230132818222046,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2672040863397691,
+        "conservative12mmHousingMarginM": 0.2552040863397691,
+        "sampled12mmHousingMarginM": 0.2595470492839813,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 84,
+      "routeProgress": 0.84,
+      "stage": "C",
+      "stageProgress": 0.52,
+      "timelineOpen": 0.84,
+      "runtimeOpenAngleRad": -1.026,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2708496153354645,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4984828233718872,
+          -0.3244549334049225,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26650665239125226,
+        "conservative12mmHousingMarginM": 0.25450665239125225,
+        "sampled12mmHousingMarginM": 0.25884961533546447,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 85,
+      "routeProgress": 0.85,
+      "stage": "C",
+      "stageProgress": 0.55,
+      "timelineOpen": 0.85,
+      "runtimeOpenAngleRad": -1.0462500000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.270209401845932,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.49818986654281616,
+          -0.32661494612693787,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2658664389017198,
+        "conservative12mmHousingMarginM": 0.2538664389017198,
+        "sampled12mmHousingMarginM": 0.258209401845932,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 86,
+      "routeProgress": 0.86,
+      "stage": "C",
+      "stageProgress": 0.5800000000000001,
+      "timelineOpen": 0.86,
+      "runtimeOpenAngleRad": -1.0665,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26962727308273315,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4979407489299774,
+          -0.32878047227859497,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26528431013852094,
+        "conservative12mmHousingMarginM": 0.25328431013852093,
+        "sampled12mmHousingMarginM": 0.25762727308273314,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 87,
+      "routeProgress": 0.87,
+      "stage": "C",
+      "stageProgress": 0.6100000000000001,
+      "timelineOpen": 0.87,
+      "runtimeOpenAngleRad": -1.08675,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26910367608070374,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.49773553013801575,
+          -0.3309505879878998,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2647607131364915,
+        "conservative12mmHousingMarginM": 0.2527607131364915,
+        "sampled12mmHousingMarginM": 0.2571036760807037,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 88,
+      "routeProgress": 0.88,
+      "stage": "C",
+      "stageProgress": 0.6400000000000001,
+      "timelineOpen": 0.88,
+      "runtimeOpenAngleRad": -1.1070000000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2686392068862915,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4975742697715759,
+          -0.3331243693828583,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2642962439420793,
+        "conservative12mmHousingMarginM": 0.2522962439420793,
+        "sampled12mmHousingMarginM": 0.2566392068862915,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 89,
+      "routeProgress": 0.89,
+      "stage": "C",
+      "stageProgress": 0.6700000000000002,
+      "timelineOpen": 0.89,
+      "runtimeOpenAngleRad": -1.12725,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2682344317436218,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4974570870399475,
+          -0.3353009819984436,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2638914687994096,
+        "conservative12mmHousingMarginM": 0.2518914687994096,
+        "sampled12mmHousingMarginM": 0.2562344317436218,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 90,
+      "routeProgress": 0.9,
+      "stage": "C",
+      "stageProgress": 0.7000000000000002,
+      "timelineOpen": 0.9,
+      "runtimeOpenAngleRad": -1.1475000000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26788973808288574,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4973839819431305,
+          -0.3374795615673065,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26354677513867353,
+        "conservative12mmHousingMarginM": 0.2515467751386735,
+        "sampled12mmHousingMarginM": 0.25588973808288573,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 91,
+      "routeProgress": 0.91,
+      "stage": "C",
+      "stageProgress": 0.7300000000000002,
+      "timelineOpen": 0.91,
+      "runtimeOpenAngleRad": -1.1677500000000003,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2676054835319519,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.49735501408576965,
+          -0.3396591544151306,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2632625205877397,
+        "conservative12mmHousingMarginM": 0.2512625205877397,
+        "sampled12mmHousingMarginM": 0.2556054835319519,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 92,
+      "routeProgress": 0.92,
+      "stage": "C",
+      "stageProgress": 0.7600000000000002,
+      "timelineOpen": 0.92,
+      "runtimeOpenAngleRad": -1.1880000000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2673819661140442,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.497370183467865,
+          -0.34183889627456665,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.263039003169832,
+        "conservative12mmHousingMarginM": 0.25103900316983196,
+        "sampled12mmHousingMarginM": 0.2553819661140442,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 93,
+      "routeProgress": 0.93,
+      "stage": "C",
+      "stageProgress": 0.7900000000000003,
+      "timelineOpen": 0.93,
+      "runtimeOpenAngleRad": -1.2082500000000003,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26721951365470886,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4974294900894165,
+          -0.3440178632736206,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26287655071049665,
+        "conservative12mmHousingMarginM": 0.25087655071049664,
+        "sampled12mmHousingMarginM": 0.25521951365470885,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 94,
+      "routeProgress": 0.94,
+      "stage": "C",
+      "stageProgress": 0.82,
+      "timelineOpen": 0.94,
+      "runtimeOpenAngleRad": -1.2285,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2671182453632355,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4975329041481018,
+          -0.3461952209472656,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26277528241902326,
+        "conservative12mmHousingMarginM": 0.25077528241902325,
+        "sampled12mmHousingMarginM": 0.25511824536323546,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 95,
+      "routeProgress": 0.95,
+      "stage": "C",
+      "stageProgress": 0.85,
+      "timelineOpen": 0.95,
+      "runtimeOpenAngleRad": -1.24875,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2670782506465912,
+        "sampleIndex": 0,
+        "nearestTriangle": 3863,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4976803660392761,
+          -0.3483700156211853,
+          1.306849479675293
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.262735287702379,
+        "conservative12mmHousingMarginM": 0.25073528770237896,
+        "sampled12mmHousingMarginM": 0.2550782506465912,
+        "nearestBreastMesh": "Breast inner access shell"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 96,
+      "routeProgress": 0.96,
+      "stage": "C",
+      "stageProgress": 0.88,
+      "timelineOpen": 0.96,
+      "runtimeOpenAngleRad": -1.2690000000000001,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26622456312179565,
+        "sampleIndex": 0,
+        "nearestTriangle": 6086,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.48475486040115356,
+          -0.3139926493167877,
+          1.2767797708511353
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.26188160017758344,
+        "conservative12mmHousingMarginM": 0.24988160017758343,
+        "sampled12mmHousingMarginM": 0.25422456312179564,
+        "nearestBreastMesh": "Breast lateral feather -1 0 2"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 97,
+      "routeProgress": 0.97,
+      "stage": "C",
+      "stageProgress": 0.91,
+      "timelineOpen": 0.97,
+      "runtimeOpenAngleRad": -1.28925,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.2651640474796295,
+        "sampleIndex": 0,
+        "nearestTriangle": 6083,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.48113343119621277,
+          -0.3111223578453064,
+          1.270856261253357
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2608210845354173,
+        "conservative12mmHousingMarginM": 0.2488210845354173,
+        "sampled12mmHousingMarginM": 0.2531640474796295,
+        "nearestBreastMesh": "Breast lateral feather -1 0 2"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 98,
+      "routeProgress": 0.98,
+      "stage": "C",
+      "stageProgress": 0.9400000000000001,
+      "timelineOpen": 0.98,
+      "runtimeOpenAngleRad": -1.3095,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26405251026153564,
+        "sampleIndex": 0,
+        "nearestTriangle": 6171,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.47871720790863037,
+          -0.3106677830219269,
+          1.2675055265426636
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.25970954731732343,
+        "conservative12mmHousingMarginM": 0.24770954731732342,
+        "sampled12mmHousingMarginM": 0.25205251026153563,
+        "nearestBreastMesh": "Breast lateral feather -1 0 2"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 99,
+      "routeProgress": 0.99,
+      "stage": "C",
+      "stageProgress": 0.9700000000000001,
+      "timelineOpen": 0.99,
+      "runtimeOpenAngleRad": -1.3297500000000002,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.262885183095932,
+        "sampleIndex": 0,
+        "nearestTriangle": 6078,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.4748205244541168,
+          -0.30823978781700134,
+          1.2617933750152588
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.2585422201517198,
+        "conservative12mmHousingMarginM": 0.24654222015171978,
+        "sampled12mmHousingMarginM": 0.250885183095932,
+        "nearestBreastMesh": "Breast lateral feather -1 0 2"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    },
+    {
+      "routeIndex": 100,
+      "routeProgress": 1.0,
+      "stage": "C",
+      "stageProgress": 1.0,
+      "timelineOpen": 1.0,
+      "runtimeOpenAngleRad": -1.35,
+      "panelSlideScalar": 0.5,
+      "actuatorEnvelope": {
+        "sampleDistanceM": 0.26167088747024536,
+        "sampleIndex": 0,
+        "nearestTriangle": 6169,
+        "samplePoint": [
+          -0.23499999940395355,
+          -0.3700000047683716,
+          1.350000023841858
+        ],
+        "nearestPoint": [
+          -0.47222310304641724,
+          -0.3080872893333435,
+          1.2585469484329224
+        ],
+        "segmentLengthM": 0.1389748142147907,
+        "sampleCount": 17,
+        "halfSampleStepM": 0.004342962944212209,
+        "conservativeCenterlineLowerBoundM": 0.25732792452603315,
+        "conservative12mmHousingMarginM": 0.24532792452603314,
+        "sampled12mmHousingMarginM": 0.24967088747024535,
+        "nearestBreastMesh": "Breast lateral feather -1 0 2"
+      },
+      "stationaryRegionalOverlapCandidates": {},
+      "stationaryCandidatePairCount": 0
+    }
+  ],
+  "limits": [
+    "This is 303 discrete samples of a proposed panel-only route, not a continuous swept-volume proof.",
+    "Actuator brackets, fittings, bearing support, load, and physical feasibility are unbuilt and untested.",
+    "BVH triangle overlap output is a candidate screen; coplanar or intended lap contacts need dedicated interpretation.",
+    "Only the declared regional owner groups are included in the stationary assembly screen; excluded meshes are listed.",
+    "No app/runtime/model file was edited, no geometry saved, and no visual or human acceptance is claimed."
+  ]
+}

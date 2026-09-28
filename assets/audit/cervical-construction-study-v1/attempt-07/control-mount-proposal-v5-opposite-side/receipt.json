@@ -1,0 +1,106 @@
+{
+  "schema": "murderbird-opposite-side-actuator-screen-receipt/v1",
+  "status": "candidate-only clearance screen; proposal not built or accepted",
+  "scope": {
+    "onlyChange": "reflect proposed upper and lower actuator anchor X coordinates to native +X (anatomical left)",
+    "preserved": "Y/Z anchor coordinates, all native pivots, current production breast-panel rotation, other model/runtime data",
+    "notIncluded": [
+      "actuator solid",
+      "housing/fittings",
+      "mount supports",
+      "Maker guide",
+      "wing restriction"
+    ]
+  },
+  "inputs": {
+    "native": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+      "bytes": 1907219
+    },
+    "runtimePosePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "poses": 21,
+      "nativePivots": 52
+    },
+    "v4Proposal": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-07/control-mount-proposal-v4/mounting-neighborhoods.json",
+      "sha256": "9957fefb1edbcbc1d9cc65d6c73f234a4eb33c327189f61664e0ff3dfb272c85"
+    }
+  },
+  "outputs": {
+    "analyze-opposite-side-mount.py": {
+      "sha256": "8c592baced9ef91cb13a8937889281cd1008d7ec3b535204ce093a37149c449e",
+      "bytes": 15298
+    },
+    "opposite-side-clearance.json": {
+      "sha256": "88da85d608382814c5a4ee4f527f5587a9ca8549cbf7c8fe62c4d2fdfdc49339",
+      "bytes": 838422
+    },
+    "report.md": {
+      "sha256": "1226ec189506f0e56989722388ce304b80b3b38b926b7d0bb272098521e7a862",
+      "bytes": 2099
+    }
+  },
+  "method": {
+    "operatingSamples": 21,
+    "openingSamples": 101,
+    "openingRange": [
+      0,
+      1
+    ],
+    "openingSeparation": 0,
+    "housingRadiusM": 0.012,
+    "lineSamplesPerTarget": 17,
+    "targets": [
+      "breastplate",
+      "neck",
+      "cervical-upper",
+      "left-mantle",
+      "right-mantle",
+      "head",
+      "jaw",
+      "body"
+    ],
+    "limitations": [
+      "discrete point/segment-to-surface candidate screen",
+      "no continuous collision guarantee",
+      "no full solid containment test",
+      "no hardware/support/fitting validation",
+      "not an art or runtime acceptance"
+    ]
+  },
+  "findings": {
+    "operatingPoseBreastplate": {
+      "directSamplesWithin12mm": 0,
+      "negativeConservativeMargins": 1,
+      "limitingPose": "inspection-open-0.25-separation-0",
+      "conservativeMarginM": -0.0027964365121748557
+    },
+    "normalOpeningBreastplate": {
+      "directSamplesWithin12mm": 12,
+      "directSampleOpenRange": [
+        0.26,
+        0.37
+      ],
+      "negativeConservativeMargins": 13,
+      "negativeConservativeOpenRange": [
+        0.25,
+        0.37
+      ],
+      "minimumCenterlineDistanceM": 5.829991278005764e-05,
+      "minimumAtOpen": 0.3,
+      "nearestMesh": "Breast lateral feather 1 0 2",
+      "minimumConservative12mmMarginM": -0.016284662879404686
+    },
+    "normalOpeningNeck": {
+      "minimumConservative12mmMarginM": 0.05002109456989487
+    },
+    "normalOpeningUpperCervical": {
+      "minimumConservative12mmMarginM": 0.049192865678999026
+    },
+    "disposition": "Still conflicts with breastplate during normal opening; not established as viable."
+  }
+}
