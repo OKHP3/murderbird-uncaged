@@ -1,0 +1,130 @@
+{
+  "status": "single crown-fit geometry proposal; not accepted or selected",
+  "generatedAtUtc": "2026-09-28T21:06:39.145179+00:00",
+  "source": {
+    "path": "assets/models/whole-character-v15/attempt-02/murderbird-whole-character-v15.blend",
+    "sha256": "a9ffe79aea67bac8f2ae5ebe2157c28ce02e5e0262d7a98bca10531674f95fe5",
+    "bytes": 1993483
+  },
+  "native": {
+    "path": "assets/audit/whole-character-v15/crown-fit-study-01/murderbird-v15-crown-fit-study-01.blend",
+    "sha256": "41c0e9e0a2cca5fadb21f521cead69f10c43a0228dfa131c0f4575467a97b738",
+    "bytes": 1993693
+  },
+  "inputs": {
+    "module": {
+      "path": "scripts/regions/whole-character-v15-crown-fit.py",
+      "sha256": "72556dee35c09308fd33cd5663e366cb8c6b7cf6bb95fd55f6b6c60f68ef9939"
+    },
+    "executedModule": {
+      "path": "assets/audit/whole-character-v15/crown-fit-study-01/executed-crown-fit-module.py",
+      "sha256": "72556dee35c09308fd33cd5663e366cb8c6b7cf6bb95fd55f6b6c60f68ef9939"
+    },
+    "snapshotHelper": {
+      "path": "scripts/build-uncaged-alignment-v7.py",
+      "sha256": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a"
+    },
+    "executedBuilder": {
+      "path": "assets/audit/whole-character-v15/crown-fit-study-01/executed-build-study.py",
+      "sha256": "d861b9a234809014fae175aac46da8b24ed05d60ddeb3b203570e5406c9162af"
+    }
+  },
+  "edit": {
+    "region": "crown-fit",
+    "changedMeshes": [
+      "Continuous temporal shell -1",
+      "Continuous temporal shell 1",
+      "Rounded swept crown lamina 0",
+      "Swept temporal lamina -1 0 0",
+      "Swept temporal lamina 1 0 0"
+    ],
+    "newMeshes": [],
+    "edits": [
+      {
+        "mesh": "Continuous temporal shell -1",
+        "verticesMoved": 52,
+        "maximumDisplacementM": 0.01200000021222513
+      },
+      {
+        "mesh": "Continuous temporal shell 1",
+        "verticesMoved": 52,
+        "maximumDisplacementM": 0.01200000021222513
+      },
+      {
+        "mesh": "Rounded swept crown lamina 0",
+        "verticesMoved": 112,
+        "maximumDisplacementM": 0.01200000021222513
+      },
+      {
+        "mesh": "Swept temporal lamina -1 0 0",
+        "verticesMoved": 60,
+        "maximumDisplacementM": 0.01200000021222513
+      },
+      {
+        "mesh": "Swept temporal lamina 1 0 0",
+        "verticesMoved": 60,
+        "maximumDisplacementM": 0.01200000021222513
+      }
+    ],
+    "method": "smooth local symmetric inward tuck at the crown/temporal inner edges implicated by native strict-crossing samples",
+    "fixed": [
+      "optic assembly",
+      "orbital brow",
+      "orbital mount",
+      "upper bill",
+      "jaw",
+      "all pivots",
+      "all curves"
+    ],
+    "limits": [
+      "One geometry proposal only; not a collision-free guarantee.",
+      "The screen uses the prescribed seven discrete cranial-cover world-Z lifts.",
+      "No continuous sweep, full head collision, or runtime/browser claim."
+    ]
+  },
+  "preservation": {
+    "actualChangedMeshes": [
+      "Continuous temporal shell -1",
+      "Continuous temporal shell 1",
+      "Rounded swept crown lamina 0",
+      "Swept temporal lamina -1 0 0",
+      "Swept temporal lamina 1 0 0"
+    ],
+    "unexpectedChangedMeshes": [],
+    "unchangedMeshes": 734,
+    "pivotCountExact": 52,
+    "curveCountExact": 462,
+    "unlistedMeshSignaturesExact": true,
+    "saveReopenSnapshotExact": true
+  },
+  "comparison": {
+    "beforeImage": {
+      "path": "assets/audit/whole-character-v15/crown-fit-study-01/before-head.png",
+      "sha256": "294a2b47149e9c177e4abd99e4722b18ce0cfcc340ca7108cf6dc858d2ac050c",
+      "sourceImage": "assets/audit/whole-character-v15/attempt-02/after-head.png"
+    },
+    "afterImage": {
+      "path": "assets/audit/whole-character-v15/crown-fit-study-01/after-head.png",
+      "sha256": "0071c529721b0f47f3b8abfc52dfb63897593161f8bd1fe9aebe5bbc7adf6e37"
+    },
+    "camera": {
+      "position": [
+        -6,
+        -3.5,
+        2.45
+      ],
+      "target": [
+        0,
+        -0.27,
+        1.62
+      ],
+      "orthographicScale": 1.1
+    }
+  },
+  "limits": [
+    "Before image is the matched V15 attempt-02 head view, not the earlier V14 baseline.",
+    "The native screen is limited to the prescribed seven crown-cover world-Z offsets.",
+    "Strict crossings do not establish penetration depth, containment, continuous clearance, or accepted mating.",
+    "The geometry remains a proposal; no runtime/app selection, export, or publication is changed."
+  ]
+}

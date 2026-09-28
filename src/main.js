@@ -20,7 +20,7 @@ const parts=[
   {id:'mind',name:'Mind · processing',title:'Processing is the other.'},
   {id:'guard',name:'Wings · balance & shielding',title:'Tuck. Brace. Drive.',text:'MurderBird is flightless. Its folded wings guard the ribs and help balance close, forceful movements. The shoulder leads a short shove while the elbow drives the armored forewing; the opposite wing counters. The repaired left shoulder keeps a smaller range. The exact joint design is reconstructed for this study.'},
 ];
-const currentGeometryReview = import.meta.env.DEV ? '<a href="./assets/audit/uncaged-orbital-crown-v14/index.html">Current geometry review</a>' : '';
+const currentGeometryReview = import.meta.env.DEV ? '<a href="./assets/audit/whole-character-v15/index.html">Current geometry review</a>' : '';
 const app=document.querySelector('#app');
 app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a><div class="site-shell">
 <header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="./folio.html">Story &amp; media folio</a>${currentGeometryReview}<a href="./review/">Published review</a><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">THREE MOVEMENT SYSTEMS / 05</span></header>
@@ -43,17 +43,25 @@ app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a
 </div><aside class="inspector" aria-label="Construction details"><div class="inspector-header">THREE ERAS / ONE INHERITED BODY</div><div class="era-picker" role="group" aria-label="Choose construction era">${Object.entries(eras).map(([id,era])=>`<button data-era="${id}" aria-pressed="${id==='builder'}">${era.name}</button>`).join('')}</div><p id="era-summary" class="era-summary"></p><div class="part-list" id="part-list">${parts.map((p,i)=>`<button type="button" data-part="${p.id}" aria-pressed="false"><span>${String(i+1).padStart(2,'0')}</span><span class="part-name">${p.name}</span><span class="part-arrow">↗</span></button>`).join('')}</div><div id="detail" class="detail" aria-live="polite"></div><button id="focus-part" type="button">Center selected part</button><p class="inspector-foot">ILLUSTRATIVE MECHANISMS<br>POWER ≠ COGNITION</p></aside></div></section>
 <section class="timeline" id="field-notes"><p class="eyebrow">THE CONSTRUCTION RECORD</p><h2>Not born. <em>Built.</em></h2><div class="eras"><article><span>I / MAKER</span><h3>Movement from outside.</h3><p>A supported articulated construct. Outside levers move its joints; at rest it stays where its maker placed it. No internal power or intention.</p></article><article><span>II / MECHANIC</span><h3>A machine with limits.</h3><p>A wound spring, reduction gears and a cam sequence allow short steps and segmented turns. The pauses belong to the transmission, not to thought.</p></article><article><span>III / BUILDER</span><h3>Power with intent.</h3><p>An abundant fictional supply feeds coordinated actuators. Sensing and processing give the advanced bird responsive attention, fast attacks and controlled recovery.</p></article></div><p class="source-note">This progression follows the owner’s current exhibit direction. The exact control rods, spring transmission and advanced supply are proposed reconstructions. The preserved story remains a separate source. <a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Read the published story ↗</a></p></section>
 </main><footer><span>© JAMIE HILL / OVERKILL HILL P³ · CREATIVE CONTENT ALL RIGHTS RESERVED</span><span>WORKING STUDY · ARTISTIC ACCEPTANCE PENDING</span></footer></div>`;
-if (import.meta.env.DEV && ['v10-01', 'v10-02', 'v12-02', 'v13-01', 'v14-03', 'v14-05', 'v14-09', 'v14-11'].includes(new URLSearchParams(location.search).get('review-body'))) {
+const localReviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v15-04') : null;
+if (import.meta.env.DEV && ['v10-01', 'v10-02', 'v12-02', 'v13-01', 'v14-03', 'v14-05', 'v14-09', 'v14-11', 'v15-03', 'v15-04'].includes(localReviewBody)) {
   const notice = document.createElement('p');
   notice.setAttribute('role', 'status');
   notice.style.cssText = 'margin:0;padding:14px 24px;background:#302c20;color:#f6e4b7;border-bottom:2px solid #a68b52';
-  notice.textContent = ['v14-03', 'v14-05', 'v14-09', 'v14-11'].includes(new URLSearchParams(location.search).get('review-body'))
-    ? 'LOCAL V14 HEAD STUDY · Revised socket, fixed brow and opening crown. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Remove the review-body query to return to the selected exhibit.'
-    : new URLSearchParams(location.search).get('review-body') === 'v13-01'
-    ? 'LOCAL V13 HEAD STUDY · A deeper bill and shorter mandible on the V12 body. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Remove the review-body query to return to the selected exhibit.'
-    : new URLSearchParams(location.search).get('review-body') === 'v12-02'
-    ? 'LOCAL V12 MOTION STUDY · New neck reconstruction, with no owner likeness approval. Joint clearances and external mechanism attachments remain under review. Illustrated fallback still depicts V9. Remove the review-body query to return to the selected exhibit.'
-    : 'LOCAL V10 STUDY · Owner-rejected likeness, preserved for diagnosis. Structural clearance remains unresolved. Illustrated fallback still depicts V9. Remove the review-body query to return to the selected exhibit.';
+  notice.textContent = ['v15-03', 'v15-04'].includes(localReviewBody)
+    ? 'LOCAL V15 CONSTRUCTION STUDY · Revised head, breast and leg construction. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
+    : ['v14-03', 'v14-05', 'v14-09', 'v14-11'].includes(localReviewBody)
+    ? 'LOCAL V14 HEAD STUDY · Revised socket, fixed brow and opening crown. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
+    : localReviewBody === 'v13-01'
+    ? 'LOCAL V13 HEAD STUDY · A deeper bill and shorter mandible on the V12 body. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
+    : localReviewBody === 'v12-02'
+    ? 'LOCAL V12 MOTION STUDY · New neck reconstruction, with no owner likeness approval. Joint clearances and external mechanism attachments remain under review. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
+    : 'LOCAL V10 STUDY · Owner-rejected likeness, preserved for diagnosis. Structural clearance remains unresolved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.';
+  const previous = document.createElement('a');
+  previous.href = '?review-body=stable-v9';
+  previous.textContent = ' Previous exhibit (V9)';
+  previous.style.color = 'inherit';
+  notice.append(previous);
   document.getElementById('app').prepend(notice);
 }
 const $=id=>document.getElementById(id);

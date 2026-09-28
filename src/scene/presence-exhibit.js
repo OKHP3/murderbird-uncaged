@@ -8,9 +8,11 @@ import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-p
 import { layoutMarkers } from './marker-layout.js';
 
 const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
-// Fixed local study route only. Production retains the selected V9 asset.
-const reviewBody = import.meta.env.DEV ? new URLSearchParams(location.search).get('review-body') : null;
+// Local development opens the latest labeled proposal; production retains V9.
+const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v15-04') : null;
 const reviewModels = import.meta.env.DEV ? {
+  'v15-04': '/assets/models/whole-character-v15/attempt-04/murderbird-whole-character-v15.glb',
+  'v15-03': '/assets/models/whole-character-v15/attempt-03/murderbird-whole-character-v15.glb',
   'v10-01': '/assets/models/uncaged-whole-body-v10/attempt-01/murderbird-whole-body-v10.glb',
   'v10-02': '/assets/models/uncaged-whole-body-v10/attempt-02/murderbird-whole-body-v10.glb',
   'v12-02': '/assets/models/uncaged-cervical-envelope-v12/attempt-02/murderbird-cervical-envelope-v12.glb',

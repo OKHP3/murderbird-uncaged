@@ -1,0 +1,2067 @@
+{
+  "schema": "whole-character-v15-attempt-04-check-summary/v1",
+  "status": "targeted attempt-04 export, fresh pose, kinematics, inspection, sampled jaw and native pose-illustration evidence complete; not full acceptance",
+  "native": {
+    "path": "assets/models/whole-character-v15/attempt-04/murderbird-whole-character-v15.blend",
+    "sha256Before": "dd4e6a78396a384be6d38b00c23a3c43c47ab0a9371e6546ad4896b1c6a93cfe",
+    "sha256After": "dd4e6a78396a384be6d38b00c23a3c43c47ab0a9371e6546ad4896b1c6a93cfe",
+    "unchanged": true,
+    "bytes": 2010147
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v15/attempt-04/murderbird-whole-character-v15.glb",
+    "sha256": "8680578f98361b2be66d6c1e0649ef5571dc626b74edccaa60b102a38a913d20",
+    "bytes": 6384884
+  },
+  "compositionDelta": {
+    "changedPatch": "head only relative to attempt-03; breast, legs and composition source snapshots have identical hashes",
+    "attempt03RegionalPatchHashes": {
+      "executed-head.py": "db518444a5df379c4e2f6e00d716ccbbadfc9bb368255c9757464b20f2f91d07",
+      "executed-breast.py": "0c21887740c125a897b105c8f0fbd2fdb49b53f3ee4ba0fabe7d3e7f60b8ba5e",
+      "executed-legs.py": "12b2b813a5763c740c362fec8524b0320b3b8aa0292b9759003b5cd22d266727"
+    },
+    "attempt04RegionalPatchHashes": {
+      "executed-head.py": "f26a22c94822f6adb47057732ccc0d9c9a2cc3c58fda5d5fe81e22e91406257e",
+      "executed-breast.py": "0c21887740c125a897b105c8f0fbd2fdb49b53f3ee4ba0fabe7d3e7f60b8ba5e",
+      "executed-legs.py": "12b2b813a5763c740c362fec8524b0320b3b8aa0292b9759003b5cd22d266727"
+    },
+    "composer03": {
+      "path": "assets/audit/whole-character-v15/attempt-03/executed-composition.py",
+      "sha256": "de219f920816dab35f59fd1ac84f399a0fab1a9e3788aee8b1c889268665d52d",
+      "bytes": 5378
+    },
+    "composer04": {
+      "path": "assets/audit/whole-character-v15/attempt-04/executed-composition.py",
+      "sha256": "de219f920816dab35f59fd1ac84f399a0fab1a9e3788aee8b1c889268665d52d",
+      "bytes": 5378
+    },
+    "contactLandmarkOnlyTransformChange": true,
+    "crownReliefModules": "held and excluded, per author receipt"
+  },
+  "export": {
+    "receipt": {
+      "path": "assets/audit/whole-character-v15/attempt-04/export/export-receipt.json",
+      "sha256": "7373b1a8c68a46453e14f5b354ad035d2e5e799a9e00b9ce190c65358d58640b",
+      "bytes": 1762
+    },
+    "checks": {
+      "reopenedNativeSnapshotExact": true,
+      "modifierSignaturesCapturedBeforeExportCopy": 86,
+      "pivotCountNative": 52,
+      "pivotWorldMatricesUnchangedByExportCopy": true,
+      "pivotNodeCountInGlb": 52,
+      "missingPivotNodesInGlb": []
+    },
+    "log": {
+      "path": "assets/audit/whole-character-v15/attempt-04/export/blender-export.log",
+      "sha256": "2cf305b4f661bab88d962aa7210954f6bcfb4bcf873eae43e3dcc5197d63bcc6",
+      "bytes": 14637
+    }
+  },
+  "fresh21PoseSample": {
+    "packet": {
+      "path": "assets/audit/whole-character-v15/attempt-04/runtime-poses/pose-snapshot.json",
+      "sha256": "d85c1f816804d5f2dc1b47d53dedeea0834a809fb82df19944211bc43c8e03d2",
+      "bytes": 6877754
+    },
+    "poseCount": 21,
+    "modelSha256": "8680578f98361b2be66d6c1e0649ef5571dc626b74edccaa60b102a38a913d20",
+    "log": {
+      "path": "assets/audit/whole-character-v15/attempt-04/runtime-poses.log",
+      "sha256": "4f1fc43b66ff611293f9387767d71e145bb977129f3fea14875121b79c297416",
+      "bytes": 134
+    }
+  },
+  "kinematics": {
+    "receipt": {
+      "path": "assets/audit/whole-character-v15/attempt-04/kinematics/kinematic-alignment.json",
+      "sha256": "616aad4266d39802709661fb8a87a2fbef77dbadf29d670794dbe0a28eaac393",
+      "bytes": 17642
+    },
+    "checks": [
+      {
+        "name": "jaw-sweep-preserves-rigid-world-distances-without-parent-scale-shear",
+        "status": "passed",
+        "result": {
+          "samples": [
+            {
+              "angle": 0,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.01,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.02,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.03,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.04,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.05,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.06,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.07,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.08,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.09,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.1,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.11,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.12,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.13,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.14,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.15,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.16,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.17,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.18,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.19,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.2,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.21,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.22,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.23,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.24,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.25,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.26,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.27,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.28,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.29,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.3,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.31,
+              "basisLengths": [
+                1,
+                1,
+                1
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "angle": 0.32,
+              "basisLengths": [
+                1,
+                0.9999999999999999,
+                0.9999999999999999
+              ],
+              "basisDotProducts": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "maximumBasisError": 1.1102230246251565e-16
+        }
+      },
+      {
+        "name": "actual-jaw-tip-opens-downward-about-fixed-transverse-pivot",
+        "status": "passed",
+        "result": {
+          "trackedMesh": "jaw-head-edge",
+          "vertexIndex": 240,
+          "closed": [
+            0.03999999910593033,
+            0.010400176048278809,
+            0.25047484040260315
+          ],
+          "opened": {
+            "angle": 0.32,
+            "vertex": [
+              0.03999999910593033,
+              -0.07282785197560093,
+              0.1934604754637803
+            ]
+          },
+          "downwardDisplacement": 0.08322802802387974,
+          "samples": [
+            {
+              "angle": 0,
+              "vertex": [
+                0.03999999910593033,
+                0.010400176048278809,
+                0.25047484040260315
+              ]
+            },
+            {
+              "angle": 0.01,
+              "vertex": [
+                0.03999999910593033,
+                0.007543259775934619,
+                0.2491102155270768
+              ]
+            },
+            {
+              "angle": 0.02,
+              "vertex": [
+                0.03999999910593033,
+                0.004700132369532817,
+                0.24771709019565247
+              ]
+            },
+            {
+              "angle": 0.03,
+              "vertex": [
+                0.03999999910593033,
+                0.0018710781394442044,
+                0.2462956037197025
+              ]
+            },
+            {
+              "angle": 0.04,
+              "vertex": [
+                0.03999999910593033,
+                -0.0009436200112651338,
+                0.24484589824668979
+              ]
+            },
+            {
+              "angle": 0.05,
+              "vertex": [
+                0.03999999910593033,
+                -0.003743680615126088,
+                0.24336811874595365
+              ]
+            },
+            {
+              "angle": 0.06,
+              "vertex": [
+                0.03999999910593033,
+                -0.006528823668411565,
+                0.24186241299421263
+              ]
+            },
+            {
+              "angle": 0.07,
+              "vertex": [
+                0.03999999910593033,
+                -0.009298770659136979,
+                0.24032893156078705
+              ]
+            },
+            {
+              "angle": 0.08,
+              "vertex": [
+                0.03999999910593033,
+                -0.01205324459491175,
+                0.23876782779254258
+              ]
+            },
+            {
+              "angle": 0.09,
+              "vertex": [
+                0.03999999910593033,
+                -0.014791970030637813,
+                0.23717925779855498
+              ]
+            },
+            {
+              "angle": 0.1,
+              "vertex": [
+                0.03999999910593033,
+                -0.017514673096053368,
+                0.23556338043449987
+              ]
+            },
+            {
+              "angle": 0.11,
+              "vertex": [
+                0.03999999910593033,
+                -0.02022108152312141,
+                0.23392035728676697
+              ]
+            },
+            {
+              "angle": 0.12,
+              "vertex": [
+                0.03999999910593033,
+                -0.022910924673254174,
+                0.23225035265630223
+              ]
+            },
+            {
+              "angle": 0.13,
+              "vertex": [
+                0.03999999910593033,
+                -0.02558393356437816,
+                0.23055353354217667
+              ]
+            },
+            {
+              "angle": 0.14,
+              "vertex": [
+                0.03999999910593033,
+                -0.028239840897831936,
+                0.22883006962488783
+              ]
+            },
+            {
+              "angle": 0.15,
+              "vertex": [
+                0.03999999910593033,
+                -0.03087838108509544,
+                0.22708013324939125
+              ]
+            },
+            {
+              "angle": 0.16,
+              "vertex": [
+                0.03999999910593033,
+                -0.0334992902743485,
+                0.22530389940786621
+              ]
+            },
+            {
+              "angle": 0.17,
+              "vertex": [
+                0.03999999910593033,
+                -0.036102306376856186,
+                0.2235015457222166
+              ]
+            },
+            {
+              "angle": 0.18,
+              "vertex": [
+                0.03999999910593033,
+                -0.03868716909317782,
+                0.22167325242630898
+              ]
+            },
+            {
+              "angle": 0.19,
+              "vertex": [
+                0.03999999910593033,
+                -0.04125361993919574,
+                0.2198192023479496
+              ]
+            },
+            {
+              "angle": 0.2,
+              "vertex": [
+                0.03999999910593033,
+                -0.04380140227196372,
+                0.21793958089060106
+              ]
+            },
+            {
+              "angle": 0.21,
+              "vertex": [
+                0.03999999910593033,
+                -0.04633026131537177,
+                0.21603457601484277
+              ]
+            },
+            {
+              "angle": 0.22,
+              "vertex": [
+                0.03999999910593033,
+                -0.048839944185623096,
+                0.21410437821957484
+              ]
+            },
+            {
+              "angle": 0.23,
+              "vertex": [
+                0.03999999910593033,
+                -0.05133019991652188,
+                0.21214918052296827
+              ]
+            },
+            {
+              "angle": 0.24,
+              "vertex": [
+                0.03999999910593033,
+                -0.053800779484570516,
+                0.2101691784431634
+              ]
+            },
+            {
+              "angle": 0.25,
+              "vertex": [
+                0.03999999910593033,
+                -0.0562514358338706,
+                0.20816456997871835
+              ]
+            },
+            {
+              "angle": 0.26,
+              "vertex": [
+                0.03999999910593033,
+                -0.0586819239008296,
+                0.20613555558880892
+              ]
+            },
+            {
+              "angle": 0.27,
+              "vertex": [
+                0.03999999910593033,
+                -0.06109200063866638,
+                0.20408233817318322
+              ]
+            },
+            {
+              "angle": 0.28,
+              "vertex": [
+                0.03999999910593033,
+                -0.06348142504171528,
+                0.20200512305187202
+              ]
+            },
+            {
+              "angle": 0.29,
+              "vertex": [
+                0.03999999910593033,
+                -0.06584995816952732,
+                0.19990411794465623
+              ]
+            },
+            {
+              "angle": 0.3,
+              "vertex": [
+                0.03999999910593033,
+                -0.06819736317076353,
+                0.1977795329502957
+              ]
+            },
+            {
+              "angle": 0.31,
+              "vertex": [
+                0.03999999910593033,
+                -0.07052340530687973,
+                0.19563158052551965
+              ]
+            },
+            {
+              "angle": 0.32,
+              "vertex": [
+                0.03999999910593033,
+                -0.07282785197560093,
+                0.1934604754637803
+              ]
+            }
+          ],
+          "limitation": "Direction and fixed pivot only; the jaw/cheek bearing overlap and full surface sweep still require visual review."
+        }
+      },
+      {
+        "name": "maker-raised-foot-tucks-digits-and-recovers-with-support-fixed",
+        "status": "passed",
+        "result": {
+          "peak": {
+            "digitAngles": [
+              [
+                0.082,
+                0.1394
+              ],
+              [
+                0.1,
+                0.17
+              ],
+              [
+                0.08800000000000001,
+                0.1496
+              ]
+            ],
+            "floor": 0.12563297789948252
+          },
+          "maxAnkleError": 2.482534153247273e-16,
+          "minSupportGroundY": 0.0020000000000000573,
+          "exactDigitRestored": true
+        }
+      },
+      {
+        "name": "bilateral-travel-uses-transverse-knees-and-keeps-support-targets-and-digits-fixed",
+        "status": "passed",
+        "result": {
+          "frames": 1080,
+          "simulatedSeconds": 18,
+          "maxAnkleError": 4.611102534756203e-16,
+          "maxSupportDrift": 5.768888059150692e-16,
+          "minFloor": 0.001998517220370366,
+          "articulatedDigitHinges": [
+            "right-digit-2-distal",
+            "right-digit-1-distal",
+            "right-digit-3-distal",
+            "right-digit-2-proximal",
+            "right-digit-3-proximal",
+            "right-digit-1-proximal",
+            "left-digit-2-distal",
+            "left-digit-3-distal",
+            "left-digit-1-distal",
+            "left-digit-1-proximal",
+            "left-digit-2-proximal",
+            "left-digit-3-proximal"
+          ]
+        }
+      }
+    ],
+    "log": {
+      "path": "assets/audit/whole-character-v15/attempt-04/kinematics.log",
+      "sha256": "3ae50a7a84f77835fd31aa2f0798214bd8abe1224fc1edfdb893aa2f4e545406",
+      "bytes": 39
+    }
+  },
+  "inspection": {
+    "receipt": {
+      "path": "assets/audit/whole-character-v15/attempt-04/inspection/inspection-pose-validation.json",
+      "sha256": "6e5ff9aa9a508091b14451e321ad0546bb7f545182df21bab25f3d62dc397e77",
+      "bytes": 33305
+    },
+    "checks": [
+      {
+        "name": "active-exported-inspection-pose-restores-eligible-mesh-world-matrices",
+        "status": "passed",
+        "result": {
+          "maker": {
+            "era": "maker",
+            "cyclesPerEra": 5,
+            "eligibleMeshOwnerCount": 6,
+            "mappedMeshCount": 22,
+            "cycles": [
+              {
+                "cycle": 1,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 2,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 3,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 4,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 5,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              }
+            ],
+            "baseline": "fixed exported rest pose; no motion tick or collision inference"
+          },
+          "mechanic": {
+            "era": "mechanic",
+            "cyclesPerEra": 5,
+            "eligibleMeshOwnerCount": 6,
+            "mappedMeshCount": 22,
+            "cycles": [
+              {
+                "cycle": 1,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 2,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 3,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 4,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 5,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 20
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              }
+            ],
+            "baseline": "fixed exported rest pose; no motion tick or collision inference"
+          },
+          "builder": {
+            "era": "builder",
+            "cyclesPerEra": 5,
+            "eligibleMeshOwnerCount": 8,
+            "mappedMeshCount": 22,
+            "cycles": [
+              {
+                "cycle": 1,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "power-core",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "processing",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 2,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "power-core",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "processing",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 3,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "power-core",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "processing",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 4,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "power-core",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "processing",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              },
+              {
+                "cycle": 5,
+                "eligibleMeshOwners": [
+                  {
+                    "name": "breastplate",
+                    "meshCount": 4
+                  },
+                  {
+                    "name": "left-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "right-mantle",
+                    "meshCount": 6
+                  },
+                  {
+                    "name": "left-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "right-wing-shield",
+                    "meshCount": 3
+                  },
+                  {
+                    "name": "power-core",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "processing",
+                    "meshCount": 1
+                  },
+                  {
+                    "name": "cranial-cover",
+                    "meshCount": 4
+                  }
+                ],
+                "separationEvidence": [
+                  {
+                    "separation": 0,
+                    "changedEligibleOwners": [],
+                    "changedUniqueEligibleMeshes": 0
+                  },
+                  {
+                    "separation": 0.5,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  },
+                  {
+                    "separation": 1,
+                    "changedEligibleOwners": [
+                      "breastplate",
+                      "left-mantle",
+                      "right-mantle",
+                      "left-wing-shield",
+                      "right-wing-shield",
+                      "power-core",
+                      "processing",
+                      "cranial-cover"
+                    ],
+                    "changedUniqueEligibleMeshes": 22
+                  }
+                ],
+                "exactDescendantWorldMatrixRestoration": true
+              }
+            ],
+            "baseline": "fixed exported rest pose; no motion tick or collision inference"
+          }
+        }
+      }
+    ],
+    "log": {
+      "path": "assets/audit/whole-character-v15/attempt-04/inspection.log",
+      "sha256": "59b2a8a76deeba722731d1626098bc6db7539a21a87018b14395de7d22dc0085",
+      "bytes": 19
+    }
+  },
+  "restingJaw": {
+    "receipt": {
+      "path": "assets/audit/whole-character-v15/attempt-04/resting-jaw/resting-jaw.json",
+      "sha256": "3e6144021c39fbb51bc3ee2a16145bd6c2e106e57df6d31968c3449001c3757c",
+      "bytes": 1835
+    },
+    "status": "PASS within sampled surface scope",
+    "sampleAngles": [
+      0.0,
+      0.04,
+      0.08,
+      0.12,
+      0.16,
+      0.2,
+      0.24,
+      0.28,
+      0.32
+    ],
+    "strictCrossingCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "scope": [
+      "Discrete 0 to 0.32 rad samples only.",
+      "No containment, continuous collision, stress, physical simulation or artistic acceptance.",
+      "No native was saved."
+    ],
+    "log": {
+      "path": "assets/audit/whole-character-v15/attempt-04/resting-jaw.log",
+      "sha256": "b49e079b9a7f1c8482fbe1aabc8c4aa4740b084d5e29bf8ebf0eb84512d858df",
+      "bytes": 364
+    }
+  },
+  "poseIllustrations": {
+    "manifest": {
+      "path": "assets/audit/whole-character-v15/attempt-04/motion-renders/pose-render-manifest.json",
+      "sha256": "f62a6a36da364cc3f919d49764bad270058729b317bafe20ebc13484f6240ed2",
+      "bytes": 65969
+    },
+    "poseCount": 8,
+    "nativePivotCount": 52,
+    "rawGlbRestMatrixMaxError": 1.3877787807814457e-17,
+    "status": "packet-driven native pose illustrations; not live motion or acceptance evidence",
+    "log": {
+      "path": "assets/audit/whole-character-v15/attempt-04/motion-renders.log",
+      "sha256": "6103d956bfc53de8c6256a95d04b9ef60e105b7dfb11f9e341a1205857fab7a3",
+      "bytes": 2398
+    }
+  },
+  "carriedForwardNotRerun": {
+    "attempt03PowerMoves": {
+      "receipt": {
+        "path": "assets/audit/whole-character-v15/attempt-03/power-moves/power-move-validation.json",
+        "sha256": "a869fdf0c6f6b71acaeba58dde48293b636cb8038b586570a11411f55430643a",
+        "bytes": 2677
+      },
+      "passed": 4,
+      "failed": 0,
+      "modelPath": "assets/models/whole-character-v15/attempt-03/murderbird-whole-character-v15.glb",
+      "note": "Not rerun on attempt04 by instruction; attempt04 regional differences are limited to the head patch and bill-contact diagnostic landmark. This is prior attempt03 evidence only."
+    },
+    "attempt03ClawContact": {
+      "receipt": {
+        "path": "assets/audit/whole-character-v15/attempt-03/claw-contact/claw-contact-v4.json",
+        "sha256": "db1de513764cac940845011b8d63671875398879bad61aa1ea63ffdafa29366e",
+        "bytes": 115541
+      },
+      "passed": 32,
+      "failed": 0,
+      "modelSha256": "bf1a6b788728c979c74b11677a65ffbe89703cfc5200e39b80adfe261e3a4d79",
+      "note": "Not rerun on attempt04 by instruction; this is prior attempt03 evidence only."
+    }
+  },
+  "executedSourceSnapshots": [
+    {
+      "sourcePath": "scripts/sample-neutral-clearance-poses.mjs",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/sample-neutral-clearance-poses.mjs",
+      "sha256": "afed863b785f5871efa1477fee3595ea961b70841e8e9eeb1ac7a04b756aa61d",
+      "bytes": 19281
+    },
+    {
+      "sourcePath": "scripts/load-rigid-validation.mjs",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/load-rigid-validation.mjs",
+      "sha256": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+      "bytes": 1376
+    },
+    {
+      "sourcePath": "scripts/verify-alignment-kinematics.mjs",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/verify-alignment-kinematics.mjs",
+      "sha256": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32",
+      "bytes": 10057
+    },
+    {
+      "sourcePath": "scripts/verify-inspection-pose-v4.mjs",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/verify-inspection-pose-v4.mjs",
+      "sha256": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c",
+      "bytes": 10589
+    },
+    {
+      "sourcePath": "scripts/inspect-v15-resting-jaw.py",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/inspect-v15-resting-jaw.py",
+      "sha256": "4bc1ca8f2cc9b777ead1cd36edcfcd6de24b418f14edd02e439427389b678b22",
+      "bytes": 3317
+    },
+    {
+      "sourcePath": "scripts/render-construction-poses.py",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/render-construction-poses.py",
+      "sha256": "126bf5d5a643fb59093af9b579c4d50c33031168860b7e4b671584eedf365d69",
+      "bytes": 14259
+    },
+    {
+      "sourcePath": "scripts/export-native-diagnostic.py",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/scripts/export-native-diagnostic.py",
+      "sha256": "bb28cb691666e418f7d140890aed949cdb26164b3cc02bb03275c69486a6ca8a",
+      "bytes": 6087
+    },
+    {
+      "sourcePath": "package-lock.json",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/package-lock.json",
+      "sha256": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+      "bytes": 25338
+    },
+    {
+      "sourcePath": "src/scene/era-controller.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/era-controller.js",
+      "sha256": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+      "bytes": 18483
+    },
+    {
+      "sourcePath": "src/scene/presence-state.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/presence-state.js",
+      "sha256": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad",
+      "bytes": 29826
+    },
+    {
+      "sourcePath": "src/scene/era-motion.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/era-motion.js",
+      "sha256": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+      "bytes": 34741
+    },
+    {
+      "sourcePath": "src/scene/rigid-leg-kinematics.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/rigid-leg-kinematics.js",
+      "sha256": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd",
+      "bytes": 2814
+    },
+    {
+      "sourcePath": "src/scene/cervical-articulation.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/cervical-articulation.js",
+      "sha256": "ce44ac4c0c57a2152fccef739b2abfd59bc7742799f63897603eb0fae7b25304",
+      "bytes": 1459
+    },
+    {
+      "sourcePath": "src/scene/inspection-pose.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/inspection-pose.js",
+      "sha256": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71",
+      "bytes": 1184
+    },
+    {
+      "sourcePath": "src/scene/era-mechanisms.js",
+      "snapshotPath": "assets/audit/whole-character-v15/attempt-04/source-snapshots/src/scene/era-mechanisms.js",
+      "sha256": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+      "bytes": 25850
+    }
+  ],
+  "limits": [
+    "Export receipt proves static diagnostic export and pivot node presence, not runtime appearance.",
+    "Pose samples and renders are deterministic module outputs, not live browser captures.",
+    "Jaw check uses nine discrete angles and its declared surface scope; not continuous clearance, containment, stress, or art acceptance.",
+    "Power-move and claw-contact receipts are carried forward from attempt03 and were not run on attempt04."
+  ]
+}

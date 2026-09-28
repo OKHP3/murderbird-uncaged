@@ -1,0 +1,21 @@
+{
+  "status": "Local build and publication boundary PASS; no deployment",
+  "sourceBase": "97d4220b22bfb2756b3ed2228121701dfd10a2d7",
+  "workingTreeDirty": true,
+  "checks": [
+    "npm ci",
+    "npm run build",
+    "node scripts/verify-publication.mjs"
+  ],
+  "productionModel": "uncaged-alignment-v9",
+  "localDefault": "whole-character-v15 attempt04",
+  "localStudiesExcluded": true,
+  "sourceHashes": {
+    "src/main.js": "c262cd9419f89bddac9d5ace183a0443c88038dff3a14b80b2c2a8e4eafea349",
+    "src/scene/presence-exhibit.js": "8d80c21dc9c4e710b834697e6191bb6c2a8cd3360083671362f02d6b2cdc200a"
+  },
+  "limits": [
+    "Build receipt binds the modified working tree; not remote CI or deployment.",
+    "New DEV-only model and gallery excluded from production build."
+  ]
+}
