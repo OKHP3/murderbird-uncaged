@@ -1,0 +1,122 @@
+{
+  "status": "updated local selection record; static resources verified; viewport screenshots predate this content update",
+  "url": "http://127.0.0.1:5183/assets/audit/neutral-regional-studies/index.html",
+  "finalHtml": {
+    "path": "assets/audit/neutral-regional-studies/index.html",
+    "sha256": "372057e1ab215a399c58ad05da8462aa37cd36f619ac8abe5266b76e658e3379"
+  },
+  "rootBrowser": "Codex in-app browser, Chromium",
+  "screenshots": [
+    {
+      "path": "assets/audit/neutral-regional-studies/browser-review/narrow-head-cdp-390x640.png",
+      "sha256": "da15d92410df469773e937c0c01f6f80a38af7e28859ed94c4bc4f73987d69a5",
+      "pixels": [
+        390,
+        640
+      ],
+      "note": "Root inspected front and side comparison at390x640: clear labels and images, no horizontal overflow. Captured before final status-copy correction; media/layout unchanged. These screenshots predate the V8-selection content update and do not verify the current page copy."
+    },
+    {
+      "path": "assets/audit/neutral-regional-studies/browser-review/desktop-head-1280x720.png",
+      "sha256": "bdbc87b879a1754114d3fd3bbddcc079ce5f07bdaf84353530a0586a8724e32d",
+      "pixels": [
+        1280,
+        720
+      ],
+      "note": "Actual captured region is shoulder comparison plus preceding head status. Filename retained;1280x720 desktop after status-copy correction. These screenshots predate the V8-selection content update and do not verify the current page copy."
+    },
+    {
+      "path": "assets/audit/neutral-regional-studies/browser-review/narrow-head.png",
+      "sha256": "8dee8cb6cc66c86e38ace998828c99aec83908f17b5c6c7c078cda1b80c8fd75",
+      "pixels": [
+        65536,
+        4292542531
+      ],
+      "note": "Ordinary screenshot wrapper scaled the whole tab; excluded from narrow-layout proof. These screenshots predate the V8-selection content update and do not verify the current page copy."
+    }
+  ],
+  "workerEvidence": "V8 local selection confirmed in src/scene/presence-exhibit.js and src/scene/fallback.js. Current page checked by local resource validation; preserved desktop and narrow screenshots document the preceding page version.",
+  "limits": [
+    "Static page sampling; not full accessibility or touch-device validation.",
+    "Offscreen lazy images are not treated as failures before scrolling.",
+    "A390x844 capture exceeded the available720px backing surface and repeated content below720; that unsaved capture is excluded. Emulation was reset after review.",
+    "Updated page copy and inserted V8 section were resource-checked; preserved desktop/narrow screenshots depict the preceding page version and do not visually validate this update."
+  ],
+  "selectionState": {
+    "activeLocalModel": {
+      "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb",
+      "sha256": "c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385",
+      "acceptance": "locally selected; owner artistic acceptance pending"
+    },
+    "selectedCompositionInputs": [
+      {
+        "path": "assets/models/uncaged-head-continuous-plates-study-v2/murderbird-head-continuous-plates-v2.blend",
+        "sha256": "ad99e4c0df19870e78b0a38107499e285a1f2d8523dee2c7694ec277141d9807",
+        "status": "selected V8 input; unaccepted"
+      },
+      {
+        "path": "assets/models/uncaged-neck-shoulder-envelope-study-v1/attempt-02/murderbird-v7-shoulder-envelope-study-v2.blend",
+        "sha256": "3bcba58d332fd691ebcfe9c6887f10532ee659bb0d3f32258e84b40b23f22229",
+        "status": "selected V8 input; unaccepted"
+      },
+      {
+        "path": "assets/models/uncaged-digit-envelope-study-v1/iterations/attempt-03/murderbird-uncaged-digit-envelope-study-v1.blend",
+        "sha256": "5d8d101f4eee4d3bb86bae57d8de41b4aa2b9a8399d6962c91505f60bedfde54",
+        "status": "selected V8 input; unaccepted"
+      }
+    ],
+    "heldStudies": [
+      {
+        "path": "assets/models/uncaged-neck-envelope-study-v2/attempt-03/murderbird-neck-envelope-study-v2.blend",
+        "status": "held; not included in V8"
+      },
+      {
+        "path": "assets/models/uncaged-head-continuous-plates-study-v4/murderbird-head-continuous-plates-v4.blend",
+        "status": "held; not included in V8"
+      }
+    ]
+  },
+  "historicalSnapshot": {
+    "directory": "assets/audit/neutral-regional-studies/history/2026-09-28-before-v8-local-selection",
+    "pageSha256": "adecc777628896e6ac91eb6f349e0f4e222139e573577ea2930dc77999dfa202",
+    "manifestSha256": "8363c4dea8b84cc595759b842efca4ff24bb8e57bc138e26954ea4f2308f9140",
+    "note": "Byte-identical copies of the page and browser-review manifest before V8 selection was reflected."
+  },
+  "resourceValidation": {
+    "method": "Local Vite HTTP page/resource checks with source-byte comparison; PNG decode; media decode",
+    "result": "pass",
+    "htmlSourceSha256": "372057e1ab215a399c58ad05da8462aa37cd36f619ac8abe5266b76e658e3379",
+    "http": {
+      "route": "http://127.0.0.1:5183/assets/audit/neutral-regional-studies/index.html",
+      "pageStatus": 200,
+      "pageServedWithViteClientInjection": true,
+      "localReferences": 62,
+      "uniqueLocalPaths": 50,
+      "head200": 50,
+      "failed": 0
+    },
+    "hydratedMedia": {
+      "srcAndPosterResources": 17,
+      "getStatus200AndExactLocalBytes": 17,
+      "pngDecoded": 15,
+      "videoFilesDecoded": [
+        "assets/audit/digit-envelope-browser-study/framed-v2/claw-normal-clock.mp4",
+        "assets/audit/digit-envelope-browser-study/framed-v2/claw-normal-clock.webm"
+      ]
+    },
+    "newPageVisualViewportTest": "not performed for this text/content update; prior screenshots retained and explicitly treated as historical"
+  },
+  "updatedAt": "2026-09-28",
+  "priorPageViewportEvidence": [
+    {
+      "width": 390,
+      "height": 640,
+      "documentScrollWidth": 390
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "documentScrollWidth": 1280
+    }
+  ]
+}

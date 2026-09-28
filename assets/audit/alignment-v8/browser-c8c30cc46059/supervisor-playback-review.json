@@ -1,0 +1,60 @@
+{
+  "status": "supervisor browser playback spot-check; no owner acceptance",
+  "page": "http://127.0.0.1:5183/assets/audit/alignment-v8/index.html",
+  "videoSha256": "19a79f75f82e4568d5239f08bcfd92eecf0bebe4419c8b9c1493509533379a30",
+  "observations": [
+    {
+      "section": "Maker beginning",
+      "method": "chapter play and visible beginning frame",
+      "finding": "Complete upright body and scene visible."
+    },
+    {
+      "section": "Advanced chapter",
+      "method": "playback started at48s; subsequent screenshot at62.10s",
+      "finding": "Browser decoded618frames with0reported dropped playbackframes atspotcheck. Not a runtime performance measurement."
+    },
+    {
+      "section": "jump",
+      "timeSeconds": 50.05,
+      "method": "seek and screenshot",
+      "finding": "Body airborne, feet lifted; complete body framed."
+    },
+    {
+      "section": "contact",
+      "timeSeconds": 61.19,
+      "method": "seek and screenshot",
+      "finding": "Lowered head and forwardbody at cage; no obvious separated neck member inthisview."
+    },
+    {
+      "section": "Mechanic step",
+      "timeSeconds": 31.5,
+      "method": "seek and screenshot",
+      "finding": "Distinct gear/transmission visibility and plantedstep pose; narrowlimb construction remains."
+    },
+    {
+      "section": "Mechanic inspection",
+      "timeSeconds": 76.4,
+      "method": "seek and screenshot",
+      "finding": "Crown,breast andwings separated aroundframe; interior construction remains sparse."
+    }
+  ],
+  "proof": [
+    {
+      "path": "assets/audit/alignment-v8/browser-c8c30cc46059/gallery-contact-playback.png",
+      "sha256": "937ceffd2af5e63cfdbd9452c605a03513d9cd8371907afb26633aab311eee51"
+    },
+    {
+      "path": "assets/audit/alignment-v8/browser-c8c30cc46059/gallery-mechanic-inspection-playback.png",
+      "sha256": "5d69db8be27ddafa4c7a4cb48352b9ccc1a56c143732a6aee9b33fd87d249796"
+    },
+    {
+      "path": "assets/audit/alignment-v8/browser-c8c30cc46059/gallery-desktop-review.png",
+      "sha256": "a659b0f69b58c7a59850221b30558fcee95e73870e43d9e7965773c28b317d3a"
+    }
+  ],
+  "limits": [
+    "Spot checks and video decoding are not continuous human acting review.",
+    "No audio listening, physical mobile, sustained thermal or network performance claim.",
+    "The complete event sequence is independently recorded in motion-envelope.json."
+  ]
+}

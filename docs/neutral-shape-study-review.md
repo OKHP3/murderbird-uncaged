@@ -53,3 +53,11 @@ The new [composer](../scripts/compose-alignment-native.py) accepts an explicit h
 The [independent code and artifact audit](../assets/audit/alignment-composition-check/independent-review.md) confirms that bounded transfer/parity result. It notes that the first inventory did not hash-bind its detailed transfer record and that the comparator treated absent JSON keys like null. Neither affected this pair. The working composer now includes the transfer-record digest for future builds; the executed verification snapshot remains untouched.
 
 Keep F01–F10 open or bounded according to their existing evidence. Integrate only visually useful, mechanically screened changes into a new complete neutral candidate; then obtain the required Stage B owner review before dependent material finishing.
+
+## V8 integration decision
+
+The [complete neutral V8 candidate](alignment-v8-review.md) now selects head continuous-plate V2, shoulder-only attempt02 and digit attempt03. The separate head V2 runtime derivative and six targeted screenings were completed before integration. V8 has its own model hash, export-parity check, motion suite, matched authoring views and actual browser evidence; older study receipts retain their bounded scope.
+
+[Head V4](../assets/audit/head-continuous-plates-study-v4/independent-review-v4.json) is held: its broad arch is more readable but looks like smooth trim and adds mirrored brow/cere overlap candidates. [Neck-envelope attempt03](../assets/audit/neck-envelope-study-v2/attempt-03/independent-review.md) is held: preservation checks pass, but the modest taper adds nine overlap-pair identities with breast fasteners across the sampled poses. Failed neck attempts01/02 remain at their original paths. V8 keeps the V7 neck instead of trading known limitations for these new contacts.
+
+The whole candidate remains a structural proposal. Regional technical passes do not make its proportions or visible construction approved, and no finished surfaces or deployment are implied.

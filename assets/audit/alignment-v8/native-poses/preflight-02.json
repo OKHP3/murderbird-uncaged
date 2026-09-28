@@ -1,0 +1,19 @@
+{
+  "status": "PARTIAL - two valid whole-bird renders; stopped before detail rendering",
+  "recordedAtUtc": "2026-09-28T11:28:37.158926+00:00",
+  "executedScriptPath": "assets/audit/alignment-v8/native-poses/preflight-02-renderer.py",
+  "executedScriptSha256": "055417c79cba6f58473444f4a30a4135b08a5672033c3e008b466637d1ba0a2f",
+  "nativePath": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+  "nativeSha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478",
+  "renderedImages": [
+    {
+      "path": "assets/audit/alignment-v8/native-poses/advanced-attention-whole-bird-3q.png",
+      "sha256": "6ff456a20e29699668cda937ebdcad0b684319fbc646e9fd6412d9b0df7ff3c2"
+    },
+    {
+      "path": "assets/audit/alignment-v8/native-poses/advanced-strike-peak-whole-bird-3q.png",
+      "sha256": "aea521306722927c93d1720f33f919c1ae1b1c1834eec1a9c2a08513fbba05be"
+    }
+  ],
+  "failure": "After the two whole-bird stills, the fixed detail view had local horizontal bounds 0.068..1.058m versus a 1.78m orthographic frame; fail-closed crop check stopped execution before the first detail image. Native was read-only; partial outputs preserved."
+}

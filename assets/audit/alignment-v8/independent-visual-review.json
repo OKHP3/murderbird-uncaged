@@ -1,0 +1,77 @@
+{
+  "review": "independent-neutral-visual-review",
+  "status": "complete-with-limits",
+  "candidate": {
+    "native": {
+      "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+      "sha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478"
+    },
+    "glb": {
+      "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb",
+      "sha256": "c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385"
+    }
+  },
+  "transferContract": "assets/audit/alignment-v8-transfer-contract.json",
+  "question": "Does V8 preserve the defining MurderBird silhouette across Maker, Mechanic and Builder views, improve on V7 in the transferred regions, and show any unexpected visible regression?",
+  "evidence": {
+    "v8ViewManifest": "assets/audit/alignment-v8/neutral-views/authoring-views.json",
+    "v7ViewManifest": "assets/audit/alignment-v7/neutral-views/authoring-views.json",
+    "viewCount": 42,
+    "matchedEraViewKeys": true,
+    "matchedCameraMetadata": true,
+    "listedImageBytesAndSha256Verified": 84,
+    "referenceImages": [
+      {
+        "path": "assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+        "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+        "scope": "qualitative body and foot direction"
+      },
+      {
+        "path": "assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png",
+        "sha256": "93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9",
+        "scope": "qualitative Maker appearance"
+      },
+      {
+        "path": "assets/img/library/murderbird-unified-mechanic-candidate-2026-09-06.png",
+        "sha256": "0bd7c79510be9eeef024f8861a7576b777a7f5de5710523e8d2ab039d03c65f9",
+        "scope": "qualitative Mechanic appearance; includes workshop context"
+      },
+      {
+        "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+        "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+        "scope": "owner-selected head reference only"
+      }
+    ]
+  },
+  "findings": {
+    "definingFeaturesRetained": [
+      "upright heavy-breasted bird body",
+      "folded lateral mantle",
+      "hooked bill and cranial plate silhouette",
+      "articulated legs and projecting talons"
+    ],
+    "visibleImprovementsOverV7": [
+      "head brow, cheek and upper bill read as a more continuous plate assembly",
+      "shoulder caps are modestly lower and tucked; row-0 fasteners appear seated with their plates",
+      "dorsal guards add coverage over rounded digit links"
+    ],
+    "remainingMismatch": [
+      "retained V7 neck is narrow, tall and openly jointed, with an angular neck-to-breast break",
+      "shoulder caps still read as two separate side pods rather than an integrated compact mantle",
+      "toe guards remain sparse, leaving segmented links and projecting claws visually dominant versus candidate03's broader plated toe envelope"
+    ],
+    "unexpectedVisibleRegression": "None observed in the matched neutral views; changes appear localized to the contracted regions.",
+    "eraJudgments": {
+      "maker": "Partial likeness. Broad body, folded wing and stance are retained; the neck and shoulder pod silhouette remain departures from Maker-clean.",
+      "mechanic": "Partial likeness. The mechanical bird direction is present, but neutral surface articulation is sparser than the layered neck, breast and limb machinery depicted in the contextual Mechanic illustration. Workshop props and human mechanic are not treated as model requirements.",
+      "builder_advanced_mode": "Partial likeness. Candidate03 supports body and foot comparison; the July image is head-only. Head contour improves, while its compact plate-and-optic assembly and retained open neck remain departures from the July head-to-chest treatment."
+    }
+  },
+  "reviewDisposition": "Suitable to present as a complete review candidate if the visible neck, shoulder and toe mismatches remain explicit. No artistic acceptance or era acceptance assigned.",
+  "limits": [
+    "Workbench neutral renders use material display colors and no textures; this is not color, material or finished-art review.",
+    "Illustrated references are qualitative perspective art and do not establish exact dimensions or hidden geometry.",
+    "This review does not establish runtime/browser appearance, motion clearance, mechanism performance or publication readiness.",
+    "No score was assigned. Owner acceptance remains open."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "HELD - do not integrate or treat as preservation-correct candidate",
+  "recordedAtUtc": "2026-09-28T10:56:41.821197+00:00",
+  "candidatePath": "assets/models/uncaged-neck-envelope-study-v2/murderbird-neck-envelope-study-v2.blend",
+  "candidateSha256": "c3319b6f144348aa2a56f79aa03574c970171eebbe9427508bda96ddfdd0e572",
+  "originalManifestPath": "assets/audit/neck-envelope-study-v2/study-manifest.json",
+  "reasons": [
+    "The generation script changed hide_render/hide_set before saving the candidate native, so its scene visibility does not preserve frozen V7.",
+    "The original preflight signature omitted full mesh coordinates/modifier and save-reload snapshot parity."
+  ],
+  "preservedOriginalFiles": true
+}

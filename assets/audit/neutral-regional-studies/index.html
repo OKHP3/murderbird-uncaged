@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Neutral regional studies · MurderBird: Uncaged</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202522;
+      --muted: #5c6861;
+      --line: #d7ded9;
+      --paper: #f4f6f2;
+      --card: #fff;
+      --pine: #24483b;
+      --pine-soft: #e6eee9;
+      --amber: #f7edcf;
+      --amber-line: #ddc88e;
+      --shadow: 0 14px 34px rgb(29 46 37 / 8%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.55; }
+    a { color: #185a46; text-underline-offset: .18em; }
+    a:hover { color: #0b392b; }
+    a:focus-visible, video:focus-visible { outline: 3px solid #b47612; outline-offset: 3px; }
+    .shell { width: min(1240px, calc(100% - 36px)); margin: 0 auto; }
+    header { padding: clamp(2.5rem, 7vw, 5rem) 0 2rem; }
+    .eyebrow { color: var(--pine); font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: .55rem 0 .8rem; font-size: clamp(2.1rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -.045em; }
+    .lede { max-width: 760px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); }
+    .notice { margin: 1.5rem 0 1rem; padding: 1rem 1.15rem; border: 1px solid var(--amber-line); border-radius: 14px; background: var(--amber); }
+    .notice strong { display: block; margin-bottom: .2rem; }
+    .status-row { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.1rem 0; }
+    .badge { display: inline-flex; align-items: center; padding: .33rem .68rem; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--pine); font-size: .78rem; font-weight: 750; }
+    main { padding-bottom: 4rem; }
+    section { margin: 1.2rem 0 1.5rem; padding: clamp(1.1rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 20px; background: var(--card); box-shadow: var(--shadow); }
+    h2 { margin: 0 0 .3rem; font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.15; letter-spacing: -.025em; }
+    h3 { margin: 1.25rem 0 .25rem; font-size: 1.08rem; }
+    h4 { margin: 0 0 .45rem; font-size: .92rem; }
+    p { margin: .5rem 0; }
+    .subtle { color: var(--muted); }
+    .study-head { display: flex; justify-content: space-between; align-items: start; gap: 1rem; }
+    .study-head .badge { flex: 0 0 auto; }
+    .study-links { display: flex; flex-wrap: wrap; gap: .55rem 1rem; margin: .9rem 0 1.2rem; font-size: .88rem; }
+    .study-links a { white-space: normal; }
+    .compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .pair { min-width: 0; padding: .8rem; border: 1px solid var(--line); border-radius: 15px; background: #fafbf9; }
+    .pair-label { display: flex; justify-content: space-between; gap: .5rem; margin-bottom: .55rem; color: var(--muted); font-size: .76rem; font-weight: 700; }
+    .pair-images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+    figure { min-width: 0; margin: 0; }
+    .pair-images img, .reference-grid img, .single-visual img { display: block; width: 100%; height: auto; border: 1px solid #dfe4e0; border-radius: 9px; background: #e7e9e7; }
+    .focus-window { display: block; overflow: hidden; aspect-ratio: 1 / 1; border: 1px solid #dfe4e0; border-radius: 9px; background: #e7e9e7; }
+    .focus-window img { width: 180%; max-width: none; height: 180%; object-fit: cover; transform: translate(-22.2%, -22.2%); }
+    .reference-crop { display: block; overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid #dfe4e0; border-radius: 9px; background: #202522; }
+    .reference-crop img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 9%; border: 0; border-radius: 0; }
+    .pair-images figcaption { margin-top: .35rem; color: var(--muted); font-size: .72rem; }
+    .hash { display: block; margin-top: .2rem; color: #66726b; font: 11px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+    details { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .75rem; }
+    summary { color: var(--pine); font-weight: 750; cursor: pointer; }
+    .reference-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); gap: 1rem; align-items: start; margin-top: 1rem; }
+    .reference-card { padding: .8rem; border: 1px solid var(--line); border-radius: 14px; background: #fafbf9; }
+    .reference-card img { max-height: 420px; object-fit: contain; }
+    .video-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(250px, .85fr); gap: 1rem; align-items: start; margin-top: 1rem; }
+    video { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; background: #202522; }
+    .review-note { padding: .8rem 1rem; border-left: 4px solid var(--pine); border-radius: 0 10px 10px 0; background: var(--pine-soft); }
+    .scope-list { margin: .5rem 0 0; padding-left: 1.2rem; }
+    .scope-list li + li { margin-top: .28rem; }
+    footer { padding: 1.8rem 0 3rem; color: var(--muted); font-size: .88rem; }
+    .baseline { display: grid; grid-template-columns: minmax(0, .8fr) minmax(240px, 1.2fr); gap: 1.25rem; align-items: center; margin-top: 1rem; }
+    .baseline img { display: block; width: min(100%, 330px); margin: auto; border: 1px solid var(--line); border-radius: 12px; }
+    .reference-caption { margin-top: .45rem; color: var(--muted); font-size: .78rem; }
+    @media (max-width: 760px) {
+      .compare-grid, .reference-grid, .video-grid, .baseline { grid-template-columns: 1fr; }
+      .study-head { display: block; }
+      .study-head .badge { margin-top: .65rem; }
+      section { border-radius: 15px; }
+      .reference-card img { max-height: 360px; }
+    }
+    @media (max-width: 430px) {
+      .shell { width: min(100% - 22px, 1240px); }
+      .pair { padding: .55rem; }
+      .pair-images { gap: .3rem; }
+      .hash { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="eyebrow">Local evidence gallery · 28 September 2026</div>
+      <h1>Regional geometry studies</h1>
+      <p class="lede">A visual record of the combined V8 local exhibit model, its selected regional source studies, the frozen V7 baseline, and scoped illustration references.</p>
+      <div class="notice" role="note">
+        <strong>V8 is selected for the local exhibit; owner acceptance remains pending.</strong>
+        The V2 head, shoulder attempt 02, and digit attempt 03 are selected as V8 composition inputs, not artistically accepted. The neck attempt 03 and head V4 are held and are not included. No finished exterior has been established.
+      </div>
+      <div class="status-row" aria-label="Evidence status">
+        <span class="badge">V8 local app model</span>
+        <span class="badge">Three selected study inputs</span>
+        <span class="badge">Owner acceptance pending</span>
+        <span class="badge">Not a finished exterior</span>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="baseline-title">
+        <div class="study-head">
+          <div>
+            <h2 id="baseline-title">Frozen V7 starting point</h2>
+            <p class="subtle">Shared baseline for the head, shoulder and digit comparisons below.</p>
+          </div>
+          <span class="badge">Frozen source</span>
+        </div>
+        <div class="baseline">
+          <figure>
+            <img src="../../models/uncaged-alignment-v7/builder-preview.png" alt="Frozen V7 neutral Builder preview of the full MurderBird model" width="1024" height="1024">
+            <figcaption class="reference-caption">Neutral Builder preview · SHA-256 <code>8be4bb689f73…</code></figcaption>
+          </figure>
+          <div>
+            <p><strong>V7 native</strong> · SHA-256 <code>a8fccaf024a0…</code> · 1,945,914 bytes</p>
+            <p>V7 is the frozen comparison baseline for V8. The candidate03 full-body illustration is a qualitative body/foot direction; the July owner-selected image is scoped to head identity only. Neither is dimensional metrology.</p>
+            <div class="study-links">
+              <a href="../../models/uncaged-alignment-v7/murderbird-alignment-v7.blend">Open frozen V7 native</a>
+              <a href="../../models/uncaged-alignment-v7/alignment-inventory.json">V7 inventory</a>
+              <a href="../alignment-v7/independent-asset-review.json">V7 independent asset review</a>
+              <a href="../../../src/scene/presence-exhibit.js">Runtime model reference in source</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="combined-title">
+        <div class="study-head">
+          <div>
+            <h2 id="combined-title">Combined local candidate · V8</h2>
+            <p class="subtle">V8 combines head V2, shoulder attempt 02 and digit attempt 03 with the V7 base. The app source now selects this combined GLB; local selection records a review state, not owner approval.</p>
+          </div>
+          <span class="badge">Locally selected · unaccepted</span>
+        </div>
+        <div class="baseline">
+          <figure>
+            <img loading="lazy" src="../../models/uncaged-alignment-v8/builder-preview.png" alt="Combined V8 neutral Advanced-mode preview" width="1100" height="1100">
+            <figcaption class="reference-caption">V8 neutral Builder/Advanced view · GLB SHA-256 <code>c8c30cc46059…</code></figcaption>
+          </figure>
+          <div>
+            <p><strong>V8 native</strong> · SHA-256 <code>b12c442e2f51…</code></p>
+            <p>The V7 neck is retained. Neck attempt 03 is held after sampled breast-fastener overlap candidates; head V4 is held because its upper-orbit arch reads as a raised trim rail and adds overlap candidates. Neither is part of V8.</p>
+            <div class="study-links">
+              <a href="../alignment-v8/index.html">Open combined V8 review</a>
+              <a href="../../models/uncaged-alignment-v8/murderbird-alignment-v8.blend">V8 editable native</a>
+              <a href="../../models/uncaged-alignment-v8/murderbird-alignment-v8.glb">V8 runtime GLB</a>
+              <a href="../../models/uncaged-alignment-v8/alignment-inventory.json">V8 construction inventory</a>
+              <a href="../alignment-v8/independent-visual-review.md">Independent V8 visual review</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="head-title">
+        <div class="study-head">
+          <div>
+            <h2 id="head-title">Head · continuous plate study V2</h2>
+            <p class="subtle">Before: frozen V7 images retained in the held attempt05 partial review. After: continuous V2 study. Front, anatomical-right profile and three-quarter camera settings match in the two receipts.</p>
+          </div>
+          <span class="badge">Selected V8 input · unaccepted</span>
+        </div>
+        <div class="compare-grid">
+          <article class="pair">
+            <h3>Front · bilateral</h3>
+            <div class="pair-images">
+              <figure><img loading="lazy" src="../head-construction-study-v2/iterations/attempt-05/partial-review/before-front-bilateral.png" alt="Frozen V7 head from front, before the continuous-plate study"><figcaption>V7 baseline</figcaption></figure>
+              <figure><img loading="lazy" src="../head-continuous-plates-study-v2/front.png" alt="Head continuous-plate V2 from the same front camera"><figcaption>Continuous V2</figcaption></figure>
+            </div>
+          </article>
+          <article class="pair">
+            <h3>Anatomical-right profile</h3>
+            <div class="pair-images">
+              <figure><img loading="lazy" src="../head-construction-study-v2/iterations/attempt-05/partial-review/before-anatomical-right-profile.png" alt="Frozen V7 head from anatomical-right profile"><figcaption>V7 baseline</figcaption></figure>
+              <figure><img loading="lazy" src="../head-continuous-plates-study-v2/anatomical-right-profile.png" alt="Head continuous-plate V2 from the matching anatomical-right profile"><figcaption>Continuous V2</figcaption></figure>
+            </div>
+          </article>
+          <article class="pair">
+            <h3>Three-quarter</h3>
+            <div class="pair-images">
+              <figure><img loading="lazy" src="../head-construction-study-v2/iterations/attempt-05/partial-review/before-three-quarter-a.png" alt="Frozen V7 head from three-quarter view"><figcaption>V7 baseline</figcaption></figure>
+              <figure><img loading="lazy" src="../head-continuous-plates-study-v2/three-quarter.png" alt="Head continuous-plate V2 from the matching three-quarter camera"><figcaption>Continuous V2</figcaption></figure>
+            </div>
+          </article>
+        </div>
+        <p class="review-note"><strong>Status:</strong> Targeted technical checks completed; likeness remains unresolved. The attempt05 before images are a held diagnostic baseline, not an accepted candidate. See the <a href="../head-continuous-plates-study-v2/runtime/targeted-screenings.json">targeted screening record</a>.</p>
+        <details>
+          <summary>Head study files and provenance</summary>
+          <div class="study-links">
+            <a href="../../models/uncaged-head-continuous-plates-study-v2/murderbird-head-continuous-plates-v2.blend">Continuous V2 native</a>
+            <a href="../head-continuous-plates-study-v2/receipt.json">V2 receipt</a>
+            <a href="../head-continuous-plates-study-v2/actual-runtime-clearance/native-clearance-comparison.json">V2 sampled clearance receipt</a>
+            <a href="../head-construction-study-v2/iterations/attempt-05/partial-review/receipt.json">Attempt05 partial-review receipt</a>
+            <a href="../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png">July owner-selected head reference</a>
+          </div>
+          <span class="hash">V2 native SHA-256: ad99e4c0df19870e78b0a38107499e285a1f2d8523dee2c7694ec277141d9807</span>
+          <span class="hash">V7 base SHA-256: a8fccaf024a096678415215029b34cae8270b348da2301b8872a34e72c75ed3f</span>
+        </details>
+      </section>
+
+      <section aria-labelledby="shoulder-title">
+        <div class="study-head">
+          <div>
+            <h2 id="shoulder-title">Lowered shoulder caps · attempt 02</h2>
+            <p class="subtle">Matched neutral V7 / study stills show a modest reduction in the upper mantle cap and reseated row-0 fastener meshes.</p>
+          </div>
+          <span class="badge">Selected V8 input · unaccepted</span>
+        </div>
+        <div class="compare-grid">
+          <article class="pair">
+            <h3>Three-quarter</h3>
+            <div class="pair-images">
+              <figure><a class="focus-window" href="../neck-shoulder-envelope-study-v1/attempt-02/before-left-three-quarter.png"><img loading="lazy" src="../neck-shoulder-envelope-study-v1/attempt-02/before-left-three-quarter.png" alt="Frozen V7 shoulder and mantle, cropped to the cap and upper torso in neutral left three-quarter view"></a><figcaption>V7 baseline · focused crop</figcaption></figure>
+              <figure><a class="focus-window" href="../neck-shoulder-envelope-study-v1/attempt-02/after-left-three-quarter.png"><img loading="lazy" src="../neck-shoulder-envelope-study-v1/attempt-02/after-left-three-quarter.png" alt="Attempt 02 shoulder cap study, cropped to the cap and upper torso from the matched left three-quarter view"></a><figcaption>Shoulder attempt 02 · focused crop</figcaption></figure>
+            </div>
+          </article>
+          <article class="pair">
+            <h3>Front</h3>
+            <div class="pair-images">
+              <figure><img loading="lazy" src="../neck-shoulder-envelope-study-v1/attempt-02/before-front.png" alt="Frozen V7 full model from front"><figcaption>V7 baseline</figcaption></figure>
+              <figure><img loading="lazy" src="../neck-shoulder-envelope-study-v1/attempt-02/after-front.png" alt="Shoulder attempt 02 from the matched front view"><figcaption>Shoulder attempt 02</figcaption></figure>
+            </div>
+          </article>
+        </div>
+        <p class="review-note"><strong>Scope:</strong> 20 shoulder meshes and 16 row-0 pin mesh datasets only; no pivot or object transforms changed. The six reconstructed neck guards from attempt 01 are omitted because sampled actual-runtime poses showed different-owner intersections. Attempt 02 does not claim full shoulder clearance.</p>
+        <details>
+          <summary>Shoulder study files and checks</summary>
+          <div class="study-links">
+            <a href="../../models/uncaged-neck-shoulder-envelope-study-v1/attempt-02/murderbird-v7-shoulder-envelope-study-v2.blend">Attempt 02 native</a>
+            <a href="../neck-shoulder-envelope-study-v1/attempt-02/study-manifest.json">Attempt 02 manifest</a>
+            <a href="../neck-shoulder-envelope-study-v1/attempt-02/README.md">Attempt 02 findings</a>
+            <a href="../neck-shoulder-envelope-study-v1/attempt-02/runtime-pose-views/visual-review.md">Thrust / inspection pose visual review</a>
+            <a href="../neck-shoulder-envelope-study-v1/actual-runtime-clearance-attempt02-full-owners/native-clearance-comparison.json">17-pose full-owner comparison</a>
+          </div>
+          <span class="hash">Attempt 02 native SHA-256: 3bcba58d332fd691ebcfe9c6887f10532ee659bb0d3f32258e84b40b23f22229</span>
+        </details>
+      </section>
+
+      <section aria-labelledby="digit-title">
+        <div class="study-head">
+          <div>
+            <h2 id="digit-title">Toe and foot envelope · digit attempt 03</h2>
+            <p class="subtle">A neutral geometry comparison of the V7 foot and a twelve-plate dorsal-cover proposal. Existing pivots and six talons are retained.</p>
+          </div>
+          <span class="badge">Selected V8 input · unaccepted</span>
+        </div>
+        <div class="compare-grid">
+          <article class="pair">
+            <h3>Three-quarter</h3>
+            <div class="pair-images">
+              <figure><img loading="lazy" src="../digit-envelope-study-v1/iterations/attempt-03/v7-before-three-quarter.png" alt="Frozen V7 foot from three-quarter view"><figcaption>V7 baseline</figcaption></figure>
+              <figure><img loading="lazy" src="../digit-envelope-study-v1/iterations/attempt-03/study-after-three-quarter.png" alt="Digit attempt 03 toe-cover proposal from the matching three-quarter view"><figcaption>Digit attempt 03</figcaption></figure>
+            </div>
+          </article>
+          <article class="pair">
+            <h3>Side</h3>
+            <div class="pair-images">
+              <figure><img loading="lazy" src="../digit-envelope-study-v1/iterations/attempt-03/v7-before-side.png" alt="Frozen V7 foot from side"><figcaption>V7 baseline</figcaption></figure>
+              <figure><img loading="lazy" src="../digit-envelope-study-v1/iterations/attempt-03/study-after-side.png" alt="Digit attempt 03 toe-cover proposal from the matching side view"><figcaption>Digit attempt 03</figcaption></figure>
+            </div>
+          </article>
+        </div>
+        <p class="review-note"><strong>Status:</strong> V8 includes this study's selected geometry. It improves the large rounded link profile but remains sparse relative to candidate03 coverings; the recorded receipt says F04 is not closed. Local inclusion does not mean the foot is accepted.</p>
+        <details>
+          <summary>Digit study files and receipts</summary>
+          <div class="study-links">
+            <a href="../../models/uncaged-digit-envelope-study-v1/iterations/attempt-03/murderbird-uncaged-digit-envelope-study-v1.blend">Digit attempt 03 native</a>
+            <a href="../digit-envelope-study-v1/iterations/attempt-03/study-receipt.json">Digit study receipt</a>
+            <a href="../digit-envelope-study-v1/iterations/attempt-03/runtime/runtime-check-manifest.json">Runtime derivative check</a>
+            <a href="../digit-envelope-study-v1/iterations/attempt-03/runtime/toe-guard-pairs.json">Toe-guard pair report</a>
+            <a href="../../models/uncaged-alignment-v7/murderbird-alignment-v7.glb">Frozen V7 GLB</a>
+          </div>
+          <span class="hash">Digit attempt 03 native SHA-256: 5d8d101f4eee4d3bb86bae57d8de41b4aa2b9a8399d6962c91505f60bedfde54</span>
+        </details>
+      </section>
+
+      <section aria-labelledby="claw-title">
+        <div class="study-head">
+          <div>
+            <h2 id="claw-title">Isolated browser claw clip · framed V2</h2>
+            <p class="subtle">A short WebGL interaction study using the digit attempt 03 GLB injected into a temporary local test tab.</p>
+          </div>
+          <span class="badge">One action, isolated</span>
+        </div>
+        <div class="video-grid">
+          <figure>
+            <video controls preload="metadata" poster="../digit-envelope-browser-study/framed-v2/claw-contact.png">
+              <source src="../digit-envelope-browser-study/framed-v2/claw-normal-clock.mp4" type="video/mp4">
+              <source src="../digit-envelope-browser-study/framed-v2/claw-normal-clock.webm" type="video/webm">
+              Your browser cannot play this local video. Use the download links below.
+            </video>
+            <figcaption class="reference-caption">Normal-clock isolated WebGL claw-action capture · 6.6 seconds · model SHA-256 <code>574d9ca44121…</code></figcaption>
+          </figure>
+          <div>
+            <p class="review-note"><strong>Boundary:</strong> the clip shows one claw action only. It is not the combined V8 exhibit model, a full motion envelope, or performance acceptance. V8 is now the local app source model.</p>
+            <div class="study-links">
+              <a href="../digit-envelope-browser-study/framed-v2/claw-normal-clock.mp4">Download MP4 clip</a>
+              <a href="../digit-envelope-browser-study/framed-v2/claw-normal-clock.webm">Download WebM clip</a>
+              <a href="../digit-envelope-browser-study/framed-v2/browser-study.json">Browser study receipt</a>
+              <a href="../digit-envelope-browser-study/framed-v2/media-manifest.json">Media hash manifest</a>
+              <a href="../digit-envelope-browser-study/framed-v2/playback-verification.json">Playback verification</a>
+              <a href="../digit-envelope-browser-study/framed-v2/claw-contact.png">Contact frame</a>
+              <a href="../digit-envelope-browser-study/framed-v2/claw-recovery.png">Recovery frame</a>
+            </div>
+            <span class="hash">MP4 SHA-256: 2282b4d5f72257356c45546c1993f05da4c979f01d6246d78ebe9c22f334b7fb</span>
+            <span class="hash">Study GLB SHA-256: 574d9ca441216e8f481d019f4fda4d7e6dfa2edd7f545aacf3d2abc238d420c4</span>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="references-title">
+        <h2 id="references-title">Scoped visual references</h2>
+        <p class="subtle">Illustrations guide a qualitative direction only. They do not provide exact dimensions, hidden topology, construction validation, or owner acceptance.</p>
+        <div class="reference-grid">
+          <figure class="reference-card">
+            <a href="../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png"><img loading="lazy" src="../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png" alt="Candidate03 full-body MurderBird illustration, scoped to qualitative body and foot silhouette direction"></a>
+            <figcaption><strong>Candidate 03 · full body</strong><div class="reference-caption">Qualitative common-body and foot-direction reference · SHA-256 <code>538c51bcdbf5…</code></div></figcaption>
+          </figure>
+          <figure class="reference-card">
+            <a class="reference-crop" href="../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"><img loading="lazy" src="../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png" alt="July owner-selected MurderBird illustration, cropped to the head; full original opens when selected"></a>
+            <figcaption><strong>July owner-selected image · head only</strong><div class="reference-caption">Does not set body, wing, or foot proportions · SHA-256 <code>47658dba6496…</code></div></figcaption>
+          </figure>
+        </div>
+        <details>
+          <summary>Reference and current V7 assets</summary>
+          <div class="study-links">
+            <a href="../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png">Open full candidate03 image</a>
+            <a href="../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png">Open full July head reference</a>
+            <a href="../../models/uncaged-alignment-v7/murderbird-alignment-v7.blend">Open frozen V7 native</a>
+            <a href="../../models/uncaged-alignment-v7/murderbird-alignment-v7.glb">Open frozen V7 GLB</a>
+            <a href="../../models/uncaged-alignment-v7/README.md">V7 provenance and scope</a>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="limits-title">
+        <h2 id="limits-title">What this page does not establish</h2>
+        <ul class="scope-list">
+          <li>V8 is the current local app model and a combined review candidate; owner artistic acceptance remains open.</li>
+          <li>Owner acceptance, finished-art status, and a finished exterior remain open.</li>
+          <li>Head V2, shoulder attempt 02 and digit attempt 03 are selected V8 inputs, not accepted art. Neck attempt 03 and head V4 remain held.</li>
+          <li>The browser clip is one isolated claw action on an injected study GLB; it does not validate the full envelope or physical performance.</li>
+          <li>Neutral stills do not prove continuous clearance, mechanism performance, browser rendering parity, or deployment.</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      Local audit page · static HTML and existing evidence only · no application source, runtime selector, public asset, model, or remote deployment changed.
+    </footer>
+  </div>
+</body>
+</html>

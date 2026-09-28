@@ -1,0 +1,56 @@
+{
+  "status": "bounded static review-page checks",
+  "url": "http://127.0.0.1:5183/assets/audit/neutral-regional-studies/index.html",
+  "finalHtml": {
+    "path": "assets/audit/neutral-regional-studies/index.html",
+    "sha256": "adecc777628896e6ac91eb6f349e0f4e222139e573577ea2930dc77999dfa202"
+  },
+  "rootBrowser": "Codex in-app browser, Chromium",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 640,
+      "documentScrollWidth": 390
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "documentScrollWidth": 1280
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "assets/audit/neutral-regional-studies/browser-review/narrow-head-cdp-390x640.png",
+      "sha256": "da15d92410df469773e937c0c01f6f80a38af7e28859ed94c4bc4f73987d69a5",
+      "pixels": [
+        390,
+        640
+      ],
+      "note": "Root inspected front and side comparison at390x640: clear labels and images, no horizontal overflow. Captured before final status-copy correction; media/layout unchanged."
+    },
+    {
+      "path": "assets/audit/neutral-regional-studies/browser-review/desktop-head-1280x720.png",
+      "sha256": "bdbc87b879a1754114d3fd3bbddcc079ce5f07bdaf84353530a0586a8724e32d",
+      "pixels": [
+        1280,
+        720
+      ],
+      "note": "Actual captured region is shoulder comparison plus preceding head status. Filename retained;1280x720 desktop after status-copy correction."
+    },
+    {
+      "path": "assets/audit/neutral-regional-studies/browser-review/narrow-head.png",
+      "sha256": "8dee8cb6cc66c86e38ace998828c99aec83908f17b5c6c7c078cda1b80c8fd75",
+      "pixels": [
+        65536,
+        4292542531
+      ],
+      "note": "Ordinary screenshot wrapper scaled the whole tab; excluded from narrow-layout proof."
+    }
+  ],
+  "workerEvidence": "Worker checked54 local references with zero missing, viewed page at896px, and verified matched head camera records. Root independently opened page and inspected desktop/narrow samples.",
+  "limits": [
+    "Static page sampling; not full accessibility or touch-device validation.",
+    "Offscreen lazy images are not treated as failures before scrolling.",
+    "A390x844 capture exceeded the available720px backing surface and repeated content below720; that unsaved capture is excluded. Emulation was reset after review."
+  ]
+}

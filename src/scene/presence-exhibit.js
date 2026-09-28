@@ -7,7 +7,7 @@ import { createEraMechanisms } from './era-mechanisms.js';
 import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-pose.js';
 import { layoutMarkers } from './marker-layout.js';
 
-const modelUrl = new URL('../../assets/models/uncaged-alignment-v7/murderbird-alignment-v7.glb', import.meta.url).href;
+const modelUrl = new URL('../../assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb', import.meta.url).href;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;

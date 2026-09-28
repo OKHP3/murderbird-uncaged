@@ -1,0 +1,177 @@
+{
+  "startedAtUtc": "2026-09-28T11:08:28.243324+00:00",
+  "gitHead": "7a3d90a8f62150150e459e7c59df2d20f1f9c52b",
+  "model": {
+    "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb",
+    "sha256": "c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385",
+    "snapshot": "assets/audit/alignment-v8/affected-checks/frozen-model.glb",
+    "bytes": 4636416
+  },
+  "sourcesFrozenBeforeChecks": {
+    "src/main.js": "2a1205d307a885685741c1df29f42cdb97604632a29f75f87d0523fbdf622671",
+    "src/scene/encounter-state.js": "1817e3b339f4d1dec8974b0fa3be7c1c9aaceac08ccb744ab76eeed4aa097822",
+    "src/scene/era-controller.js": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+    "src/scene/era-mechanisms.js": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+    "src/scene/era-motion.js": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300",
+    "src/scene/exhibit.js": "824a7ec32c90797bc40f2c4810732f7b420ac6ff5bd9caace62c59a5f3c89d5d",
+    "src/scene/fallback.js": "e175d476f2e97b95c59f2f78a787c98db745934d52df3a3de5ab9996fb884eb7",
+    "src/scene/folio-fallback.js": "b85f477e009ce0b2ca6b186f8dc74d205e958f20bada2851afaef78a8a7c371b",
+    "src/scene/inspection-pose.js": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71",
+    "src/scene/marker-layout.js": "2c46368fed37fa22089af493e0509bc7e19243fe5eb8f73ef859cff25e8715f1",
+    "src/scene/presence-exhibit.js": "de4acd29a6f422373a607abd1747bb9fc10d3e51d1aeb7d335a6285666977be1",
+    "src/scene/presence-motion.js": "f900421738c4817883464d2bb1b105d5d4d797751e95e7a4a5a11e0d42408934",
+    "src/scene/presence-state.js": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad",
+    "src/scene/rigid-leg-kinematics.js": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd",
+    "scripts/load-rigid-validation.mjs": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+    "package.json": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc",
+    "package-lock.json": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+    "scripts/verify-era-motion.mjs": "f5e9383b7bd67cddcb7f8688046db41c9afa99b271edb6b6f1aac8d1a34f501f",
+    "scripts/verify-structural-motion.mjs": "20c80b66db65210dfbfaa212c958d354de38d3d8e6918c5a4c73c25924edf889",
+    "scripts/verify-alignment-kinematics.mjs": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32",
+    "scripts/verify-advanced-power-moves.mjs": "196837a397127a50c3296ce87e1d4a3a782eba377ca3732fb3a0f140f340d16a",
+    "scripts/verify-claw-contact-v4.mjs": "105a49685de7e040dc3d732bece106670f719e2b518c84befd9ce00459777c27",
+    "scripts/verify-inspection-pose-v4.mjs": "9210dc3c121b12c640a5e0f4266281b9c029b74cf74211e0278545f64573a28c",
+    "scripts/verify-alignment-limb-clearance.mjs": "30eed3a0b8999192e7ba2546679a7fe420c235f74a56654265d5949b1d65e5fd",
+    "scripts/run-alignment-v7-checks.py": "4293e0d9c936263d1b57a34a88f9b107a37a56d9e6ed417de0e01a4f035f3307"
+  },
+  "runtime": {
+    "node": "v26.10.0",
+    "platform": "Darwin",
+    "architecture": "arm64"
+  },
+  "checks": [
+    {
+      "name": "verify-era-motion",
+      "command": [
+        "node",
+        "scripts/verify-era-motion.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-era-motion.log",
+      "logSha256": "6f2a3ac6992490646a2a467a037f0ec1e0398e00367f7631389a46c94dee436d",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-era-motion/motion-validation.json",
+          "sha256": "965c85435ca20384096e518845569609df373822b8110fdfd4175725fe243714",
+          "bytes": 181543
+        }
+      ]
+    },
+    {
+      "name": "verify-structural-motion",
+      "command": [
+        "node",
+        "scripts/verify-structural-motion.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-structural-motion.log",
+      "logSha256": "c8014b031ddc14de84b4cb682386e8f765d466d722b08cd5f27b7f257b808862",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-structural-motion/structural-motion-validation.json",
+          "sha256": "a015b3a121baa87288713b5eb82347be8b4f945ae81878582ddd79bd83d3841d",
+          "bytes": 4555
+        }
+      ]
+    },
+    {
+      "name": "verify-alignment-kinematics",
+      "command": [
+        "node",
+        "scripts/verify-alignment-kinematics.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-alignment-kinematics.log",
+      "logSha256": "3ae50a7a84f77835fd31aa2f0798214bd8abe1224fc1edfdb893aa2f4e545406",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-alignment-kinematics/kinematic-alignment.json",
+          "sha256": "7481bc5be2d0cf717cef023a94d1cdc2cb4efb00dad2e71e600fdf4fc155bac2",
+          "bytes": 17696
+        }
+      ]
+    },
+    {
+      "name": "verify-advanced-power-moves",
+      "command": [
+        "node",
+        "scripts/verify-advanced-power-moves.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-advanced-power-moves.log",
+      "logSha256": "c8014b031ddc14de84b4cb682386e8f765d466d722b08cd5f27b7f257b808862",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-advanced-power-moves/power-move-validation.json",
+          "sha256": "8a95555ada02ddbd7110d9ccdced11d7ea718faf739c1976c0b4c68ab77d41db",
+          "bytes": 2798
+        }
+      ]
+    },
+    {
+      "name": "verify-claw-contact-v4",
+      "command": [
+        "node",
+        "scripts/verify-claw-contact-v4.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-claw-contact-v4.log",
+      "logSha256": "5af1c5ed2c7e2c072b35d877f3ee83669eb92dbc8b66393baeea1061ee251a3a",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-claw-contact-v4/claw-contact-v4.json",
+          "sha256": "c5aa9704f125dff3640101103d5080b50f5d240cf0f90a2b88a7af4be1e348eb",
+          "bytes": 115429
+        }
+      ]
+    },
+    {
+      "name": "verify-inspection-pose-v4",
+      "command": [
+        "node",
+        "scripts/verify-inspection-pose-v4.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-inspection-pose-v4.log",
+      "logSha256": "59b2a8a76deeba722731d1626098bc6db7539a21a87018b14395de7d22dc0085",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-inspection-pose-v4/inspection-pose-validation.json",
+          "sha256": "5045c18e88480684e0247bab859638c5207feeb333301c4d5d5bd308b0559e30",
+          "bytes": 33362
+        }
+      ]
+    },
+    {
+      "name": "verify-alignment-limb-clearance",
+      "command": [
+        "node",
+        "scripts/verify-alignment-limb-clearance.mjs"
+      ],
+      "exitCode": 0,
+      "log": "assets/audit/alignment-v8/affected-checks/verify-alignment-limb-clearance.log",
+      "logSha256": "812dd294f0a724e49b4f79459a218a0aa5256d744cf328c250b117e7e824f12b",
+      "evidence": [
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-alignment-limb-clearance/limb-guard-clearance-c8c30cc46059.json",
+          "sha256": "c1f5c716d7cf2110e22affc203efef6fe2613d6057776ccb52286ea284ede47d",
+          "bytes": 94135
+        },
+        {
+          "path": "assets/audit/alignment-v8/affected-checks/verify-alignment-limb-clearance/verify-limb-guard-clearance-30eed3a0b899.mjs",
+          "sha256": "30eed3a0b8999192e7ba2546679a7fe420c235f74a56654265d5949b1d65e5fd",
+          "bytes": 20075
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Deterministic kinematic/geometry checks, not physical simulation.",
+    "Limb clearance checks sampled adjacent plate pairs only, excluding frame/bearings.",
+    "No authoring, browser, device, continuous collision or artistic acceptance."
+  ],
+  "sourceHashesUnchangedAfterChecks": true,
+  "modelUnchangedAfterChecks": true,
+  "completedAtUtc": "2026-09-28T11:09:53.207008+00:00",
+  "status": "pass"
+}
