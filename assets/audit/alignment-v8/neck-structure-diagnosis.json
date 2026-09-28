@@ -1,0 +1,45 @@
+{
+  "status": "read-only bounded native geometry diagnosis",
+  "capturedAtUtc": "2026-09-28",
+  "inputs": {
+    "native": {"path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend", "sha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478"},
+    "runtimeGlb": {"path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.glb", "sha256": "c8c30cc46059cdd117baf9dce4ceb6ca47040f402618dda419b21acc9d984385"},
+    "inventory": {"path": "assets/models/uncaged-alignment-v8/alignment-inventory.json", "sha256": "2608a02a5ce97342bb572e47925ea32578c2bb3eee408c767a023e513ba889bf"},
+    "v6NeckRecipe": {"path": "scripts/alignment-v6-neck.py", "sha256": "288d2bd52a317d72af131f936380bf8a8570147a212bd1ee584225aa6e048bf8"},
+    "oldNeckShoulderStudy": {"path": "scripts/study-v7-neck-shoulder-envelope.py", "sha256": "ce601b716e446269c01d2fe84aa222fde0eca4ce9142cd5cbf7c598f9d82746f"},
+    "motion": {"path": "src/scene/era-motion.js", "sha256": "db813fa797d2800f4aa8258e9725ce1fcac9143c449303562ce2f752796c9300"},
+    "regionalContract": {"path": "docs/alignment-regional-transfer.md", "sha256": "333d20bf6acde59f193c469a057f066cedfb29a497a7ddf1cb849113886f713d"},
+    "sideImage": {"path": "assets/audit/alignment-v8/neutral-views/builder-side-left.png", "sha256": "3b94db0c48b1fb59560854888422c43499d44831a934ce9702fd80783c6be9ef"}
+  },
+  "method": {
+    "nativeInspection": "Blender 5.2.1 background read of the pinned V8 .blend; bounds are object matrix_world applied to native mesh vertices, in Blender XYZ metres. No scene save or render.",
+    "visualInspection": "Existing neutral authoring side-left still only; visual attribution is not a pixel-level ownership segmentation.",
+    "runtimeCoordinates": "Native bounds use Blender axes. Exported GLB coordinates are converted by (x,y,z)_glb=(x,z,-y)_Blender."
+  },
+  "objects": [
+    {"name": "Bowed passive cervical fork", "parent": "neck", "type": "MESH", "role": "frame", "vertices": 60, "worldBoundsBlenderXYZ": {"min": [-0.12494,-0.28606,1.26692], "max": [-0.04309,-0.06190,1.66201]}},
+    {"name": "Bowed passive cervical fork.001", "parent": "neck", "type": "MESH", "role": "frame", "vertices": 60, "worldBoundsBlenderXYZ": {"min": [0.04309,-0.28606,1.26692], "max": [0.12494,-0.06190,1.66201]}},
+    {"name": "Cervical articulated inner guards", "parent": "neck", "type": "MESH", "role": "frame", "vertices": 3038, "worldBoundsBlenderXYZ": {"min": [-0.16195,-0.38828,1.25000], "max": [0.16195,-0.20190,1.65000]}},
+    {"name": "Throat formed lamina 1", "parent": "neck", "type": "MESH", "role": "plate", "vertices": 234, "worldBoundsBlenderXYZ": {"min": [-0.05958,-0.36203,1.53671], "max": [0.04985,-0.27200,1.64433]}},
+    {"name": "Throat formed lamina 2", "parent": "neck", "type": "MESH", "role": "plate", "vertices": 234, "worldBoundsBlenderXYZ": {"min": [-0.06656,-0.42211,1.46441], "max": [0.07510,-0.31024,1.57233]}},
+    {"name": "Throat formed lamina 3", "parent": "neck", "type": "MESH", "role": "plate", "vertices": 234, "worldBoundsBlenderXYZ": {"min": [-0.09887,-0.42444,1.38800], "max": [0.08426,-0.34918,1.49833]}},
+    {"name": "Throat formed lamina 4", "parent": "neck", "type": "MESH", "role": "plate", "vertices": 234, "worldBoundsBlenderXYZ": {"min": [-0.10430,-0.41647,1.31200], "max": [0.12276,-0.29594,1.42143]}},
+    {"name": "Throat formed lamina 5", "parent": "neck", "type": "MESH", "role": "plate", "vertices": 234, "worldBoundsBlenderXYZ": {"min": [-0.13211,-0.37444,1.25000], "max": [0.11535,-0.25928,1.34852]}},
+    {"name": "Throat formed lamina 6", "parent": "neck", "type": "MESH", "role": "plate", "vertices": 234, "worldBoundsBlenderXYZ": {"min": [-0.10086,-0.34045,1.23798], "max": [0.11610,-0.27295,1.29446]}}
+  ],
+  "rig": {
+    "neck": {"parent": "body", "localPivotXYZ": [0.0,-0.1,0.44], "worldPivotXYZ": [0.0,-0.1,1.26]},
+    "head": {"parent": "neck", "localPivotXYZ": [0.0,-0.235,0.378], "worldPivotXYZ": [0.0,-0.335,1.638]},
+    "runtimeBehavior": "era-motion.js bends the neck and counter-rotates the skull at fixed length for strike/contact; it does not translate or stretch the neck to reach."
+  },
+  "interpretation": {
+    "visualAttribution": "The dominant tall angular outline is the paired Bowed passive cervical fork meshes; the broad inner frame behind/between them is Cervical articulated inner guards. The six throat laminae form a central anterior cascade but do not close the side opening shown in builder-side-left.png. The inventory has no neck-region bearing-role mesh; the joint controls are the neck/head empties.",
+    "coordinateAudit": "The older six-guard study's neck_surface produces world-space points and explicitly transforms them through neck.matrix_world.inverted() before parenting under neck with identity parent inverse/basis. This correctly cancels the neck pivot's -0.1 m Y offset. The proposed ~100 mm aft-placement error is not supported by that code path. Its section centers match the authored stations in alignment-v6-neck.py; however, its piecewise-smoothstep sampling, narrow side-only angular span, and three separated bands do not create a broad continuous curved outer neck. Its earlier failed clearances therefore do not by themselves prove a pivot change is needed.",
+    "referenceBoundary": "Candidate03 supports a fuller curved neck-to-breast exterior only qualitatively. It gives no measurable dimensions, hidden-side topology, fork/bearing design, or pivot hierarchy. The current six-plate cascade, forks, inner guards, and any suggested additional construction remain authored proposal geometry rather than reference-measured mechanism.",
+    "options": [
+      "First evaluate a broader curved set of rigid, overlapping exterior plates spanning the neck-to-breast silhouette, attached to the existing neck owner so they follow the current fixed-length articulation. This is the smallest structural change and must be checked against head, jaw, breast/fixings and runtime poses.",
+      "If plate coverage cannot remain coherent under the existing neck bend, consider a revised articulated neck/head hierarchy or additional neck sub-pivots. The original geometry contract does not make all 51 pivots sacred, but any hierarchy change affects motion, fixed-length contact, inspection/restoration, export matrices and all pose clearances; no evidence here establishes it is necessary."
+    ],
+    "limits": ["Bounds are exact per native object at rest; no pose-specific clearance was measured in this diagnosis.", "The side image has no ownership colors; attribution is corroborated by the exact native object set and bounds but not pixel-segmented.", "No collision, articulation durability, owner acceptance, or final-art claim."]
+  }
+}

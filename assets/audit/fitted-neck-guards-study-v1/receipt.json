@@ -1,0 +1,176 @@
+{
+  "status": "isolated corrected-placement proposal; visual and motion review pending",
+  "base": {
+    "path": "assets/models/uncaged-alignment-v8/murderbird-alignment-v8.blend",
+    "bytes": 1962303,
+    "sha256": "b12c442e2f517b676cdd1fae1612730cc0ba83251d34f363285b08f2cd482478"
+  },
+  "native": {
+    "path": "assets/models/uncaged-fitted-neck-guards-study-v1/murderbird-fitted-neck-guards-study-v1.blend",
+    "bytes": 1939760,
+    "sha256": "ca757b41f4f0ac70780b68651455a8d68dc337d2c4428d9984244c1ced0c9192"
+  },
+  "recipe": {
+    "path": "scripts/study-v7-neck-shoulder-envelope.py",
+    "bytes": 37572,
+    "sha256": "ce601b716e446269c01d2fe84aa222fde0eca4ce9142cd5cbf7c598f9d82746f"
+  },
+  "generator": {
+    "path": "assets/audit/fitted-neck-guards-study-v1/executed-generator.py",
+    "bytes": 6623,
+    "sha256": "b45a8fb864417c25573c56ab8bf198a735da6486779af70f71fb6d92368d2ff1"
+  },
+  "replace": [],
+  "add": [
+    "Fitted cervical side guard left 1",
+    "Fitted cervical side guard left 2",
+    "Fitted cervical side guard left 3",
+    "Fitted cervical side guard right 1",
+    "Fitted cervical side guard right 2",
+    "Fitted cervical side guard right 3"
+  ],
+  "correction": {
+    "worldYOffsetM": -0.1,
+    "reason": "Prior recipe used authoring envelope centres as world coordinates after the base body was shifted."
+  },
+  "preservation": {
+    "allOriginalMeshesExact": true,
+    "all51PivotsExact": true,
+    "allGuidesExact": true,
+    "allMaterialsExact": true,
+    "saveReloadSnapshotExact": true
+  },
+  "construction": {
+    "owner": "neck",
+    "eraEligibility": "inherited passive guard, all three eras",
+    "surface": "rigid metal; no deformation",
+    "hiddenTopology": "proposed reconstruction"
+  },
+  "limits": [
+    "No physical or continuous clearance claim.",
+    "No runtime export or application selection.",
+    "Existing guides do not author the new mesh guards."
+  ],
+  "views": [
+    {
+      "path": "assets/audit/fitted-neck-guards-study-v1/before-neck-profile.png",
+      "bytes": 1321968,
+      "sha256": "7b7fae81f39edc43d6d5b0e06ca5664c77365ce5026b99c022ad5c02cc9d80e3",
+      "view": "neck-profile",
+      "variant": "before",
+      "camera": {
+        "position": [
+          -6,
+          -0.3,
+          1.48
+        ],
+        "target": [
+          0,
+          -0.3,
+          1.48
+        ],
+        "orthoScale": 0.93
+      }
+    },
+    {
+      "path": "assets/audit/fitted-neck-guards-study-v1/before-neck-three-quarter.png",
+      "bytes": 1343817,
+      "sha256": "76549e4e3c1bbacc9053d3ae45b517390ecdee10ae7f2611dfc20731d2f54bd5",
+      "view": "neck-three-quarter",
+      "variant": "before",
+      "camera": {
+        "position": [
+          -4,
+          -6,
+          2
+        ],
+        "target": [
+          0,
+          -0.23,
+          1.48
+        ],
+        "orthoScale": 1.08
+      }
+    },
+    {
+      "path": "assets/audit/fitted-neck-guards-study-v1/before-whole-three-quarter.png",
+      "bytes": 1202610,
+      "sha256": "5bda21661380b403ee30856fff97558e3e1b1f0b866bfa0ac1d2cf69eca83fd9",
+      "view": "whole-three-quarter",
+      "variant": "before",
+      "camera": {
+        "position": [
+          -4.25,
+          -5.9,
+          3.24
+        ],
+        "target": [
+          0,
+          -0.1,
+          0.99
+        ],
+        "orthoScale": 2.4
+      }
+    },
+    {
+      "path": "assets/audit/fitted-neck-guards-study-v1/after-neck-profile.png",
+      "bytes": 1321035,
+      "sha256": "fbe4acd145771298ae9e36a62f27d9fee88f28f34da7b298e084c1ef975b23e4",
+      "view": "neck-profile",
+      "variant": "after",
+      "camera": {
+        "position": [
+          -6,
+          -0.3,
+          1.48
+        ],
+        "target": [
+          0,
+          -0.3,
+          1.48
+        ],
+        "orthoScale": 0.93
+      }
+    },
+    {
+      "path": "assets/audit/fitted-neck-guards-study-v1/after-neck-three-quarter.png",
+      "bytes": 1352205,
+      "sha256": "4569e8363291fe6bcd0b9aff2c4628fcd2c757784d0d666be1ff97be3c717386",
+      "view": "neck-three-quarter",
+      "variant": "after",
+      "camera": {
+        "position": [
+          -4,
+          -6,
+          2
+        ],
+        "target": [
+          0,
+          -0.23,
+          1.48
+        ],
+        "orthoScale": 1.08
+      }
+    },
+    {
+      "path": "assets/audit/fitted-neck-guards-study-v1/after-whole-three-quarter.png",
+      "bytes": 1203760,
+      "sha256": "bba928e6118ee6b301c5d7198217ddc011653962e449af2b4c8d018874320b0a",
+      "view": "whole-three-quarter",
+      "variant": "after",
+      "camera": {
+        "position": [
+          -4.25,
+          -5.9,
+          3.24
+        ],
+        "target": [
+          0,
+          -0.1,
+          0.99
+        ],
+        "orthoScale": 2.4
+      }
+    }
+  ]
+}

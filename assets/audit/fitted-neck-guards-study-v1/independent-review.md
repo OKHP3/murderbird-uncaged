@@ -1,0 +1,9 @@
+# Independent visual review — fitted neck guards V1
+
+**Study:** `assets/models/uncaged-fitted-neck-guards-study-v1/murderbird-fitted-neck-guards-study-v1.blend` · SHA-256 `ca757b41f4f0ac70780b68651455a8d68dc337d2c4428d9984244c1ced0c9192`. The receipt binds it to V8 `b12c442e…2478` and records six added neck-owned guards with original meshes, pivots, guides and materials preserved.
+
+I inspected the three receipt-matched before/after pairs: neck profile, neck three-quarter, and whole-body three-quarter. I also compared the qualitative candidate03 full-body and Maker-clean references. The receipt’s six rendered image sizes and hashes match the files. Reference images show an integrated, fuller neck-to-breast sweep; they are perspective illustrations, not dimensional targets.
+
+The guards make a real but limited visible improvement: they fill part of the open lateral slot beneath the head and give the neck a more continuous plated side surface. The change is clear in the close profile and three-quarter views but barely changes the whole-body read. The neck remains long, narrow and angular, with the same visible joint breaks and abrupt transition into the breast. Guard tips and adjoining plate edges also create a conspicuously wavy, uneven overlap line at the lower neck; this reads less like the reference’s broad continuous sweep. These stills cannot establish whether the edges intersect or move cleanly.
+
+**Finding:** a useful local fill, but not yet a convincing neck-to-breast likeness correction. Keep it as an isolated visual study. No artistic acceptance or motion/clearance conclusion is assigned. The next useful shape direction is a visibly broader forward flare into the upper breast with cleaner, intentional shingle termination, while preserving the existing pivots and fixed hardware; another uniform scale change would not address the observed mismatch.
