@@ -1,0 +1,173 @@
+{
+  "review": "bounded V7 browser telemetry audit",
+  "reviewDate": "2026-09-28",
+  "scope": "Read-only interpretation of existing browser telemetry, exact-hash run records, event samples, direct same-RAF captures, and media metadata. No recording was rerun. This does not establish continuous collision detection, physical contact, autonomous intelligence, human acceptance, or physical performance.",
+  "candidate": {
+    "path": "assets/models/uncaged-alignment-v7/murderbird-alignment-v7.glb",
+    "bytes": 4426968,
+    "sha256": "1c82874b86af6b493ac380536de6af72a30fafa3a4b0ebb3d8790f56ffc03018",
+    "allThreeTelemetryRecordsAndBrowserReviewBindThisSha": true
+  },
+  "recordings": {
+    "motionEnvelope": {
+      "telemetry": "motion-envelope-normal-speed.json",
+      "video": "motion-envelope-normal-speed.webm",
+      "videoSha256": "7d5f3b48800d263077645a727158d66cc2003ea8d84e4e6e67a8acedc82e4d89",
+      "videoBytes": 11408245,
+      "run": "scripted-motion-envelope",
+      "clock": "Normal browser requestAnimationFrame and performance.now; UI controls with condition waits; no accelerated step.",
+      "startedAtMotionTimeSeconds": 0,
+      "telemetryDurationSeconds": 87.0753,
+      "videoTranscodeDurationSeconds": 86.527,
+      "sampleCount": 868,
+      "firstSampleSeconds": 0.0136,
+      "lastSampleSeconds": 86.7188,
+      "hiddenSamples": 0,
+      "complete": true,
+      "sequenceComplete": true,
+      "durationNote": "The uncut MP4 transcode is 0.5483 s shorter than the telemetry duration; event times are telemetry clock values, not exact MP4 frame times."
+    },
+    "autonomyDefault": {
+      "telemetry": "autonomy-default-927.json",
+      "video": "autonomy-default-927.webm",
+      "webmSha256": "fb6fc48234b3c11667a417bbb9291dd9fd8cff24dcadd7ee38634afd02a31eff",
+      "run": "default-seed-927",
+      "clock": "performance.now real time; no accelerated step or user controls during recording.",
+      "startedAtMotionTimeSeconds": 0.0119,
+      "telemetryDurationSeconds": 120.3054,
+      "mp4DurationSeconds": 120.033333,
+      "mp4Frames": 3600,
+      "sampleCount": 1202,
+      "firstSampleSeconds": 0.0107,
+      "lastSampleSeconds": 120.0185,
+      "hiddenSamples": 0,
+      "complete": true
+    },
+    "autonomySeeded122s": {
+      "telemetry": "autonomy-seed-20260928-122s.json",
+      "video": "autonomy-seed-20260928-122s.webm",
+      "webmBytes": 16338204,
+      "webmSha256": "531295849e79bc9f9fe9447c29f72d8e5649722691dcac5d1a07048d2cc54140",
+      "mp4": "autonomy-seed-20260928-122s.mp4",
+      "mp4Sha256": "bd296a20dda0b2c7aafa85bb6f001b4597e96e60c15d053bfbf9022f57b08a10",
+      "run": "review-seed-20260928-122s",
+      "developmentSeed": "20260928",
+      "clock": "performance.now real time; no accelerated step or user controls during recording.",
+      "startedAtMotionTimeSeconds": 0.1601,
+      "telemetryDurationSeconds": 122.2397,
+      "mp4DurationSeconds": 122.0219,
+      "mp4Frames": 3657,
+      "sampleCount": 1222,
+      "firstSampleSeconds": 0.0071,
+      "lastSampleSeconds": 122.015,
+      "hiddenSamples": 0,
+      "complete": true,
+      "finalFamilyBeatLabelHasCompletionEvent": false,
+      "tailNote": "The rail-press/right-sweep planner label begins at 120.6111 s and remains selected at 122.015 s. The final sample is state=watch and contact=false; no executed or completed action is established in this tail."
+    },
+    "retainedShortPrecursor": {
+      "telemetry": "autonomy-seed-20260928.json",
+      "run": "review-seed-20260928",
+      "startedAtMotionTimeSeconds": 6.7408,
+      "telemetryDurationSeconds": 120.2516,
+      "mp4DurationSeconds": 119.964,
+      "status": "Retained precursor; superseded by the 122 s seeded capture for a complete 120 s video comparison."
+    },
+    "samplingCaveat": "The telemetry samples at roughly 10 samples/s while the autonomy MP4 transcodes are about 30 frames/s. Zero hidden telemetry samples means the recorder did not count hidden samples; it does not mean every video frame has a metrics sample or prove continuous acting between samples."
+  },
+  "autonomousSequences": {
+    "interpretation": "actionFamily and beatId are planner/current-beat labels in telemetry, not proof that an action executed or completed. The counts below are label onsets only. Execution evidence is reported separately as state samples and software contact-flag intervals; no automatic pass for behavioral variety or acting is inferred.",
+    "windowMeaning": "Label windows run from one recorded family/beat label onset to the next, or to the last telemetry sample. They do not describe a continuous executed action duration.",
+    "contactMeaning": "Recorded software contact flag / detector state. Intervals below are consecutive telemetry event samples with contact=true, ending at the first recorded false sample; they do not prove physical contact or continuous collision detection.",
+    "default": {
+      "labelOnsetCounts": {
+        "first120Seconds": {"rail-press":2,"edge-probe":3,"claw-scrape":1,"seam-rattle":1,"total":7},
+        "fullObserved120.0185Seconds": {"rail-press":2,"edge-probe":3,"claw-scrape":1,"seam-rattle":1,"total":7}
+      },
+      "familyBeatLabelWindows": [
+        {"start":0.0107,"end":18.7167,"family":"rail-press","beat":"cross-right-to-center"},
+        {"start":18.7167,"end":32.5153,"family":"claw-scrape","beat":"front-left-floor-scrape"},
+        {"start":32.5153,"end":57.6152,"family":"edge-probe","beat":"back-corner-right"},
+        {"start":57.6152,"end":78.3166,"family":"rail-press","beat":"right-sweep"},
+        {"start":78.3166,"end":97.9153,"family":"edge-probe","beat":"left-sweep"},
+        {"start":97.9153,"end":114.6156,"family":"seam-rattle","beat":"cross-left-to-center"},
+        {"start":114.6156,"end":120.0185,"family":"edge-probe","beat":"back-corner-right","endIsCaptureBoundary":true}
+      ],
+      "repeatedBeatLabel": "edge-probe / back-corner-right is selected twice; the repeated label alone does not establish two completed actions.",
+      "stateCoverage": "Samples include watch, pace, boundary, cage-test, recover, agitated, settle, and claw-scrape states. These sampled controller states are not a behavior-quality or human-acceptance pass.",
+      "contactIntervalsSeconds": [[11.9153,12.8142],[50.6178,51.0145],[71.9208,72.8152],[91.9167,92.3185],[108.9175,109.0155],[109.4153,109.6141]]
+    },
+    "seeded122s": {
+      "labelOnsetCounts": {
+        "first120Seconds": {"rail-press":2,"edge-probe":2,"claw-scrape":1,"seam-rattle":1,"total":6},
+        "fullObserved122.015Seconds": {"rail-press":3,"edge-probe":2,"claw-scrape":1,"seam-rattle":1,"total":7},
+        "onsetsAfterFirst120Seconds": {"rail-press":1,"edge-probe":0,"claw-scrape":0,"seam-rattle":0,"total":1}
+      },
+      "familyBeatLabelWindows": [
+        {"start":0.0071,"end":20.2103,"family":"rail-press","beat":"right-sweep"},
+        {"start":20.2103,"end":43.0142,"family":"edge-probe","beat":"back-corner-right"},
+        {"start":43.0142,"end":56.7129,"family":"claw-scrape","beat":"front-left-floor-scrape"},
+        {"start":56.7129,"end":76.2102,"family":"rail-press","beat":"cross-right-to-center"},
+        {"start":76.2102,"end":98.0134,"family":"edge-probe","beat":"side-step-center"},
+        {"start":98.0134,"end":120.6111,"family":"seam-rattle","beat":"back-corner-left"},
+        {"start":120.6111,"end":122.015,"family":"rail-press","beat":"right-sweep","startAndFinalSampleState":"watch","contactSeen":false,"endIsCaptureBoundary":true,"executionStatus":"planner label remains selected; action execution/completion is not established by this tail"}
+      ],
+      "repeatedBeatLabel": "rail-press / right-sweep is selected twice across the full capture. Only its first onset falls within the comparable first 120 seconds; the second begins at 120.6111 seconds and remains in state watch with contact=false through the last sample, so it is not counted as an executed action.",
+      "stateCoverage": "Samples include watch, pace, boundary, cage-test, recover, agitated, settle, and claw-scrape states. These sampled controller states are not a behavior-quality or human-acceptance pass.",
+      "contactIntervalsSeconds": [[13.016,14.0111],[36.2101,36.6129],[68.8116,69.7101],[91.1133,91.6126],[113.9112,114.0109],[114.5131,114.7105],[115.1105,115.311]]
+    }
+  },
+  "motionEnvelope": {
+    "makerControls": [
+      {"control":"jaw","recordedToggles":[1.9081,4.2099]},
+      {"control":"neck","recordedToggles":[5.512,7.8133]},
+      {"control":"wing","recordedToggles":[9.117,11.4183]},
+      {"control":"leg","recordedToggles":[12.7189,15.0217]},
+      {"control":"tail","recordedToggles":[16.3233,18.6248]},
+      {"control":"jaw and neck follow-up toggles","recordedAt":[19.9292,19.9305],"releaseAllMakerLeversAt":22.4364}
+    ],
+    "mechanicRoutine": {
+      "engageEventSeconds":25.1258,
+      "stopAfterCycleRequestedSeconds":44.1281,
+      "settledSampleSeconds":46.8206,
+      "reportedFootStepCountAtSettled":14,
+      "stateAtSettled":"mechanical-ready",
+      "qualification":"The stop event requests stopping after a cycle; samples continue through release/settle/dwell until the recorded 14-step state is ready."
+    },
+    "advancedActions": [
+      {"action":"power jump","startEventSeconds":49.4411,"nextActionEventSeconds":51.9431},
+      {"action":"shield thrust","startEventSeconds":51.9431,"nextActionEventSeconds":54.1452},
+      {"action":"claw scrape","startEventSeconds":54.1452,"nextActionEventSeconds":56.5541}
+    ],
+    "visitorBillContact": {
+      "reachRequestSeconds":56.5541,
+      "recordedActualBillContactEventSeconds":61.2717,
+      "strikeRecoveryEventSeconds":61.487,
+      "contactTrueSampleWindowSeconds":[61.3183,61.4183],
+      "firstRecordedFalseSampleSeconds":61.5179,
+      "qualification":"A short software bill/rail contact flag was observed in two telemetry samples; this is not evidence of continuous collision checking or physical impact."
+    },
+    "inspectionReassembly": [
+      {"era":"maker","openRequested":65.7743,"openedAndSeparated":68.2721,"reassemblyRequested":70.4663,"reassembled":71.9792},
+      {"era":"mechanic","openRequested":73.1191,"openedAndSeparated":75.6098,"reassemblyRequested":77.8065,"reassembled":79.3229},
+      {"era":"builder","openRequested":80.5035,"openedAndSeparated":82.9898,"reassemblyRequested":85.1884,"reassembled":86.7102}
+    ]
+  },
+  "directActionCaptures": {
+    "path": "direct-action-captures.json",
+    "method": "Rendered canvas and metrics read in the same RAF callback; normal-clock scripted controls.",
+    "captures": [
+      {"label":"jump-airborne","captureSeconds":0.8643,"motionTime":1.0502,"state":"power-jump","powerMove":"jump, airborne, phase 0.3001","contact":false},
+      {"label":"shield-thrust-extended","captureSeconds":2.845,"motionTime":3.0306,"state":"power-thrust","powerMove":"thrust, drive, phase 0.4547","contact":false},
+      {"label":"claw-contact-exact","captureSeconds":4.2461,"motionTime":4.4308,"state":"claw-scrape","clawAction":{"stage":"contact","side":"left","target":"floor-scrape","contact":true,"tipMinY":0.002},"generalBillContactFlag":false},
+      {"label":"bill-contact-exact","captureSeconds":10.5519,"motionTime":10.7319,"state":"contact","generalBillContactFlag":true,"contactPoint":[0,1.2183068,2.0790003]}
+    ],
+    "alignmentLimit": "These capture-time values belong to the scripted direct-action run, not exact frame offsets within any uncut video. Earlier video-seek PNG extractions are approximate; they are not used to infer event timing."
+  },
+  "limits": [
+    "Telemetry and event timestamps describe the exhibit's software state and sampled motion. They do not prove continuous acting or collision between samples.",
+    "Recorded contact flags use the app's geometric detectors and do not establish a physical object, force, impact, or safe operation.",
+    "The capture proves local normal-clock browser execution against the exact GLB hash. It is not a physical-device, constrained-network, deployment, or artistic-acceptance result."
+  ],
+  "result": "Two complete normal-clock no-input autonomy captures cover 120.033 s and 122.022 s of MP4 respectively; the later explicitly seeded capture starts at motionTime 0.1601 s and supplies the full-duration seeded comparison. The shorter 119.964 s predecessor is retained and marked superseded for that comparison. The envelope records the requested era/action/inspection sequence, with video/telemetry duration mismatch and sampled-contact limits stated above."
+}
