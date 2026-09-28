@@ -367,6 +367,24 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     metrics,
     reviewCamera,
     reviewLighting,
+    ...(import.meta.env.DEV ? {
+      // Copy the last rendered transform cache. A QA read must not tick motion,
+      // recalculate the rig, alter the camera, or synthesize a requested pose.
+      poseSnapshot(){
+        const pivotMatrices=[];
+        model.traverse(object=>{
+          if(object.isMesh||!object.name)return;
+          const path=[];
+          for(let node=object;node&&node!==model.parent;node=node.parent)path.unshift(node.name||node.type);
+          pivotMatrices.push({name:object.name,path:path.join('/'),parent:object.parent===model.parent?null:object.parent?.name||null,
+            kind:'transform',localMatrix:object.matrix.toArray(),worldMatrix:object.matrixWorld.toArray(),
+            position:object.position.toArray(),quaternion:object.quaternion.toArray(),scale:object.scale.toArray()});
+        });
+        return {frameCount,modelUrl,era,open,separation,pivotMatrices,
+          coordinateConvention:'Three.js Y-up, forward +Z; column-major matrices copied from the last rendered frame.',
+          scope:'Live browser transform capture only; not a surface-clearance or physical-simulation result.'};
+      },
+    } : {}),
     destroy(){listeners.abort();controls.dispose();environment.dispose();scene.traverse(o=>{o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});renderer.dispose();canvas.remove();},
   };
 }
