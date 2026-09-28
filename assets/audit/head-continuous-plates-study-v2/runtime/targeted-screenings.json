@@ -1,0 +1,76 @@
+{
+  "capturedAtUtc": "2026-09-28T10:49:11.449001+00:00",
+  "status": "targeted Node structural, jaw, kinematic and claw-contact screenings completed; diagnostic derivative only",
+  "model": {
+    "path": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+    "sha256": "2dc74dfc678be2e82bf0a3714d7b8c5b1e4680eb7f36d17869d462c34960e0ea",
+    "bytes": 4459660
+  },
+  "tests": [
+    {
+      "script": "scripts/verify-alignment-kinematics.mjs",
+      "scriptSha256": "a46a644c38de3cde6606b39f90974e9c54a66e1f1242f0a942a02f3318862e32",
+      "report": "assets/audit/head-continuous-plates-study-v2/runtime/tests/kinematics/kinematic-alignment.json",
+      "reportSha256": "69fc7a1fa362bf9f26ba5c9767d7e810dba3239576d5f1c1495e6e2299746027",
+      "reportModelPath": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+      "reportModelSha256": "2dc74dfc678be2e82bf0a3714d7b8c5b1e4680eb7f36d17869d462c34960e0ea",
+      "invokedWithExactModelPathAndRehashedAfterRun": true,
+      "summary": "4/4 deterministic kinematic checks passed"
+    },
+    {
+      "script": "scripts/verify-alignment-v4-jaw-sweep.mjs",
+      "scriptSha256": "6d21ba571244f17d76a7e813ef3503e3788c8f4ef928de39612706c22f28e69e",
+      "report": "assets/audit/head-continuous-plates-study-v2/runtime/tests/jaw-sweep-v4/jaw-sweep.json",
+      "reportSha256": "0c75c9721a378a4f4a09577ae035714f2aacd33e7d42b5e978967693ce02b473",
+      "reportModelPath": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+      "reportModelSha256": "2dc74dfc678be2e82bf0a3714d7b8c5b1e4680eb7f36d17869d462c34960e0ea",
+      "invokedWithExactModelPathAndRehashedAfterRun": true,
+      "summary": "0/33 sampled poses with proper crossing outside journal envelope"
+    },
+    {
+      "script": "scripts/verify-alignment-jaw-neck-matrix.mjs",
+      "scriptSha256": "47d4edc3417082ecea8e95ac7832ea178b23dd3c241d5261c220398e1dbac4d8",
+      "report": "assets/audit/head-continuous-plates-study-v2/runtime/tests/jaw-neck-matrix/jaw-neck-era-matrix.json",
+      "reportSha256": "5fd4de9755afbf69c43160fcfcd30db60bab74d93dba0433d965a68e7db0972e",
+      "reportModelPath": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+      "reportModelSha256": "2dc74dfc678be2e82bf0a3714d7b8c5b1e4680eb7f36d17869d462c34960e0ea",
+      "invokedWithExactModelPathAndRehashedAfterRun": true,
+      "summary": "9 reachable state samples; 0 proper crossings, 0 grazing"
+    },
+    {
+      "script": "scripts/verify-claw-contact-v4.mjs",
+      "scriptSha256": "105a49685de7e040dc3d732bece106670f719e2b518c84befd9ce00459777c27",
+      "report": "assets/audit/head-continuous-plates-study-v2/runtime/tests/claw-contact-v4/claw-contact-v4.json",
+      "reportSha256": "d3d88bebbd1211765d07ff89de6a21afa56b9506cdf74a4017d1ab59b072242c",
+      "reportModelPath": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+      "reportModelSha256": "2dc74dfc678be2e82bf0a3714d7b8c5b1e4680eb7f36d17869d462c34960e0ea",
+      "invokedWithExactModelPathAndRehashedAfterRun": true,
+      "summary": "32/32 bounded contact-cycle checks passed"
+    },
+    {
+      "script": "scripts/verify-structural-motion.mjs",
+      "scriptSha256": "20c80b66db65210dfbfaa212c958d354de38d3d8e6918c5a4c73c25924edf889",
+      "report": "assets/audit/head-continuous-plates-study-v2/runtime/tests/structural-motion/structural-motion-validation.json",
+      "reportSha256": "b79c544a8ace292bfba8793780b0b750bd7f0d6a8b2809d642ed2797a6e6828c",
+      "reportModelPath": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+      "reportModelSha256": null,
+      "invokedWithExactModelPathAndRehashedAfterRun": true,
+      "summary": "4/4 structural motion checks passed"
+    },
+    {
+      "script": "scripts/verify-jaw-sweep.mjs",
+      "scriptSha256": "d39e29f45c351e4bc4d85b39475cff2112eccc719ab3972dffd3e7fe2ffc217e",
+      "report": "assets/audit/head-continuous-plates-study-v2/runtime/tests/jaw-sweep-core/jaw-sweep.json",
+      "reportSha256": "e29fb3b7f7860d4cb3f34d5d5a08453db49e1e52f0a1c54f90e16533920b33e5",
+      "reportModelPath": "assets/models/uncaged-head-continuous-plates-study-v2/runtime/murderbird-head-continuous-plates-study-v2.glb",
+      "reportModelSha256": "2dc74dfc678be2e82bf0a3714d7b8c5b1e4680eb7f36d17869d462c34960e0ea",
+      "invokedWithExactModelPathAndRehashedAfterRun": true,
+      "summary": "0/33 core jaw/head sampled poses with proper crossing outside journal envelope"
+    }
+  ],
+  "limits": [
+    "Sampled structural/kinematic checks only; not exhaustive geometry, continuous collision, force, browser rendering, human review or artistic acceptance.",
+    "One legacy structural-motion receipt records model path but omits a model hash; this runner invoked the exact path and verified the GLB hash remained stable before and after the test set.",
+    "The V2 runtime derivative is not selected in the app; no app/runtime source or URL changed."
+  ]
+}
