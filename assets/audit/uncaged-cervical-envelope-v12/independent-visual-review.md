@@ -1,0 +1,3 @@
+# Independent visual review: V12 attempt 02
+
+Compared the [reference-angle](attempt-02/after-reference-angle.png), [profile](attempt-02/after-profile.png), and [head detail](attempt-02/after-head.png) with V11 attempt 05 and the supplied owner target. The unified cervical envelope is a visible improvement: the throat now curves into the upper chest with fewer abrupt breaks, reducing the separate-tube impression without changing the leg stance or enlarging the skull. The dominant remaining likeness issue is that the head still sits high over a long neck run; the target’s crown, curved nape, and forward breast read as a more compact connected silhouette. This is a still-image comparison only, not an acceptance or motion/clearance result.

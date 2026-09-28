@@ -1,0 +1,1 @@
+Preserved preliminary region-only renders. These omitted the separately tagged optic region; missing lenses here are a rendering-filter omission, not evidence of missing geometry. Final head/neck/breast/optic review with lower common camera target is versioned in ../native-poses-v3/. No model change.

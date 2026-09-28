@@ -10,9 +10,13 @@ import { layoutMarkers } from './marker-layout.js';
 const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
 // Fixed local study route only. Production retains the selected V9 asset.
 const reviewBody = import.meta.env.DEV ? new URLSearchParams(location.search).get('review-body') : null;
-const modelUrl = import.meta.env.DEV && ['v10-01', 'v10-02'].includes(reviewBody)
-  ? new URL(`/assets/models/uncaged-whole-body-v10/attempt-${reviewBody.slice(-2)}/murderbird-whole-body-v10.glb`, location.origin).href
-  : selectedModelUrl;
+const reviewModels = import.meta.env.DEV ? {
+  'v10-01': '/assets/models/uncaged-whole-body-v10/attempt-01/murderbird-whole-body-v10.glb',
+  'v10-02': '/assets/models/uncaged-whole-body-v10/attempt-02/murderbird-whole-body-v10.glb',
+  'v12-02': '/assets/models/uncaged-cervical-envelope-v12/attempt-02/murderbird-cervical-envelope-v12.glb',
+} : {};
+const modelUrl = Object.hasOwn(reviewModels, reviewBody)
+  ? new URL(reviewModels[reviewBody], location.origin).href : selectedModelUrl;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
