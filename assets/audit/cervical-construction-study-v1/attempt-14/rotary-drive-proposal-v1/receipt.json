@@ -1,0 +1,194 @@
+{
+  "schema": "murderbird-cervical-rotary-drive-proposal-receipt/v1",
+  "status": "bounded topology proposal based on sampled mesh envelope; no native geometry, runtime, or era behavior changed",
+  "nativeInputs": {
+    "attempt14": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-14/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "ef9e28ddbce9d62aabc8181a058640ea1e8b7a339b673df37b913d96699f9440",
+      "bytes": 1946382
+    },
+    "attempt07": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98",
+      "pivotNameParentAndLocalWorldMatrixSetsEqual": true
+    },
+    "pivotComparisonMaxMatrixDelta": 0.0,
+    "runtimePosePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "capturedPoses": 21,
+      "extraStandardInspectionEndpoints": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "screen": {
+    "radialStationsM": [
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.08
+    ],
+    "axialStationsM": [
+      -0.02,
+      0,
+      0.02
+    ],
+    "anglesPerAxialStation": 180,
+    "radial30mmMinimumPointSurfaceDistanceM": 0.03590310364961624,
+    "radial30mmLimitingPose": "advanced-recovery-entry",
+    "radial30mmLimitingMesh": "V4 cranial inner shell",
+    "40mmBreastOpeningDistanceM": 0.026999302208423615,
+    "50mmBreastOpeningDistanceM": 0.017362507060170174,
+    "60mmBreastOpeningDistanceM": 0.007725707720965147,
+    "80mmRestBackingDistanceM": 2.7261319701210596e-05,
+    "limitations": [
+      "Ring samples do not model sector teeth, bearing races, plates, cable, motor, drive, fasteners or supports.",
+      "Point-to-surface distance does not detect whether a test point lies inside a closed solid; no solid containment claim.",
+      "21 poses plus two inspection endpoints are discrete; no continuous joint/inspection sweep certification.",
+      "Reference art supports mechanical bird/curved neck but not this joint topology or dimensions."
+    ]
+  },
+  "proposedSupportOwners": {
+    "fixedLowerSupportMeshes": [
+      {
+        "name": "Cervical intermediate clevis -1",
+        "parent": "neck"
+      },
+      {
+        "name": "Cervical intermediate clevis 1",
+        "parent": "neck"
+      }
+    ],
+    "rotatingUpperLoadMeshes": [
+      {
+        "name": "Upper cervical curved load rail -1",
+        "parent": "cervical-upper"
+      },
+      {
+        "name": "Upper cervical curved load rail 1",
+        "parent": "cervical-upper"
+      }
+    ],
+    "proposal": "Support a transverse coaxial shaft in the neck-fixed clevis seats; key the moving shaft/output hub into the cervical-upper rails. Reaction housing attaches to neck-side bridge. Actual bearing surfaces and support fit remain unbuilt."
+  },
+  "eraMatrix": {
+    "shared": [
+      "passive transverse shaft/bearing supports and mechanical stops"
+    ],
+    "maker": [
+      "external cable and small upper-joint sector; existing external neck lever; no onboard motor"
+    ],
+    "mechanic": [
+      "neutral locked upper joint; visible passive stop/brace; no powered or spring/cam driven upper pitch"
+    ],
+    "advanced": [
+      "compact geared rotary unit, stator fixed to neck-side bridge and output keyed to cervical-upper; Advanced-only visibility and existing power/distribution regime"
+    ]
+  },
+  "sources": {
+    "docs/cervical-construction-study-v1.md": {
+      "path": "docs/cervical-construction-study-v1.md",
+      "sha256": "2227ed2c0d5ed8030749d1a8b56b0ba69a13b033c122ad793ff7bfe8e8cf4f62",
+      "bytes": 11687
+    },
+    "docs/structural-construction-contract.md": {
+      "path": "docs/structural-construction-contract.md",
+      "sha256": "b426499727e11197fc9a7bbf494343ea83b593b12f82ff8e1c8c6246c8e70b83",
+      "bytes": 11558
+    },
+    "docs/structural-era-eligibility.md": {
+      "path": "docs/structural-era-eligibility.md",
+      "sha256": "354e2fc3b7890c87999ca3b701edfda2031ecf96f814194ce5b791a95947366d",
+      "bytes": 7966
+    },
+    "src/scene/cervical-articulation.js": {
+      "path": "src/scene/cervical-articulation.js",
+      "sha256": "ce44ac4c0c57a2152fccef739b2abfd59bc7742799f63897603eb0fae7b25304",
+      "bytes": 1459
+    },
+    "src/scene/era-motion.js": {
+      "path": "src/scene/era-motion.js",
+      "sha256": "23c4f97c5d334daaeb912ec8a58cf1b510db78d2aa8f0658d8f6864460c610f4",
+      "bytes": 34741
+    },
+    "src/scene/era-mechanisms.js": {
+      "path": "src/scene/era-mechanisms.js",
+      "sha256": "30a25493b0be404b9ed676ba65c46d36a6308a8bc28fd2eda32d34636f6f8f44",
+      "bytes": 25850
+    }
+  },
+  "outputs": {
+    "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/measure-rotary-joint-envelope.py": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/measure-rotary-joint-envelope.py",
+      "sha256": "ca84f83ff7db3489b278fe08db4740ffcab83b61c0d053ee3caba48ef22f4b3b",
+      "bytes": 12842
+    },
+    "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/joint-envelope-measurements.json": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/joint-envelope-measurements.json",
+      "sha256": "0ff62a25d08925af0f4bbe8c7a394e9b6ae0582a3ce72f69504b1cfdde8f5c24",
+      "bytes": 68495
+    },
+    "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/joint-envelope-cross-section.svg": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/joint-envelope-cross-section.svg",
+      "sha256": "839658805a1d209040658a464a07a53815cd6a341f5f8dc48b726da64b2e2e3e",
+      "bytes": 97710
+    },
+    "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/report.md": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/report.md",
+      "sha256": "c0d8492d2551ab4c91d79ea2355a8f8eaa0ad1df08e908132b3274a5f8f5dff6",
+      "bytes": 4045
+    }
+  },
+  "preservedPriorTrials": [
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/first-pass/joint-envelope-cross-section.svg",
+      "sha256": "2d542af36366bcdc4baaf4206e9ecec12d25548fcad77df2e8222fa29be0ba13",
+      "bytes": 97276
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/first-pass/joint-envelope-measurements.json",
+      "sha256": "5bec17663f0c3b90dc287b1bb4561fb1e1f454473cac6c15d3542862ba81a307",
+      "bytes": 68476
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/first-pass/measure-rotary-joint-envelope.py",
+      "sha256": "6753692ab31b4327d71863572a390c374ce96d15cf89bc85492b49ea6779c6b0",
+      "bytes": 12685
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/misrouted-initial-run/joint-envelope-cross-section.svg",
+      "sha256": "ce32e89f29af8a24978e25a560409a3730612af7e3e1ac54f7a81a2bfc354bfa",
+      "bytes": 96201
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/misrouted-initial-run/joint-envelope-measurements.json",
+      "sha256": "a8cb12f7fbde73ec0c70c7879d7a9abbcc20e16a67ce69e115a14aaa084e3f66",
+      "bytes": 68473
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/uncorrected-caption/joint-envelope-cross-section.svg",
+      "sha256": "123a0818a1d2deb711a0e30f6b0703f9cd58b526ebbfef4f128684ef5cb18169",
+      "bytes": 97453
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/uncorrected-caption/joint-envelope-measurements.json",
+      "sha256": "5b4d38f55d6310acba41d20270abcc9a5f090008a76eb9bb8189853a7628cd8b",
+      "bytes": 68515
+    },
+    {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/rotary-drive-proposal-v1/iterations/uncorrected-caption/measure-rotary-joint-envelope.py",
+      "sha256": "44a6494a19b98086846b98071d4c7a13c129e4c58b3eab4f580e9389a0bbd093",
+      "bytes": 12684
+    }
+  ],
+  "validation": {
+    "blender": "Blender 5.2.1 background read-only run completed after exact attempt-07/14 pivot name, parent, local and world matrix comparison; max delta 0.",
+    "json": "joint-envelope-measurements.json parsed successfully with python json.tool.",
+    "svg": "Converted locally to PNG for visual inspection; axis, crop and ring labels reviewed."
+  }
+}

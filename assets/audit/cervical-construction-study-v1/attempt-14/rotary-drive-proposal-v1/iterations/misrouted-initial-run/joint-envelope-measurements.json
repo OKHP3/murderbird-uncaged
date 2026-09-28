@@ -1,0 +1,2188 @@
+{
+  "schema": "murderbird-cervical-joint-envelope-measurements/v1",
+  "status": "read-only sampled envelope measurement; rotary topology remains a reconstruction proposal",
+  "inputs": {
+    "native14": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-14/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "ef9e28ddbce9d62aabc8181a058640ea1e8b7a339b673df37b913d96699f9440",
+      "bytes": 1946382
+    },
+    "native07": {
+      "path": "assets/models/uncaged-cervical-construction-study-v1/attempt-07/murderbird-cervical-construction-study-v1.blend",
+      "sha256": "751d8149032941774c6ba31824c76f6fa840bb0d767e433bae8000535f3a2b98"
+    },
+    "runtimePosePacket": {
+      "path": "assets/audit/cervical-runtime-study-v1/expanded-runtime-poses/pose-snapshot.json",
+      "sha256": "1cb4a2f75ecae625a44c768ba543e9b99e1caa9791a3056e20f5d88bd73d2f26",
+      "modelSha256": "5736ca592c5ebfa7da78315b136b53ad6a48050ede66f6d60b9ccf860afa8ecf",
+      "poseCount": 21
+    },
+    "attempt14PivotNamesParentsAndLocalWorldMatricesEqual07": true,
+    "maxPivotMatrixDifference": 0.0,
+    "analyzer": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/posterior-drive-proposal-v1/measure-rotary-joint-envelope.py",
+      "sha256": "256a8186e6dcd56d0d61570d70773296eef236836644147874162544efb233e7"
+    }
+  },
+  "frame": {
+    "origin": "cervical-upper pivot origin",
+    "axis": "local +X; pivot coordinates are native X/Y/Z, section plane X=0 uses Y/Z",
+    "coordinates": "native X anatomical left, +Y rear, Z up; -Y forward",
+    "restWorldOriginNativeXYZ": [
+      -0.0019033339340239763,
+      0.015013426542282104,
+      1.3869999647140503
+    ],
+    "meaning": "sample points lie on proposed annular centerline radii; distance is nearest evaluated mesh surface, not a full candidate solid clearance"
+  },
+  "measurement": {
+    "sampledPoseCount": 23,
+    "capturedRuntimePoses": 21,
+    "extraInspectionEndpoints": [
+      "inspection-open-0-standard",
+      "inspection-open-1-standard"
+    ],
+    "radialStationsM": [
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.08
+    ],
+    "axialStationsM": [
+      -0.02,
+      0.0,
+      0.02
+    ],
+    "angularSamplesPerStation": 180,
+    "minimumSurfaceDistanceByRadiusAcrossAllSamples": {
+      "0.020": {
+        "minimumSampledPointToSurfaceDistanceM": 0.03940681740641594,
+        "poseId": "advanced-recovery-entry",
+        "nearestOwner": "head",
+        "nearestMesh": "V4 cranial inner shell",
+        "atAxialOffsetM": -0.02
+      },
+      "0.030": {
+        "minimumSampledPointToSurfaceDistanceM": 0.03590310364961624,
+        "poseId": "advanced-recovery-entry",
+        "nearestOwner": "head",
+        "nearestMesh": "V4 cranial inner shell",
+        "atAxialOffsetM": -0.02
+      },
+      "0.040": {
+        "minimumSampledPointToSurfaceDistanceM": 0.026999302208423615,
+        "poseId": "inspection-open-1-standard",
+        "nearestOwner": "breastplate",
+        "nearestMesh": "Breast inner access shell",
+        "atAxialOffsetM": 0.02
+      },
+      "0.050": {
+        "minimumSampledPointToSurfaceDistanceM": 0.017362507060170174,
+        "poseId": "inspection-open-1-standard",
+        "nearestOwner": "breastplate",
+        "nearestMesh": "Breast inner access shell",
+        "atAxialOffsetM": 0.02
+      },
+      "0.060": {
+        "minimumSampledPointToSurfaceDistanceM": 0.007725707720965147,
+        "poseId": "inspection-open-1-standard",
+        "nearestOwner": "breastplate",
+        "nearestMesh": "Breast inner access shell",
+        "atAxialOffsetM": 0.02
+      },
+      "0.080": {
+        "minimumSampledPointToSurfaceDistanceM": 2.7261319701210596e-05,
+        "poseId": "runtime-rest",
+        "nearestOwner": "neck",
+        "nearestMesh": "Lower cervical open backing",
+        "atAxialOffsetM": 0.02
+      }
+    },
+    "results": [
+      {
+        "poseId": "runtime-rest",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.049454499036073685,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039465997368097305,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02947540394961834,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481658935546875,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487899951636791,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.7261319701210596e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "maker-leg-control",
+        "poseApplicationMaxError": 1.4901161193847656e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456236600876,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466049522161484,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "maker-tail-control",
+        "poseApplicationMaxError": 5.960464477539063e-08,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456236600876,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466049522161484,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "maker-neck-control",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945708438754082,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 83,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946983069181442,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 83,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02948048524558544,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 83,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019487204030156136,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 92,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009493736550211906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 92,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 0.000684068538248539,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": -0.02,
+            "angleIndex": 113,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "maker-jaw-control",
+        "poseApplicationMaxError": 5.960464477539063e-08,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456236600876,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466049522161484,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "maker-wing-control-right-mantle",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456236600876,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466049522161484,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "maker-neck-and-jaw-combined",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945708438754082,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 83,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946983069181442,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 83,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02948048524558544,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 83,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019487204030156136,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 92,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009493736550211906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 92,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 0.000684068538248539,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": -0.02,
+            "angleIndex": 113,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "advanced-attention",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.049454547464847565,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946603834629059,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02947544865310192,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481699913740158,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487951174378395,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.7299282010062598e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "advanced-recovery-entry",
+        "poseApplicationMaxError": 2.384185791015625e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.03940681740641594,
+            "nearestOwner": "head",
+            "nearestMesh": "V4 cranial inner shell",
+            "atAxialOffsetM": -0.02,
+            "angleIndex": 7,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03590310364961624,
+            "nearestOwner": "head",
+            "nearestMesh": "V4 cranial inner shell",
+            "atAxialOffsetM": -0.02,
+            "angleIndex": 179,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02947596088051796,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 69,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019482338801026344,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 69,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009488713927567005,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 69,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 5.783324741059914e-05,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.0,
+            "angleIndex": 97,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "advanced-strike-peak",
+        "poseApplicationMaxError": 2.384185791015625e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04150927811861038,
+            "nearestOwner": "head",
+            "nearestMesh": "V4 cranial inner shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 17,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.038105808198451996,
+            "nearestOwner": "head",
+            "nearestMesh": "V4 cranial inner shell",
+            "atAxialOffsetM": -0.02,
+            "angleIndex": 6,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029479527845978737,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 70,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.01948671229183674,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 79,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009493228048086166,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 79,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 8.939795952755958e-05,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 95,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "advanced-contact",
+        "poseApplicationMaxError": 2.384185791015625e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.03942059352993965,
+            "nearestOwner": "head",
+            "nearestMesh": "V4 cranial inner shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 7,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03591771796345711,
+            "nearestOwner": "head",
+            "nearestMesh": "V4 cranial inner shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 179,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029476245865225792,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 69,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019482655450701714,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 69,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009489065036177635,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 69,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 6.29024434601888e-05,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.0,
+            "angleIndex": 97,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "advanced-jump-airborne",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456236600876,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466049522161484,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "advanced-thrust-brace",
+        "poseApplicationMaxError": 1.7881393432617188e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945512115955353,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 81,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466917514801025,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 81,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029476646333932877,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 81,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019483216106891632,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 81,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009489782154560089,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 81,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 0.00043292902410030365,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.0,
+            "angleIndex": 114,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "mechanic-segment-turn-release",
+        "poseApplicationMaxError": 1.7881393432617188e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945458471775055,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039466068148612976,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02947547659277916,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481727853417397,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487983770668507,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.730375672399532e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-0-separation-0",
+        "poseApplicationMaxError": 1.4901161193847656e-08,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-0.25-separation-0",
+        "poseApplicationMaxError": 5.960464477539063e-08,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-0.5-separation-0",
+        "poseApplicationMaxError": 2.9802322387695312e-08,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-0.75-separation-0",
+        "poseApplicationMaxError": 5.960464477539063e-08,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-1-separation-0",
+        "poseApplicationMaxError": 1.341104507446289e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-1-separation-0.5",
+        "poseApplicationMaxError": 1.341104507446289e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-1-separation-1",
+        "poseApplicationMaxError": 1.341104507446289e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04945456609129906,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.03946605697274208,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.029475461691617966,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481709226965904,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487963281571865,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.731101085373666e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-0-standard",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.049454499036073685,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.039465997368097305,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.02947540394961834,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.019481658935546875,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.009487899951636791,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 80,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.7261319701210596e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      },
+      {
+        "poseId": "inspection-open-1-standard",
+        "poseApplicationMaxError": 1.1920928955078125e-07,
+        "annularPointSamples": [
+          {
+            "candidateRadiusM": 0.02,
+            "minimumSampledPointToSurfaceDistanceM": 0.04627289995551109,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 98,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.03,
+            "minimumSampledPointToSurfaceDistanceM": 0.0366361029446125,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 98,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.04,
+            "minimumSampledPointToSurfaceDistanceM": 0.026999302208423615,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 98,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.05,
+            "minimumSampledPointToSurfaceDistanceM": 0.017362507060170174,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 98,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.06,
+            "minimumSampledPointToSurfaceDistanceM": 0.007725707720965147,
+            "nearestOwner": "breastplate",
+            "nearestMesh": "Breast inner access shell",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 98,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          },
+          {
+            "candidateRadiusM": 0.08,
+            "minimumSampledPointToSurfaceDistanceM": 2.7261319701210596e-05,
+            "nearestOwner": "neck",
+            "nearestMesh": "Lower cervical open backing",
+            "atAxialOffsetM": 0.02,
+            "angleIndex": 110,
+            "angleCount": 180,
+            "axialStationsM": [
+              -0.02,
+              0.0,
+              0.02
+            ]
+          }
+        ]
+      }
+    ],
+    "sectionSvg": {
+      "path": "assets/audit/cervical-construction-study-v1/attempt-14/posterior-drive-proposal-v1/joint-envelope-cross-section.svg",
+      "sha256": "ce32e89f29af8a24978e25a560409a3730612af7e3e1ac54f7a81a2bfc354bfa",
+      "bytes": 96201,
+      "description": "exact neutral evaluated-triangle intersections at upper-joint-local X=0; radial circles are exploratory sample stations only"
+    }
+  },
+  "limits": [
+    "Ring samples do not model sector teeth, bearing races, plates, cable, motor, drive, fasteners or supports.",
+    "Point-to-surface distance does not detect whether a test point lies inside a closed solid; no solid containment claim.",
+    "21 poses plus two inspection endpoints are discrete; no continuous joint/inspection sweep certification.",
+    "Reference art supports mechanical bird/curved neck but not this joint topology or dimensions."
+  ]
+}
