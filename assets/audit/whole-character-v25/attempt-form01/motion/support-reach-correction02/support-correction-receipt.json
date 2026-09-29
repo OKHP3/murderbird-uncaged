@@ -1,0 +1,68 @@
+{
+  "status": "PASS bounded sampled support correction; physical tail remains not tested",
+  "cause": "Root advance outran finite transverse leg reach. Fixed target was preserved, but its actual ankle clamped after 120mm pelvic yield was exhausted. Braking also removes speed-dependent body crouch, so that known height must be reserved in the next step corridor.",
+  "fix": "Measure actual exported hinge maximum reach. Bound each proposed root translation/turn increment to both fixed supports plus existing 120mm yield, reserving unloaded gait height. Existing foot targets and swing paths are retained; no support-error threshold relaxed.",
+  "originalSource": {
+    "path": "assets/audit/whole-character-v25/attempt-form01/motion/executed-era-motion.js",
+    "sha256": "b8c617efc8bca34f537568611a113f1cd77b8abb1176579cd87f2327e33d9f4a",
+    "matchesPreChangeGitHead": true
+  },
+  "sources": [
+    {
+      "path": "src/scene/era-motion.js",
+      "sha256": "93ec9e27504aa9195568531de1e51e8c25279bf04406688908f92adb0ebdb192"
+    },
+    {
+      "path": "scripts/validate-whole-character-v25-motion.mjs",
+      "sha256": "16318ab50199013fd41804d9006a18a2ac13515452cdb3134ce32a9a4f37971c"
+    },
+    {
+      "path": "tests/whole-character-v25-support.test.mjs",
+      "sha256": "685f9159cab366d9a905e695844a1ee51b6b2083723e24e93fcb6e9aad9b8e36"
+    }
+  ],
+  "originalFailureReport": {
+    "path": "assets/audit/whole-character-v25/attempt-form01/motion/motion-validation.json",
+    "sha256": "abd279d24ee5c8f4f3df40cf163c6f56662922a0c9c13491619a98a9104c07e2"
+  },
+  "newMotionReport": {
+    "path": "assets/audit/whole-character-v25/attempt-form01/motion/support-reach-correction02/motion-validation.json",
+    "sha256": "48e4931a1a078b28d7962b1b6da6b14a1145f69e985630b940a3309c2aaaeba2"
+  },
+  "tests": [
+    {
+      "command": "node --test tests/whole-character-v25-support.test.mjs",
+      "model": "V25 Form01",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb node --test tests/whole-character-v25-support.test.mjs",
+      "model": "V9 actual GLB",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "command": "UNCAGED_MODEL=assets/models/whole-character-v21/attempt-construction06/murderbird-whole-character-v21.glb node --test tests/whole-character-v25-support.test.mjs",
+      "model": "V21 Construction06 actual GLB",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "command": "node --test tests/rigid-leg-kinematics.test.mjs tests/contact-approach.test.mjs tests/cervical-chain.test.mjs tests/cervical-receivers.test.mjs tests/claw-action.test.mjs tests/cage-families.test.mjs tests/era-controller.test.mjs tests/recovery-lifecycle.test.mjs",
+      "passed": 36,
+      "failed": 0
+    }
+  ],
+  "diagnostic": {
+    "passed": 9,
+    "failed": 0,
+    "partial": 1,
+    "physicalTail": "NOT TESTED"
+  },
+  "limits": [
+    "No continuous collision, engineering, force or artistic acceptance.",
+    "Root owns final build, browser rerun, viewer and documentation.",
+    "No GLB bytes or geometry changed."
+  ]
+}

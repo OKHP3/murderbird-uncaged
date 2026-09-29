@@ -56,9 +56,7 @@ export function createEraMotion(model, nodes, rest) {
       const node = model.getObjectByName(`${label}-digit-${digit}-${segment}`);
       return node ? { node, rest: node.rotation.clone(), segment, weight: [.82, 1, .88][digit - 1] } : null;
     })).filter(Boolean);
-    const upper=shin.position.clone(),lower=foot.position.clone();
-    const maximumReach=solveTransverseLeg(upper,lower,upper.clone().add(lower)).maximumReach;
-    return { label, thigh, shin, foot, toes, digits, manualLift: 0, hipRest: thigh.position.clone(), upper, lower, maximumReach, toeRest: toes.rotation.clone(), ideal, position: ideal.clone(), from: ideal.clone(), to: ideal.clone(), yaw: 0, fromYaw: 0, toYaw: 0, phase: 1, swinging: false, plantedFrames: 0, steps: 0, solveError: 0, groundY: floorHeight };
+    return { label, thigh, shin, foot, toes, digits, manualLift: 0, hipRest: thigh.position.clone(), upper: shin.position.clone(), lower: foot.position.clone(), toeRest: toes.rotation.clone(), ideal, position: ideal.clone(), from: ideal.clone(), to: ideal.clone(), yaw: 0, fromYaw: 0, toYaw: 0, phase: 1, swinging: false, plantedFrames: 0, steps: 0, solveError: 0, groundY: floorHeight };
   });
   let x = 0, z = -.25, yaw = 0, speed = 0, velocityX = 0, velocityZ = 0, yawVelocity = 0, time = 0, stride = 0;
   let nextFoot = 0, motionFrame = 0, distance = 0, settled = true, arrived = false, aligned = true;
@@ -393,7 +391,6 @@ export function createEraMotion(model, nodes, rest) {
     const calm = s.reducedMotion;
     const stop = calm || s.inspectionRequested || s.inspection;
     const goal = s.goal || { x:x+Math.sin(yaw), z:z+Math.cos(yaw) };
-    const previousRoot={x,z,yaw};
     const dx = goal.x - x, dz = goal.z - z, remaining = Math.hypot(dx, dz);
     let desiredHeading = stop ? yaw : (remaining > .045 && s.speed > 0 ? Math.atan2(dx, dz) : (s.heading ?? yaw));
     const headingError = angleDelta(yaw, desiredHeading);
@@ -475,50 +472,14 @@ export function createEraMotion(model, nodes, rest) {
     nodes['left-mantle'].rotation.x = pose.guard * .065 - pose.counter * .35;
     nodes['left-wing-shield'].rotation.x = pose.guard * .18;
     model.updateMatrixWorld(true);
-    function requiredSupportDrop(reserveUnloadedStance=false){
-      let drop=0;
-      for(const f of feet){
-        const hip=f.hipRest.clone().sub(rest.body.position).applyEuler(nodes.body.rotation).add(nodes.body.position);
-        const target=model.worldToLocal(f.position.clone());
-        const horizontal=(hip.x-target.x)**2+(hip.z-target.z)**2;
-        // Respect the exported transverse hinge's real reach, including its
-        // lateral offsets. A horizontal overreach cannot be cured by yield.
-        const reach=f.maximumReach-.012;
-        if(horizontal>=reach*reach)return Infinity;
-        // Root throttling reduces the speed-dependent gait crouch on the next
-        // frame. Reserve that known height now, so braking cannot strand a
-        // support at the edge of the reachable envelope as the body rises.
-        const unloadedHeight=reserveUnloadedStance?Math.min(speed,.72)*.065:0;
-        drop=Math.max(drop,hip.y+unloadedHeight-target.y-Math.sqrt(reach*reach-horizontal));
-      }
-      return Math.max(0,drop);
+    let neededDrop=0;
+    for(const f of feet){
+      const hip=f.hipRest.clone().sub(rest.body.position).applyEuler(nodes.body.rotation).add(nodes.body.position);
+      const target=model.worldToLocal(f.position.clone());
+      const horizontal=(hip.x-target.x)**2+(hip.z-target.z)**2;
+      const reach=f.upper.length()+f.lower.length()-.012;
+      neededDrop=Math.max(neededDrop,hip.y-target.y-Math.sqrt(Math.max(.01,reach*reach-horizontal)));
     }
-    let neededDrop=requiredSupportDrop();
-    if(requiredSupportDrop(true)>.12){
-      const proposed={x,z,yaw},travel=Math.hypot(x-previousRoot.x,z-previousRoot.z),turn=angleDelta(previousRoot.yaw,yaw);
-      const place=fraction=>{
-        x=THREE.MathUtils.lerp(previousRoot.x,proposed.x,fraction);
-        z=THREE.MathUtils.lerp(previousRoot.z,proposed.z,fraction);
-        yaw=previousRoot.yaw+turn*fraction;
-        model.position.set(x,0,z);model.rotation.y=yaw;model.updateMatrixWorld(true);
-        return requiredSupportDrop(true);
-      };
-      // Root travel waits for the existing alternating step when either fixed
-      // support exceeds the finite linkage plus the permitted pelvic yield.
-      // Foot targets and swing trajectories remain unchanged by this bound.
-      let low=0,high=1;
-      if(place(0)<=.12){
-        for(let i=0;i<16;i++){const mid=(low+high)*.5;if(place(mid)<=.12)low=mid;else high=mid;}
-        place(low);neededDrop=requiredSupportDrop();distance-=travel*(1-low);
-        velocityX*=low;velocityZ*=low;speed*=low;yawVelocity*=low;
-        arrived=false;settled=false;
-      }else{
-        // A pose/load change may require more than root rollback; retain the
-        // requested pose for diagnosis rather than silently moving a support.
-        place(1);neededDrop=requiredSupportDrop();
-      }
-    }
-    aligned=s.heading==null||Math.abs(angleDelta(yaw,s.heading))<.045;
     // A loaded pelvic saddle yields vertically before a support foot can slide.
     reachDrop=Math.max(Math.min(.12,neededDrop),reachDrop-dt*.10,0);maxReachDrop=Math.max(maxReachDrop,reachDrop);
     nodes.body.position.y-=reachDrop;

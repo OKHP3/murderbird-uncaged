@@ -1,0 +1,1052 @@
+{
+  "generatedAt": "2026-09-29T06:50:58.921Z",
+  "model": {
+    "path": "assets/models/whole-character-v25/attempt-form01/murderbird-whole-character-v25.glb",
+    "sha256": "45067ebb5291d8be3cb5889dfc7de7a83d303294ba8e53b863038740310cf78a",
+    "bytes": 11251684
+  },
+  "method": {
+    "loader": "Actual Three GLTFLoader through loadRigidValidation; in-memory texture bindings removed only",
+    "controllerStepSeconds": 0.016666666666666666,
+    "geometryMetricSampleIntervalSeconds": 0.1,
+    "additionalSamples": "State changes, action completion and every jump flight frame",
+    "visibility": "Same exterior era eligibility and authored group gating as presence-exhibit.js; no procedural mechanisms created"
+  },
+  "checks": [
+    {
+      "name": "maker-leg",
+      "era": "maker",
+      "status": "FAIL",
+      "metrics": {
+        "frames": 218,
+        "samples": 42,
+        "stateFrames": {
+          "puppet-rest": 110,
+          "puppet-articulation": 108
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "puppet-rest"
+          },
+          {
+            "frame": 2,
+            "state": "puppet-articulation"
+          },
+          {
+            "frame": 110,
+            "state": "puppet-rest"
+          }
+        ],
+        "maxFootSolveErrorM": 1.8619006149354548e-16,
+        "maxSupportTargetDriftM": 0.04263563601511145,
+        "maxSupportActualDriftM": 0.04263563601511141,
+        "minGroundY": 0.0020000000000000573,
+        "maxPlantedFloorOffsetM": 0.12113293009779788,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856323,
+            0.0020000000000000573,
+            -0.6593665173277259
+          ],
+          "max": [
+            0.5140143632888794,
+            1.9154307222366334,
+            0.5058508524671197
+          ]
+        },
+        "contacts": [],
+        "violations": {
+          "planted-foot-floor-offset": {
+            "value": 0.12113293009779788,
+            "limit": 0.0015,
+            "firstFrame": 109,
+            "state": "puppet-articulation"
+          },
+          "planted-support-target-drift": {
+            "value": 0.04263563601511145,
+            "limit": 1e-7,
+            "firstFrame": 6,
+            "state": "puppet-articulation"
+          },
+          "planted-support-geometry-drift": {
+            "value": 0.04263563601511141,
+            "limit": 0.002,
+            "firstFrame": 6,
+            "state": "puppet-articulation"
+          }
+        },
+        "maxRootYaw": 0,
+        "maxDistance": 0,
+        "maxSteps": 0,
+        "visibleMeshCounts": [
+          653
+        ]
+      },
+      "result": {
+        "commandMetric": 0.9998765901959132,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "footHeights": [
+          0.12313293009779788,
+          0.0020000000000000573
+        ],
+        "jawAngle": 0,
+        "wingAngle": 0,
+        "neckYaw": 0
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0,
+        "exactWithin1e8": true
+      }
+    },
+    {
+      "name": "maker-wing",
+      "era": "maker",
+      "status": "PASS",
+      "metrics": {
+        "frames": 218,
+        "samples": 42,
+        "stateFrames": {
+          "puppet-rest": 110,
+          "puppet-articulation": 108
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "puppet-rest"
+          },
+          {
+            "frame": 2,
+            "state": "puppet-articulation"
+          },
+          {
+            "frame": 110,
+            "state": "puppet-rest"
+          }
+        ],
+        "maxFootSolveErrorM": 5.551115123125783e-17,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 0,
+        "minGroundY": 0.0020000000000000573,
+        "maxPlantedFloorOffsetM": 5.724587470723463e-17,
+        "maxRigidBasisError": 2.220446049250313e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856323,
+            0.0020000000000000573,
+            -0.6593665173277259
+          ],
+          "max": [
+            0.5140143632888794,
+            1.9154307222366334,
+            0.5058508524671197
+          ]
+        },
+        "contacts": [],
+        "violations": {},
+        "maxRootYaw": 0,
+        "maxDistance": 0,
+        "maxSteps": 0,
+        "visibleMeshCounts": [
+          653
+        ]
+      },
+      "result": {
+        "commandMetric": 0.9998765901959132,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "footHeights": [
+          0.0020000000000000573,
+          0.0020000000000000573
+        ],
+        "jawAngle": 0,
+        "wingAngle": -0.37995310427444706,
+        "neckYaw": 0
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0,
+        "exactWithin1e8": true
+      }
+    },
+    {
+      "name": "maker-tail",
+      "era": "maker",
+      "status": "PASS",
+      "metrics": {
+        "frames": 218,
+        "samples": 42,
+        "stateFrames": {
+          "puppet-rest": 110,
+          "puppet-articulation": 108
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "puppet-rest"
+          },
+          {
+            "frame": 2,
+            "state": "puppet-articulation"
+          },
+          {
+            "frame": 110,
+            "state": "puppet-rest"
+          }
+        ],
+        "maxFootSolveErrorM": 5.551115123125783e-17,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 0,
+        "minGroundY": 0.0020000000000000573,
+        "maxPlantedFloorOffsetM": 5.724587470723463e-17,
+        "maxRigidBasisError": 1.6653345369377348e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856323,
+            0.0020000000000000573,
+            -0.6593665173277259
+          ],
+          "max": [
+            0.5140143632888794,
+            1.9154307222366334,
+            0.5058508524671197
+          ]
+        },
+        "contacts": [],
+        "violations": {},
+        "maxRootYaw": 0,
+        "maxDistance": 0,
+        "maxSteps": 0,
+        "visibleMeshCounts": [
+          653
+        ]
+      },
+      "result": {
+        "commandMetric": 0.9998765901959132,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "footHeights": [
+          0.0020000000000000573,
+          0.0020000000000000573
+        ],
+        "jawAngle": 0,
+        "wingAngle": 0,
+        "neckYaw": 0,
+        "physicalMotion": {
+          "status": "NOT TESTED",
+          "reason": "V25 GLB has no compact-articulated-tail; physical tail belongs to excluded createEraMechanisms assembly."
+        }
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0,
+        "exactWithin1e8": true
+      }
+    },
+    {
+      "name": "maker-neck",
+      "era": "maker",
+      "status": "PASS",
+      "metrics": {
+        "frames": 218,
+        "samples": 42,
+        "stateFrames": {
+          "puppet-rest": 110,
+          "puppet-articulation": 108
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "puppet-rest"
+          },
+          {
+            "frame": 2,
+            "state": "puppet-articulation"
+          },
+          {
+            "frame": 110,
+            "state": "puppet-rest"
+          }
+        ],
+        "maxFootSolveErrorM": 5.551115123125783e-17,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 0,
+        "minGroundY": 0.0020000000000000573,
+        "maxPlantedFloorOffsetM": 5.724587470723463e-17,
+        "maxRigidBasisError": 3.3306690738754696e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856323,
+            0.0020000000000000573,
+            -0.6593665173277259
+          ],
+          "max": [
+            0.5140143632888794,
+            1.931022213557428,
+            0.5058508524671197
+          ]
+        },
+        "contacts": [],
+        "violations": {},
+        "maxRootYaw": 0,
+        "maxDistance": 0,
+        "maxSteps": 0,
+        "visibleMeshCounts": [
+          653
+        ]
+      },
+      "result": {
+        "commandMetric": 0.9998765901959132,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "footHeights": [
+          0.0020000000000000573,
+          0.0020000000000000573
+        ],
+        "jawAngle": 0,
+        "wingAngle": 0,
+        "neckYaw": -0.449944465588161
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0,
+        "exactWithin1e8": true
+      }
+    },
+    {
+      "name": "maker-jaw",
+      "era": "maker",
+      "status": "PASS",
+      "metrics": {
+        "frames": 218,
+        "samples": 42,
+        "stateFrames": {
+          "puppet-rest": 110,
+          "puppet-articulation": 108
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "puppet-rest"
+          },
+          {
+            "frame": 2,
+            "state": "puppet-articulation"
+          },
+          {
+            "frame": 110,
+            "state": "puppet-rest"
+          }
+        ],
+        "maxFootSolveErrorM": 5.551115123125783e-17,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 0,
+        "minGroundY": 0.0020000000000000573,
+        "maxPlantedFloorOffsetM": 5.724587470723463e-17,
+        "maxRigidBasisError": 1.6653345369377348e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856323,
+            0.0020000000000000573,
+            -0.6593665173277259
+          ],
+          "max": [
+            0.5140143632888794,
+            1.9154307222366334,
+            0.5058508524671197
+          ]
+        },
+        "contacts": [],
+        "violations": {},
+        "maxRootYaw": 0,
+        "maxDistance": 0,
+        "maxSteps": 0,
+        "visibleMeshCounts": [
+          653
+        ]
+      },
+      "result": {
+        "commandMetric": 0.9998765901959132,
+        "root": {
+          "x": 0,
+          "z": -0.25,
+          "yaw": 0,
+          "speed": 0
+        },
+        "footHeights": [
+          0.0020000000000000573,
+          0.0020000000000000573
+        ],
+        "jawAngle": 0.31996050886269223,
+        "wingAngle": 0,
+        "neckYaw": 0
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0,
+        "exactWithin1e8": true
+      }
+    },
+    {
+      "name": "mechanic-stepped-traversal-and-turns",
+      "era": "mechanic",
+      "status": "PASS",
+      "metrics": {
+        "frames": 2995,
+        "samples": 509,
+        "stateFrames": {
+          "mechanical-ready": 3,
+          "mechanical-run": 2736,
+          "mechanical-settle": 256
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "mechanical-ready"
+          },
+          {
+            "frame": 2,
+            "state": "mechanical-run"
+          },
+          {
+            "frame": 714,
+            "state": "mechanical-settle"
+          },
+          {
+            "frame": 762,
+            "state": "mechanical-run"
+          },
+          {
+            "frame": 1474,
+            "state": "mechanical-settle"
+          },
+          {
+            "frame": 1522,
+            "state": "mechanical-run"
+          },
+          {
+            "frame": 2590,
+            "state": "mechanical-settle"
+          },
+          {
+            "frame": 2638,
+            "state": "mechanical-run"
+          },
+          {
+            "frame": 2882,
+            "state": "mechanical-settle"
+          },
+          {
+            "frame": 2994,
+            "state": "mechanical-ready"
+          }
+        ],
+        "maxFootSolveErrorM": 3.510833468576701e-16,
+        "maxSupportTargetDriftM": 2.7755575615628914e-17,
+        "maxSupportActualDriftM": 5.087681048627601e-16,
+        "minGroundY": 0.0019999999999998352,
+        "maxPlantedFloorOffsetM": 2.237793284010081e-16,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -1.305973481806849,
+            0.0019999999999998352,
+            -0.7896505664449445
+          ],
+          "max": [
+            1.306028414633546,
+            1.9154307222366334,
+            1.0759734818068492
+          ]
+        },
+        "contacts": [],
+        "violations": {},
+        "maxRootYaw": 2.5907963267948966,
+        "maxDistance": 2.2199999999999993,
+        "maxSteps": 32,
+        "visibleMeshCounts": [
+          654
+        ]
+      },
+      "result": {
+        "distanceM": 2.2199999999999993,
+        "steps": 31,
+        "maxYawRad": 2.5907963267948966,
+        "maxSpeedMps": 0.33381986184156,
+        "camStages": [
+          "load",
+          "release",
+          "settle",
+          "dwell",
+          "disengaged"
+        ],
+        "stationaryMetricSamples": 378
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0,
+        "exactWithin1e8": true
+      }
+    },
+    {
+      "name": "advanced-attention-strike-contact-recovery-0",
+      "era": "builder",
+      "status": "FAIL",
+      "metrics": {
+        "frames": 368,
+        "samples": 71,
+        "stateFrames": {
+          "watch": 2,
+          "notice": 38,
+          "approach": 192,
+          "warning": 45,
+          "strike": 11,
+          "contact": 13,
+          "recover": 54,
+          "agitated": 13
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "watch"
+          },
+          {
+            "frame": 2,
+            "state": "notice"
+          },
+          {
+            "frame": 40,
+            "state": "approach"
+          },
+          {
+            "frame": 232,
+            "state": "warning"
+          },
+          {
+            "frame": 277,
+            "state": "strike"
+          },
+          {
+            "frame": 288,
+            "state": "contact"
+          },
+          {
+            "frame": 301,
+            "state": "recover"
+          },
+          {
+            "frame": 355,
+            "state": "agitated"
+          },
+          {
+            "frame": 368,
+            "state": "watch"
+          }
+        ],
+        "maxFootSolveErrorM": 2.618455766672135e-16,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 4.47545209131181e-16,
+        "minGroundY": 0.0019999999999998908,
+        "maxPlantedFloorOffsetM": 1.682681771697503e-16,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856324,
+            0.0019999999999998908,
+            -0.6593665173277259
+          ],
+          "max": [
+            0.5140143632888795,
+            1.9154307222366334,
+            2.079004398778169
+          ]
+        },
+        "contacts": [
+          {
+            "frame": 288,
+            "state": "contact",
+            "point": [
+              0,
+              1.372541553443857,
+              2.0790008301402554
+            ],
+            "railX": 0,
+            "radial": 0.020999169859744704
+          },
+          {
+            "frame": 294,
+            "state": "contact",
+            "point": [
+              0,
+              1.3743982989319852,
+              2.0790008089442167
+            ],
+            "railX": 0,
+            "radial": 0.020999191055783406
+          },
+          {
+            "frame": 300,
+            "state": "contact",
+            "point": [
+              0,
+              1.37531921807956,
+              2.0790001410229797
+            ],
+            "railX": 0,
+            "radial": 0.02099985897702039
+          }
+        ],
+        "violations": {
+          "era-reset-matrix-drift": {
+            "value": 0.015273580727944543,
+            "limit": 1e-8,
+            "firstFrame": 368,
+            "state": "watch"
+          }
+        },
+        "maxRootYaw": 0,
+        "maxDistance": 1.2858919557897568,
+        "maxSteps": 8,
+        "visibleMeshCounts": [
+          689
+        ]
+      },
+      "result": {
+        "physicalContactSamples": 3,
+        "maxAttentionNeckYawRad": 0.01318993574737606,
+        "contactApproach": {
+          "z": 1.0393846212522653,
+          "requestedZ": 1.0393846212522653,
+          "minimumSurfaceReach": 1.047615378747735,
+          "arrivalMargin": 0.008,
+          "maximumPitch": 0.65,
+          "clamped": false
+        }
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0.015273580727944543,
+        "exactWithin1e8": false
+      }
+    },
+    {
+      "name": "advanced-attention-strike-contact-recovery-0.6",
+      "era": "builder",
+      "status": "FAIL",
+      "metrics": {
+        "frames": 436,
+        "samples": 82,
+        "stateFrames": {
+          "watch": 2,
+          "notice": 38,
+          "approach": 260,
+          "warning": 45,
+          "strike": 11,
+          "contact": 13,
+          "recover": 54,
+          "agitated": 13
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "watch"
+          },
+          {
+            "frame": 2,
+            "state": "notice"
+          },
+          {
+            "frame": 40,
+            "state": "approach"
+          },
+          {
+            "frame": 300,
+            "state": "warning"
+          },
+          {
+            "frame": 345,
+            "state": "strike"
+          },
+          {
+            "frame": 356,
+            "state": "contact"
+          },
+          {
+            "frame": 369,
+            "state": "recover"
+          },
+          {
+            "frame": 423,
+            "state": "agitated"
+          },
+          {
+            "frame": 436,
+            "state": "watch"
+          }
+        ],
+        "maxFootSolveErrorM": 0.028544872337462012,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 0.010576162898761225,
+        "minGroundY": 0.0019999999999997242,
+        "maxPlantedFloorOffsetM": 0.003961264045169334,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856323,
+            0.0019999999999997242,
+            -0.7207466355642052
+          ],
+          "max": [
+            1.8145061133527527,
+            1.9155196669939953,
+            2.079019258778556
+          ]
+        },
+        "contacts": [
+          {
+            "frame": 356,
+            "state": "contact",
+            "point": [
+              1.2,
+              1.3737568916835112,
+              2.079000084335168
+            ],
+            "railX": 1.2,
+            "radial": 0.02099991566483217
+          },
+          {
+            "frame": 360,
+            "state": "contact",
+            "point": [
+              1.2,
+              1.3751229417968023,
+              2.0790008523123746
+            ],
+            "railX": 1.2,
+            "radial": 0.020999147687625452
+          },
+          {
+            "frame": 366,
+            "state": "contact",
+            "point": [
+              1.2,
+              1.3762758187236444,
+              2.0790007957845664
+            ],
+            "railX": 1.2,
+            "radial": 0.020999204215433664
+          }
+        ],
+        "violations": {
+          "ankle-solve-error": {
+            "value": 0.028544872337462012,
+            "limit": 0.002,
+            "firstFrame": 96,
+            "state": "approach"
+          },
+          "planted-foot-floor-offset": {
+            "value": 0.003961264045169334,
+            "limit": 0.0015,
+            "firstFrame": 90,
+            "state": "approach"
+          },
+          "planted-support-geometry-drift": {
+            "value": 0.010576162898761225,
+            "limit": 0.002,
+            "firstFrame": 90,
+            "state": "approach"
+          },
+          "era-reset-matrix-drift": {
+            "value": 0.015273580727944543,
+            "limit": 1e-8,
+            "firstFrame": 436,
+            "state": "watch"
+          }
+        },
+        "maxRootYaw": 0.7495072702259536,
+        "maxDistance": 1.7579100384228512,
+        "maxSteps": 13,
+        "visibleMeshCounts": [
+          689
+        ]
+      },
+      "result": {
+        "physicalContactSamples": 3,
+        "maxAttentionNeckYawRad": 0.28773947725467647,
+        "contactApproach": {
+          "z": 1.0393846212522653,
+          "requestedZ": 1.0393846212522653,
+          "minimumSurfaceReach": 1.047615378747735,
+          "arrivalMargin": 0.008,
+          "maximumPitch": 0.65,
+          "clamped": false
+        }
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0.015273580727944543,
+        "exactWithin1e8": false
+      }
+    },
+    {
+      "name": "advanced-jump",
+      "era": "builder",
+      "status": "FAIL",
+      "metrics": {
+        "frames": 114,
+        "samples": 94,
+        "stateFrames": {
+          "watch": 2,
+          "settle": 27,
+          "power-jump": 85
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "watch"
+          },
+          {
+            "frame": 2,
+            "state": "settle"
+          },
+          {
+            "frame": 29,
+            "state": "power-jump"
+          },
+          {
+            "frame": 114,
+            "state": "watch"
+          }
+        ],
+        "maxFootSolveErrorM": 1.5700924586837752e-16,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 0,
+        "minGroundY": 0.0019999999999998908,
+        "maxPlantedFloorOffsetM": 5.724587470723463e-17,
+        "maxRigidBasisError": 3.3306690738754696e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5002859830856324,
+            0.0019999999999998908,
+            -0.6763446953762211
+          ],
+          "max": [
+            0.5140143632888795,
+            2.275414062511519,
+            0.5162935781266151
+          ]
+        },
+        "contacts": [],
+        "violations": {
+          "era-reset-matrix-drift": {
+            "value": 0.015273580727944543,
+            "limit": 1e-8,
+            "firstFrame": 114,
+            "state": "watch"
+          }
+        },
+        "maxRootYaw": 0,
+        "maxDistance": 0,
+        "maxSteps": 0,
+        "visibleMeshCounts": [
+          689
+        ]
+      },
+      "result": {
+        "peakHeightM": 0.3599833402748855,
+        "peakFeetGroundMin": [
+          0.3851868045469207,
+          0.3851868045469207
+        ],
+        "peakRightWingRotationRad": 0.11999314902784332,
+        "peakLeftWingRotationRad": 0.044997430885441246,
+        "finishedFeetGroundMin": [
+          0.0020000000000000573,
+          0.0020000000000000573
+        ]
+      },
+      "reset": {
+        "maxLocalMatrixDelta": 0.015273580727944543,
+        "exactWithin1e8": false
+      }
+    },
+    {
+      "name": "advanced-thrust",
+      "era": "builder",
+      "status": "FAIL",
+      "error": "Requested state not reached in 7s; last=boundary",
+      "metrics": {
+        "frames": 422,
+        "samples": 75,
+        "stateFrames": {
+          "watch": 158,
+          "settle": 27,
+          "power-thrust": 67,
+          "pace": 165,
+          "boundary": 5
+        },
+        "stateTransitions": [
+          {
+            "frame": 1,
+            "state": "watch"
+          },
+          {
+            "frame": 2,
+            "state": "settle"
+          },
+          {
+            "frame": 29,
+            "state": "power-thrust"
+          },
+          {
+            "frame": 96,
+            "state": "watch"
+          },
+          {
+            "frame": 252,
+            "state": "pace"
+          },
+          {
+            "frame": 417,
+            "state": "boundary"
+          },
+          {
+            "frame": 422,
+            "state": "watch"
+          }
+        ],
+        "maxFootSolveErrorM": 3.4219371797089426e-16,
+        "maxSupportTargetDriftM": 0,
+        "maxSupportActualDriftM": 3.188872858294072e-16,
+        "minGroundY": 0.0019999999999998352,
+        "maxPlantedFloorOffsetM": 1.6479873021779667e-16,
+        "maxRigidBasisError": 4.440892098500626e-16,
+        "maxFixedJointTranslationErrorM": 0,
+        "maxMeshLocalMatrixDrift": 0,
+        "visibleBounds": {
+          "min": [
+            -0.5179272714518057,
+            0.0019999999999998352,
+            -0.7493065000227507
+          ],
+          "max": [
+            1.342695596940145,
+            1.9158573552253837,
+            0.6672582634768974
+          ]
+        },
+        "contacts": [],
+        "violations": {
+          "scenario-incomplete": {
+            "value": 1,
+            "limit": 0,
+            "firstFrame": 421,
+            "state": "boundary"
+          },
+          "era-reset-matrix-drift": {
+            "value": 0.015273580727944543,
+            "limit": 1e-8,
+            "firstFrame": 422,
+            "state": "watch"
+          }
+        },
+        "maxRootYaw": 1.448335269377555,
+        "maxDistance": 0.724977672882762,
+        "maxSteps": 7,
+        "visibleMeshCounts": [
+          689
+        ]
+      },
+      "result": {},
+      "reset": {
+        "maxLocalMatrixDelta": 0.015273580727944543,
+        "exactWithin1e8": false
+      }
+    }
+  ],
+  "limits": [
+    "Discrete sampled kinematics and attachment math only; no continuous collision, support-force or physics proof.",
+    "No procedural Maker cradle/tail, Mechanic transmission or Advanced machinery is loaded.",
+    "Bounding-box floor/support checks do not establish stable load support or artistic acceptance."
+  ],
+  "loaded": {
+    "meshCount": 689,
+    "nodeCount": 744,
+    "positionVertices": 394622,
+    "physicalTailPresent": false
+  },
+  "status": "FAIL",
+  "summary": {
+    "passed": 5,
+    "failed": 5,
+    "physicalTail": "NOT TESTED",
+    "proceduralHardware": "NOT TESTED",
+    "continuousCollision": "NOT TESTED"
+  },
+  "executedSources": [
+    {
+      "source": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/validate-whole-character-v25-motion.mjs",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-validate-whole-character-v25-motion.mjs",
+      "sha256": "cf555a5a56b85d53d93f31a2b461ba49aeab5d0c55c16ab384e3cdef0ec8a458"
+    },
+    {
+      "source": "scripts/load-rigid-validation.mjs",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-load-rigid-validation.mjs",
+      "sha256": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62"
+    },
+    {
+      "source": "src/scene/era-motion.js",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-era-motion.js",
+      "sha256": "b8c617efc8bca34f537568611a113f1cd77b8abb1176579cd87f2327e33d9f4a"
+    },
+    {
+      "source": "src/scene/era-controller.js",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-era-controller.js",
+      "sha256": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57"
+    },
+    {
+      "source": "src/scene/cervical-articulation.js",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-cervical-articulation.js",
+      "sha256": "97e1096c3b16c0ce774916471c40a35dc1364d88e74bf3077b07b130a7aaeff9"
+    },
+    {
+      "source": "src/scene/rigid-leg-kinematics.js",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-rigid-leg-kinematics.js",
+      "sha256": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd"
+    },
+    {
+      "source": "src/scene/presence-state.js",
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v25/attempt-form01/motion/executed-presence-state.js",
+      "sha256": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad"
+    }
+  ]
+}

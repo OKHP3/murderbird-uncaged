@@ -518,7 +518,6 @@ export function createEraMotion(model, nodes, rest) {
         place(1);neededDrop=requiredSupportDrop();
       }
     }
-    aligned=s.heading==null||Math.abs(angleDelta(yaw,s.heading))<.045;
     // A loaded pelvic saddle yields vertically before a support foot can slide.
     reachDrop=Math.max(Math.min(.12,neededDrop),reachDrop-dt*.10,0);maxReachDrop=Math.max(maxReachDrop,reachDrop);
     nodes.body.position.y-=reachDrop;

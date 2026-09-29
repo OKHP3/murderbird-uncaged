@@ -475,7 +475,7 @@ export function createEraMotion(model, nodes, rest) {
     nodes['left-mantle'].rotation.x = pose.guard * .065 - pose.counter * .35;
     nodes['left-wing-shield'].rotation.x = pose.guard * .18;
     model.updateMatrixWorld(true);
-    function requiredSupportDrop(reserveUnloadedStance=false){
+    function requiredSupportDrop(){
       let drop=0;
       for(const f of feet){
         const hip=f.hipRest.clone().sub(rest.body.position).applyEuler(nodes.body.rotation).add(nodes.body.position);
@@ -485,23 +485,19 @@ export function createEraMotion(model, nodes, rest) {
         // lateral offsets. A horizontal overreach cannot be cured by yield.
         const reach=f.maximumReach-.012;
         if(horizontal>=reach*reach)return Infinity;
-        // Root throttling reduces the speed-dependent gait crouch on the next
-        // frame. Reserve that known height now, so braking cannot strand a
-        // support at the edge of the reachable envelope as the body rises.
-        const unloadedHeight=reserveUnloadedStance?Math.min(speed,.72)*.065:0;
-        drop=Math.max(drop,hip.y+unloadedHeight-target.y-Math.sqrt(reach*reach-horizontal));
+        drop=Math.max(drop,hip.y-target.y-Math.sqrt(reach*reach-horizontal));
       }
       return Math.max(0,drop);
     }
     let neededDrop=requiredSupportDrop();
-    if(requiredSupportDrop(true)>.12){
+    if(neededDrop>.12){
       const proposed={x,z,yaw},travel=Math.hypot(x-previousRoot.x,z-previousRoot.z),turn=angleDelta(previousRoot.yaw,yaw);
       const place=fraction=>{
         x=THREE.MathUtils.lerp(previousRoot.x,proposed.x,fraction);
         z=THREE.MathUtils.lerp(previousRoot.z,proposed.z,fraction);
         yaw=previousRoot.yaw+turn*fraction;
         model.position.set(x,0,z);model.rotation.y=yaw;model.updateMatrixWorld(true);
-        return requiredSupportDrop(true);
+        return requiredSupportDrop();
       };
       // Root travel waits for the existing alternating step when either fixed
       // support exceeds the finite linkage plus the permitted pelvic yield.
@@ -509,16 +505,15 @@ export function createEraMotion(model, nodes, rest) {
       let low=0,high=1;
       if(place(0)<=.12){
         for(let i=0;i<16;i++){const mid=(low+high)*.5;if(place(mid)<=.12)low=mid;else high=mid;}
-        place(low);neededDrop=requiredSupportDrop();distance-=travel*(1-low);
+        neededDrop=place(low);distance-=travel*(1-low);
         velocityX*=low;velocityZ*=low;speed*=low;yawVelocity*=low;
         arrived=false;settled=false;
       }else{
         // A pose/load change may require more than root rollback; retain the
         // requested pose for diagnosis rather than silently moving a support.
-        place(1);neededDrop=requiredSupportDrop();
+        neededDrop=place(1);
       }
     }
-    aligned=s.heading==null||Math.abs(angleDelta(yaw,s.heading))<.045;
     // A loaded pelvic saddle yields vertically before a support foot can slide.
     reachDrop=Math.max(Math.min(.12,neededDrop),reachDrop-dt*.10,0);maxReachDrop=Math.max(maxReachDrop,reachDrop);
     nodes.body.position.y-=reachDrop;

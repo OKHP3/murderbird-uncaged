@@ -1,0 +1,36 @@
+{
+  "status": "PASS narrow committed-yaw alignment correction",
+  "change": "Recompute aligned from committed yaw after root rollback using the existing s.heading tolerance, before contact gating and exposed metrics.",
+  "source": {
+    "path": "src/scene/era-motion.js",
+    "sha256": "3f916cc2b8122b4095a801f9dabc1b4dd1dc1d18fe88908ed3d891166a202567"
+  },
+  "preservedCorrection02Receipt": {
+    "path": "assets/audit/whole-character-v25/attempt-form01/motion/support-reach-correction02/support-correction-receipt.json",
+    "sha256": "a234cace7ed487b2a3f265fa52a1e4d547a14fbd7bb67b4f04c78b570c456a6d"
+  },
+  "newMotionReport": {
+    "path": "assets/audit/whole-character-v25/attempt-form01/motion/support-reach-correction03/motion-validation.json",
+    "sha256": "5609100322ae527b0bc9e49d522541ba63b1c996b07419c066cac8954886ed5f"
+  },
+  "diagnostic": {
+    "passed": 9,
+    "failed": 0,
+    "partial": 1,
+    "physicalTail": "NOT TESTED",
+    "proceduralHardware": "NOT TESTED",
+    "continuousCollision": "NOT TESTED"
+  },
+  "checks": [
+    {
+      "command": "node --test tests/whole-character-v25-support.test.mjs tests/contact-approach.test.mjs tests/cage-families.test.mjs tests/cervical-chain.test.mjs tests/cervical-receivers.test.mjs",
+      "passed": 14,
+      "failed": 0
+    }
+  ],
+  "limits": [
+    "No continuous collision or physics claim.",
+    "Existing distance accumulation compares earlier speed*dt with committed travel near root clamps; that bounded metric approximation remains unchanged.",
+    "No further geometry or behavior changes."
+  ]
+}
