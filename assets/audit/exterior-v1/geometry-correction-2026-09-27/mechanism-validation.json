@@ -1,0 +1,133 @@
+{
+  "model": "murderbird-exterior-v1.glb",
+  "textureDecoding": "excluded in Node motion test; checked separately in browser",
+  "renderer": "none (headless Three.js scene)",
+  "checks": {
+    "maker": {
+      "visible": {
+        "maker": true,
+        "mechanic": false,
+        "builder": false
+      },
+      "targetCount": 5,
+      "horns": "five finite joint-to-offset connectors"
+    },
+    "mechanic": {
+      "visible": {
+        "maker": false,
+        "mechanic": true,
+        "builder": false
+      },
+      "slidingLinks": {
+        "left": 0.18425717742866188,
+        "right": 0.2810788432662064
+      }
+    },
+    "builderAssembled": {
+      "separationMode": "connected",
+      "wing": {
+        "mode": "connected",
+        "endpointDistance": 0.3011470109785787
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        },
+        {
+          "side": "right",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        }
+      ],
+      "powerCore": {
+        "mode": "connected",
+        "endpointDistance": 0.21761328865719842
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.2810788432662064,
+        "right": 0.18425717742866188
+      }
+    },
+    "protectedDistribution": {
+      "busCenter": [
+        -0.21,
+        1.1899999761581421,
+        0.07
+      ],
+      "busMin": [
+        -0.24999999910593032,
+        1.1099999779462815,
+        0.005000002384185798
+      ],
+      "busMax": [
+        -0.17000000089406966,
+        1.2699999743700028,
+        0.13499999761581422
+      ],
+      "powerBoundsClear": true,
+      "scope": "Rest-pose packaging bounds, not a full assembly collision proof"
+    },
+    "builderSeparated": {
+      "separationMode": "disengaged-at-sockets",
+      "wing": {
+        "mode": "disengaged-at-sockets",
+        "endpointDistance": 0.42274060582208683
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "disengaged-at-sockets",
+          "endpointDistance": 0.16650825805346703
+        },
+        {
+          "side": "right",
+          "mode": "disengaged-at-sockets",
+          "endpointDistance": 0.16650825805346703
+        }
+      ],
+      "powerCore": {
+        "mode": "disengaged-at-sockets",
+        "endpointDistance": 0.6290980919768007
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.2810788432662064,
+        "right": 0.18425717742866188
+      }
+    },
+    "builderReassembled": {
+      "separationMode": "connected",
+      "wing": {
+        "mode": "connected",
+        "endpointDistance": 0.3011470109785787
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        },
+        {
+          "side": "right",
+          "mode": "connected",
+          "endpointDistance": 0.16650825805346703
+        }
+      ],
+      "powerCore": {
+        "mode": "connected",
+        "endpointDistance": 0.21761328865719842
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.2810788432662064,
+        "right": 0.18425717742866188
+      }
+    },
+    "mechanicHidesBuilder": {
+      "maker": false,
+      "mechanic": true,
+      "builder": false
+    }
+  },
+  "status": "passed"
+}

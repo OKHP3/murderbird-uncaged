@@ -1,0 +1,85 @@
+{
+  "purpose": "Distinguish the Task 9 source delta from pre-existing differences between the frozen exterior asset and its committed source.",
+  "method": {
+    "blender": "5.2.2 LTS",
+    "geometryComparison": "World-space vertex coordinates and polygon-coordinate sets rounded to 0.00001 m; parent names and world transforms compared separately.",
+    "structuralSource": {
+      "path": "assets/models/uncaged-structure-v1/murderbird-structure-v1.blend",
+      "sha256": "9859c1044fe035f140448b23cef477eb9fb3cc4daa8aaf42837ebb8d7dba7541"
+    },
+    "preTaskSourceCommit": "9aa4bca68cad68a1ace39d669c49499a62908794",
+    "candidateCommit": "045402372da3007176dabb5b80e2053477fd0006"
+  },
+  "frozenStartingModel": {
+    "blend": {
+      "path": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.blend",
+      "sha256": "bebd43cb22566056106e96c71ba47b5d9b0291cb8abaf59604f80442e8d9aa1a",
+      "bytes": 5926545
+    },
+    "combinedGlb": {
+      "path": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb",
+      "sha256": "3ec668b0b9bbaf1cb546ec2e04b09030c5f45b0f0893adc5b7fe5aa57baacdc5",
+      "bytes": 16956956
+    }
+  },
+  "preTaskSourceRebuildComparedWithFrozen": {
+    "meshObjects": 1383,
+    "geometryChanged": 89,
+    "byRegion": {
+      "breast": 9,
+      "neck": 6,
+      "shoulder": 8,
+      "head": 24,
+      "optic": 6,
+      "foot": 36
+    },
+    "objectsAdded": 0,
+    "objectsRemoved": 0,
+    "parentChanges": 0,
+    "worldTransformChanges": 0
+  },
+  "correctedCandidate": {
+    "blend": {
+      "path": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.blend",
+      "sha256": "a868c3dfc39c9b024d01f254076c50328208d30647b66c47977478aa857c00f9",
+      "bytes": 5945207
+    },
+    "combinedGlb": {
+      "path": "assets/models/uncaged-exterior-v1/murderbird-exterior-v1.glb",
+      "sha256": "c41a7b10237373336bb585840295a1fea282ba17f13d5f0cebc68ba412be3c6a",
+      "bytes": 16870136
+    },
+    "meshObjects": 1323,
+    "differenceFromPreTaskSourceRebuild": {
+      "geometryChanged": 433,
+      "byRegion": {
+        "breast": 69,
+        "neck": 63,
+        "shoulder": 301
+      },
+      "objectsAdded": 12,
+      "objectsRemoved": 72,
+      "parentChanges": 0,
+      "worldTransformChanges": 0
+    },
+    "differenceFromFrozenStartingModel": {
+      "geometryChanged": 507,
+      "byRegion": {
+        "breast": 69,
+        "neck": 63,
+        "shoulder": 309,
+        "head": 24,
+        "optic": 6,
+        "foot": 36
+      },
+      "objectsAdded": 12,
+      "objectsRemoved": 72,
+      "parentChanges": 0,
+      "worldTransformChanges": 0
+    }
+  },
+  "ownerDecision": "Retain the pre-existing source-aligned head, optic, and foot geometry in this local review candidate.",
+  "ownerLikenessAcceptance": false,
+  "publicationManifestChanged": false,
+  "published": false
+}
