@@ -1,0 +1,860 @@
+{
+  "status": "FAIL",
+  "native": {
+    "path": "assets/models/whole-character-v19/attempt-torso01/murderbird-whole-character-v19.blend",
+    "sha256": "c3fd71d33edf91f7c15f0b847f5333fc210fe60d3a9eea13e0962063e37a4b97",
+    "bytes": 2670990
+  },
+  "checker": {
+    "path": "scripts/check-v19-breast-opening.py",
+    "sha256": "4a7435659b730c58a0ebed00a03f80bc501c9e9d589b56bbd73e7f534f52b708",
+    "bytes": 13267
+  },
+  "kernel": {
+    "path": "assets/audit/cervical-construction-study-v1/attempt-07/actual-runtime-joint-clearance-v1/executed-review.py",
+    "sha256": "6d840608cf43b20beccaa8a7f1cab274d000485996ea2b1a6e1460921092b356",
+    "bytes": 58588
+  },
+  "runtimeSource": {
+    "path": "src/scene/inspection-pose.js",
+    "sha256": "08d8a48a153c21108bf99901e13119a0013a9a83b24d3fed8a426f0e51244d71",
+    "bytes": 1184
+  },
+  "blenderVersion": "5.2.1 LTS",
+  "runtimeContract": {
+    "source": "src/scene/inspection-pose.js: applyInspectionPose",
+    "breastplate": "Three local Euler XYZ rotation.y = -1.35 * open; rotation.x/z, local position, and scale retained.",
+    "nativeMapping": "C^-1 * M_three * C; browser=(native X, native Z, -native Y), hence browser local Y maps to candidate native local Z.",
+    "cranialCover": "Three local position.y = rest.y + 0.08 * open; candidate native local Z += 0.08 * open.",
+    "separation": "Fixed at zero; no exploded offsets are applied.",
+    "restLocalMatrixNative": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.4050000011920929
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.08293025195598602
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.4487605094909668
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "restWorldMatrixNative": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.4050000011920929
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.07999999821186066
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.2000000476837158
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "scope": {
+    "movingOwner": "breastplate",
+    "movingMeshCount": 85,
+    "movingMeshes": [
+      "Breast inner access shell",
+      "V17 breast captive overlap fasteners",
+      "V17 breast center keel return left",
+      "V17 breast center keel return right",
+      "V17 breast directional lamina 1 1 left",
+      "V17 breast directional lamina 1 1 right",
+      "V17 breast directional lamina 1 2 left",
+      "V17 breast directional lamina 1 2 right",
+      "V17 breast directional lamina 1 3 left",
+      "V17 breast directional lamina 1 3 right",
+      "V17 breast directional lamina 1 4 left",
+      "V17 breast directional lamina 1 4 right",
+      "V17 breast directional lamina 2 1 left",
+      "V17 breast directional lamina 2 1 right",
+      "V17 breast directional lamina 2 2 left",
+      "V17 breast directional lamina 2 2 right",
+      "V17 breast directional lamina 2 3 left",
+      "V17 breast directional lamina 2 3 right",
+      "V17 breast directional lamina 2 4 left",
+      "V17 breast directional lamina 2 4 right",
+      "V17 breast directional lamina 2 5 left",
+      "V17 breast directional lamina 2 5 right",
+      "V17 breast directional lamina 3 1 left",
+      "V17 breast directional lamina 3 1 right",
+      "V17 breast directional lamina 3 2 left",
+      "V17 breast directional lamina 3 2 right",
+      "V17 breast directional lamina 3 3 left",
+      "V17 breast directional lamina 3 3 right",
+      "V17 breast directional lamina 3 4 left",
+      "V17 breast directional lamina 3 4 right",
+      "V17 breast directional lamina 3 5 left",
+      "V17 breast directional lamina 3 5 right",
+      "V17 breast directional lamina 3 6 left",
+      "V17 breast directional lamina 3 6 right",
+      "V17 breast directional lamina 4 1 left",
+      "V17 breast directional lamina 4 1 right",
+      "V17 breast directional lamina 4 2 left",
+      "V17 breast directional lamina 4 2 right",
+      "V17 breast directional lamina 4 3 left",
+      "V17 breast directional lamina 4 3 right",
+      "V17 breast directional lamina 4 4 left",
+      "V17 breast directional lamina 4 4 right",
+      "V17 breast directional lamina 4 5 left",
+      "V17 breast directional lamina 4 5 right",
+      "V17 breast directional lamina 5 1 left",
+      "V17 breast directional lamina 5 1 right",
+      "V17 breast directional lamina 5 2 left",
+      "V17 breast directional lamina 5 2 right",
+      "V17 breast directional lamina 5 3 left",
+      "V17 breast directional lamina 5 3 right",
+      "V17 breast directional lamina 5 4 left",
+      "V17 breast directional lamina 5 4 right",
+      "V17 breast directional lamina 5 5 left",
+      "V17 breast directional lamina 5 5 right",
+      "V17 breast directional lamina 5 6 left",
+      "V17 breast directional lamina 5 6 right",
+      "V17 breast directional lamina 6 1 left",
+      "V17 breast directional lamina 6 1 right",
+      "V17 breast directional lamina 6 2 left",
+      "V17 breast directional lamina 6 2 right",
+      "V17 breast directional lamina 6 3 left",
+      "V17 breast directional lamina 6 3 right",
+      "V17 breast directional lamina 6 4 left",
+      "V17 breast directional lamina 6 4 right",
+      "V17 breast directional lamina 7 1 left",
+      "V17 breast directional lamina 7 1 right",
+      "V17 breast directional lamina 7 2 left",
+      "V17 breast directional lamina 7 2 right",
+      "V17 breast directional lamina 7 3 left",
+      "V17 breast directional lamina 7 3 right",
+      "V17 breast directional lamina 7 4 left",
+      "V17 breast directional lamina 7 4 right",
+      "V17 breast directional lamina 7 5 left",
+      "V17 breast directional lamina 7 5 right",
+      "V17 breast directional lamina 8 1 left",
+      "V17 breast directional lamina 8 1 right",
+      "V17 breast directional lamina 8 2 left",
+      "V17 breast directional lamina 8 2 right",
+      "V17 breast directional lamina 8 3 left",
+      "V17 breast directional lamina 8 3 right",
+      "V17 breast directional lamina 8 4 left",
+      "V17 breast directional lamina 8 4 right",
+      "V19 moving access cover return 0.985",
+      "V19 moving access cover return 1.145",
+      "V19 moving access hinge spine"
+    ],
+    "accessShell": {
+      "name": "Breast inner access shell",
+      "parent": "breastplate"
+    },
+    "fixedBodyMeshes": [
+      "Passive rib behind access cover.002",
+      "Passive rib behind access cover.003",
+      "Curved thoracic load rail",
+      "Curved thoracic load rail.001"
+    ],
+    "fixedShoulderWingRootMeshes": [
+      "left oblique shoulder saddle v4",
+      "left shouldered shoulder journal",
+      "left stepped shoulder race -0.033",
+      "left stepped shoulder race -0.044",
+      "left stepped shoulder race 0.033",
+      "left stepped shoulder race 0.044",
+      "right oblique shoulder saddle v4",
+      "right shouldered shoulder journal",
+      "right stepped shoulder race -0.033",
+      "right stepped shoulder race -0.044",
+      "right stepped shoulder race 0.033",
+      "right stepped shoulder race 0.044"
+    ],
+    "poses": [
+      {
+        "open": 0.0,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "nativeEquivalentLocalAxis": "Z",
+          "runtimeBreastplateRotationYRadians": -0.0,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.0
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.08293025195598602
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4487605094909668
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.2000000476837158
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 2,
+        "broadphaseCandidatePairs": 2,
+        "pairs": [
+          {
+            "movingMesh": "V19 moving access cover return 0.985",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Curved thoracic load rail",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 24,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 20,
+            "strictTargetTriangleCount": 2,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.4025001,
+                -0.2985
+              ],
+              [
+                0.052,
+                0.069
+              ],
+              [
+                0.9772928,
+                0.993
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3179398,
+                -0.2808906
+              ],
+              [
+                0.034847,
+                0.1291833
+              ],
+              [
+                0.837628,
+                1.085415
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 93,
+                "targetEvaluatedTriangle": 43,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2985,
+                    0.068,
+                    0.978
+                  ],
+                  [
+                    -0.2987929,
+                    0.0687071,
+                    0.9920001
+                  ],
+                  [
+                    -0.2987929,
+                    0.0687071,
+                    0.978
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3158521,
+                    0.1131997,
+                    0.837628
+                  ],
+                  [
+                    -0.2808906,
+                    0.0393891,
+                    1.085415
+                  ],
+                  [
+                    -0.2939247,
+                    0.034847,
+                    1.0841448
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 92,
+                "targetEvaluatedTriangle": 43,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2985,
+                    0.068,
+                    0.978
+                  ],
+                  [
+                    -0.2985,
+                    0.068,
+                    0.992
+                  ],
+                  [
+                    -0.2987929,
+                    0.0687071,
+                    0.9920001
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3158521,
+                    0.1131997,
+                    0.837628
+                  ],
+                  [
+                    -0.2808906,
+                    0.0393891,
+                    1.085415
+                  ],
+                  [
+                    -0.2939247,
+                    0.034847,
+                    1.0841448
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V19 moving access cover return 1.145",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Curved thoracic load rail",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 16,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 16,
+            "strictTargetTriangleCount": 1,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.4025001,
+                -0.2985
+              ],
+              [
+                0.051,
+                0.068
+              ],
+              [
+                1.137,
+                1.152
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3300646,
+                -0.2143242
+              ],
+              [
+                -0.0118226,
+                0.0712204
+              ],
+              [
+                1.1021479,
+                1.2760888
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 56,
+                "targetEvaluatedTriangle": 54,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2985,
+                    0.052,
+                    1.138
+                  ],
+                  [
+                    -0.2985,
+                    0.068,
+                    1.138
+                  ],
+                  [
+                    -0.2987929,
+                    0.068,
+                    1.1372929
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3162321,
+                    0.0712204,
+                    1.103465
+                  ],
+                  [
+                    -0.3300646,
+                    0.0657294,
+                    1.1021479
+                  ],
+                  [
+                    -0.2143242,
+                    -0.0118226,
+                    1.2760888
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 103,
+                "targetEvaluatedTriangle": 54,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2985,
+                    0.052,
+                    1.138
+                  ],
+                  [
+                    -0.2985,
+                    0.068,
+                    1.152
+                  ],
+                  [
+                    -0.2985,
+                    0.068,
+                    1.138
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3162321,
+                    0.0712204,
+                    1.103465
+                  ],
+                  [
+                    -0.3300646,
+                    0.0657294,
+                    1.1021479
+                  ],
+                  [
+                    -0.2143242,
+                    -0.0118226,
+                    1.2760888
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "open": 0.25,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.0,
+            -0.3375000059604645,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "nativeEquivalentLocalAxis": "Z",
+          "runtimeBreastplateRotationYRadians": -0.3375,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.02
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            0.9435854554176331,
+            0.3311291038990021,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.3311291038990021,
+            0.9435854554176331,
+            0.0,
+            0.08293025195598602
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4487605094909668
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            0.9435854554176331,
+            0.3311291038990021,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.3311291038990021,
+            0.9435854554176331,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.2000000476837158
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 0,
+        "broadphaseCandidatePairs": 0,
+        "pairs": []
+      },
+      {
+        "open": 0.5,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.0,
+            -0.675000011920929,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "nativeEquivalentLocalAxis": "Z",
+          "runtimeBreastplateRotationYRadians": -0.675,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.04
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            0.7807069420814514,
+            0.624897301197052,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.624897301197052,
+            0.7807069420814514,
+            0.0,
+            0.08293025195598602
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4487605094909668
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            0.7807069420814514,
+            0.624897301197052,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.624897301197052,
+            0.7807069420814514,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.2000000476837158
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 0,
+        "broadphaseCandidatePairs": 0,
+        "pairs": []
+      },
+      {
+        "open": 0.75,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.0,
+            -1.0125000476837158,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "nativeEquivalentLocalAxis": "Z",
+          "runtimeBreastplateRotationYRadians": -1.0125000000000002,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.06
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            0.5297418236732483,
+            0.8481589555740356,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.8481589555740356,
+            0.5297418236732483,
+            0.0,
+            0.08293025195598602
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4487605094909668
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            0.5297418236732483,
+            0.8481589555740356,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.8481589555740356,
+            0.5297418236732483,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.2000000476837158
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 0,
+        "broadphaseCandidatePairs": 0,
+        "pairs": []
+      },
+      {
+        "open": 1.0,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.0,
+            -1.350000023841858,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "nativeEquivalentLocalAxis": "Z",
+          "runtimeBreastplateRotationYRadians": -1.35,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.08
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            0.21900655329227448,
+            0.975723385810852,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.975723385810852,
+            0.21900655329227448,
+            0.0,
+            0.08293025195598602
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4487605094909668
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            0.21900655329227448,
+            0.975723385810852,
+            0.0,
+            -0.4050000011920929
+          ],
+          [
+            -0.975723385810852,
+            0.21900655329227448,
+            0.0,
+            0.07999999821186066
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            1.2000000476837158
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 0,
+        "broadphaseCandidatePairs": 0,
+        "pairs": []
+      }
+    ]
+  },
+  "limits": [
+    "Five discrete local inspection openings at zero separation only; no continuous swept-volume proof.",
+    "Tests strict noncoplanar triangle-edge crossings; tangent/coplanar adjacency and full containment are not established.",
+    "The fixed target set is the named breast frame/ribs plus recognized shoulder and wing-root hardware, not every scene mesh.",
+    "A geometric pass does not prove bearing support, mechanical strength, visitor safety, artistic likeness, or runtime/browser acceptance.",
+    "No native scene was saved or modified."
+  ]
+}

@@ -1,0 +1,5500 @@
+{
+  "status": "FAIL",
+  "native": {
+    "path": "assets/models/whole-character-v19/attempt-torso03/murderbird-whole-character-v19.blend",
+    "sha256": "f0c1ba3f50f41c979bfe9bb40e0bd8d1f5678ca1e5cf4def192e623fb7884709",
+    "bytes": 2670094
+  },
+  "checker": {
+    "path": "scripts/check-v19-breast-opening.py",
+    "sha256": "20b613f2366648ba8403e67f78f684d60331f5529e586cdb289926ac4d1d7d12",
+    "bytes": 19166
+  },
+  "kernel": {
+    "path": "assets/audit/cervical-construction-study-v1/attempt-07/actual-runtime-joint-clearance-v1/executed-review.py",
+    "sha256": "6d840608cf43b20beccaa8a7f1cab274d000485996ea2b1a6e1460921092b356",
+    "bytes": 58588
+  },
+  "runtimeSource": {
+    "path": "src/scene/inspection-pose.js",
+    "sha256": "378e8ee12e80076d8ddc6e9fd368b65a5f2a2c727934b892abbc39e88f3f160c",
+    "bytes": 1847
+  },
+  "blenderVersion": "5.2.1 LTS",
+  "runtimeContract": {
+    "source": "src/scene/inspection-pose.js: applyInspectionPose",
+    "breastplate": "Candidate extras inspectionAxis='x', inspectionOpenRadians=1.1; runtime Euler XYZ component is assigned open * radians while retaining other components, position, and scale.",
+    "declaredCandidateHinge": {
+      "inspectionAxis": "x",
+      "inspectionOpenRadians": 1.1,
+      "acceptedByRuntime": true
+    },
+    "legacyDefault": "Invalid or absent custom values follow production fallback local Y rotation -1.35 radians.",
+    "nativeMapping": "C^-1 * M_three * C; browser=(native X, native Z, -native Y), so browser local X/Y/Z map to native X/Z/-Y.",
+    "cranialCover": "Three local position.y = rest.y + 0.08 * open; candidate native local Z += 0.08 * open.",
+    "separation": "Fixed at zero; no exploded offsets are applied.",
+    "restLocalMatrixNative": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.07406974583864212
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -0.12623953819274902
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "restWorldMatrixNative": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.07699999958276749
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.625
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "scope": {
+    "movingOwner": "breastplate",
+    "movingMeshCount": 85,
+    "movingMeshes": [
+      "Breast inner access shell",
+      "V17 breast captive overlap fasteners",
+      "V17 breast center keel return left",
+      "V17 breast center keel return right",
+      "V17 breast directional lamina 1 1 left",
+      "V17 breast directional lamina 1 1 right",
+      "V17 breast directional lamina 1 2 left",
+      "V17 breast directional lamina 1 2 right",
+      "V17 breast directional lamina 1 3 left",
+      "V17 breast directional lamina 1 3 right",
+      "V17 breast directional lamina 1 4 left",
+      "V17 breast directional lamina 1 4 right",
+      "V17 breast directional lamina 2 1 left",
+      "V17 breast directional lamina 2 1 right",
+      "V17 breast directional lamina 2 2 left",
+      "V17 breast directional lamina 2 2 right",
+      "V17 breast directional lamina 2 3 left",
+      "V17 breast directional lamina 2 3 right",
+      "V17 breast directional lamina 2 4 left",
+      "V17 breast directional lamina 2 4 right",
+      "V17 breast directional lamina 2 5 left",
+      "V17 breast directional lamina 2 5 right",
+      "V17 breast directional lamina 3 1 left",
+      "V17 breast directional lamina 3 1 right",
+      "V17 breast directional lamina 3 2 left",
+      "V17 breast directional lamina 3 2 right",
+      "V17 breast directional lamina 3 3 left",
+      "V17 breast directional lamina 3 3 right",
+      "V17 breast directional lamina 3 4 left",
+      "V17 breast directional lamina 3 4 right",
+      "V17 breast directional lamina 3 5 left",
+      "V17 breast directional lamina 3 5 right",
+      "V17 breast directional lamina 3 6 left",
+      "V17 breast directional lamina 3 6 right",
+      "V17 breast directional lamina 4 1 left",
+      "V17 breast directional lamina 4 1 right",
+      "V17 breast directional lamina 4 2 left",
+      "V17 breast directional lamina 4 2 right",
+      "V17 breast directional lamina 4 3 left",
+      "V17 breast directional lamina 4 3 right",
+      "V17 breast directional lamina 4 4 left",
+      "V17 breast directional lamina 4 4 right",
+      "V17 breast directional lamina 4 5 left",
+      "V17 breast directional lamina 4 5 right",
+      "V17 breast directional lamina 5 1 left",
+      "V17 breast directional lamina 5 1 right",
+      "V17 breast directional lamina 5 2 left",
+      "V17 breast directional lamina 5 2 right",
+      "V17 breast directional lamina 5 3 left",
+      "V17 breast directional lamina 5 3 right",
+      "V17 breast directional lamina 5 4 left",
+      "V17 breast directional lamina 5 4 right",
+      "V17 breast directional lamina 5 5 left",
+      "V17 breast directional lamina 5 5 right",
+      "V17 breast directional lamina 5 6 left",
+      "V17 breast directional lamina 5 6 right",
+      "V17 breast directional lamina 6 1 left",
+      "V17 breast directional lamina 6 1 right",
+      "V17 breast directional lamina 6 2 left",
+      "V17 breast directional lamina 6 2 right",
+      "V17 breast directional lamina 6 3 left",
+      "V17 breast directional lamina 6 3 right",
+      "V17 breast directional lamina 6 4 left",
+      "V17 breast directional lamina 6 4 right",
+      "V17 breast directional lamina 7 1 left",
+      "V17 breast directional lamina 7 1 right",
+      "V17 breast directional lamina 7 2 left",
+      "V17 breast directional lamina 7 2 right",
+      "V17 breast directional lamina 7 3 left",
+      "V17 breast directional lamina 7 3 right",
+      "V17 breast directional lamina 7 4 left",
+      "V17 breast directional lamina 7 4 right",
+      "V17 breast directional lamina 7 5 left",
+      "V17 breast directional lamina 7 5 right",
+      "V17 breast directional lamina 8 1 left",
+      "V17 breast directional lamina 8 1 right",
+      "V17 breast directional lamina 8 2 left",
+      "V17 breast directional lamina 8 2 right",
+      "V17 breast directional lamina 8 3 left",
+      "V17 breast directional lamina 8 3 right",
+      "V17 breast directional lamina 8 4 left",
+      "V17 breast directional lamina 8 4 right",
+      "V19 moving bottom access axle",
+      "V19 moving bottom cover return -1",
+      "V19 moving bottom cover return 1"
+    ],
+    "accessShell": {
+      "name": "Breast inner access shell",
+      "parent": "breastplate"
+    },
+    "fixedBodyMeshes": [
+      "Passive rib behind access cover.002",
+      "Passive rib behind access cover.003",
+      "Curved thoracic load rail",
+      "Curved thoracic load rail.001",
+      "Dorsal lap 0 0",
+      "Dorsal lap 0 1",
+      "Dorsal lap 0 2",
+      "Dorsal lap 0 3",
+      "Dorsal lap 0 4",
+      "Dorsal lap 1 0",
+      "Dorsal lap 1 1",
+      "Dorsal lap 1 2",
+      "Dorsal lap 1 3",
+      "Dorsal lap 1 4",
+      "Dorsal lap 2 0",
+      "Dorsal lap 2 1",
+      "Dorsal lap 2 2",
+      "Dorsal lap 2 3",
+      "Dorsal lap 2 4",
+      "Dorsal lap 3 0",
+      "Dorsal lap 3 1",
+      "Dorsal lap 3 2",
+      "Dorsal lap 3 3",
+      "Dorsal lap 3 4",
+      "Dorsal lap 4 0",
+      "Dorsal lap 4 1",
+      "Dorsal lap 4 2",
+      "Dorsal lap 4 3",
+      "Dorsal lap 4 4",
+      "Passive rib behind access cover",
+      "Passive rib behind access cover.001",
+      "Short dorsal shell",
+      "V19 fixed bottom access bearing -1",
+      "V19 fixed bottom access bearing 1",
+      "V19 fixed bottom hinge support -1",
+      "V19 fixed bottom hinge support 1"
+    ],
+    "fixedNeighborOwners": [
+      "body",
+      "left-mantle",
+      "right-mantle",
+      "left-wing-shield",
+      "right-wing-shield",
+      "left-thigh",
+      "right-thigh",
+      "left-shin",
+      "right-shin",
+      "left-foot",
+      "right-foot"
+    ],
+    "fixedNeighborMeshCount": 359,
+    "poses": [
+      {
+        "open": 0.0,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "runtimeInspectionAxis": "x",
+          "runtimeInspectionRadiansAtThisOpen": 0.0,
+          "nativeEquivalentLocalAxis": "X",
+          "nativeEquivalentLocalRadiansAtThisOpen": 0.0,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.0
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.07406974583864212
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -0.12623953819274902
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.07699999958276749
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 27,
+        "broadphaseCandidatePairs": 27,
+        "movingAssemblyMinimumWorldZ": 0.6050612330436707,
+        "movingAssemblyBelowNativeFloor": false,
+        "pairs": [
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left articulated bearing core",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 18,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 9,
+            "strictTargetTriangleCount": 4,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.2200029,
+                0.2612908
+              ],
+              [
+                0.0219133,
+                0.0417219
+              ],
+              [
+                0.723594,
+                0.7921851
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1911599,
+                0.2890275
+              ],
+              [
+                0.0320507,
+                0.0402279
+              ],
+              [
+                0.7379603,
+                0.7641438
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20065,
+                "targetEvaluatedTriangle": 90,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2612908,
+                    0.0219133,
+                    0.7915386
+                  ],
+                  [
+                    0.2421502,
+                    0.0327052,
+                    0.7570691
+                  ],
+                  [
+                    0.260476,
+                    0.0224904,
+                    0.7921851
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1923698,
+                    0.0320507,
+                    0.7641438
+                  ],
+                  [
+                    0.1917144,
+                    0.0322561,
+                    0.7548444
+                  ],
+                  [
+                    0.2890275,
+                    0.0330856,
+                    0.7578741
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20068,
+                "targetEvaluatedTriangle": 90,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.260476,
+                    0.0224904,
+                    0.7921851
+                  ],
+                  [
+                    0.2421502,
+                    0.0327052,
+                    0.7570691
+                  ],
+                  [
+                    0.2409682,
+                    0.0324141,
+                    0.7577492
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1923698,
+                    0.0320507,
+                    0.7641438
+                  ],
+                  [
+                    0.1917144,
+                    0.0322561,
+                    0.7548444
+                  ],
+                  [
+                    0.2890275,
+                    0.0330856,
+                    0.7578741
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-mantle",
+            "fixedOwner": "left-mantle",
+            "broadphaseTrianglePairs": 384,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 200,
+            "strictTargetTriangleCount": 62,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.2087636,
+                0.3243977
+              ],
+              [
+                -0.1998185,
+                -0.0663114
+              ],
+              [
+                1.0173205,
+                1.283682
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.2017016,
+                0.3287138
+              ],
+              [
+                -0.2032513,
+                -0.0725552
+              ],
+              [
+                1.038103,
+                1.2889224
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 15274,
+                "targetEvaluatedTriangle": 2395,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3020838,
+                    -0.0791766,
+                    1.018733
+                  ],
+                  [
+                    0.3094184,
+                    -0.0940315,
+                    1.054038
+                  ],
+                  [
+                    0.3108741,
+                    -0.0886621,
+                    1.0540198
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1006552,
+                    1.0607814
+                  ],
+                  [
+                    0.326004,
+                    -0.0767847,
+                    1.0381892
+                  ],
+                  [
+                    0.3265839,
+                    -0.0967927,
+                    1.0608597
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 15274,
+                "targetEvaluatedTriangle": 2394,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3020838,
+                    -0.0791766,
+                    1.018733
+                  ],
+                  [
+                    0.3094184,
+                    -0.0940315,
+                    1.054038
+                  ],
+                  [
+                    0.3108741,
+                    -0.0886621,
+                    1.0540198
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1006552,
+                    1.0607814
+                  ],
+                  [
+                    0.3025,
+                    -0.0805852,
+                    1.038103
+                  ],
+                  [
+                    0.326004,
+                    -0.0767847,
+                    1.0381892
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-wing-shield",
+            "fixedOwner": "left-wing-shield",
+            "broadphaseTrianglePairs": 182,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 97,
+            "strictTargetTriangleCount": 20,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.2999321,
+                0.3262508
+              ],
+              [
+                -0.1188343,
+                -0.0082261
+              ],
+              [
+                0.9425851,
+                1.0883632
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.3025,
+                0.3268851
+              ],
+              [
+                -0.1121179,
+                0.0114663
+              ],
+              [
+                0.9548708,
+                1.0766723
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 15296,
+                "targetEvaluatedTriangle": 163,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3103506,
+                    -0.05555,
+                    1.0186298
+                  ],
+                  [
+                    0.316446,
+                    -0.0677285,
+                    1.0539393
+                  ],
+                  [
+                    0.3178978,
+                    -0.0628501,
+                    1.0539222
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.0658846,
+                    1.0294005
+                  ],
+                  [
+                    0.3235727,
+                    -0.0415388,
+                    1.0057645
+                  ],
+                  [
+                    0.3025,
+                    -0.0450556,
+                    1.0057645
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 15307,
+                "targetEvaluatedTriangle": 162,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3086592,
+                    -0.060035,
+                    1.018651
+                  ],
+                  [
+                    0.316446,
+                    -0.0677285,
+                    1.0539393
+                  ],
+                  [
+                    0.3103506,
+                    -0.05555,
+                    1.0186298
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.0658846,
+                    1.0294005
+                  ],
+                  [
+                    0.3242461,
+                    -0.0622873,
+                    1.0294005
+                  ],
+                  [
+                    0.3235727,
+                    -0.0415388,
+                    1.0057645
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left tapered passive load rail.001",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 200,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 167,
+            "strictTargetTriangleCount": 17,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1330316,
+                0.2047695
+              ],
+              [
+                0.0023685,
+                0.0692256
+              ],
+              [
+                0.6267039,
+                0.6965628
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1418882,
+                0.2045109
+              ],
+              [
+                -0.0183446,
+                0.0886951
+              ],
+              [
+                0.5876939,
+                0.7134446
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 10672,
+                "targetEvaluatedTriangle": 6,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1696024,
+                    0.0283343,
+                    0.6703491
+                  ],
+                  [
+                    0.1879794,
+                    0.0185373,
+                    0.6965366
+                  ],
+                  [
+                    0.1892084,
+                    0.0213997,
+                    0.6965276
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1828901,
+                    0.0523777,
+                    0.7134446
+                  ],
+                  [
+                    0.1704666,
+                    0.0503552,
+                    0.7122629
+                  ],
+                  [
+                    0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 10673,
+                "targetEvaluatedTriangle": 6,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1696024,
+                    0.0283343,
+                    0.6703491
+                  ],
+                  [
+                    0.1892084,
+                    0.0213997,
+                    0.6965276
+                  ],
+                  [
+                    0.1706284,
+                    0.0310115,
+                    0.6703413
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1828901,
+                    0.0523777,
+                    0.7134446
+                  ],
+                  [
+                    0.1704666,
+                    0.0503552,
+                    0.7122629
+                  ],
+                  [
+                    0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Left thigh open passive truss",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 112,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 54,
+            "strictTargetTriangleCount": 24,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1766376,
+                0.2241129
+              ],
+              [
+                0.0162933,
+                0.0577124
+              ],
+              [
+                0.6663456,
+                0.7262371
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.18512,
+                0.3096848
+              ],
+              [
+                -0.0708136,
+                0.0833976
+              ],
+              [
+                0.519724,
+                0.7177992
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 12283,
+                "targetEvaluatedTriangle": 1,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1984703,
+                    0.0469996,
+                    0.696211
+                  ],
+                  [
+                    0.2200029,
+                    0.0403723,
+                    0.725587
+                  ],
+                  [
+                    0.1996787,
+                    0.0487809,
+                    0.6958337
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1897388,
+                    0.0611562,
+                    0.7150258
+                  ],
+                  [
+                    0.2341556,
+                    -0.0708136,
+                    0.526819
+                  ],
+                  [
+                    0.2070708,
+                    0.0606982,
+                    0.7177992
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20085,
+                "targetEvaluatedTriangle": 1,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2213131,
+                    0.0414582,
+                    0.7250049
+                  ],
+                  [
+                    0.1996787,
+                    0.0487809,
+                    0.6958337
+                  ],
+                  [
+                    0.2200029,
+                    0.0403723,
+                    0.725587
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1897388,
+                    0.0611562,
+                    0.7150258
+                  ],
+                  [
+                    0.2341556,
+                    -0.0708136,
+                    0.526819
+                  ],
+                  [
+                    0.2070708,
+                    0.0606982,
+                    0.7177992
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right articulated bearing core",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 16,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 8,
+            "strictTargetTriangleCount": 4,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.260476,
+                -0.2213131
+              ],
+              [
+                0.0221749,
+                0.0417219
+              ],
+              [
+                0.723594,
+                0.79283
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.289683,
+                -0.1907277
+              ],
+              [
+                0.0322561,
+                0.0393984
+              ],
+              [
+                0.7349306,
+                0.7671733
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20038,
+                "targetEvaluatedTriangle": 90,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2421502,
+                    0.0327052,
+                    0.7570691
+                  ],
+                  [
+                    -0.260476,
+                    0.0224904,
+                    0.7921851
+                  ],
+                  [
+                    -0.2592919,
+                    0.0221749,
+                    0.79283
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.289683,
+                    0.0328802,
+                    0.7671733
+                  ],
+                  [
+                    -0.2890275,
+                    0.0330856,
+                    0.7578741
+                  ],
+                  [
+                    -0.1917144,
+                    0.0322561,
+                    0.7548444
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20039,
+                "targetEvaluatedTriangle": 90,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2421502,
+                    0.0327052,
+                    0.7570691
+                  ],
+                  [
+                    -0.2592919,
+                    0.0221749,
+                    0.79283
+                  ],
+                  [
+                    -0.2409681,
+                    0.0324141,
+                    0.7577493
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.289683,
+                    0.0328802,
+                    0.7671733
+                  ],
+                  [
+                    -0.2890275,
+                    0.0330856,
+                    0.7578741
+                  ],
+                  [
+                    -0.1917144,
+                    0.0322561,
+                    0.7548444
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-mantle",
+            "fixedOwner": "right-mantle",
+            "broadphaseTrianglePairs": 382,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 201,
+            "strictTargetTriangleCount": 59,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3243976,
+                -0.209166
+              ],
+              [
+                -0.1998185,
+                -0.056964
+              ],
+              [
+                1.0173231,
+                1.2821199
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3271865,
+                -0.2061961
+              ],
+              [
+                -0.1980329,
+                -0.0683266
+              ],
+              [
+                1.0410689,
+                1.2735575
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 4657,
+                "targetEvaluatedTriangle": 2604,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3160518,
+                    -0.056964,
+                    1.017324
+                  ],
+                  [
+                    -0.3208826,
+                    -0.0745323,
+                    1.0531087
+                  ],
+                  [
+                    -0.3223132,
+                    -0.0693541,
+                    1.0531117
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.0761922,
+                    1.0410689
+                  ],
+                  [
+                    -0.3245785,
+                    -0.0725552,
+                    1.0410689
+                  ],
+                  [
+                    -0.323153,
+                    -0.0683266,
+                    1.0439485
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 4657,
+                "targetEvaluatedTriangle": 2605,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3160518,
+                    -0.056964,
+                    1.017324
+                  ],
+                  [
+                    -0.3208826,
+                    -0.0745323,
+                    1.0531087
+                  ],
+                  [
+                    -0.3223132,
+                    -0.0693541,
+                    1.0531117
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.0761922,
+                    1.0410689
+                  ],
+                  [
+                    -0.323153,
+                    -0.0683266,
+                    1.0439485
+                  ],
+                  [
+                    -0.3025,
+                    -0.0718002,
+                    1.0440347
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-wing-shield",
+            "fixedOwner": "right-wing-shield",
+            "broadphaseTrianglePairs": 150,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 72,
+            "strictTargetTriangleCount": 19,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3262507,
+                -0.305328
+              ],
+              [
+                -0.1135384,
+                -0.0082261
+              ],
+              [
+                0.9432428,
+                1.088354
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.339497,
+                -0.3025
+              ],
+              [
+                -0.1077361,
+                0.0114663
+              ],
+              [
+                0.9584928,
+                1.0794421
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 13880,
+                "targetEvaluatedTriangle": 163,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3103505,
+                    -0.0555501,
+                    1.0186298
+                  ],
+                  [
+                    -0.3164459,
+                    -0.0677285,
+                    1.0539393
+                  ],
+                  [
+                    -0.3150209,
+                    -0.0727526,
+                    1.05396
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.0658846,
+                    1.0294005
+                  ],
+                  [
+                    -0.3235727,
+                    -0.0415388,
+                    1.0057645
+                  ],
+                  [
+                    -0.3025,
+                    -0.0450556,
+                    1.0057645
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 13880,
+                "targetEvaluatedTriangle": 1314,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3103505,
+                    -0.0555501,
+                    1.0186298
+                  ],
+                  [
+                    -0.3164459,
+                    -0.0677285,
+                    1.0539393
+                  ],
+                  [
+                    -0.3150209,
+                    -0.0727526,
+                    1.05396
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.082392,
+                    1.0560023
+                  ],
+                  [
+                    -0.3025,
+                    -0.0614886,
+                    1.0323664
+                  ],
+                  [
+                    -0.322872,
+                    -0.0580431,
+                    1.0322863
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right tapered passive load rail",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 204,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 171,
+            "strictTargetTriangleCount": 17,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2047694,
+                -0.1339782
+              ],
+              [
+                -0.0003613,
+                0.0692256
+              ],
+              [
+                0.6267039,
+                0.6965714
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2045109,
+                -0.1418882
+              ],
+              [
+                -0.0183446,
+                0.0907175
+              ],
+              [
+                0.5876939,
+                0.7134446
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 9330,
+                "targetEvaluatedTriangle": 2,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1662825,
+                    0.0203839,
+                    0.6703722
+                  ],
+                  [
+                    -0.1840316,
+                    0.0100433,
+                    0.6965629
+                  ],
+                  [
+                    -0.1826304,
+                    0.0072273,
+                    0.6965714
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1592253,
+                    0.0537403,
+                    0.7075655
+                  ],
+                  [
+                    -0.1704666,
+                    0.0503552,
+                    0.7122629
+                  ],
+                  [
+                    -0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 9331,
+                "targetEvaluatedTriangle": 2,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1662825,
+                    0.0203839,
+                    0.6703722
+                  ],
+                  [
+                    -0.1826304,
+                    0.0072273,
+                    0.6965714
+                  ],
+                  [
+                    -0.1650965,
+                    0.0177462,
+                    0.6703798
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1592253,
+                    0.0537403,
+                    0.7075655
+                  ],
+                  [
+                    -0.1704666,
+                    0.0503552,
+                    0.7122629
+                  ],
+                  [
+                    -0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Right thigh open passive truss",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 112,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 53,
+            "strictTargetTriangleCount": 24,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2241129,
+                -0.1774727
+              ],
+              [
+                0.0162933,
+                0.0577124
+              ],
+              [
+                0.6663456,
+                0.7262478
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3096848,
+                -0.18512
+              ],
+              [
+                -0.0703556,
+                0.0833976
+              ],
+              [
+                0.5083953,
+                0.7177992
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 10810,
+                "targetEvaluatedTriangle": 113,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1926183,
+                    0.0300862,
+                    0.6965
+                  ],
+                  [
+                    -0.2117794,
+                    0.0205994,
+                    0.7262372
+                  ],
+                  [
+                    -0.2104586,
+                    0.0175173,
+                    0.7262478
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1997371,
+                    0.0275937,
+                    0.707268
+                  ],
+                  [
+                    -0.297047,
+                    -0.0216838,
+                    0.6468337
+                  ],
+                  [
+                    -0.1941418,
+                    0.027988,
+                    0.70048
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 10810,
+                "targetEvaluatedTriangle": 115,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1926183,
+                    0.0300862,
+                    0.6965
+                  ],
+                  [
+                    -0.2117794,
+                    0.0205994,
+                    0.7262372
+                  ],
+                  [
+                    -0.2104586,
+                    0.0175173,
+                    0.7262478
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1941418,
+                    0.027988,
+                    0.70048
+                  ],
+                  [
+                    -0.2965821,
+                    -0.0184404,
+                    0.6436241
+                  ],
+                  [
+                    -0.1936769,
+                    0.0312313,
+                    0.6972705
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Short dorsal shell",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 367,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 300,
+            "strictTargetTriangleCount": 39,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3338009,
+                0.3338009
+              ],
+              [
+                -0.1350725,
+                0.0735085
+              ],
+              [
+                0.6066639,
+                1.2326454
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3513931,
+                0.3462934
+              ],
+              [
+                -0.1330171,
+                0.0864313
+              ],
+              [
+                0.5996429,
+                1.2377248
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20147,
+                "targetEvaluatedTriangle": 768,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2907261,
+                    0.0047812,
+                    0.8669057
+                  ],
+                  [
+                    0.2756231,
+                    0.0125014,
+                    0.8296052
+                  ],
+                  [
+                    0.2894813,
+                    0.0045077,
+                    0.8674465
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2794898,
+                    0.0112782,
+                    0.8276591
+                  ],
+                  [
+                    0.3175316,
+                    -0.0204977,
+                    0.985171
+                  ],
+                  [
+                    0.3259584,
+                    -0.0033216,
+                    0.9852093
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20145,
+                "targetEvaluatedTriangle": 768,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2915175,
+                    0.0041516,
+                    0.8663629
+                  ],
+                  [
+                    0.2768399,
+                    0.0127986,
+                    0.8290067
+                  ],
+                  [
+                    0.2907261,
+                    0.0047812,
+                    0.8669057
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2794898,
+                    0.0112782,
+                    0.8276591
+                  ],
+                  [
+                    0.3175316,
+                    -0.0204977,
+                    0.985171
+                  ],
+                  [
+                    0.3259584,
+                    -0.0033216,
+                    0.9852093
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "V19 fixed bottom hinge support -1",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 272,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 206,
+            "strictTargetTriangleCount": 34,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.1771955,
+                -0.1167901
+              ],
+              [
+                -0.045702,
+                0.0496827
+              ],
+              [
+                0.6168194,
+                0.6704996
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.1625,
+                -0.1275
+              ],
+              [
+                -0.069,
+                0.042
+              ],
+              [
+                0.628,
+                0.652
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 9280,
+                "targetEvaluatedTriangle": 104,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1396935,
+                    0.0496827,
+                    0.6301368
+                  ],
+                  [
+                    -0.1541934,
+                    0.0423581,
+                    0.648093
+                  ],
+                  [
+                    -0.1533644,
+                    0.0398673,
+                    0.6480999
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1615,
+                    0.042,
+                    0.6289999
+                  ],
+                  [
+                    -0.1615,
+                    0.042,
+                    0.651
+                  ],
+                  [
+                    -0.1285,
+                    0.042,
+                    0.651
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 9305,
+                "targetEvaluatedTriangle": 105,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1382265,
+                    0.0450894,
+                    0.6301488
+                  ],
+                  [
+                    -0.1515941,
+                    0.0349225,
+                    0.6481137
+                  ],
+                  [
+                    -0.1374424,
+                    0.042809,
+                    0.6301549
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1615,
+                    0.042,
+                    0.6289999
+                  ],
+                  [
+                    -0.1285,
+                    0.042,
+                    0.651
+                  ],
+                  [
+                    -0.1285,
+                    0.042,
+                    0.6289999
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "V19 fixed bottom hinge support 1",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 268,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 206,
+            "strictTargetTriangleCount": 33,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1154407,
+                0.1783261
+              ],
+              [
+                -0.0434002,
+                0.0473808
+              ],
+              [
+                0.6168244,
+                0.6704937
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1275,
+                0.1625
+              ],
+              [
+                -0.069,
+                0.042
+              ],
+              [
+                0.628,
+                0.652
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 10678,
+                "targetEvaluatedTriangle": 104,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1541935,
+                    0.0423581,
+                    0.6480929
+                  ],
+                  [
+                    0.1716127,
+                    0.0337031,
+                    0.6703333
+                  ],
+                  [
+                    0.1725544,
+                    0.0364085,
+                    0.6703252
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1285,
+                    0.042,
+                    0.6289999
+                  ],
+                  [
+                    0.1285,
+                    0.042,
+                    0.651
+                  ],
+                  [
+                    0.1615,
+                    0.042,
+                    0.651
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 10678,
+                "targetEvaluatedTriangle": 72,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1541935,
+                    0.0423581,
+                    0.6480929
+                  ],
+                  [
+                    0.1716127,
+                    0.0337031,
+                    0.6703333
+                  ],
+                  [
+                    0.1725544,
+                    0.0364085,
+                    0.6703252
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1285,
+                    0.041,
+                    0.652
+                  ],
+                  [
+                    0.1615,
+                    0.041,
+                    0.652
+                  ],
+                  [
+                    0.1615,
+                    0.0417071,
+                    0.6517071
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 1 4 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-mantle",
+            "fixedOwner": "right-mantle",
+            "broadphaseTrianglePairs": 155,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 99,
+            "strictTargetTriangleCount": 10,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2730271,
+                -0.228387
+              ],
+              [
+                -0.1978118,
+                -0.1739998
+              ],
+              [
+                1.2197944,
+                1.2631834
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2800769,
+                -0.2216915
+              ],
+              [
+                -0.1980329,
+                -0.1505594
+              ],
+              [
+                1.2128575,
+                1.2735575
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1785,
+                "targetEvaluatedTriangle": 590,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2641156,
+                    -0.196047,
+                    1.2352216
+                  ],
+                  [
+                    -0.270687,
+                    -0.1863839,
+                    1.2310886
+                  ],
+                  [
+                    -0.2663044,
+                    -0.1967003,
+                    1.2320032
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2554256,
+                    -0.1874254,
+                    1.2340369
+                  ],
+                  [
+                    -0.2785997,
+                    -0.1980329,
+                    1.2340369
+                  ],
+                  [
+                    -0.2784032,
+                    -0.189573,
+                    1.2128575
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1785,
+                "targetEvaluatedTriangle": 1815,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2641156,
+                    -0.196047,
+                    1.2352216
+                  ],
+                  [
+                    -0.270687,
+                    -0.1863839,
+                    1.2310886
+                  ],
+                  [
+                    -0.2663044,
+                    -0.1967003,
+                    1.2320032
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2581708,
+                    -0.1827347,
+                    1.2350371
+                  ],
+                  [
+                    -0.2799,
+                    -0.1843593,
+                    1.2139579
+                  ],
+                  [
+                    -0.2800769,
+                    -0.1928145,
+                    1.2351387
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 1 4 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-mantle",
+            "fixedOwner": "left-mantle",
+            "broadphaseTrianglePairs": 182,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 147,
+            "strictTargetTriangleCount": 12,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.2273408,
+                0.2730394
+              ],
+              [
+                -0.2082238,
+                -0.1750035
+              ],
+              [
+                1.2166103,
+                1.2660159
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.2176216,
+                0.2785997
+              ],
+              [
+                -0.2032513,
+                -0.1505594
+              ],
+              [
+                1.2117571,
+                1.274931
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1800,
+                "targetEvaluatedTriangle": 590,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2662973,
+                    -0.1967076,
+                    1.2320173
+                  ],
+                  [
+                    0.2707948,
+                    -0.1860826,
+                    1.2311072
+                  ],
+                  [
+                    0.2688786,
+                    -0.1854627,
+                    1.2342539
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2554256,
+                    -0.1874254,
+                    1.2340369
+                  ],
+                  [
+                    0.2785997,
+                    -0.1980329,
+                    1.2340369
+                  ],
+                  [
+                    0.2784032,
+                    -0.189573,
+                    1.2128575
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1817,
+                "targetEvaluatedTriangle": 590,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2687609,
+                    -0.1978945,
+                    1.2261227
+                  ],
+                  [
+                    0.2723836,
+                    -0.1858099,
+                    1.2282259
+                  ],
+                  [
+                    0.2680105,
+                    -0.1962107,
+                    1.2291228
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2554256,
+                    -0.1874254,
+                    1.2340369
+                  ],
+                  [
+                    0.2785997,
+                    -0.1980329,
+                    1.2340369
+                  ],
+                  [
+                    0.2784032,
+                    -0.189573,
+                    1.2128575
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 2 5 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-mantle",
+            "fixedOwner": "right-mantle",
+            "broadphaseTrianglePairs": 294,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 212,
+            "strictTargetTriangleCount": 30,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3191011,
+                -0.2690203
+              ],
+              [
+                -0.1983293,
+                -0.1445409
+              ],
+              [
+                1.1280602,
+                1.2168467
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3271865,
+                -0.2550385
+              ],
+              [
+                -0.1980329,
+                -0.1284807
+              ],
+              [
+                1.1069604,
+                1.2351387
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1370,
+                "targetEvaluatedTriangle": 591,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.272056,
+                    -0.188672,
+                    1.213868
+                  ],
+                  [
+                    -0.2754506,
+                    -0.1804706,
+                    1.2138425
+                  ],
+                  [
+                    -0.2757225,
+                    -0.1809385,
+                    1.2144707
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2554256,
+                    -0.1874254,
+                    1.2340369
+                  ],
+                  [
+                    -0.2784032,
+                    -0.189573,
+                    1.2128575
+                  ],
+                  [
+                    -0.2550385,
+                    -0.1787186,
+                    1.2128575
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1370,
+                "targetEvaluatedTriangle": 1814,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.272056,
+                    -0.188672,
+                    1.213868
+                  ],
+                  [
+                    -0.2754506,
+                    -0.1804706,
+                    1.2138425
+                  ],
+                  [
+                    -0.2757225,
+                    -0.1809385,
+                    1.2144707
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2581708,
+                    -0.1827347,
+                    1.2350371
+                  ],
+                  [
+                    -0.2578135,
+                    -0.174044,
+                    1.2138534
+                  ],
+                  [
+                    -0.2799,
+                    -0.1843593,
+                    1.2139579
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 2 5 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-mantle",
+            "fixedOwner": "left-mantle",
+            "broadphaseTrianglePairs": 262,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 192,
+            "strictTargetTriangleCount": 29,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.268526,
+                0.3164179
+              ],
+              [
+                -0.2030634,
+                -0.15327
+              ],
+              [
+                1.1280439,
+                1.2169373
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.2522635,
+                0.3287138
+              ],
+              [
+                -0.2032513,
+                -0.1327092
+              ],
+              [
+                1.1069604,
+                1.2340369
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1358,
+                "targetEvaluatedTriangle": 591,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2719282,
+                    -0.1888147,
+                    1.2138531
+                  ],
+                  [
+                    0.2753554,
+                    -0.1804136,
+                    1.2139063
+                  ],
+                  [
+                    0.2756779,
+                    -0.1798996,
+                    1.2133172
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2554256,
+                    -0.1874254,
+                    1.2340369
+                  ],
+                  [
+                    0.2784032,
+                    -0.189573,
+                    1.2128575
+                  ],
+                  [
+                    0.2550385,
+                    -0.1787186,
+                    1.2128575
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1359,
+                "targetEvaluatedTriangle": 591,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2719282,
+                    -0.1888147,
+                    1.2138531
+                  ],
+                  [
+                    0.2756779,
+                    -0.1798996,
+                    1.2133172
+                  ],
+                  [
+                    0.2722513,
+                    -0.1883425,
+                    1.213269
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2554256,
+                    -0.1874254,
+                    1.2340369
+                  ],
+                  [
+                    0.2784032,
+                    -0.189573,
+                    1.2128575
+                  ],
+                  [
+                    0.2550385,
+                    -0.1787186,
+                    1.2128575
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 3 6 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-mantle",
+            "fixedOwner": "right-mantle",
+            "broadphaseTrianglePairs": 203,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 159,
+            "strictTargetTriangleCount": 17,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3255682,
+                -0.3045601
+              ],
+              [
+                -0.1705699,
+                -0.1021903
+              ],
+              [
+                1.0744088,
+                1.1424798
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3459967,
+                -0.3025
+              ],
+              [
+                -0.1682096,
+                -0.0776858
+              ],
+              [
+                1.0637473,
+                1.1507087
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1099,
+                "targetEvaluatedTriangle": 882,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3095718,
+                    -0.1705699,
+                    1.1420896
+                  ],
+                  [
+                    -0.3133609,
+                    -0.1620622,
+                    1.1412814
+                  ],
+                  [
+                    -0.3101017,
+                    -0.1701391,
+                    1.141308
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.1682096,
+                    1.1493194
+                  ],
+                  [
+                    -0.3271865,
+                    -0.164305,
+                    1.1493194
+                  ],
+                  [
+                    -0.3271629,
+                    -0.1528521,
+                    1.1281399
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1098,
+                "targetEvaluatedTriangle": 882,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3095718,
+                    -0.1705699,
+                    1.1420896
+                  ],
+                  [
+                    -0.3128202,
+                    -0.1625737,
+                    1.142066
+                  ],
+                  [
+                    -0.3133609,
+                    -0.1620622,
+                    1.1412814
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.1682096,
+                    1.1493194
+                  ],
+                  [
+                    -0.3271865,
+                    -0.164305,
+                    1.1493194
+                  ],
+                  [
+                    -0.3271629,
+                    -0.1528521,
+                    1.1281399
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 3 6 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-mantle",
+            "fixedOwner": "left-mantle",
+            "broadphaseTrianglePairs": 216,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 158,
+            "strictTargetTriangleCount": 14,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.3012906,
+                0.3255768
+              ],
+              [
+                -0.1781728,
+                -0.103
+              ],
+              [
+                1.070444,
+                1.1424559
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.3025,
+                0.3287138
+              ],
+              [
+                -0.1735263,
+                -0.0925552
+              ],
+              [
+                1.0608597,
+                1.1493194
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1097,
+                "targetEvaluatedTriangle": 2107,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3100623,
+                    -0.1702932,
+                    1.1412978
+                  ],
+                  [
+                    0.3128475,
+                    -0.1625654,
+                    1.1421109
+                  ],
+                  [
+                    0.3095457,
+                    -0.1707036,
+                    1.1420603
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1735263,
+                    1.14793
+                  ],
+                  [
+                    0.3285972,
+                    -0.1575137,
+                    1.1259968
+                  ],
+                  [
+                    0.3287138,
+                    -0.1694096,
+                    1.1479785
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1097,
+                "targetEvaluatedTriangle": 882,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3100623,
+                    -0.1702932,
+                    1.1412978
+                  ],
+                  [
+                    0.3128475,
+                    -0.1625654,
+                    1.1421109
+                  ],
+                  [
+                    0.3095457,
+                    -0.1707036,
+                    1.1420603
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1682096,
+                    1.1493194
+                  ],
+                  [
+                    0.3271865,
+                    -0.164305,
+                    1.1493194
+                  ],
+                  [
+                    0.3271629,
+                    -0.1528521,
+                    1.1281399
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 4 5 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-mantle",
+            "fixedOwner": "right-mantle",
+            "broadphaseTrianglePairs": 68,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 47,
+            "strictTargetTriangleCount": 9,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3243648,
+                -0.3128029
+              ],
+              [
+                -0.1116695,
+                -0.0626667
+              ],
+              [
+                1.0378556,
+                1.068895
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3433375,
+                -0.3025
+              ],
+              [
+                -0.1163999,
+                -0.0579552
+              ],
+              [
+                1.0410689,
+                1.0857811
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1699,
+                "targetEvaluatedTriangle": 1099,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3219144,
+                    -0.0918827,
+                    1.0632466
+                  ],
+                  [
+                    -0.3178615,
+                    -0.0982103,
+                    1.0684372
+                  ],
+                  [
+                    -0.3186377,
+                    -0.0910388,
+                    1.0639828
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.1163999,
+                    1.0857811
+                  ],
+                  [
+                    -0.3252246,
+                    -0.0925552,
+                    1.0637473
+                  ],
+                  [
+                    -0.3025,
+                    -0.0962695,
+                    1.0637473
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1391,
+                "targetEvaluatedTriangle": 1099,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.316871,
+                    -0.0985031,
+                    1.0686443
+                  ],
+                  [
+                    -0.3186377,
+                    -0.0910388,
+                    1.0639828
+                  ],
+                  [
+                    -0.3178615,
+                    -0.0982103,
+                    1.0684372
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.1163999,
+                    1.0857811
+                  ],
+                  [
+                    -0.3252246,
+                    -0.0925552,
+                    1.0637473
+                  ],
+                  [
+                    -0.3025,
+                    -0.0962695,
+                    1.0637473
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 4 5 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right profiled mantle backing v4 right-wing-shield",
+            "fixedOwner": "right-wing-shield",
+            "broadphaseTrianglePairs": 118,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 89,
+            "strictTargetTriangleCount": 10,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.3243648,
+                -0.3119057
+              ],
+              [
+                -0.1116695,
+                -0.0514619
+              ],
+              [
+                1.0142013,
+                1.068895
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3427594,
+                -0.3025
+              ],
+              [
+                -0.1077361,
+                -0.0374079
+              ],
+              [
+                1.0057645,
+                1.0794421
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1699,
+                "targetEvaluatedTriangle": 18,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.3219144,
+                    -0.0918827,
+                    1.0632466
+                  ],
+                  [
+                    -0.3178615,
+                    -0.0982103,
+                    1.0684372
+                  ],
+                  [
+                    -0.3186377,
+                    -0.0910388,
+                    1.0639828
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.1077361,
+                    1.0766723
+                  ],
+                  [
+                    -0.3255928,
+                    -0.1039778,
+                    1.0766723
+                  ],
+                  [
+                    -0.3249195,
+                    -0.0831024,
+                    1.0530363
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1391,
+                "targetEvaluatedTriangle": 18,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.316871,
+                    -0.0985031,
+                    1.0686443
+                  ],
+                  [
+                    -0.3186377,
+                    -0.0910388,
+                    1.0639828
+                  ],
+                  [
+                    -0.3178615,
+                    -0.0982103,
+                    1.0684372
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.3025,
+                    -0.1077361,
+                    1.0766723
+                  ],
+                  [
+                    -0.3255928,
+                    -0.1039778,
+                    1.0766723
+                  ],
+                  [
+                    -0.3249195,
+                    -0.0831024,
+                    1.0530363
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 4 5 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-mantle",
+            "fixedOwner": "left-mantle",
+            "broadphaseTrianglePairs": 96,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 64,
+            "strictTargetTriangleCount": 9,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.3097168,
+                0.3243641
+              ],
+              [
+                -0.1171274,
+                -0.0626832
+              ],
+              [
+                1.034642,
+                1.0728992
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.3025,
+                0.3272209
+              ],
+              [
+                -0.120779,
+                -0.0725552
+              ],
+              [
+                1.038103,
+                1.0857811
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1699,
+                "targetEvaluatedTriangle": 1099,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3211233,
+                    -0.0991072,
+                    1.0676733
+                  ],
+                  [
+                    0.3186447,
+                    -0.0910362,
+                    1.0639949
+                  ],
+                  [
+                    0.317869,
+                    -0.0982055,
+                    1.0684489
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1163999,
+                    1.0857811
+                  ],
+                  [
+                    0.3252246,
+                    -0.0925552,
+                    1.0637473
+                  ],
+                  [
+                    0.3025,
+                    -0.0962695,
+                    1.0637473
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1388,
+                "targetEvaluatedTriangle": 1099,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.317869,
+                    -0.0982055,
+                    1.0684489
+                  ],
+                  [
+                    0.3186447,
+                    -0.0910362,
+                    1.0639949
+                  ],
+                  [
+                    0.3176569,
+                    -0.091357,
+                    1.064199
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1163999,
+                    1.0857811
+                  ],
+                  [
+                    0.3252246,
+                    -0.0925552,
+                    1.0637473
+                  ],
+                  [
+                    0.3025,
+                    -0.0962695,
+                    1.0637473
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 4 5 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left profiled mantle backing v4 left-wing-shield",
+            "fixedOwner": "left-wing-shield",
+            "broadphaseTrianglePairs": 172,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 117,
+            "strictTargetTriangleCount": 12,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.3089871,
+                0.3243641
+              ],
+              [
+                -0.1171274,
+                -0.047178
+              ],
+              [
+                1.0011086,
+                1.0728992
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.3025,
+                0.3268851
+              ],
+              [
+                -0.1121179,
+                -0.0216631
+              ],
+              [
+                0.9787356,
+                1.0766723
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1699,
+                "targetEvaluatedTriangle": 18,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.3211233,
+                    -0.0991072,
+                    1.0676733
+                  ],
+                  [
+                    0.3186447,
+                    -0.0910362,
+                    1.0639949
+                  ],
+                  [
+                    0.317869,
+                    -0.0982055,
+                    1.0684489
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1077361,
+                    1.0766723
+                  ],
+                  [
+                    0.3255928,
+                    -0.1039778,
+                    1.0766723
+                  ],
+                  [
+                    0.3249195,
+                    -0.0831024,
+                    1.0530363
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1388,
+                "targetEvaluatedTriangle": 18,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.317869,
+                    -0.0982055,
+                    1.0684489
+                  ],
+                  [
+                    0.3186447,
+                    -0.0910362,
+                    1.0639949
+                  ],
+                  [
+                    0.3176569,
+                    -0.091357,
+                    1.064199
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.3025,
+                    -0.1077361,
+                    1.0766723
+                  ],
+                  [
+                    0.3255928,
+                    -0.1039778,
+                    1.0766723
+                  ],
+                  [
+                    0.3249195,
+                    -0.0831024,
+                    1.0530363
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 8 4 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right open stepped bearing race 1",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 29,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 21,
+            "strictTargetTriangleCount": 4,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2140022,
+                -0.1883754
+              ],
+              [
+                0.0177825,
+                0.0274083
+              ],
+              [
+                0.7010303,
+                0.7227208
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.1945461,
+                -0.183054
+              ],
+              [
+                0.0217657,
+                0.0538055
+              ],
+              [
+                0.7064458,
+                0.7264491
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1670,
+                "targetEvaluatedTriangle": 180,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2069899,
+                    0.0209426,
+                    0.7091753
+                  ],
+                  [
+                    -0.1883754,
+                    0.0272829,
+                    0.7227208
+                  ],
+                  [
+                    -0.1894872,
+                    0.0267843,
+                    0.7221001
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1944693,
+                    0.0217657,
+                    0.7264491
+                  ],
+                  [
+                    -0.1945097,
+                    0.0271843,
+                    0.7161502
+                  ],
+                  [
+                    -0.183054,
+                    0.0268216,
+                    0.7155107
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1683,
+                "targetEvaluatedTriangle": 184,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1883754,
+                    0.0272829,
+                    0.7227208
+                  ],
+                  [
+                    -0.2054471,
+                    0.0274083,
+                    0.7045014
+                  ],
+                  [
+                    -0.1886552,
+                    0.0273828,
+                    0.722381
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1945097,
+                    0.0271843,
+                    0.7161502
+                  ],
+                  [
+                    -0.1944537,
+                    0.049194,
+                    0.7243985
+                  ],
+                  [
+                    -0.1944777,
+                    0.0538055,
+                    0.7180098
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 8 4 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Right thigh open passive truss",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 34,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 30,
+            "strictTargetTriangleCount": 3,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2135941,
+                -0.1883754
+              ],
+              [
+                0.0209426,
+                0.0274083
+              ],
+              [
+                0.6965432,
+                0.7227208
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.3026423,
+                -0.1941418
+              ],
+              [
+                -0.022078,
+                0.0305954
+              ],
+              [
+                0.6468337,
+                0.7082189
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1683,
+                "targetEvaluatedTriangle": 127,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1883754,
+                    0.0272829,
+                    0.7227208
+                  ],
+                  [
+                    -0.2054471,
+                    0.0274083,
+                    0.7045014
+                  ],
+                  [
+                    -0.1886552,
+                    0.0273828,
+                    0.722381
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2027015,
+                    0.0305954,
+                    0.7082189
+                  ],
+                  [
+                    -0.3026423,
+                    -0.022078,
+                    0.6536217
+                  ],
+                  [
+                    -0.1997371,
+                    0.0275937,
+                    0.707268
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 2261,
+                "targetEvaluatedTriangle": 127,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2069899,
+                    0.0209426,
+                    0.7091753
+                  ],
+                  [
+                    -0.2053385,
+                    0.0273082,
+                    0.7045702
+                  ],
+                  [
+                    -0.1883754,
+                    0.0272829,
+                    0.7227208
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2027015,
+                    0.0305954,
+                    0.7082189
+                  ],
+                  [
+                    -0.3026423,
+                    -0.022078,
+                    0.6536217
+                  ],
+                  [
+                    -0.1997371,
+                    0.0275937,
+                    0.707268
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 8 4 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left open stepped bearing race -1",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 29,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 23,
+            "strictTargetTriangleCount": 4,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1883471,
+                0.2150378
+              ],
+              [
+                0.0177816,
+                0.0274075
+              ],
+              [
+                0.7044661,
+                0.7227412
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1830135,
+                0.1945461
+              ],
+              [
+                0.0214031,
+                0.0538055
+              ],
+              [
+                0.7064458,
+                0.7264491
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 2028,
+                "targetEvaluatedTriangle": 178,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2150378,
+                    0.0235297,
+                    0.708898
+                  ],
+                  [
+                    0.2125675,
+                    0.0247894,
+                    0.7052133
+                  ],
+                  [
+                    0.1887808,
+                    0.0271222,
+                    0.7226793
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1944693,
+                    0.0217657,
+                    0.7264491
+                  ],
+                  [
+                    0.1945097,
+                    0.0271843,
+                    0.7161502
+                  ],
+                  [
+                    0.1944537,
+                    0.049194,
+                    0.7243985
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 2029,
+                "targetEvaluatedTriangle": 178,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2150378,
+                    0.0235297,
+                    0.708898
+                  ],
+                  [
+                    0.1887808,
+                    0.0271222,
+                    0.7226793
+                  ],
+                  [
+                    0.2130316,
+                    0.0183125,
+                    0.7088895
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1944693,
+                    0.0217657,
+                    0.7264491
+                  ],
+                  [
+                    0.1945097,
+                    0.0271843,
+                    0.7161502
+                  ],
+                  [
+                    0.1944537,
+                    0.049194,
+                    0.7243985
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 8 4 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Left thigh open passive truss",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 34,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 30,
+            "strictTargetTriangleCount": 3,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1883471,
+                0.212404
+              ],
+              [
+                0.0137674,
+                0.0274075
+              ],
+              [
+                0.6965432,
+                0.7227412
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1941418,
+                0.3056067
+              ],
+              [
+                -0.022078,
+                0.0305954
+              ],
+              [
+                0.6536217,
+                0.7082189
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 2263,
+                "targetEvaluatedTriangle": 31,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2049176,
+                    0.0228669,
+                    0.7054182
+                  ],
+                  [
+                    0.1883471,
+                    0.0272853,
+                    0.7227412
+                  ],
+                  [
+                    0.2053382,
+                    0.0273074,
+                    0.7045701
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1997371,
+                    0.0275937,
+                    0.707268
+                  ],
+                  [
+                    0.3056067,
+                    -0.0190763,
+                    0.6545725
+                  ],
+                  [
+                    0.2027015,
+                    0.0305954,
+                    0.7082189
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1689,
+                "targetEvaluatedTriangle": 31,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1886272,
+                    0.0273851,
+                    0.7224013
+                  ],
+                  [
+                    0.2053382,
+                    0.0273074,
+                    0.7045701
+                  ],
+                  [
+                    0.1883471,
+                    0.0272853,
+                    0.7227412
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1997371,
+                    0.0275937,
+                    0.707268
+                  ],
+                  [
+                    0.3056067,
+                    -0.0190763,
+                    0.6545725
+                  ],
+                  [
+                    0.2027015,
+                    0.0305954,
+                    0.7082189
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "open": 0.25,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.2750000059604645,
+            -0.0,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "runtimeInspectionAxis": "x",
+          "runtimeInspectionRadiansAtThisOpen": 0.275,
+          "nativeEquivalentLocalAxis": "X",
+          "nativeEquivalentLocalRadiansAtThisOpen": 0.275,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.02
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.9624251127243042,
+            -0.2715469300746918,
+            -0.07406974583864212
+          ],
+          [
+            0.0,
+            0.2715469300746918,
+            0.9624251127243042,
+            -0.12623953819274902
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.9624251127243042,
+            -0.2715469300746918,
+            -0.07699999958276749
+          ],
+          [
+            0.0,
+            0.2715469300746918,
+            0.9624251127243042,
+            0.625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 9,
+        "broadphaseCandidatePairs": 9,
+        "movingAssemblyMinimumWorldZ": 0.613611102104187,
+        "movingAssemblyBelowNativeFloor": false,
+        "pairs": [
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left open stepped bearing race -1",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 48,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 24,
+            "strictTargetTriangleCount": 12,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1639482,
+                0.2047695
+              ],
+              [
+                0.0206673,
+                0.0530988
+              ],
+              [
+                0.6819029,
+                0.7273276
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1830135,
+                0.1945776
+              ],
+              [
+                0.0214031,
+                0.058985
+              ],
+              [
+                0.6969352,
+                0.7264491
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20001,
+                "targetEvaluatedTriangle": 193,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1847906,
+                    0.0405812,
+                    0.7025312
+                  ],
+                  [
+                    0.1657743,
+                    0.0530988,
+                    0.6841583
+                  ],
+                  [
+                    0.1831744,
+                    0.04087,
+                    0.7033338
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1830904,
+                    0.0338264,
+                    0.7058063
+                  ],
+                  [
+                    0.1830427,
+                    0.058985,
+                    0.7115301
+                  ],
+                  [
+                    0.1831219,
+                    0.0422449,
+                    0.6969352
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20000,
+                "targetEvaluatedTriangle": 193,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1847906,
+                    0.0405812,
+                    0.7025312
+                  ],
+                  [
+                    0.1678605,
+                    0.0527312,
+                    0.6835662
+                  ],
+                  [
+                    0.1657743,
+                    0.0530988,
+                    0.6841583
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1830904,
+                    0.0338264,
+                    0.7058063
+                  ],
+                  [
+                    0.1830427,
+                    0.058985,
+                    0.7115301
+                  ],
+                  [
+                    0.1831219,
+                    0.0422449,
+                    0.6969352
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "left tapered passive load rail.001",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 126,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 101,
+            "strictTargetTriangleCount": 11,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1363827,
+                0.1864013
+              ],
+              [
+                0.0118207,
+                0.0686507
+              ],
+              [
+                0.6478819,
+                0.7043361
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1418882,
+                0.1931669
+              ],
+              [
+                -0.0183446,
+                0.081807
+              ],
+              [
+                0.5912551,
+                0.7134446
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20001,
+                "targetEvaluatedTriangle": 7,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1847906,
+                    0.0405812,
+                    0.7025312
+                  ],
+                  [
+                    0.1657743,
+                    0.0530988,
+                    0.6841583
+                  ],
+                  [
+                    0.1831744,
+                    0.04087,
+                    0.7033338
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1828901,
+                    0.0523777,
+                    0.7134446
+                  ],
+                  [
+                    0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ],
+                  [
+                    0.1831771,
+                    -0.0162022,
+                    0.6251253
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20000,
+                "targetEvaluatedTriangle": 7,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1847906,
+                    0.0405812,
+                    0.7025312
+                  ],
+                  [
+                    0.1678605,
+                    0.0527312,
+                    0.6835662
+                  ],
+                  [
+                    0.1657743,
+                    0.0530988,
+                    0.6841583
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1828901,
+                    0.0523777,
+                    0.7134446
+                  ],
+                  [
+                    0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ],
+                  [
+                    0.1831771,
+                    -0.0162022,
+                    0.6251253
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Limb sheath fixing.001",
+            "fixedOwner": "left-thigh",
+            "broadphaseTrianglePairs": 24,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 10,
+            "strictTargetTriangleCount": 14,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1751203,
+                0.2176475
+              ],
+              [
+                -0.0015563,
+                0.0330489
+              ],
+              [
+                0.7016245,
+                0.7530198
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1942799,
+                0.2021233
+              ],
+              [
+                0.0119123,
+                0.0214191
+              ],
+              [
+                0.7212532,
+                0.7298062
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 12286,
+                "targetEvaluatedTriangle": 21,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1965063,
+                    0.0179916,
+                    0.726064
+                  ],
+                  [
+                    0.2165436,
+                    0.0014419,
+                    0.7522917
+                  ],
+                  [
+                    0.2176475,
+                    0.0042675,
+                    0.7530198
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2006139,
+                    0.0212765,
+                    0.7262057
+                  ],
+                  [
+                    0.1974029,
+                    0.0152121,
+                    0.729636
+                  ],
+                  [
+                    0.2000474,
+                    0.0150695,
+                    0.7298062
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 12287,
+                "targetEvaluatedTriangle": 22,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1965063,
+                    0.0179916,
+                    0.726064
+                  ],
+                  [
+                    0.2176475,
+                    0.0042675,
+                    0.7530198
+                  ],
+                  [
+                    0.1974386,
+                    0.0206673,
+                    0.7267471
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1979694,
+                    0.0214191,
+                    0.7260356
+                  ],
+                  [
+                    0.1957664,
+                    0.0209043,
+                    0.7248014
+                  ],
+                  [
+                    0.1951999,
+                    0.0146973,
+                    0.7284018
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Limb sheath fixing.012",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 23,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 10,
+            "strictTargetTriangleCount": 13,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2165436,
+                -0.1758895
+              ],
+              [
+                -0.0045718,
+                0.0355334
+              ],
+              [
+                0.7023721,
+                0.7522918
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2000474,
+                -0.1942799
+              ],
+              [
+                0.0117697,
+                0.0214191
+              ],
+              [
+                0.7202944,
+                0.7298062
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 10778,
+                "targetEvaluatedTriangle": 21,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1965062,
+                    0.0179916,
+                    0.7260641
+                  ],
+                  [
+                    -0.2165436,
+                    0.0014418,
+                    0.7522918
+                  ],
+                  [
+                    -0.2154276,
+                    -0.0015564,
+                    0.7514553
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1979694,
+                    0.0214191,
+                    0.7260356
+                  ],
+                  [
+                    -0.2000474,
+                    0.0150695,
+                    0.7298062
+                  ],
+                  [
+                    -0.1974029,
+                    0.0152121,
+                    0.729636
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 10779,
+                "targetEvaluatedTriangle": 21,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1965062,
+                    0.0179916,
+                    0.7260641
+                  ],
+                  [
+                    -0.2154276,
+                    -0.0015564,
+                    0.7514553
+                  ],
+                  [
+                    -0.1955977,
+                    0.0151543,
+                    0.725274
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1979694,
+                    0.0214191,
+                    0.7260356
+                  ],
+                  [
+                    -0.2000474,
+                    0.0150695,
+                    0.7298062
+                  ],
+                  [
+                    -0.1974029,
+                    0.0152121,
+                    0.729636
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Passive rib behind access cover",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 56,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 38,
+            "strictTargetTriangleCount": 14,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2409681,
+                0.2421502
+              ],
+              [
+                -0.0165759,
+                0.0263932
+              ],
+              [
+                0.726064,
+                0.7826994
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2371772,
+                0.2298866
+              ],
+              [
+                -0.0303927,
+                0.0351399
+              ],
+              [
+                0.7500253,
+                0.7634068
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20057,
+                "targetEvaluatedTriangle": 12,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2213131,
+                    0.0098511,
+                    0.7534142
+                  ],
+                  [
+                    -0.2396523,
+                    -0.0090066,
+                    0.7826994
+                  ],
+                  [
+                    -0.2200029,
+                    0.0086478,
+                    0.7536796
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2371772,
+                    0.0340498,
+                    0.7634068
+                  ],
+                  [
+                    -0.2352286,
+                    0.0343887,
+                    0.7567098
+                  ],
+                  [
+                    -0.2215799,
+                    0.0025763,
+                    0.7567098
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20057,
+                "targetEvaluatedTriangle": 13,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.2213131,
+                    0.0098511,
+                    0.7534142
+                  ],
+                  [
+                    -0.2396523,
+                    -0.0090066,
+                    0.7826994
+                  ],
+                  [
+                    -0.2200029,
+                    0.0086478,
+                    0.7536796
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2371772,
+                    0.0340498,
+                    0.7634068
+                  ],
+                  [
+                    -0.2215799,
+                    0.0025763,
+                    0.7567098
+                  ],
+                  [
+                    -0.2233421,
+                    0.0022069,
+                    0.7634068
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right open stepped bearing race 1",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 40,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 22,
+            "strictTargetTriangleCount": 10,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2047694,
+                -0.1657742
+              ],
+              [
+                0.0179916,
+                0.0530988
+              ],
+              [
+                0.6829218,
+                0.7273276
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.1945461,
+                -0.1830219
+              ],
+              [
+                0.0217657,
+                0.058985
+              ],
+              [
+                0.6969352,
+                0.7264491
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 9233,
+                "targetEvaluatedTriangle": 180,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1785148,
+                    0.0376825,
+                    0.7042243
+                  ],
+                  [
+                    -0.1974386,
+                    0.0206673,
+                    0.7267471
+                  ],
+                  [
+                    -0.1774727,
+                    0.0355334,
+                    0.7037644
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1944693,
+                    0.0217657,
+                    0.7264491
+                  ],
+                  [
+                    -0.1945097,
+                    0.0271843,
+                    0.7161502
+                  ],
+                  [
+                    -0.183054,
+                    0.0268216,
+                    0.7155107
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 9233,
+                "targetEvaluatedTriangle": 186,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1785148,
+                    0.0376825,
+                    0.7042243
+                  ],
+                  [
+                    -0.1974386,
+                    0.0206673,
+                    0.7267471
+                  ],
+                  [
+                    -0.1774727,
+                    0.0355334,
+                    0.7037644
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.183054,
+                    0.0268216,
+                    0.7155107
+                  ],
+                  [
+                    -0.1830904,
+                    0.0338264,
+                    0.7058063
+                  ],
+                  [
+                    -0.1830219,
+                    0.0534428,
+                    0.7173703
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "right tapered passive load rail",
+            "fixedOwner": "right-thigh",
+            "broadphaseTrianglePairs": 120,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 99,
+            "strictTargetTriangleCount": 10,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.1864013,
+                -0.1371803
+              ],
+              [
+                0.0091886,
+                0.0686508
+              ],
+              [
+                0.6484689,
+                0.704336
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.1970377,
+                -0.1418882
+              ],
+              [
+                -0.0183446,
+                0.081807
+              ],
+              [
+                0.598877,
+                0.7134446
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 9219,
+                "targetEvaluatedTriangle": 4,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1606945,
+                    0.0501197,
+                    0.6852221
+                  ],
+                  [
+                    -0.1774727,
+                    0.0355334,
+                    0.7037644
+                  ],
+                  [
+                    -0.1593217,
+                    0.0483855,
+                    0.6844903
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1704666,
+                    0.0503552,
+                    0.7122629
+                  ],
+                  [
+                    -0.1828901,
+                    0.0523777,
+                    0.7134446
+                  ],
+                  [
+                    -0.1831771,
+                    -0.0162022,
+                    0.6251253
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 9219,
+                "targetEvaluatedTriangle": 5,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1606945,
+                    0.0501197,
+                    0.6852221
+                  ],
+                  [
+                    -0.1774727,
+                    0.0355334,
+                    0.7037644
+                  ],
+                  [
+                    -0.1593217,
+                    0.0483855,
+                    0.6844903
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1704666,
+                    0.0503552,
+                    0.7122629
+                  ],
+                  [
+                    -0.1831771,
+                    -0.0162022,
+                    0.6251253
+                  ],
+                  [
+                    -0.1666431,
+                    -0.0183446,
+                    0.6236717
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "V19 fixed bottom hinge support -1",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 100,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 74,
+            "strictTargetTriangleCount": 18,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.1487983,
+                -0.1195107
+              ],
+              [
+                -0.0252453,
+                0.0498532
+              ],
+              [
+                0.6371476,
+                0.6660386
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.1615,
+                -0.1275
+              ],
+              [
+                -0.069,
+                0.042
+              ],
+              [
+                0.6289999,
+                0.652
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 162,
+                "targetEvaluatedTriangle": 106,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1380231,
+                    0.0144845,
+                    0.6525896
+                  ],
+                  [
+                    -0.1368048,
+                    0.0123049,
+                    0.6519752
+                  ],
+                  [
+                    -0.1487983,
+                    -0.0024502,
+                    0.6660386
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1615,
+                    -0.069,
+                    0.652
+                  ],
+                  [
+                    -0.1285,
+                    -0.069,
+                    0.652
+                  ],
+                  [
+                    -0.1285,
+                    0.041,
+                    0.652
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 177,
+                "targetEvaluatedTriangle": 106,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1368048,
+                    0.0123049,
+                    0.6519752
+                  ],
+                  [
+                    -0.147399,
+                    -0.0048225,
+                    0.6653694
+                  ],
+                  [
+                    -0.1487983,
+                    -0.0024502,
+                    0.6660386
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.1615,
+                    -0.069,
+                    0.652
+                  ],
+                  [
+                    -0.1285,
+                    -0.069,
+                    0.652
+                  ],
+                  [
+                    -0.1285,
+                    0.041,
+                    0.652
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "V19 fixed bottom hinge support 1",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 104,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 77,
+            "strictTargetTriangleCount": 16,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1182263,
+                0.1501671
+              ],
+              [
+                -0.0252453,
+                0.0478813
+              ],
+              [
+                0.6366192,
+                0.6667129
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1275,
+                0.1615
+              ],
+              [
+                -0.069,
+                0.042
+              ],
+              [
+                0.6289999,
+                0.652
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1422,
+                "targetEvaluatedTriangle": 74,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1363827,
+                    0.0440193,
+                    0.6478819
+                  ],
+                  [
+                    0.1371804,
+                    0.0461034,
+                    0.6484689
+                  ],
+                  [
+                    0.1484464,
+                    0.0367276,
+                    0.6588616
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1285,
+                    0.0417071,
+                    0.6517071
+                  ],
+                  [
+                    0.1615,
+                    0.0417071,
+                    0.6517071
+                  ],
+                  [
+                    0.1615,
+                    0.042,
+                    0.651
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1422,
+                "targetEvaluatedTriangle": 75,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1363827,
+                    0.0440193,
+                    0.6478819
+                  ],
+                  [
+                    0.1371804,
+                    0.0461034,
+                    0.6484689
+                  ],
+                  [
+                    0.1484464,
+                    0.0367276,
+                    0.6588616
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1285,
+                    0.0417071,
+                    0.6517071
+                  ],
+                  [
+                    0.1615,
+                    0.042,
+                    0.651
+                  ],
+                  [
+                    0.1285,
+                    0.042,
+                    0.651
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "open": 0.5,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.550000011920929,
+            -0.0,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "runtimeInspectionAxis": "x",
+          "runtimeInspectionRadiansAtThisOpen": 0.55,
+          "nativeEquivalentLocalAxis": "X",
+          "nativeEquivalentLocalRadiansAtThisOpen": 0.55,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.04
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.8525245189666748,
+            -0.5226872563362122,
+            -0.07406974583864212
+          ],
+          [
+            0.0,
+            0.5226872563362122,
+            0.8525245189666748,
+            -0.12623953819274902
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.8525245189666748,
+            -0.5226872563362122,
+            -0.07699999958276749
+          ],
+          [
+            0.0,
+            0.5226872563362122,
+            0.8525245189666748,
+            0.625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 3,
+        "broadphaseCandidatePairs": 3,
+        "movingAssemblyMinimumWorldZ": 0.6190045475959778,
+        "movingAssemblyBelowNativeFloor": false,
+        "pairs": [
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Passive rib behind access cover",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 102,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 39,
+            "strictTargetTriangleCount": 18,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2241129,
+                0.2241129
+              ],
+              [
+                -0.0414017,
+                -0.0050281
+              ],
+              [
+                0.7449852,
+                0.7721732
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2233421,
+                0.2193076
+              ],
+              [
+                -0.0455275,
+                0.0225862
+              ],
+              [
+                0.7500253,
+                0.7634068
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20080,
+                "targetEvaluatedTriangle": 426,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2235633,
+                    -0.0277812,
+                    0.7708257
+                  ],
+                  [
+                    0.2037714,
+                    -0.0050932,
+                    0.7497865
+                  ],
+                  [
+                    0.2025331,
+                    -0.0050281,
+                    0.7506715
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.2036216,
+                    -0.009908,
+                    0.7500253
+                  ],
+                  [
+                    0.1983375,
+                    -0.0080588,
+                    0.751815
+                  ],
+                  [
+                    0.2134475,
+                    0.0225862,
+                    0.751815
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20080,
+                "targetEvaluatedTriangle": 397,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2235633,
+                    -0.0277812,
+                    0.7708257
+                  ],
+                  [
+                    0.2037714,
+                    -0.0050932,
+                    0.7497865
+                  ],
+                  [
+                    0.2025331,
+                    -0.0050281,
+                    0.7506715
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1933378,
+                    -0.0455275,
+                    0.7634068
+                  ],
+                  [
+                    0.2130479,
+                    -0.0128856,
+                    0.7567098
+                  ],
+                  [
+                    0.2146958,
+                    -0.0132947,
+                    0.7634068
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 8 4 left",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Passive rib behind access cover",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 25,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 21,
+            "strictTargetTriangleCount": 3,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2140022,
+                -0.1883754
+              ],
+              [
+                -0.0396666,
+                -0.0287583
+              ],
+              [
+                0.7437597,
+                0.7628167
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2035658,
+                -0.1762428
+              ],
+              [
+                -0.0615459,
+                -0.0289199
+              ],
+              [
+                0.751815,
+                0.7634068
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 1682,
+                "targetEvaluatedTriangle": 62,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1883754,
+                    -0.0391737,
+                    0.7628167
+                  ],
+                  [
+                    -0.2053385,
+                    -0.029665,
+                    0.7473561
+                  ],
+                  [
+                    -0.2054471,
+                    -0.0295437,
+                    0.7473497
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2020462,
+                    -0.0303927,
+                    0.7567098
+                  ],
+                  [
+                    -0.1982776,
+                    -0.0289199,
+                    0.751815
+                  ],
+                  [
+                    -0.1762428,
+                    -0.0595507,
+                    0.751815
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 1683,
+                "targetEvaluatedTriangle": 62,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    -0.1883754,
+                    -0.0391737,
+                    0.7628167
+                  ],
+                  [
+                    -0.2054471,
+                    -0.0295437,
+                    0.7473497
+                  ],
+                  [
+                    -0.1886552,
+                    -0.0389109,
+                    0.7625792
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    -0.2020462,
+                    -0.0303927,
+                    0.7567098
+                  ],
+                  [
+                    -0.1982776,
+                    -0.0289199,
+                    0.751815
+                  ],
+                  [
+                    -0.1762428,
+                    -0.0595507,
+                    0.751815
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "movingMesh": "V17 breast directional lamina 8 4 right",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Passive rib behind access cover",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 27,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 23,
+            "strictTargetTriangleCount": 3,
+            "movingCrossingBoundsXYZ": [
+              [
+                0.1883471,
+                0.2150378
+              ],
+              [
+                -0.0415595,
+                -0.0295444
+              ],
+              [
+                0.7453395,
+                0.7628353
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                0.1883748,
+                0.2130479
+              ],
+              [
+                -0.0455275,
+                -0.0116687
+              ],
+              [
+                0.751815,
+                0.7634068
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 2029,
+                "targetEvaluatedTriangle": 396,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2150378,
+                    -0.0351484,
+                    0.7490706
+                  ],
+                  [
+                    0.1887808,
+                    -0.039289,
+                    0.7626973
+                  ],
+                  [
+                    0.2130316,
+                    -0.0395917,
+                    0.7463365
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1933378,
+                    -0.0455275,
+                    0.7634068
+                  ],
+                  [
+                    0.1919193,
+                    -0.0450111,
+                    0.7567098
+                  ],
+                  [
+                    0.2130479,
+                    -0.0128856,
+                    0.7567098
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 2028,
+                "targetEvaluatedTriangle": 396,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2150378,
+                    -0.0351484,
+                    0.7490706
+                  ],
+                  [
+                    0.2125675,
+                    -0.0321485,
+                    0.7465878
+                  ],
+                  [
+                    0.1887808,
+                    -0.039289,
+                    0.7626973
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1933378,
+                    -0.0455275,
+                    0.7634068
+                  ],
+                  [
+                    0.1919193,
+                    -0.0450111,
+                    0.7567098
+                  ],
+                  [
+                    0.2130479,
+                    -0.0128856,
+                    0.7567098
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "open": 0.75,
+        "pose": {
+          "runtimeEulerXYZ": [
+            0.824999988079071,
+            -0.0,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "runtimeInspectionAxis": "x",
+          "runtimeInspectionRadiansAtThisOpen": 0.8250000000000001,
+          "nativeEquivalentLocalAxis": "X",
+          "nativeEquivalentLocalRadiansAtThisOpen": 0.8250000000000001,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.06
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6785570383071899,
+            -0.7345477342605591,
+            -0.07406974583864212
+          ],
+          [
+            0.0,
+            0.7345477342605591,
+            0.6785570383071899,
+            -0.12623953819274902
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6785570383071899,
+            -0.7345477342605591,
+            -0.07699999958276749
+          ],
+          [
+            0.0,
+            0.7345477342605591,
+            0.6785570383071899,
+            0.625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 1,
+        "broadphaseCandidatePairs": 1,
+        "movingAssemblyMinimumWorldZ": 0.6148771047592163,
+        "movingAssemblyBelowNativeFloor": false,
+        "pairs": [
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Passive rib behind access cover",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 140,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 50,
+            "strictTargetTriangleCount": 30,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2047694,
+                0.2047695
+              ],
+              [
+                -0.0548631,
+                -0.0172836
+              ],
+              [
+                0.7430545,
+                0.7658035
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.211613,
+                0.2146958
+              ],
+              [
+                -0.0759663,
+                0.0064694
+              ],
+              [
+                0.7500253,
+                0.7701138
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20008,
+                "targetEvaluatedTriangle": 405,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2045735,
+                    -0.0420957,
+                    0.7632942
+                  ],
+                  [
+                    0.1859545,
+                    -0.0176672,
+                    0.7512996
+                  ],
+                  [
+                    0.1847906,
+                    -0.0172836,
+                    0.7525555
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1789351,
+                    -0.0381002,
+                    0.751815
+                  ],
+                  [
+                    0.1945709,
+                    -0.0066539,
+                    0.7567098
+                  ],
+                  [
+                    0.1983375,
+                    -0.0080588,
+                    0.751815
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20008,
+                "targetEvaluatedTriangle": 396,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.2045735,
+                    -0.0420957,
+                    0.7632942
+                  ],
+                  [
+                    0.1859545,
+                    -0.0176672,
+                    0.7512996
+                  ],
+                  [
+                    0.1847906,
+                    -0.0172836,
+                    0.7525555
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1933378,
+                    -0.0455275,
+                    0.7634068
+                  ],
+                  [
+                    0.1919193,
+                    -0.0450111,
+                    0.7567098
+                  ],
+                  [
+                    0.2130479,
+                    -0.0128856,
+                    0.7567098
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "open": 1.0,
+        "pose": {
+          "runtimeEulerXYZ": [
+            1.100000023841858,
+            -0.0,
+            0.0
+          ],
+          "preservedRuntimeEulerXandZ": {
+            "x": 0.0,
+            "z": 0.0
+          },
+          "runtimeInspectionAxis": "x",
+          "runtimeInspectionRadiansAtThisOpen": 1.1,
+          "nativeEquivalentLocalAxis": "X",
+          "nativeEquivalentLocalRadiansAtThisOpen": 1.1,
+          "runtimeBreastplateSeparationOffset": [
+            -0.7,
+            -0.12,
+            0.18
+          ],
+          "nativeBreastplateSeparationOffset": [
+            -0.7,
+            -0.18,
+            -0.12
+          ],
+          "separation": 0.0,
+          "runtimeCranialCoverTranslationY": 0.08
+        },
+        "breastplateParent": "body",
+        "breastplateLocalMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4535960853099823,
+            -0.8912073969841003,
+            -0.07406974583864212
+          ],
+          [
+            0.0,
+            0.8912073969841003,
+            0.4535960853099823,
+            -0.12623953819274902
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "breastplateWorldMatrixNative": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4535960853099823,
+            -0.8912073969841003,
+            -0.07699999958276749
+          ],
+          [
+            0.0,
+            0.8912073969841003,
+            0.4535960853099823,
+            0.625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "strictCrossingPairs": 1,
+        "broadphaseCandidatePairs": 1,
+        "movingAssemblyMinimumWorldZ": 0.5638816952705383,
+        "movingAssemblyBelowNativeFloor": false,
+        "pairs": [
+          {
+            "movingMesh": "Breast inner access shell",
+            "movingOwner": "breastplate",
+            "fixedMesh": "Passive rib behind access cover",
+            "fixedOwner": "body",
+            "broadphaseTrianglePairs": 178,
+            "strictCrossing": true,
+            "strictSubjectTriangleCount": 105,
+            "strictTargetTriangleCount": 34,
+            "movingCrossingBoundsXYZ": [
+              [
+                -0.2047694,
+                0.2045735
+              ],
+              [
+                -0.0908119,
+                -0.0319896
+              ],
+              [
+                0.7463119,
+                0.7698673
+              ]
+            ],
+            "fixedCrossingBoundsXYZ": [
+              [
+                -0.2035658,
+                0.1933378
+              ],
+              [
+                -0.0907046,
+                -0.0219942
+              ],
+              [
+                0.7500253,
+                0.7701138
+              ]
+            ],
+            "examples": [
+              {
+                "subjectEvaluatedTriangle": 20011,
+                "targetEvaluatedTriangle": 383,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1859545,
+                    -0.0541929,
+                    0.7626656
+                  ],
+                  [
+                    0.1678605,
+                    -0.0319896,
+                    0.7600342
+                  ],
+                  [
+                    0.1847906,
+                    -0.0541647,
+                    0.7639784
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1540836,
+                    -0.0633835,
+                    0.7567098
+                  ],
+                  [
+                    0.1744516,
+                    -0.0351784,
+                    0.7634068
+                  ],
+                  [
+                    0.1755679,
+                    -0.0360207,
+                    0.7567098
+                  ]
+                ]
+              },
+              {
+                "subjectEvaluatedTriangle": 20000,
+                "targetEvaluatedTriangle": 383,
+                "subjectRestWorldNativeXYZ": [
+                  [
+                    0.1847906,
+                    -0.0541647,
+                    0.7639784
+                  ],
+                  [
+                    0.1678605,
+                    -0.0319896,
+                    0.7600342
+                  ],
+                  [
+                    0.1657743,
+                    -0.0321751,
+                    0.7607061
+                  ]
+                ],
+                "targetRestWorldNativeXYZ": [
+                  [
+                    0.1540836,
+                    -0.0633835,
+                    0.7567098
+                  ],
+                  [
+                    0.1744516,
+                    -0.0351784,
+                    0.7634068
+                  ],
+                  [
+                    0.1755679,
+                    -0.0360207,
+                    0.7567098
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "Five discrete local inspection openings at zero separation only; no continuous swept-volume proof.",
+    "Tests strict noncoplanar triangle-edge crossings; tangent/coplanar adjacency and full containment are not established.",
+    "The fixed target set includes direct body, mantle, wing-shield, thigh, shin, and foot owner meshes; it is not every scene mesh.",
+    "The sampled moving assembly world minimum Z flags floor-plane crossing at each discrete open fraction; it is not continuous swept-floor proof.",
+    "A geometric pass does not prove bearing support, mechanical strength, visitor safety, artistic likeness, or runtime/browser acceptance.",
+    "No native scene was saved or modified."
+  ],
+  "openIllustrations": {
+    "status": "native Workbench illustrations derived from runtime local inspection transform; not browser captures",
+    "views": [
+      {
+        "view": "front",
+        "image": {
+          "path": "assets/audit/whole-character-v19/inspection-tooling/attempt-torso03-v2/inspection-open-1-front.png",
+          "sha256": "8d7bac7e241a4a14f4593bdca92bb672f6b147ec0ff1d04379d7f4d216664393",
+          "bytes": 1227927
+        },
+        "era": "builder",
+        "open": 1.0,
+        "separation": 0.0,
+        "cameraOffsetNative": [
+          0.0,
+          -4.5,
+          0.55
+        ],
+        "cameraTargetNative": [
+          0.0,
+          -0.05000000074505806,
+          1.0499999523162842
+        ],
+        "orthographicScaleM": 4.35,
+        "floor": "temporary native Z=0 plane"
+      },
+      {
+        "view": "three-quarter",
+        "image": {
+          "path": "assets/audit/whole-character-v19/inspection-tooling/attempt-torso03-v2/inspection-open-1-three-quarter.png",
+          "sha256": "ecb03378222bdea7791eb7e2505ba614621e156de0862d6434bf35342f610223",
+          "bytes": 1280671
+        },
+        "era": "builder",
+        "open": 1.0,
+        "separation": 0.0,
+        "cameraOffsetNative": [
+          3.3,
+          -4.0,
+          1.15
+        ],
+        "cameraTargetNative": [
+          0.0,
+          -0.05000000074505806,
+          1.0499999523162842
+        ],
+        "orthographicScaleM": 4.35,
+        "floor": "temporary native Z=0 plane"
+      }
+    ],
+    "visibleMeshCount": 724,
+    "hiddenHistoricalCurveCount": 462
+  }
+}

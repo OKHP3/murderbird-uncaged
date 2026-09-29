@@ -14,13 +14,13 @@ const eras = {
 const parts=[
   {id:'beak',name:'Bill & skull',title:'A tool with a dangerous edge.',text:'The deep recurved bill, recessed circular optic and segmented crown come from the selected production reference. The hinge and unseen rear surfaces are reconstructed for this study.'},
   {id:'joint',name:'Load & articulation',title:'Weight has a path.',text:'Broad three-toed feet support the body. Pins, bearing collars and paired rods suggest force passing through the legs. The anatomical left shoulder retains limited travel. The original fitted plate and later repair strap are distinct proposals; their exact topology awaits review.'},
-  {id:'shell',name:'Breastplate',title:'Open the inherited body.',text:'Overlapping armor is separate from the internal frame. The breastplate swings aside in inspection. Dashed lines retain assembly relationships when the parts separate.'},
+  {id:'shell',name:'Breastplate',title:'Open the inherited body.',text:'Overlapping armor is separate from the internal frame. The breastplate opens during inspection. Dashed lines retain assembly relationships when the parts separate.'},
   {id:'drive',name:'Winding & transmission',title:'Energy becomes movement.'},
   {id:'power',name:'Heart · power',title:'Power is one missing part.'},
   {id:'mind',name:'Mind · processing',title:'Processing is the other.'},
   {id:'guard',name:'Wings · balance & shielding',title:'Tuck. Brace. Drive.',text:'MurderBird is flightless. Its folded wings guard the ribs and help balance close, forceful movements. The shoulder leads a short shove while the elbow drives the armored forewing; the opposite wing counters. The repaired left shoulder keeps a smaller range. The exact joint design is reconstructed for this study.'},
 ];
-const currentGeometryReview = import.meta.env.DEV ? '<a href="./assets/audit/whole-character-v18/index.html">Construction review · V18</a>' : '';
+const currentGeometryReview = import.meta.env.DEV ? '<a href="./assets/audit/whole-character-v19/index.html">Construction review · V19</a>' : '';
 const app=document.querySelector('#app');
 app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a><div class="site-shell">
 <header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="./folio.html">Story &amp; media folio</a>${currentGeometryReview}<a href="./review/">Published review</a><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">THREE MOVEMENT SYSTEMS / 05</span></header>
@@ -44,11 +44,15 @@ app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a
 <section class="timeline" id="field-notes"><p class="eyebrow">THE CONSTRUCTION RECORD</p><h2>Not born. <em>Built.</em></h2><div class="eras"><article><span>I / MAKER</span><h3>Movement from outside.</h3><p>A supported articulated construct. Outside levers move its joints; at rest it stays where its maker placed it. No internal power or intention.</p></article><article><span>II / MECHANIC</span><h3>A machine with limits.</h3><p>A wound spring, reduction gears and a cam sequence allow short steps and segmented turns. The pauses belong to the transmission, not to thought.</p></article><article><span>III / BUILDER</span><h3>Power with intent.</h3><p>An abundant fictional supply feeds coordinated actuators. Sensing and processing give the advanced bird responsive attention, fast attacks and controlled recovery.</p></article></div><p class="source-note">This progression follows the owner’s current exhibit direction. The exact control rods, spring transmission and advanced supply are proposed reconstructions. The preserved story remains a separate source. <a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Read the published story ↗</a></p></section>
 </main><footer><span>© JAMIE HILL / OVERKILL HILL P³ · CREATIVE CONTENT ALL RIGHTS RESERVED</span><span>WORKING STUDY · ARTISTIC ACCEPTANCE PENDING</span></footer></div>`;
 const localReviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v16-03') : null;
-if (import.meta.env.DEV && ['v10-01', 'v10-02', 'v12-02', 'v13-01', 'v14-03', 'v14-05', 'v14-09', 'v14-11', 'v15-03', 'v15-04', 'v16-02', 'v16-03', 'v17-02', 'v18-01'].includes(localReviewBody)) {
+if (import.meta.env.DEV && ['v10-01', 'v10-02', 'v12-02', 'v13-01', 'v14-03', 'v14-05', 'v14-09', 'v14-11', 'v15-03', 'v15-04', 'v16-02', 'v16-03', 'v17-02', 'v18-01', 'v19-01', 'v19-02'].includes(localReviewBody)) {
   const notice = document.createElement('p');
   notice.setAttribute('role', 'status');
   notice.style.cssText = 'margin:0;padding:14px 24px;background:#302c20;color:#f6e4b7;border-bottom:2px solid #a68b52';
-  notice.textContent = localReviewBody === 'v18-01'
+  notice.textContent = localReviewBody === 'v19-02'
+    ? 'LOCAL V19 ATTEMPT 02 · HELD CONSTRUCTION PROPOSAL. Separate front access door and fixed torso walls, revised breast and narrower jaw opening. Likeness and movement clearance remain unresolved. Illustrated fallback still depicts V9.'
+    : localReviewBody === 'v19-01'
+    ? 'LOCAL V19 CONSTRUCTION PROPOSAL · Revised breast and neck, bottom-opening cover and narrower jaw opening. Likeness and movement clearances remain under review. Illustrated fallback still depicts V9.'
+    : localReviewBody === 'v18-01'
     ? 'LOCAL V18 CONSTRUCTION PROPOSAL · Revised head fittings, neck junction and lower-leg construction. Whole-character likeness and moving clearances remain under review. Illustrated fallback still depicts V9.'
     : localReviewBody === 'v17-02'
     ? 'LOCAL V17 PROPOSAL · HELD FOR CORRECTION. Revised breast layers and passive eye supports still intersect neighboring parts in reviewed poses. Likeness remains below target. Illustrated fallback still depicts V9.'
@@ -64,8 +68,8 @@ if (import.meta.env.DEV && ['v10-01', 'v10-02', 'v12-02', 'v13-01', 'v14-03', 'v
     ? 'LOCAL V12 MOTION STUDY · New neck reconstruction, with no owner likeness approval. Joint clearances and external mechanism attachments remain under review. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
     : 'LOCAL V10 STUDY · Owner-rejected likeness, preserved for diagnosis. Structural clearance remains unresolved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.';
   const previous = document.createElement('a');
-  previous.href = localReviewBody === 'v18-01' ? '?review-body=v17-02' : localReviewBody === 'v17-02' ? '?review-body=v16-03' : '?review-body=stable-v9';
-  previous.textContent = localReviewBody === 'v18-01' ? ' Previous local candidate (V17 attempt 02)' : localReviewBody === 'v17-02' ? ' Previous local candidate (V16 attempt 03)' : ' Previous exhibit (V9)';
+  previous.href = localReviewBody.startsWith('v19-') ? '?review-body=v18-01' : localReviewBody === 'v18-01' ? '?review-body=v17-02' : localReviewBody === 'v17-02' ? '?review-body=v16-03' : '?review-body=stable-v9';
+  previous.textContent = localReviewBody.startsWith('v19-') ? ' Previous local candidate (V18 attempt 01)' : localReviewBody === 'v18-01' ? ' Previous local candidate (V17 attempt 02)' : localReviewBody === 'v17-02' ? ' Previous local candidate (V16 attempt 03)' : ' Previous exhibit (V9)';
   previous.style.color = 'inherit';
   notice.append(previous);
   document.getElementById('app').prepend(notice);

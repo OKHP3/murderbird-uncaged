@@ -1,0 +1,564 @@
+{
+  "status": "HELD_DIAGNOSTIC",
+  "candidate": {
+    "path": "assets/models/whole-character-v19/attempt-torso04/murderbird-whole-character-v19.blend",
+    "sha256": "0f68b2c0fd96ea9a9618693cb2e0f6c73482543df9a415234d2c44e0da846c03",
+    "bytes": 2799043
+  },
+  "sourceReport": {
+    "path": "assets/audit/whole-character-v19/inspection-tooling/attempt-torso04-v2/breast-opening.json",
+    "sha256": "05d9bbed745fb7484e28f243916f0b7baf152df474bd4dc489ec5e84dc68e6b0"
+  },
+  "candidateReceipt": {
+    "path": "assets/audit/whole-character-v19/attempt-torso04/receipt.json",
+    "sha256": "3158900c9c0d67b42c5244513c651cb734258d19ebc5a0d1d82865c870e861aa"
+  },
+  "checkerSource": {
+    "path": "scripts/check-v19-breast-opening.py",
+    "sha256": "80e396405ce69d9e2fca3bd2ae21fb66493cc48957f17fc88e2ca7fb9fd2b131"
+  },
+  "sample": {
+    "open": 1.0,
+    "separation": 0,
+    "strictCrossingPairCount": 58,
+    "broadphaseCandidateCount": 58,
+    "crossingPairCountIsNotIndependentDefectCount": true
+  },
+  "majorFamilies": [
+    {
+      "family": "front-shell versus fixed liner",
+      "classification": "significant sweep interference candidate",
+      "pairs": [
+        {
+          "movingMesh": "Breast inner access shell",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture liner",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 385,
+          "strictTargetTriangleCount": 448,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.1140223,
+              0.117066
+            ],
+            [
+              -0.1912014,
+              -0.1399833
+            ],
+            [
+              0.7352701,
+              0.7700297
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.114466,
+              0.1144661
+            ],
+            [
+              -0.1602696,
+              -0.127739
+            ],
+            [
+              0.7223626,
+              0.7792245
+            ]
+          ]
+        },
+        {
+          "movingMesh": "Breast inner access shell",
+          "movingOwner": "breastplate",
+          "fixedMesh": "Passive rib behind access cover",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 342,
+          "strictTargetTriangleCount": 40,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.1031528,
+              0.1063443
+            ],
+            [
+              -0.1915238,
+              -0.1225582
+            ],
+            [
+              0.7433134,
+              0.7650356
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1030974,
+              0.1183437
+            ],
+            [
+              -0.1667955,
+              -0.1206399
+            ],
+            [
+              0.7500253,
+              0.7701138
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "family": "moving axle and fixed bearing/support interface",
+      "classification": "intended-mating candidate; strict intersection is not proof of bearing fit",
+      "pairs": [
+        {
+          "movingMesh": "V19 moving bottom access axle",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed bottom hinge support -1",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 17,
+          "strictTargetTriangleCount": 24,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.184,
+              0.184
+            ],
+            [
+              -0.1547078,
+              -0.1480183
+            ],
+            [
+              0.77504,
+              0.7814898
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1625,
+              -0.1275
+            ],
+            [
+              -0.154,
+              -0.055
+            ],
+            [
+              0.775508,
+              0.7985082
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom access axle",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed bottom hinge support 1",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 17,
+          "strictTargetTriangleCount": 24,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.184,
+              0.184
+            ],
+            [
+              -0.1547078,
+              -0.1480183
+            ],
+            [
+              0.77504,
+              0.7814898
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              0.1275,
+              0.1625
+            ],
+            [
+              -0.154,
+              -0.055
+            ],
+            [
+              0.775508,
+              0.7985082
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "family": "moving axle versus non-bearing body surfaces",
+      "classification": "significant interference candidate",
+      "pairs": [
+        {
+          "movingMesh": "V19 moving bottom access axle",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture liner",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 62,
+          "strictTargetTriangleCount": 221,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.184,
+              0.184
+            ],
+            [
+              -0.1599817,
+              -0.1480183
+            ],
+            [
+              0.7695264,
+              0.7814898
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1368267,
+              0.1368268
+            ],
+            [
+              -0.1599078,
+              -0.1338507
+            ],
+            [
+              0.7551984,
+              0.7937309
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom access axle",
+          "movingOwner": "breastplate",
+          "fixedMesh": "Passive rib behind access cover",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 38,
+          "strictTargetTriangleCount": 33,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.184,
+              0.184
+            ],
+            [
+              -0.1599817,
+              -0.1480183
+            ],
+            [
+              0.7695264,
+              0.7773647
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1024293,
+              0.0894057
+            ],
+            [
+              -0.1679063,
+              -0.1300071
+            ],
+            [
+              0.7634068,
+              0.7768282
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "family": "moving returns versus fixed aperture fragments",
+      "classification": "possible designed lap seam, requires visual/clearance adjudication",
+      "pairs": [
+        {
+          "movingMesh": "V19 moving bottom cover return -1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V17 breast directional lamina 8 3 left",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 15,
+          "strictTargetTriangleCount": 36,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.127,
+              -0.114
+            ],
+            [
+              -0.1896643,
+              -0.1517362
+            ],
+            [
+              0.7603256,
+              0.7914159
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1272922,
+              -0.1117853
+            ],
+            [
+              -0.1583863,
+              -0.1482801
+            ],
+            [
+              0.7621871,
+              0.7740796
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return -1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture liner",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 16,
+          "strictTargetTriangleCount": 19,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.126,
+              -0.113
+            ],
+            [
+              -0.1901179,
+              -0.1517362
+            ],
+            [
+              0.7603256,
+              0.7914159
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.122025,
+              -0.1089749
+            ],
+            [
+              -0.1598231,
+              -0.1403387
+            ],
+            [
+              0.7551984,
+              0.7851562
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return -1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture V17 breast directional lamina 7 3 left",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 22,
+          "strictTargetTriangleCount": 50,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.127,
+              -0.113
+            ],
+            [
+              -0.1901179,
+              -0.1517362
+            ],
+            [
+              0.7603256,
+              0.7914159
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1299565,
+              -0.1099162
+            ],
+            [
+              -0.1569999,
+              -0.149711
+            ],
+            [
+              0.7589099,
+              0.7772468
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return -1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture V17 breast directional lamina 8 2 left",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 5,
+          "strictTargetTriangleCount": 17,
+          "movingCrossingBoundsXYZ": [
+            [
+              -0.114,
+              -0.113
+            ],
+            [
+              -0.1901179,
+              -0.151796
+            ],
+            [
+              0.7603256,
+              0.7905247
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              -0.1137984,
+              -0.1097237
+            ],
+            [
+              -0.1569931,
+              -0.1542906
+            ],
+            [
+              0.7626224,
+              0.7680233
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return 1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V17 breast directional lamina 8 3 right",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 14,
+          "strictTargetTriangleCount": 32,
+          "movingCrossingBoundsXYZ": [
+            [
+              0.114,
+              0.127
+            ],
+            [
+              -0.1896643,
+              -0.1517362
+            ],
+            [
+              0.7603256,
+              0.7914159
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              0.111781,
+              0.12728
+            ],
+            [
+              -0.1582059,
+              -0.1493803
+            ],
+            [
+              0.7621849,
+              0.7740873
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return 1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture liner",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 16,
+          "strictTargetTriangleCount": 20,
+          "movingCrossingBoundsXYZ": [
+            [
+              0.113,
+              0.126
+            ],
+            [
+              -0.1901179,
+              -0.1517362
+            ],
+            [
+              0.7603256,
+              0.7914159
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              0.1069614,
+              0.1258726
+            ],
+            [
+              -0.1598231,
+              -0.1422192
+            ],
+            [
+              0.7551984,
+              0.7851562
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return 1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture V17 breast directional lamina 7 3 right",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 21,
+          "strictTargetTriangleCount": 49,
+          "movingCrossingBoundsXYZ": [
+            [
+              0.113,
+              0.127
+            ],
+            [
+              -0.1901179,
+              -0.1517362
+            ],
+            [
+              0.7603256,
+              0.7914159
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              0.1108302,
+              0.1299574
+            ],
+            [
+              -0.1569953,
+              -0.1512136
+            ],
+            [
+              0.7591863,
+              0.7796515
+            ]
+          ]
+        },
+        {
+          "movingMesh": "V19 moving bottom cover return 1",
+          "movingOwner": "breastplate",
+          "fixedMesh": "V19 fixed aperture V17 breast directional lamina 8 2 right",
+          "fixedOwner": "body",
+          "strictSubjectTriangleCount": 5,
+          "strictTargetTriangleCount": 17,
+          "movingCrossingBoundsXYZ": [
+            [
+              0.113,
+              0.114
+            ],
+            [
+              -0.1901179,
+              -0.151796
+            ],
+            [
+              0.7603256,
+              0.7905247
+            ]
+          ],
+          "fixedCrossingBoundsXYZ": [
+            [
+              0.1115557,
+              0.1146803
+            ],
+            [
+              -0.156991,
+              -0.151071
+            ],
+            [
+              0.759312,
+              0.7680145
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretationLimits": [
+    "Strict noncoplanar triangle crossing counts are not unique defect counts.",
+    "Pairs between the axle and fixed bearing/support parts may represent intentional mating; no running clearance or load path is proven.",
+    "Pairs between moving returns and fixed plate fragments may be intended overlap at seams; this check does not determine design intent.",
+    "No new geometric run was performed to create this summary; it is derived from the exact hash-bound full-open sample above.",
+    "Object exteriorEras are not present in the source pair rows; do not infer era visibility from names."
+  ]
+}

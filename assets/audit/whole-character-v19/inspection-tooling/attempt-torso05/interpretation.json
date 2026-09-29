@@ -1,0 +1,74 @@
+{
+  "status": "HELD_DIAGNOSTIC",
+  "native": {
+    "path": "assets/models/whole-character-v19/attempt-torso05/murderbird-whole-character-v19.blend",
+    "sha256": "e36cd72fb6dd1c38d1b761a985c3fc732d6e5c87862eef4ffc10e688db153871",
+    "bytes": 2792340
+  },
+  "sourceReport": {
+    "path": "assets/audit/whole-character-v19/inspection-tooling/attempt-torso05/breast-opening.json",
+    "sha256": "986d66a80ce4de95c0e0e218c74e2edc3d49d833b5fae6e21dd10ee36fc1cfa6"
+  },
+  "openingCounts": {
+    "0.0": 18,
+    "0.25": 7,
+    "0.5": 9,
+    "0.75": 9,
+    "1.0": 11
+  },
+  "fullOpen": {
+    "strictCrossingPairCount": 11,
+    "frontShellVsFixedApertureLinerOrRib": [],
+    "residualFamilies": [
+      {
+        "family": "moving axle vs fixed aperture liner",
+        "pairs": [
+          "V19 moving bottom access axle <> V19 fixed aperture liner"
+        ],
+        "classification": "remaining interference candidate; investigate a clear passage/bore; no clearance conclusion"
+      },
+      {
+        "family": "moving axle vs retained aperture fragments",
+        "pairs": [
+          "V19 moving bottom access axle <> V19 fixed aperture V17 breast directional lamina 8 1 left/right",
+          "V19 moving bottom access axle <> V19 fixed aperture V17 breast directional lamina 8 2 left/right"
+        ],
+        "classification": "remaining interference candidate"
+      },
+      {
+        "family": "moving axle vs fixed hinge supports",
+        "pairs": [
+          "V19 moving bottom access axle <> V19 fixed bottom hinge support -1/+1"
+        ],
+        "classification": "possible intended bearing mating; strict crossing does not establish running clearance"
+      },
+      {
+        "family": "center keel return split seam",
+        "pairs": [
+          "V17 breast center keel return left/right <> matching V19 fixed aperture V17 breast center keel return left/right",
+          "V17 breast center keel return left/right <> fixed aperture lamina 8 1 left/right"
+        ],
+        "classification": "possible intended lap seam; not a clearance proof"
+      }
+    ],
+    "comparisonTo04": "The torso04 full-open shell crossed its fixed aperture liner (385/448 strict triangles) and rib (342/40); torso05 has no strict crossing pair for the shell against either target. Its remaining 11 pairs are enumerated by family above. These counts are triangle-crossing pairs, not independent defects."
+  },
+  "lowerNeckReplay": {
+    "poses": [
+      {
+        "poseId": "maker-neck-control",
+        "strictCrossingPairCount": 33,
+        "nonBreastPivotMatrixMaxError": 1.1920928955078125e-07
+      },
+      {
+        "poseId": "advanced-contact",
+        "strictCrossingPairCount": 40,
+        "nonBreastPivotMatrixMaxError": 1.7881393432617188e-07
+      }
+    ],
+    "comparisonTo04": "Counts differ from torso04 (Maker 38, Advanced 45): torso05 reports Maker 33 and Advanced 40. Neck guard meshes are unchanged, but body/breast targets were reshaped; therefore these are different target-interaction findings, not unchanged results.",
+    "limits": [
+      "Discrete replay only; not continuous clearance, containment, support, strength, likeness, or runtime/browser acceptance."
+    ]
+  }
+}

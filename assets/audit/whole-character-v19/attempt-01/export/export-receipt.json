@@ -1,0 +1,41 @@
+{
+  "status": "static diagnostic runtime derivative; not selected or accepted",
+  "arguments": {
+    "native": "assets/models/whole-character-v19/attempt-01/murderbird-whole-character-v19.blend",
+    "expectedNativeSha256": "2d1c5519b0c9e191a2c9b15070f324a67d722cea8306659b6c49494109efbc45",
+    "audit": "assets/audit/whole-character-v19/attempt-01/export"
+  },
+  "native": {
+    "path": "assets/models/whole-character-v19/attempt-01/murderbird-whole-character-v19.blend",
+    "sha256Before": "2d1c5519b0c9e191a2c9b15070f324a67d722cea8306659b6c49494109efbc45",
+    "sha256After": "2d1c5519b0c9e191a2c9b15070f324a67d722cea8306659b6c49494109efbc45",
+    "unchanged": true,
+    "bytes": 2713343
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v19/attempt-01/murderbird-whole-character-v19.glb",
+    "sha256": "9f68cab5956d2eea53a59763b952933c5cdbf00e84038e19f1148cdf0f4b7874",
+    "bytes": 11215704
+  },
+  "exporter": {
+    "path": "assets/audit/whole-character-v19/attempt-01/export/executed-export.py",
+    "sha256": "bb28cb691666e418f7d140890aed949cdb26164b3cc02bb03275c69486a6ca8a"
+  },
+  "helper": {
+    "path": "scripts/build-uncaged-alignment-v7.py",
+    "sha256": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a"
+  },
+  "checks": {
+    "reopenedNativeSnapshotExact": true,
+    "modifierSignaturesCapturedBeforeExportCopy": 156,
+    "pivotCountNative": 52,
+    "pivotWorldMatricesUnchangedByExportCopy": true,
+    "pivotNodeCountInGlb": 52,
+    "missingPivotNodesInGlb": []
+  },
+  "limits": [
+    "Only a static diagnostic export was produced.",
+    "No native/export surface parity, pose, collision-clearance, shading, or likeness check was run.",
+    "Pivot node name presence does not establish runtime motion behavior."
+  ]
+}

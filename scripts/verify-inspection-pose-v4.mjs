@@ -123,12 +123,16 @@ function verifyEra(era) {
   for (let cycle = 1; cycle <= 5; cycle += 1) {
     applyAt(rig, 0, 0);
     const assembledWorldMatrices = matrixSnapshot(allMappedMeshes);
-    const assembledBreastRotation = rig.nodes.breastplate.rotation.y;
+    const assembledBreastQuaternion = rig.nodes.breastplate.quaternion.clone();
     const assembledCoverY = rig.nodes['cranial-cover'].position.y;
 
     applyAt(rig, 1, 0);
-    assert.ok(Math.abs(rig.nodes.breastplate.rotation.y - assembledBreastRotation) > 1,
+    assert.ok(rig.nodes.breastplate.quaternion.angleTo(assembledBreastQuaternion) > 1,
       `${era} cycle ${cycle}: opening did not rotate the exported breastplate`);
+    if (rig.nodes.breastplate.userData?.inspectionAxis === 'x') {
+      assert.ok(rig.nodes.breastplate.rotation.x > 1 && Math.abs(rig.nodes.breastplate.rotation.y) < 1e-8,
+        `${era} cycle ${cycle}: the bottom-hinged cover did not open about its declared local X axis`);
+    }
     assert.ok(Math.abs(rig.nodes['cranial-cover'].position.y - assembledCoverY) >= .079,
       `${era} cycle ${cycle}: opening did not raise the exported cranial cover`);
     const openOwnerPositions = Object.fromEntries(ownerEntries.map(({ name, owner }) => [name, owner.position.clone()]));
@@ -160,7 +164,7 @@ function verifyEra(era) {
     applyAt(rig, 0, 0);
     assert.deepEqual(matrixSnapshot(allMappedMeshes), assembledWorldMatrices,
       `${era} cycle ${cycle}: descendant mesh world matrices did not restore exactly after reset and zero pose`);
-    assert.equal(rig.nodes.breastplate.rotation.y, assembledBreastRotation,
+    assert.deepEqual(rig.nodes.breastplate.quaternion.toArray(), assembledBreastQuaternion.toArray(),
       `${era} cycle ${cycle}: breastplate rotation did not return to assembled pose`);
     assert.equal(rig.nodes['cranial-cover'].position.y, assembledCoverY,
       `${era} cycle ${cycle}: cranial-cover position did not return to assembled pose`);

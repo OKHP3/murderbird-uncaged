@@ -1,0 +1,181 @@
+{
+  "status": "inventory-complete",
+  "glb": {
+    "path": "assets/models/whole-character-v19/attempt-02/murderbird-whole-character-v19.glb",
+    "sha256": "b3a59adf99a167276155895c6d0fe8f714e6676d36a5b28313c621ec5410a9c2",
+    "bytes": 12004088,
+    "version": 2,
+    "chunks": [
+      {
+        "length": 128312,
+        "type": 1313821514
+      },
+      {
+        "length": 11875748,
+        "type": 5130562
+      }
+    ]
+  },
+  "baseline": {
+    "path": "assets/models/whole-character-v18/attempt-01/murderbird-whole-character-v18.glb",
+    "sha256": "b59bf9dee1ff681c53b21aedfb1505c1fb944890d673a07b3e3b148fd95babf8"
+  },
+  "script": {
+    "path": "scripts/inspect-v19-export.py",
+    "sha256": "8f9515e7228076c06a110f2a5a854c8a4367d9863d50f158d6da895779ba3573"
+  },
+  "sceneInventory": {
+    "nodeCount": 163,
+    "rigidNodeCount": 52,
+    "rigidNodeNames": [
+      "anchor-beak",
+      "anchor-drive",
+      "anchor-guard",
+      "anchor-joint",
+      "anchor-mind",
+      "anchor-power",
+      "anchor-shell",
+      "bill-contact",
+      "body",
+      "breastplate",
+      "builder-optics",
+      "cervical-upper",
+      "cranial-cover",
+      "head",
+      "industrial-repairs",
+      "jaw",
+      "left-digit-1-distal",
+      "left-digit-1-proximal",
+      "left-digit-2-distal",
+      "left-digit-2-proximal",
+      "left-digit-3-distal",
+      "left-digit-3-proximal",
+      "left-foot",
+      "left-hip-landmark",
+      "left-knee-landmark",
+      "left-mantle",
+      "left-shin",
+      "left-sole-landmark",
+      "left-thigh",
+      "left-toes",
+      "left-wing-shield",
+      "murderbird",
+      "neck",
+      "power-core",
+      "processing",
+      "right-digit-1-distal",
+      "right-digit-1-proximal",
+      "right-digit-2-distal",
+      "right-digit-2-proximal",
+      "right-digit-3-distal",
+      "right-digit-3-proximal",
+      "right-foot",
+      "right-hip-landmark",
+      "right-knee-landmark",
+      "right-mantle",
+      "right-shin",
+      "right-sole-landmark",
+      "right-thigh",
+      "right-toes",
+      "right-wing-shield",
+      "upper-bill",
+      "winding-drive"
+    ],
+    "meshNodeCount": 111,
+    "meshDefinitionCount": 111,
+    "skinsCount": 0,
+    "skinJointReferences": 0,
+    "uniqueJointNodeCount": 0
+  },
+  "perEraMeshAndTriangleCounts": {
+    "maker": {
+      "visibleMeshNodes": 107,
+      "triangles": 550000
+    },
+    "mechanic": {
+      "visibleMeshNodes": 108,
+      "triangles": 550068
+    },
+    "builder": {
+      "visibleMeshNodes": 111,
+      "triangles": 551392
+    }
+  },
+  "untaggedMeshNodes": [],
+  "unknownEraTags": [],
+  "newV19MeshParts": [
+    {
+      "name": "body-breast-bearing",
+      "parent": "body",
+      "meshIndex": 2,
+      "region": "breast",
+      "surfaceRole": "bearing",
+      "exteriorEras": [
+        "builder",
+        "maker",
+        "mechanic"
+      ]
+    },
+    {
+      "name": "body-breast-inner",
+      "parent": "body",
+      "meshIndex": 4,
+      "region": "breast",
+      "surfaceRole": "inner",
+      "exteriorEras": [
+        "builder",
+        "maker",
+        "mechanic"
+      ]
+    },
+    {
+      "name": "body-breast-plate",
+      "parent": "body",
+      "meshIndex": 5,
+      "region": "breast",
+      "surfaceRole": "plate",
+      "exteriorEras": [
+        "builder",
+        "maker",
+        "mechanic"
+      ]
+    },
+    {
+      "name": "upper-bill-head-passive formed bill shell",
+      "parent": "upper-bill",
+      "meshIndex": 33,
+      "region": "head",
+      "surfaceRole": "passive formed bill shell",
+      "exteriorEras": [
+        "builder",
+        "maker",
+        "mechanic"
+      ]
+    }
+  ],
+  "missingRequiredV19PartTags": [],
+  "materialsAndTextures": {
+    "materialCount": 8,
+    "imageCount": 0,
+    "textureCount": 0,
+    "materialTextureReferences": {},
+    "uvSemanticCount": 0,
+    "uvSemantics": [],
+    "uvPrimitiveAttributeCount": 0,
+    "uniqueUvAccessorCount": 0
+  },
+  "inspectionAxisExtras": [
+    {
+      "node": "breastplate",
+      "inspectionAxis": "x",
+      "inspectionOpenRadians": 1.1
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Metadata/accessor inventory only; triangle totals are inferred from glTF primitive index counts.",
+    "Does not decode positions, compare exported/native surfaces, or test browser assembly.",
+    "Does not test pose behavior, containment, collision clearance, physical validity, or likeness.",
+    "Passing this inventory is not artistic acceptance."
+  ]
+}
