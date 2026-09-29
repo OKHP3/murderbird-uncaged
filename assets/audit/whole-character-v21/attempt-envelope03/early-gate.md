@@ -1,0 +1,7 @@
+# V21 envelope03 independent early gate
+
+**Proceed to articulated directional plate construction on this shared envelope.** Compared with envelope02, the neck-to-breast transition is smoother and the flared cuff is substantially reduced. In side view the throat narrows below the jaw, turns back toward the torso, then rolls forward into the breast; the nape now sweeps more continuously toward the shoulder. The former large triangular gaps are not reopened in the neutral views.
+
+The underlying envelope remains a broad smooth breast shield, and the full-body view still reads as a breast bulb beneath a relatively plain throat. This is now a surface-construction problem more than a core contour problem. Follow the S with tapered, overlapping plates that change direction from neck to upper breast, vary their lengths, and lap over the shoulder/nape transition. Preserve the current breast contour while breaking the broad smooth face into readable constructed regions. Avoid new horizontal collar rings or a repeating scale grid. The legs, folded mantle and head remain major inherited likeness gaps outside this envelope pass.
+
+The rear neck/shoulder boundary still shows a small open pocket under the mantle; the plate layout should close it with a purposeful lap or make the supporting frame visibly legible. `native-dip.png` and `native-breast-open.png` are authoring illustrations only; they do not show runtime poses or prove articulation clearance. This review is neutral-render visual judgment, not likeness acceptance or a technical pass.

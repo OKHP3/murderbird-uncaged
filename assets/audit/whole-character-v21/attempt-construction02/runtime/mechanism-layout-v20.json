@@ -1,0 +1,1668 @@
+{
+  "generatedAt": "2026-09-29T03:40:40.496Z",
+  "status": "PASS_WITHIN_ENDPOINT_AND_VISIBILITY_CHECKS",
+  "model": {
+    "path": "assets/models/whole-character-v21/attempt-construction02/murderbird-whole-character-v21.glb",
+    "sha256": "2266bcedb92ce32c11ecf98f107169f7841446bd4d629445d9cb664737583637",
+    "bytes": 6658980
+  },
+  "expectedLayout": "authored-model-points",
+  "sourceLayout": {
+    "version": 1,
+    "status": "Mapped attachment proposal; actual hardware fit and movement remain subject to review",
+    "coordinateSpace": "glTF owner-local metres; no object scale applied to runtime mechanisms",
+    "sourceMapping": {
+      "path": "assets/audit/whole-character-v20/attempt-proportions02/executed-proportions.py",
+      "sha256": "31fc8d2cb1626570403e823eb1d97ac8b763e6849a00660a9ee58dff4163cd00"
+    },
+    "sourceRigContract": {
+      "path": "assets/audit/whole-character-v20/attempt-proportions02/rig-shape-contract.json",
+      "sha256": "077c101cdd7632d97166055bb501f526e4763f9e1acc77cd413d10ccf3e9d096"
+    },
+    "makerControlOffsets": {
+      "leg": [
+        0.084499985,
+        0.020053774,
+        0.056621544
+      ],
+      "wing": [
+        -0.106400013,
+        -0.093999982,
+        0.100000001
+      ],
+      "tail": [
+        -0.070686989,
+        0,
+        -0.150400013
+      ],
+      "neck": [
+        -0.07799995690584183,
+        0.15500009059906006,
+        0.06999997794628143
+      ],
+      "jaw": [
+        -0.180000007,
+        -0.059999943,
+        0.199999988
+      ]
+    },
+    "tailPosition": [
+      0,
+      0.176000059,
+      -0.29506883
+    ],
+    "distributionPosition": [
+      -0.210023463,
+      0.255199969,
+      0.077
+    ],
+    "transmissionPosition": [
+      0,
+      0,
+      0
+    ],
+    "cervical": [
+      {
+        "side": "left",
+        "bodyPoint": [
+          0.13500000536441803,
+          0.39990919828414917,
+          0.2247767299413681
+        ],
+        "neckPoint": [
+          0.06499999761581421,
+          0.11000025272369385,
+          0.06499999761581421
+        ]
+      },
+      {
+        "side": "right",
+        "bodyPoint": [
+          -0.13500000536441803,
+          0.39990919828414917,
+          0.2247767299413681
+        ],
+        "neckPoint": [
+          -0.06499999761581421,
+          0.11000025272369385,
+          0.06499999761581421
+        ]
+      }
+    ],
+    "makerCradleWidth": 0.616000012,
+    "limits": [
+      "Sockets are transformed source placements, not proven bearing seats.",
+      "The Mechanic gearbox retains its rigid internal spacing; only its origin follows this contract.",
+      "Maker floor rack and fixed guide support remain independent external apparatus.",
+      "Advanced conduit routing still requires visual review against the revised body."
+    ],
+    "cervicalSocketProvenanceV21": {
+      "sourceNative": "assets/models/whole-character-v21/attempt-envelope03/murderbird-whole-character-v21.blend",
+      "sourceNativeSha256": "720c343645ef2de298a50e53c82fad66448c187b1eaf9311de2514cac079f280",
+      "refreshedFields": [
+        "makerControlOffsets.neck",
+        "cervical"
+      ],
+      "inheritedProvenance": "sourceMapping and sourceRigContract describe the retained V20 fields only; refreshed cervical fields are derived from the V21 native frame.",
+      "status": "authored frame-derived socket proposal, not a recovered mechanism"
+    }
+  },
+  "runtimeLayout": {
+    "status": "authored-model-points",
+    "version": 1,
+    "makerCradleWidth": 0.616000012,
+    "makerControlOffsets": [
+      [
+        0.084499985,
+        0.020053774,
+        0.056621544
+      ],
+      [
+        -0.106400013,
+        -0.093999982,
+        0.100000001
+      ],
+      [
+        -0.070686989,
+        0,
+        -0.150400013
+      ],
+      [
+        -0.07799995690584183,
+        0.15500009059906006,
+        0.06999997794628143
+      ],
+      [
+        -0.180000007,
+        -0.059999943,
+        0.199999988
+      ]
+    ],
+    "tailPosition": [
+      0,
+      0.176000059,
+      -0.29506883
+    ],
+    "transmissionPosition": [
+      0,
+      0,
+      0
+    ],
+    "distributionPosition": [
+      -0.210023463,
+      0.255199969,
+      0.077
+    ]
+  },
+  "runtimeSource": {
+    "path": "src/scene/era-mechanisms.js",
+    "sha256": "93aa14794810373d2d156d6a459e2fade6f258a1eaee377c5dc42e0fd46ae10c"
+  },
+  "tolerances": {
+    "endpointPositionMeters": 0.00002,
+    "cradleGeometryWidthMeters": 1e-8
+  },
+  "checks": [
+    {
+      "name": "maker-rest-leg-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.552554788,
+        0.305453744,
+        0.135616714
+      ],
+      "expectedWorld": [
+        0.552554788,
+        0.305453744,
+        0.135616714
+      ],
+      "target": "left-foot",
+      "authoredOwnerLocalOffset": [
+        0.084499985,
+        0.020053774,
+        0.056621544
+      ]
+    },
+    {
+      "name": "maker-rest-wing-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 8.326672684688674e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.174608084,
+        1.195263142,
+        0.451576102
+      ],
+      "expectedWorld": [
+        -0.174608084,
+        1.195263142,
+        0.451576102
+      ],
+      "target": "right-mantle",
+      "authoredOwnerLocalOffset": [
+        -0.106400013,
+        -0.093999982,
+        0.100000001
+      ]
+    },
+    {
+      "name": "maker-rest-tail-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 2.2301825219878386e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.024648408,
+        1.030219114,
+        -0.12359342
+      ],
+      "expectedWorld": [
+        0.024648408,
+        1.030219114,
+        -0.12359342
+      ],
+      "target": "compact-articulated-tail",
+      "authoredOwnerLocalOffset": [
+        -0.070686989,
+        0,
+        -0.150400013
+      ]
+    },
+    {
+      "name": "maker-rest-neck-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.236829735,
+        1.373800209,
+        0.560264289
+      ],
+      "expectedWorld": [
+        0.236829735,
+        1.373800209,
+        0.560264289
+      ],
+      "target": "neck",
+      "authoredOwnerLocalOffset": [
+        -0.07799995690584183,
+        0.15500009059906006,
+        0.06999997794628143
+      ]
+    },
+    {
+      "name": "maker-rest-jaw-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 2.482534153247273e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.255310517,
+        1.469857583,
+        0.933192097
+      ],
+      "expectedWorld": [
+        0.255310517,
+        1.469857583,
+        0.933192097
+      ],
+      "target": "jaw",
+      "authoredOwnerLocalOffset": [
+        -0.180000007,
+        -0.059999943,
+        0.199999988
+      ]
+    },
+    {
+      "name": "maker-rest-cradle-world-center",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.204501052,
+        0.784992124,
+        0.270269572
+      ],
+      "expectedWorld": [
+        0.204501052,
+        0.784992124,
+        0.270269572
+      ],
+      "source": "live body/pelvis world position plus .035m support drop"
+    },
+    {
+      "name": "maker-rest-cradle-geometry-width",
+      "status": "passed",
+      "measuredMeters": 0.616000012,
+      "expectedMeters": 0.616000012,
+      "toleranceMeters": 1e-8
+    },
+    {
+      "name": "maker-rotated-leg-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 6.206335383118183e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.553073366,
+        0.297896461,
+        0.137490352
+      ],
+      "expectedWorld": [
+        0.553073366,
+        0.297896461,
+        0.137490352
+      ],
+      "target": "left-foot",
+      "authoredOwnerLocalOffset": [
+        0.084499985,
+        0.020053774,
+        0.056621544
+      ]
+    },
+    {
+      "name": "maker-rotated-wing-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.167610135,
+        1.218851718,
+        0.471239449
+      ],
+      "expectedWorld": [
+        -0.167610135,
+        1.218851718,
+        0.471239449
+      ],
+      "target": "right-mantle",
+      "authoredOwnerLocalOffset": [
+        -0.106400013,
+        -0.093999982,
+        0.100000001
+      ]
+    },
+    {
+      "name": "maker-rotated-tail-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 2.2301825219878386e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.024648408,
+        1.030219114,
+        -0.12359342
+      ],
+      "expectedWorld": [
+        0.024648408,
+        1.030219114,
+        -0.12359342
+      ],
+      "target": "compact-articulated-tail",
+      "authoredOwnerLocalOffset": [
+        -0.070686989,
+        0,
+        -0.150400013
+      ]
+    },
+    {
+      "name": "maker-rotated-neck-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 2.237726045655905e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.232825312,
+        1.361837424,
+        0.574150348
+      ],
+      "expectedWorld": [
+        0.232825312,
+        1.361837424,
+        0.574150348
+      ],
+      "target": "neck",
+      "authoredOwnerLocalOffset": [
+        -0.07799995690584183,
+        0.15500009059906006,
+        0.06999997794628143
+      ]
+    },
+    {
+      "name": "maker-rotated-jaw-horn-geometry-endpoint",
+      "status": "passed",
+      "errorMeters": 1.1443916996305594e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.204717601,
+        1.368865033,
+        0.936141934
+      ],
+      "expectedWorld": [
+        0.204717601,
+        1.368865033,
+        0.936141934
+      ],
+      "target": "jaw",
+      "authoredOwnerLocalOffset": [
+        -0.180000007,
+        -0.059999943,
+        0.199999988
+      ]
+    },
+    {
+      "name": "maker-rotated-cradle-world-center",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.204501052,
+        0.784992124,
+        0.270269572
+      ],
+      "expectedWorld": [
+        0.204501052,
+        0.784992124,
+        0.270269572
+      ],
+      "source": "live body/pelvis world position plus .035m support drop"
+    },
+    {
+      "name": "maker-rotated-cradle-geometry-width",
+      "status": "passed",
+      "measuredMeters": 0.616000012,
+      "expectedMeters": 0.616000012,
+      "toleranceMeters": 1e-8
+    },
+    {
+      "name": "mechanic-rest-left-crank-root-follows-transmission",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.586910188,
+        0.638870645,
+        0.18014462
+      ],
+      "expectedWorld": [
+        0.586910188,
+        0.638870645,
+        0.18014462
+      ],
+      "mesh": "mechanic-left-crank-link"
+    },
+    {
+      "name": "mechanic-rest-left-crank-terminates-at-pin",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.598918539,
+        0.697160625,
+        0.210919248
+      ],
+      "expectedWorld": [
+        0.598918539,
+        0.697160625,
+        0.210919248
+      ],
+      "mesh": "mechanic-left-crank-link"
+    },
+    {
+      "name": "mechanic-rest-left-slider-terminates-at-live-shin",
+      "status": "passed",
+      "errorMeters": 1.2412670766236366e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.494332679,
+        0.509745872,
+        0.223851786
+      ],
+      "expectedWorld": [
+        0.494332679,
+        0.509745872,
+        0.223851786
+      ],
+      "mesh": "mechanic-left-slotted-knee-link-slider",
+      "target": "left-shin"
+    },
+    {
+      "name": "mechanic-rest-right-crank-root-follows-transmission",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.179203054,
+        0.67672561,
+        0.407383484
+      ],
+      "expectedWorld": [
+        -0.179203054,
+        0.67672561,
+        0.407383484
+      ],
+      "mesh": "mechanic-right-crank-link"
+    },
+    {
+      "name": "mechanic-rest-right-crank-terminates-at-pin",
+      "status": "passed",
+      "errorMeters": 1.1102230246251565e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.191211405,
+        0.61843563,
+        0.376608855
+      ],
+      "expectedWorld": [
+        -0.191211405,
+        0.61843563,
+        0.376608855
+      ],
+      "mesh": "mechanic-right-crank-link"
+    },
+    {
+      "name": "mechanic-rest-right-slider-terminates-at-live-shin",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.086496705,
+        0.516070942,
+        0.410123731
+      ],
+      "expectedWorld": [
+        -0.086496705,
+        0.516070942,
+        0.410123731
+      ],
+      "mesh": "mechanic-right-slotted-knee-link-slider",
+      "target": "right-shin"
+    },
+    {
+      "name": "mechanic-rest-left-crossshaft-physical-endpoint",
+      "status": "passed",
+      "errorMeters": 4.768371624497972e-9,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.567757353,
+        0.639817019,
+        0.185825593
+      ],
+      "expectedWorld": [
+        0.567757357,
+        0.639817019,
+        0.185825591
+      ],
+      "mesh": "mechanic-cross-shaft"
+    },
+    {
+      "name": "mechanic-rest-right-crossshaft-physical-endpoint",
+      "status": "passed",
+      "errorMeters": 4.768371656331295e-9,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.160050219,
+        0.675779236,
+        0.401702511
+      ],
+      "expectedWorld": [
+        -0.160050223,
+        0.675779236,
+        0.401702512
+      ],
+      "mesh": "mechanic-cross-shaft"
+    },
+    {
+      "name": "mechanic-rotated-left-crank-root-follows-transmission",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.586910188,
+        0.638870645,
+        0.18014462
+      ],
+      "expectedWorld": [
+        0.586910188,
+        0.638870645,
+        0.18014462
+      ],
+      "mesh": "mechanic-left-crank-link"
+    },
+    {
+      "name": "mechanic-rotated-left-crank-terminates-at-pin",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.598918539,
+        0.697160625,
+        0.210919248
+      ],
+      "expectedWorld": [
+        0.598918539,
+        0.697160625,
+        0.210919248
+      ],
+      "mesh": "mechanic-left-crank-link"
+    },
+    {
+      "name": "mechanic-rotated-left-slider-terminates-at-live-shin",
+      "status": "passed",
+      "errorMeters": 1.2412670766236366e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.494332679,
+        0.509745872,
+        0.223851786
+      ],
+      "expectedWorld": [
+        0.494332679,
+        0.509745872,
+        0.223851786
+      ],
+      "mesh": "mechanic-left-slotted-knee-link-slider",
+      "target": "left-shin"
+    },
+    {
+      "name": "mechanic-rotated-right-crank-root-follows-transmission",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.179203054,
+        0.67672561,
+        0.407383484
+      ],
+      "expectedWorld": [
+        -0.179203054,
+        0.67672561,
+        0.407383484
+      ],
+      "mesh": "mechanic-right-crank-link"
+    },
+    {
+      "name": "mechanic-rotated-right-crank-terminates-at-pin",
+      "status": "passed",
+      "errorMeters": 1.1102230246251565e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.191211405,
+        0.61843563,
+        0.376608855
+      ],
+      "expectedWorld": [
+        -0.191211405,
+        0.61843563,
+        0.376608855
+      ],
+      "mesh": "mechanic-right-crank-link"
+    },
+    {
+      "name": "mechanic-rotated-right-slider-terminates-at-live-shin",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.086496705,
+        0.516070942,
+        0.410123731
+      ],
+      "expectedWorld": [
+        -0.086496705,
+        0.516070942,
+        0.410123731
+      ],
+      "mesh": "mechanic-right-slotted-knee-link-slider",
+      "target": "right-shin"
+    },
+    {
+      "name": "mechanic-rotated-left-crossshaft-physical-endpoint",
+      "status": "passed",
+      "errorMeters": 4.768371624497972e-9,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.567757353,
+        0.639817019,
+        0.185825593
+      ],
+      "expectedWorld": [
+        0.567757357,
+        0.639817019,
+        0.185825591
+      ],
+      "mesh": "mechanic-cross-shaft"
+    },
+    {
+      "name": "mechanic-rotated-right-crossshaft-physical-endpoint",
+      "status": "passed",
+      "errorMeters": 4.768371656331295e-9,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        -0.160050219,
+        0.675779236,
+        0.401702511
+      ],
+      "expectedWorld": [
+        -0.160050223,
+        0.675779236,
+        0.401702512
+      ],
+      "mesh": "mechanic-cross-shaft"
+    },
+    {
+      "name": "builder-rest-connected-manifold-case-center",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "owner": "body",
+      "authoredOwnerLocalPosition": [
+        -0.210023463,
+        0.255199969,
+        0.077
+      ]
+    },
+    {
+      "name": "builder-rest-core-conduit-actual-core-endpoint",
+      "status": "passed",
+      "errorMeters": 2.220446049250313e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "expectedWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "mesh": "builder-core-to-distribution-conduit",
+      "target": "power-core"
+    },
+    {
+      "name": "builder-rest-core-conduit-actual-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-core-to-distribution-conduit",
+      "target": "builder-power-distribution-manifold"
+    },
+    {
+      "name": "builder-rest-left-sleeve-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "expectedWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "mesh": "builder-cervical-left-actuator-sleeve",
+      "owner": "body",
+      "authoredLocalPoint": [
+        0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ]
+    },
+    {
+      "name": "builder-rest-left-rod-neck-socket",
+      "status": "passed",
+      "errorMeters": 2.220446049250313e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.368906508,
+        1.322940195,
+        0.510585749
+      ],
+      "expectedWorld": [
+        0.368906508,
+        1.322940195,
+        0.510585749
+      ],
+      "mesh": "builder-cervical-left-actuator-rod",
+      "owner": "neck",
+      "authoredLocalPoint": [
+        0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "name": "builder-rest-left-cervical-conduit-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 5.551115123125783e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-cervical-left-power-conduit"
+    },
+    {
+      "name": "builder-rest-left-cervical-conduit-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "expectedWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "mesh": "builder-cervical-left-power-conduit"
+    },
+    {
+      "name": "builder-rest-left-sleeve-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rest-left-rod-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rest-left-conduit-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rest-right-sleeve-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "expectedWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "mesh": "builder-cervical-right-actuator-sleeve",
+      "owner": "body",
+      "authoredLocalPoint": [
+        -0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ]
+    },
+    {
+      "name": "builder-rest-right-rod-neck-socket",
+      "status": "passed",
+      "errorMeters": 1.1102230246251565e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.244413111,
+        1.329091627,
+        0.547512063
+      ],
+      "expectedWorld": [
+        0.244413111,
+        1.329091627,
+        0.547512063
+      ],
+      "mesh": "builder-cervical-right-actuator-rod",
+      "owner": "neck",
+      "authoredLocalPoint": [
+        -0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "name": "builder-rest-right-cervical-conduit-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-cervical-right-power-conduit"
+    },
+    {
+      "name": "builder-rest-right-cervical-conduit-body-socket",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "expectedWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "mesh": "builder-cervical-right-power-conduit"
+    },
+    {
+      "name": "builder-rest-right-sleeve-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rest-right-rod-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rest-right-conduit-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-connected-manifold-case-center",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "owner": "body",
+      "authoredOwnerLocalPosition": [
+        -0.210023463,
+        0.255199969,
+        0.077
+      ]
+    },
+    {
+      "name": "builder-rotated-core-conduit-actual-core-endpoint",
+      "status": "passed",
+      "errorMeters": 2.220446049250313e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "expectedWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "mesh": "builder-core-to-distribution-conduit",
+      "target": "power-core"
+    },
+    {
+      "name": "builder-rotated-core-conduit-actual-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-core-to-distribution-conduit",
+      "target": "builder-power-distribution-manifold"
+    },
+    {
+      "name": "builder-rotated-left-sleeve-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "expectedWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "mesh": "builder-cervical-left-actuator-sleeve",
+      "owner": "body",
+      "authoredLocalPoint": [
+        0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ]
+    },
+    {
+      "name": "builder-rotated-left-rod-neck-socket",
+      "status": "passed",
+      "errorMeters": 1.1102230246251565e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.366979332,
+        1.308896722,
+        0.532931988
+      ],
+      "expectedWorld": [
+        0.366979332,
+        1.308896722,
+        0.532931988
+      ],
+      "mesh": "builder-cervical-left-actuator-rod",
+      "owner": "neck",
+      "authoredLocalPoint": [
+        0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "name": "builder-rotated-left-cervical-conduit-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 5.551115123125783e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-cervical-left-power-conduit"
+    },
+    {
+      "name": "builder-rotated-left-cervical-conduit-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "expectedWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "mesh": "builder-cervical-left-power-conduit"
+    },
+    {
+      "name": "builder-rotated-left-sleeve-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-left-rod-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-left-conduit-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-right-sleeve-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "expectedWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "mesh": "builder-cervical-right-actuator-sleeve",
+      "owner": "body",
+      "authoredLocalPoint": [
+        -0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ]
+    },
+    {
+      "name": "builder-rotated-right-rod-neck-socket",
+      "status": "passed",
+      "errorMeters": 2.237726045655905e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.239488995,
+        1.318725448,
+        0.556375731
+      ],
+      "expectedWorld": [
+        0.239488995,
+        1.318725448,
+        0.556375731
+      ],
+      "mesh": "builder-cervical-right-actuator-rod",
+      "owner": "neck",
+      "authoredLocalPoint": [
+        -0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "name": "builder-rotated-right-cervical-conduit-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-cervical-right-power-conduit"
+    },
+    {
+      "name": "builder-rotated-right-cervical-conduit-body-socket",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "expectedWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "mesh": "builder-cervical-right-power-conduit"
+    },
+    {
+      "name": "builder-rotated-right-sleeve-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-right-rod-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-right-conduit-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-separated-manifold-case-center",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "owner": "body",
+      "authoredOwnerLocalPosition": [
+        -0.210023463,
+        0.255199969,
+        0.077
+      ]
+    },
+    {
+      "name": "builder-rotated-core-manifold-link-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-core-disconnect-stub-visible",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-manifold-disconnect-stub-visible",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-core-disconnect-socket-endpoint",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "expectedWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "mesh": "builder-core-disconnected-conduit-stub",
+      "target": "power-core"
+    },
+    {
+      "name": "builder-rotated-manifold-disconnect-socket-endpoint",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-distribution-disconnected-conduit-stub",
+      "target": "builder-power-distribution-manifold"
+    },
+    {
+      "name": "builder-rotated-left-sleeve-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-left-rod-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-left-conduit-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-right-sleeve-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-right-rod-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-right-conduit-disconnect",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-rotated-connected-manifold-case-center",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "owner": "body",
+      "authoredOwnerLocalPosition": [
+        -0.210023463,
+        0.255199969,
+        0.077
+      ]
+    },
+    {
+      "name": "builder-rotated-core-conduit-actual-core-endpoint",
+      "status": "passed",
+      "errorMeters": 2.220446049250313e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "expectedWorld": [
+        0.280565961,
+        1.067701807,
+        0.484107775
+      ],
+      "mesh": "builder-core-to-distribution-conduit",
+      "target": "power-core"
+    },
+    {
+      "name": "builder-rotated-core-conduit-actual-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-core-to-distribution-conduit",
+      "target": "builder-power-distribution-manifold"
+    },
+    {
+      "name": "builder-rotated-left-sleeve-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "expectedWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "mesh": "builder-cervical-left-actuator-sleeve",
+      "owner": "body",
+      "authoredLocalPoint": [
+        0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ]
+    },
+    {
+      "name": "builder-rotated-left-rod-neck-socket",
+      "status": "passed",
+      "errorMeters": 1.1102230246251565e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.366979332,
+        1.308896722,
+        0.532931988
+      ],
+      "expectedWorld": [
+        0.366979332,
+        1.308896722,
+        0.532931988
+      ],
+      "mesh": "builder-cervical-left-actuator-rod",
+      "owner": "neck",
+      "authoredLocalPoint": [
+        0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "name": "builder-rotated-left-cervical-conduit-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 5.551115123125783e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-cervical-left-power-conduit"
+    },
+    {
+      "name": "builder-rotated-left-cervical-conduit-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "expectedWorld": [
+        0.424802794,
+        1.192906822,
+        0.4742596
+      ],
+      "mesh": "builder-cervical-left-power-conduit"
+    },
+    {
+      "name": "builder-rotated-left-sleeve-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-left-rod-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-left-conduit-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-right-sleeve-body-socket",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "expectedWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "mesh": "builder-cervical-right-actuator-sleeve",
+      "owner": "body",
+      "authoredLocalPoint": [
+        -0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ]
+    },
+    {
+      "name": "builder-rotated-right-rod-neck-socket",
+      "status": "passed",
+      "errorMeters": 2.237726045655905e-16,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.239488995,
+        1.318725448,
+        0.556375731
+      ],
+      "expectedWorld": [
+        0.239488995,
+        1.318725448,
+        0.556375731
+      ],
+      "mesh": "builder-cervical-right-actuator-rod",
+      "owner": "neck",
+      "authoredLocalPoint": [
+        -0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "name": "builder-rotated-right-cervical-conduit-manifold-endpoint",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "expectedWorld": [
+        0.043099311,
+        1.077518477,
+        0.421270001
+      ],
+      "mesh": "builder-cervical-right-power-conduit"
+    },
+    {
+      "name": "builder-rotated-right-cervical-conduit-body-socket",
+      "status": "passed",
+      "errorMeters": 2.7755575615628914e-17,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "expectedWorld": [
+        0.166239564,
+        1.205682874,
+        0.55095272
+      ],
+      "mesh": "builder-cervical-right-power-conduit"
+    },
+    {
+      "name": "builder-rotated-right-sleeve-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-right-rod-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "builder-rotated-right-conduit-connected",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "tail-pivot-world-from-body-local-position",
+      "status": "passed",
+      "errorMeters": 0,
+      "toleranceMeters": 0.00002,
+      "measuredWorld": [
+        0.13474036,
+        1.019784141,
+        0.000453699
+      ],
+      "expectedWorld": [
+        0.13474036,
+        1.019784141,
+        0.000453699
+      ],
+      "authoredOwnerLocalPosition": [
+        0,
+        0.176000059,
+        -0.29506883
+      ],
+      "owner": "body"
+    },
+    {
+      "name": "maker-controls-visible-in-maker",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "mechanic-gear-hidden-in-maker",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-actuator-hidden-in-maker",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "mechanic-drive-visible-in-mechanic",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "maker-controls-hidden-in-mechanic",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-actuator-hidden-in-mechanic",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "builder-cervical-visible-in-builder",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "maker-controls-hidden-in-builder",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "mechanic-gear-hidden-in-builder",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    }
+  ],
+  "failures": [],
+  "limits": [
+    "This compares actual dynamic-cylinder endpoints and fixed mesh centers against declared owner-local points after world transforms; it does not compare schema metadata only to copied runtime metrics.",
+    "The artificial rotated pose only checks attachment propagation under selected neck, jaw, wing, foot, body, and root transforms; it is not a swept-clearance test.",
+    "Passing does not establish surface seating, collisions, load path strength, continuous motion clearance, era art acceptance, or browser/runtime visual acceptance.",
+    "Legacy mode checks the unchanged fallback branch against known historical fallback constants; it does not validate those old attachment locations against changed anatomy."
+  ]
+}

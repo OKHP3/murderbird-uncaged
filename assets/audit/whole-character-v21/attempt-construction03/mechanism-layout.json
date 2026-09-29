@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "status": "Mapped attachment proposal; actual hardware fit and movement remain subject to review",
+  "coordinateSpace": "glTF owner-local metres; no object scale applied to runtime mechanisms",
+  "sourceMapping": {
+    "path": "assets/audit/whole-character-v20/attempt-proportions02/executed-proportions.py",
+    "sha256": "31fc8d2cb1626570403e823eb1d97ac8b763e6849a00660a9ee58dff4163cd00"
+  },
+  "sourceRigContract": {
+    "path": "assets/audit/whole-character-v20/attempt-proportions02/rig-shape-contract.json",
+    "sha256": "077c101cdd7632d97166055bb501f526e4763f9e1acc77cd413d10ccf3e9d096"
+  },
+  "makerControlOffsets": {
+    "leg": [
+      0.084499985,
+      0.020053774,
+      0.056621544
+    ],
+    "wing": [
+      -0.106400013,
+      -0.093999982,
+      0.100000001
+    ],
+    "tail": [
+      -0.070686989,
+      0.0,
+      -0.150400013
+    ],
+    "neck": [
+      -0.07799995690584183,
+      0.15500009059906006,
+      0.06999997794628143
+    ],
+    "jaw": [
+      -0.180000007,
+      -0.059999943,
+      0.199999988
+    ]
+  },
+  "tailPosition": [
+    0.0,
+    0.176000059,
+    -0.29506883
+  ],
+  "distributionPosition": [
+    -0.210023463,
+    0.255199969,
+    0.077
+  ],
+  "transmissionPosition": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cervical": [
+    {
+      "side": "left",
+      "bodyPoint": [
+        0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ],
+      "neckPoint": [
+        0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    },
+    {
+      "side": "right",
+      "bodyPoint": [
+        -0.13500000536441803,
+        0.39990919828414917,
+        0.2247767299413681
+      ],
+      "neckPoint": [
+        -0.06499999761581421,
+        0.11000025272369385,
+        0.06499999761581421
+      ]
+    }
+  ],
+  "makerCradleWidth": 0.616000012,
+  "limits": [
+    "Sockets are transformed source placements, not proven bearing seats.",
+    "The Mechanic gearbox retains its rigid internal spacing; only its origin follows this contract.",
+    "Maker floor rack and fixed guide support remain independent external apparatus.",
+    "Advanced conduit routing still requires visual review against the revised body."
+  ],
+  "cervicalSocketProvenanceV21": {
+    "sourceNative": "assets/models/whole-character-v21/attempt-envelope03/murderbird-whole-character-v21.blend",
+    "sourceNativeSha256": "720c343645ef2de298a50e53c82fad66448c187b1eaf9311de2514cac079f280",
+    "refreshedFields": [
+      "makerControlOffsets.neck",
+      "cervical"
+    ],
+    "inheritedProvenance": "sourceMapping and sourceRigContract describe the retained V20 fields only; refreshed cervical fields are derived from the V21 native frame.",
+    "status": "authored frame-derived socket proposal, not a recovered mechanism"
+  }
+}

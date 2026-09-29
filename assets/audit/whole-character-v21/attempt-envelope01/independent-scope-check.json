@@ -1,0 +1,130 @@
+{
+  "schema": "murderbird-v21-independent-native-scope-check-v1",
+  "status": "read-only native scope check; no runtime, collision, visual acceptance, or engineering clearance conclusion",
+  "method": {
+    "tool": "Blender 5.2.1 LTS",
+    "surfaceComparison": "Independently evaluated each mesh modifier stack and compared exact ordered world-space vertex-coordinate SHA256 for same-named retained meshes.",
+    "noRenderingOrEdits": true
+  },
+  "base": {
+    "path": "assets/models/whole-character-v20/attempt-runtime02/murderbird-whole-character-v20.blend",
+    "sha256": "eb15a9d87de56fb8a06004d9c69448c38089f0ecacd888e3e7fde921a353d42a",
+    "bytes": 2800982,
+    "matchesPinnedV20Runtime02": true
+  },
+  "candidate": {
+    "path": "assets/models/whole-character-v21/attempt-envelope01/murderbird-whole-character-v21.blend",
+    "sha256": "81406a3b7b3243f9dc3cc4eeed65d9cf8b28e5c087f24f723028493e2ee997b0",
+    "bytes": 1851444,
+    "matchesEnvelope01Receipt": true,
+    "glbPresent": false
+  },
+  "namedPivots": {
+    "baseCount": 52,
+    "candidateCount": 52,
+    "namesExact": true,
+    "parentsExact": true,
+    "changedWorldRestNames": [
+      "cervical-upper",
+      "head",
+      "neck"
+    ],
+    "changedLocalRestNames": [
+      "anchor-beak",
+      "builder-optics",
+      "cervical-upper",
+      "cranial-cover",
+      "head",
+      "jaw",
+      "neck",
+      "processing",
+      "upper-bill"
+    ],
+    "parentMismatches": [],
+    "worldRestPositions": {
+      "cervical-upper": [
+        0.0,
+        -0.239999995,
+        1.455000043
+      ],
+      "head": [
+        0.0,
+        -0.280000001,
+        1.580000043
+      ],
+      "neck": [
+        0.0,
+        -0.170000002,
+        1.299999952
+      ]
+    }
+  },
+  "meshes": {
+    "base": 744,
+    "candidate": 614,
+    "retained": 573,
+    "removed": 171,
+    "added": 41,
+    "retainedParentMismatches": [],
+    "retainedWorldVertexDigestMismatches": [],
+    "allCandidateEvaluatedMeshesFinite": true,
+    "headWingLegWorldGeometryExact": true,
+    "preservedRegionChecks": {
+      "head": {
+        "sourceMeshes": 160,
+        "missing": 0,
+        "worldGeometryMismatches": 0,
+        "exact": true
+      },
+      "wings": {
+        "sourceMeshes": 193,
+        "missing": 0,
+        "worldGeometryMismatches": 0,
+        "exact": true
+      },
+      "legsFeet": {
+        "sourceMeshes": 184,
+        "missing": 0,
+        "worldGeometryMismatches": 0,
+        "exact": true
+      }
+    }
+  },
+  "addedMeshMetadata": {
+    "countsByRigidOwner": {
+      "breastplate": 6,
+      "neck": 9,
+      "body": 16,
+      "cervical-upper": 9,
+      "head": 1
+    },
+    "constructionClasses": {
+      "proposed-passive": 41
+    },
+    "exteriorEraTags": {
+      "maker,mechanic,builder": 41
+    },
+    "regions": {
+      "breast": 22,
+      "neck": 19
+    },
+    "roles": {
+      "plate": 13,
+      "bearing": 12,
+      "frame": 16
+    },
+    "incompleteOwnerOrEraRegionRoleTags": []
+  },
+  "candidateProperties": {
+    "breastplateInspectionAxis": "x",
+    "breastplateInspectionOpenRadians": 1.1,
+    "bodyMechanismLayoutStatus": "present but explicitly marked stale under V21 pivots in sharedEnvelopeV21 metadata",
+    "sharedEnvelopeMetadataStatus": "coarse visual study; retained V20 mechanism sockets stale under new rests",
+    "mechanismLayoutV1Source": "assets/audit/whole-character-v20/attempt-proportions02/mapped-mechanism-proposal.json",
+    "mechanismLayoutV1WasRegenerated": false
+  },
+  "notChecked": [
+    "Collision/contact, geometric connection quality, articulation sweep, load path strength, materials, shading, browser/runtime behavior, and likeness.",
+    "Whether stale V20 mechanism sockets suit the V21 envelope; no GLB or V21 runtime selection is present in this candidate."
+  ]
+}

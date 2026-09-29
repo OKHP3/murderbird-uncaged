@@ -21,6 +21,13 @@ function rig() {
   const rest = Object.fromEntries(names.map(name => [name, { position: nodes[name].position.clone(), rotation: nodes[name].rotation.clone() }]));
   const motion = createEraMotion(model, nodes, rest);
   const localPositions = new Map();
+  const upper = model.getObjectByName('cervical-upper');
+  const cover = model.getObjectByName('cervical-joint-cover');
+  if (cover) {
+    assert.ok(upper && cover.parent === nodes.neck, 'Linked cover lacks its serial neck attachment.');
+    localPositions.set(cover, cover.position.clone());
+    localPositions.set(upper, upper.position.clone());
+  }
   for (const side of ['left','right']) {
     for (const suffix of ['shin','foot','toes','digit-1-proximal','digit-1-distal','digit-2-proximal','digit-2-distal','digit-3-proximal','digit-3-distal']) {
       const node = model.getObjectByName(`${side}-${suffix}`);
@@ -33,6 +40,10 @@ function rig() {
     motion.tick(1 / 60, snapshot);
     model.updateMatrixWorld(true);
     for (const [node, position] of localPositions) assert.ok(node.position.distanceTo(position) < 1e-9, `Translated fixed pivot ${node.name}`);
+    if (cover) {
+      const separation = cover.getWorldPosition(new THREE.Vector3()).distanceTo(upper.getWorldPosition(new THREE.Vector3()));
+      assert.ok(separation < 1e-6, `Linked guard lost its hinge centre by ${separation} m.`);
+    }
     for(const node of [nodes.jaw,nodes.neck,nodes.head,nodes['left-mantle'],nodes['right-mantle'],nodes['left-wing-shield'],nodes['right-wing-shield'],...localPositions.keys()]) {
       const basis=[0,1,2].map(axis=>new THREE.Vector3().setFromMatrixColumn(node.matrixWorld,axis));
       assert.ok(basis.every(vector=>Math.abs(vector.length()-1)<1e-6),`Nonunit rigid world basis at ${node.name}`);

@@ -1,0 +1,129 @@
+{
+  "schema": "murderbird-construction-checkpoint-evidence-v1",
+  "status": "evidence verified with build-artifact divergence noted; artistic and motion clearance acceptance remain open",
+  "native": {
+    "path": "assets/models/whole-character-v21/attempt-construction04/murderbird-whole-character-v21.blend",
+    "sha256": "f57f85b92463d527d6cba528090e8f6ec3d31f1a73a235ce8e78361244061d1e",
+    "receiptPath": "assets/audit/whole-character-v21/attempt-construction04/receipt.json",
+    "receiptSha256": "ed95ed1b74b67a10863e74e7cf218fbffaa0c9fcd59c60a464f86acb129b0e4c",
+    "receiptClaims": {
+      "articulationRestTransformsAndParentsExact": 51,
+      "allEvaluatedMeshesFinite": 654,
+      "saveReopenExact": true,
+      "materialsExact": true
+    }
+  },
+  "diagnosticGlb": {
+    "path": "assets/models/whole-character-v21/attempt-construction04/murderbird-whole-character-v21.glb",
+    "sha256": "061d22485d7ea602c455a5f7942fd2ca192160e5561aec01abea405e217b20ee",
+    "exportReceiptPath": "assets/audit/whole-character-v21/attempt-construction04/export/export-receipt.json",
+    "exportReceiptSha256": "8f95b1cbbaa9cfa0701c5e2fb9fef28cceea98ac33b16dff800554f6c0f7a546",
+    "exportStatus": "static diagnostic runtime derivative; not selected or accepted"
+  },
+  "freshPosePacket": {
+    "path": "assets/audit/whole-character-v21/attempt-construction04/poses/pose-snapshot.json",
+    "sha256": "571a55eba79115516bce4426f277a6564d3a3888d0b5638811940f058c746f72",
+    "modelSha256": "061d22485d7ea602c455a5f7942fd2ca192160e5561aec01abea405e217b20ee",
+    "poseCount": 37
+  },
+  "runtimeChecks": [
+    {
+      "name": "mechanism-layout-v20",
+      "path": "assets/audit/whole-character-v21/attempt-construction04/runtime/mechanism-layout-v20.json",
+      "sha256": "8bc23cddbd5f22d2a3a6800dec5392eb894c98a42467701267826c1d69af9292",
+      "modelSha256": "061d22485d7ea602c455a5f7942fd2ca192160e5561aec01abea405e217b20ee",
+      "passed": 103,
+      "total": 103,
+      "scope": "Maker, Mechanic, and Builder authored endpoint/visibility samples; endpoint and visibility checks only"
+    },
+    {
+      "name": "kinematic-alignment",
+      "path": "assets/audit/whole-character-v21/attempt-construction04/runtime/kinematic-alignment.json",
+      "sha256": "ab5ff5e8646bf8f17767f58c84823dba96c0e8a7022eb5d580d0c83720d2f84f",
+      "modelSha256": "061d22485d7ea602c455a5f7942fd2ca192160e5561aec01abea405e217b20ee",
+      "passed": 4,
+      "total": 4,
+      "scope": "deterministic kinematic samples; no exhaustive collision or physical force proof"
+    },
+    {
+      "name": "inspection-pose-validation",
+      "path": "assets/audit/whole-character-v21/attempt-construction04/runtime/inspection-pose-validation.json",
+      "sha256": "a2f36abd14cb7acda71ba7464fc1c68cf189bb603799ec1e180d001affd6dba5",
+      "modelSha256": "061d22485d7ea602c455a5f7942fd2ca192160e5561aec01abea405e217b20ee",
+      "passed": 1,
+      "total": 1,
+      "scope": "active exported inspection pose restores eligible mesh world matrices across Maker, Mechanic, and Builder cycles"
+    },
+    {
+      "name": "power-move-validation",
+      "path": "assets/audit/whole-character-v21/attempt-construction04/runtime/power-move-validation.json",
+      "sha256": "26fb044f090fa589fb64d6ceae6df7326ebc24f73bdcbff4fb9b5a3f59db2c88",
+      "modelPath": "assets/models/whole-character-v21/attempt-construction04/murderbird-whole-character-v21.glb",
+      "passed": 4,
+      "total": 4,
+      "scope": "jump/landing, pause, inspection wait, and thrust kinematic assertions",
+      "identityLimitation": "Report records the model path but does not include an expected model SHA field"
+    },
+    {
+      "name": "claw-contact-v4",
+      "path": "assets/audit/whole-character-v21/attempt-construction04/runtime/claw-contact-v4.json",
+      "sha256": "bc8d3b31b6e7e68d5c1d6a0f7321e2f7268ce413457fb33fa82f89c05b2de6d4",
+      "modelSha256": "061d22485d7ea602c455a5f7942fd2ca192160e5561aec01abea405e217b20ee",
+      "passed": 32,
+      "total": 32,
+      "scope": "60/120 Hz claw cycle plus interruption-state assertions; no force/grip or human acting acceptance"
+    }
+  ],
+  "neckBreastSurfaceScreen": {
+    "path": "assets/audit/whole-character-v21/attempt-construction04/combined-clearance/result.json",
+    "sha256": "19d9366f23889999a181d7ff7b99c62f4225771253529191d4c77482c2b78b06",
+    "executedScriptPath": "assets/audit/whole-character-v21/attempt-construction04/combined-clearance/executed-screen.py",
+    "executedScriptSha256": "4c2b4ed8ab9688c332500c65815a4d4f04fbc22e7ef41f55ff110304dab757fe",
+    "nativeSha256": "f57f85b92463d527d6cba528090e8f6ec3d31f1a73a235ce8e78361244061d1e",
+    "sampledPitchCount": 9,
+    "neckOwnerInterOwnerCrossingPairsAtSamples": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "uniqueInterOwnerCrossingPairs": 27,
+    "caveat": "Zero applies only to different-owner pairs inside the selected neck-owner group. The screen reports 27 crossings against adjacent owners, including new breast/backing and existing shoulder/throat/jaw-region parts. This is sampled surface-overlap evidence, not collision-free motion acceptance."
+  },
+  "crossingWitness": {
+    "path": "assets/audit/whole-character-v21/attempt-construction04/combined-clearance/witness.json",
+    "sha256": "ee6de4164ff18480f6067d7cfe7940e246bb84dfbe376fef448f39eec6e1c7f9",
+    "executedScriptPath": "assets/audit/whole-character-v21/attempt-construction04/combined-clearance/executed-witness.py",
+    "executedScriptSha256": "2ee29e4a7e8fc6e2ca373628087b53e67cca6add736e25321b8c8fe8f0295810",
+    "witnessCount": 27,
+    "limits": "Worst-count samples reused from the original nine poses. Bounds and centroids summarize overlapping triangle vertices, not exact clipped intersections or severity."
+  },
+  "localProductionBuild": {
+    "receiptPath": "assets/audit/whole-character-v21/build/receipt.json",
+    "receiptSha256": "b53422b4e4bc90e20b41904629a0bbdf9a5289021e38ab50e8c4deabe69e6968",
+    "receiptStatus": "passed local production build and publication-boundary checks; no deployment",
+    "commandsRecorded": ["npm ci", "npm run build", "node scripts/verify-publication.mjs"],
+    "sourceRevision": "d1b8fcdce9714a36b35d882c3ea63c7b4b15e848",
+    "workingTreeDirty": true,
+    "productionModelClaim": "uncaged-alignment-v9; V21 is explicit development-only diagnostic",
+    "emittedFilesPath": "assets/audit/whole-character-v21/build/emitted-files.json",
+    "emittedFilesSha256": "f06bcd5456e438bb905adf2a3d82d4cc83ebe10dfcea6f531672299f871ca4ba",
+    "emittedFileCountIncludingReleaseManifest": 134,
+    "v21AssetPathsInRecordedEmissionList": 0,
+    "v9AssetEmitted": true,
+    "deploymentClaim": false,
+    "evidenceGap": "No raw npm/build stdout log is present in this build audit folder; evidence is the summary receipt and emitted-path list."
+  },
+  "currentDistConsistencyCheck": {
+    "recordedBuildInventoryHas134Paths": true,
+    "recordedPathsMissingFromCurrentDist": ["assets/exhibit-C_YoI1Va.js"],
+    "currentDistContainsDifferentExhibitBundle": "assets/exhibit-1ceWikyR.js",
+    "recordedReleaseManifestSha256": "c3d765c81c9662d14b4adfdb8915a96cae7fd758aa2a275e4910d34477bdd729",
+    "currentDistReleaseJsonSha256": "c13cd5052a1656c302bffd7fb8fb1a090ee5ec90a47c43a1ed0683bd33cb9ed4",
+    "currentDistV9AssetSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+    "sourceV9AssetSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+    "assessment": "V9 model bytes in current dist match the repository V9 source model, and neither recorded nor current release manifest lists V21. However current dist does not match the saved build emitted-path inventory or recorded release-manifest hash, so the saved build receipt cannot be treated as byte-for-byte evidence for the current dist tree."
+  },
+  "claimsNotEstablished": [
+    "Artistic likeness approval or whole-character acceptance",
+    "Physical simulation, strength, grip, or force capacity",
+    "Collision-free movement between sampled poses",
+    "WebGL/browser acceptance for the V21 diagnostic model",
+    "Remote CI, deployment, or live-site state"
+  ]
+}
