@@ -1,0 +1,714 @@
+{
+  "status": "Regional construction proposal; not artistic or full-motion acceptance",
+  "base": {
+    "path": "assets/models/whole-character-v28/attempt-form02/murderbird-whole-character-v28.blend",
+    "bytes": 2713170,
+    "sha256": "838a86b16766ddd4491c9f1cbe6a7aa0039c2b9e8514a04eb710d1e9b2f9bd9d"
+  },
+  "native": {
+    "path": "assets/models/whole-character-v29/attempt-fit01/murderbird-whole-character-v29.blend",
+    "bytes": 2842520,
+    "sha256": "04040543c39e98dd3d20da3d51a5ba40fd87151315ef074d328276eed97c63e7"
+  },
+  "sources": [
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/executed-builder.py",
+      "bytes": 8303,
+      "sha256": "b36ccc9831d707ff322e35edea4ddfd782ffb3a557da62bc921e7dba86b5974e"
+    },
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/executed-envelope-helper.py",
+      "bytes": 14851,
+      "sha256": "bb86baee5b5ee2db03648b73c900906fa9fcec2d86e48571617e36ef57bd7bf8"
+    },
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/executed-snapshot-helper.py",
+      "bytes": 36923,
+      "sha256": "39b6ee2285d8c49df3a902f8fac0a07589da3d41f48ae24df1e06515c839033a"
+    }
+  ],
+  "regions": [
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v29/attempt-fit01/executed-whole-character-v29-breast-hinge.py",
+        "bytes": 8871,
+        "sha256": "9074b5f4117bc3e44a927a79c6b959ede7d4461f3b22ad99c4e6950f5a3a62fd"
+      },
+      "result": {
+        "region": "breast-hinge",
+        "status": "Finite bored clevis/moving annular seats; discrete pose review required",
+        "changedMeshes": [
+          "V23 breast opening bearing -1",
+          "V23 breast opening bearing 1",
+          "V23 breast hinge fixed fork -1",
+          "V23 breast hinge fixed fork 1",
+          "V23 breast moving return -1",
+          "V23 breast moving return 1"
+        ],
+        "added": [
+          "V29 breast moving annular seat -1",
+          "V29 breast moving annular seat 1"
+        ],
+        "removed": [],
+        "changedNodes": [],
+        "checks": {
+          "namedNodesExact": 54,
+          "protectedMeshesExact": 556,
+          "breastExteriorShaftPivotExact": true,
+          "noNewMaterialOrDrive": true
+        },
+        "construction": {
+          "pivotNative": [
+            0.0,
+            -0.1576879918575287,
+            0.7646173238754272
+          ],
+          "axisNative": "x",
+          "fixedCheekCentersAbsX": [
+            0.133,
+            0.177
+          ],
+          "fixedCheekWidthM": 0.008,
+          "fixedBoreRadiusM": 0.0095,
+          "shaftRadiusM": 0.0065,
+          "nominalShaftToFixedBoreRadialGapM": 0.003,
+          "polygonMinimumBoreGapM": 0.0029949135810254735,
+          "movingSeatAbsX": 0.155,
+          "movingSeatWidthM": 0.014,
+          "movingSeatOuterRadiusM": 0.026,
+          "movingSeatToFixedCheekAxialGapsM": [
+            0.010999999999999982,
+            0.010999999999999982
+          ],
+          "fixedForkBodyAnchors": [
+            {
+              "fixedFork": "V23 breast hinge fixed fork -1",
+              "receivingBodyMember": "V23 thoracic formed rib -1",
+              "crossSectionIndex": 24,
+              "actualRearWebInteriorSeatNative": [
+                -0.12509599328041077,
+                0.014140965417027473,
+                0.9098355174064636
+              ],
+              "method": "Mean of actual outer/inner rear-web corners0,1,4,5 on preserved8-vertex channel ring closestZ.910; same-owner finite attachment"
+            },
+            {
+              "fixedFork": "V23 breast hinge fixed fork 1",
+              "receivingBodyMember": "V23 thoracic formed rib 1",
+              "crossSectionIndex": 24,
+              "actualRearWebInteriorSeatNative": [
+                0.12509599328041077,
+                0.014140965417027473,
+                0.9098355174064636
+              ],
+              "method": "Mean of actual outer/inner rear-web corners0,1,4,5 on preserved8-vertex channel ring closestZ.910; same-owner finite attachment"
+            }
+          ],
+          "channelReturnWallM": 0.005,
+          "clevisFingerWallM": 0.0035,
+          "classification": "Passive all eras; fixedclevis body, annular movingseat/return breastplate. Originalshaft unchanged."
+        },
+        "restWitnesses": [
+          {
+            "name": "V23 breast opening bearing -1",
+            "owner": "body",
+            "evaluatedRestBoundsNative": [
+              [
+                -0.181,
+                -0.129
+              ],
+              [
+                -0.18268799185752868,
+                -0.1326879918575287
+              ],
+              [
+                0.7396173238754272,
+                0.7896173238754273
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V23 breast hinge fixed fork -1",
+            "owner": "body",
+            "evaluatedRestBoundsNative": [
+              [
+                -0.18773874640464783,
+                -0.11487886309623718
+              ],
+              [
+                -0.14522448182106018,
+                0.02378218248486519
+              ],
+              [
+                0.7776904702186584,
+                0.9200530052185059
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V29 breast moving annular seat -1",
+            "owner": "breastplate",
+            "evaluatedRestBoundsNative": [
+              [
+                -0.162,
+                -0.148
+              ],
+              [
+                -0.18368799185752868,
+                -0.1316879918575287
+              ],
+              [
+                0.7386173238754272,
+                0.7906173238754273
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V23 breast moving return -1",
+            "owner": "breastplate",
+            "evaluatedRestBoundsNative": [
+              [
+                -0.16592535376548767,
+                -0.07468543946743011
+              ],
+              [
+                -0.3413286507129669,
+                -0.1594824194908142
+              ],
+              [
+                0.7774289846420288,
+                1.1015068292617798
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V23 breast opening bearing 1",
+            "owner": "body",
+            "evaluatedRestBoundsNative": [
+              [
+                0.129,
+                0.181
+              ],
+              [
+                -0.18268799185752868,
+                -0.1326879918575287
+              ],
+              [
+                0.7396173238754272,
+                0.7896173238754273
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V23 breast hinge fixed fork 1",
+            "owner": "body",
+            "evaluatedRestBoundsNative": [
+              [
+                0.11487886309623718,
+                0.18773874640464783
+              ],
+              [
+                -0.14522448182106018,
+                0.02378218248486519
+              ],
+              [
+                0.7776904702186584,
+                0.9200530052185059
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V29 breast moving annular seat 1",
+            "owner": "breastplate",
+            "evaluatedRestBoundsNative": [
+              [
+                0.148,
+                0.162
+              ],
+              [
+                -0.18368799185752868,
+                -0.1316879918575287
+              ],
+              [
+                0.7386173238754272,
+                0.7906173238754273
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          },
+          {
+            "name": "V23 breast moving return 1",
+            "owner": "breastplate",
+            "evaluatedRestBoundsNative": [
+              [
+                0.07468543946743011,
+                0.16592535376548767
+              ],
+              [
+                -0.3413286507129669,
+                -0.1594824194908142
+              ],
+              [
+                0.7774289846420288,
+                1.1015068292617798
+              ]
+            ],
+            "singleRigidOwner": true,
+            "finiteClosed": true
+          }
+        ],
+        "limits": [
+          "No continuous motion or engineering clearance claim.",
+          "Unchanged upperbreast/neck rest intersections remain a separate root scope.",
+          "Same-owner seat/shaft/return and fork/cheek mating represent assembled construction, not independently articulating overlaps."
+        ]
+      }
+    },
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v29/attempt-fit01/executed-whole-character-v29-wing-interface.py",
+        "bytes": 9958,
+        "sha256": "139d7e6fba09474e9ca2d56c7029a64b24a62bce0c96e212e8d85c11c9f3ef6a"
+      },
+      "result": {
+        "region": "short-shield nested interface and captive receiving forks",
+        "study": "V29 coarse02; visual gate first",
+        "status": "inferred passive construction proposal; no clearance or engineering acceptance",
+        "changedMeshes": [
+          "left profiled mantle backing v4 left-wing-shield",
+          "V28 left short nested shield 1 plate 1",
+          "V28 left short nested shield 1 plate 2",
+          "V28 left short nested shield 1 plate 3",
+          "V28 left short nested shield 1 plate 4",
+          "V28 left short nested shield 1 plate 5",
+          "V28 left short nested shield 2 plate 1",
+          "V28 left short nested shield 2 plate 2",
+          "V28 left short nested shield 2 plate 3",
+          "V28 left short nested shield 2 plate 4",
+          "V28 left short nested shield 2 plate 5",
+          "V28 left short shield leading fold",
+          "V28 left nested shield receiving fork 1",
+          "V28 left nested shield receiving fork 2",
+          "right profiled mantle backing v4 right-wing-shield",
+          "V28 right short nested shield 1 plate 1",
+          "V28 right short nested shield 1 plate 2",
+          "V28 right short nested shield 1 plate 3",
+          "V28 right short nested shield 1 plate 4",
+          "V28 right short nested shield 1 plate 5",
+          "V28 right short nested shield 2 plate 1",
+          "V28 right short nested shield 2 plate 2",
+          "V28 right short nested shield 2 plate 3",
+          "V28 right short nested shield 2 plate 4",
+          "V28 right short nested shield 2 plate 5",
+          "V28 right short shield leading fold",
+          "V28 right nested shield receiving fork 1",
+          "V28 right nested shield receiving fork 2"
+        ],
+        "removed": [],
+        "added": [],
+        "changedNodes": [],
+        "nodesExact": 54,
+        "outsideMeshesExact": 536,
+        "nestingRecessM": 0.045,
+        "receivers": [
+          {
+            "name": "V28 left nested shield receiving fork 1",
+            "owner": "left-wing-shield",
+            "seatObject": "left coaxial elbow journal",
+            "endpointObject": "left profiled mantle backing v4 left-wing-shield",
+            "centerlineWorldAtRest": [
+              [
+                0.3983522653579712,
+                0.027195531874895096,
+                0.9757817387580872
+              ],
+              [
+                0.3733522593975067,
+                0.024195531383156776,
+                0.9677817225456238
+              ],
+              [
+                0.36327943205833435,
+                0.0747784972190857,
+                0.9704505801200867
+              ],
+              [
+                0.36327943205833435,
+                0.11140754073858261,
+                0.9723832011222839
+              ]
+            ],
+            "seatCenterSurfaceDistanceM": 1.862645149230957e-09,
+            "linerCenterSurfaceDistanceM": 7.450580596923828e-09,
+            "authoredSeatTargetDistanceM": 0.003479897975921631,
+            "authoredLinerTargetDistanceM": 0.008903146721422672,
+            "radiusM": 0.0045,
+            "ownership": "One rigid owner shared with retained journal and nested liner; no rigid bridge across mantle elbow hinge",
+            "postWindowLinerCenterSurfaceDistanceM": 7.450580596923828e-09
+          },
+          {
+            "name": "V28 left nested shield receiving fork 2",
+            "owner": "left-wing-shield",
+            "seatObject": "left coaxial elbow journal",
+            "endpointObject": "left profiled mantle backing v4 left-wing-shield",
+            "centerlineWorldAtRest": [
+              [
+                0.3983522653579712,
+                0.051195528358221054,
+                0.9757817387580872
+              ],
+              [
+                0.3733522593975067,
+                0.054195526987314224,
+                0.9677817225456238
+              ],
+              [
+                0.3706153929233551,
+                0.15222281217575073,
+                0.966329038143158
+              ],
+              [
+                0.3706153929233551,
+                0.22320808470249176,
+                0.9652770757675171
+              ]
+            ],
+            "seatCenterSurfaceDistanceM": 0.0,
+            "linerCenterSurfaceDistanceM": 0.0,
+            "authoredSeatTargetDistanceM": 0.003479897975921631,
+            "authoredLinerTargetDistanceM": 0.001781987608410418,
+            "radiusM": 0.0045,
+            "ownership": "One rigid owner shared with retained journal and nested liner; no rigid bridge across mantle elbow hinge",
+            "postWindowLinerCenterSurfaceDistanceM": 0.0
+          },
+          {
+            "name": "V28 right nested shield receiving fork 1",
+            "owner": "right-wing-shield",
+            "seatObject": "right coaxial elbow journal",
+            "endpointObject": "right profiled mantle backing v4 right-wing-shield",
+            "centerlineWorldAtRest": [
+              [
+                -0.39835235476493835,
+                0.027195528149604797,
+                0.9757817387580872
+              ],
+              [
+                -0.3733523488044739,
+                0.024195527657866478,
+                0.9677817225456238
+              ],
+              [
+                -0.36327943205833435,
+                0.0747784972190857,
+                0.9704505801200867
+              ],
+              [
+                -0.36327943205833435,
+                0.11140754073858261,
+                0.9723832011222839
+              ]
+            ],
+            "seatCenterSurfaceDistanceM": 0.0,
+            "linerCenterSurfaceDistanceM": 7.450580596923828e-09,
+            "authoredSeatTargetDistanceM": 0.003479987382888794,
+            "authoredLinerTargetDistanceM": 0.008903146721422672,
+            "radiusM": 0.0045,
+            "ownership": "One rigid owner shared with retained journal and nested liner; no rigid bridge across mantle elbow hinge",
+            "postWindowLinerCenterSurfaceDistanceM": 7.450580596923828e-09
+          },
+          {
+            "name": "V28 right nested shield receiving fork 2",
+            "owner": "right-wing-shield",
+            "seatObject": "right coaxial elbow journal",
+            "endpointObject": "right profiled mantle backing v4 right-wing-shield",
+            "centerlineWorldAtRest": [
+              [
+                -0.39835235476493835,
+                0.051195528358221054,
+                0.9757817387580872
+              ],
+              [
+                -0.3733523488044739,
+                0.054195526987314224,
+                0.9677817225456238
+              ],
+              [
+                -0.3706153929233551,
+                0.15222281217575073,
+                0.966329038143158
+              ],
+              [
+                -0.3706153929233551,
+                0.22320808470249176,
+                0.9652770757675171
+              ]
+            ],
+            "seatCenterSurfaceDistanceM": 3.725290298461914e-09,
+            "linerCenterSurfaceDistanceM": 0.0,
+            "authoredSeatTargetDistanceM": 0.003479987382888794,
+            "authoredLinerTargetDistanceM": 0.001781987608410418,
+            "radiusM": 0.0045,
+            "ownership": "One rigid owner shared with retained journal and nested liner; no rigid bridge across mantle elbow hinge",
+            "postWindowLinerCenterSurfaceDistanceM": 0.0
+          }
+        ],
+        "receivingWindow": {
+          "owner": "right-wing-shield",
+          "loadSolid": "right swept upper wing load member",
+          "relativeShieldAnglesRad": [
+            0.0,
+            0.04,
+            0.08,
+            0.12000000000000001,
+            0.16,
+            0.19999999999999998,
+            0.24000000000000002,
+            0.28,
+            0.32,
+            0.36,
+            0.39999999999999997,
+            0.44,
+            0.48000000000000004,
+            0.52,
+            0.56,
+            0.6,
+            0.64,
+            0.68,
+            0.72
+          ],
+          "construction": "Conservative convex hull of evaluated retained load-member solid sampled in shield frame, expanded 3 mm; actual finite difference through three receiving parts only",
+          "parts": [
+            {
+              "name": "right profiled mantle backing v4 right-wing-shield",
+              "rawVerticesBefore": 453,
+              "solidVerticesAfter": 919,
+              "finiteReceivingGapProposalM": 0.003
+            },
+            {
+              "name": "V28 right short nested shield 1 plate 3",
+              "rawVerticesBefore": 264,
+              "solidVerticesAfter": 486,
+              "finiteReceivingGapProposalM": 0.003
+            },
+            {
+              "name": "V28 right short nested shield 1 plate 4",
+              "rawVerticesBefore": 315,
+              "solidVerticesAfter": 644,
+              "finiteReceivingGapProposalM": 0.003
+            }
+          ],
+          "coverage": "All outer canopy plates/coverage and other shield parts untouched; shaped receiving window under fixed canopy",
+          "limits": "Authored finite receiving envelope, not continuous collision/physics validation"
+        },
+        "construction": "Whole canopy/coverage and outside silhouette unchanged. Independent short shield plates/fold/liner recessed inboard in tucked space; four new braced receiving forks start on evaluated inner elbow journal seats and terminate on evaluated recessed liner surfaces.",
+        "preserved": [
+          "All named pivots, current root/rest transforms and left restriction",
+          "Complete current mantle exterior, canopy return and backing",
+          "Actual journal/race/load machinery, body/head/neck/feet",
+          "Material definitions, passive three-era tags, runtime APIs"
+        ],
+        "limits": [
+          "Shield-side nesting only; retained bearing-strap and inherited machinery crossings remain explicit screening subjects.",
+          "Finite passive proposal, not physical simulation or continuous collision proof."
+        ]
+      }
+    }
+  ],
+  "contactAdjustments": [
+    {
+      "name": "bill-contact",
+      "oldWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "newWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "surfaceObject": "Overlapping nasal hood"
+    },
+    {
+      "name": "anchor-beak",
+      "oldWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "newWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "surfaceObject": "Overlapping nasal hood"
+    }
+  ],
+  "rigChanges": [],
+  "changedMeshes": [
+    "left profiled mantle backing v4 left-wing-shield",
+    "right profiled mantle backing v4 right-wing-shield",
+    "V23 breast hinge fixed fork -1",
+    "V23 breast hinge fixed fork 1",
+    "V23 breast moving return -1",
+    "V23 breast moving return 1",
+    "V23 breast opening bearing -1",
+    "V23 breast opening bearing 1",
+    "V28 left nested shield receiving fork 1",
+    "V28 left nested shield receiving fork 2",
+    "V28 left short nested shield 1 plate 1",
+    "V28 left short nested shield 1 plate 2",
+    "V28 left short nested shield 1 plate 3",
+    "V28 left short nested shield 1 plate 4",
+    "V28 left short nested shield 1 plate 5",
+    "V28 left short nested shield 2 plate 1",
+    "V28 left short nested shield 2 plate 2",
+    "V28 left short nested shield 2 plate 3",
+    "V28 left short nested shield 2 plate 4",
+    "V28 left short nested shield 2 plate 5",
+    "V28 left short shield leading fold",
+    "V28 right nested shield receiving fork 1",
+    "V28 right nested shield receiving fork 2",
+    "V28 right short nested shield 1 plate 1",
+    "V28 right short nested shield 1 plate 2",
+    "V28 right short nested shield 1 plate 3",
+    "V28 right short nested shield 1 plate 4",
+    "V28 right short nested shield 1 plate 5",
+    "V28 right short nested shield 2 plate 1",
+    "V28 right short nested shield 2 plate 2",
+    "V28 right short nested shield 2 plate 3",
+    "V28 right short nested shield 2 plate 4",
+    "V28 right short nested shield 2 plate 5",
+    "V28 right short shield leading fold"
+  ],
+  "addedMeshes": [
+    "V29 breast moving annular seat -1",
+    "V29 breast moving annular seat 1"
+  ],
+  "removedMeshes": [],
+  "checks": {
+    "finiteMeshes": 564,
+    "protectedFootToeMeshesExact": 94,
+    "declaredFootToeGeometryChanges": 0,
+    "unchangedRigNodesExact": 54,
+    "declaredRigTranslationOnlyChanges": 0,
+    "materialsExact": true,
+    "saveReopenExact": true,
+    "allMeshesWithinAuthoredSanityEnvelope": true
+  },
+  "limits": [
+    "Mechanical interface correction only; likeness and full procedural era hardware remain unresolved.",
+    "Rigid plate clearances require movement review.",
+    "Neutral construction surfaces are not a finished exterior."
+  ],
+  "views": [
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/after-reference-angle.png",
+      "bytes": 934094,
+      "sha256": "78f734d3d1ce284ad5d44ba9599ad3637a04509bc27929dcdd1e71ebe4b0480d",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "orthoScale": 2.5
+      },
+      "lighting": "neutral Workbench no cast shadows"
+    },
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/after-front.png",
+      "bytes": 916445,
+      "sha256": "49c45b3fa4848ebcf603f827dd4c8f2bc4c523643bb39813bfc72a40d398bf3a",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "orthoScale": 2.5
+      },
+      "lighting": "neutral Workbench no cast shadows"
+    },
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/after-side.png",
+      "bytes": 908102,
+      "sha256": "e813b4b698a925d4f97e747033effd1e808bf575a4b64b8f7f728c1d71acbe86",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "orthoScale": 2.5
+      },
+      "lighting": "neutral Workbench no cast shadows"
+    },
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/after-rear.png",
+      "bytes": 920241,
+      "sha256": "cbce36721cd7980f1429a10626e3f740dfe31c44578bec4bafdfa21b95c1af59",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "orthoScale": 2.5
+      },
+      "lighting": "neutral Workbench no cast shadows"
+    },
+    {
+      "path": "assets/audit/whole-character-v29/attempt-fit01/after-neck.png",
+      "bytes": 981803,
+      "sha256": "6937abf537c2fdc091e733041af035eb1b9eb6ab7bc9bc99037af65ac68b3877",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.48
+        ],
+        "orthoScale": 1.3
+      },
+      "lighting": "neutral Workbench no cast shadows"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+from pathlib import Path
+import bpy,json,hashlib
+ROOT=Path('/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged');base=ROOT/'assets/models/whole-character-v28/attempt-form02/murderbird-whole-character-v28.blend';assert hashlib.sha256(base.read_bytes()).hexdigest()=='838a86b16766ddd4491c9f1cbe6a7aa0039c2b9e8514a04eb710d1e9b2f9bd9d';bpy.ops.wm.open_mainfile(filepath=str(base));bpy.context.view_layer.update();dg=bpy.context.evaluated_depsgraph_get();names=['V23 breast opening captive shaft']+[f'V23 breast {part} {side}' for part in ['opening bearing','hinge fixed fork','moving return'] for side in [-1,1]];records=[]
+for n in names:
+ o=bpy.data.objects[n];ev=o.evaluated_get(dg);m=ev.to_mesh();pp=[ev.matrix_world@v.co for v in m.vertices];records.append({'name':n,'owner':o.parent.name,'vertices':len(m.vertices),'polygons':len(m.polygons),'modifiers':[(m.name,m.type) for m in o.modifiers],'props':dict(o.items()),'bounds':[[min(p[k] for p in pp),max(p[k] for p in pp)] for k in range(3)],'materials':[m.name for m in o.data.materials]});ev.to_mesh_clear()
+( Path('/tmp/v29-breast-hinge')/'input.json').write_text(json.dumps({'objects':records,'breastPivotWorld':[list(r) for r in bpy.data.objects['breastplate'].matrix_world]},indent=2,default=lambda x:list(x))+'\n');print(json.dumps(records,default=lambda x:list(x)))

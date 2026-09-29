@@ -1,0 +1,94 @@
+{
+  "status": "review GLB derivative; not selected or accepted",
+  "native": {
+    "path": "assets/models/whole-character-v29/attempt-fit01/murderbird-whole-character-v29.blend",
+    "bytes": 2842520,
+    "sha256": "04040543c39e98dd3d20da3d51a5ba40fd87151315ef074d328276eed97c63e7"
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v29/attempt-fit01/murderbird-whole-character-v29.glb",
+    "sha256": "d6e5d4b92480fbff94805f06bc3bf6190e553c51f7bb7704290e394534053f6a",
+    "bytes": 9124756
+  },
+  "exporter": {
+    "path": "assets/audit/whole-character-v29/attempt-fit01/export/executed-export.py",
+    "sha256": "30e01ab64fc12c02a3d3ab0696f8743ca95be593e7a74d35bb69f41efc38e3b9"
+  },
+  "validator": {
+    "path": "assets/audit/whole-character-v29/attempt-fit01/export/executed-export.py",
+    "sha256": "30e01ab64fc12c02a3d3ab0696f8743ca95be593e7a74d35bb69f41efc38e3b9"
+  },
+  "validationOnly": false,
+  "counts": {
+    "meshObjects": 564,
+    "emptyObjects": 54,
+    "glbNodes": 618,
+    "glbMeshes": 564,
+    "accessors": 1327,
+    "triangles": 436006,
+    "materials": 8
+  },
+  "checks": {
+    "nativeUnmodified": true,
+    "exactNamesAndParenting": true,
+    "extrasPreserved": true,
+    "meshTriangleCountsPreserved": true,
+    "evaluatedModifiersInIndependentCopies": true,
+    "allAccessorsFinite": true,
+    "materialDefinitionsUnmodifiedAndPrimitiveAssignmentsPreserved": true,
+    "noCamerasLightsAnimations": true
+  },
+  "cervicalLayoutV2": {
+    "schema": 1,
+    "pitchJoints": [
+      "neck",
+      "cervical-mid-a",
+      "cervical-mid-b",
+      "cervical-upper"
+    ],
+    "weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "rootYaw": "neck",
+    "headOwner": "head",
+    "status": "proposed rigid serial articulation"
+  },
+  "contactAdjustments": [
+    {
+      "name": "bill-contact",
+      "oldWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "newWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "surfaceObject": "Overlapping nasal hood"
+    },
+    {
+      "name": "anchor-beak",
+      "oldWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "newWorld": [
+        0.0,
+        -0.8448898196220398,
+        1.6425433158874512
+      ],
+      "surfaceObject": "Overlapping nasal hood"
+    }
+  ],
+  "limits": [
+    "Node/geometry/material identity export validation only; no armor clearance, engineering, appearance or owner acceptance.",
+    "Historical CURVE geometry excluded by explicit mesh/EMPTY selection.",
+    "Actual GLTFLoader joint validation is separate."
+  ]
+}

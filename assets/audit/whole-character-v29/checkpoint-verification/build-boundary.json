@@ -1,0 +1,25 @@
+{
+  "status": "PASS local build output inventory; not deployment",
+  "buildSourceRevision": "8d3d59520795ab9d14b6bd0423dc57b3af7a4efc",
+  "workingTreeDirtyAtBuild": true,
+  "declaredFilesHashVerified": 133,
+  "totalFilesIncludingManifest": 134,
+  "unexpectedPaths": [],
+  "selectedModelAssets": [
+    "assets/murderbird-alignment-v9-_aFpjtq5.glb"
+  ],
+  "commandsRun": [
+    "npm ci",
+    "npm run build",
+    "node --test tests/publication-boundary.test.mjs"
+  ],
+  "publicationBoundaryTests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "warnings": [
+    "Existing minified bundle over500kB",
+    "fsevents install-script policy warning; no new script approval"
+  ],
+  "runtimeBoundary": "V29 is local review only and excluded from production output; no deployment or push in this turn."
+}

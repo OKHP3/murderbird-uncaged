@@ -40,14 +40,14 @@ def screen(state):
  pose(state);dg=bpy.context.evaluated_depsgraph_get();items=[]
  for o in bpy.data.objects:
   if o.type!='MESH' or not o.parent:continue
-  guard=(o.name.startswith('V23 cervical ') and 'directional guard' in o.name) or o.name.startswith('V29 neck root recessed underlap ')
+  guard=o.name.startswith('V23 cervical ') and 'directional guard' in o.name
   if not guard and o.parent.name not in OWNERS+['upper-bill','cranial-cover','builder-optics','body','breastplate']:continue
   if 'builder' not in o.get('exteriorEras','maker,mechanic,builder').split(','):continue
   ev=o.evaluated_get(dg);m=ev.to_mesh();m.calc_loop_triangles();v=[ev.matrix_world@x.co for x in m.vertices];tri=[tuple(f.vertices) for f in m.loop_triangles];ev.to_mesh_clear()
   if not v:continue
   bounds=[[min(pt[k] for pt in v) for k in range(3)],[max(pt[k] for pt in v) for k in range(3)]]
   items.append((o.name,o.parent.name,guard,v,tri,bounds,BVHTree.FromPolygons(v,tri,all_triangles=True)))
- assert sum(x[2] for x in items) in (40,50)
+ assert sum(x[2] for x in items)==40
  pairs=[]
  for i,x in enumerate(items):
   for y in items[i+1:]:
@@ -56,8 +56,8 @@ def screen(state):
     tx=[x[3][j] for j in x[4][ix]];ty=[y[3][j] for j in y[4][iy]]
     if any(edge(tx[k],tx[(k+1)%3],ty) or edge(ty[k],ty[(k+1)%3],tx) for k in range(3)):
      pairs.append({'a':x[0],'b':y[0],'owners':[x[1],y[1]],'firstTrianglePair':[ix,iy],'witnessTriangles':[[list(v) for v in tx],[list(v) for v in ty]]});break
- return {'pose':state[0],'angles':list(state[1:]),'screenedGuards':sum(x[2] for x in items),'pairCount':len(pairs),'pairs':pairs}
-result={'nativeSHA256':a.sha,'sourceSHA256':sha(Path(__file__)),'method':'Evaluated finite triangles; strict edge through face, 1e-7m plane epsilon and1e-6 barycentric/edge margin. All40 cervical plates plus10 root underlaps when present vs other adjacent assembly owners; first witness per pair. Same-owner contacts excluded. Discrete kinematic poses only.','poses':[]}
+ return {'pose':state[0],'angles':list(state[1:]),'pairCount':len(pairs),'pairs':pairs}
+result={'nativeSHA256':a.sha,'sourceSHA256':sha(Path(__file__)),'method':'Evaluated finite triangles; strict edge through face, 1e-7m plane epsilon and1e-6 barycentric/edge margin. Every one of40 guard meshes vs other adjacent assembly owners; first witness per pair. Same-owner contacts excluded. Discrete kinematic poses only.','poses':[]}
 for state in STATES:
  result['poses'].append(screen(state));(OUT/'screen.json').write_text(json.dumps(result,indent=2)+'\n');print(state[0],result['poses'][-1]['pairCount'],flush=True)
 if a.render:

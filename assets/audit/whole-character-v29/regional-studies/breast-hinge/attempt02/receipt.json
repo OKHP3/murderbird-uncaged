@@ -1,0 +1,502 @@
+{
+  "baseSHA256": "838a86b16766ddd4491c9f1cbe6a7aa0039c2b9e8514a04eb710d1e9b2f9bd9d",
+  "sourceSHA256": "9074b5f4117bc3e44a927a79c6b959ede7d4461f3b22ad99c4e6950f5a3a62fd",
+  "nativeSHA256": "edbd12a4c5bc945e2b594e8987b89bf68eb21e9be5eddf2206071518bb7dfe85",
+  "builderSHA256": "352ce6346b1fa68d101c55d9a93c8fcc165ec7e2b5796d3945790475283f3cbe",
+  "result": {
+    "region": "breast-hinge",
+    "status": "Finite bored clevis/moving annular seats; discrete pose review required",
+    "changedMeshes": [
+      "V23 breast opening bearing -1",
+      "V23 breast opening bearing 1",
+      "V23 breast hinge fixed fork -1",
+      "V23 breast hinge fixed fork 1",
+      "V23 breast moving return -1",
+      "V23 breast moving return 1"
+    ],
+    "added": [
+      "V29 breast moving annular seat -1",
+      "V29 breast moving annular seat 1"
+    ],
+    "removed": [],
+    "changedNodes": [],
+    "checks": {
+      "namedNodesExact": 54,
+      "protectedMeshesExact": 556,
+      "breastExteriorShaftPivotExact": true,
+      "noNewMaterialOrDrive": true
+    },
+    "construction": {
+      "pivotNative": [
+        0.0,
+        -0.1576879918575287,
+        0.7646173238754272
+      ],
+      "axisNative": "x",
+      "fixedCheekCentersAbsX": [
+        0.133,
+        0.177
+      ],
+      "fixedCheekWidthM": 0.008,
+      "fixedBoreRadiusM": 0.0095,
+      "shaftRadiusM": 0.0065,
+      "nominalShaftToFixedBoreRadialGapM": 0.003,
+      "polygonMinimumBoreGapM": 0.0029949135810254735,
+      "movingSeatAbsX": 0.155,
+      "movingSeatWidthM": 0.014,
+      "movingSeatOuterRadiusM": 0.026,
+      "movingSeatToFixedCheekAxialGapsM": [
+        0.010999999999999982,
+        0.010999999999999982
+      ],
+      "fixedForkBodyAnchors": [
+        {
+          "fixedFork": "V23 breast hinge fixed fork -1",
+          "receivingBodyMember": "V23 thoracic formed rib -1",
+          "crossSectionIndex": 24,
+          "actualRearWebInteriorSeatNative": [
+            -0.12509599328041077,
+            0.014140965417027473,
+            0.9098355174064636
+          ],
+          "method": "Mean of actual outer/inner rear-web corners0,1,4,5 on preserved8-vertex channel ring closestZ.910; same-owner finite attachment"
+        },
+        {
+          "fixedFork": "V23 breast hinge fixed fork 1",
+          "receivingBodyMember": "V23 thoracic formed rib 1",
+          "crossSectionIndex": 24,
+          "actualRearWebInteriorSeatNative": [
+            0.12509599328041077,
+            0.014140965417027473,
+            0.9098355174064636
+          ],
+          "method": "Mean of actual outer/inner rear-web corners0,1,4,5 on preserved8-vertex channel ring closestZ.910; same-owner finite attachment"
+        }
+      ],
+      "channelReturnWallM": 0.005,
+      "clevisFingerWallM": 0.0035,
+      "classification": "Passive all eras; fixedclevis body, annular movingseat/return breastplate. Originalshaft unchanged."
+    },
+    "restWitnesses": [
+      {
+        "name": "V23 breast opening bearing -1",
+        "owner": "body",
+        "evaluatedRestBoundsNative": [
+          [
+            -0.181,
+            -0.129
+          ],
+          [
+            -0.18268799185752868,
+            -0.1326879918575287
+          ],
+          [
+            0.7396173238754272,
+            0.7896173238754273
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V23 breast hinge fixed fork -1",
+        "owner": "body",
+        "evaluatedRestBoundsNative": [
+          [
+            -0.18773874640464783,
+            -0.11487886309623718
+          ],
+          [
+            -0.14522448182106018,
+            0.02378218248486519
+          ],
+          [
+            0.7776904702186584,
+            0.9200530052185059
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V29 breast moving annular seat -1",
+        "owner": "breastplate",
+        "evaluatedRestBoundsNative": [
+          [
+            -0.162,
+            -0.148
+          ],
+          [
+            -0.18368799185752868,
+            -0.1316879918575287
+          ],
+          [
+            0.7386173238754272,
+            0.7906173238754273
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V23 breast moving return -1",
+        "owner": "breastplate",
+        "evaluatedRestBoundsNative": [
+          [
+            -0.16592535376548767,
+            -0.07468543946743011
+          ],
+          [
+            -0.3413286507129669,
+            -0.1594824194908142
+          ],
+          [
+            0.7774289846420288,
+            1.1015068292617798
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V23 breast opening bearing 1",
+        "owner": "body",
+        "evaluatedRestBoundsNative": [
+          [
+            0.129,
+            0.181
+          ],
+          [
+            -0.18268799185752868,
+            -0.1326879918575287
+          ],
+          [
+            0.7396173238754272,
+            0.7896173238754273
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V23 breast hinge fixed fork 1",
+        "owner": "body",
+        "evaluatedRestBoundsNative": [
+          [
+            0.11487886309623718,
+            0.18773874640464783
+          ],
+          [
+            -0.14522448182106018,
+            0.02378218248486519
+          ],
+          [
+            0.7776904702186584,
+            0.9200530052185059
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V29 breast moving annular seat 1",
+        "owner": "breastplate",
+        "evaluatedRestBoundsNative": [
+          [
+            0.148,
+            0.162
+          ],
+          [
+            -0.18368799185752868,
+            -0.1316879918575287
+          ],
+          [
+            0.7386173238754272,
+            0.7906173238754273
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      },
+      {
+        "name": "V23 breast moving return 1",
+        "owner": "breastplate",
+        "evaluatedRestBoundsNative": [
+          [
+            0.07468543946743011,
+            0.16592535376548767
+          ],
+          [
+            -0.3413286507129669,
+            -0.1594824194908142
+          ],
+          [
+            0.7774289846420288,
+            1.1015068292617798
+          ]
+        ],
+        "singleRigidOwner": true,
+        "finiteClosed": true
+      }
+    ],
+    "limits": [
+      "No continuous motion or engineering clearance claim.",
+      "Unchanged upperbreast/neck rest intersections remain a separate root scope.",
+      "Same-owner seat/shaft/return and fork/cheek mating represent assembled construction, not independently articulating overlaps."
+    ]
+  },
+  "finiteSolids": [
+    {
+      "name": "V23 breast opening bearing -1",
+      "owner": "body",
+      "closed": true,
+      "signedVolume": 2.686028027184064e-05,
+      "validateRepair": false,
+      "bounds": [
+        [
+          -0.1809999942779541,
+          -0.1289999932050705
+        ],
+        [
+          -0.18268799781799316,
+          -0.1326879858970642
+        ],
+        [
+          0.7396173477172852,
+          0.7896173000335693
+        ]
+      ]
+    },
+    {
+      "name": "V23 breast opening bearing 1",
+      "owner": "body",
+      "closed": true,
+      "signedVolume": 2.6860280271840106e-05,
+      "validateRepair": false,
+      "bounds": [
+        [
+          0.1289999932050705,
+          0.1809999942779541
+        ],
+        [
+          -0.18268799781799316,
+          -0.1326879858970642
+        ],
+        [
+          0.7396173477172852,
+          0.7896173000335693
+        ]
+      ]
+    },
+    {
+      "name": "V23 breast hinge fixed fork -1",
+      "owner": "body",
+      "closed": true,
+      "signedVolume": 5.930636779090155e-05,
+      "validateRepair": false,
+      "bounds": [
+        [
+          -0.18773874640464783,
+          -0.11487886309623718
+        ],
+        [
+          -0.14522448182106018,
+          0.02378218248486519
+        ],
+        [
+          0.7776904702186584,
+          0.9200530052185059
+        ]
+      ]
+    },
+    {
+      "name": "V23 breast hinge fixed fork 1",
+      "owner": "body",
+      "closed": true,
+      "signedVolume": 5.924276138042069e-05,
+      "validateRepair": false,
+      "bounds": [
+        [
+          0.11487886309623718,
+          0.18773874640464783
+        ],
+        [
+          -0.14522448182106018,
+          0.02378218248486519
+        ],
+        [
+          0.7776904702186584,
+          0.9200530052185059
+        ]
+      ]
+    },
+    {
+      "name": "V23 breast moving return -1",
+      "owner": "breastplate",
+      "closed": true,
+      "signedVolume": 0.00011625311069595354,
+      "validateRepair": false,
+      "bounds": [
+        [
+          -0.16592535376548767,
+          -0.07468543946743011
+        ],
+        [
+          -0.3413286507129669,
+          -0.1594824194908142
+        ],
+        [
+          0.7774289846420288,
+          1.1015068292617798
+        ]
+      ]
+    },
+    {
+      "name": "V23 breast moving return 1",
+      "owner": "breastplate",
+      "closed": true,
+      "signedVolume": 0.00011522001274232062,
+      "validateRepair": false,
+      "bounds": [
+        [
+          0.07468543946743011,
+          0.16592535376548767
+        ],
+        [
+          -0.3413286507129669,
+          -0.1594824194908142
+        ],
+        [
+          0.7774289846420288,
+          1.1015068292617798
+        ]
+      ]
+    },
+    {
+      "name": "V29 breast moving annular seat -1",
+      "owner": "breastplate",
+      "closed": true,
+      "signedVolume": 2.785388087641418e-05,
+      "validateRepair": false,
+      "bounds": [
+        [
+          -0.16200000047683716,
+          -0.14800000190734863
+        ],
+        [
+          -0.1836879849433899,
+          -0.13168799877166748
+        ],
+        [
+          0.7386173009872437,
+          0.7906173467636108
+        ]
+      ]
+    },
+    {
+      "name": "V29 breast moving annular seat 1",
+      "owner": "breastplate",
+      "closed": true,
+      "signedVolume": 2.7853880876414185e-05,
+      "validateRepair": false,
+      "bounds": [
+        [
+          0.14800000190734863,
+          0.16200000047683716
+        ],
+        [
+          -0.1836879849433899,
+          -0.13168799877166748
+        ],
+        [
+          0.7386173009872437,
+          0.7906173467636108
+        ]
+      ]
+    }
+  ],
+  "materialsExact": true,
+  "saveReopenExact": true,
+  "protectedMeshesExact": 556,
+  "allNodesExact": 54,
+  "historicalCurvesExact": 463,
+  "views": [
+    {
+      "name": "whole",
+      "path": "/tmp/v29-breast-hinge/attempt02/whole.png",
+      "sha256": "692ceb106241b714caecbbaebc7bb84f240bdc18900b5154664ee59cbdd427a4",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "orthoScale": 2.5
+      },
+      "breastLocalXDelta": 0
+    },
+    {
+      "name": "closed",
+      "path": "/tmp/v29-breast-hinge/attempt02/closed.png",
+      "sha256": "5e295039ef13626daad3fad75ce603715613c8a870343606216013120bcbc47a",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          1.25
+        ],
+        "target": [
+          0,
+          -0.145,
+          0.85
+        ],
+        "orthoScale": 0.55
+      },
+      "breastLocalXDelta": 0
+    },
+    {
+      "name": "open",
+      "path": "/tmp/v29-breast-hinge/attempt02/open.png",
+      "sha256": "1caa8f6d1a32cf3464973fe1b849099c6887b29a45b5e6f4e2d95c450f323dc8",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          1.25
+        ],
+        "target": [
+          0,
+          -0.145,
+          0.85
+        ],
+        "orthoScale": 0.75
+      },
+      "breastLocalXDelta": 1.1
+    },
+    {
+      "name": "open-side",
+      "path": "/tmp/v29-breast-hinge/attempt02/open-side.png",
+      "sha256": "a7bd68cedbb809423d8a28cf7afc93a8ef2395bfbc9902676fa8c8a16f162519",
+      "camera": {
+        "position": [
+          -6,
+          -0.145,
+          0.85
+        ],
+        "target": [
+          0,
+          -0.145,
+          0.85
+        ],
+        "orthoScale": 0.75
+      },
+      "breastLocalXDelta": 1.1
+    }
+  ],
+  "rendererSHA256": "88defeaa8e4c3277ec3dd83d6335fe231f56f39d33ecb43e23f0e897008417be"
+}
