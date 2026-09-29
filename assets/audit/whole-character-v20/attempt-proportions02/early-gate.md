@@ -1,0 +1,9 @@
+# V20 proportions attempt 02 — early visual gate
+
+**Disposition: keep as a provisional base for regional reconstruction, not as an accepted whole-character silhouette.** On the matched views, attempt 02 is more coherent than attempt 01: the head no longer sits atop the overextended, column-like neck from that failed pass; the shoulder and breast connection reads less abruptly; and the toe/claw shapes remain curved instead of looking flattened. There is a modest directional gain over V19 in shoulder/body fullness and bearing presence around the legs, not only a visual undo of attempt 01.
+
+The owner target's neck sweeps in a layered curve from head through shoulder into the forward-full breast. Attempt 02 still has a short, mostly upright neck terminating in a visible collar above a broad rounded chest. Its rear neck contour is somewhat more connected than V19, but the throat-to-breast path is not yet the target's continuous sweep. Do not add length without changing that curve.
+
+The other large likeness gaps remain: the mantle still reads as a broad plate-covered wedge rather than a swept fan of tapered overlapping feathers anchored at a readable shoulder journal; the breast remains egg/barrel-like with regular surface courses; and the shanks and long metatarsal span still read as open ladderwork at full-body scale. The stronger bearing shapes are useful anchors for regional rebuilding, but they do not yet make the legs feel as dense or grounded as the owner target. The bill and optic remain smooth and goggle-like in the close view.
+
+I would use this native as a working proportion base for targeted regional reconstruction, while holding full-body acceptance and expensive clearance/export work until the neck-to-breast contour and mantle/leg construction are addressed. Views are gray neutral renders against a perspective owner image, so this is silhouette judgment only; it is not a clearance result or owner acceptance.

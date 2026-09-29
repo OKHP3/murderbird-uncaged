@@ -1,0 +1,16 @@
+Installed Blender glTF exporter warning source
+/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/nodes.py
+SHA256 4ee23688b86f3250057b305fe9397755e6be1dcb4dd99c7ecc39e879a3f9cbcb
+Lines281-292:
+        if blender_object.type not in ["MESH", "POINTCLOUD"]:
+            return None
+        # For duplis instancer, when show is off -> export as empty
+        if vnode.force_as_empty is True:
+            return None
+        # Be sure that object is valid (no NaN for example)
+        if blender_object.type == "MESH":
+            res = blender_object.data.validate()
+            if res is True:
+                export_settings['log'].warning("Mesh " + blender_object.data.name +
+                                               " is not valid, and may be exported wrongly")
+

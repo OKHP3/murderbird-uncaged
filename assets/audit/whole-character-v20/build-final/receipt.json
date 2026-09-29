@@ -1,0 +1,24 @@
+{
+  "status": "PASS_LOCAL_BUILD_AND_BOUNDARIES",
+  "baseRevision": "f10d0d96982c37dbeea47e346c66427385fd2700",
+  "modifiedTree": true,
+  "commands": [
+    "npm run build",
+    "node scripts/verify-publication.mjs"
+  ],
+  "dependencyInstall": "npm ci passed earlier this turn; package files unchanged",
+  "outputFileCount": 134,
+  "sourceSha256": {
+    "src/main.js": "b5457c2ddfa7c1bcb2608a2b9b66ec1a0407665fa72c9cc26f4ad2f1267d317f",
+    "src/scene/presence-exhibit.js": "83a4d4ede728d01da8f698933566838c70296fe7c9916e6fff1f35a04417147f",
+    "src/scene/era-mechanisms.js": "93aa14794810373d2d156d6a459e2fade6f258a1eaee377c5dc42e0fd46ae10c"
+  },
+  "productionModel": "V9; new V20 local diagnostics excluded",
+  "warnings": [
+    "Existing Three.js chunk above500kB."
+  ],
+  "limits": [
+    "Local build only; no remote CI or publication claim.",
+    "No artistic or full clearance acceptance."
+  ]
+}

@@ -1,0 +1,15 @@
+# Runtime02 two-lamina technical repair
+
+Status: technical export defect repaired; whole-bird likeness and motion/engineering acceptance remain held. This derivative contains no new cervical guards or other artistic change.
+
+Base runtime01 native SHA `44883b9e4477b7b7b292c1e5020c5ee358bbf5743c60e47e8bbe20bf0f25d602` remains intact. Runtime02 native SHA `eb15a9d87de56fb8a06004d9c69448c38089f0ecacd888e3e7fde921a353d42a`; exported GLB SHA `d8d0192d89dc5e16973b86c834997b9aab694f0bf464336c2168330a6263267c`.
+
+Only `V17 breast directional lamina 3 1 left/right` changed. Each had three exactly identical raw tip coordinates at indices0/1/2. At the authorized1e-8m maximum tolerance, these were welded into one vertex:345→343vertices,652→650edges,308faces retained. Separation was exactly0, and no residual collapsed faces were deleted. The6mm Solidify and1.7mm two-segment Bevel remain exactly unchanged. Native geometry at every other source mesh is unchanged.
+
+Before repair, the inherited bevel produced one NaN vertex per side, also reproduced in pinned V19. Exporter validation replaced each with the72-member breast group's local origin and produced long exported triangles. After repair all744 evaluated source meshes are finite and all744 disposable validation checks report no repair. Both repaired evaluated surfaces have1140vertices/1140faces,0boundary/wire/nonmanifold edges, and positive signed volumes of2.76718e-5 and2.66744e-5m³. Geometry snapshots of742other meshes,52rigid rest snapshots,463curves, material definitions, all node properties and mechanismLayoutV1 are exact relative to runtime01. Save/reopen and old-native hash preservation checks passed.
+
+The existing diagnostic exporter ran on the new pinned native with full captured log. Invalid-mesh warning count is0. All52pivot nodes are present. The new GLB has111meshes/113primitives,551482triangles and324168vertices; no out-of-range indices, nonfinite position/normal values or zero-length normals. Both formerly substituted breast origin vertices are absent, and their10incident triangles are absent.
+
+Remaining finite near-zero triangles (area≤1e-14m²) are115, compared with131 in runtime01:37breast,74upper-bill plate group,4upper cervical bearing group. This count is not zero and is not a whole-model validity score. Position-welded breast topology still shows10boundary edges,53edges used more than twice and14duplicate triangle copies; coincident independent construction interfaces can merge under that approximate weld. These numbers do not prove finite-shell parity, self-intersection freedom, running clearance or engineered construction. Fresh runtime movement and pose checks belong to the root/ant validation packet.
+
+Evidence: repair-receipt.json; exact executed-repair.py; repair.log; export/export-receipt.json, executed-export.py and full export.log; export-integrity buffer and origin-triangle records with executed read-only scripts. No historical native, prior GLB, frozen V19/proportions/cervical source, material, rig or layout was overwritten.

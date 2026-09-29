@@ -19,6 +19,32 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
   const root = model.getObjectByName('murderbird') || model;
   const body = nodes.body;
   const find=name=>nodes[name]||model.getObjectByName(name);
+  // New editable models can carry their authored mechanism attachment points.
+  // These are local coordinates on the named rigid owners, not world offsets.
+  // Historical exports without this contract retain their original placement.
+  const validPoint = value => Array.isArray(value) && value.length === 3 && value.every(Number.isFinite);
+  let layout = null;
+  let layoutStatus = 'legacy-placement';
+  if (body.userData?.mechanismLayoutV1 != null) {
+    try {
+      const candidate = typeof body.userData.mechanismLayoutV1 === 'string'
+        ? JSON.parse(body.userData.mechanismLayoutV1) : body.userData.mechanismLayoutV1;
+      const complete = candidate?.version === 1
+        && ['leg', 'wing', 'tail', 'neck', 'jaw'].every(key => validPoint(candidate.makerControlOffsets?.[key]))
+        && ['tailPosition', 'distributionPosition', 'transmissionPosition'].every(key => validPoint(candidate[key]))
+        && Array.isArray(candidate.cervical)
+        && ['left', 'right'].every(side => {
+          const anchors = candidate.cervical.filter(a => a?.side === side);
+          return anchors.length === 1 && validPoint(anchors[0].bodyPoint) && validPoint(anchors[0].neckPoint);
+        });
+      if (!complete) throw new Error('Incomplete mechanism layout');
+      layout = candidate;
+      layoutStatus = 'authored-model-points';
+    } catch {
+      layoutStatus = 'invalid-contract-legacy-placement';
+    }
+  }
+  const point = (value, fallback) => validPoint(value) ? value : fallback;
   const eraGroups = Object.fromEntries(['maker', 'mechanic', 'builder'].map(era => {
     const group = new THREE.Group();
     group.name = `era-${era}-mechanisms`;
@@ -110,7 +136,9 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     foot.rotation.z = x * .12;
   }
   // Cradle is attached to the root frame; its post endpoint is updated to the actual pelvis.
-  const cradle = box(maker, 'maker-pelvic-cradle', [.62, .085, .25], darkIron, [0, 0, 0]);
+  const cradleWidth = Number.isFinite(layout?.makerCradleWidth) && layout.makerCradleWidth > .2
+    ? layout.makerCradleWidth : .62;
+  const cradle = box(maker, 'maker-pelvic-cradle', [cradleWidth, .085, .25], darkIron, [0, 0, 0]);
   const supportPost = dynamicSegment(maker, 'maker-pelvis-support-post', .048, darkIron);
   const supportBraceL = dynamicSegment(maker, 'maker-support-brace-left', .023, bronze);
   const supportBraceR = dynamicSegment(maker, 'maker-support-brace-right', .023, bronze);
@@ -131,7 +159,8 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     leverNodes.push(lever);
   }
   const makerTargets = ['left-foot', 'right-mantle', 'compact-articulated-tail', 'neck', 'jaw'];
-  const controlOffsets=[[.065,.015,.045],[-.095,-.10,.10],[-.07,0,-.16],[-.16,.06,.02],[-.18,-.06,.20]];
+  const controlOffsets=[[.065,.015,.045],[-.095,-.10,.10],[-.07,0,-.16],[-.16,.06,.02],[-.18,-.06,.20]]
+    .map((offset, index) => point(layout?.makerControlOffsets?.[leverInputs[index]], offset));
   const makerLines = makerTargets.map((target, i) => ({
     target,
     first: dynamicSegment(maker, `maker-control-line-${leverInputs[i]}-outer`, .009, rope),
@@ -146,7 +175,7 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
   }));
 
   // A short, hinged rear feather plate keeps the same compact bird outline in every era.
-  const tail = group(body, 'compact-articulated-tail', [0, .20, -.31]);
+  const tail = group(body, 'compact-articulated-tail', point(layout?.tailPosition, [0, .20, -.31]));
   for (let i = 0; i < 3; i++) {
     const plate = box(tail, `short-tail-plate-${i + 1}`, [.16 - i * .025, .045, .15],
       i === 1 ? bronze : darkIron, [0, -.012 * i, -.07 - i * .043]);
@@ -155,7 +184,7 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
 
   // Mechanic: wound spring -> reduction pair -> cross-shaft -> articulated hip cranks.
   const mechanic = eraGroups.mechanic;
-  const gearbox = group(body, 'mechanic-lower-transmission');
+  const gearbox = group(body, 'mechanic-lower-transmission', point(layout?.transmissionPosition, [0, 0, 0]));
   const spring = group(gearbox, 'mechanic-mainspring-barrel', [-.17, .08, .035]);
   const springShell=cylinder(spring, 'mainspring-drum', .115, .20, darkIron, [0, 0, 0], 'x');
   const springCaps=[];
@@ -192,7 +221,7 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
   const builder = eraGroups.builder;
   // Protected lateral service space, beside the independently opening power
   // package. Keep this separate from cognition and accessible in inspection.
-  const distribution = group(body, 'builder-power-distribution-manifold', [-.21, .29, .07]);
+  const distribution = group(body, 'builder-power-distribution-manifold', point(layout?.distributionPosition, [-.21, .29, .07]));
   box(distribution, 'builder-sealed-bus-case', [.08, .16, .13], darkIron, [0, 0, 0]);
   box(distribution, 'builder-copper-bus-cover', [.015, .125, .105], copper, [-.0475, .005, 0]);
   for (const z of [-.04, 0, .04]) cylinder(distribution, 'builder-bus-terminal', .012, .035, brass, [.045, 0, z], 'x');
@@ -230,6 +259,8 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
   let wingEndpointDistance = 0;
   const builderCervical = [1, -1].map(sign => ({
     sign,
+    bodyPoint: layout?.cervical?.find(a => a.side === (sign > 0 ? 'left' : 'right'))?.bodyPoint,
+    neckPoint: layout?.cervical?.find(a => a.side === (sign > 0 ? 'left' : 'right'))?.neckPoint,
     sleeve: dynamicSegment(builder, `builder-cervical-${sign > 0 ? 'left' : 'right'}-actuator-sleeve`, .028, ceramic),
     rod: dynamicSegment(builder, `builder-cervical-${sign > 0 ? 'left' : 'right'}-actuator-rod`, .012, copper),
     conduit: dynamicSegment(builder, `builder-cervical-${sign > 0 ? 'left' : 'right'}-power-conduit`, .012, darkIron),
@@ -277,8 +308,8 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     const pelvisLocal = root.worldToLocal(pelvis.clone());
     cradle.position.copy(pelvisLocal).add(new THREE.Vector3(0, -.035, 0));
     setSegment(supportPost, postBase, pelvisLocal);
-    setSegment(supportBraceL, braceBaseL, tempB.copy(pelvisLocal).add(tempC.set(-.29, -.02, 0)));
-    setSegment(supportBraceR, braceBaseR, tempB.copy(pelvisLocal).add(tempC.set(.29, -.02, 0)));
+    setSegment(supportBraceL, braceBaseL, tempB.copy(pelvisLocal).add(tempC.set(-cradleWidth / 2 + .02, -.02, 0)));
+    setSegment(supportBraceR, braceBaseR, tempB.copy(pelvisLocal).add(tempC.set(cradleWidth / 2 - .02, -.02, 0)));
     for (let i = 0; i < makerLines.length; i++) {
       const line = makerLines[i];
       const amount = clamp(art[leverInputs[i]] || 0, 0, 1);
@@ -310,11 +341,11 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
       model.updateMatrixWorld(true);
       const knee = worldPoint(link.shin, tempB);
       const spindleLocal=new THREE.Vector3(link.sign*.4,-.16,.035);
-      const crankBase=body.localToWorld(spindleLocal.clone());
+      const crankBase=gearbox.localToWorld(spindleLocal.clone());
       const pinLocal=spindleLocal.clone();
       pinLocal.y+=Math.cos(angle+(link.sign<0?Math.PI:0))*.067;
       pinLocal.z+=Math.sin(angle+(link.sign<0?Math.PI:0))*.067;
-      body.localToWorld(pinLocal);
+      gearbox.localToWorld(pinLocal);
       link.pin.position.copy(pinLocal);
       setSegment(link.crank,crankBase,pinLocal);
       mechanicLinkDistances[link.side]=setSlidingLink(link.loadSleeve,link.loadSlider,pinLocal,knee,.028);
@@ -381,8 +412,12 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     // During chest/neck inspection, disconnect at those sockets instead of
     // stretching a continuous powered link across a separated assembly.
     for (const actuator of builderCervical) {
-      const bodyAnchor = body.localToWorld(nodes.neck.position.clone().add(tempC.set(actuator.sign * .105, .02, -.10))).clone();
-      const neckAnchor = nodes.neck.localToWorld(tempD.set(actuator.sign * .055, .16, -.025)).clone();
+      const bodyLocal = validPoint(actuator.bodyPoint)
+        ? tempC.fromArray(actuator.bodyPoint)
+        : nodes.neck.position.clone().add(tempC.set(actuator.sign * .105, .02, -.10));
+      const neckLocal = tempD.fromArray(point(actuator.neckPoint, [actuator.sign * .055, .16, -.025]));
+      const bodyAnchor = body.localToWorld(bodyLocal).clone();
+      const neckAnchor = nodes.neck.localToWorld(neckLocal).clone();
       const cervicalGap = bodyAnchor.distanceTo(neckAnchor);
       const cervicalSeparated = inspection.separation >= .18;
       if (cervicalSeparated) {
@@ -426,6 +461,10 @@ export function createEraMechanisms({ scene, model, nodes, rest }) {
     const wingMode = era !== 'builder' ? 'not-eligible' : shoulderActuator.housing.visible ? 'connected' : 'disengaged-at-sockets';
     return {
       era, tickCount, visible: { ...last },
+      attachmentLayout: { status: layoutStatus, version: layout?.version ?? null,
+        makerCradleWidth: cradleWidth, makerControlOffsets: controlOffsets,
+        tailPosition: tail.position.toArray(), transmissionPosition: gearbox.position.toArray(),
+        distributionPosition: distribution.position.toArray() },
       anchors: ['drive', 'power', 'mind'].map(id => ({ id, available: Boolean(getAnchor(id)) })),
       externalControlTargets: makerLines.map(line => line.target),
       mechanicTargets: mechanicLinks.map(link => `${link.side}-thigh/${link.side}-shin`),

@@ -1,0 +1,55 @@
+{
+  "purpose": "Approximate normalized image-space anchors for visual discussion only; no real-world dimensions, score, or direct cross-camera ratio is implied.",
+  "coordinate_convention": "x and y are hand-estimated fractions of each source image's width and height, origin at top-left. They are rough visual anchors, not calibrated pixel picks or metrology; allow several percent image-space uncertainty.",
+  "metadata_verification": "Image dimensions and formats were read from the files with Pillow (PIL) on 2026-09-28.",
+  "sources": {
+    "owner_target": {
+      "path": "context/threads/assets/murderbird-owner-likeness-rejection-2026-09-28/2-Pasted-Image-2.jpg",
+      "dimensions_px": [1280, 853],
+      "format": "JPEG",
+      "view_caveat": "Perspective three-quarter presentation scene; body and wings are owner-reference authority."
+    },
+    "v19_attempt02_reference_angle": {
+      "path": "assets/audit/whole-character-v19/attempt-02/after-reference-angle.png",
+      "dimensions_px": [1100, 1100],
+      "format": "PNG",
+      "view_caveat": "Neutral three-quarter render; framing, pose, projection, and lighting differ from owner target."
+    },
+    "july_head_reference": {
+      "path": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "dimensions_px": [1024, 1536],
+      "format": "PNG",
+      "view_caveat": "Use for head identity only; visible body/legs do not set their proportions."
+    }
+  },
+  "landmarks": {
+    "owner_target": {
+      "head_top": [0.64, 0.03],
+      "optic_center": [0.71, 0.09],
+      "bill_tip": [0.80, 0.24],
+      "neck_breast_transition": [0.67, 0.31],
+      "breast_frontmost": [0.74, 0.40],
+      "breast_lower_front": [0.68, 0.58],
+      "near_shoulder_bearing": [0.55, 0.32],
+      "near_mantle_trailing_tip": [0.44, 0.52],
+      "near_foot_contact_zone": [0.61, 0.94]
+    },
+    "v19_attempt02_reference_angle": {
+      "head_top": [0.56, 0.20],
+      "optic_center": [0.59, 0.28],
+      "bill_tip": [0.71, 0.38],
+      "neck_breast_transition": [0.59, 0.40],
+      "breast_frontmost": [0.64, 0.48],
+      "breast_lower_front": [0.60, 0.65],
+      "near_shoulder_bearing": [0.39, 0.52],
+      "near_mantle_trailing_tip": [0.28, 0.67],
+      "near_foot_contact_zone": [0.57, 0.94]
+    },
+    "july_head_reference": {
+      "head_top": [0.68, 0.03],
+      "optic_center": [0.77, 0.12],
+      "bill_tip": [0.91, 0.30],
+      "visible_scope": "head identity only"
+    }
+  }
+}

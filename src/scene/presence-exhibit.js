@@ -11,6 +11,8 @@ const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murde
 // Local development opens the latest labeled proposal; production retains V9.
 const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v16-03') : null;
 const reviewModels = import.meta.env.DEV ? {
+  'v20-runtime02': '/assets/models/whole-character-v20/attempt-runtime02/murderbird-whole-character-v20.glb',
+  'v20-runtime01': '/assets/models/whole-character-v20/attempt-runtime01/murderbird-whole-character-v20.glb',
   'v19-02': '/assets/models/whole-character-v19/attempt-02/murderbird-whole-character-v19.glb',
   'v19-01': '/assets/models/whole-character-v19/attempt-01/murderbird-whole-character-v19.glb',
   'v18-01': '/assets/models/whole-character-v18/attempt-01/murderbird-whole-character-v18.glb',
