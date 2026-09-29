@@ -9,8 +9,9 @@ import { layoutMarkers } from './marker-layout.js';
 
 const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
 // Local study selection is separate from the V9 production build selection.
-const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v31-form02') : null;
+const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v32-form01') : null;
 const reviewModels = import.meta.env.DEV ? {
+  'v32-form01': '/assets/models/whole-character-v32/attempt-form01/murderbird-whole-character-v32.glb',
   'v31-form02': '/assets/models/whole-character-v31/attempt-form02/murderbird-whole-character-v31.glb',
   'v31-form01': '/assets/models/whole-character-v31/attempt-form01/murderbird-whole-character-v31.glb',
   'v21-construction06': '/assets/models/whole-character-v21/attempt-construction06/murderbird-whole-character-v21.glb',

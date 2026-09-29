@@ -1,6 +1,6 @@
 # Correction v2 — accountable backlog
 
-> Current continuation: [V31 Form02](whole-character-v31-checkpoint.md) is a held local candidate. DEV defaults to V31; production still selects V9. Likeness remains below target and the broader strike check introduces two head-to-neck collisions. No artistic acceptance or publication. Earlier assignments and scores below retain their historical scope.
+> Current continuation: [V32 Form01](whole-character-v32-checkpoint.md) improves the near-closed jaw/bill profile and removes V31’s two introduced strike contacts. DEV defaults to V32; production still selects V9. Earlier neck interference and likeness gaps remain; jaw/bill direction is pending owner review. No finishing acceptance or publication. Earlier entries retain their historical scope.
 
 The frozen inspector assessed `4b1c726f5d9bbd1ba1048f89049a5b422001c506`, model `3ec668b0…baacdc5`. Its scores remain historical. This work starts from that commit on `codex/neutral-correction-v2`; the public release is not replaced. Source/reference ownership is in the [integration contract](correction-v2-integration-contract.md) and [feature packet](correction-v2-reference-packet.md). The current neutral model and generated parts/pivots are recorded in [its inventory](../assets/models/uncaged-neutral-v2/neutral-inventory.json).
 
@@ -175,3 +175,8 @@ The present patch-level process has reached diminishing returns. Next work must 
 # V31 check-in — held, not completion
 
 2026-09-29: [V31 checkpoint](whole-character-v31-checkpoint.md) records the reconstructed head and complete era-mechanism attachment work. Actual controls/inspection/export checks pass within their stated scope, but likeness remains below the owner reference and the broad neck screen introduces two strike-pose collisions. F01–F04 OPEN, F05 PARTIAL, F06 GATED; F07–F09 bounded evidence only; F10 local only. Three finished exteriors and owner acceptance are not delivered. No publication. Do not count this fit checkpoint as resolving the owner's Squidward rejection.
+
+
+## V32 — shape progress, owner direction pending
+
+The formed lower bill and matched upper cutting profile replace the bar-like V31 jaw. Separate brow/cheek and tapered crown courses remain proposals. Exact head screens have zero witnesses in five jaw/two cap samples; broader neck counts2/14/2/7/4/1/1 still fail, all inherited after the two V31 introductions were removed. Full era integration, actual WebGL/inspection/fallback and local build have bounded evidence in the [V32 checkpoint](whole-character-v32-checkpoint.md). F01–F04 OPEN, F05 PARTIAL, F06 GATED; no owner artistic approval and no release.

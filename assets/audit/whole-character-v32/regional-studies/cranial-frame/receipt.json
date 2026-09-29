@@ -1,0 +1,111 @@
+{
+  "status": "Zero introduced tested identities versus V30 and V31; inherited failures remain",
+  "base": {
+    "path": "assets/models/whole-character-v31/attempt-form02/murderbird-whole-character-v31.blend",
+    "bytes": 2888364,
+    "sha256": "81280c2a7103bc3b85603a5fd108daab5e337842f6a7f7c8e298be5049e07e2a"
+  },
+  "native": {
+    "path": "assets/audit/whole-character-v32/regional-studies/cranial-frame/coarse01/native-run02/murderbird-v32-cranial-frame.blend",
+    "bytes": 2924467,
+    "sha256": "51ec0b0b812e85571d880ecfa4251ff8c71a78eafa854ca912335432817ca9db"
+  },
+  "regionSource": {
+    "path": "scripts/regions/whole-character-v32-cranial-frame.py",
+    "bytes": 5633,
+    "sha256": "e39c8819528e273a6e58c5468e71e96e6c31b1b3e13abdddb0c11700658abbf2"
+  },
+  "executedRegionSource": {
+    "path": "assets/audit/whole-character-v32/regional-studies/cranial-frame/coarse01/native-run02/executed-region.py",
+    "bytes": 5633,
+    "sha256": "e39c8819528e273a6e58c5468e71e96e6c31b1b3e13abdddb0c11700658abbf2"
+  },
+  "buildProof": {
+    "path": "assets/audit/whole-character-v32/regional-studies/cranial-frame/coarse01/native-run02/receipt.json",
+    "bytes": 3821,
+    "sha256": "51424a88feb5d04c8fd8fe6ed89c2c965dca70801004c7fa97f6bc9acf4594e4"
+  },
+  "attachmentProof": {
+    "path": "assets/audit/whole-character-v32/regional-studies/cranial-frame/coarse01/attachment-witness/proof.json",
+    "bytes": 2139,
+    "sha256": "b02dedf361c93b23bca1006020d056583c50f35c05ea803c8ff58055249a2750"
+  },
+  "comparison": {
+    "path": "assets/audit/whole-character-v32/regional-studies/cranial-frame/coarse01/comparison.json",
+    "bytes": 14427,
+    "sha256": "80fecaee44d3284ef0412afe08585f8e5dbb4c7d658782874fc3ce0053d727a6"
+  },
+  "checks": {
+    "outsideMeshesExact": 575,
+    "allEmptyNodesExact": true,
+    "allMeshTransformsExact": true,
+    "allPropertiesExact": true,
+    "materialsExact": true,
+    "saveReopenExact": true
+  },
+  "changedMeshes": [
+    "V31 passive cranial load bow -1",
+    "V31 cranial load bow shaft seat -1",
+    "V31 passive cranial load bow 1",
+    "V31 cranial load bow shaft seat 1"
+  ],
+  "result": {
+    "poses": [
+      "rest",
+      "maker-neck-jaw",
+      "attention",
+      "contact-neck",
+      "thrust-neck",
+      "yaw-minus",
+      "yaw-plus"
+    ],
+    "candidatePairCounts": [
+      2,
+      14,
+      2,
+      7,
+      4,
+      1,
+      1
+    ],
+    "v30PairCounts": [
+      2,
+      15,
+      2,
+      7,
+      4,
+      1,
+      1
+    ],
+    "v31PairCounts": [
+      2,
+      14,
+      2,
+      9,
+      4,
+      1,
+      1
+    ],
+    "introducedVsV30": 0,
+    "introducedVsV31": 0,
+    "removedFromV31": [
+      [
+        "V23 cervical 4 directional guard 7",
+        "V31 passive cranial load bow 1"
+      ],
+      [
+        "V23 cervical 4 directional guard 8",
+        "V31 passive cranial load bow -1"
+      ]
+    ]
+  },
+  "limits": [
+    "Seven discrete finite surface-crossing screens, not continuous clearance or collision proof.",
+    "Inherited neck/body and adjacent guard crossings remain actual failures, not exemptions.",
+    "Same-owner structural contacts are outside this cross-owner validator.",
+    "One geometry candidate; no correction. The initial two proof-driver runs failed on snapshot field assumptions before native save; their exact sources/logs are preserved.",
+    "Bow upper receiving stations retained; inherited 2mm shaft-bore radial allowance and skull fastening are proposals, not engineering acceptance.",
+    "Only diagnostic frame renders omit surrounding shells. Full posed renders and saved native retain all geometry.",
+    "No runtime, app, material-definition, guard, shaft or named-rest edit; no commits."
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "status": "Bounded passive frame candidate; screening pending",
+  "base": {
+    "path": "assets/models/whole-character-v31/attempt-form02/murderbird-whole-character-v31.blend",
+    "sha256": "81280c2a7103bc3b85603a5fd108daab5e337842f6a7f7c8e298be5049e07e2a"
+  },
+  "native": {
+    "path": "assets/audit/whole-character-v32/regional-studies/cranial-frame/coarse01/native-run02/murderbird-v32-cranial-frame.blend",
+    "sha256": "51ec0b0b812e85571d880ecfa4251ff8c71a78eafa854ca912335432817ca9db"
+  },
+  "sourceSHA256": "e39c8819528e273a6e58c5468e71e96e6c31b1b3e13abdddb0c11700658abbf2",
+  "result": {
+    "region": "cranial-frame-receiving-route",
+    "status": "Reconstructed passive construction proposal; discrete fit evidence separate",
+    "changedMeshes": [
+      "V31 passive cranial load bow -1",
+      "V31 cranial load bow shaft seat -1",
+      "V31 passive cranial load bow 1",
+      "V31 cranial load bow shaft seat 1"
+    ],
+    "addedMeshes": [],
+    "removedMeshes": [],
+    "changedNodes": [],
+    "finiteSolids": [
+      {
+        "name": "V31 passive cranial load bow -1",
+        "owner": "head",
+        "closed": true,
+        "positiveVolumeM3": 5.0753140788228386e-05,
+        "wallM": 0.006
+      },
+      {
+        "name": "V31 cranial load bow shaft seat -1",
+        "owner": "head",
+        "closed": true,
+        "positiveVolumeM3": 7.113692905273653e-06,
+        "wallM": null
+      },
+      {
+        "name": "V31 passive cranial load bow 1",
+        "owner": "head",
+        "closed": true,
+        "positiveVolumeM3": 5.075314078822842e-05,
+        "wallM": 0.006
+      },
+      {
+        "name": "V31 cranial load bow shaft seat 1",
+        "owner": "head",
+        "closed": true,
+        "positiveVolumeM3": 7.1136929052736596e-06,
+        "wallM": null
+      }
+    ],
+    "maximumInstallationErrorM": 0.0,
+    "protectedMeshesExact": 575,
+    "structuralContract": {
+      "owner": "head",
+      "neckGuardsAndShaftsExact": true,
+      "allRestTransformsExact": true,
+      "materialsAndEraTagsRetained": true,
+      "bowHeadLocalStations": [
+        [
+          0.068,
+          0,
+          0.005,
+          0.013
+        ],
+        [
+          0.068,
+          -0.011,
+          0.05,
+          0.014
+        ],
+        [
+          0.072,
+          -0.027,
+          0.092,
+          0.015
+        ],
+        [
+          0.1,
+          -0.05,
+          0.155,
+          0.015
+        ],
+        [
+          0.101,
+          -0.067,
+          0.234,
+          0.014
+        ],
+        [
+          0.112,
+          -0.123,
+          0.282,
+          0.01
+        ]
+      ],
+      "seatHeadLocalProfile": [
+        [
+          0.058,
+          0.01
+        ],
+        [
+          0.058,
+          0.017
+        ],
+        [
+          0.07,
+          0.017
+        ],
+        [
+          0.07,
+          0.01
+        ]
+      ],
+      "retainedShaftSpanM": [
+        -0.09,
+        0.09
+      ],
+      "seatBoreRadiusM": 0.01,
+      "retainedShaftRadiusM": 0.008,
+      "seatSpanWithinShaft": true,
+      "upperSkullReceivingStationsExact": [
+        [
+          0.101,
+          -0.067,
+          0.234,
+          0.014
+        ],
+        [
+          0.112,
+          -0.123,
+          0.282,
+          0.01
+        ]
+      ]
+    },
+    "limits": [
+      "Seven discrete neck poses are screened separately; not continuous collision or load-capacity proof.",
+      "Seats keep the inherited 2mm radial bore allowance; no new fastener, bushing or force simulation is claimed.",
+      "Original named bows retain identity for exact introduced/inherited comparisons."
+    ]
+  },
+  "checks": {
+    "outsideMeshesExact": 575,
+    "allEmptyNodesExact": true,
+    "allMeshTransformsExact": true,
+    "allPropertiesExact": true,
+    "materialsExact": true,
+    "saveReopenExact": true
+  }
+}
