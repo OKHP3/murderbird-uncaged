@@ -1,6 +1,6 @@
 # Correction v2 — accountable backlog
 
-> Current continuation: [Alignment V9](alignment-v9-review.md) is selected locally, with isolated [paired bill/mandible](../assets/audit/paired-bill-mandible-study-v2/index.html) and [cervical construction](cervical-construction-study-v1.md) follow-ups. The original v2 and v6 rows below remain stage-history records. The latest table at the end records current progress without closing artistic findings.
+> Current continuation: [V18 attempt01](whole-character-v18-checkpoint.md) is a held local combined proposal; DEV defaults to V16 and production selects V9. The owner’s rejection remains controlling. Regional work is now integrated for review, with neck/inspection defects still open. Earlier assignments and scores retain their historical scope.
 
 The frozen inspector assessed `4b1c726f5d9bbd1ba1048f89049a5b422001c506`, model `3ec668b0…baacdc5`. Its scores remain historical. This work starts from that commit on `codex/neutral-correction-v2`; the public release is not replaced. Source/reference ownership is in the [integration contract](correction-v2-integration-contract.md) and [feature packet](correction-v2-reference-packet.md). The current neutral model and generated parts/pivots are recorded in [its inventory](../assets/models/uncaged-neutral-v2/neutral-inventory.json).
 
@@ -68,3 +68,39 @@ The whole-candidate neutral owner gate remains ahead of finishing and publicatio
 V9 adopts the verified bill derivative `f5c0f5ad99ac…` into the local whole-bird exhibit. Five mesh geometries and four fixing positions differ from V8; other 690 meshes and all 51 pivots remain unchanged. The seven affected checks, build and publication boundary pass. The gallery supplies 42 new neutral views and 18 matched comparisons; the actual browser response carries the same GLB hash.
 
 F02 now includes the deeper bill, shorter mandible and reseated root fixings in the selected candidate. Its brow/optic fit and whole-head likeness remain OPEN. F01, F03 and F04 remain OPEN; separate neck and lower-leg workers are implementing bounded candidates. F05/F06 remain GATED on the whole-bird structural review. F07/F08 keep prior recording scope and require final-candidate encounter review. F09 retains earlier layout evidence plus bounded new inspection checks. F10 passes the current local boundary with version9 enabled; no new deployment is claimed. The [V9 review](alignment-v9-review.md) identifies exact files, checks and remaining decisions.
+
+
+## V17 held checkpoint and V18 correction assignments
+
+This checkpoint supersedes stale active-work statements above. It does not close the frozen inspector findings or replace their scores. V17 native is `7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b`; GLB is `52980d9578d985737dfe7595515be494d9b1bcfa2dc17d960f18ac6f6fe6049e`. [Matched views, runtime and failed clearance](../assets/audit/whole-character-v17/index.html) establish the actual current discrepancy.
+
+| Finding | Current disposition | Accountable next correction / verification |
+| --- | --- | --- |
+| F01 | OPEN; breast form improved, upper junction fails clearance | Breast/frame worker fits retained ribs and first-course armor to the rounded envelope. Supervisor compares full front/side/rear/reference views before integration; curved neck and body balance remain explicit visual criteria. |
+| F02 | OPEN; eye surround improved, new fittings intersect crown | Orbital worker reseats/constructs the passive fittings and directly implicated crown surfaces. July controls head only. Supervisor reviews clustered machinery, cheek identity and moving cover clearance; a plain gray optic disk is not sufficient. |
+| F03 | OPEN; compact shields and left restriction retained | No V18 wing shape change assigned. Recheck breast/shoulder fit and bilateral guard/thrust after regional composition; current wing seams are not accepted merely because they articulate. |
+| F04 | OPEN; lower limbs remain sparse | Leg worker strengthens selective passive guarding, frame webs and ankle transition while retaining all toe/contact pivots. Supervisor compares stance and leg close-ups, then checks step/turn/jump and adjacent owner clearance. |
+| F05 | PARTIAL / FINISH GATED | V17 has 78 tapered breast plates and separate head construction, but repeated cadence and sampled intersections remain. V18 fit repairs must retain purposeful supporting structure, thickness and inspection identity. |
+| F06 | GATED / NOT INTEGRATED | All current V17/V18 construction proposals remain neutral. Three era-specific material history and finish acceptance have not been achieved. |
+| F07 | IMPLEMENTED; candidate visual/contact acceptance OPEN | V17 exact-export claw checks pass 32/32 within their bounded kinematic scope. Geometry changes need affected retest; this does not replace reviewed normal/slow live articulated action. |
+| F08 | IMPLEMENTED; final-candidate acting review OPEN | Earlier two 120-second recordings remain historical. V17 has normal-time jump/thrust evidence and a short watch/pace timing sample; neither constitutes the required new two-minute no-input review. |
+| F09 | PRIOR LABEL EVIDENCE RETAINED; exterior inspection FAIL | V17 restores eligible mesh matrices, but strict samples reveal breast/body and head/crown intersections during inspection. No full inspection success is claimed for V17; V18 must address actual surfaces. |
+| F10 | LOCAL TARGETED PASS | V17 build and dynamic publication boundary pass with 134 emitted files. The count is an observed result, not a new permanent assertion. V17 studies and natives remain outside distribution; no new remote release is claimed. |
+
+V18 worker ownership is limited to the three new `scripts/regions/whole-character-v18-*.py` modules, their versioned regional model/audit directories and regional notes. Supervisor owns composition, application routing, integrated evidence and the whole-character decision. All 52 existing rigid node transforms, material definitions and historical guides are invariant in this specific fit pass; that compatibility constraint is not an approval of their visual proportions. If unchanged proportions still fail the reference after composition, continue structural correction before finishing.
+
+
+## V18 combined checkpoint — assignments completed, acceptance open
+
+The regional assignments above are complete for this checkpoint. [V18 attempt01](whole-character-v18-checkpoint.md) integrates orbital04, ring-preserving rib fit, neck reconstruction01 and leg06. Failed neck-lap drafts and reconstruction02 are excluded. Exact native/export and validation are in the checkpoint; no frozen score is revised.
+
+- F01 remains OPEN: hanging cup reduced, but egg-like torso/collar and lower-neck contact fail. Next is a coherent deeper finite underlap, not another arbitrary clamp.
+- F02 remains OPEN: fitted passive eye cluster improves and scoped crown collisions are removed. Bill, cheek and larger plate forms still miss the target.
+- F03 remains OPEN: wings/left restriction are preserved, without new wing likeness acceptance.
+- F04 remains OPEN: formed leg channels improve presence and clear the scoped moving neighbors; 32 fixed same-owner fits and sparse joints/feet remain.
+- F05 remains PARTIAL and F06 GATED: no finished three-era exterior/material-history pass.
+- F07/F08 retain bounded implementation evidence; final-candidate acting and owner review remain OPEN.
+- F09 remains FAIL for exterior inspection: the opening shell crosses ribs despite correct matrix restoration. The old hinge lies inside the new shell planform and needs a structural correction with fresh samples.
+- F10 has a fresh local build/boundary pass, with 134 emitted files, studies excluded and no new publication. This does not accept the artwork.
+
+The changed work remains preserved in one worktree. The next integration must explicitly scope any necessary hinge/pivot change; retaining 52 pivots is not a permanent creative requirement.

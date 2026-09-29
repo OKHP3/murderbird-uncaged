@@ -1,0 +1,1372 @@
+{
+  "status": "regional exterior construction proposal; no likeness or clearance acceptance",
+  "base": {
+    "path": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+    "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b",
+    "bytes": 2658243
+  },
+  "native": {
+    "path": "assets/models/whole-character-v18/attempt-01/murderbird-whole-character-v18.blend",
+    "sha256": "696515decad31608600d0e3f753fcf7cb8ecf3e8a5283dd7d69266edd39e37ab",
+    "bytes": 2679497
+  },
+  "composer": {
+    "path": "assets/audit/whole-character-v18/attempt-01/executed-composition.py",
+    "sha256": "6a8f7ed87be291864fc7312ae283ed7192c0de7179e8aba14a8de5be9b84d575",
+    "bytes": 7407
+  },
+  "regions": [
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-01/executed-breast-fit.py",
+        "sha256": "569234258141b3a5e971c434e5c45a3ef5140ba859ad42da2b9bdc30b7819878",
+        "bytes": 8101
+      },
+      "result": {
+        "status": "V18 breast/frame fit proposal; pending strict movement and visual review",
+        "sourceNative": {
+          "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+          "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b"
+        },
+        "changedObjects": [
+          "Passive rib behind access cover.002",
+          "Passive rib behind access cover.003"
+        ],
+        "ribFit": [
+          {
+            "name": "Passive rib behind access cover.002",
+            "owner": "body",
+            "vertices": 492,
+            "crossSectionRings": 41,
+            "ringsRigidlyTranslated": 17,
+            "railContactRingsPreserved": 3,
+            "maximumPosteriorFitShiftM": 0.00647451257705689,
+            "meanShiftAmongRefitRingsM": 0.0052080541218028405,
+            "maximumCrossSectionRadiusChangeM": 5.987490672883233e-08,
+            "railSupportOwners": [
+              "Curved thoracic load rail",
+              "Curved thoracic load rail.001"
+            ],
+            "clearanceTargetM": 0.006
+          },
+          {
+            "name": "Passive rib behind access cover.003",
+            "owner": "body",
+            "vertices": 492,
+            "crossSectionRings": 41,
+            "ringsRigidlyTranslated": 18,
+            "railContactRingsPreserved": 3,
+            "maximumPosteriorFitShiftM": 0.0194308934211731,
+            "meanShiftAmongRefitRingsM": 0.014556840320428218,
+            "maximumCrossSectionRadiusChangeM": 5.956494813531832e-08,
+            "railSupportOwners": [
+              "Curved thoracic load rail",
+              "Curved thoracic load rail.001"
+            ],
+            "clearanceTargetM": 0.006
+          }
+        ],
+        "breastExterior": "All 78 plates and fixing geometry remain unchanged to preserve the rounded V17 envelope; neck-lap-fit owns the mating guard edge.",
+        "ownership": {
+          "passiveRibs": "body-owned frame retained; thoracic rail contact vertices preserved",
+          "topCourseAndFasteners": "breastplate-owned passive surfaces retained and follow the existing inspection opening",
+          "eraEligibility": "Existing maker,mechanic,builder tags preserved; no powered function added"
+        },
+        "preserved": [
+          "all 52 pivots, parent graph and matrices",
+          "material definitions and slots",
+          "historical authoring curves",
+          "all mesh names, mesh counts and non-rib geometry",
+          "thoracic rail support-contact vertices",
+          "breast shell and plate envelope"
+        ],
+        "limits": [
+          "The fit is based on the authored V17 shell and rib geometry, not art metrology.",
+          "Strict checks cover supplied discrete runtime samples, not continuous collision or strength.",
+          "The lower neck/breast transition may still need a separately owned neck guard adjustment."
+        ]
+      },
+      "observedChangedMeshes": [
+        "Passive rib behind access cover.002",
+        "Passive rib behind access cover.003"
+      ],
+      "observedNewMeshes": []
+    },
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-01/executed-neck-reconstruction.py",
+        "sha256": "44bcdd508cd52cddb8292c346b7f135d006368d420adca6646faf8b93e2bf906",
+        "bytes": 5248
+      },
+      "result": {
+        "status": "finite lower-neck reconstruction proposal; visual and sampled movement fit pending",
+        "region": "neck",
+        "changed": [
+          "Throat formed lamina 3",
+          "Throat formed lamina 4",
+          "Throat formed lamina 5",
+          "Throat formed lamina 6",
+          "Cervical flank lamina -1 5",
+          "Cervical flank lamina -1 6",
+          "Cervical flank lamina 1 5",
+          "Cervical flank lamina 1 6",
+          "Lower cervical open backing"
+        ],
+        "added": [],
+        "removed": [],
+        "newPivots": [],
+        "construction": "Three short curved throat lames and two staggered flank lames per side replace the forward cup and long hanging points; finite close backing and eased third-lame lower edge join the existing upper neck. Lower returns are rigid underlaps behind the breast cover.",
+        "profileWorld": [
+          [
+            1.275,
+            -0.38,
+            -0.105,
+            0.182
+          ],
+          [
+            1.305,
+            -0.42,
+            -0.135,
+            0.169
+          ],
+          [
+            1.335,
+            -0.433,
+            -0.166,
+            0.148
+          ],
+          [
+            1.36,
+            -0.414,
+            -0.179,
+            0.131
+          ],
+          [
+            1.395,
+            -0.358,
+            -0.18,
+            0.111
+          ]
+        ],
+        "guards": [
+          {
+            "name": "Throat formed lamina 4",
+            "owner": "neck",
+            "topWorldZ": 1.357,
+            "bottomWorldZ": 1.328,
+            "centerAngle": 0,
+            "halfAngle": 0.65,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Throat formed lamina 5",
+            "owner": "neck",
+            "topWorldZ": 1.336,
+            "bottomWorldZ": 1.307,
+            "centerAngle": 0,
+            "halfAngle": 0.7,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Throat formed lamina 6",
+            "owner": "neck",
+            "topWorldZ": 1.315,
+            "bottomWorldZ": 1.286,
+            "centerAngle": 0,
+            "halfAngle": 0.71,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Cervical flank lamina -1 5",
+            "owner": "neck",
+            "topWorldZ": 1.348,
+            "bottomWorldZ": 1.313,
+            "centerAngle": -1.25,
+            "halfAngle": 0.49,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Cervical flank lamina -1 6",
+            "owner": "neck",
+            "topWorldZ": 1.32,
+            "bottomWorldZ": 1.285,
+            "centerAngle": -1.25,
+            "halfAngle": 0.49,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Cervical flank lamina 1 5",
+            "owner": "neck",
+            "topWorldZ": 1.348,
+            "bottomWorldZ": 1.313,
+            "centerAngle": 1.25,
+            "halfAngle": 0.49,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Cervical flank lamina 1 6",
+            "owner": "neck",
+            "topWorldZ": 1.32,
+            "bottomWorldZ": 1.285,
+            "centerAngle": 1.25,
+            "halfAngle": 0.49,
+            "wallM": 0.005,
+            "outerStandOffM": 0.004,
+            "grid": [
+              17,
+              17
+            ]
+          },
+          {
+            "name": "Lower cervical open backing",
+            "owner": "neck",
+            "topWorldZ": 1.354,
+            "bottomWorldZ": 1.287,
+            "centerAngle": 0,
+            "halfAngle": 1.14,
+            "wallM": 0.005,
+            "outerStandOffM": -0.009,
+            "grid": [
+              17,
+              17
+            ]
+          }
+        ],
+        "upperThirdLameLowerRows": {
+          "firstBlendedRow": 8,
+          "maximumRearwardM": 0.021,
+          "maximumRiseM": 0.01
+        },
+        "preserved": [
+          "all rigid owners and transforms",
+          "all52pivots and drivers",
+          "materials and alleraeligibility",
+          "historical guides",
+          "breast shell and exterior",
+          "all non-target meshes"
+        ],
+        "limits": [
+          "Qualitative reference-based shape with proposed dimensions and unseen support.",
+          "Rigid overlapping lames are not flexible or driven independently.",
+          "Discrete movement, containment and interface fit require independent checks; no physical or owner acceptance."
+        ]
+      },
+      "observedChangedMeshes": [
+        "Cervical flank lamina -1 5",
+        "Cervical flank lamina -1 6",
+        "Cervical flank lamina 1 5",
+        "Cervical flank lamina 1 6",
+        "Lower cervical open backing",
+        "Throat formed lamina 3",
+        "Throat formed lamina 4",
+        "Throat formed lamina 5",
+        "Throat formed lamina 6"
+      ],
+      "observedNewMeshes": []
+    },
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-01/executed-orbital-fit.py",
+        "sha256": "42c7dabda4ef79f98279e7ef6a60a5beb1ff88dba15a5b0147454b4a891b50b3",
+        "bytes": 6425
+      },
+      "result": {
+        "region": "head",
+        "changed": [
+          "Orbital passive retaining race -1",
+          "Orbital support bridge -1 1",
+          "Orbital support bridge -1 2",
+          "Orbital support bridge -1 3",
+          "Passive orbital attachment form -1 1",
+          "Passive orbital attachment form -1 2",
+          "Swept temporal lamina -1 0 0",
+          "Temporal lamina root pin",
+          "Orbital passive retaining race 1",
+          "Orbital support bridge 1 1",
+          "Orbital support bridge 1 2",
+          "Orbital support bridge 1 3",
+          "Passive orbital attachment form 1 1",
+          "Passive orbital attachment form 1 2",
+          "Swept temporal lamina 1 0 0",
+          "Temporal lamina root pin.014"
+        ],
+        "added": [],
+        "removed": [],
+        "newPivots": [],
+        "construction": "Compact collar, seated bridge inner ends, staggered rear-arc passive fittings and locally returned leading temporal shingle with paired-skin inward lap and reseated root fixing. All dimensions are reconstruction choices.",
+        "passiveFittingSeats": [
+          {
+            "name": "Passive orbital attachment form -1 1",
+            "worldCenterM": [
+              -0.15000000596046448,
+              -0.309532105922699,
+              1.6482748985290527
+            ],
+            "worldTranslationM": [
+              0.0005379766225814819,
+              0.04235929250717163,
+              -0.06212043762207031
+            ],
+            "functionStatus": "passive attachment form; specific function unknown"
+          },
+          {
+            "name": "Passive orbital attachment form -1 2",
+            "worldCenterM": [
+              -0.15000000596046448,
+              -0.3171510696411133,
+              1.6811423301696777
+            ],
+            "worldTranslationM": [
+              -0.0003202706575393677,
+              0.05670285224914551,
+              -0.03431510925292969
+            ],
+            "functionStatus": "passive attachment form; specific function unknown"
+          },
+          {
+            "name": "Passive orbital attachment form 1 1",
+            "worldCenterM": [
+              0.15000000596046448,
+              -0.309532105922699,
+              1.6482748985290527
+            ],
+            "worldTranslationM": [
+              -0.0005379766225814819,
+              0.04235929250717163,
+              -0.06212043762207031
+            ],
+            "functionStatus": "passive attachment form; specific function unknown"
+          },
+          {
+            "name": "Passive orbital attachment form 1 2",
+            "worldCenterM": [
+              0.15000000596046448,
+              -0.3171510696411133,
+              1.6811423301696777
+            ],
+            "worldTranslationM": [
+              0.0003202706575393677,
+              0.05670285224914551,
+              -0.03431510925292969
+            ],
+            "functionStatus": "passive attachment form; specific function unknown"
+          }
+        ],
+        "leadingCrownReturn": {
+          "maximumRiseM": 0.034,
+          "maximumRearwardM": 0.012,
+          "maximumInsetM": 0.006,
+          "formingBlendUpperZ": 1.745,
+          "forwardUnderlapOuterLimitM": 0.114,
+          "aftLapReturnBeginsY": -0.285
+        },
+        "preserved": [
+          "existing mesh identities and owners",
+          "recessed optic/bearing/housing geometry",
+          "bill, jaw and cheek geometry",
+          "all 52 rigid nodes/transforms",
+          "materials and 462 historical guides"
+        ],
+        "limits": [
+          "Discrete motion fit requires separate confirmation.",
+          "Passive fitting function remains unknown.",
+          "No owner likeness approval or physical engineering validation."
+        ]
+      },
+      "observedChangedMeshes": [
+        "Orbital passive retaining race -1",
+        "Orbital passive retaining race 1",
+        "Orbital support bridge -1 1",
+        "Orbital support bridge -1 2",
+        "Orbital support bridge -1 3",
+        "Orbital support bridge 1 1",
+        "Orbital support bridge 1 2",
+        "Orbital support bridge 1 3",
+        "Passive orbital attachment form -1 1",
+        "Passive orbital attachment form -1 2",
+        "Passive orbital attachment form 1 1",
+        "Passive orbital attachment form 1 2",
+        "Swept temporal lamina -1 0 0",
+        "Swept temporal lamina 1 0 0",
+        "Temporal lamina root pin",
+        "Temporal lamina root pin.014"
+      ],
+      "observedNewMeshes": []
+    },
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-01/executed-leg-envelope.py",
+        "sha256": "d9e921a6df20ce2d5283a70b2b1b9d2e5a55f93e7d508683f6e58cfee59bbaa6",
+        "bytes": 19876
+      },
+      "result": {
+        "changedOrAddedObjects": [
+          "V18 left split shin load web",
+          "V18 left ankle-to-foot-root yoke",
+          "V18 right split shin load web",
+          "V18 right ankle-to-foot-root yoke"
+        ],
+        "replacedObjects": [
+          "Left metatarsus open passive truss",
+          "Right metatarsus open passive truss"
+        ],
+        "replacementConstruction": [
+          {
+            "object": "Left metatarsus open passive truss",
+            "owner": "left-foot",
+            "toeOwner": "left-toes",
+            "pivotSpanM": 0.310659,
+            "sourceProjectedSpanM": 0.78,
+            "coverageFractionOfSource": [
+              0.21,
+              0.88
+            ],
+            "proximalAnkleReliefFraction": 0.13,
+            "crossSection": "tapered C-channel with split dorsal shoulders",
+            "lateralServiceWindows": 2,
+            "retainedRailAnchors": true,
+            "toePivotOrContactChanged": false,
+            "newPoweredParts": false
+          },
+          {
+            "object": "Right metatarsus open passive truss",
+            "owner": "right-foot",
+            "toeOwner": "right-toes",
+            "pivotSpanM": 0.310659,
+            "sourceProjectedSpanM": 0.78,
+            "coverageFractionOfSource": [
+              0.21,
+              0.88
+            ],
+            "proximalAnkleReliefFraction": 0.13,
+            "crossSection": "tapered C-channel with split dorsal shoulders",
+            "lateralServiceWindows": 2,
+            "retainedRailAnchors": true,
+            "toePivotOrContactChanged": false,
+            "newPoweredParts": false
+          }
+        ],
+        "construction": [
+          {
+            "object": "V18 left split shin load web",
+            "owner": "left-shin",
+            "distalLandmark": "left-foot",
+            "pivotSpanM": 0.2231,
+            "plateCourses": 3,
+            "plateEndSetbackFraction": 0.32,
+            "centerSlotNominalM": 0.012,
+            "newPoweredParts": false
+          },
+          {
+            "object": "V18 left ankle-to-foot-root yoke",
+            "owner": "left-foot",
+            "bearing": "left articulated bearing core.002",
+            "railSources": [
+              {
+                "rail": "left metatarsal passive rail",
+                "proximalRailVertexWorld": [
+                  0.2587259,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  0.2496729,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  0.2587259,
+                  0.0261475,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              },
+              {
+                "rail": "left metatarsal passive rail.001",
+                "proximalRailVertexWorld": [
+                  0.295846,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  0.3048989,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  0.295846,
+                  0.0261474,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              }
+            ],
+            "toePivotOrContactChanged": false,
+            "newPoweredParts": false
+          },
+          {
+            "object": "V18 right split shin load web",
+            "owner": "right-shin",
+            "distalLandmark": "right-foot",
+            "pivotSpanM": 0.2231,
+            "plateCourses": 3,
+            "plateEndSetbackFraction": 0.32,
+            "centerSlotNominalM": 0.012,
+            "newPoweredParts": false
+          },
+          {
+            "object": "V18 right ankle-to-foot-root yoke",
+            "owner": "right-foot",
+            "bearing": "right articulated bearing core.002",
+            "railSources": [
+              {
+                "rail": "right metatarsal passive rail",
+                "proximalRailVertexWorld": [
+                  -0.295846,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  -0.3048989,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  -0.295846,
+                  0.0261475,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              },
+              {
+                "rail": "right metatarsal passive rail.001",
+                "proximalRailVertexWorld": [
+                  -0.2587259,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  -0.2496729,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  -0.2587258,
+                  0.0261474,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              }
+            ],
+            "toePivotOrContactChanged": false,
+            "newPoweredParts": false
+          }
+        ],
+        "preservation": {
+          "pivotCount": 52,
+          "allPivotWorldMatricesUnchanged": true,
+          "allExistingMeshesRetained": true,
+          "existingMeshesModified": [
+            "Left metatarsus open passive truss",
+            "Right metatarsus open passive truss"
+          ]
+        },
+        "eligibility": {
+          "visibleEras": "maker,mechanic,builder",
+          "class": "passive frame and guard surfaces only",
+          "maker": "Passive reinforcement; no powered mechanism added.",
+          "mechanic": "Passive shank and ankle structure; existing drive mechanism unchanged.",
+          "advanced": "Passive structure; no actuator or sensor added.",
+          "notAdded": [
+            "new pivots",
+            "cross-joint rigid parts",
+            "powered actuators",
+            "toe or talon edits"
+          ]
+        },
+        "limits": [
+          "Visual proposal, not a load or fatigue analysis.",
+          "Continuous swept-volume clearance and full containment are not established.",
+          "Attachment points are sampled from evaluated native bearing and rail surfaces; qualitative source images do not supply dimensions."
+        ]
+      },
+      "observedChangedMeshes": [
+        "Left metatarsus open passive truss",
+        "Right metatarsus open passive truss"
+      ],
+      "observedNewMeshes": [
+        "V18 left ankle-to-foot-root yoke",
+        "V18 left split shin load web",
+        "V18 right ankle-to-foot-root yoke",
+        "V18 right split shin load web"
+      ]
+    }
+  ],
+  "preservation": {
+    "exactRigidNodes": 52,
+    "exactHistoricalGuides": 462,
+    "exactUnchangedMeshes": 684,
+    "exactMaterialDefinitions": true,
+    "saveReopenExact": true
+  },
+  "changedMeshes": [
+    "Cervical flank lamina -1 5",
+    "Cervical flank lamina -1 6",
+    "Cervical flank lamina 1 5",
+    "Cervical flank lamina 1 6",
+    "Left metatarsus open passive truss",
+    "Lower cervical open backing",
+    "Orbital passive retaining race -1",
+    "Orbital passive retaining race 1",
+    "Orbital support bridge -1 1",
+    "Orbital support bridge -1 2",
+    "Orbital support bridge -1 3",
+    "Orbital support bridge 1 1",
+    "Orbital support bridge 1 2",
+    "Orbital support bridge 1 3",
+    "Passive orbital attachment form -1 1",
+    "Passive orbital attachment form -1 2",
+    "Passive orbital attachment form 1 1",
+    "Passive orbital attachment form 1 2",
+    "Passive rib behind access cover.002",
+    "Passive rib behind access cover.003",
+    "Right metatarsus open passive truss",
+    "Swept temporal lamina -1 0 0",
+    "Swept temporal lamina 1 0 0",
+    "Temporal lamina root pin",
+    "Temporal lamina root pin.014",
+    "Throat formed lamina 3",
+    "Throat formed lamina 4",
+    "Throat formed lamina 5",
+    "Throat formed lamina 6"
+  ],
+  "addedMeshes": [
+    "V18 left ankle-to-foot-root yoke",
+    "V18 left split shin load web",
+    "V18 right ankle-to-foot-root yoke",
+    "V18 right split shin load web"
+  ],
+  "removedMeshes": [],
+  "authority": "July head only; selected Maker breast construction, Candidate03 and owner target for whole-character recognition. Qualitative dimensions and unseen connections are proposals.",
+  "limits": [
+    "New breast/head/leg surfaces need fresh movement-clearance review.",
+    "Targeted regional repairs do not establish whole-body continuous clearance.",
+    "No finished material pass or artistic acceptance."
+  ],
+  "views": [
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-reference-angle.png",
+      "sha256": "cae054e554aa8c7a06d59ce71956f87edcf7926999c964bdff554dedf0b8927a",
+      "bytes": 1370716,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-front.png",
+      "sha256": "102cfa4167c4419b7e2785127407bbaeb86d189b70072335d4dfebba329b21b3",
+      "bytes": 1357602,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-side.png",
+      "sha256": "40cdbc3f5c4c8e3a58b352bd05b35ee8983e28a72908b7893a88716a1a60b1d2",
+      "bytes": 1342173,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-rear.png",
+      "sha256": "df25ddd8a56706fb1c9fc004691696ef08fe558be99a277f1014a4c46274c7e3",
+      "bytes": 1339493,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-head.png",
+      "sha256": "34f394cfcd463221466e34f47c230fb357c84ff16b789458bf12994fbea2a9fa",
+      "bytes": 1425109,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.56
+        ],
+        "scale": 1.12
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-breast.png",
+      "sha256": "c0abebd2969755cf97950164ca95edca63770ba2516ba9e47ad32dd1c368e660",
+      "bytes": 1512857,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -4,
+          1.9
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.04
+        ],
+        "scale": 1.35
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-opposite-side.png",
+      "sha256": "d648ae86ac1f4381cddc7b2336d7ea96b5cc2e620f24361c3ba9d7aa4b8f512c",
+      "bytes": 1337759,
+      "era": "builder",
+      "camera": {
+        "position": [
+          7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-legs.png",
+      "sha256": "6835a19dba207b0e77c4eb38888509687fa8f8ecfc9cc3df1c26670cae15eb8a",
+      "bytes": 1468340,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          1.45
+        ],
+        "target": [
+          0,
+          -0.08,
+          0.44
+        ],
+        "scale": 1.3
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-shoulder.png",
+      "sha256": "86b9714d514bad82a947837e05e7b5353467631179ed3fee24468f198b55aa62",
+      "bytes": 1516783,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          -0.1,
+          0.0,
+          1.12
+        ],
+        "scale": 1.3
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-maker-reference-angle.png",
+      "sha256": "6b2f57d937d4d85b365d3807c913f9ecf95f68ac27952d2c61320341ba4fb16c",
+      "bytes": 1371228,
+      "era": "maker",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-maker-front.png",
+      "sha256": "2faccbfc946192f2e55ee2463c201128b98b0eb9ffd936b22f9986f2c3590382",
+      "bytes": 1356793,
+      "era": "maker",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-maker-side.png",
+      "sha256": "fd634b14c8869bcddaa76e37e9135375495e7e08645b67ef5b281766f32b6038",
+      "bytes": 1342104,
+      "era": "maker",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-maker-rear.png",
+      "sha256": "13529b732cff6689e01c0aa2eea0055d94a1cb3d80185cc4ffc25e0b846942ef",
+      "bytes": 1339022,
+      "era": "maker",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-mechanic-reference-angle.png",
+      "sha256": "3eb3407b9d80205d0f80067806ad40db72221dae1a08e558e614032674d9cba6",
+      "bytes": 1371228,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-mechanic-front.png",
+      "sha256": "741220f0858897e7fb3576c376df5b5f4d74e78d1296df5e0e96367ac13eed12",
+      "bytes": 1357505,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-mechanic-side.png",
+      "sha256": "c760244e953420983987151fe5b76b1fd5e8415aca847d90a5d1ec827ba79711",
+      "bytes": 1342104,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/after-mechanic-rear.png",
+      "sha256": "c9e75aa93b776b73f1f1ae82fd8e73d69ff53ffb1893a9b4d52c4bfc110af956",
+      "bytes": 1339493,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-reference-angle.png",
+      "sha256": "d4bc6fd4c7515652827f4e3bf4185c888fc95b5896329daa45ee4e959fb9e3b2",
+      "bytes": 1369412,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-front.png",
+      "sha256": "531c024b8b3782beb84470e4e2193ab0a8d3c15810805d908161dcf5c14e18f1",
+      "bytes": 1361503,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-side.png",
+      "sha256": "302c6cb713ff09763fe9645bad57b7b3cb3e310628cfcfd1afdc57aff21a0a92",
+      "bytes": 1341710,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-rear.png",
+      "sha256": "7334f58d474e3badb64f9c2ca339aa9661f9ea3ef0f38a4d2c60bfaad1b22d26",
+      "bytes": 1341661,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-head.png",
+      "sha256": "e1f30bc78cb9f9c1d8a6feab607b4b6536e5702b4a7eaa22ad19b110e5accbcc",
+      "bytes": 1424598,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.56
+        ],
+        "scale": 1.12
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-breast.png",
+      "sha256": "bbc968a1c713d819111147d07100ca0ac4da0dfb932344af2a3498b3d7d876f1",
+      "bytes": 1510638,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -4,
+          1.9
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.04
+        ],
+        "scale": 1.35
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-opposite-side.png",
+      "sha256": "58456f6eee2187e16a77948157f0cc5acf816b46b925683aa052ab0eb119e9d1",
+      "bytes": 1337228,
+      "era": "builder",
+      "camera": {
+        "position": [
+          7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-legs.png",
+      "sha256": "2f265be6f7290583c090af5eb9381a31eac6e1171d007ae2ff33687ac3f678dd",
+      "bytes": 1467959,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          1.45
+        ],
+        "target": [
+          0,
+          -0.08,
+          0.44
+        ],
+        "scale": 1.3
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-shoulder.png",
+      "sha256": "f0fb08fd6d17b4b8110968912be38162cdba94eea5368896be5740c637e7f29a",
+      "bytes": 1512956,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          -0.1,
+          0.0,
+          1.12
+        ],
+        "scale": 1.3
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-maker-reference-angle.png",
+      "sha256": "a1e718a8c8368f8f1ff42befc93dd7dade6b15a19e69ac7e34202a3a1952b8b7",
+      "bytes": 1369623,
+      "era": "maker",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-maker-front.png",
+      "sha256": "6f545ec5d0e56ef8d67ee9c9420d5618dbc7dfa7b61c50caafef807cda19cf5c",
+      "bytes": 1360819,
+      "era": "maker",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-maker-side.png",
+      "sha256": "c00436b991c22e35382b83c3cc2f4f8e7cb4dfd3eccaed259cb07371c205e64d",
+      "bytes": 1341684,
+      "era": "maker",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-maker-rear.png",
+      "sha256": "f56f8b99b6cef2c8a48c8b81ff1f945231d64e2e02eca85553a063d98d9f2acf",
+      "bytes": 1340818,
+      "era": "maker",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-mechanic-reference-angle.png",
+      "sha256": "a1e718a8c8368f8f1ff42befc93dd7dade6b15a19e69ac7e34202a3a1952b8b7",
+      "bytes": 1369623,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-mechanic-front.png",
+      "sha256": "8f2203944d21c078fc68fe4f7d6ecf064ba8916624214781b76bdaa84c59b800",
+      "bytes": 1361404,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-mechanic-side.png",
+      "sha256": "11669852225c1c6c8769cc6d232c9227814104318744fdacd2197247291e1ce8",
+      "bytes": 1341684,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-01/before-mechanic-rear.png",
+      "sha256": "b03e8d707548aacc48272665ffd65c50c127a17d71cc92ca29d799b45f5c02db",
+      "bytes": 1341661,
+      "era": "mechanic",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    }
+  ]
+}

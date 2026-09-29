@@ -1,0 +1,16 @@
+00:00.288  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/build-whole-character-v18.py", line 35, in <module>
+    result=runpy.run_path(str(source),run_name=f'v18_{region}_patch')['apply']()
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/regions/whole-character-v18-breast-fit.py", line 137, in apply
+    rib_reports = [_fit_passive_rib(obj, shell_tree, rail_trees) for obj in ribs]
+                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/regions/whole-character-v18-breast-fit.py", line 102, in _fit_passive_rib
+    assert anchored_rings > 0 and moved_rings > 0, f"No rib support contacts or fit points found for {obj.name}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No rib support contacts or fit points found for Passive rib behind access cover.002
+
+Error: script failed, file: 'scripts/build-whole-character-v18.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

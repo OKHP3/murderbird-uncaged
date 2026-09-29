@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MurderBird · V18 construction review</title><style>
+    :root{color-scheme:light;--ink:#282a26;--paper:#e5e1d7;--panel:#f4efe3;--line:#a8a396;--accent:#997043}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+    main{max-width:1440px;margin:auto;padding:24px}h1,h2{font-family:Georgia,serif;font-weight:500}h1{font-size:2.2rem;margin:0 0 10px}h2{font-size:1.6rem;margin:30px 0 12px}
+    a{color:#76512a}.note{border-left:4px solid var(--accent);padding:12px 15px;background:var(--panel);margin:12px 0}
+    .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    figure{margin:0;background:#cecec7;min-width:0}figure img{display:block;width:100%;height:auto}figcaption{padding:10px 12px}
+    .reference{width:100%;height:650px;object-fit:cover;object-position:85% center;background:#171815}.visual{height:650px;background:#53575b;position:relative}.visual #viewer,.visual canvas{width:100%;height:100%;display:block;touch-action:none}.visual img{width:100%;height:100%;object-fit:contain}#viewer[hidden],#render-fallback[hidden]{display:none}
+    .controls{display:flex;gap:6px;flex-wrap:wrap;padding:10px}button,select{padding:7px 10px;background:#f4f1e7;border:1px solid #818377;color:#252d25;cursor:pointer}button[aria-pressed=true]{background:#d4bd94}button:disabled,select:disabled{opacity:.55;cursor:default}
+    #status{padding:0 12px;font-size:14px}small{color:#555}@media(max-width:820px){main{padding:14px}.pair,.gallery{grid-template-columns:1fr}.visual{height:540px}}
+  </style></head><body><main>
+<h1>MurderBird · V18 construction review</h1>
+<p class="note"><b>Local construction proposal — held.</b> This review separates visible progress from remaining defects. The first comparison starts with the V10 model the owner rejected. Its native was rendered again with the same camera, scale and light as V18. No finished exterior or artistic acceptance is claimed.</p>
+<h2>Progress since the rejected model</h2><div class="gallery">
+<figure><img src="rejected-v10-matched/reference-angle.png" alt="Rejected V10, Three-quarter"><figcaption>Rejected V10 · Three-quarter</figcaption></figure><figure><img src="attempt-01/after-reference-angle.png" alt="V18 proposal, Three-quarter"><figcaption>V18 proposal · Three-quarter</figcaption></figure>
+<figure><img src="rejected-v10-matched/front.png" alt="Rejected V10, Front"><figcaption>Rejected V10 · Front</figcaption></figure><figure><img src="attempt-01/after-front.png" alt="V18 proposal, Front"><figcaption>V18 proposal · Front</figcaption></figure>
+<figure><img src="rejected-v10-matched/side.png" alt="Rejected V10, Side"><figcaption>Rejected V10 · Side</figcaption></figure><figure><img src="attempt-01/after-side.png" alt="V18 proposal, Side"><figcaption>V18 proposal · Side</figcaption></figure>
+<figure><img src="rejected-v10-matched/head.png" alt="Rejected V10, Head"><figcaption>Rejected V10 · Head</figcaption></figure><figure><img src="attempt-01/after-head.png" alt="V18 proposal, Head"><figcaption>V18 proposal · Head</figcaption></figure>
+</div>
+<h2>Owner target and actual exported model</h2>
+<div class="pair"><figure><img class="reference" src="../../../context/threads/assets/murderbird-owner-likeness-rejection-2026-09-28/2-Pasted-Image-2.jpg" alt="Owner supplied MurderBird target"><figcaption>Owner target, enlarged and cropped here for visibility. Perspective reference, not a dimensional drawing or matched camera. <a href="../../../context/threads/assets/murderbird-owner-likeness-rejection-2026-09-28/2-Pasted-Image-2.jpg">Full image</a>.</figcaption></figure>
+<figure><div class="visual"><div id="viewer" role="img" aria-label="Interactive static V18 export"></div><img id="render-fallback" hidden src="attempt-01/after-reference-angle.png" alt="Fixed V18 native rendering"></div>
+<div class="controls"><button data-camera="reference" aria-pressed="true">Reference angle</button><button data-camera="front">Front</button><button data-camera="side">Side</button><button data-camera="rear">Rear</button><button data-camera="head">Head</button><button data-camera="breast">Breast</button><button id="toggle-render">Show fixed render</button></div>
+<div class="controls"><label>Visible native parts <select id="era"><option value="builder">Advanced</option><option value="maker">Maker</option><option value="mechanic">Mechanic</option></select></label></div>
+<p id="status" role="status">Loading V18 export…</p><figcaption>Static export with era filtering. Joint movement and procedural operating hardware are reviewed separately in the runtime.</figcaption></figure></div>
+<p><a href="/?review-body=v18-01&amp;review-seed=927">Open V18 movement and inspection study</a> · <a href="../whole-character-v17/index.html">Previous V17 review</a></p>
+<h2>This revision, matched against V17</h2><div class="gallery">
+<figure><img loading="lazy" src="attempt-01/before-reference-angle.png" alt="V17 reference-angle"><figcaption>V17 · reference-angle</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-reference-angle.png" alt="V18 reference-angle"><figcaption>V18 · reference-angle</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-front.png" alt="V17 front"><figcaption>V17 · front</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-front.png" alt="V18 front"><figcaption>V18 · front</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-side.png" alt="V17 side"><figcaption>V17 · side</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-side.png" alt="V18 side"><figcaption>V18 · side</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-rear.png" alt="V17 rear"><figcaption>V17 · rear</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-rear.png" alt="V18 rear"><figcaption>V18 · rear</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-head.png" alt="V17 head"><figcaption>V17 · head</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-head.png" alt="V18 head"><figcaption>V18 · head</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-breast.png" alt="V17 breast"><figcaption>V17 · breast</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-breast.png" alt="V18 breast"><figcaption>V18 · breast</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-legs.png" alt="V17 legs"><figcaption>V17 · legs</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-legs.png" alt="V18 legs"><figcaption>V18 · legs</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-shoulder.png" alt="V17 shoulder"><figcaption>V17 · shoulder</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-shoulder.png" alt="V18 shoulder"><figcaption>V18 · shoulder</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/before-opposite-side.png" alt="V17 opposite-side"><figcaption>V17 · opposite-side</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-opposite-side.png" alt="V18 opposite-side"><figcaption>V18 · opposite-side</figcaption></figure>
+</div><h2>Inherited body across eras</h2><p>These are neutral construction views. Era filtering is preserved; three finished era-specific exteriors are still outstanding.</p><div class="gallery"><figure><img loading="lazy" src="attempt-01/after-maker-reference-angle.png" alt="maker reference-angle"><figcaption>Maker · reference-angle</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-maker-front.png" alt="maker front"><figcaption>Maker · front</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-maker-side.png" alt="maker side"><figcaption>Maker · side</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-maker-rear.png" alt="maker rear"><figcaption>Maker · rear</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-mechanic-reference-angle.png" alt="mechanic reference-angle"><figcaption>Mechanic · reference-angle</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-mechanic-front.png" alt="mechanic front"><figcaption>Mechanic · front</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-mechanic-side.png" alt="mechanic side"><figcaption>Mechanic · side</figcaption></figure>
+<figure><img loading="lazy" src="attempt-01/after-mechanic-rear.png" alt="mechanic rear"><figcaption>Mechanic · rear</figcaption></figure>
+</div><h2>Movement samples from the exact V18 export</h2><p>Eight fresh pose-driven native illustrations; these omit procedural browser hardware and are not video or physical simulation. Thin floor-directed rendering lines remain under investigation and are not functional cables.</p><div class="gallery"><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/maker-jaw-control-whole-character.png" alt="Maker jaw"><figcaption>Maker jaw</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/maker-wing-control-right-mantle-whole-character.png" alt="Maker shield"><figcaption>Maker shield</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/mechanic-segment-turn-release-whole-character.png" alt="Mechanic stepped turn"><figcaption>Mechanic stepped turn</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/advanced-contact-whole-character.png" alt="Advanced contact"><figcaption>Advanced contact</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/advanced-recovery-entry-whole-character.png" alt="Advanced recovery"><figcaption>Advanced recovery</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/advanced-jump-airborne-whole-character.png" alt="Advanced jump"><figcaption>Advanced jump</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/advanced-thrust-brace-whole-character.png" alt="Advanced thrust"><figcaption>Advanced thrust</figcaption></figure><figure><img loading="lazy" src="attempt-01/motion-renders/render-02/inspection-open-1-separation-0-whole-character.png" alt="Inspection open"><figcaption>Inspection open</figcaption></figure></div><p><a href="attempt-01/independent-review.md">Independent visual assessment</a> · <a href="attempt-01/check-summary-v2.json">Bounded checks</a> · <a href="attempt-01/browser/summary.json">Browser evidence</a></p><h2>Evidence and remaining work</h2>
+<p class="note" id="decision">Held after review: the head fittings and lower legs improve, but whole-character likeness remains below the target. Neck guards still intersect at contact, the opening breast shell crosses fixed ribs, and fixed leg fits remain unadjudicated. Bounded movement/restoration checks pass; they do not establish surface clearance. DEV default remains V16, production remains V9, and no new publication occurred.</p>
+<p><a href="attempt-01/receipt.json">Composition and preservation record</a> · <a href="attempt-01/export/export-receipt.json">Native and export identity</a> · <a href="../../../docs/whole-character-v18-checkpoint.md">Checkpoint and limitations</a></p>
+<p><small>July selection controls the head only. Original sources and rejected attempts remain preserved. Creative content rights reserved.</small></p>
+</main><script type="module" src="./viewer.js"></script></body></html>

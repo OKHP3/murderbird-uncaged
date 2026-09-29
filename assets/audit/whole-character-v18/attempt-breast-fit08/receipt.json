@@ -1,0 +1,666 @@
+{
+  "status": "regional exterior construction proposal; no likeness or clearance acceptance",
+  "base": {
+    "path": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+    "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b",
+    "bytes": 2658243
+  },
+  "native": {
+    "path": "assets/models/whole-character-v18/attempt-breast-fit08/murderbird-whole-character-v18.blend",
+    "sha256": "a4f9ffd68067e14d5ff9e6abf8fc1d1c116d55692381d18673bfd4db5495147c",
+    "bytes": 2657379
+  },
+  "composer": {
+    "path": "assets/audit/whole-character-v18/attempt-breast-fit08/executed-composition.py",
+    "sha256": "7457779f81c9af4495d1c21cdcef0a136658a545ffa8e58baabb1697e46e8693",
+    "bytes": 7398
+  },
+  "regions": [
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-breast-fit08/executed-breast-fit.py",
+        "sha256": "569234258141b3a5e971c434e5c45a3ef5140ba859ad42da2b9bdc30b7819878",
+        "bytes": 8101
+      },
+      "result": {
+        "status": "V18 breast/frame fit proposal; pending strict movement and visual review",
+        "sourceNative": {
+          "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+          "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b"
+        },
+        "changedObjects": [
+          "Passive rib behind access cover.002",
+          "Passive rib behind access cover.003"
+        ],
+        "ribFit": [
+          {
+            "name": "Passive rib behind access cover.002",
+            "owner": "body",
+            "vertices": 492,
+            "crossSectionRings": 41,
+            "ringsRigidlyTranslated": 17,
+            "railContactRingsPreserved": 3,
+            "maximumPosteriorFitShiftM": 0.00647451257705689,
+            "meanShiftAmongRefitRingsM": 0.0052080541218028405,
+            "maximumCrossSectionRadiusChangeM": 5.987490672883233e-08,
+            "railSupportOwners": [
+              "Curved thoracic load rail",
+              "Curved thoracic load rail.001"
+            ],
+            "clearanceTargetM": 0.006
+          },
+          {
+            "name": "Passive rib behind access cover.003",
+            "owner": "body",
+            "vertices": 492,
+            "crossSectionRings": 41,
+            "ringsRigidlyTranslated": 18,
+            "railContactRingsPreserved": 3,
+            "maximumPosteriorFitShiftM": 0.0194308934211731,
+            "meanShiftAmongRefitRingsM": 0.014556840320428218,
+            "maximumCrossSectionRadiusChangeM": 5.956494813531832e-08,
+            "railSupportOwners": [
+              "Curved thoracic load rail",
+              "Curved thoracic load rail.001"
+            ],
+            "clearanceTargetM": 0.006
+          }
+        ],
+        "breastExterior": "All 78 plates and fixing geometry remain unchanged to preserve the rounded V17 envelope; neck-lap-fit owns the mating guard edge.",
+        "ownership": {
+          "passiveRibs": "body-owned frame retained; thoracic rail contact vertices preserved",
+          "topCourseAndFasteners": "breastplate-owned passive surfaces retained and follow the existing inspection opening",
+          "eraEligibility": "Existing maker,mechanic,builder tags preserved; no powered function added"
+        },
+        "preserved": [
+          "all 52 pivots, parent graph and matrices",
+          "material definitions and slots",
+          "historical authoring curves",
+          "all mesh names, mesh counts and non-rib geometry",
+          "thoracic rail support-contact vertices",
+          "breast shell and plate envelope"
+        ],
+        "limits": [
+          "The fit is based on the authored V17 shell and rib geometry, not art metrology.",
+          "Strict checks cover supplied discrete runtime samples, not continuous collision or strength.",
+          "The lower neck/breast transition may still need a separately owned neck guard adjustment."
+        ]
+      },
+      "observedChangedMeshes": [
+        "Passive rib behind access cover.002",
+        "Passive rib behind access cover.003"
+      ],
+      "observedNewMeshes": []
+    },
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-breast-fit08/executed-neck-lap-fit.py",
+        "sha256": "5aeda88f8f276191d4fd75c38959565eff1f092a218e30b2db2150201635feec",
+        "bytes": 6870
+      },
+      "result": {
+        "status": "V18 neck-owned lower-lap fit proposal; sampled pose clearance pending",
+        "sourceNative": {
+          "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+          "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b"
+        },
+        "changedObjects": [
+          "Cervical flank lamina -1 5",
+          "Cervical flank lamina 1 5",
+          "Cervical flank lamina -1 6",
+          "Cervical flank lamina 1 6",
+          "Throat formed lamina 4",
+          "Throat formed lamina 5",
+          "Throat formed lamina 6"
+        ],
+        "fit": [
+          {
+            "name": "Cervical flank lamina -1 5",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 0,
+            "maximumRadialReprofileM": 0.0,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.332834005355835,
+              1.3429882526397705
+            ],
+            "upperEdgeMaxDisplacementM": 0.0,
+            "lowerEdgeMaxDisplacementM": 0.0,
+            "worldBoundsAfter": [
+              [
+                -0.24326995015144348,
+                -0.38708510994911194,
+                1.2823882102966309
+              ],
+              [
+                -0.12389782071113586,
+                -0.18800604343414307,
+                1.3429882526397705
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          },
+          {
+            "name": "Cervical flank lamina 1 5",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 0,
+            "maximumRadialReprofileM": 0.0,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.332834005355835,
+              1.3429882526397705
+            ],
+            "upperEdgeMaxDisplacementM": 0.0,
+            "lowerEdgeMaxDisplacementM": 0.0,
+            "worldBoundsAfter": [
+              [
+                0.12389782071113586,
+                -0.38708510994911194,
+                1.2823882102966309
+              ],
+              [
+                0.24326995015144348,
+                -0.18800604343414307,
+                1.3429882526397705
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          },
+          {
+            "name": "Cervical flank lamina -1 6",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 0,
+            "maximumRadialReprofileM": 0.0,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.302656888961792,
+              1.3163948059082031
+            ],
+            "upperEdgeMaxDisplacementM": 0.0,
+            "lowerEdgeMaxDisplacementM": 0.0,
+            "worldBoundsAfter": [
+              [
+                -0.26594623923301697,
+                -0.4136081039905548,
+                1.2170515060424805
+              ],
+              [
+                -0.15318098664283752,
+                -0.1557159572839737,
+                1.3163948059082031
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          },
+          {
+            "name": "Cervical flank lamina 1 6",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 0,
+            "maximumRadialReprofileM": 0.0,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.302656888961792,
+              1.3163948059082031
+            ],
+            "upperEdgeMaxDisplacementM": 0.0,
+            "lowerEdgeMaxDisplacementM": 0.0,
+            "worldBoundsAfter": [
+              [
+                0.15318098664283752,
+                -0.4136081039905548,
+                1.2170515060424805
+              ],
+              [
+                0.26594623923301697,
+                -0.1557159572839737,
+                1.3163948059082031
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          },
+          {
+            "name": "Throat formed lamina 4",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 121,
+            "maximumRadialReprofileM": 0.07306635157468766,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.352879524230957,
+              1.3591196537017822
+            ],
+            "upperEdgeMaxDisplacementM": 0.0,
+            "lowerEdgeMaxDisplacementM": 0.07306635157468766,
+            "worldBoundsAfter": [
+              [
+                -0.09246060997247696,
+                -0.43504005670547485,
+                1.294254183769226
+              ],
+              [
+                0.08880265057086945,
+                -0.3724895119667053,
+                1.3591196537017822
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          },
+          {
+            "name": "Throat formed lamina 5",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 168,
+            "maximumRadialReprofileM": 0.08042430885022411,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.326264500617981,
+              1.3313934803009033
+            ],
+            "upperEdgeMaxDisplacementM": 0.038669998925660365,
+            "lowerEdgeMaxDisplacementM": 0.07576071073729801,
+            "worldBoundsAfter": [
+              [
+                -0.10911647975444794,
+                -0.4441945552825928,
+                1.2566059827804565
+              ],
+              [
+                0.11352749913930893,
+                -0.4241700768470764,
+                1.3313934803009033
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          },
+          {
+            "name": "Throat formed lamina 6",
+            "owner": "neck",
+            "grid": [
+              13,
+              13
+            ],
+            "verticesReprofiledTowardPivotCenteredUnderlap": 169,
+            "maximumRadialReprofileM": 0.07297303306185765,
+            "proposedTargetRadiusCenterM": 0.272,
+            "proposedTargetRadiusOutboardM": 0.29,
+            "axisNativeXThroughYZ": [
+              -0.16981055,
+              1.2312945
+            ],
+            "profile": "Full guard surface clamped inward only where outside the pivot-centered target radius; points already inside remain fixed.",
+            "upperEdgeWorldBoundsBefore": [
+              1.2914694547653198,
+              1.3003449440002441
+            ],
+            "upperEdgeMaxDisplacementM": 0.07029548398327384,
+            "lowerEdgeMaxDisplacementM": 0.04576052000212355,
+            "worldBoundsAfter": [
+              [
+                -0.13386951386928558,
+                -0.44864732027053833,
+                1.1982561349868774
+              ],
+              [
+                0.13010096549987793,
+                -0.4368968605995178,
+                1.29625403881073
+              ]
+            ],
+            "attachment": "existing rigid neck-owned plate; no new pivot or flexible metal"
+          }
+        ],
+        "breastTargets": [
+          "V17 breast directional lamina 1 1 left",
+          "V17 breast directional lamina 1 1 right",
+          "V17 breast directional lamina 1 2 left",
+          "V17 breast directional lamina 1 2 right",
+          "V17 breast directional lamina 1 3 left",
+          "V17 breast directional lamina 1 3 right",
+          "V17 breast directional lamina 1 4 left",
+          "V17 breast directional lamina 1 4 right"
+        ],
+        "ownership": "Only existing neck/cervical-upper passive guard mesh coordinates change; guards retain their original rigid owners and all-era tags.",
+        "interface": "Lower guard contours are smoothly reprofiled onto a proposed pivot-centered cylindrical underlap; the upper breast edge and access pivot remain unchanged.",
+        "preserved": [
+          "all 52 pivots, parent graph and matrices",
+          "all breast shell, plate and fixing meshes",
+          "all frame/backing rails",
+          "all materials and mesh/object identities"
+        ],
+        "limits": [
+          "The underlap is a reconstructed sliding interface, not a measured reference dimension.",
+          "Discrete strict-pose checks and visual review are required before any integration decision.",
+          "No continuous articulation sweep or mechanical load validation is claimed."
+        ]
+      },
+      "observedChangedMeshes": [
+        "Throat formed lamina 4",
+        "Throat formed lamina 5",
+        "Throat formed lamina 6"
+      ],
+      "observedNewMeshes": []
+    }
+  ],
+  "preservation": {
+    "exactRigidNodes": 52,
+    "exactHistoricalGuides": 462,
+    "exactUnchangedMeshes": 708,
+    "exactMaterialDefinitions": true,
+    "saveReopenExact": true
+  },
+  "changedMeshes": [
+    "Passive rib behind access cover.002",
+    "Passive rib behind access cover.003",
+    "Throat formed lamina 4",
+    "Throat formed lamina 5",
+    "Throat formed lamina 6"
+  ],
+  "addedMeshes": [],
+  "removedMeshes": [],
+  "authority": "July head only; selected Maker breast construction, Candidate03 and owner target for whole-character recognition. Qualitative dimensions and unseen connections are proposals.",
+  "limits": [
+    "New breast/head/leg surfaces need fresh movement-clearance review.",
+    "Targeted regional repairs do not establish whole-body continuous clearance.",
+    "No finished material pass or artistic acceptance."
+  ],
+  "views": [
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-reference-angle.png",
+      "sha256": "03ea8afee0c4d3db5570e41f25ab682856057b7e7798a2f91c16ed9d5ac14061",
+      "bytes": 1369917,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-front.png",
+      "sha256": "f988fb7234ca493830ef8012519e8e58c3d2c6017887f0abedac572d14f05eec",
+      "bytes": 1360860,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-side.png",
+      "sha256": "b809aad272f08d4eaa9cb2b50573f5ad6540b82dba9e35b12f88b0eeb81b0874",
+      "bytes": 1340689,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-rear.png",
+      "sha256": "b0bf498ef4761f0eff5018d0f97737dca5edaa443ce10fc0216b697c01bba5e7",
+      "bytes": 1341671,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-head.png",
+      "sha256": "369f04f5d5d2e1c8f3e8b14f4cf57a55c482206f5bd4b625f486ca94f70acb0f",
+      "bytes": 1424495,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.56
+        ],
+        "scale": 1.12
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-breast.png",
+      "sha256": "cb2f28c0fb68624e11bcae1b47142de7421c743527cfb99fdb61105da574cb28",
+      "bytes": 1510185,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -4,
+          1.9
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.04
+        ],
+        "scale": 1.35
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/before-reference-angle.png",
+      "sha256": "fa11de1d2dae00421d6bd2bcce99f5779dc580c27bebfc7da38a6d367f4d33c9",
+      "bytes": 1369412,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/before-front.png",
+      "sha256": "9922b52502148309f498556c0bcf579365c9e190b0e6c0a149af61262fae34ad",
+      "bytes": 1361503,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/before-side.png",
+      "sha256": "a3ca928a7babe8d725d1d583d8738144a58fae9600d02c20357fa4022ec00fa5",
+      "bytes": 1341710,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/before-rear.png",
+      "sha256": "0e2824944da2f58789e721d0c514e85db4770fb5560b02c55fe2b56bdcbef49e",
+      "bytes": 1341661,
+      "era": "builder",
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/before-head.png",
+      "sha256": "22c318323f4072c525ba2b82ce3195cde63a9d9440708f70be2eaf0a3cbb2b0a",
+      "bytes": 1424598,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.56
+        ],
+        "scale": 1.12
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/before-breast.png",
+      "sha256": "d1b01d45fe052f422bcec8c583e6dc2ab45e036162aa910cb19c08920d5c1733",
+      "bytes": 1510638,
+      "era": "builder",
+      "camera": {
+        "position": [
+          -6,
+          -4,
+          1.9
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.04
+        ],
+        "scale": 1.35
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    }
+  ]
+}

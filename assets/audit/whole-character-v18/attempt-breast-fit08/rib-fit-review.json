@@ -1,0 +1,104 @@
+{
+  "status": "held; visual and strict pose review do not support integration",
+  "candidate": {
+    "path": "assets/models/whole-character-v18/attempt-breast-fit08/murderbird-whole-character-v18.blend",
+    "sha256": "a4f9ffd68067e14d5ff9e6abf8fc1d1c116d55692381d18673bfd4db5495147c",
+    "bytes": 2657379
+  },
+  "sourceNative": {
+    "path": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+    "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b",
+    "bytes": 2658243
+  },
+  "compositionReceipt": {
+    "path": "assets/audit/whole-character-v18/attempt-breast-fit08/receipt.json",
+    "sha256": "1b23f8f77c6af5b879438ef523e7de075cf96949b8c7dee68f852e5faec0677c"
+  },
+  "regionSources": [
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/executed-breast-fit.py",
+      "sha256": "569234258141b3a5e971c434e5c45a3ef5140ba859ad42da2b9bdc30b7819878"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/executed-neck-lap-fit.py",
+      "sha256": "5aeda88f8f276191d4fd75c38959565eff1f092a218e30b2db2150201635feec"
+    }
+  ],
+  "posePacket": {
+    "path": "assets/audit/whole-character-v17/attempt-02/runtime-poses/pose-snapshot.json",
+    "sha256": "1964918661da857878376ff95457f3b8e0bc73479bd83225a8419fb1e2a627f9",
+    "count": 21,
+    "origin": "Node-sampled production runtime modules; not browser captures"
+  },
+  "strictKernel": {
+    "path": "assets/audit/cervical-construction-study-v1/attempt-07/actual-runtime-joint-clearance-v1/executed-review.py",
+    "sha256": "6d840608cf43b20beccaa8a7f1cab274d000485996ea2b1a6e1460921092b356",
+    "method": "strict noncoplanar edge-through-face triangle crossing"
+  },
+  "strictRuns": {
+    "candidate": {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/strict-crossings/strict-crossings.json",
+      "sha256": "8d8b65a99f642e866b382e2cdc6e5d7236b65cca864bbf492607d9cb55316add",
+      "checker": {
+        "path": "assets/audit/whole-character-v18/attempt-breast-fit08/strict-crossings/executed-check.py",
+        "sha256": "51a5f6ab950ae67f53ae6754c7bdd6aee566b08e6ae4ee7eb91671ee61e0de05"
+      },
+      "crossingPairSamples": 243,
+      "byGroup": {
+        "first-course-vs-lower-neck": 231,
+        "shell-vs-rib": 8,
+        "first-course-vs-rib": 4
+      }
+    },
+    "v17Baseline": {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/strict-baseline-v17/strict-crossings.json",
+      "sha256": "404e2f48d78da47956927dd8970b3366090fcbb0500beaa3c037a3167c61781f",
+      "checker": {
+        "path": "assets/audit/whole-character-v18/attempt-breast-fit08/strict-baseline-v17/executed-check.py",
+        "sha256": "91341ff264050c04cc51d3a87c7bce77a4141ad68aff1ad604780dd8a9a28ef4"
+      },
+      "crossingPairSamples": 217,
+      "byGroup": {
+        "shell-vs-rib": 38,
+        "first-course-vs-rib": 94,
+        "first-course-vs-lower-neck": 85
+      }
+    }
+  },
+  "ribCrossSectionEvidence": {
+    "crossSectionRingsPerRib": 41,
+    "verticesPerRing": 12,
+    "ringTranslations": [
+      {
+        "name": "Passive rib behind access cover.002",
+        "ringsTranslated": 17,
+        "railContactRingsRetained": 3,
+        "maxRingRadiusChangeM": 5.987490672883233e-08,
+        "maxCenterlineTranslationM": 0.00647451257705689
+      },
+      {
+        "name": "Passive rib behind access cover.003",
+        "ringsTranslated": 18,
+        "railContactRingsRetained": 3,
+        "maxRingRadiusChangeM": 5.956494813531832e-08,
+        "maxCenterlineTranslationM": 0.0194308934211731
+      }
+    ],
+    "note": "Each ring is translated rigidly; the in-plane vertex set, polygon area, and section thickness are preserved up to floating-point error."
+  },
+  "visualEvidence": [
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-reference-angle.png",
+      "sha256": "03ea8afee0c4d3db5570e41f25ab682856057b7e7798a2f91c16ed9d5ac14061"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-breast-fit08/after-breast.png",
+      "sha256": "cb2f28c0fb68624e11bcae1b47142de7421c743527cfb99fdb61105da574cb28"
+    }
+  ],
+  "limits": [
+    "Strict test covers only shell/rib, first-course/rib, and first-course/lower-guard pairs over the 21 supplied discrete samples.",
+    "No continuous interpolation, containment depth, load path strength, or browser rendering is tested.",
+    "The neck/breast joint remains visually unresolved and has more strict crossing pair samples than the V17 baseline."
+  ]
+}

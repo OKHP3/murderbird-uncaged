@@ -1,0 +1,16 @@
+00:00.442  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/build-whole-character-v18.py", line 34, in <module>
+    result=runpy.run_path(str(source),run_name=f'v18_{region}_patch')['apply']()
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 259, in _get_code_from_file
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/regions/whole-character-v18-breast-fit.py", line 173
+    fitted_group.append(loc + normal * 0.008)
+                                             ^
+IndentationError: unindent does not match any outer indentation level
+
+Error: script failed, file: 'scripts/build-whole-character-v18.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

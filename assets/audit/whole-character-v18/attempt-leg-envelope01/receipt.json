@@ -1,0 +1,438 @@
+{
+  "status": "regional exterior construction proposal; no likeness or clearance acceptance",
+  "base": {
+    "path": "assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.blend",
+    "sha256": "7d371907b279eb3d625e67164d84a78b2901a5cb6a79917def07f48ff8792d7b",
+    "bytes": 2658243
+  },
+  "native": {
+    "path": "assets/models/whole-character-v18/attempt-leg-envelope01/murderbird-whole-character-v18.blend",
+    "sha256": "a96e49dd824d480bdf5ac8b8871afbe9f2da1c711cadd86f5bcaf9d544026b30",
+    "bytes": 2667664
+  },
+  "composer": {
+    "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/executed-composition.py",
+    "sha256": "380a3ef1a24bbc30e02155a1c43cf051f43fd685ff76f012bf90f7488c2af316",
+    "bytes": 6594
+  },
+  "regions": [
+    {
+      "source": {
+        "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/executed-leg-envelope.py",
+        "sha256": "b6bcf0cc5dc1ef86a5fbfaa882e4c7225060393eb36a4743c167793196dff194",
+        "bytes": 14371
+      },
+      "result": {
+        "changedOrAddedObjects": [
+          "V18 left split shin load web",
+          "V18 left ankle-to-foot-root yoke",
+          "V18 right split shin load web",
+          "V18 right ankle-to-foot-root yoke"
+        ],
+        "replacedObjects": [],
+        "construction": [
+          {
+            "object": "V18 left split shin load web",
+            "owner": "left-shin",
+            "distalLandmark": "left-foot",
+            "pivotSpanM": 0.2231,
+            "plateCourses": 3,
+            "plateEndSetbackFraction": 0.18,
+            "centerSlotNominalM": 0.012,
+            "newPoweredParts": false
+          },
+          {
+            "object": "V18 left ankle-to-foot-root yoke",
+            "owner": "left-foot",
+            "bearing": "left articulated bearing core.002",
+            "railSources": [
+              {
+                "rail": "left metatarsal passive rail",
+                "proximalRailVertexWorld": [
+                  0.2587259,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  0.2496729,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  0.2587259,
+                  0.0261475,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              },
+              {
+                "rail": "left metatarsal passive rail.001",
+                "proximalRailVertexWorld": [
+                  0.295846,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  0.3048989,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  0.295846,
+                  0.0261474,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              }
+            ],
+            "toePivotOrContactChanged": false,
+            "newPoweredParts": false
+          },
+          {
+            "object": "V18 right split shin load web",
+            "owner": "right-shin",
+            "distalLandmark": "right-foot",
+            "pivotSpanM": 0.2231,
+            "plateCourses": 3,
+            "plateEndSetbackFraction": 0.18,
+            "centerSlotNominalM": 0.012,
+            "newPoweredParts": false
+          },
+          {
+            "object": "V18 right ankle-to-foot-root yoke",
+            "owner": "right-foot",
+            "bearing": "right articulated bearing core.002",
+            "railSources": [
+              {
+                "rail": "right metatarsal passive rail",
+                "proximalRailVertexWorld": [
+                  -0.295846,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  -0.3048989,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  -0.295846,
+                  0.0261475,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              },
+              {
+                "rail": "right metatarsal passive rail.001",
+                "proximalRailVertexWorld": [
+                  -0.2587259,
+                  0.0309321,
+                  0.2815485
+                ],
+                "measuredRailPointWorld": [
+                  -0.2496729,
+                  0.0116292,
+                  0.2695561
+                ],
+                "measuredBearingSurfacePointWorld": [
+                  -0.2587258,
+                  0.0261474,
+                  0.268947
+                ],
+                "railSampleDistanceM": 0.0395502,
+                "bearingSampleDistanceM": 0.0134793
+              }
+            ],
+            "toePivotOrContactChanged": false,
+            "newPoweredParts": false
+          }
+        ],
+        "preservation": {
+          "pivotCount": 52,
+          "allPivotWorldMatricesUnchanged": true,
+          "allExistingMeshesRetained": true,
+          "existingMeshesModified": []
+        },
+        "eligibility": {
+          "visibleEras": "maker,mechanic,builder",
+          "class": "passive frame and guard surfaces only",
+          "maker": "Passive reinforcement; no powered mechanism added.",
+          "mechanic": "Passive shank and ankle structure; existing drive mechanism unchanged.",
+          "advanced": "Passive structure; no actuator or sensor added.",
+          "notAdded": [
+            "new pivots",
+            "cross-joint rigid parts",
+            "powered actuators",
+            "toe or talon edits"
+          ]
+        },
+        "limits": [
+          "Visual proposal, not a load or fatigue analysis.",
+          "Continuous swept-volume clearance and full containment are not established.",
+          "Attachment points are sampled from evaluated native bearing and rail surfaces; qualitative source images do not supply dimensions."
+        ]
+      },
+      "observedChangedMeshes": [],
+      "observedNewMeshes": [
+        "V18 left ankle-to-foot-root yoke",
+        "V18 left split shin load web",
+        "V18 right ankle-to-foot-root yoke",
+        "V18 right split shin load web"
+      ]
+    }
+  ],
+  "preservation": {
+    "exactRigidNodes": 52,
+    "exactHistoricalGuides": 462,
+    "exactUnchangedMeshes": 713,
+    "exactMaterialDefinitions": true,
+    "saveReopenExact": true
+  },
+  "changedMeshes": [],
+  "addedMeshes": [
+    "V18 left ankle-to-foot-root yoke",
+    "V18 left split shin load web",
+    "V18 right ankle-to-foot-root yoke",
+    "V18 right split shin load web"
+  ],
+  "removedMeshes": [],
+  "authority": "July head only; selected Maker breast construction, Candidate03 and owner target for whole-character recognition. Qualitative dimensions and unseen connections are proposals.",
+  "limits": [
+    "New breast/head/leg surfaces need fresh movement-clearance review.",
+    "Targeted regional repairs do not establish whole-body continuous clearance.",
+    "No finished material pass or artistic acceptance."
+  ],
+  "views": [
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/after-reference-angle.png",
+      "sha256": "3bd795dd09b6c0982bc8b95ec793551140dfdc1e313ef377ea71c1da295b1bbe",
+      "bytes": 1371501,
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/after-front.png",
+      "sha256": "32d0023b8ed4f7ec1b80b612e84b8620e39b64a746f3e5b2b5e514961cad481f",
+      "bytes": 1360954,
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/after-side.png",
+      "sha256": "e6b0363cc479fc3551867486b8bcf70cdd4c6e3e7afb64ac91d8166297feff43",
+      "bytes": 1342517,
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/after-rear.png",
+      "sha256": "7de6c8d3ea34ef782cd0f146821166a8f9b42affded31ce773fa62857a507d28",
+      "bytes": 1341007,
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/after-head.png",
+      "sha256": "f1fa6c37653bb9a8b9d0e9c1967075c28be4101d2933bf58fcdaf108c1504747",
+      "bytes": 1424610,
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.56
+        ],
+        "scale": 1.12
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/after-breast.png",
+      "sha256": "b73d78dda1bd65609b32742249e00975d02a11373dc094d9806fc02b9013ac0e",
+      "bytes": 1512627,
+      "camera": {
+        "position": [
+          -6,
+          -4,
+          1.9
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.04
+        ],
+        "scale": 1.35
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/before-reference-angle.png",
+      "sha256": "b9478128d7252a1a88c91ecb309fd8f06d0f3d5e4acd5bea2bffa46254c511cf",
+      "bytes": 1369412,
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.75
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/before-front.png",
+      "sha256": "00a22380cf839b3dc0d88dc661dc62c8315d08f925c1dc059c0b803ad69e0c8c",
+      "bytes": 1361503,
+      "camera": {
+        "position": [
+          0,
+          -7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/before-side.png",
+      "sha256": "1eef871b2e350f203c1fd18b6c9efe7aecfccc6a096cff505de65cbaf3173cbc",
+      "bytes": 1341710,
+      "camera": {
+        "position": [
+          -7,
+          0,
+          1.35
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/before-rear.png",
+      "sha256": "0a678734ff0621ef757bdb01dbf48671a1e63526143d63606f606cf6f44f8865",
+      "bytes": 1341661,
+      "camera": {
+        "position": [
+          0,
+          7,
+          1.65
+        ],
+        "target": [
+          0,
+          -0.08,
+          1.02
+        ],
+        "scale": 2.5
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/before-head.png",
+      "sha256": "d780e4dfd4ce5281136ad4b1ffa61f889ebbd2c5f53bd2677e021fa75bcf2051",
+      "bytes": 1424598,
+      "camera": {
+        "position": [
+          -6,
+          -3.5,
+          2.45
+        ],
+        "target": [
+          0,
+          -0.27,
+          1.56
+        ],
+        "scale": 1.12
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    },
+    {
+      "path": "assets/audit/whole-character-v18/attempt-leg-envelope01/before-breast.png",
+      "sha256": "3017cc19c8ea91a83e6ececcad3f9aa0b9a0c6e643dbd5cc1bed96e1dbfc1db9",
+      "bytes": 1510638,
+      "camera": {
+        "position": [
+          -6,
+          -4,
+          1.9
+        ],
+        "target": [
+          0,
+          -0.1,
+          1.04
+        ],
+        "scale": 1.35
+      },
+      "lighting": "neutral native Workbench; guide curves hidden"
+    }
+  ]
+}
