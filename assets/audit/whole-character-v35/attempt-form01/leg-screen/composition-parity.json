@@ -1,0 +1,100 @@
+{
+  "status": "passed exact composition parity for the V35 leg04 regional scope; ten-pose evidence is inherited as composition parity only, no fresh poses generated",
+  "regionalNative": {
+    "path": "assets/models/whole-character-v35/regional-studies/joint-housings/attempt04/murderbird-whole-character-v35-joint-housings.blend",
+    "sha256": "3fbc8768493b60725d6185c662a682998b84f97dab64f835021a6dc93977cb32"
+  },
+  "combinedNative": {
+    "path": "assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.blend",
+    "sha256": "d2c704ccf89f3f0e7dbeb3613dcdbdd964c4ba69991783783830803eecf59cb0"
+  },
+  "runtimeGLB": {
+    "path": "assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.glb",
+    "sha256": "a9b6bd6d5cd3dcdfa52d42d4a33f8a4f09b3fa31f333c2cf814ba94de0788cd9"
+  },
+  "changedLegMeshes": {
+    "expected": 106,
+    "matchedExactly": 106,
+    "differences": [],
+    "owners": [
+      "left-thigh",
+      "right-thigh",
+      "left-shin",
+      "right-shin"
+    ],
+    "comparison": "raw mesh vertices, polygon indices, material indices/names, parent, local and world transforms"
+  },
+  "namedRigRests": {
+    "regionalAndCombinedNodeCount": [
+      54,
+      54
+    ],
+    "legRigNodesCompared": 26,
+    "legRigNodesMatchedExactly": 26,
+    "legRigDifferences": [],
+    "allNodeDifferencesOutsideLegScope": [
+      "anchor-beak",
+      "anchor-mind",
+      "bill-contact",
+      "body",
+      "builder-optics",
+      "cranial-cover",
+      "jaw",
+      "processing",
+      "upper-bill"
+    ],
+    "comparison": "leg/thigh/shin/hip/knee/foot/toes/sole/digit EMPTY parent names, local/world matrices and custom properties; nine changed cross-region torso/head nodes are listed"
+  },
+  "protectedFootToeDigitMeshes": {
+    "expected": 94,
+    "regional": 94,
+    "combined": 94,
+    "matchedExactly": 94,
+    "differences": [],
+    "comparison": "raw mesh vertices, polygon indices, material indices/names, parent, local and world transforms"
+  },
+  "tenPoseEvidence": {
+    "status": "inherited as composition parity only",
+    "source": "assets/audit/whole-character-v35/regional-studies/joint-housings/attempt04/fit-screen.json",
+    "poseCount": 10,
+    "makerPeak": {
+      "baselinePairs": 8,
+      "candidatePairs": 6,
+      "introduced": 0,
+      "resolved": 2,
+      "retained": 6
+    },
+    "freshPoseGeneration": false,
+    "retainedMakerPeakPairs": [
+      [
+        "V25 left shin primary load member -1",
+        "V25 left thigh distal captive cheek -1"
+      ],
+      [
+        "V25 left shin primary load member -1",
+        "V25 left thigh distal terminal gusset -1"
+      ],
+      [
+        "V25 left shin primary load member -1",
+        "V25 left thigh load channel collar -1 0.72"
+      ],
+      [
+        "V25 left shin primary load member -1",
+        "V25 left thigh primary load member -1"
+      ],
+      [
+        "V25 right shin load channel collar 1 0.28",
+        "V25 right thigh distal captive cheek 1"
+      ],
+      [
+        "V25 right shin primary load member 1",
+        "V25 right thigh distal captive cheek 1"
+      ]
+    ]
+  },
+  "remaining": [
+    "The ten poses were not regenerated on the full combined native.",
+    "Six inherited strict Maker-peak contacts remain; the discrete screen is not continuous-clearance or physics evidence.",
+    "Left-side Maker-peak receiving relief is reconstructed geometry, not an original asymmetry claim."
+  ]
+}

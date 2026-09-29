@@ -11,6 +11,7 @@ const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murde
 // Local study selection is separate from the V9 production build selection.
 const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v32-form01') : null;
 const reviewModels = import.meta.env.DEV ? {
+  'v35-form01': '/assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.glb',
   'v34-form01': '/assets/models/whole-character-v34/attempt-form01/murderbird-whole-character-v34.glb',
   'v33-form06': '/assets/models/whole-character-v33/attempt-form06/murderbird-whole-character-v33.glb',
   'v32-form01': '/assets/models/whole-character-v32/attempt-form01/murderbird-whole-character-v32.glb',

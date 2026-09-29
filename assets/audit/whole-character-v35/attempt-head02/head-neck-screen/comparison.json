@@ -1,0 +1,144 @@
+{
+  "native": {
+    "path": "assets/models/whole-character-v35/attempt-head02/murderbird-whole-character-v35.blend",
+    "sha256": "eb2e121af642d0620f062da4c3ecf11d0fbce121fef1f62f29d9b2c53f537d94",
+    "bytes": 3441880,
+    "expectedSourceHashVerified": true
+  },
+  "baseline": {
+    "v34NativeSha256": "3f4c12983feea5e4d45f5609d749c1dfa78ecdafc34936d3e702ffa403fed716",
+    "headJawCapPoseCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "neckPoseCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "head02": {
+    "jawCapPoseCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "neckPoseCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "newNeckPairsVersusV34ByPose": {
+      "rest": [],
+      "maker-neck-jaw": [],
+      "attention": [],
+      "contact-neck": [],
+      "thrust-neck": [],
+      "yaw-minus": [],
+      "yaw-plus": []
+    },
+    "newNeckIdentityUnion": []
+  },
+  "head01Comparison": {
+    "nativeSha256": "5f7319fb656945f054781f5d515f036418a00abba17ab81490221dc945f6c6df",
+    "neckPoseCounts": [
+      5,
+      5,
+      5,
+      0,
+      4,
+      5,
+      5
+    ],
+    "introducedIdentityUnion": [
+      [
+        "V23 cervical 4 directional guard 2",
+        "V33 tapered throat cheek plate -1 0 0"
+      ],
+      [
+        "V23 cervical 4 directional guard 2",
+        "V33 tapered throat cheek plate 0 0 0"
+      ],
+      [
+        "V23 cervical 4 directional guard 3",
+        "V33 tapered throat cheek plate 0 0 0"
+      ],
+      [
+        "V23 cervical 4 directional guard 4",
+        "V33 tapered throat cheek plate 0 0 2"
+      ],
+      [
+        "V23 cervical 4 directional guard 4",
+        "V33 tapered throat cheek plate 1 0 0"
+      ],
+      [
+        "V23 cervical 4 directional guard 5",
+        "V33 tapered throat cheek plate 1 0 0"
+      ]
+    ],
+    "head02ResolvedHead01Witnesses": true
+  },
+  "throatBowAdjacent": {
+    "screenPath": "adjacent/screen.json",
+    "screenSha256": "f6c27777e3d19e6d018fa94cefb5786da3ba6efc9ac77f67765127794254ebda",
+    "countsByLiftM": [
+      {
+        "liftM": 0,
+        "strictPairCount": 0
+      },
+      {
+        "liftM": 0.085,
+        "strictPairCount": 0
+      },
+      {
+        "liftM": 0.175,
+        "strictPairCount": 0
+      }
+    ],
+    "allPairs": [
+      [],
+      [],
+      []
+    ],
+    "ownerPairsChecked": "18 head-owned V33 tapered throat cheek plates against 2 cranial-cover-owned V31 passive cranial load bows",
+    "interpretation": "The pair screen found no strict crossing among these 18+2 different mesh objects at rest. Both groups are parented to the same rigid owner (head), so cranial-cover local Z lifts at .085m/.175m did not move either group relative to the other; those two repeated samples provide no articulation coverage and are not evidence about the receiving lap motion.",
+    "owners": {
+      "cheekPlates": [
+        "head"
+      ],
+      "cranialLoadBows": [
+        "head"
+      ]
+    },
+    "adjudicationPath": "adjacent/owner-adjudication.json"
+  },
+  "executedSources": {
+    "head/executed-head-check.py": "26676f9ca20c471bda560b40b6ff2cff01226e1962fb816de3b0ee97b2931b8f",
+    "head/executed-strict-kernel.py": "b290574245203be09e4eb1e76dba44c1cb9c174b540b962bfef404d2424ee84a",
+    "neck/executed-screen-input.py": "324f44167b1812cc6014ffffd1422cf4eb57e4b96ee994131a79b05ccfb756f2",
+    "neck/results/executed-screen.py": "324f44167b1812cc6014ffffd1422cf4eb57e4b96ee994131a79b05ccfb756f2",
+    "adjacent/executed-throat-bow-check.py": "2224ebef50eaa3d6f5f3358daf49672dc35847dd842faaf633bc110c7de189b5"
+  },
+  "limits": [
+    "Discrete strict triangle intersections only; no continuous path or full containment proof.",
+    "Maker socket metadata/consumer alignment is not verified by these geometry screens; the corrected metadata remains unvalidated here.",
+    "No export/runtime/browser check performed."
+  ]
+}
