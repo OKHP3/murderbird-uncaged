@@ -1,0 +1,17 @@
+00:00.302  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v36/regional-studies/face-construction/build01.py", line 5, in <module>
+    shutil.copyfile(__file__,A/'executed-builder.py');src=R/'scripts/regions/whole-character-v36-face-construction.py';shutil.copyfile(src,A/'executed-face-construction.py');hp=R/'scripts/build-uncaged-alignment-v7.py';shutil.copyfile(hp,A/'executed-snapshot-helper.py');h=runpy.run_path(str(hp));helper=R/'scripts/regions/whole-character-v31-head-reconstruction.py';shutil.copyfile(helper,A/'executed-geometry-helper.py');bpy.ops.wm.open_mainfile(filepath=str(base));before=h['scene_snapshot']();mats={m.name:h['material_signature'](m) for m in bpy.data.materials};bpy.context.view_layer.update();module=runpy.run_path(str(A/'executed-face-construction.py'));result=module['apply']();after=h['scene_snapshot']();assert before['empties']==after['empties'];assert mats=={m.name:h['material_signature'](m) for m in bpy.data.materials};native=M/'murderbird-face-construction.blend';bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(native),check_existing=False);bpy.ops.wm.open_mainfile(filepath=str(native));assert h['scene_snapshot']()==after
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v36/regional-studies/face-construction/attempt01/executed-face-construction.py", line 67, in apply
+    for i,(a,b) in enumerate([(.025,.86),(.885,1.96),(1.985,3.125)]):install(f'V36 formed diagonal brow {side} {i}','head',receiver(side,a,b,0),description='Independent diagonal polygon envelope; finite formed brow, recessed original optic underneath')
+                                                                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v36/regional-studies/face-construction/attempt01/executed-face-construction.py", line 33, in install
+    vol=bm.calc_volume(signed=True);assert vol>0,name;bm.to_mesh(m);bm.free();o.data=m;o.modifiers.clear()
+                                                                              ^^^^^^
+TypeError: bpy_struct: item.attr = val: Object.data expected a Image type, not Mesh
+
+Error: script failed, file: 'assets/audit/whole-character-v36/regional-studies/face-construction/build01.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

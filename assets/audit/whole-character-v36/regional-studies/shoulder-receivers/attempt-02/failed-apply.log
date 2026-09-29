@@ -1,0 +1,3 @@
+Blender 5.2.1, attempt-02 pre-correction invocation exited 1.
+Cause: apply() return metadata referenced the previous attempt variable PLATES after the changed group had been expanded to RECEIVERS (six scapular plates plus two upper side guards). No native was saved and no render was produced in this failed invocation.
+The exact executed source is preserved as failed-apply-source.py. The follow-up source correction changes only the metadata key to enumerate RECEIVERS.

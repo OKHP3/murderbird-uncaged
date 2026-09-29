@@ -1,0 +1,321 @@
+{
+  "status": "FAIL limited foot movement fit: new interowner toe/guard contacts at rest and new ankle/instep conflicts on actual landing; no obvious detached links in viewed final native poses. Not whole-model/art acceptance.",
+  "native": {
+    "path": "assets/models/whole-character-v36/attempt-form01/murderbird-whole-character-v36.blend",
+    "sha256": "9b0072375fee116864954e882f5ed8ec023cf8d400783fb96947ce4c57bf151f"
+  },
+  "GLB": {
+    "path": "assets/models/whole-character-v36/attempt-form01/murderbird-whole-character-v36.glb",
+    "sha256": "565396fa9c43fb258821a8b18151b03032dd61ecfc004c59e39f5dffc3046263"
+  },
+  "baselineNativeSHA256": "d2c704ccf89f3f0e7dbeb3613dcdbdd964c4ba69991783783830803eecf59cb0",
+  "baselineGLBSHA256": "a9b6bd6d5cd3dcdfa52d42d4a33f8a4f09b3fa31f333c2cf814ba94de0788cd9",
+  "actualRuntimeStateSelection": {
+    "rest": "actual exported GLB rest",
+    "claw": "Advanced scrape phase .515873015873, left active digit curl, right support",
+    "landing": "Advanced jump phase .750000000000, stage landing, grounded; new states generated independently for V35 and V36"
+  },
+  "counts": [
+    {
+      "pose": "exported-rest",
+      "baselineStrictPairs": 148,
+      "candidateStrictPairs": 152,
+      "introducedPairs": 10,
+      "introducedInterownerPairs": 4,
+      "introducedSameownerPairs": 6,
+      "inheritedPairs": 142,
+      "resolvedPairs": 6,
+      "changedEvaluatedMeshesFiniteClosed": true,
+      "candidateDegenerateTrianglesLe1e14": [
+        {
+          "name": "Left metatarsus open passive truss",
+          "degenerateTrianglesLe1e14": 1
+        }
+      ],
+      "baselineDegenerateTrianglesLe1e14": [
+        {
+          "name": "Left metatarsus open passive truss",
+          "degenerateTrianglesLe1e14": 2
+        }
+      ],
+      "matrixInstallationMaxErrorM": 0.0,
+      "screenedMeshes": 162,
+      "eligiblePairCombinations": 7046
+    },
+    {
+      "pose": "advanced-claw-scrape",
+      "baselineStrictPairs": 149,
+      "candidateStrictPairs": 152,
+      "introducedPairs": 9,
+      "introducedInterownerPairs": 3,
+      "introducedSameownerPairs": 6,
+      "inheritedPairs": 143,
+      "resolvedPairs": 6,
+      "changedEvaluatedMeshesFiniteClosed": true,
+      "candidateDegenerateTrianglesLe1e14": [
+        {
+          "name": "Left metatarsus open passive truss",
+          "degenerateTrianglesLe1e14": 2
+        }
+      ],
+      "baselineDegenerateTrianglesLe1e14": [
+        {
+          "name": "Left metatarsus open passive truss",
+          "degenerateTrianglesLe1e14": 2
+        }
+      ],
+      "matrixInstallationMaxErrorM": 1.1920928955078125e-07,
+      "screenedMeshes": 162,
+      "eligiblePairCombinations": 7046
+    },
+    {
+      "pose": "advanced-jump-landing",
+      "baselineStrictPairs": 148,
+      "candidateStrictPairs": 157,
+      "introducedPairs": 15,
+      "introducedInterownerPairs": 9,
+      "introducedSameownerPairs": 6,
+      "inheritedPairs": 142,
+      "resolvedPairs": 6,
+      "changedEvaluatedMeshesFiniteClosed": true,
+      "candidateDegenerateTrianglesLe1e14": [],
+      "baselineDegenerateTrianglesLe1e14": [
+        {
+          "name": "Left metatarsus open passive truss",
+          "degenerateTrianglesLe1e14": 2
+        }
+      ],
+      "matrixInstallationMaxErrorM": 1.1920928955078125e-07,
+      "screenedMeshes": 162,
+      "eligiblePairCombinations": 7046
+    }
+  ],
+  "uniqueIntroducedIdentities": [
+    {
+      "a": "Digit inner link.004",
+      "b": "Left digit-3-proximal captive toe-bearing flanges",
+      "owners": [
+        "left-digit-3-proximal",
+        "left-digit-3-proximal"
+      ],
+      "sameOwner": true,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Digit inner link.010",
+      "b": "Right digit-3-proximal captive toe-bearing flanges",
+      "owners": [
+        "right-digit-3-proximal",
+        "right-digit-3-proximal"
+      ],
+      "sameOwner": true,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Toe hinge.001",
+      "b": "left digit 1 proximal dorsal guard",
+      "owners": [
+        "left-digit-1-distal",
+        "left-digit-1-proximal"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Toe hinge.003",
+      "b": "left digit 2 distal dorsal guard",
+      "owners": [
+        "left-digit-2-distal",
+        "left-digit-2-distal"
+      ],
+      "sameOwner": true,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Toe hinge.005",
+      "b": "left digit 3 proximal dorsal guard",
+      "owners": [
+        "left-digit-3-distal",
+        "left-digit-3-proximal"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "exported-rest",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Toe hinge.007",
+      "b": "right digit 1 proximal dorsal guard",
+      "owners": [
+        "right-digit-1-distal",
+        "right-digit-1-proximal"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Toe hinge.009",
+      "b": "right digit 2 distal dorsal guard",
+      "owners": [
+        "right-digit-2-distal",
+        "right-digit-2-distal"
+      ],
+      "sameOwner": true,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Toe hinge.011",
+      "b": "right digit 3 proximal dorsal guard",
+      "owners": [
+        "right-digit-3-distal",
+        "right-digit-3-proximal"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "left digit 2 distal dorsal guard",
+      "b": "left digit 2 tapered claw sheath",
+      "owners": [
+        "left-digit-2-distal",
+        "left-digit-2-distal"
+      ],
+      "sameOwner": true,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "right digit 2 distal dorsal guard",
+      "b": "right digit 2 tapered claw sheath",
+      "owners": [
+        "right-digit-2-distal",
+        "right-digit-2-distal"
+      ],
+      "sameOwner": true,
+      "poses": [
+        "exported-rest",
+        "advanced-claw-scrape",
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Left metatarsus open passive truss",
+      "b": "V25 left shin distal captive cheek -1",
+      "owners": [
+        "left-foot",
+        "left-shin"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Left metatarsus open passive truss",
+      "b": "V25 left shin distal captive cheek 1",
+      "owners": [
+        "left-foot",
+        "left-shin"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Right metatarsus open passive truss",
+      "b": "V25 right shin distal captive cheek -1",
+      "owners": [
+        "right-foot",
+        "right-shin"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "Right metatarsus open passive truss",
+      "b": "V25 right shin distal captive cheek 1",
+      "owners": [
+        "right-foot",
+        "right-shin"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "advanced-jump-landing"
+      ]
+    },
+    {
+      "a": "V25 right shin limited anterior wear guard",
+      "b": "right curved instep guard",
+      "owners": [
+        "right-shin",
+        "right-foot"
+      ],
+      "sameOwner": false,
+      "poses": [
+        "advanced-jump-landing"
+      ]
+    }
+  ],
+  "visualRead": {
+    "viewedActualFinalImages": [
+      "assets/audit/whole-character-v36/attempt-form01/foot-motion-screen/v36-exported-rest-feet.png",
+      "assets/audit/whole-character-v36/attempt-form01/foot-motion-screen/v36-advanced-claw-scrape-feet.png",
+      "assets/audit/whole-character-v36/attempt-form01/foot-motion-screen/v36-advanced-jump-landing-feet.png",
+      "assets/audit/whole-character-v36/attempt-form01/after-side.png"
+    ],
+    "finding": "Compact connected toe links/journals and ankle frame remain visible; no obvious isolated floating link or claw in rest/scrape/landing views. Counts and witnesses show material fit defects despite apparent continuity. Scrape close view crops the outboard right talon; rest/landing views show both feet.",
+    "mainNewMovingInterfaceConflicts": [
+      "Shifted distal Toe hinge.001/.005/.007/.011 cross corresponding digit1/3 proximal dorsal guards at rest; left digit3 clears in sampled scrape only.",
+      "Both Left/Right metatarsus open passive truss cross both respective V25 shin distal captive cheek -1/+1 in landing.",
+      "Right curved instep guard crosses V25 right shin limited anterior wear guard in landing."
+    ],
+    "sameOwnerDisposition": "Six introduced same-owner identities remain explicit. Shortened digit3 links cross original proximal bearing flanges; digit2 rigid hinge crosses its distal guard; digit2 shortened guard crosses shortened claw sheath. Rigid joined ownership does not itself establish a designed seat/weld or exemption; no pair suppressed."
+  },
+  "sourceModule": {
+    "path": "assets/audit/whole-character-v36/attempt-form01/executed-whole-character-v36-compact-feet.py",
+    "sha256": "cade48a05ff44f84506ae610497ab2d4cac96bf3a080453c18be480c4bef3393"
+  },
+  "method": "Existing strict edge-through-face kernel, 1e-7m plane and 1e-6 barycentric/edge margins. One actual witness per identity, no pair exemptions. Includes same-owner distinct meshes separately. Each model uses its own fresh actual-GLB matrices.",
+  "limits": [
+    "Three discrete states only; no swept/continuous collision, physics, containment, tangent/coplanar or within-mesh selfintersection claim.",
+    "Adjacent scope is meshes descended from feet/digits and shin owners; torso/thigh and procedural era hardware excluded.",
+    "Pair counts are identities, not penetration depth or independent defect counts.",
+    "Closed manifold finite evaluated meshes do not establish continuous clearance; tiny evaluated triangles at <=1e-14 square metres are recorded in detailed data, and vary with world-space float arithmetic. No topology repairs performed.",
+    "No new models, source geometry, application changes, or exports. Native/GLB bytes remain unchanged."
+  ]
+}

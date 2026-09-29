@@ -1,0 +1,18 @@
+{
+  "status": "PASS local build boundary, not deployment",
+  "revision": "46c7c8a3be0264d3667616b3c685154def70a402",
+  "workingTreeDirty": true,
+  "filesIncludingManifest": 134,
+  "payloadFiles": 133,
+  "hashAndByteErrors": [],
+  "candidateSourcesAuditPrivateAbsent": true,
+  "productionModel": "uncaged-alignment-v9",
+  "checks": [
+    "npm ci",
+    "npm run build",
+    "node --test tests/publication-boundary.test.mjs: 2 pass",
+    "node scripts/verify-publication.mjs"
+  ],
+  "warnings": "Existing optional fsevents and Vite large chunk notice; no dependency version change",
+  "manifestSha256": "9dc9f9243b73117ae79aadfd52d303f1ebde7cc61b29cad0de4450355ce98f10"
+}

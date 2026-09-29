@@ -1,0 +1,1699 @@
+{
+  "status": "Bounded read-only distinct-mesh pair comparison; not a clearance or art acceptance result",
+  "base": {
+    "path": "assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.blend",
+    "sha256": "d2c704ccf89f3f0e7dbeb3613dcdbdd964c4ba69991783783830803eecf59cb0"
+  },
+  "candidate": {
+    "path": "assets/models/whole-character-v36/regional-studies/shoulder-receivers/attempt-02/murderbird-v36-shoulder-receivers.blend",
+    "sha256": "ff6e2ea64e41ecfb33a9b8ac9a530ae8a28c8b0793a94e4b80c9e46f316a364f"
+  },
+  "changedReceivers": [
+    "V35 oblique thoracic side guard -1 0",
+    "V35 oblique thoracic side guard 1 0",
+    "V35 scapular receiving plate -1 0",
+    "V35 scapular receiving plate -1 1",
+    "V35 scapular receiving plate -1 2",
+    "V35 scapular receiving plate 1 0",
+    "V35 scapular receiving plate 1 1",
+    "V35 scapular receiving plate 1 2"
+  ],
+  "neighbors": "All meshes parented to left/right mantle, lower neck owners neck/cervical-mid-a, and the breast door return/annular seat/receiving-tab meshes parented to breastplate. Only changed-receiver vs listed-neighbor pairs tested.",
+  "poses": "Discrete rest; exact prior V35 maker-neck-jaw values; existing V34 closed-guard joint values; existing closed-short-shove joint values combined with prior V35 thrust-neck values. No continuous interpolation.",
+  "method": "Frozen strict edge-through-face kernel copied from the V34 shoulder body-screen: evaluated world triangles, BVH candidate pruning, plane epsilon 1e-7m, edge/barycentric margin 1e-6. Coplanar/tangent contacts and containment are not confirmed. All pair witnesses retained.",
+  "limits": [
+    "Only eight altered body-owned receivers against the named adjacent moving groups.",
+    "This is distinct-mesh strict crossing evidence; it does not test receiver intra-mesh self-intersections, full body clearance, contact seating, physical function or visual likeness.",
+    "Pose tuples are authored discrete screens; no live-browser or continuous-motion claim."
+  ],
+  "comparison": {
+    "base": {
+      "nativeSHA256": "d2c704ccf89f3f0e7dbeb3613dcdbdd964c4ba69991783783830803eecf59cb0",
+      "stage": "V35-baseline",
+      "poses": [
+        {
+          "pose": "rest",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0,
+            "right-mantle": 0,
+            "left-wing-shield": 0,
+            "right-wing-shield": 0
+          },
+          "neckTuple": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 0,
+          "strictObjectPairCount": 0,
+          "strictTrianglePairCount": 0,
+          "pairs": []
+        },
+        {
+          "pose": "maker-neck-jaw",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0,
+            "right-mantle": 0,
+            "left-wing-shield": 0,
+            "right-wing-shield": 0
+          },
+          "neckTuple": [
+            -0.14,
+            -0.45,
+            0.32,
+            0.32,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 0,
+          "strictObjectPairCount": 0,
+          "strictTrianglePairCount": 0,
+          "pairs": []
+        },
+        {
+          "pose": "guard",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0.065,
+            "right-mantle": -0.24,
+            "left-wing-shield": 0.18,
+            "right-wing-shield": 0.38
+          },
+          "neckTuple": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 0,
+          "strictObjectPairCount": 0,
+          "strictTrianglePairCount": 0,
+          "pairs": []
+        },
+        {
+          "pose": "thrust-short-shove",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0.07,
+            "right-mantle": -0.64,
+            "left-wing-shield": 0.18,
+            "right-wing-shield": 0.72
+          },
+          "neckTuple": [
+            -0.07,
+            0,
+            -0.035,
+            0,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 0,
+          "strictObjectPairCount": 0,
+          "strictTrianglePairCount": 0,
+          "pairs": []
+        }
+      ]
+    },
+    "candidate": {
+      "nativeSHA256": "ff6e2ea64e41ecfb33a9b8ac9a530ae8a28c8b0793a94e4b80c9e46f316a364f",
+      "stage": "V36-attempt02",
+      "poses": [
+        {
+          "pose": "rest",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0,
+            "right-mantle": 0,
+            "left-wing-shield": 0,
+            "right-wing-shield": 0
+          },
+          "neckTuple": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 7,
+          "strictObjectPairCount": 7,
+          "strictTrianglePairCount": 421,
+          "pairs": [
+            {
+              "receiver": "V35 oblique thoracic side guard -1 0",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 12,
+              "firstWitness": {
+                "triangleIndices": [
+                  613,
+                  178
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2698232,
+                    -0.1755391,
+                    1.1588848
+                  ],
+                  [
+                    -0.2732149,
+                    -0.1674404,
+                    1.1527472
+                  ],
+                  [
+                    -0.2728457,
+                    -0.1664165,
+                    1.1600655
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2608636,
+                    -0.1803511,
+                    1.1590372
+                  ],
+                  [
+                    -0.2721087,
+                    -0.1738156,
+                    1.1588874
+                  ],
+                  [
+                    -0.2727117,
+                    -0.1634939,
+                    1.1692891
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2702613,
+                  -0.1711761,
+                  1.1598185
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate -1 0",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 18,
+              "firstWitness": {
+                "triangleIndices": [
+                  1488,
+                  84
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2881054,
+                    -0.1697758,
+                    1.1626896
+                  ],
+                  [
+                    -0.2868205,
+                    -0.1722689,
+                    1.1632833
+                  ],
+                  [
+                    -0.2845778,
+                    -0.1763428,
+                    1.1642208
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2773318,
+                    -0.1797227,
+                    1.1616234
+                  ],
+                  [
+                    -0.2923282,
+                    -0.1607284,
+                    1.1716999
+                  ],
+                  [
+                    -0.2915799,
+                    -0.171438,
+                    1.161436
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2867906,
+                  -0.1717128,
+                  1.1641589
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate -1 1",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 81,
+              "firstWitness": {
+                "triangleIndices": [
+                  957,
+                  12
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2859955,
+                    -0.0536795,
+                    1.23025
+                  ],
+                  [
+                    -0.2890474,
+                    -0.0547461,
+                    1.2223393
+                  ],
+                  [
+                    -0.2895311,
+                    -0.0466215,
+                    1.2255591
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2913321,
+                    -0.0602884,
+                    1.2201365
+                  ],
+                  [
+                    -0.2846273,
+                    -0.0395228,
+                    1.2284977
+                  ],
+                  [
+                    -0.2884483,
+                    -0.0251756,
+                    1.2284977
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2881637,
+                  -0.0466723,
+                  1.22588
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 0",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 25,
+              "firstWitness": {
+                "triangleIndices": [
+                  1478,
+                  84
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2845798,
+                    -0.1763444,
+                    1.1642133
+                  ],
+                  [
+                    0.2869008,
+                    -0.1692948,
+                    1.1621891
+                  ],
+                  [
+                    0.2833085,
+                    -0.1708859,
+                    1.1618503
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2915799,
+                    -0.171438,
+                    1.161436
+                  ],
+                  [
+                    0.2923282,
+                    -0.1607284,
+                    1.1716999
+                  ],
+                  [
+                    0.2773318,
+                    -0.1797227,
+                    1.1616234
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2860048,
+                  -0.1714024,
+                  1.1638354
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 1",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 91,
+              "firstWitness": {
+                "triangleIndices": [
+                  1090,
+                  98
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2918916,
+                    -0.0559287,
+                    1.2141708
+                  ],
+                  [
+                    0.2951125,
+                    -0.048888,
+                    1.2098536
+                  ],
+                  [
+                    0.2946407,
+                    -0.0572154,
+                    1.2058386
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.293747,
+                    -0.0282574,
+                    1.2137672
+                  ],
+                  [
+                    0.2962052,
+                    -0.0659554,
+                    1.2061809
+                  ],
+                  [
+                    0.2895498,
+                    -0.0440919,
+                    1.2136699
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2935245,
+                  -0.0500561,
+                  1.2105802
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "V21 refined left shoulder journal bonnet",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 43,
+              "firstWitness": {
+                "triangleIndices": [
+                  1529,
+                  523
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.3008948,
+                    0.00517,
+                    1.185792
+                  ],
+                  [
+                    0.3060234,
+                    0.0040278,
+                    1.1820623
+                  ],
+                  [
+                    0.3068375,
+                    0.0022933,
+                    1.177213
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3003328,
+                    0.0054679,
+                    1.1847188
+                  ],
+                  [
+                    0.3072044,
+                    0.0008458,
+                    1.173973
+                  ],
+                  [
+                    0.3091686,
+                    0.0054679,
+                    1.1847188
+                  ]
+                ],
+                "centroidWorld": [
+                  0.3050769,
+                  0.0038788,
+                  1.1814131
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 151,
+              "firstWitness": {
+                "triangleIndices": [
+                  745,
+                  136
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2963099,
+                    0.0159782,
+                    1.2096249
+                  ],
+                  [
+                    0.2957473,
+                    0.0161247,
+                    1.2137045
+                  ],
+                  [
+                    0.2952836,
+                    0.0182684,
+                    1.2144132
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3094899,
+                    0.0132589,
+                    1.2070647
+                  ],
+                  [
+                    0.2937612,
+                    0.0040764,
+                    1.2155644
+                  ],
+                  [
+                    0.2947733,
+                    0.0288546,
+                    1.2136983
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2975609,
+                  0.0160935,
+                  1.212345
+                ]
+              }
+            }
+          ],
+          "inheritedPairIdentities": [],
+          "introducedPairIdentities": [
+            [
+              "V21 refined left shoulder journal bonnet",
+              "V35 scapular receiving plate 1 2"
+            ],
+            [
+              "V35 oblique thoracic side guard -1 0",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate -1 0",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate -1 1",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 0",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 1",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 2",
+              "left oblique shoulder saddle v4"
+            ]
+          ],
+          "resolvedPairIdentities": []
+        },
+        {
+          "pose": "maker-neck-jaw",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0,
+            "right-mantle": 0,
+            "left-wing-shield": 0,
+            "right-wing-shield": 0
+          },
+          "neckTuple": [
+            -0.14,
+            -0.45,
+            0.32,
+            0.32,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 7,
+          "strictObjectPairCount": 7,
+          "strictTrianglePairCount": 421,
+          "pairs": [
+            {
+              "receiver": "V35 oblique thoracic side guard -1 0",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 12,
+              "firstWitness": {
+                "triangleIndices": [
+                  613,
+                  178
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2698232,
+                    -0.1755391,
+                    1.1588848
+                  ],
+                  [
+                    -0.2732149,
+                    -0.1674404,
+                    1.1527472
+                  ],
+                  [
+                    -0.2728457,
+                    -0.1664165,
+                    1.1600655
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2608636,
+                    -0.1803511,
+                    1.1590372
+                  ],
+                  [
+                    -0.2721087,
+                    -0.1738156,
+                    1.1588874
+                  ],
+                  [
+                    -0.2727117,
+                    -0.1634939,
+                    1.1692891
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2702613,
+                  -0.1711761,
+                  1.1598185
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate -1 0",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 18,
+              "firstWitness": {
+                "triangleIndices": [
+                  1488,
+                  84
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2881054,
+                    -0.1697758,
+                    1.1626896
+                  ],
+                  [
+                    -0.2868205,
+                    -0.1722689,
+                    1.1632833
+                  ],
+                  [
+                    -0.2845778,
+                    -0.1763428,
+                    1.1642208
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2773318,
+                    -0.1797227,
+                    1.1616234
+                  ],
+                  [
+                    -0.2923282,
+                    -0.1607284,
+                    1.1716999
+                  ],
+                  [
+                    -0.2915799,
+                    -0.171438,
+                    1.161436
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2867906,
+                  -0.1717128,
+                  1.1641589
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate -1 1",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 81,
+              "firstWitness": {
+                "triangleIndices": [
+                  957,
+                  12
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2859955,
+                    -0.0536795,
+                    1.23025
+                  ],
+                  [
+                    -0.2890474,
+                    -0.0547461,
+                    1.2223393
+                  ],
+                  [
+                    -0.2895311,
+                    -0.0466215,
+                    1.2255591
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2913321,
+                    -0.0602884,
+                    1.2201365
+                  ],
+                  [
+                    -0.2846273,
+                    -0.0395228,
+                    1.2284977
+                  ],
+                  [
+                    -0.2884483,
+                    -0.0251756,
+                    1.2284977
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2881637,
+                  -0.0466723,
+                  1.22588
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 0",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 25,
+              "firstWitness": {
+                "triangleIndices": [
+                  1478,
+                  84
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2845798,
+                    -0.1763444,
+                    1.1642133
+                  ],
+                  [
+                    0.2869008,
+                    -0.1692948,
+                    1.1621891
+                  ],
+                  [
+                    0.2833085,
+                    -0.1708859,
+                    1.1618503
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2915799,
+                    -0.171438,
+                    1.161436
+                  ],
+                  [
+                    0.2923282,
+                    -0.1607284,
+                    1.1716999
+                  ],
+                  [
+                    0.2773318,
+                    -0.1797227,
+                    1.1616234
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2860048,
+                  -0.1714024,
+                  1.1638354
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 1",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 91,
+              "firstWitness": {
+                "triangleIndices": [
+                  1090,
+                  98
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2918916,
+                    -0.0559287,
+                    1.2141708
+                  ],
+                  [
+                    0.2951125,
+                    -0.048888,
+                    1.2098536
+                  ],
+                  [
+                    0.2946407,
+                    -0.0572154,
+                    1.2058386
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.293747,
+                    -0.0282574,
+                    1.2137672
+                  ],
+                  [
+                    0.2962052,
+                    -0.0659554,
+                    1.2061809
+                  ],
+                  [
+                    0.2895498,
+                    -0.0440919,
+                    1.2136699
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2935245,
+                  -0.0500561,
+                  1.2105802
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "V21 refined left shoulder journal bonnet",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 43,
+              "firstWitness": {
+                "triangleIndices": [
+                  1529,
+                  523
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.3008948,
+                    0.00517,
+                    1.185792
+                  ],
+                  [
+                    0.3060234,
+                    0.0040278,
+                    1.1820623
+                  ],
+                  [
+                    0.3068375,
+                    0.0022933,
+                    1.177213
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3003328,
+                    0.0054679,
+                    1.1847188
+                  ],
+                  [
+                    0.3072044,
+                    0.0008458,
+                    1.173973
+                  ],
+                  [
+                    0.3091686,
+                    0.0054679,
+                    1.1847188
+                  ]
+                ],
+                "centroidWorld": [
+                  0.3050769,
+                  0.0038788,
+                  1.1814131
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 151,
+              "firstWitness": {
+                "triangleIndices": [
+                  745,
+                  136
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2963099,
+                    0.0159782,
+                    1.2096249
+                  ],
+                  [
+                    0.2957473,
+                    0.0161247,
+                    1.2137045
+                  ],
+                  [
+                    0.2952836,
+                    0.0182684,
+                    1.2144132
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3094899,
+                    0.0132589,
+                    1.2070647
+                  ],
+                  [
+                    0.2937612,
+                    0.0040764,
+                    1.2155644
+                  ],
+                  [
+                    0.2947733,
+                    0.0288546,
+                    1.2136983
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2975609,
+                  0.0160935,
+                  1.212345
+                ]
+              }
+            }
+          ],
+          "inheritedPairIdentities": [],
+          "introducedPairIdentities": [
+            [
+              "V21 refined left shoulder journal bonnet",
+              "V35 scapular receiving plate 1 2"
+            ],
+            [
+              "V35 oblique thoracic side guard -1 0",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate -1 0",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate -1 1",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 0",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 1",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 2",
+              "left oblique shoulder saddle v4"
+            ]
+          ],
+          "resolvedPairIdentities": []
+        },
+        {
+          "pose": "guard",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0.065,
+            "right-mantle": -0.24,
+            "left-wing-shield": 0.18,
+            "right-wing-shield": 0.38
+          },
+          "neckTuple": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 6,
+          "strictObjectPairCount": 6,
+          "strictTrianglePairCount": 444,
+          "pairs": [
+            {
+              "receiver": "V35 oblique thoracic side guard 1 0",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 40,
+              "firstWitness": {
+                "triangleIndices": [
+                  1233,
+                  179
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2777668,
+                    -0.1666726,
+                    1.152305
+                  ],
+                  [
+                    0.2800324,
+                    -0.1590272,
+                    1.1545759
+                  ],
+                  [
+                    0.2761394,
+                    -0.1581559,
+                    1.1537868
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2721087,
+                    -0.1745897,
+                    1.1438462
+                  ],
+                  [
+                    0.2727117,
+                    -0.1649654,
+                    1.1548963
+                  ],
+                  [
+                    0.2844535,
+                    -0.1569754,
+                    1.1552639
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2772021,
+                  -0.1633977,
+                  1.1524457
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate -1 0",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 43,
+              "firstWitness": {
+                "triangleIndices": [
+                  1507,
+                  243
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2602719,
+                    -0.164867,
+                    1.2212803
+                  ],
+                  [
+                    -0.2549767,
+                    -0.1711353,
+                    1.2242458
+                  ],
+                  [
+                    -0.249633,
+                    -0.1715653,
+                    1.2229277
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2668364,
+                    -0.1619632,
+                    1.2266496
+                  ],
+                  [
+                    -0.2505684,
+                    -0.1741226,
+                    1.2163423
+                  ],
+                  [
+                    -0.261801,
+                    -0.1567073,
+                    1.2226965
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2573479,
+                  -0.1667268,
+                  1.2223572
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate -1 1",
+              "neighbor": "right oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "right-mantle"
+              ],
+              "strictTrianglePairCount": 24,
+              "firstWitness": {
+                "triangleIndices": [
+                  1490,
+                  103
+                ],
+                "changedTriangleWorld": [
+                  [
+                    -0.2874381,
+                    -0.0570992,
+                    1.2360681
+                  ],
+                  [
+                    -0.2871583,
+                    -0.0506418,
+                    1.2399193
+                  ],
+                  [
+                    -0.2859963,
+                    -0.0446336,
+                    1.2424642
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    -0.2870333,
+                    -0.0616686,
+                    1.2373646
+                  ],
+                  [
+                    -0.2895498,
+                    -0.0235515,
+                    1.2356013
+                  ],
+                  [
+                    -0.2831733,
+                    -0.0381455,
+                    1.2393912
+                  ]
+                ],
+                "centroidWorld": [
+                  -0.2867249,
+                  -0.0459567,
+                  1.2384682
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 1",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 127,
+              "firstWitness": {
+                "triangleIndices": [
+                  1089,
+                  8
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2923563,
+                    -0.0477017,
+                    1.2177912
+                  ],
+                  [
+                    0.2951125,
+                    -0.048888,
+                    1.2098536
+                  ],
+                  [
+                    0.2918916,
+                    -0.0559287,
+                    1.2141708
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2976838,
+                    -0.0499389,
+                    1.2133386
+                  ],
+                  [
+                    0.2884483,
+                    -0.0307851,
+                    1.2229643
+                  ],
+                  [
+                    0.2913321,
+                    -0.0652807,
+                    1.21234
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2928041,
+                  -0.0497539,
+                  1.2150764
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "V21 refined left shoulder journal bonnet",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 68,
+              "firstWitness": {
+                "triangleIndices": [
+                  1515,
+                  470
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.3022113,
+                    0.0128461,
+                    1.2032323
+                  ],
+                  [
+                    0.3009692,
+                    0.0053467,
+                    1.1862578
+                  ],
+                  [
+                    0.298241,
+                    0.0113123,
+                    1.2000945
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2953355,
+                    0.0128467,
+                    1.2013363
+                  ],
+                  [
+                    0.293439,
+                    0.0073783,
+                    1.1916834
+                  ],
+                  [
+                    0.3022993,
+                    0.0073783,
+                    1.1916834
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2987492,
+                  0.0095181,
+                  1.1957146
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 142,
+              "firstWitness": {
+                "triangleIndices": [
+                  745,
+                  136
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2963099,
+                    0.0159782,
+                    1.2096249
+                  ],
+                  [
+                    0.2957473,
+                    0.0161247,
+                    1.2137045
+                  ],
+                  [
+                    0.2952836,
+                    0.0182684,
+                    1.2144132
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3094899,
+                    0.0089604,
+                    1.2040731
+                  ],
+                  [
+                    0.2937612,
+                    -0.0007548,
+                    1.2119583
+                  ],
+                  [
+                    0.2947733,
+                    0.0240923,
+                    1.2117056
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2975609,
+                  0.0137782,
+                  1.2109133
+                ]
+              }
+            }
+          ],
+          "inheritedPairIdentities": [],
+          "introducedPairIdentities": [
+            [
+              "V21 refined left shoulder journal bonnet",
+              "V35 scapular receiving plate 1 2"
+            ],
+            [
+              "V35 oblique thoracic side guard 1 0",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate -1 0",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate -1 1",
+              "right oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 1",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 2",
+              "left oblique shoulder saddle v4"
+            ]
+          ],
+          "resolvedPairIdentities": []
+        },
+        {
+          "pose": "thrust-short-shove",
+          "breastAndWingLocalXRad": {
+            "breastplate": 0,
+            "left-mantle": 0.07,
+            "right-mantle": -0.64,
+            "left-wing-shield": 0.18,
+            "right-wing-shield": 0.72
+          },
+          "neckTuple": [
+            -0.07,
+            0,
+            -0.035,
+            0,
+            0
+          ],
+          "changedReceiverCount": 8,
+          "neighborMeshCount": 141,
+          "bvhCandidateObjectPairCount": 5,
+          "strictObjectPairCount": 5,
+          "strictTrianglePairCount": 392,
+          "pairs": [
+            {
+              "receiver": "V35 oblique thoracic side guard 1 0",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 39,
+              "firstWitness": {
+                "triangleIndices": [
+                  1233,
+                  185
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2777668,
+                    -0.1666726,
+                    1.152305
+                  ],
+                  [
+                    0.2800324,
+                    -0.1590272,
+                    1.1545759
+                  ],
+                  [
+                    0.2761394,
+                    -0.1581559,
+                    1.1537868
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2844535,
+                    -0.1570518,
+                    1.1541933
+                  ],
+                  [
+                    0.2727117,
+                    -0.1650398,
+                    1.1537857
+                  ],
+                  [
+                    0.2856728,
+                    -0.1474351,
+                    1.1652603
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2794628,
+                  -0.1588971,
+                  1.1556512
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 0",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 16,
+              "firstWitness": {
+                "triangleIndices": [
+                  1406,
+                  84
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2871801,
+                    -0.1716544,
+                    1.14464
+                  ],
+                  [
+                    0.2887302,
+                    -0.1722351,
+                    1.145154
+                  ],
+                  [
+                    0.2908276,
+                    -0.1729429,
+                    1.1458235
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2915799,
+                    -0.1724152,
+                    1.1453961
+                  ],
+                  [
+                    0.2923282,
+                    -0.1624497,
+                    1.156384
+                  ],
+                  [
+                    0.2773318,
+                    -0.1806927,
+                    1.1450037
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2879963,
+                  -0.172065,
+                  1.147067
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 1",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 126,
+              "firstWitness": {
+                "triangleIndices": [
+                  1089,
+                  8
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2923563,
+                    -0.0477017,
+                    1.2177912
+                  ],
+                  [
+                    0.2951125,
+                    -0.048888,
+                    1.2098536
+                  ],
+                  [
+                    0.2918916,
+                    -0.0559287,
+                    1.2141708
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.2976838,
+                    -0.0503069,
+                    1.2128024
+                  ],
+                  [
+                    0.2884483,
+                    -0.0312015,
+                    1.2225237
+                  ],
+                  [
+                    0.2913321,
+                    -0.0656435,
+                    1.211727
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2928041,
+                  -0.0499451,
+                  1.2148116
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "V21 refined left shoulder journal bonnet",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 68,
+              "firstWitness": {
+                "triangleIndices": [
+                  273,
+                  518
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.3023858,
+                    0.0064194,
+                    1.2042838
+                  ],
+                  [
+                    0.3036674,
+                    0.0093668,
+                    1.1952579
+                  ],
+                  [
+                    0.3030544,
+                    0.0107881,
+                    1.1985302
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3042232,
+                    0.0125378,
+                    1.2011142
+                  ],
+                  [
+                    0.3022993,
+                    0.0071178,
+                    1.191434
+                  ],
+                  [
+                    0.3111631,
+                    0.0071178,
+                    1.191434
+                  ]
+                ],
+                "centroidWorld": [
+                  0.3044656,
+                  0.0088913,
+                  1.1970091
+                ]
+              }
+            },
+            {
+              "receiver": "V35 scapular receiving plate 1 2",
+              "neighbor": "left oblique shoulder saddle v4",
+              "owners": [
+                "body",
+                "left-mantle"
+              ],
+              "strictTrianglePairCount": 143,
+              "firstWitness": {
+                "triangleIndices": [
+                  745,
+                  136
+                ],
+                "changedTriangleWorld": [
+                  [
+                    0.2963099,
+                    0.0159782,
+                    1.2096249
+                  ],
+                  [
+                    0.2957473,
+                    0.0161247,
+                    1.2137045
+                  ],
+                  [
+                    0.2952836,
+                    0.0182684,
+                    1.2144132
+                  ]
+                ],
+                "neighborTriangleWorld": [
+                  [
+                    0.3094899,
+                    0.008638,
+                    1.2038314
+                  ],
+                  [
+                    0.2937612,
+                    -0.0011165,
+                    1.211668
+                  ],
+                  [
+                    0.2947733,
+                    0.0237315,
+                    1.2115395
+                  ]
+                ],
+                "centroidWorld": [
+                  0.2975609,
+                  0.013604,
+                  1.2107968
+                ]
+              }
+            }
+          ],
+          "inheritedPairIdentities": [],
+          "introducedPairIdentities": [
+            [
+              "V21 refined left shoulder journal bonnet",
+              "V35 scapular receiving plate 1 2"
+            ],
+            [
+              "V35 oblique thoracic side guard 1 0",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 0",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 1",
+              "left oblique shoulder saddle v4"
+            ],
+            [
+              "V35 scapular receiving plate 1 2",
+              "left oblique shoulder saddle v4"
+            ]
+          ],
+          "resolvedPairIdentities": []
+        }
+      ]
+    }
+  },
+  "inputHashesVerified": true,
+  "executedScriptSHA256": "d28f7e5ed9a7c7aca19d38d0aa1c030952ee99973b718ce225d11a0d4c995d97"
+}

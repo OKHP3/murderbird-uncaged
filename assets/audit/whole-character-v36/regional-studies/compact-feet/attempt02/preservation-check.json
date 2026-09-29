@@ -1,0 +1,259 @@
+{
+  "status": "passed bounded source-to-candidate preservation and leg attachment checks",
+  "sourceNative": {
+    "path": "assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.blend",
+    "sha256": "d2c704ccf89f3f0e7dbeb3613dcdbdd964c4ba69991783783830803eecf59cb0"
+  },
+  "regionalNative": {
+    "path": "assets/models/whole-character-v36/regional-studies/compact-feet/attempt02/murderbird-whole-character-v36-compact-feet.blend",
+    "sha256": "49ef0c89d1d8941a0b75170daf2deca0e8fe0e6ce9e8f5a05c7b4641ddab1537",
+    "bytes": 3816231
+  },
+  "objects": {
+    "source": 1201,
+    "candidate": 1201,
+    "added": [],
+    "removed": [],
+    "actualChangedExactlyDeclared": true,
+    "changedNodes": [
+      "left-digit-1-distal",
+      "left-digit-2-distal",
+      "left-digit-3-distal",
+      "right-digit-1-distal",
+      "right-digit-2-distal",
+      "right-digit-3-distal"
+    ],
+    "changedFootMeshes": 52,
+    "actualChangedObjects": 58
+  },
+  "rig": {
+    "ankleNodesUnchanged": true,
+    "toeRootNodesUnchanged": true,
+    "proximalNodesUnchanged": true,
+    "distalNodesChanged": [
+      "left-digit-1-distal",
+      "left-digit-2-distal",
+      "left-digit-3-distal",
+      "right-digit-1-distal",
+      "right-digit-2-distal",
+      "right-digit-3-distal"
+    ],
+    "onlyLocalTranslationYChanged": true
+  },
+  "makerAttachment": {
+    "mechanismLayoutV1Exact": true,
+    "legLocalPoint": [
+      0.065,
+      0.015,
+      0.045
+    ],
+    "ankleReceivingMeshesExact": [
+      "V21 left foot bearing receiver yoke",
+      "V21 right foot bearing receiver yoke",
+      "left articulated bearing core.002",
+      "right articulated bearing core.002",
+      "left open stepped bearing race -1.002",
+      "left open stepped bearing race 1.002",
+      "right open stepped bearing race -1.002",
+      "right open stepped bearing race 1.002"
+    ],
+    "surfacePlacementChanged": false,
+    "scope": "The local Maker attachment contract and ankle bearing/core/yoke surfaces are byte-equivalent in mesh data and world placement. Baseline actual GLTFLoader triangle query places the declared point 8.6mm from the passive bearing core. This verifies inherited placement and receiver preservation only, not contact, force, owner acceptance, or new-runtime seating.",
+    "actualRuntimeWitness": {
+      "path": "assets/audit/whole-character-v36/regional-studies/compact-feet/attempt02/maker-socket-witness.json",
+      "sourceRuntimeGLBSHA256": "a9b6bd6d5cd3dcdfa52d42d4a33f8a4f09b3fa31f333c2cf814ba94de0788cd9",
+      "nearestMesh": "left_articulated_bearing_core002",
+      "baselineDistanceM": 0.008600773811340334,
+      "interpretation": "Measured actual V35 GLTFLoader triangles for the unchanged owner-local Maker point. The candidate preserves the same receiver mesh and world placement exactly; no attempt02 runtime export was produced."
+    }
+  },
+  "bearings": {
+    "digitBearingMeshCount": 24,
+    "allLocalGeometryAndMaterialsExact": true,
+    "distalBearingWorldPlacementFollowsMovedAxis": true
+  },
+  "restFootRegionLowestZBeforeAfterM": {
+    "left": [
+      -0.022706806659698486,
+      -0.022706806659698486
+    ],
+    "right": [
+      -0.022706806659698486,
+      -0.022706806659698486
+    ]
+  },
+  "digitEndpointChecks": [
+    {
+      "proximalFrame": "Digit inner link",
+      "distalBearing": "Left digit-1-distal captive toe-bearing flanges",
+      "proximalFrameWorldYBoundsM": [
+        -0.2640278935432434,
+        -0.1400422751903534
+      ],
+      "distalBearingWorldYBoundsM": [
+        -0.2991639971733093,
+        -0.21785204112529755
+      ],
+      "projectedYOverlapM": 0.04617585241794586,
+      "interpretation": "bounding-interval overlap only; not a full surface-seat or clearance proof"
+    },
+    {
+      "proximalFrame": "Digit inner link.002",
+      "distalBearing": "Left digit-2-distal captive toe-bearing flanges",
+      "proximalFrameWorldYBoundsM": [
+        -0.28206491470336914,
+        -0.14416161179542542
+      ],
+      "distalBearingWorldYBoundsM": [
+        -0.32054802775382996,
+        -0.2392360270023346
+      ],
+      "projectedYOverlapM": 0.042828887701034546,
+      "interpretation": "bounding-interval overlap only; not a full surface-seat or clearance proof"
+    },
+    {
+      "proximalFrame": "Digit inner link.004",
+      "distalBearing": "Left digit-3-distal captive toe-bearing flanges",
+      "proximalFrameWorldYBoundsM": [
+        -0.2553325891494751,
+        -0.13904696702957153
+      ],
+      "distalBearingWorldYBoundsM": [
+        -0.2896599769592285,
+        -0.20834797620773315
+      ],
+      "projectedYOverlapM": 0.04698461294174194,
+      "interpretation": "bounding-interval overlap only; not a full surface-seat or clearance proof"
+    },
+    {
+      "proximalFrame": "Digit inner link.006",
+      "distalBearing": "Right digit-1-distal captive toe-bearing flanges",
+      "proximalFrameWorldYBoundsM": [
+        -0.264027863740921,
+        -0.1400422751903534
+      ],
+      "distalBearingWorldYBoundsM": [
+        -0.2991639971733093,
+        -0.21785204112529755
+      ],
+      "projectedYOverlapM": 0.046175822615623474,
+      "interpretation": "bounding-interval overlap only; not a full surface-seat or clearance proof"
+    },
+    {
+      "proximalFrame": "Digit inner link.008",
+      "distalBearing": "Right digit-2-distal captive toe-bearing flanges",
+      "proximalFrameWorldYBoundsM": [
+        -0.28206491470336914,
+        -0.14416161179542542
+      ],
+      "distalBearingWorldYBoundsM": [
+        -0.32054802775382996,
+        -0.2392360270023346
+      ],
+      "projectedYOverlapM": 0.042828887701034546,
+      "interpretation": "bounding-interval overlap only; not a full surface-seat or clearance proof"
+    },
+    {
+      "proximalFrame": "Digit inner link.010",
+      "distalBearing": "Right digit-3-distal captive toe-bearing flanges",
+      "proximalFrameWorldYBoundsM": [
+        -0.2553325891494751,
+        -0.13904696702957153
+      ],
+      "distalBearingWorldYBoundsM": [
+        -0.2896599769592285,
+        -0.20834797620773315
+      ],
+      "projectedYOverlapM": 0.04698461294174194,
+      "interpretation": "bounding-interval overlap only; not a full surface-seat or clearance proof"
+    }
+  ],
+  "limits": [
+    "Endpoint values are projected Y-bounds overlap, not a full 3D surface-seat/collision test.",
+    "No pose sweep, continuous clearance, balance, force, or engineering validation was run.",
+    "The preserved rest geometry minimum is below the nominal zero plane; no physical floor-contact claim is made."
+  ],
+  "footRestEnvelope": {
+    "source": {
+      "left": {
+        "worldBoundsM": [
+          [
+            0.10982727259397507,
+            0.5140143632888794
+          ],
+          [
+            -0.5497494339942932,
+            0.23346880078315735
+          ],
+          [
+            -0.022706806659698486,
+            0.3230000138282776
+          ]
+        ],
+        "foreAftYSpanM": 0.7832182347774506,
+        "widthXSpanM": 0.4041870906949043
+      },
+      "right": {
+        "worldBoundsM": [
+          [
+            -0.5002859830856323,
+            -0.0960988774895668
+          ],
+          [
+            -0.5497494339942932,
+            0.23346880078315735
+          ],
+          [
+            -0.022706806659698486,
+            0.3230000138282776
+          ]
+        ],
+        "foreAftYSpanM": 0.7832182347774506,
+        "widthXSpanM": 0.4041871055960655
+      }
+    },
+    "candidate": {
+      "left": {
+        "worldBoundsM": [
+          [
+            0.10982727259397507,
+            0.5140143632888794
+          ],
+          [
+            -0.4549711346626282,
+            0.15919065475463867
+          ],
+          [
+            -0.022706806659698486,
+            0.3230000138282776
+          ]
+        ],
+        "foreAftYSpanM": 0.6141617894172668,
+        "widthXSpanM": 0.4041870906949043
+      },
+      "right": {
+        "worldBoundsM": [
+          [
+            -0.5002859830856323,
+            -0.0960988774895668
+          ],
+          [
+            -0.4549711346626282,
+            0.15919065475463867
+          ],
+          [
+            -0.022706806659698486,
+            0.3230000138282776
+          ]
+        ],
+        "foreAftYSpanM": 0.6141617894172668,
+        "widthXSpanM": 0.4041871055960655
+      }
+    },
+    "foreAftSpanReductionFraction": {
+      "left": 0.215848454304975,
+      "right": 0.215848454304975
+    },
+    "interpretation": "Rest mesh envelope reduction measured in native world Y; not a balance, clearance, or gait result."
+  }
+}
