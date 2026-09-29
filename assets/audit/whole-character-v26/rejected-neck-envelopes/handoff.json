@@ -1,0 +1,160 @@
+{
+  "status": "REJECTED / HOLD / NOT IN INTEGRATED MODEL",
+  "baseSha256": "b1b9cc889940b32e25e3a0b30a4fd5b98a7025ad0af5076873f35fda908911f6",
+  "coarse": {
+    "directory": "coarse01-ready",
+    "sourceSha256": "c55e6c6cd02767c3fd91d28028bbf21ef55b98547595349213d2b2b08886b5e4",
+    "nativeSha256": "e641329185ced4caffa56f1c5b445928b1884aa23c8921c739cc1938ee8e1b15"
+  },
+  "correction": {
+    "directory": "correction02",
+    "sourceSha256": "daf98cfc355cb8177e66865f3f2aa3bd6bdf0dd6ce3aa81cb80a699d2d90b4dc",
+    "nativeSha256": "2aadcdb14fe11bffeebcc85ffa662cb7a44689faa26cc81718b9b54413c17b95"
+  },
+  "sevenPosePartitions": {
+    "baseline": [
+      {
+        "pose": "rest",
+        "owned-neck-or-breast": 38,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 6
+      },
+      {
+        "pose": "maker-neck-jaw",
+        "owned-neck-or-breast": 35,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 4
+      },
+      {
+        "pose": "attention",
+        "owned-neck-or-breast": 37,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 3
+      },
+      {
+        "pose": "contact-neck",
+        "owned-neck-or-breast": 31,
+        "protected-head-neighbor": 10,
+        "protected-body-neighbor": 2
+      },
+      {
+        "pose": "thrust-neck",
+        "owned-neck-or-breast": 30,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 6
+      },
+      {
+        "pose": "yaw-minus",
+        "owned-neck-or-breast": 38,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 2
+      },
+      {
+        "pose": "yaw-plus",
+        "owned-neck-or-breast": 38,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 2
+      }
+    ],
+    "coarse": [
+      {
+        "pose": "rest",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 4,
+        "protected-body-neighbor": 0
+      },
+      {
+        "pose": "maker-neck-jaw",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 4,
+        "protected-body-neighbor": 0
+      },
+      {
+        "pose": "attention",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 4,
+        "protected-body-neighbor": 0
+      },
+      {
+        "pose": "contact-neck",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 7,
+        "protected-body-neighbor": 0
+      },
+      {
+        "pose": "thrust-neck",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 4,
+        "protected-body-neighbor": 0
+      },
+      {
+        "pose": "yaw-minus",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 4,
+        "protected-body-neighbor": 0
+      },
+      {
+        "pose": "yaw-plus",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 4,
+        "protected-body-neighbor": 0
+      }
+    ],
+    "correction": [
+      {
+        "pose": "rest",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 6,
+        "protected-body-neighbor": 2
+      },
+      {
+        "pose": "maker-neck-jaw",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 6,
+        "protected-body-neighbor": 3
+      },
+      {
+        "pose": "attention",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 6,
+        "protected-body-neighbor": 4
+      },
+      {
+        "pose": "contact-neck",
+        "owned-neck-or-breast": 9,
+        "protected-head-neighbor": 8,
+        "protected-body-neighbor": 2
+      },
+      {
+        "pose": "thrust-neck",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 6,
+        "protected-body-neighbor": 2
+      },
+      {
+        "pose": "yaw-minus",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 6,
+        "protected-body-neighbor": 3
+      },
+      {
+        "pose": "yaw-plus",
+        "owned-neck-or-breast": 0,
+        "protected-head-neighbor": 6,
+        "protected-body-neighbor": 3
+      }
+    ]
+  },
+  "correctionOwnedFailures": "Nine contact front-sector (2,3,4) pairs across all three adjacent hinges. Rotated coverage reaches past the finite spherical mating portions into the short core transitions; concentric mating radii do not protect the transition core. Exact strict witness triangles/bounds preserved in correction02/contact-causal-witnesses.json.",
+  "appearance": "Coarse is disconnected narrow bands. Correction is continuous but stacked cylindrical/squared bands flatten the curved layered reference neck. Both fail the appearance gate.",
+  "checks": {
+    "finiteClosedPositiveSolids": 47,
+    "namedRestNodesExact": 54,
+    "protectedOutsideMeshesExact": 642,
+    "materialsExact": true,
+    "nativeSaveReopenExact": true,
+    "headSourceComposeOutsideExact": true,
+    "sampledPoses": 32
+  },
+  "limits": "Crossowner strict triangle witnesses and qualitative rendered review; not continuous collision or physics proof. Head and protected-body neighbors are separate inherited limitations."
+}

@@ -1,0 +1,12 @@
+00:00.300  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v25/attempt-form01/murderbird-whole-character-v25.blend"
+Traceback (most recent call last):
+  File "/tmp/v26-neck-envelopes/build.py", line 9, in <module>
+    module=runpy.run_path(str(OUT/'executed-region.py'));result=module['apply']();after=h['scene_snapshot']();changed=set(result['changedMeshes']);assert before['empties']==after['empties'];assert before['curves']==after['curves'];assert all(before['meshes'][n]==after['meshes'][n] for n in before['meshes'] if n not in changed);assert mats=={m.name:h['material_signature'](m) for m in bpy.data.materials}
+                                                                ~~~~~~~~~~~~~~~^^
+  File "/tmp/v26-neck-envelopes/coarse01/executed-region.py", line 124, in apply
+    assert distal.z>root.z+.055
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
