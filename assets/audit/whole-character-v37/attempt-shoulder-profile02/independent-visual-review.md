@@ -1,0 +1,7 @@
+# Independent visual review — shoulder profile02
+
+**Verdict:** useful as a coarse envelope test, but not a clear silhouette improvement over V35. The owner target shows a compact mantle that slopes from the nape over the shoulder, then narrows and sweeps down and aft. In profile02, that space is occupied by a large smooth oval pod. The front view makes the paired pods project conspicuously beyond the body width; the side view shows a blunt egg shape with an exposed lower seam and hanging joint hardware. The V35 shield is too scalloped and separate, but its down-and-aft taper is closer to the target outline. The rejected V37 pauldron had more appropriate layered cover language, though its layered lobes were oversized and detached. Profile02 removes that tufted appearance by replacing it with a smooth blob, not by resolving the mantle contour.
+
+The key remaining silhouette correction is to retain the compact envelope while flattening its cross-section and carrying its outer contour into a distinctly tapered, aft-down shield. Its upper root also needs to read as part of the nape/torso transition, not a cap placed beside it. The visible under-wing dark mechanism space is appropriate; the broad pod projection and abrupt root breaks are not explained by missing plate detail.
+
+These are visual observations from the actual front, side and reference-angle renders. This is not a fit, clearance or artistic-acceptance finding; the trial deliberately retains exposed, unfitted hardware.
