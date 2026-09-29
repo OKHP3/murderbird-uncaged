@@ -1,0 +1,94 @@
+{
+  "status": "review GLB derivative; not selected or accepted",
+  "native": {
+    "path": "assets/models/whole-character-v24/attempt-form01/murderbird-whole-character-v24.blend",
+    "bytes": 2905188,
+    "sha256": "5a4217ae9865abee8b270901f98bebc84f3b59409fae8abf2b01950dca6fc7aa"
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v24/attempt-form01/murderbird-whole-character-v24.glb",
+    "sha256": "014f4fb2efc0fa8c03b66dc29a4f2c1911a16a0b0b6b50c1a6bd0305cf99c7f0",
+    "bytes": 10955272
+  },
+  "exporter": {
+    "path": "assets/audit/whole-character-v24/attempt-form01/export/executed-export.py",
+    "sha256": "2121fc31fc50acb3dfd8ac09071f0ace6350e8e7ed15d185a872d681c02d4481"
+  },
+  "validator": {
+    "path": "assets/audit/whole-character-v24/attempt-form01/export/executed-export.py",
+    "sha256": "2121fc31fc50acb3dfd8ac09071f0ace6350e8e7ed15d185a872d681c02d4481"
+  },
+  "validationOnly": false,
+  "counts": {
+    "meshObjects": 627,
+    "emptyObjects": 54,
+    "glbNodes": 681,
+    "glbMeshes": 627,
+    "accessors": 1461,
+    "triangles": 683350,
+    "materials": 8
+  },
+  "checks": {
+    "nativeUnmodified": true,
+    "exactNamesAndParenting": true,
+    "extrasPreserved": true,
+    "meshTriangleCountsPreserved": true,
+    "evaluatedModifiersInIndependentCopies": true,
+    "allAccessorsFinite": true,
+    "materialDefinitionsUnmodifiedAndPrimitiveAssignmentsPreserved": true,
+    "noCamerasLightsAnimations": true
+  },
+  "cervicalLayoutV2": {
+    "schema": 1,
+    "pitchJoints": [
+      "neck",
+      "cervical-mid-a",
+      "cervical-mid-b",
+      "cervical-upper"
+    ],
+    "weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "rootYaw": "neck",
+    "headOwner": "head",
+    "status": "proposed rigid serial articulation"
+  },
+  "contactAdjustments": [
+    {
+      "name": "bill-contact",
+      "oldWorld": [
+        0.0,
+        -0.7164018154144287,
+        1.592682123184204
+      ],
+      "newWorld": [
+        0.0,
+        -0.6558699011802673,
+        1.5922274589538574
+      ],
+      "surfaceObject": "Profiled upper bill blade 1"
+    },
+    {
+      "name": "anchor-beak",
+      "oldWorld": [
+        0.0,
+        -0.7164018154144287,
+        1.592682123184204
+      ],
+      "newWorld": [
+        0.0,
+        -0.6558699011802673,
+        1.5922274589538574
+      ],
+      "surfaceObject": "Profiled upper bill blade 1"
+    }
+  ],
+  "limits": [
+    "Node/geometry/material identity export validation only; no armor clearance, engineering, appearance or owner acceptance.",
+    "Historical CURVE geometry excluded by explicit mesh/EMPTY selection.",
+    "Actual GLTFLoader joint validation is separate."
+  ]
+}

@@ -1,0 +1,21 @@
+00:00.273  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v23/attempt-form03/murderbird-whole-character-v23.blend"
+00:00.704  render           | Saved: '/tmp/v24-breast-study/attempt-02/before-front.png'
+00:00.901  render           | Saved: '/tmp/v24-breast-study/attempt-02/before-side.png'
+00:01.071  render           | Saved: '/tmp/v24-breast-study/attempt-02/before-three-quarter.png'
+Traceback (most recent call last):
+  File "/tmp/v24-breast-study/attempt-02/render-study.py", line 34, in <module>
+    proposal=runpy.run_path(str(MODULE))['apply']()
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/regions/whole-character-v24-breast.py", line 182, in apply
+    obj = _make_panel(name, course["top"], course["bottom"], start, end,
+                      {**course, "courseIndex": course_index},
+                      {"course": course_index}, owner, skin_material,
+                      envelope_point, sample)
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/regions/whole-character-v24-breast.py", line 91, in _make_panel
+    angle += .006 * math.sin(math.pi * t) * (1.0 - u * u) * (1 if column % 2 else -1)
+                                                                  ~~~~~~~^~~
+TypeError: unsupported operand type(s) for %: 'dict' and 'int'
+
+Error: script failed, file: '/tmp/v24-breast-study/attempt-02/render-study.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

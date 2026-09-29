@@ -125,3 +125,9 @@ Likeness remains below target in all three eras. No new numeric visual score or 
 ## V23 coordinated form checkpoint
 
 Form03 (`66b6ff8c…343e62`) implements a connected curved throat, tapered opening breast, four short neck links, rebuilt bill/mandible and arched inner mantle caps. A local GLB comparison now exists; V22 and every V23 attempt remain preserved. Independent visual review finds improvement, not acceptance. Mask-like face, weak shoulder-to-breast transition, repetitive breast plates, inherited limb gaps, new guard intersections and stale full-exhibit mechanism sockets remain open. See `docs/whole-character-v23-checkpoint.md` and `assets/audit/whole-character-v23/index.html`. Do not promote the local neck demonstration to full era behavior or publication evidence.
+
+### V24 local checkpoint (2026-09-29)
+
+V24 Form02 is an unaccepted construction proposal, continued from V23 Form03. It revises head/bill/jaw, breast plate sizes, and shoulder receivers/crown; a live-browser defect in two new head receivers was caught and corrected in a preserved second native/export. Exact native is `acb91013e0ca7cf98475e0d2ba6fb36d9c081c29c91b27e104bf7367d57f306d`; exact GLB is `940bccff25acbe37747ee8c462a59e8a63d4338482715e63740f27953aebc81b`. See `docs/whole-character-v24-checkpoint.md` and local `assets/audit/whole-character-v24/index.html`.
+
+Independent visual verdict remains HOLD: head presence versus torso, sparse leg construction, repetitive plates, shoulder shelf and unresolved finite-wall neck crossings. Next begin with a coarse whole-body proportion/leg-construction correction, then pivot-centered neck terminal laps. Do not spend another pass on finish over this silhouette. Full new-model era hardware and movement integration remains unfinished. Nothing from this checkpoint was pushed or deployed.
