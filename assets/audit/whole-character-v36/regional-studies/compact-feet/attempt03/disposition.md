@@ -1,0 +1,7 @@
+# Compact foot fit attempt03 disposition
+
+**Rejected for composition.** This is the one bounded fit pass requested for V36. The evaluation derivative starts from the exact Form01 native and changes no nodes or pivots. It removes the 22 mm passive arch lift and shortens six hinge-facing dorsal guards, leaving all bearing-local geometry and 591 unrelated meshes exact.
+
+The fresh Form01 runtime matrices install with maximum matrix error 0–1.19e-7 m and rest parity 1.49e-8 m. The target hinge/guard identities and five landing shin/instep identities are resolved in the sampled states. However, the derivative introduces eight strict pairs at rest, scrape, and landing: four passive hallux link/truss or instep-guard pairs and four digit-guard/metatarsal-rail pairs. Those replacement contacts make this candidate unfit to promote; the authorized single pass is complete, so no further geometry iteration was made. The discrete screen does not establish swept-motion, force, balance, engineering, or likeness acceptance.
+
+The first V35-based attempt03 native is preserved separately as `murderbird-whole-character-v36-compact-feet-fit.blend`; its rest matrices do not match the final Form01 face/contact offsets, so it is not used as motion evidence. The tested evaluation derivative is `murderbird-whole-character-v36-compact-feet-fit-form01-eval.blend`. Neither file is exported or integrated. See `preservation-contract.json` and `form01-evaluation-receipt.json` for hashes and exact identities.

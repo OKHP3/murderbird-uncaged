@@ -1,0 +1,413 @@
+{
+  "status": "FAIL; one bounded regional fit iteration only; no integration or export",
+  "sourceModule": {
+    "path": "scripts/regions/whole-character-v36-compact-feet-fit.py",
+    "sha256": "8db76e6d52faa1adec03a9de767210586bfe26697e896711cc70e82db56403d1"
+  },
+  "baseNative": {
+    "path": "assets/models/whole-character-v36/attempt-form01/murderbird-whole-character-v36.blend",
+    "sha256": "9b0072375fee116864954e882f5ed8ec023cf8d400783fb96947ce4c57bf151f"
+  },
+  "evaluationNative": {
+    "path": "assets/models/whole-character-v36/regional-studies/compact-feet/attempt03/murderbird-whole-character-v36-compact-feet-fit-form01-eval.blend",
+    "sha256": "289d1839801b7823d3a304ae89e48d34a3556f10a7d450c8d1fe9705aae2b79c",
+    "bytes": 3846242
+  },
+  "executedSource": {
+    "path": "assets/audit/whole-character-v36/regional-studies/compact-feet/attempt03/executed-whole-character-v36-compact-feet-fit-form01-eval.py",
+    "sha256": "8db76e6d52faa1adec03a9de767210586bfe26697e896711cc70e82db56403d1"
+  },
+  "nativeBasis": "Exact existing Form01 V36 native. This evaluation derivative changes only the eight arch/truss/instep meshes and six named dorsal guards; no pivots or node transforms changed.",
+  "changedNodes": [],
+  "changedFootMeshes": [
+    {
+      "name": "Left metatarsus open passive truss",
+      "owner": "left-foot",
+      "vertices": 165,
+      "polygons": 120,
+      "surfaceRole": "frame"
+    },
+    {
+      "name": "Right metatarsus open passive truss",
+      "owner": "right-foot",
+      "vertices": 184,
+      "polygons": 136,
+      "surfaceRole": "frame"
+    },
+    {
+      "name": "left curved instep guard",
+      "owner": "left-foot",
+      "vertices": 192,
+      "polygons": 190,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "left digit 1 proximal dorsal guard",
+      "owner": "left-digit-1-proximal",
+      "vertices": 70,
+      "polygons": 68,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "left digit 2 distal dorsal guard",
+      "owner": "left-digit-2-distal",
+      "vertices": 70,
+      "polygons": 68,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "left digit 3 proximal dorsal guard",
+      "owner": "left-digit-3-proximal",
+      "vertices": 70,
+      "polygons": 68,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "left metatarsal passive rail",
+      "owner": "left-foot",
+      "vertices": 36,
+      "polygons": 26,
+      "surfaceRole": "frame"
+    },
+    {
+      "name": "left metatarsal passive rail.001",
+      "owner": "left-foot",
+      "vertices": 36,
+      "polygons": 26,
+      "surfaceRole": "frame"
+    },
+    {
+      "name": "right curved instep guard",
+      "owner": "right-foot",
+      "vertices": 192,
+      "polygons": 190,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "right digit 1 proximal dorsal guard",
+      "owner": "right-digit-1-proximal",
+      "vertices": 70,
+      "polygons": 68,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "right digit 2 distal dorsal guard",
+      "owner": "right-digit-2-distal",
+      "vertices": 70,
+      "polygons": 68,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "right digit 3 proximal dorsal guard",
+      "owner": "right-digit-3-proximal",
+      "vertices": 70,
+      "polygons": 68,
+      "surfaceRole": "plate"
+    },
+    {
+      "name": "right metatarsal passive rail",
+      "owner": "right-foot",
+      "vertices": 36,
+      "polygons": 26,
+      "surfaceRole": "frame"
+    },
+    {
+      "name": "right metatarsal passive rail.001",
+      "owner": "right-foot",
+      "vertices": 36,
+      "polygons": 26,
+      "surfaceRole": "frame"
+    }
+  ],
+  "preservation": {
+    "unrelatedMeshesExact": 591,
+    "allBearingLocalGeometryExact": 171,
+    "changedEvaluatedMeshesFiniteAndClosed": true,
+    "leftTrussTinyDegenerateTriangles": 2,
+    "meaning": "One existing left truss reports two evaluated triangles at or below 1e-14 square metres, also present in the base; no topology edit."
+  },
+  "freshPoseEvidence": {
+    "path": "assets/audit/whole-character-v36/attempt-form01/foot-motion-screen/v36-pose-matrices.json",
+    "sha256": "b0222c763c9906d8455b8f81cab9b92b18553421a6783288ffd2c2f378acdfbc",
+    "sourceGLBSHA256": "565396fa9c43fb258821a8b18151b03032dd61ecfc004c59e39f5dffc3046263",
+    "poseScreenSHA256": "3b9ca99d42e355d6f56ec7018e2d60a9a6c4c3e2835b1ee6ef2d8ec7648a39a8",
+    "matrixRestParityMaxM": 1.4901161193847656e-08,
+    "matrixInstallMaxM": 1.1920928955078125e-07
+  },
+  "strictCounts": [
+    {
+      "pose": "exported-rest",
+      "basePairs": 74,
+      "candidatePairs": 72,
+      "introducedPairs": 8,
+      "resolvedPairs": 10,
+      "restParityErrorM": 1.4901161193847656e-08,
+      "matrixInstallMaxErrorM": 0.0
+    },
+    {
+      "pose": "advanced-claw-scrape",
+      "basePairs": 74,
+      "candidatePairs": 72,
+      "introducedPairs": 8,
+      "resolvedPairs": 10,
+      "restParityErrorM": null,
+      "matrixInstallMaxErrorM": 1.1920928955078125e-07
+    },
+    {
+      "pose": "advanced-jump-landing",
+      "basePairs": 79,
+      "candidatePairs": 72,
+      "introducedPairs": 8,
+      "resolvedPairs": 15,
+      "restParityErrorM": null,
+      "matrixInstallMaxErrorM": 1.1920928955078125e-07
+    }
+  ],
+  "introducedIdentities": [
+    {
+      "a": "Left metatarsus open passive truss",
+      "b": "left rear hallux load link v4",
+      "owners": [
+        "left-foot",
+        "left-foot"
+      ],
+      "sameOwner": true,
+      "overlapBounds": [
+        [
+          0.26500099897384644,
+          -0.1305510401725769,
+          0.1068396121263504
+        ],
+        [
+          0.3449990153312683,
+          -0.010754823684692383,
+          0.12783966958522797
+        ]
+      ]
+    },
+    {
+      "a": "Right metatarsus open passive truss",
+      "b": "right rear hallux load link v4",
+      "owners": [
+        "right-foot",
+        "right-foot"
+      ],
+      "sameOwner": true,
+      "overlapBounds": [
+        [
+          -0.3449985980987549,
+          -0.13054963946342468,
+          0.10684098303318024
+        ],
+        [
+          -0.26500141620635986,
+          -0.010756220668554306,
+          0.12783966958522797
+        ]
+      ]
+    },
+    {
+      "a": "left curved instep guard",
+      "b": "left rear hallux load link v4",
+      "owners": [
+        "left-foot",
+        "left-foot"
+      ],
+      "sameOwner": true,
+      "overlapBounds": [
+        [
+          0.24800001084804535,
+          -0.15011826157569885,
+          0.1093398928642273
+        ],
+        [
+          0.3620000183582306,
+          -0.05108962953090668,
+          0.12783966958522797
+        ]
+      ]
+    },
+    {
+      "a": "left digit 1 proximal dorsal guard",
+      "b": "left metatarsal passive rail",
+      "owners": [
+        "left-digit-1-proximal",
+        "left-foot"
+      ],
+      "sameOwner": false,
+      "overlapBounds": [
+        [
+          0.21376602351665497,
+          -0.16799792647361755,
+          0.06074963137507439
+        ],
+        [
+          0.2536429166793823,
+          -0.15809251368045807,
+          0.09528146684169769
+        ]
+      ]
+    },
+    {
+      "a": "left digit 3 proximal dorsal guard",
+      "b": "left metatarsal passive rail.001",
+      "owners": [
+        "left-digit-3-proximal",
+        "left-foot"
+      ],
+      "sameOwner": false,
+      "overlapBounds": [
+        [
+          0.3638910949230194,
+          -0.16799792647361755,
+          0.060704994946718216
+        ],
+        [
+          0.3962339460849762,
+          -0.1571345031261444,
+          0.09524688869714737
+        ]
+      ]
+    },
+    {
+      "a": "right curved instep guard",
+      "b": "right rear hallux load link v4",
+      "owners": [
+        "right-foot",
+        "right-foot"
+      ],
+      "sameOwner": true,
+      "overlapBounds": [
+        [
+          -0.3620000183582306,
+          -0.15011826157569885,
+          0.1093398928642273
+        ],
+        [
+          -0.24800001084804535,
+          -0.05108962953090668,
+          0.12783966958522797
+        ]
+      ]
+    },
+    {
+      "a": "right digit 1 proximal dorsal guard",
+      "b": "right metatarsal passive rail",
+      "owners": [
+        "right-digit-1-proximal",
+        "right-foot"
+      ],
+      "sameOwner": false,
+      "overlapBounds": [
+        [
+          -0.3962339460849762,
+          -0.16799792647361755,
+          0.06074963137507439
+        ],
+        [
+          -0.3564703166484833,
+          -0.15809251368045807,
+          0.09528148174285889
+        ]
+      ]
+    },
+    {
+      "a": "right digit 3 proximal dorsal guard",
+      "b": "right metatarsal passive rail.001",
+      "owners": [
+        "right-digit-3-proximal",
+        "right-foot"
+      ],
+      "sameOwner": false,
+      "overlapBounds": [
+        [
+          -0.2462221384048462,
+          -0.16799792647361755,
+          0.060704994946718216
+        ],
+        [
+          -0.21376602351665497,
+          -0.1571345031261444,
+          0.09524688869714737
+        ]
+      ]
+    }
+  ],
+  "targetResolutions": [
+    [
+      "Left digit-1-distal captive toe-bearing flanges",
+      "left digit 1 proximal dorsal guard"
+    ],
+    [
+      "Left digit-3-distal captive toe-bearing flanges",
+      "left digit 3 proximal dorsal guard"
+    ],
+    [
+      "Left metatarsus open passive truss",
+      "V25 left shin distal captive cheek -1"
+    ],
+    [
+      "Left metatarsus open passive truss",
+      "V25 left shin distal captive cheek 1"
+    ],
+    [
+      "Right digit-1-distal captive toe-bearing flanges",
+      "right digit 1 proximal dorsal guard"
+    ],
+    [
+      "Right digit-3-distal captive toe-bearing flanges",
+      "right digit 3 proximal dorsal guard"
+    ],
+    [
+      "Right metatarsus open passive truss",
+      "V25 right shin distal captive cheek -1"
+    ],
+    [
+      "Right metatarsus open passive truss",
+      "V25 right shin distal captive cheek 1"
+    ],
+    [
+      "Toe hinge.001",
+      "left digit 1 proximal dorsal guard"
+    ],
+    [
+      "Toe hinge.005",
+      "left digit 3 proximal dorsal guard"
+    ],
+    [
+      "Toe hinge.007",
+      "right digit 1 proximal dorsal guard"
+    ],
+    [
+      "Toe hinge.011",
+      "right digit 3 proximal dorsal guard"
+    ],
+    [
+      "V25 right shin limited anterior wear guard",
+      "right curved instep guard"
+    ],
+    [
+      "left digit 2 distal dorsal guard",
+      "left digit 2 tapered claw sheath"
+    ],
+    [
+      "right digit 2 distal dorsal guard",
+      "right digit 2 tapered claw sheath"
+    ]
+  ],
+  "views": [
+    {
+      "path": "assets/audit/whole-character-v36/regional-studies/compact-feet/attempt03/form01-eval-reference-angle.png",
+      "sha256": "3d80f4bba5dddb3e8dad7307149abad088cdda1033dfa839af1ef1d3d5c03fb8"
+    },
+    {
+      "path": "assets/audit/whole-character-v36/regional-studies/compact-feet/attempt03/form01-eval-front.png",
+      "sha256": "bbe9f940690520976d1ac2c99733056f6ab3b29ae9e25b86156d517389978cd2"
+    },
+    {
+      "path": "assets/audit/whole-character-v36/regional-studies/compact-feet/attempt03/form01-eval-feet-close-reference.png",
+      "sha256": "716526c08970286dafaef2e30834adb74e7ee596f779d182006a6b184e2ff158"
+    }
+  ],
+  "disposition": "Not promotable: this pass removes the attributed distal-hinge guard and arch/shin intersections, but establishes four hallux-link/truss or instep crossings and four digit-guard/metatarsal-rail crossings at all three sampled poses. Partial fixes cannot be accepted with replacement strict contacts. No further iteration under the authorized one-pass limit."
+}
