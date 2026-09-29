@@ -1,6 +1,6 @@
 # Correction v2 — accountable backlog
 
-> Current continuation: [V18 attempt01](whole-character-v18-checkpoint.md) is a held local combined proposal; DEV defaults to V16 and production selects V9. The owner’s rejection remains controlling. Regional work is now integrated for review, with neck/inspection defects still open. Earlier assignments and scores retain their historical scope.
+> Current continuation: [V31 Form02](whole-character-v31-checkpoint.md) is a held local candidate. DEV defaults to V31; production still selects V9. Likeness remains below target and the broader strike check introduces two head-to-neck collisions. No artistic acceptance or publication. Earlier assignments and scores below retain their historical scope.
 
 The frozen inspector assessed `4b1c726f5d9bbd1ba1048f89049a5b422001c506`, model `3ec668b0…baacdc5`. Its scores remain historical. This work starts from that commit on `codex/neutral-correction-v2`; the public release is not replaced. Source/reference ownership is in the [integration contract](correction-v2-integration-contract.md) and [feature packet](correction-v2-reference-packet.md). The current neutral model and generated parts/pivots are recorded in [its inventory](../assets/models/uncaged-neutral-v2/neutral-inventory.json).
 
@@ -172,3 +172,6 @@ Native `207e32fe…95e275`; GLB `bd08e5d1…b3a512`. Actual exact-composition br
 Publication clarification: earlier “production remains V9” statements describe this branch's local build selection, not the live site. Fresh read-only verification binds live Pages to exteriorV1 at assessment revision `4b1c726`, model SHA `3ec668b0…baacdc5`; remote main was `2b3e284`. New studies are local and were not pushed or deployed.
 
 The present patch-level process has reached diminishing returns. Next work must reconstruct the deep hook, curved mandible/cheek opening and integrated eye as one source-aligned head/neck form within an editable whole-body scene. No additional owner brief is needed to identify that failure. No fit-only checkpoint closes the likeness rejection.
+# V31 check-in — held, not completion
+
+2026-09-29: [V31 checkpoint](whole-character-v31-checkpoint.md) records the reconstructed head and complete era-mechanism attachment work. Actual controls/inspection/export checks pass within their stated scope, but likeness remains below the owner reference and the broad neck screen introduces two strike-pose collisions. F01–F04 OPEN, F05 PARTIAL, F06 GATED; F07–F09 bounded evidence only; F10 local only. Three finished exteriors and owner acceptance are not delivered. No publication. Do not count this fit checkpoint as resolving the owner's Squidward rejection.

@@ -1,0 +1,88 @@
+{
+  "status": "FAIL: exact Form02 broader seven-pose neck screen has two introduced contact-pose cervical guard/head-load-bow intersections. Whole likeness remains HOLD.",
+  "authoritativeFinalHandoff": true,
+  "supersedesStatusOf": "handoff-final-fit05.json (retained immutable: named narrow scopes only)",
+  "sourceSHA256": "76c8bad1825ede7cf3fac5d068ab60f29a4e8e5059a78dfc5a9cabfd03d39022",
+  "nativeSHA256": "81280c2a7103bc3b85603a5fd108daab5e337842f6a7f7c8e298be5049e07e2a",
+  "finalNative": "assets/models/whole-character-v31/attempt-form02/murderbird-whole-character-v31.blend",
+  "scopeAndNarrowEvidence": "assets/audit/whole-character-v31/regional-studies/head/handoff-final-fit05.json",
+  "scopeAndNarrowEvidenceSHA256": "741fa76eb61c1e7c28bcb633683a91e7b60062951d3d31e0a831d7066309a2f2",
+  "broaderComparison": "assets/audit/whole-character-v31/attempt-form02/neck-screen/comparison.json",
+  "broaderComparisonSHA256": "eb801787c6f8acf6e24370d5c857326abf7d70c9b08bb6e02b5197f524337581",
+  "counts": [
+    {
+      "pose": "rest",
+      "baseline": 2,
+      "final": 2
+    },
+    {
+      "pose": "maker-neck-jaw",
+      "baseline": 15,
+      "final": 14
+    },
+    {
+      "pose": "attention",
+      "baseline": 2,
+      "final": 2
+    },
+    {
+      "pose": "contact-neck",
+      "baseline": 7,
+      "final": 9
+    },
+    {
+      "pose": "thrust-neck",
+      "baseline": 4,
+      "final": 4
+    },
+    {
+      "pose": "yaw-minus",
+      "baseline": 1,
+      "final": 1
+    },
+    {
+      "pose": "yaw-plus",
+      "baseline": 1,
+      "final": 1
+    }
+  ],
+  "introduced": [
+    {
+      "pose": "contact-neck",
+      "pairs": [
+        [
+          "V23 cervical 4 directional guard 7",
+          "V31 passive cranial load bow 1"
+        ],
+        [
+          "V23 cervical 4 directional guard 8",
+          "V31 passive cranial load bow -1"
+        ]
+      ]
+    }
+  ],
+  "eliminated": [
+    {
+      "pose": "maker-neck-jaw",
+      "pairs": [
+        [
+          "V23 cervical 3 directional guard 10",
+          "V23 cervical 4 directional guard 10"
+        ]
+      ]
+    }
+  ],
+  "cause": "The narrow hood/modified-guard10 screen omitted cervical4 guards7/8 against new outboard cranial load bows. The exact composed screen catches their contact sweep into those head-owned bows; these are introduced regressions, not accepted mating interfaces.",
+  "decision": "Final Form02 retained as failed movement-gate diagnostic. No correction or geometry changes after frozen76c8 source; no further patch cycle this checkpoint.",
+  "remainingArtDefects": [
+    "Neutral jaw seam remains too open versus owner nearly closed profile.",
+    "Optic facade still reads as a goggle.",
+    "Crown remains too broad/regular.",
+    "Mandible remains too thin in open pose; front bill remains a dominant centered triangle."
+  ],
+  "limits": [
+    "Names are exact identity comparisons, not physical penetration depth.",
+    "This broader screen catches upper cervical guards7/8 versus new outboard head load bows, omitted from the earlier receiving-hood/guard10-only screen.",
+    "Discrete evaluated crossings; no continuous or engineering/artistic acceptance."
+  ]
+}

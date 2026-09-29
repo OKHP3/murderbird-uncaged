@@ -1,0 +1,10 @@
+# V31 current artistic verdict
+
+Compared the actual `attempt05-fit-e` whole/head/side renders with V30 Form02, the owner whole-bird reference (`context/threads/assets/murderbird-owner-likeness-rejection-2026-09-28/2-Pasted-Image-2.jpg`), and the July head-only reference (`context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png`). These are different illustrative views and poses; this is a visual judgment, not dimensional measurement or owner acceptance.
+
+- **Visible progress:** versus V30’s blunt, compact bill and exposed horizontal jaw bar, V31 has a deeper returned bill hook and a more integrated lower-face contour. Attempts 04–05 also break the crown into narrower swept plates, and fit-b’s eye-aperture change makes the optic opening visible where the earlier integrated screenshot partly occluded it. The July reference supports an open-jaw pose; the owner whole-bird image is the relevant near-closed neutral mouth reference.
+- **Largest remaining gap — bill and jaw:** the side hook is improved, but the front view still reads as a long centered triangle. The neutral lower bill does not form a convincing curved, nearly closed seam with the upper bill; the open pose still lacks a substantial formed mandible.
+- **Largest remaining gap — orbital facade:** the aperture is now visible, but the eye still reads as a generic circular bearing surrounded by bars and broad plate. The reference integrates a recessed optic into diagonal brow and cheek forms. Grayscale renders do not support a color/material judgment.
+- **Largest remaining gap — head construction:** the crown remains a smooth helmet-like mass with broad plates, and the cheek/throat transition remains mask-like and comparatively plain. The reference’s compact, layered plates sweep aft around the optic and flow into the neck; the model has not yet achieved that integrated form.
+
+**Disposition:** retain the deeper hook, visible aperture, and crown segmentation as useful study progress. The head is still not close enough to call likeness accepted or finished; the three shape gaps above remain material.

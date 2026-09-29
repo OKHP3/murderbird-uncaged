@@ -1,0 +1,1291 @@
+{
+  "generatedAt": "2026-09-29T10:31:37.689Z",
+  "status": "BOUNDED INTEGRATION CHECK COMPLETE",
+  "input": {
+    "path": "assets/models/whole-character-v31/attempt-form01/murderbird-whole-character-v31.glb",
+    "sha256": "a679d9f25870a5de3b3b1681ac45aa851db4461a8b840187776418071d1301db",
+    "bytes": 10061164,
+    "smoke": false,
+    "eligibilityOnly": true
+  },
+  "method": {
+    "loader": "Actual GLTFLoader; only in-memory texture bindings omitted",
+    "constructors": [
+      "createEraController",
+      "createEraMotion",
+      "createEraMechanisms",
+      "applyInspectionPose"
+    ],
+    "dt": 0.016666666666666666,
+    "surfaceMethod": "Closest point on actual exported triangles; GLTFLoader PropertyBinding name normalization resolves declared source mesh names; no bounding-box seating claims",
+    "eraVisibility": "Actual exteriorEras plus presence-exhibit assembly gates",
+    "socketToleranceM": 0.001,
+    "endpointToleranceM": 1e-7
+  },
+  "failures": [],
+  "fitRisks": [],
+  "scenarios": [
+    {
+      "label": "maker-material-era-eligibility",
+      "frame": 1,
+      "era": "maker",
+      "state": "puppet-rest",
+      "mechanisms": {
+        "era": "maker",
+        "tickCount": 1,
+        "visible": {
+          "maker": true,
+          "mechanic": false,
+          "builder": false
+        },
+        "attachmentLayout": {
+          "status": "legacy-placement",
+          "version": null,
+          "makerCradleWidth": 0.62,
+          "makerControlOffsets": [
+            [
+              0.065,
+              0.015,
+              0.045
+            ],
+            [
+              -0.1532391607761383,
+              -0.21411478519439697,
+              0.016072288155555725
+            ],
+            [
+              -0.07,
+              0,
+              -0.16
+            ],
+            [
+              -0.16,
+              0.06,
+              0.02
+            ],
+            [
+              -0.10837556421756744,
+              0.035349488258361816,
+              0.09504467248916626
+            ]
+          ],
+          "makerOwnerSockets": [
+            {
+              "control": "wing",
+              "owner": "right-mantle",
+              "point": [
+                -0.1532391607761383,
+                -0.21411478519439697,
+                0.016072288155555725
+              ],
+              "surfaceObject": "right swept upper wing load member"
+            },
+            {
+              "control": "jaw",
+              "owner": "jaw",
+              "point": [
+                -0.10837556421756744,
+                0.035349488258361816,
+                0.09504467248916626
+              ],
+              "surfaceObject": "V31 formed curved mandible shell"
+            }
+          ],
+          "tailPosition": [
+            0,
+            0.2,
+            -0.31
+          ],
+          "transmissionPosition": [
+            0,
+            0,
+            0
+          ],
+          "distributionPosition": [
+            -0.21,
+            0.29,
+            0.07
+          ]
+        },
+        "anchors": [
+          {
+            "id": "drive",
+            "available": true
+          },
+          {
+            "id": "power",
+            "available": false
+          },
+          {
+            "id": "mind",
+            "available": false
+          }
+        ],
+        "externalControlTargets": [
+          "left-foot",
+          "right-mantle",
+          "compact-articulated-tail",
+          "neck",
+          "jaw"
+        ],
+        "mechanicTargets": [
+          "left-thigh/left-shin",
+          "right-thigh/right-shin"
+        ],
+        "builderTargets": [
+          "left-thigh/left-shin",
+          "right-thigh/right-shin",
+          "right-mantle/right-wing-shield"
+        ],
+        "inventory": [
+          {
+            "id": "maker-support-controls",
+            "eras": [
+              "maker"
+            ],
+            "role": "external support cradle, levers, rods and tension lines"
+          },
+          {
+            "id": "mechanic-wound-drive",
+            "eras": [
+              "mechanic"
+            ],
+            "role": "one mainspring, reduction pair, camshaft and kinematic telescoping knee links"
+          },
+          {
+            "id": "builder-power-actuation",
+            "eras": [
+              "builder"
+            ],
+            "role": "fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated"
+          }
+        ],
+        "inspectionConnections": {
+          "separationMode": "not-eligible",
+          "wing": {
+            "mode": "not-eligible",
+            "endpointDistance": 0.29181284603742025
+          },
+          "cervical": [
+            {
+              "side": "left",
+              "mode": "not-eligible",
+              "endpointDistance": 0.16650825805346703
+            },
+            {
+              "side": "right",
+              "mode": "not-eligible",
+              "endpointDistance": 0.16650825805346703
+            }
+          ],
+          "powerCore": {
+            "mode": "not-eligible",
+            "endpointDistance": 0.2420603399460518
+          },
+          "mechanicSlidingLinks": {
+            "left": 0.1908200550619711,
+            "right": 0.14803737556874144
+          }
+        }
+      },
+      "root": {
+        "x": 0,
+        "z": -0.25,
+        "yaw": 0,
+        "speed": 0
+      },
+      "actualArticulation": {
+        "leg": 0,
+        "wing": 0,
+        "tail": 0,
+        "neck": 0,
+        "jaw": 0
+      },
+      "jawAngleRad": 0,
+      "tailAngleRad": 0,
+      "finite": true,
+      "visibleMeshes": {
+        "maker": 56,
+        "mechanic": 0,
+        "builder": 0
+      },
+      "maker": [
+        {
+          "control": "leg",
+          "target": "left-foot",
+          "position": [
+            0.3700000071525574,
+            0.3097068173885345,
+            -0.2430000099539757
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 7.850462293418876e-17,
+          "hornEndpointErrorM": 6.206335383118183e-17
+        },
+        {
+          "control": "wing",
+          "target": "right-mantle",
+          "position": [
+            -0.419514536857605,
+            0.860346851348877,
+            -0.2910477137193084
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 1.3597399555105182e-16,
+          "hornEndpointErrorM": 0,
+          "declaredSurfaceName": "right swept upper wing load member",
+          "loadedSurfaceName": "right_swept_upper_wing_load_member",
+          "authoredSurfaceOwnerValid": true
+        },
+        {
+          "control": "tail",
+          "target": "compact-articulated-tail",
+          "position": [
+            -0.07,
+            0.8078907823562622,
+            -0.7151945831999184
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 1.2412670766236366e-16,
+          "hornEndpointErrorM": 1.1102230246251565e-16
+        },
+        {
+          "control": "neck",
+          "target": "neck",
+          "position": [
+            -0.16,
+            1.2100000333786012,
+            -0.04200000550597904
+          ],
+          "trackingErrorM": 1.3877787807814457e-17,
+          "rodEndpointErrorM": 8.326672684688674e-17,
+          "hornEndpointErrorM": 2.7755575615628914e-17
+        },
+        {
+          "control": "jaw",
+          "target": "jaw",
+          "position": [
+            -0.10837556421756744,
+            1.5592334842681885,
+            0.3026446709409356
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 0,
+          "hornEndpointErrorM": 1.3877787807814457e-17,
+          "declaredSurfaceName": "V31 formed curved mandible shell",
+          "loadedSurfaceName": "V31_formed_curved_mandible_shell",
+          "authoredSurfaceOwnerValid": true
+        }
+      ],
+      "endpointErrors": {
+        "mechanic-left-knee": 0,
+        "mechanic-left-crank": 0,
+        "builder-left-hip": 1.1102230246251565e-16,
+        "builder-left-knee": 1.3877787807814457e-17,
+        "mechanic-right-knee": 5.721958498152797e-17,
+        "mechanic-right-crank": 6.206335383118183e-17,
+        "builder-right-hip": 1.1102230246251565e-16,
+        "builder-right-knee": 1.3877787807814457e-17
+      },
+      "groupSeats": [
+        {
+          "name": "mechanic-lower-transmission",
+          "owner": "body",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "worldPosition": [
+            0,
+            0.6078907823562623,
+            -0.24519458319991827
+          ],
+          "effectiveVisible": false
+        },
+        {
+          "name": "builder-power-distribution-manifold",
+          "owner": "body",
+          "localPosition": [
+            -0.21,
+            0.29,
+            0.07
+          ],
+          "worldPosition": [
+            -0.21,
+            0.8978907823562623,
+            -0.17519458319991826
+          ],
+          "effectiveVisible": false
+        },
+        {
+          "name": "compact-articulated-tail",
+          "owner": "body",
+          "localPosition": [
+            0,
+            0.2,
+            -0.31
+          ],
+          "worldPosition": [
+            0,
+            0.8078907823562622,
+            -0.5551945831999183
+          ],
+          "effectiveVisible": true
+        }
+      ],
+      "materialEraVisibility": {
+        "sourceVisibleMeshCount": 537,
+        "sourceConstructionClasses": {
+          "inherited-passive": 412,
+          "proposed-passive": 125
+        },
+        "visibleMaterialMeshCounts": {
+          "Neutral / frame": 137,
+          "Neutral / plate": 214,
+          "Neutral / bearing": 142,
+          "Neutral / recess": 4,
+          "Era mechanism iron (proposed)": 14,
+          "Era mechanism bronze (proposed)": 13,
+          "Neutral / edge": 40,
+          "Maker control wood (proposed)": 7,
+          "Era mechanism brass (proposed)": 20,
+          "Maker tension line (proposed)": 5
+        },
+        "sourceAdvancedMeshesVisible": [],
+        "proceduralGroupVisibleMeshCounts": {
+          "maker": 56,
+          "mechanic": 0,
+          "builder": 0
+        }
+      },
+      "visibleBounds": {
+        "min": [
+          -1.579999989271164,
+          1.7881393310492655e-9,
+          -1.1199999952316284
+        ],
+        "max": [
+          0.6950000003725291,
+          1.7618736600875855,
+          0.48485457990318537
+        ]
+      }
+    },
+    {
+      "label": "mechanic-material-era-eligibility",
+      "frame": 2,
+      "era": "mechanic",
+      "state": "mechanical-ready",
+      "mechanisms": {
+        "era": "mechanic",
+        "tickCount": 2,
+        "visible": {
+          "maker": false,
+          "mechanic": true,
+          "builder": false
+        },
+        "attachmentLayout": {
+          "status": "legacy-placement",
+          "version": null,
+          "makerCradleWidth": 0.62,
+          "makerControlOffsets": [
+            [
+              0.065,
+              0.015,
+              0.045
+            ],
+            [
+              -0.1532391607761383,
+              -0.21411478519439697,
+              0.016072288155555725
+            ],
+            [
+              -0.07,
+              0,
+              -0.16
+            ],
+            [
+              -0.16,
+              0.06,
+              0.02
+            ],
+            [
+              -0.10837556421756744,
+              0.035349488258361816,
+              0.09504467248916626
+            ]
+          ],
+          "makerOwnerSockets": [
+            {
+              "control": "wing",
+              "owner": "right-mantle",
+              "point": [
+                -0.1532391607761383,
+                -0.21411478519439697,
+                0.016072288155555725
+              ],
+              "surfaceObject": "right swept upper wing load member"
+            },
+            {
+              "control": "jaw",
+              "owner": "jaw",
+              "point": [
+                -0.10837556421756744,
+                0.035349488258361816,
+                0.09504467248916626
+              ],
+              "surfaceObject": "V31 formed curved mandible shell"
+            }
+          ],
+          "tailPosition": [
+            0,
+            0.2,
+            -0.31
+          ],
+          "transmissionPosition": [
+            0,
+            0,
+            0
+          ],
+          "distributionPosition": [
+            -0.21,
+            0.29,
+            0.07
+          ]
+        },
+        "anchors": [
+          {
+            "id": "drive",
+            "available": true
+          },
+          {
+            "id": "power",
+            "available": true
+          },
+          {
+            "id": "mind",
+            "available": false
+          }
+        ],
+        "externalControlTargets": [
+          "left-foot",
+          "right-mantle",
+          "compact-articulated-tail",
+          "neck",
+          "jaw"
+        ],
+        "mechanicTargets": [
+          "left-thigh/left-shin",
+          "right-thigh/right-shin"
+        ],
+        "builderTargets": [
+          "left-thigh/left-shin",
+          "right-thigh/right-shin",
+          "right-mantle/right-wing-shield"
+        ],
+        "inventory": [
+          {
+            "id": "maker-support-controls",
+            "eras": [
+              "maker"
+            ],
+            "role": "external support cradle, levers, rods and tension lines"
+          },
+          {
+            "id": "mechanic-wound-drive",
+            "eras": [
+              "mechanic"
+            ],
+            "role": "one mainspring, reduction pair, camshaft and kinematic telescoping knee links"
+          },
+          {
+            "id": "builder-power-actuation",
+            "eras": [
+              "builder"
+            ],
+            "role": "fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated"
+          }
+        ],
+        "inspectionConnections": {
+          "separationMode": "not-eligible",
+          "wing": {
+            "mode": "not-eligible",
+            "endpointDistance": 0.29181284603742025
+          },
+          "cervical": [
+            {
+              "side": "left",
+              "mode": "not-eligible",
+              "endpointDistance": 0.16650825805346703
+            },
+            {
+              "side": "right",
+              "mode": "not-eligible",
+              "endpointDistance": 0.16650825805346703
+            }
+          ],
+          "powerCore": {
+            "mode": "not-eligible",
+            "endpointDistance": 0.2420603399460518
+          },
+          "mechanicSlidingLinks": {
+            "left": 0.1908200550619711,
+            "right": 0.14803737556874144
+          }
+        }
+      },
+      "root": {
+        "x": 0,
+        "z": -0.25,
+        "yaw": 0,
+        "speed": 0
+      },
+      "actualArticulation": {
+        "leg": 0,
+        "wing": 0,
+        "tail": 0,
+        "neck": 0,
+        "jaw": 0
+      },
+      "jawAngleRad": 0,
+      "tailAngleRad": 0,
+      "finite": true,
+      "visibleMeshes": {
+        "maker": 0,
+        "mechanic": 8,
+        "builder": 0
+      },
+      "maker": [
+        {
+          "control": "leg",
+          "target": "left-foot",
+          "position": [
+            0.3700000071525574,
+            0.3097068173885345,
+            -0.2430000099539757
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 7.850462293418876e-17,
+          "hornEndpointErrorM": 6.206335383118183e-17
+        },
+        {
+          "control": "wing",
+          "target": "right-mantle",
+          "position": [
+            -0.419514536857605,
+            0.860346851348877,
+            -0.2910477137193084
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 1.3597399555105182e-16,
+          "hornEndpointErrorM": 0,
+          "declaredSurfaceName": "right swept upper wing load member",
+          "loadedSurfaceName": "right_swept_upper_wing_load_member",
+          "authoredSurfaceOwnerValid": true
+        },
+        {
+          "control": "tail",
+          "target": "compact-articulated-tail",
+          "position": [
+            -0.07,
+            0.8078907823562622,
+            -0.7151945831999184
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 1.2412670766236366e-16,
+          "hornEndpointErrorM": 1.1102230246251565e-16
+        },
+        {
+          "control": "neck",
+          "target": "neck",
+          "position": [
+            -0.16,
+            1.2100000333786012,
+            -0.04200000550597904
+          ],
+          "trackingErrorM": 1.3877787807814457e-17,
+          "rodEndpointErrorM": 8.326672684688674e-17,
+          "hornEndpointErrorM": 2.7755575615628914e-17
+        },
+        {
+          "control": "jaw",
+          "target": "jaw",
+          "position": [
+            -0.10837556421756744,
+            1.5592334842681885,
+            0.3026446709409356
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 0,
+          "hornEndpointErrorM": 1.3877787807814457e-17,
+          "declaredSurfaceName": "V31 formed curved mandible shell",
+          "loadedSurfaceName": "V31_formed_curved_mandible_shell",
+          "authoredSurfaceOwnerValid": true
+        }
+      ],
+      "endpointErrors": {
+        "mechanic-left-knee": 0,
+        "mechanic-left-crank": 0,
+        "builder-left-hip": 1.1102230246251565e-16,
+        "builder-left-knee": 1.3877787807814457e-17,
+        "mechanic-right-knee": 5.721958498152797e-17,
+        "mechanic-right-crank": 6.206335383118183e-17,
+        "builder-right-hip": 1.1102230246251565e-16,
+        "builder-right-knee": 1.3877787807814457e-17
+      },
+      "groupSeats": [
+        {
+          "name": "mechanic-lower-transmission",
+          "owner": "body",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "worldPosition": [
+            0,
+            0.6078907823562623,
+            -0.24519458319991827
+          ],
+          "effectiveVisible": true
+        },
+        {
+          "name": "builder-power-distribution-manifold",
+          "owner": "body",
+          "localPosition": [
+            -0.21,
+            0.29,
+            0.07
+          ],
+          "worldPosition": [
+            -0.21,
+            0.8978907823562623,
+            -0.17519458319991826
+          ],
+          "effectiveVisible": false
+        },
+        {
+          "name": "compact-articulated-tail",
+          "owner": "body",
+          "localPosition": [
+            0,
+            0.2,
+            -0.31
+          ],
+          "worldPosition": [
+            0,
+            0.8078907823562622,
+            -0.5551945831999183
+          ],
+          "effectiveVisible": true
+        }
+      ],
+      "materialEraVisibility": {
+        "sourceVisibleMeshCount": 538,
+        "sourceConstructionClasses": {
+          "inherited-passive": 412,
+          "proposed-passive": 125,
+          "later-repair": 1
+        },
+        "visibleMaterialMeshCounts": {
+          "Neutral / frame": 137,
+          "Neutral / plate": 214,
+          "Neutral / repair": 1,
+          "Neutral / bearing": 142,
+          "Neutral / recess": 4,
+          "Era mechanism iron (proposed)": 38,
+          "Era mechanism bronze (proposed)": 5,
+          "Era mechanism brass (proposed)": 12,
+          "Neutral / edge": 40
+        },
+        "sourceAdvancedMeshesVisible": [],
+        "proceduralGroupVisibleMeshCounts": {
+          "maker": 0,
+          "mechanic": 8,
+          "builder": 0
+        }
+      },
+      "visibleBounds": {
+        "min": [
+          -0.5002859830856323,
+          0.0019999999999999463,
+          -0.7882113053758765
+        ],
+        "max": [
+          0.5140143632888794,
+          1.7618736600875855,
+          0.48485457990318537
+        ]
+      }
+    },
+    {
+      "label": "builder-material-era-eligibility",
+      "frame": 3,
+      "era": "builder",
+      "state": "watch",
+      "mechanisms": {
+        "era": "builder",
+        "tickCount": 3,
+        "visible": {
+          "maker": false,
+          "mechanic": false,
+          "builder": true
+        },
+        "attachmentLayout": {
+          "status": "legacy-placement",
+          "version": null,
+          "makerCradleWidth": 0.62,
+          "makerControlOffsets": [
+            [
+              0.065,
+              0.015,
+              0.045
+            ],
+            [
+              -0.1532391607761383,
+              -0.21411478519439697,
+              0.016072288155555725
+            ],
+            [
+              -0.07,
+              0,
+              -0.16
+            ],
+            [
+              -0.16,
+              0.06,
+              0.02
+            ],
+            [
+              -0.10837556421756744,
+              0.035349488258361816,
+              0.09504467248916626
+            ]
+          ],
+          "makerOwnerSockets": [
+            {
+              "control": "wing",
+              "owner": "right-mantle",
+              "point": [
+                -0.1532391607761383,
+                -0.21411478519439697,
+                0.016072288155555725
+              ],
+              "surfaceObject": "right swept upper wing load member"
+            },
+            {
+              "control": "jaw",
+              "owner": "jaw",
+              "point": [
+                -0.10837556421756744,
+                0.035349488258361816,
+                0.09504467248916626
+              ],
+              "surfaceObject": "V31 formed curved mandible shell"
+            }
+          ],
+          "tailPosition": [
+            0,
+            0.2,
+            -0.31
+          ],
+          "transmissionPosition": [
+            0,
+            0,
+            0
+          ],
+          "distributionPosition": [
+            -0.21,
+            0.29,
+            0.07
+          ]
+        },
+        "anchors": [
+          {
+            "id": "drive",
+            "available": true
+          },
+          {
+            "id": "power",
+            "available": true
+          },
+          {
+            "id": "mind",
+            "available": true
+          }
+        ],
+        "externalControlTargets": [
+          "left-foot",
+          "right-mantle",
+          "compact-articulated-tail",
+          "neck",
+          "jaw"
+        ],
+        "mechanicTargets": [
+          "left-thigh/left-shin",
+          "right-thigh/right-shin"
+        ],
+        "builderTargets": [
+          "left-thigh/left-shin",
+          "right-thigh/right-shin",
+          "right-mantle/right-wing-shield"
+        ],
+        "inventory": [
+          {
+            "id": "maker-support-controls",
+            "eras": [
+              "maker"
+            ],
+            "role": "external support cradle, levers, rods and tension lines"
+          },
+          {
+            "id": "mechanic-wound-drive",
+            "eras": [
+              "mechanic"
+            ],
+            "role": "one mainspring, reduction pair, camshaft and kinematic telescoping knee links"
+          },
+          {
+            "id": "builder-power-actuation",
+            "eras": [
+              "builder"
+            ],
+            "role": "fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated"
+          }
+        ],
+        "inspectionConnections": {
+          "separationMode": "connected",
+          "wing": {
+            "mode": "connected",
+            "endpointDistance": 0.29181284603742025
+          },
+          "cervical": [
+            {
+              "side": "left",
+              "mode": "connected",
+              "endpointDistance": 0.16650825805346703
+            },
+            {
+              "side": "right",
+              "mode": "connected",
+              "endpointDistance": 0.16650825805346703
+            }
+          ],
+          "powerCore": {
+            "mode": "connected",
+            "endpointDistance": 0.2420603399460518
+          },
+          "mechanicSlidingLinks": {
+            "left": 0.1908200550619711,
+            "right": 0.14803737556874144
+          }
+        }
+      },
+      "root": {
+        "x": 0,
+        "z": -0.25,
+        "yaw": 0,
+        "speed": 0
+      },
+      "actualArticulation": {
+        "leg": 0,
+        "wing": 0,
+        "tail": 0,
+        "neck": 0,
+        "jaw": 0
+      },
+      "jawAngleRad": 0,
+      "tailAngleRad": 0,
+      "finite": true,
+      "visibleMeshes": {
+        "maker": 0,
+        "mechanic": 0,
+        "builder": 27
+      },
+      "maker": [
+        {
+          "control": "leg",
+          "target": "left-foot",
+          "position": [
+            0.3700000071525574,
+            0.3097068173885345,
+            -0.2430000099539757
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 7.850462293418876e-17,
+          "hornEndpointErrorM": 6.206335383118183e-17
+        },
+        {
+          "control": "wing",
+          "target": "right-mantle",
+          "position": [
+            -0.419514536857605,
+            0.860346851348877,
+            -0.2910477137193084
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 1.3597399555105182e-16,
+          "hornEndpointErrorM": 0,
+          "declaredSurfaceName": "right swept upper wing load member",
+          "loadedSurfaceName": "right_swept_upper_wing_load_member",
+          "authoredSurfaceOwnerValid": true
+        },
+        {
+          "control": "tail",
+          "target": "compact-articulated-tail",
+          "position": [
+            -0.07,
+            0.8078907823562622,
+            -0.7151945831999184
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 1.2412670766236366e-16,
+          "hornEndpointErrorM": 1.1102230246251565e-16
+        },
+        {
+          "control": "neck",
+          "target": "neck",
+          "position": [
+            -0.16,
+            1.2100000333786012,
+            -0.04200000550597904
+          ],
+          "trackingErrorM": 1.3877787807814457e-17,
+          "rodEndpointErrorM": 8.326672684688674e-17,
+          "hornEndpointErrorM": 2.7755575615628914e-17
+        },
+        {
+          "control": "jaw",
+          "target": "jaw",
+          "position": [
+            -0.10837556421756744,
+            1.5592334842681885,
+            0.3026446709409356
+          ],
+          "trackingErrorM": 0,
+          "rodEndpointErrorM": 0,
+          "hornEndpointErrorM": 1.3877787807814457e-17,
+          "declaredSurfaceName": "V31 formed curved mandible shell",
+          "loadedSurfaceName": "V31_formed_curved_mandible_shell",
+          "authoredSurfaceOwnerValid": true
+        }
+      ],
+      "endpointErrors": {
+        "mechanic-left-knee": 0,
+        "mechanic-left-crank": 0,
+        "builder-left-hip": 1.1102230246251565e-16,
+        "builder-left-knee": 1.3877787807814457e-17,
+        "mechanic-right-knee": 5.721958498152797e-17,
+        "mechanic-right-crank": 6.206335383118183e-17,
+        "builder-right-hip": 1.1102230246251565e-16,
+        "builder-right-knee": 1.3877787807814457e-17,
+        "builder-shoulder": 0,
+        "builder-elbow": 0
+      },
+      "groupSeats": [
+        {
+          "name": "mechanic-lower-transmission",
+          "owner": "body",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "worldPosition": [
+            0,
+            0.6078907823562623,
+            -0.24519458319991827
+          ],
+          "effectiveVisible": false
+        },
+        {
+          "name": "builder-power-distribution-manifold",
+          "owner": "body",
+          "localPosition": [
+            -0.21,
+            0.29,
+            0.07
+          ],
+          "worldPosition": [
+            -0.21,
+            0.8978907823562623,
+            -0.17519458319991826
+          ],
+          "effectiveVisible": true
+        },
+        {
+          "name": "compact-articulated-tail",
+          "owner": "body",
+          "localPosition": [
+            0,
+            0.2,
+            -0.31
+          ],
+          "worldPosition": [
+            0,
+            0.8078907823562622,
+            -0.5551945831999183
+          ],
+          "effectiveVisible": true
+        }
+      ],
+      "materialEraVisibility": {
+        "sourceVisibleMeshCount": 573,
+        "sourceConstructionClasses": {
+          "inherited-passive": 412,
+          "proposed-passive": 125,
+          "later-repair": 1,
+          "advanced-system": 35
+        },
+        "visibleMaterialMeshCounts": {
+          "Neutral / frame": 137,
+          "Neutral / plate": 214,
+          "Neutral / repair": 1,
+          "Neutral / bearing": 142,
+          "Neutral / optic": 2,
+          "Neutral / inner": 33,
+          "Neutral / recess": 4,
+          "Era mechanism iron (proposed)": 13,
+          "Era mechanism bronze (proposed)": 1,
+          "Builder power distribution copper (proposed)": 9,
+          "Era mechanism brass (proposed)": 7,
+          "Neutral / edge": 40,
+          "Builder actuator ceramic (proposed)": 5
+        },
+        "sourceAdvancedMeshesVisible": [
+          "V31_Advanced_optical_aperture_1",
+          "V31_Advanced_optical_aperture_-1",
+          "Processing_crosspiece",
+          "Processing_crosspiece001",
+          "Processing_crosspiece002",
+          "Processing_crosspiece003",
+          "Processing_crosspiece004",
+          "Processing_crosspiece005",
+          "Processing_crosspiece006",
+          "Processing_crosspiece007",
+          "Processing_crosspiece008",
+          "Processing_crosspiece009",
+          "Processing_crosspiece010",
+          "Processing_crosspiece011",
+          "Processing_lattice_rail",
+          "Processing_lattice_rail001",
+          "Processing_lattice_rail002",
+          "Processing_lattice_rail003",
+          "Processing_lattice_rail004",
+          "Processing_lattice_rail005",
+          "Processing_lattice_rail006",
+          "Processing_lattice_rail007",
+          "Processing_lattice_rail008",
+          "Processing_lattice_rail009",
+          "Processing_lattice_rail010",
+          "Processing_lattice_rail011",
+          "Ceramic_cell",
+          "Ceramic_cell001",
+          "Ceramic_cell002",
+          "Insulated_power_route",
+          "Insulated_power_route001",
+          "Power_retaining_strap",
+          "Power_retaining_strap001",
+          "Surge_capacitor",
+          "Surge_capacitor001"
+        ],
+        "proceduralGroupVisibleMeshCounts": {
+          "maker": 0,
+          "mechanic": 0,
+          "builder": 27
+        }
+      },
+      "visibleBounds": {
+        "min": [
+          -0.5002859830856323,
+          0.0019999999999999463,
+          -0.7882113053758765
+        ],
+        "max": [
+          0.5140143632888794,
+          1.7618736600875855,
+          0.48485457990318537
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Discrete runtime samples, not continuous collision, containment, force/support stability or physical simulation.",
+    "Nearest-surface distance reports possible placement gaps; internal placement can require visual inspection.",
+    "No WebGL/material/art acceptance or full mechanism collision screen.",
+    "Historical priorV21_mechanismLayoutV1 is recorded only and is not treated as active metadata."
+  ],
+  "metadata": {
+    "jawSocket": {
+      "coordinateSpace": "gltf-node-local",
+      "point": [
+        -0.10837556421756744,
+        0.035349488258361816,
+        0.09504467248916626
+      ],
+      "schema": 1,
+      "status": "reconstructed external control attachment",
+      "surfaceObject": "V31 formed curved mandible shell"
+    },
+    "ownerSockets": {
+      "wing": {
+        "schema": 1,
+        "coordinateSpace": "gltf-node-local",
+        "point": [
+          -0.1532391607761383,
+          -0.21411478519439697,
+          0.016072288155555725
+        ],
+        "surfaceObject": "right swept upper wing load member",
+        "status": "Inferred passive external-control receiving point; actual exported seating and route need review",
+        "constructionPurpose": "Maker push/pull horn terminates on the existing mantle-owned upper load member near its elbow receiving opening, with nonzero shoulder lever arm; no powered bronze",
+        "source": "V31 reconstructed attachment from actual evaluated passive load frame"
+      },
+      "jaw": {
+        "coordinateSpace": "gltf-node-local",
+        "point": [
+          -0.10837556421756744,
+          0.035349488258361816,
+          0.09504467248916626
+        ],
+        "schema": 1,
+        "status": "reconstructed external control attachment",
+        "surfaceObject": "V31 formed curved mandible shell"
+      }
+    },
+    "activeLayout": null,
+    "historicalLayoutPresent": true,
+    "initialMechanismLayout": {
+      "status": "legacy-placement",
+      "version": null,
+      "makerCradleWidth": 0.62,
+      "makerControlOffsets": [
+        [
+          0.065,
+          0.015,
+          0.045
+        ],
+        [
+          -0.1532391607761383,
+          -0.21411478519439697,
+          0.016072288155555725
+        ],
+        [
+          -0.07,
+          0,
+          -0.16
+        ],
+        [
+          -0.16,
+          0.06,
+          0.02
+        ],
+        [
+          -0.10837556421756744,
+          0.035349488258361816,
+          0.09504467248916626
+        ]
+      ],
+      "makerOwnerSockets": [
+        {
+          "control": "wing",
+          "owner": "right-mantle",
+          "point": [
+            -0.1532391607761383,
+            -0.21411478519439697,
+            0.016072288155555725
+          ],
+          "surfaceObject": "right swept upper wing load member"
+        },
+        {
+          "control": "jaw",
+          "owner": "jaw",
+          "point": [
+            -0.10837556421756744,
+            0.035349488258361816,
+            0.09504467248916626
+          ],
+          "surfaceObject": "V31 formed curved mandible shell"
+        }
+      ],
+      "tailPosition": [
+        0,
+        0.2,
+        -0.31
+      ],
+      "transmissionPosition": [
+        0,
+        0,
+        0
+      ],
+      "distributionPosition": [
+        -0.21,
+        0.29,
+        0.07
+      ]
+    }
+  },
+  "worstFitRiskPerControl": {
+    "leg": null,
+    "wing": null,
+    "tail": null,
+    "neck": null,
+    "jaw": null
+  },
+  "summary": {
+    "scenarioScope": "Three actual era switches with material/visibility inventory only",
+    "sampleCount": 3,
+    "failures": 0,
+    "fitRisks": 0,
+    "physicalProceduralTailCreated": true,
+    "activeLayoutStatus": "legacy-placement"
+  },
+  "executedSources": [
+    {
+      "path": "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/validate-whole-character-v31-era-integration.mjs",
+      "sha256": "963685834bdab0ff9b8ed561d282ad4b6ee222d3a3f72312354f851a85d2c079",
+      "frozenPath": "executed-validate-whole-character-v31-era-integration.mjs"
+    },
+    {
+      "path": "scripts/load-rigid-validation.mjs",
+      "sha256": "a9c08ca44a57695b0db369feca69b9fe3ea41e590f033781397cb2b1fae6ba62",
+      "frozenPath": "executed-load-rigid-validation.mjs"
+    },
+    {
+      "path": "src/scene/era-motion.js",
+      "sha256": "3f916cc2b8122b4095a801f9dabc1b4dd1dc1d18fe88908ed3d891166a202567",
+      "frozenPath": "executed-era-motion.js"
+    },
+    {
+      "path": "src/scene/era-controller.js",
+      "sha256": "b2708180c0f1fccba72b605d2ff7bdcc965d427678ec83a591fce69ba536de57",
+      "frozenPath": "executed-era-controller.js"
+    },
+    {
+      "path": "src/scene/era-mechanisms.js",
+      "sha256": "3bfb92f2e6dc6d033b55b37dfdf030bf36c746c790df9e7f983c7d97500b84e8",
+      "frozenPath": "executed-era-mechanisms.js"
+    },
+    {
+      "path": "src/scene/inspection-pose.js",
+      "sha256": "378e8ee12e80076d8ddc6e9fd368b65a5f2a2c727934b892abbc39e88f3f160c",
+      "frozenPath": "executed-inspection-pose.js"
+    },
+    {
+      "path": "src/scene/cervical-articulation.js",
+      "sha256": "97e1096c3b16c0ce774916471c40a35dc1364d88e74bf3077b07b130a7aaeff9",
+      "frozenPath": "executed-cervical-articulation.js"
+    },
+    {
+      "path": "src/scene/rigid-leg-kinematics.js",
+      "sha256": "5af8f9b7d9d56097ebeab118afe580154e1fa6e7c686b1fffbd3c4e81af8eadd",
+      "frozenPath": "executed-rigid-leg-kinematics.js"
+    },
+    {
+      "path": "src/scene/presence-state.js",
+      "sha256": "8db830ead77a351f5cae41691a2912c66e398c42cce591c513976a7927052fad",
+      "frozenPath": "executed-presence-state.js"
+    }
+  ]
+}

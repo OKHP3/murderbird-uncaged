@@ -1,0 +1,19 @@
+00:00.291  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v30/attempt-form02/murderbird-whole-character-v30.blend"
+Traceback (most recent call last):
+  File "/tmp/v31-head-reconstruction/study05-fit-c.py", line 4, in <module>
+    ROOT=Path('/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged');OUT=Path('/tmp/v31-head-reconstruction/attempt05-fit-c');OUT.mkdir(exist_ok=False);BASE=ROOT/'assets/models/whole-character-v30/attempt-form02/murderbird-whole-character-v30.blend';SRC=ROOT/'scripts/regions/whole-character-v31-head-reconstruction.py';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert sha(BASE)=='207e32fe640fcc5cc9d3bef7bea4e07d302ec5bc06cc6642075df144d295e275';bpy.ops.wm.open_mainfile(filepath=str(BASE));bpy.context.view_layer.update();h=runpy.run_path(str(ROOT/'scripts/build-uncaged-alignment-v7.py'));materials={m.name:h['material_signature'](m) for m in bpy.data.materials};shutil.copyfile(SRC,OUT/'executed-head-reconstruction.py');shutil.copyfile(__file__,OUT/'executed-study.py');result=runpy.run_path(str(OUT/'executed-head-reconstruction.py'))['apply']();after=h['scene_snapshot']();assert materials=={m.name:h['material_signature'](m) for m in bpy.data.materials};bpy.context.preferences.filepaths.save_version=0;native=OUT/'head-reconstruction.blend';bpy.ops.wm.save_as_mainfile(filepath=str(native),check_existing=False);bpy.ops.wm.open_mainfile(filepath=str(native));assert h['scene_snapshot']()==after
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/tmp/v31-head-reconstruction/attempt05-fit-c/executed-head-reconstruction.py", line 211, in apply
+    for which in (0,-1,1):add(f'V31 formed throat receiving guard {which}','head',skull_hood(which),smooth_faces=False)
+                                                                                  ~~~~~~~~~~^^^^^^^
+  File "/tmp/v31-head-reconstruction/attempt05-fit-c/executed-head-reconstruction.py", line 119, in skull_hood
+    return finite_sheet(fn,nu=32,nv=32,wall=.005,reference=lambda p:Vector((p.x,p.y+.035,0)))
+  File "/tmp/v31-head-reconstruction/attempt05-fit-c/executed-head-reconstruction.py", line 37, in finite_sheet
+    u=i/nu;t=j/nv;p=Vector(fn(u,t));du=Vector(fn(min(1,u+.0001),t))-Vector(fn(max(0,u-.0001),t));dv=Vector(fn(u,min(1,t+.0001)))-Vector(fn(u,max(0,t-.0001)));n=du.cross(dv);assert n.length>1e-12;n.normalize()
+                                                                                                                                                                                    ^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: '/tmp/v31-head-reconstruction/study05-fit-c.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

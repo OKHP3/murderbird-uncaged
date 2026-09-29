@@ -1,0 +1,3 @@
+import bpy,json
+from mathutils import Vector
+bpy.ops.wm.open_mainfile(filepath='/tmp/v31-head-reconstruction/attempt05-fit-b/head-reconstruction.blend');bpy.context.view_layer.update();o=bpy.data.objects['V23 cervical 4 directional guard 10'];inv=bpy.data.objects['head'].matrix_world.inverted();v=[inv@(o.matrix_world@x.co) for x in o.data.vertices];print('vertices',len(v),'polys',len(o.data.polygons),'mods',[(m.name,m.type) for m in o.modifiers]);print('bounds',[(min(x[k] for x in v),max(x[k] for x in v)) for k in range(3)]);print('first',[(i,list(v[i]),(v[i].y*v[i].y+v[i].z*v[i].z)**.5) for i in range(0,len(v)//2,25)][:35]);print('facefirst',[list(x.vertices) for x in o.data.polygons[:6]])

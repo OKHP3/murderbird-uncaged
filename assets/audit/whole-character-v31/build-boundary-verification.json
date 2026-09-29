@@ -1,0 +1,50 @@
+{
+  "scope": "Read-only inspection of the already-built local dist directory. This is not a live-site or deployment check.",
+  "releaseManifest": {
+    "path": "dist/release.json",
+    "sha256": "bd217c1c066dc4c52591a83b4bba0cb5fc3607e0c51db8b27a1e79890f9d2510",
+    "bytes": 24153,
+    "revision": "cf93f577688980b2995ad88bf63e024b0e05a8a1",
+    "workingTreeDirty": true,
+    "status": "Published for assessment; artistic acceptance pending.",
+    "manifestEntries": 133
+  },
+  "distManifestIntegrity": {
+    "actualFileCountIncludingReleaseManifest": 134,
+    "manifestedPayloadFileCount": 133,
+    "manifestedPayloadEqualsActualFilesExceptReleaseManifest": true,
+    "missingManifestFiles": [],
+    "unmanifestedPayloadFiles": [],
+    "sizeOrSha256Mismatches": []
+  },
+  "localRuntimeModelSelection": {
+    "sourceCode": "src/scene/presence-exhibit.js:10",
+    "selectedSourcePath": "assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb",
+    "sourceSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+    "distPath": "dist/assets/murderbird-alignment-v9-_aFpjtq5.glb",
+    "distSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+    "distBytes": 4636460,
+    "sourceAndDistByteIdentityVerified": true
+  },
+  "v31AndRestrictedSourceBoundary": {
+    "v31NativeSource": "assets/models/whole-character-v31/attempt-form02/murderbird-whole-character-v31.blend",
+    "v31NativeSha256": "81280c2a7103bc3b85603a5fd108daab5e337842f6a7f7c8e298be5049e07e2a",
+    "v31NativeExistsInDist": false,
+    "blendFilesInDist": [],
+    "distPathsMatchingV31AuditPrivateOrProvenance": [],
+    "jsonFilesInDist": ["release.json"]
+  },
+  "buildAndTestEvidence": {
+    "buildLog": "/tmp/murderbird-v31-build.log",
+    "buildResult": "PASS; Vite reports built in 286ms.",
+    "buildWarning": "Vite reports a minified chunk larger than 500 kB.",
+    "publicationTestLog": "/tmp/murderbird-v31-publication-tests.log",
+    "publicationTestResult": "PASS; 2 tests, 0 failures.",
+    "rerunForThisReadOnlyAudit": false
+  },
+  "limits": [
+    "These checks establish local dist contents and hashes only; they do not establish what is live on GitHub Pages.",
+    "The local selected runtime remains Alignment V9; V31 is not included as the production model.",
+    "The build manifest labels artistic acceptance as pending."
+  ]
+}
