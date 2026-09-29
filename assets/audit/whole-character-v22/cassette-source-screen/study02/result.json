@@ -1,0 +1,1149 @@
+{
+  "sourceSHA256": "1755aacc113746208145f5a52aacddc3918855a80670a7fee669057011eb2860",
+  "baseSHA256": "b3ac4677d2e76a0e08544323306c07f2ed7e61cd381d274a944d8e5b87031d1f",
+  "nativeSHA256": "e558301c3c1231d14074f7a463bed1b354d8577956266a870f2923d2f6dba520",
+  "applyReceipt": {
+    "status": "ONE coarse full-volume cervical cassette proposal, awaiting3actual-pose visual gate",
+    "region": "neck-cassette",
+    "changed": [
+      "V4 cranial inner shell",
+      "V21 recessed breast course backing",
+      "V21 fixed shoulder breast return -1",
+      "V21 fixed shoulder breast return 1",
+      "V21 breast course 01 panel 01",
+      "V21 breast course 01 panel 02",
+      "V21 breast course 01 panel 03",
+      "V21 breast course 01 panel 04"
+    ],
+    "added": [
+      "cervical-root-cover",
+      "cervical-skull-cover",
+      "V22 lower cassette front left",
+      "V22 lower cassette front right",
+      "V22 lower cassette flank left",
+      "V22 lower cassette flank right",
+      "V22 lower cassette nape",
+      "V22 upper cassette front left",
+      "V22 upper cassette front right",
+      "V22 upper cassette flank left",
+      "V22 upper cassette flank right",
+      "V22 upper cassette nape",
+      "V22 root directional joint cover front left",
+      "V22 root directional joint cover front right",
+      "V22 root directional joint cover flank left",
+      "V22 root directional joint cover flank right",
+      "V22 root directional joint cover nape",
+      "V22 intermediate directional joint cover front left",
+      "V22 intermediate directional joint cover front right",
+      "V22 intermediate directional joint cover flank left",
+      "V22 intermediate directional joint cover flank right",
+      "V22 intermediate directional joint cover nape",
+      "V22 skull directional joint cover front left",
+      "V22 skull directional joint cover front right",
+      "V22 skull directional joint cover flank left",
+      "V22 skull directional joint cover flank right",
+      "V22 skull directional joint cover nape"
+    ],
+    "removed": [
+      {
+        "name": "V21 lower swept throat keel",
+        "owner": "neck"
+      },
+      {
+        "name": "V21 upper swept throat keel",
+        "owner": "cervical-upper"
+      },
+      {
+        "name": "V21 lower swept nape return",
+        "owner": "neck"
+      },
+      {
+        "name": "V21 upper swept nape return",
+        "owner": "cervical-upper"
+      },
+      {
+        "name": "V21 ascending root yoke -1",
+        "owner": "neck"
+      },
+      {
+        "name": "V21 ascending root yoke 1",
+        "owner": "neck"
+      },
+      {
+        "name": "V21 upper cervical directional guard -1",
+        "owner": "cervical-upper"
+      },
+      {
+        "name": "V21 upper cervical directional guard 1",
+        "owner": "cervical-upper"
+      },
+      {
+        "name": "V21 linked joint front",
+        "owner": "cervical-joint-cover"
+      },
+      {
+        "name": "V21 linked joint nape",
+        "owner": "cervical-joint-cover"
+      },
+      {
+        "name": "V21 linked joint side -1",
+        "owner": "cervical-joint-cover"
+      },
+      {
+        "name": "V21 linked joint side 1",
+        "owner": "cervical-joint-cover"
+      }
+    ],
+    "primaryPivotChanges": [],
+    "preservedOriginalNodes": 53,
+    "preservedProtectedMeshes": 596,
+    "profile": [
+      [
+        1.245,
+        -0.39,
+        0.035,
+        0.19
+      ],
+      [
+        1.3,
+        -0.365,
+        -0.018,
+        0.166
+      ],
+      [
+        1.38,
+        -0.335,
+        -0.093,
+        0.123
+      ],
+      [
+        1.43,
+        -0.341,
+        -0.125,
+        0.112
+      ],
+      [
+        1.48,
+        -0.369,
+        -0.16,
+        0.11
+      ],
+      [
+        1.55,
+        -0.42,
+        -0.195,
+        0.107
+      ],
+      [
+        1.6,
+        -0.441,
+        -0.23,
+        0.1
+      ],
+      [
+        1.635,
+        -0.425,
+        -0.26,
+        0.098
+      ]
+    ],
+    "wallM": 0.004,
+    "receivingStepM": 0.006,
+    "followers": [
+      {
+        "name": "cervical-root-cover",
+        "parent": "body",
+        "target": "neck",
+        "worldRestNativeM": [
+          0.0,
+          -0.15639999508857727,
+          1.2127999067306519
+        ]
+      },
+      {
+        "name": "cervical-skull-cover",
+        "parent": "cervical-upper",
+        "target": "head",
+        "worldRestNativeM": [
+          0.0,
+          -0.32260000705718994,
+          1.6028000116348267
+        ]
+      }
+    ],
+    "followerRule": "parent-space delta=currentJointQ*inverse(restJointQ); coverQ=slerp(identity,delta,.5)*restCoverQ; no drivers",
+    "construction": "Full shared S-profile lower/upper armor remains. Broad outer covers at root/intermediate/skull receive recessed concentric finite terminals. Transverse journal passages expose actual bearings. Body/door upper skin forms a finite root receiving boundary; cranial INNER shell forms the head receiving socket. Visible head exterior and all primary frame/joints retained.",
+    "limits": [
+      "Authored hidden receiving construction is proposed, not historical evidence.",
+      "Only3actual pose smoke/visual checks; no continuous or whole-model clearance claim.",
+      "Root angular radius transitions are proposed and must be checked with Maker yaw.",
+      "Existing frame/body and head exterior interfaces remain subject to fresh checks."
+    ]
+  },
+  "finiteEvaluatedMeshes": 629,
+  "finiteIssues": [],
+  "solids": [
+    {
+      "name": "V21 breast course 01 panel 01",
+      "closed": true,
+      "volume": 6.930378339971941e-06,
+      "validateRepair": false,
+      "vertices": 576
+    },
+    {
+      "name": "V21 breast course 01 panel 02",
+      "closed": true,
+      "volume": 5.536291500085193e-06,
+      "validateRepair": false,
+      "vertices": 533
+    },
+    {
+      "name": "V21 breast course 01 panel 03",
+      "closed": true,
+      "volume": 5.539727613171872e-06,
+      "validateRepair": false,
+      "vertices": 546
+    },
+    {
+      "name": "V21 breast course 01 panel 04",
+      "closed": true,
+      "volume": 6.937505619574683e-06,
+      "validateRepair": false,
+      "vertices": 586
+    },
+    {
+      "name": "V21 fixed shoulder breast return -1",
+      "closed": true,
+      "volume": 0.000667129669901836,
+      "validateRepair": false,
+      "vertices": 1807
+    },
+    {
+      "name": "V21 fixed shoulder breast return 1",
+      "closed": true,
+      "volume": 0.0006671843890954837,
+      "validateRepair": false,
+      "vertices": 1800
+    },
+    {
+      "name": "V21 recessed breast course backing",
+      "closed": true,
+      "volume": 0.0002776819827805444,
+      "validateRepair": false,
+      "vertices": 4746
+    },
+    {
+      "name": "V22 intermediate directional joint cover flank left",
+      "closed": true,
+      "volume": 8.859423030573057e-05,
+      "validateRepair": false,
+      "vertices": 869
+    },
+    {
+      "name": "V22 intermediate directional joint cover flank right",
+      "closed": true,
+      "volume": 8.85841652878039e-05,
+      "validateRepair": false,
+      "vertices": 869
+    },
+    {
+      "name": "V22 intermediate directional joint cover front left",
+      "closed": true,
+      "volume": 4.6450022280946244e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 intermediate directional joint cover front right",
+      "closed": true,
+      "volume": 4.6445287258355056e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 intermediate directional joint cover nape",
+      "closed": true,
+      "volume": 0.00010488460983052,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 lower cassette flank left",
+      "closed": true,
+      "volume": 9.676414401372107e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 lower cassette flank right",
+      "closed": true,
+      "volume": 9.74273301935124e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 lower cassette front left",
+      "closed": true,
+      "volume": 4.3771329407716787e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 lower cassette front right",
+      "closed": true,
+      "volume": 4.387662570892264e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 lower cassette nape",
+      "closed": true,
+      "volume": 0.00010228280674930182,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 root directional joint cover flank left",
+      "closed": true,
+      "volume": 0.00011516250581685777,
+      "validateRepair": false,
+      "vertices": 839
+    },
+    {
+      "name": "V22 root directional joint cover flank right",
+      "closed": true,
+      "volume": 0.00011513663156104144,
+      "validateRepair": false,
+      "vertices": 839
+    },
+    {
+      "name": "V22 root directional joint cover front left",
+      "closed": true,
+      "volume": 7.909384114239793e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 root directional joint cover front right",
+      "closed": true,
+      "volume": 7.908966695823716e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 root directional joint cover nape",
+      "closed": true,
+      "volume": 3.486694363546962e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 skull directional joint cover flank left",
+      "closed": true,
+      "volume": 6.585928666746436e-05,
+      "validateRepair": false,
+      "vertices": 830
+    },
+    {
+      "name": "V22 skull directional joint cover flank right",
+      "closed": true,
+      "volume": 6.58449942906738e-05,
+      "validateRepair": false,
+      "vertices": 830
+    },
+    {
+      "name": "V22 skull directional joint cover front left",
+      "closed": true,
+      "volume": 3.453636436948535e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 skull directional joint cover front right",
+      "closed": true,
+      "volume": 3.453303599853541e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 skull directional joint cover nape",
+      "closed": true,
+      "volume": 8.327122051907239e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 upper cassette flank left",
+      "closed": true,
+      "volume": 5.820094454824604e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 upper cassette flank right",
+      "closed": true,
+      "volume": 5.853925282285354e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 upper cassette front left",
+      "closed": true,
+      "volume": 3.409173346465751e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 upper cassette front right",
+      "closed": true,
+      "volume": 3.414202220525338e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V22 upper cassette nape",
+      "closed": true,
+      "volume": 8.228861615014633e-05,
+      "validateRepair": false,
+      "vertices": 798
+    },
+    {
+      "name": "V4 cranial inner shell",
+      "closed": true,
+      "volume": 0.0006233685108919362,
+      "validateRepair": false,
+      "vertices": 769
+    }
+  ],
+  "poses": [
+    {
+      "label": "rest",
+      "totalPitch": 0,
+      "neckYawNativeZ": 0,
+      "headLocalX": 0,
+      "pairs": [
+        [
+          "V22 lower cassette front left",
+          "V21 breast course 01 panel 02",
+          56
+        ],
+        [
+          "V22 lower cassette front left",
+          "V21 recessed breast course backing",
+          52
+        ],
+        [
+          "V22 lower cassette front left",
+          "V22 root directional joint cover front left",
+          53
+        ],
+        [
+          "V22 lower cassette front right",
+          "V21 breast course 01 panel 03",
+          66
+        ],
+        [
+          "V22 lower cassette front right",
+          "V21 recessed breast course backing",
+          56
+        ],
+        [
+          "V22 lower cassette front right",
+          "V22 root directional joint cover front right",
+          56
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover flank left",
+          122
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover flank right",
+          148
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover nape",
+          286
+        ],
+        [
+          "V22 root directional joint cover flank left",
+          "V21 neck root shoulder support bridge -1",
+          114
+        ],
+        [
+          "V22 root directional joint cover flank right",
+          "V21 neck root shoulder support bridge 1",
+          114
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 lower cassette flank left",
+          12
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 lower cassette front left",
+          302
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 upper cassette flank left",
+          104
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 upper cassette front left",
+          248
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 lower cassette flank right",
+          20
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 lower cassette front right",
+          290
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 upper cassette flank right",
+          96
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 upper cassette front right",
+          240
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 lower cassette flank left",
+          298
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 lower cassette nape",
+          16
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 upper cassette flank left",
+          182
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 lower cassette flank right",
+          294
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 lower cassette nape",
+          16
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 upper cassette flank right",
+          176
+        ],
+        [
+          "V22 intermediate directional joint cover nape",
+          "V22 lower cassette nape",
+          302
+        ],
+        [
+          "V22 skull directional joint cover front left",
+          "V22 upper cassette front left",
+          108
+        ],
+        [
+          "V22 skull directional joint cover front right",
+          "V22 upper cassette front right",
+          114
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "Continuous temporal shell -1",
+          40
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V21 cervical upper load bow -1",
+          96
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V22 upper cassette flank left",
+          302
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V22 upper cassette front left",
+          70
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "Continuous temporal shell 1",
+          40
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V21 cervical upper load bow 1",
+          90
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V22 upper cassette flank right",
+          258
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V22 upper cassette front right",
+          66
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V21 cervical upper load bow -1",
+          44
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V21 cervical upper load bow 1",
+          46
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette flank left",
+          52
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette flank right",
+          48
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette nape",
+          279
+        ]
+      ]
+    },
+    {
+      "label": "maker",
+      "totalPitch": -0.14,
+      "neckYawNativeZ": -0.45,
+      "headLocalX": 0,
+      "pairs": [
+        [
+          "V22 lower cassette front right",
+          "V21 recessed breast course backing",
+          58
+        ],
+        [
+          "V22 lower cassette flank left",
+          "V22 root directional joint cover flank left",
+          408
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover flank right",
+          133
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover nape",
+          320
+        ],
+        [
+          "V22 root directional joint cover flank left",
+          "V21 neck root shoulder support bridge -1",
+          142
+        ],
+        [
+          "V22 root directional joint cover flank right",
+          "V21 breast internal curved spine 1",
+          26
+        ],
+        [
+          "V22 root directional joint cover flank right",
+          "V21 neck root shoulder support bridge 1",
+          80
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 lower cassette flank left",
+          12
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 lower cassette front left",
+          296
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 upper cassette flank left",
+          104
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 upper cassette front left",
+          246
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 lower cassette flank right",
+          12
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 lower cassette front right",
+          293
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 upper cassette flank right",
+          92
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 upper cassette front right",
+          242
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 lower cassette flank left",
+          300
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 lower cassette nape",
+          12
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 upper cassette flank left",
+          176
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 lower cassette flank right",
+          290
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 lower cassette nape",
+          16
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 upper cassette flank right",
+          172
+        ],
+        [
+          "V22 intermediate directional joint cover nape",
+          "V22 lower cassette nape",
+          303
+        ],
+        [
+          "V22 skull directional joint cover front left",
+          "V22 upper cassette front left",
+          108
+        ],
+        [
+          "V22 skull directional joint cover front right",
+          "V22 upper cassette front right",
+          114
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "Continuous temporal shell -1",
+          40
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V21 cervical upper load bow -1",
+          96
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V22 upper cassette flank left",
+          302
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V22 upper cassette front left",
+          70
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "Continuous temporal shell 1",
+          40
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V21 cervical upper load bow 1",
+          90
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V22 upper cassette flank right",
+          258
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V22 upper cassette front right",
+          66
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V21 cervical upper load bow -1",
+          44
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V21 cervical upper load bow 1",
+          46
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette flank left",
+          52
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette flank right",
+          48
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette nape",
+          280
+        ]
+      ]
+    },
+    {
+      "label": "contact",
+      "totalPitch": 0.65,
+      "neckYawNativeZ": 0,
+      "headLocalX": -0.731,
+      "pairs": [
+        [
+          "V22 lower cassette front left",
+          "V21 breast course 01 panel 02",
+          40
+        ],
+        [
+          "V22 lower cassette front left",
+          "V21 recessed breast course backing",
+          96
+        ],
+        [
+          "V22 lower cassette front left",
+          "V22 root directional joint cover front left",
+          286
+        ],
+        [
+          "V22 lower cassette front right",
+          "V21 breast course 01 panel 03",
+          41
+        ],
+        [
+          "V22 lower cassette front right",
+          "V21 recessed breast course backing",
+          95
+        ],
+        [
+          "V22 lower cassette front right",
+          "V22 root directional joint cover front right",
+          294
+        ],
+        [
+          "V22 lower cassette flank left",
+          "V22 root directional joint cover front left",
+          20
+        ],
+        [
+          "V22 lower cassette flank right",
+          "V22 root directional joint cover front right",
+          20
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover flank left",
+          76
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover flank right",
+          34
+        ],
+        [
+          "V22 lower cassette nape",
+          "V22 root directional joint cover nape",
+          14
+        ],
+        [
+          "V22 upper cassette flank left",
+          "Continuous temporal shell -1",
+          126
+        ],
+        [
+          "V22 upper cassette flank left",
+          "Swept temporal lamina -1 4 0",
+          128
+        ],
+        [
+          "V22 upper cassette flank left",
+          "Swept temporal lamina -1 4 1",
+          76
+        ],
+        [
+          "V22 upper cassette flank left",
+          "V4 cranial inner shell",
+          91
+        ],
+        [
+          "V22 upper cassette flank right",
+          "Continuous temporal shell 1",
+          122
+        ],
+        [
+          "V22 upper cassette flank right",
+          "Swept temporal lamina 1 4 0",
+          128
+        ],
+        [
+          "V22 upper cassette flank right",
+          "Swept temporal lamina 1 4 1",
+          78
+        ],
+        [
+          "V22 upper cassette flank right",
+          "V4 cranial inner shell",
+          93
+        ],
+        [
+          "V22 upper cassette nape",
+          "Swept temporal lamina -1 3 1",
+          156
+        ],
+        [
+          "V22 upper cassette nape",
+          "Swept temporal lamina -1 3 2",
+          146
+        ],
+        [
+          "V22 upper cassette nape",
+          "Swept temporal lamina -1 4 1",
+          88
+        ],
+        [
+          "V22 upper cassette nape",
+          "Swept temporal lamina 1 3 1",
+          148
+        ],
+        [
+          "V22 upper cassette nape",
+          "Swept temporal lamina 1 3 2",
+          118
+        ],
+        [
+          "V22 upper cassette nape",
+          "Swept temporal lamina 1 4 1",
+          84
+        ],
+        [
+          "V22 upper cassette nape",
+          "V4 cranial inner shell",
+          355
+        ],
+        [
+          "V22 root directional joint cover flank left",
+          "V21 neck root shoulder support bridge -1",
+          82
+        ],
+        [
+          "V22 root directional joint cover flank right",
+          "V21 neck root shoulder support bridge 1",
+          82
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V21 breast course 01 panel 02",
+          124
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V21 cervical upper load bow -1",
+          40
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V21 recessed breast course backing",
+          143
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 lower cassette flank left",
+          28
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 lower cassette front left",
+          282
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 skull directional joint cover nape",
+          224
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 upper cassette flank left",
+          122
+        ],
+        [
+          "V22 intermediate directional joint cover front left",
+          "V22 upper cassette front left",
+          240
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V21 breast course 01 panel 03",
+          118
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V21 cervical upper load bow 1",
+          40
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V21 recessed breast course backing",
+          130
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 lower cassette flank right",
+          28
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 lower cassette front right",
+          282
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 skull directional joint cover nape",
+          184
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 upper cassette flank right",
+          110
+        ],
+        [
+          "V22 intermediate directional joint cover front right",
+          "V22 upper cassette front right",
+          236
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "Swept temporal lamina -1 4 0",
+          104
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 lower cassette flank left",
+          196
+        ],
+        [
+          "V22 intermediate directional joint cover flank left",
+          "V22 upper cassette flank left",
+          202
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "Swept temporal lamina 1 4 0",
+          96
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 lower cassette flank right",
+          228
+        ],
+        [
+          "V22 intermediate directional joint cover flank right",
+          "V22 upper cassette flank right",
+          204
+        ],
+        [
+          "V22 intermediate directional joint cover nape",
+          "Swept temporal lamina 1 2 2",
+          10
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "Continuous temporal shell -1",
+          38
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V21 cervical upper load bow -1",
+          4
+        ],
+        [
+          "V22 skull directional joint cover flank left",
+          "V22 upper cassette flank left",
+          264
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "Continuous temporal shell 1",
+          48
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V21 cervical upper load bow 1",
+          4
+        ],
+        [
+          "V22 skull directional joint cover flank right",
+          "V22 upper cassette flank right",
+          192
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V21 cervical upper load bow -1",
+          110
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V21 cervical upper load bow 1",
+          112
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette flank left",
+          98
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette flank right",
+          80
+        ],
+        [
+          "V22 skull directional joint cover nape",
+          "V22 upper cassette nape",
+          267
+        ]
+      ]
+    }
+  ],
+  "limits": [
+    "Only3discrete actual relationships, not whole motion or continuous clearance.",
+    "Changed25skins vs adjacent scoped owners; same-owner overlaps not screened.",
+    "Primitive Boolean receiving cavity geometry is a coarse construction proposal."
+  ]
+}

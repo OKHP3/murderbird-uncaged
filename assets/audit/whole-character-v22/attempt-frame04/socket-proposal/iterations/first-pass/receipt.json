@@ -1,0 +1,612 @@
+{
+  "coordinateConversion": "Native XYZ to glTF owner-local XYZ: (native X, native Z, -native Y); all recorded proposal points are owner-local.",
+  "frame04Mapping": {
+    "fixedRules": [
+      "Points in left/right-foot subtrees remain fixed.",
+      "Points in head subtree use the declared rigid head delta.",
+      "Other mapped points use continuous frame_point including shoulder tuck and fore/aft/neck terms."
+    ],
+    "formula": "Exact continuous frame_point mapping transcribed from the SHA-pinned frame04 executed-builder.py; point targets first convert source glTF owner-local to source world native, map, then convert through candidate owner inverse to glTF owner-local.",
+    "parameters": {
+      "bodyWidth": 0.9,
+      "footFixedTop": 0.33,
+      "headForward": 0.065,
+      "headRigidDelta": [
+        0.0,
+        -0.04259999841451645,
+        0.02280000038444996
+      ],
+      "hipSource": 0.875,
+      "legScale": 0.84,
+      "neckRise": 0.11,
+      "shoulderTuck": 0.032,
+      "torsoDrop": 0.0872
+    }
+  },
+  "historicalSourceMapping": {
+    "cervical": [
+      {
+        "bodyPoint": [
+          0.13500000536441803,
+          0.39990919828414917,
+          0.2247767299413681
+        ],
+        "neckPoint": [
+          0.07800000160932541,
+          0.10700011253356934,
+          0.0650000125169754
+        ],
+        "side": "left"
+      },
+      {
+        "bodyPoint": [
+          -0.13500000536441803,
+          0.39990919828414917,
+          0.2247767299413681
+        ],
+        "neckPoint": [
+          -0.07800000160932541,
+          0.10699999332427979,
+          0.0650000125169754
+        ],
+        "side": "right"
+      }
+    ],
+    "cervicalSocketProvenanceV21": {
+      "base": {
+        "bytes": 1860113,
+        "path": "assets/models/whole-character-v21/attempt-envelope03/murderbird-whole-character-v21.blend",
+        "sha256": "720c343645ef2de298a50e53c82fad66448c187b1eaf9311de2514cac079f280"
+      },
+      "inheritedProvenance": "Other layout fields retain the original envelope03 derivation; refreshed fields use this composed frame.",
+      "jointConstruction": {
+        "bytes": 11901,
+        "path": "assets/audit/whole-character-v21/attempt-construction06/executed-joint-clearance.py",
+        "sha256": "a8d35cf4cf3923e969f0b9cb6c7f4665baa9bd56a63a373fb9bf94ce1dd2e7fa"
+      },
+      "refreshedFields": [
+        "makerControlOffsets.neck",
+        "cervical"
+      ],
+      "status": "proposed attachment centres, not engineering or moving clearance acceptance"
+    },
+    "coordinateSpace": "glTF owner-local metres; no object scale applied to runtime mechanisms",
+    "distributionPosition": [
+      -0.210023463,
+      0.255199969,
+      0.077
+    ],
+    "limits": [
+      "Sockets are transformed source placements, not proven bearing seats.",
+      "The Mechanic gearbox retains its rigid internal spacing; only its origin follows this contract.",
+      "Maker floor rack and fixed guide support remain independent external apparatus.",
+      "Advanced conduit routing still requires visual review against the revised body."
+    ],
+    "makerControlOffsets": {
+      "jaw": [
+        -0.180000007,
+        -0.059999943,
+        0.199999988
+      ],
+      "leg": [
+        0.084499985,
+        0.020053774,
+        0.056621544
+      ],
+      "neck": [
+        -0.08200008422136307,
+        0.15499985218048096,
+        0.06999999284744263
+      ],
+      "tail": [
+        -0.070686989,
+        0.0,
+        -0.150400013
+      ],
+      "wing": [
+        -0.106400013,
+        -0.093999982,
+        0.100000001
+      ]
+    },
+    "makerCradleWidth": 0.616000012,
+    "sourceMapping": {
+      "path": "assets/audit/whole-character-v20/attempt-proportions02/executed-proportions.py",
+      "sha256": "31fc8d2cb1626570403e823eb1d97ac8b763e6849a00660a9ee58dff4163cd00"
+    },
+    "sourceRigContract": {
+      "path": "assets/audit/whole-character-v20/attempt-proportions02/rig-shape-contract.json",
+      "sha256": "077c101cdd7632d97166055bb501f526e4763f9e1acc77cd413d10ccf3e9d096"
+    },
+    "status": "Mapped attachment proposal; actual hardware fit and movement remain subject to review",
+    "tailPosition": [
+      0.0,
+      0.176000059,
+      -0.29506883
+    ],
+    "transmissionPosition": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "version": 1
+  },
+  "inputs": {
+    "baseNative": {
+      "bytes": 2739538,
+      "path": "assets/models/whole-character-v21/attempt-construction06/murderbird-whole-character-v21.blend",
+      "sha256": "79ad3e368e7b75edbbc758b1264a1ccaf34f284c6ca185ee8441875576a6f54c"
+    },
+    "frame04Builder": {
+      "bytes": 10355,
+      "path": "assets/audit/whole-character-v22/attempt-frame04/executed-builder.py",
+      "sha256": "e454aa779470ec27a80941ca30ed6fbadb718ac4c31a2e0f66ef9cf09766f818"
+    },
+    "frame04BuilderReceipt": {
+      "bytes": 35826,
+      "path": "assets/audit/whole-character-v22/attempt-frame04/receipt.json",
+      "sha256": "384a7662cb697418eb56d43b910ed6d5624b787f7aea1ce2f785aa1f16249611"
+    },
+    "frame04Native": {
+      "bytes": 2688339,
+      "path": "assets/models/whole-character-v22/attempt-frame04/murderbird-whole-character-v22.blend",
+      "sha256": "b3ac4677d2e76a0e08544323306c07f2ed7e61cd381d274a944d8e5b87031d1f"
+    }
+  },
+  "limits": [
+    "Proposal remains a separate JSON artifact; neither native model nor runtime was modified.",
+    "Raw ring means identify authored geometric centers only; no mount surface, bearing fit, fastener, swept clearance, force path, or era-specific completeness is established.",
+    "Unchanged offsets remain historical source values where the requested owner tree is rigid; no broader runtime socket audit is implied."
+  ],
+  "proposal": {
+    "cervical": [
+      {
+        "bodyPoint": [
+          0.12150000780820847,
+          0.39990901947021484,
+          0.20679457485675812
+        ],
+        "neckPoint": [
+          0.0727425143122673,
+          0.14903593063354492,
+          0.04437561333179474
+        ],
+        "side": "left"
+      },
+      {
+        "bodyPoint": [
+          -0.12150000780820847,
+          0.3999091386795044,
+          0.20679454505443573
+        ],
+        "neckPoint": [
+          -0.0727425143122673,
+          0.14903581142425537,
+          0.04437561333179474
+        ],
+        "side": "right"
+      }
+    ],
+    "cervicalSocketProvenanceV21": {
+      "base": {
+        "bytes": 1860113,
+        "path": "assets/models/whole-character-v21/attempt-envelope03/murderbird-whole-character-v21.blend",
+        "sha256": "720c343645ef2de298a50e53c82fad66448c187b1eaf9311de2514cac079f280"
+      },
+      "inheritedProvenance": "Other layout fields retain the original envelope03 derivation; refreshed fields use this composed frame.",
+      "jointConstruction": {
+        "bytes": 11901,
+        "path": "assets/audit/whole-character-v21/attempt-construction06/executed-joint-clearance.py",
+        "sha256": "a8d35cf4cf3923e969f0b9cb6c7f4665baa9bd56a63a373fb9bf94ce1dd2e7fa"
+      },
+      "refreshedFields": [
+        "makerControlOffsets.neck",
+        "cervical"
+      ],
+      "status": "proposed attachment centres, not engineering or moving clearance acceptance"
+    },
+    "coordinateSpace": "glTF owner-local metres; no object scale applied to runtime mechanisms",
+    "distributionPosition": [
+      -0.18861153721809387,
+      0.2551999092102051,
+      0.07084000110626221
+    ],
+    "limits": [
+      "Sockets are transformed source placements, not proven bearing seats.",
+      "The Mechanic gearbox retains its rigid internal spacing; only its origin follows this contract.",
+      "Maker floor rack and fixed guide support remain independent external apparatus.",
+      "Advanced conduit routing still requires visual review against the revised body."
+    ],
+    "makerControlOffsets": {
+      "jaw": [
+        -0.180000007,
+        -0.059999943,
+        0.199999988
+      ],
+      "leg": [
+        0.084499985,
+        0.020053774,
+        0.056621544
+      ],
+      "neck": [
+        -0.07855648547410965,
+        0.21589231491088867,
+        0.04440000653266907
+      ],
+      "tail": [
+        -0.070686989,
+        0.0,
+        -0.150400013
+      ],
+      "wing": [
+        -0.09114477038383484,
+        -0.10716104507446289,
+        0.09439896047115326
+      ]
+    },
+    "makerCradleWidth": 0.5289999996022339,
+    "sourceMapping": {
+      "path": "assets/audit/whole-character-v20/attempt-proportions02/executed-proportions.py",
+      "sha256": "31fc8d2cb1626570403e823eb1d97ac8b763e6849a00660a9ee58dff4163cd00"
+    },
+    "sourceRigContract": {
+      "path": "assets/audit/whole-character-v20/attempt-proportions02/rig-shape-contract.json",
+      "sha256": "077c101cdd7632d97166055bb501f526e4763f9e1acc77cd413d10ccf3e9d096"
+    },
+    "status": "Mapped attachment proposal; actual hardware fit and movement remain subject to review",
+    "tailPosition": [
+      0.0,
+      0.17600005865097046,
+      -0.2714633345603943
+    ],
+    "transmissionPosition": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "version": 1
+  },
+  "proposalArtifact": {
+    "bytes": 3122,
+    "path": "assets/audit/whole-character-v22/attempt-frame04/socket-proposal/mechanism-layout-proposal.json",
+    "sha256": "503b78bd5ab99b042562bdf8a216e6a1e062d70fcd8373c4f8a3d6fad94a54d1"
+  },
+  "source": {
+    "bytes": 15479,
+    "path": "assets/audit/whole-character-v22/attempt-frame04/socket-proposal/executed-derive-mechanism-layout-v22.py",
+    "sha256": "5f11a1f3591da7698a9ebe88a49a1b7728c5694030abc7e47b2d33b4feccf749"
+  },
+  "status": "read-only socket derivation proposal; not copied to model metadata, not a clearance or functional-fit result",
+  "witnesses": [
+    {
+      "field": "makerControlOffsets.leg",
+      "owner": "left-foot",
+      "status": "preserved source local offset because its target tree is rigid under the frame04 mapping"
+    },
+    {
+      "field": "makerControlOffsets.tail",
+      "owner": "compact-articulated-tail",
+      "status": "preserved source local offset because its target tree is rigid under the frame04 mapping"
+    },
+    {
+      "field": "makerControlOffsets.jaw",
+      "owner": "jaw",
+      "status": "preserved source local offset because its target tree is rigid under the frame04 mapping"
+    },
+    {
+      "field": "makerControlOffsets.wing",
+      "mappedWorldNative": [
+        -0.3574201464653015,
+        -0.03727895766496658,
+        1.1523005962371826
+      ],
+      "mappingMode": "frame",
+      "owner": "right-mantle",
+      "proposalOwnerLocalGltf": [
+        -0.09114477038383484,
+        -0.10716104507446289,
+        0.09439896047115326
+      ],
+      "proposalOwnerLocalNative": [
+        -0.09114477038383484,
+        -0.09439896047115326,
+        -0.10716104507446289
+      ],
+      "sourceOwnerLocalGltf": [
+        -0.106400013,
+        -0.093999982,
+        0.100000001
+      ],
+      "sourceOwnerLocalNative": [
+        -0.1064000129699707,
+        -0.10000000149011612,
+        -0.09399998188018799
+      ],
+      "sourceWorldNative": [
+        -0.43268904089927673,
+        -0.04052060469985008,
+        1.239500641822815
+      ]
+    },
+    {
+      "field": "makerControlOffsets.neck",
+      "oppositeJournalCenter": {
+        "gltfOwnerLocalPoint": [
+          0.07855652272701263,
+          0.21589231491088867,
+          0.04440000653266907
+        ],
+        "mesh": "V21 intermediate passive journal 1",
+        "method": "Arithmetic centroid of the source mesh vertices in the specified authored section; this is a centerline proposal, not a fitted mounting face.",
+        "nativeOwnerLocalCenter": [
+          0.07855652272701263,
+          -0.04440000653266907,
+          0.21589231491088867
+        ],
+        "nativeWorldCenter": [
+          0.07855652272701263,
+          -0.20080000162124634,
+          1.4286922216415405
+        ],
+        "owner": "neck",
+        "ringIndexZeroBased": null,
+        "sampleCount": 192
+      },
+      "owner": "neck",
+      "selectedMesh": "V21 intermediate passive journal -1",
+      "selectedMeshCenter": {
+        "gltfOwnerLocalPoint": [
+          -0.07855648547410965,
+          0.21589231491088867,
+          0.04440000653266907
+        ],
+        "mesh": "V21 intermediate passive journal -1",
+        "method": "Arithmetic centroid of the source mesh vertices in the specified authored section; this is a centerline proposal, not a fitted mounting face.",
+        "nativeOwnerLocalCenter": [
+          -0.07855648547410965,
+          -0.04440000653266907,
+          0.21589231491088867
+        ],
+        "nativeWorldCenter": [
+          -0.07855648547410965,
+          -0.20080000162124634,
+          1.4286922216415405
+        ],
+        "owner": "neck",
+        "ringIndexZeroBased": null,
+        "sampleCount": 192
+      },
+      "status": "proposal sampled from the full source mesh centroid, matching the V21 derivation method"
+    },
+    {
+      "field": "tailPosition",
+      "mappedWorldNative": [
+        0.0,
+        0.26665791869163513,
+        0.9688908457756042
+      ],
+      "mappingMode": "frame",
+      "owner": "body",
+      "proposalOwnerLocalGltf": [
+        0.0,
+        0.17600005865097046,
+        -0.2714633345603943
+      ],
+      "proposalOwnerLocalNative": [
+        0.0,
+        0.2714633345603943,
+        0.17600005865097046
+      ],
+      "sourceOwnerLocalGltf": [
+        0.0,
+        0.176000059,
+        -0.29506883
+      ],
+      "sourceOwnerLocalNative": [
+        0.0,
+        0.2950688302516937,
+        0.17600005865097046
+      ],
+      "sourceWorldNative": [
+        0.0,
+        0.2898455560207367,
+        1.0560908317565918
+      ]
+    },
+    {
+      "field": "distributionPosition",
+      "mappedWorldNative": [
+        -0.18861153721809387,
+        -0.07564541697502136,
+        1.0480906963348389
+      ],
+      "mappingMode": "frame",
+      "owner": "body",
+      "proposalOwnerLocalGltf": [
+        -0.18861153721809387,
+        0.2551999092102051,
+        0.07084000110626221
+      ],
+      "proposalOwnerLocalNative": [
+        -0.18861153721809387,
+        -0.07084000110626221,
+        0.2551999092102051
+      ],
+      "sourceOwnerLocalGltf": [
+        -0.210023463,
+        0.255199969,
+        0.077
+      ],
+      "sourceOwnerLocalNative": [
+        -0.21002346277236938,
+        -0.07699999958276749,
+        0.25519996881484985
+      ],
+      "sourceWorldNative": [
+        -0.21002346277236938,
+        -0.08222328126430511,
+        1.1352907419204712
+      ]
+    },
+    {
+      "field": "transmissionPosition",
+      "mappedWorldNative": [
+        0.0,
+        -0.00480541680008173,
+        0.7928907871246338
+      ],
+      "mappingMode": "frame",
+      "owner": "body",
+      "proposalOwnerLocalGltf": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "proposalOwnerLocalNative": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceOwnerLocalGltf": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceOwnerLocalNative": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceWorldNative": [
+        0.0,
+        -0.005223278887569904,
+        0.8800907731056213
+      ]
+    },
+    {
+      "field": "cervical",
+      "sides": [
+        {
+          "bodyPoint": {
+            "gltfOwnerLocalPoint": [
+              0.12150000780820847,
+              0.39990901947021484,
+              0.20679457485675812
+            ],
+            "mesh": "V21 neck root breast support bridge 1",
+            "method": "Arithmetic centroid of the source mesh vertices in the specified authored section; this is a centerline proposal, not a fitted mounting face.",
+            "nativeOwnerLocalCenter": [
+              0.12150000780820847,
+              -0.20679457485675812,
+              0.39990901947021484
+            ],
+            "nativeWorldCenter": [
+              0.12150000780820847,
+              -0.21159999072551727,
+              1.1927998065948486
+            ],
+            "owner": "body",
+            "ringIndexZeroBased": 1,
+            "sampleCount": 16
+          },
+          "neckPoint": {
+            "gltfOwnerLocalPoint": [
+              0.0727425143122673,
+              0.14903593063354492,
+              0.04437561333179474
+            ],
+            "mesh": "V21 cervical root load bow 1",
+            "method": "Arithmetic centroid of the source mesh vertices in the specified authored section; this is a centerline proposal, not a fitted mounting face.",
+            "nativeOwnerLocalCenter": [
+              0.0727425143122673,
+              -0.04437561333179474,
+              0.14903593063354492
+            ],
+            "nativeWorldCenter": [
+              0.0727425143122673,
+              -0.200775608420372,
+              1.3618358373641968
+            ],
+            "owner": "neck",
+            "ringIndexZeroBased": 2,
+            "sampleCount": 20
+          },
+          "side": "left"
+        },
+        {
+          "bodyPoint": {
+            "gltfOwnerLocalPoint": [
+              -0.12150000780820847,
+              0.3999091386795044,
+              0.20679454505443573
+            ],
+            "mesh": "V21 neck root breast support bridge -1",
+            "method": "Arithmetic centroid of the source mesh vertices in the specified authored section; this is a centerline proposal, not a fitted mounting face.",
+            "nativeOwnerLocalCenter": [
+              -0.12150000780820847,
+              -0.20679454505443573,
+              0.3999091386795044
+            ],
+            "nativeWorldCenter": [
+              -0.12150000780820847,
+              -0.21159996092319489,
+              1.1927999258041382
+            ],
+            "owner": "body",
+            "ringIndexZeroBased": 1,
+            "sampleCount": 16
+          },
+          "neckPoint": {
+            "gltfOwnerLocalPoint": [
+              -0.0727425143122673,
+              0.14903581142425537,
+              0.04437561333179474
+            ],
+            "mesh": "V21 cervical root load bow -1",
+            "method": "Arithmetic centroid of the source mesh vertices in the specified authored section; this is a centerline proposal, not a fitted mounting face.",
+            "nativeOwnerLocalCenter": [
+              -0.0727425143122673,
+              -0.04437561333179474,
+              0.14903581142425537
+            ],
+            "nativeWorldCenter": [
+              -0.0727425143122673,
+              -0.200775608420372,
+              1.3618357181549072
+            ],
+            "owner": "neck",
+            "ringIndexZeroBased": 2,
+            "sampleCount": 20
+          },
+          "side": "right"
+        }
+      ],
+      "status": "proposed centers from actual frame04 raw section vertices; no fit/contact proof"
+    },
+    {
+      "baseCradleWidthM": 0.616000012,
+      "baseHipSpacingM": 0.550000011920929,
+      "field": "makerCradleWidth",
+      "frame04HipSpacingM": 0.46299999952316284,
+      "method": "candidate hip center spacing + retained base margin",
+      "proposalWidthM": 0.5289999996022339,
+      "retainedSupportMarginM": 0.06600000007907103,
+      "status": "width-only layout proposal; support contact/fit not tested"
+    },
+    {
+      "field": "makerControlOffsets.leg",
+      "runtimeTarget": "left-foot",
+      "status": "preserved; target subtree remains at fixed world pose"
+    },
+    {
+      "field": "makerControlOffsets.tail",
+      "runtimeTarget": "compact-articulated-tail",
+      "status": "preserved target-local point; tail group origin above is separately re-mapped"
+    },
+    {
+      "field": "makerControlOffsets.jaw",
+      "runtimeTarget": "jaw",
+      "status": "preserved; head/jaw subtree receives rigid translation"
+    }
+  ]
+}

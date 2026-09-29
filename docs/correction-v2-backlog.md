@@ -104,3 +104,20 @@ The regional assignments above are complete for this checkpoint. [V18 attempt01]
 - F10 has a fresh local build/boundary pass, with 134 emitted files, studies excluded and no new publication. This does not accept the artwork.
 
 The changed work remains preserved in one worktree. The next integration must explicitly scope any necessary hinge/pivot change; retaining 52 pivots is not a permanent creative requirement.
+
+## V22 checkpoint — September 29, 2026
+
+This updates the current work state without changing historical receipts or inspector scores. See [V22 construction checkpoint](whole-character-v22-checkpoint.md) and the local comparison gallery at `http://127.0.0.1:5183/assets/audit/whole-character-v22/index.html`.
+
+| Finding | Current evidence and disposition |
+| --- | --- |
+| F01 | OPEN. Frame04 changes torso/neck/leg proportions; Cassette06 restores neck coverage but has cuff-like joints, a lateral gap and moving surface crossings. Neither is an accepted foundation. |
+| F02 | OPEN. Visible head geometry is retained during this scoped pass; the characteristic bill/head relationship still needs correction. |
+| F03 | OPEN. Shoulder roots tuck inward in Frame04; the neck/breast/mantle envelope remains visually disconnected. Restricted left-side rig is preserved. |
+| F04 | OPEN. Formed leg channels and tapered guards replace swollen rails. Feet and round bearings remain exact. No V22 dynamic support/landing claim. |
+| F05/F06 | GATED. No finished regional surfacing or new era materials applied over unresolved geometry. |
+| F07/F08 | Prior bounded implementation evidence retained. Thirteen targeted runtime regressions pass on retained V21 plus optional receiver fixtures. V22 has no browser derivative or final-candidate acting review. |
+| F09 | Prior label evidence retained; V22 exterior inspection, separation and reassembly remain NOT VERIFIED. |
+| F10 | Current local modified-tree build and dynamic publication boundary PASS. No V22 models/studies are in distribution. No remote CI/deployment claim. |
+
+Likeness remains below target in all three eras. No new numeric visual score or owner acceptance is inferred from these checks.
