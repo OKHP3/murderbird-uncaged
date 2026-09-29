@@ -1,13 +1,21 @@
-/** Verify the explicit exhibit/folio release; the review has its own allowlist. */
+/** Verify the V37 production release, story media, and complete dist allowlist. */
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {assertPublicationBoundary} from './publication-boundary.mjs';
+
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
-const alignmentVersion = process.env.UNCAGED_ALIGNMENT_VERSION || 'v9';
-assert(['v4', 'v5', 'v6', 'v7', 'v8', 'v9'].includes(alignmentVersion), 'Only the versioned v4/v5/v6/v7/v8/v9 runtime contracts are supported.');
-const modelDirectory = `assets/models/uncaged-alignment-${alignmentVersion}`;
+const manifestPath = 'assets/review/production-v37.json';
+const productionStatus = 'Published current construction; likeness refinement remains open';
+const modelPath = 'assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb';
+const previewPaths = {
+  maker: 'assets/models/whole-character-v37/attempt-release02/maker-preview.png',
+  mechanic: 'assets/models/whole-character-v37/attempt-release02/mechanic-preview.png',
+  builder: 'assets/models/whole-character-v37/attempt-release02/builder-preview.png',
+};
+const pointerPrefix = Buffer.from('version https://git-lfs.github.com/spec/v1');
+
 async function files(dir,prefix='') {
   const result=[];
   for (const entry of await readdir(dir,{withFileTypes:true})) {
@@ -17,62 +25,87 @@ async function files(dir,prefix='') {
   }
   return result.sort();
 }
+
 const output=await files('dist');
 const allowed=new Set(['index.html','folio.html','release.json']);
 const release=JSON.parse(await readFile('dist/release.json','utf8'));
 assert.match(release.revision,/^[a-f0-9]{40}$/);
-if(process.env.GITHUB_SHA){assert.equal(release.revision,process.env.GITHUB_SHA);assert.equal(release.workingTreeDirty,false,"CI release must use a clean checkout");}
-assert.deepEqual(release.files.map(f=>f.path).sort(),output.filter(f=>f!=='release.json'));
-for(const file of release.files){const bytes=await readFile('dist/'+file.path);assert.equal(bytes.length,file.bytes,file.path);assert.equal(sha(bytes),file.sha256,file.path);}
-const proof=[];
-for(const name of await files('public')) {
-  const source=await readFile('public/'+name), built=await readFile('dist/'+name);
-  assert(!source.subarray(0,45).toString().startsWith('version https://git-lfs'),name);
+if(process.env.GITHUB_SHA){
+  assert.equal(release.revision,process.env.GITHUB_SHA);
+  assert.equal(release.workingTreeDirty,false,'CI release must use a clean checkout');
+}
+assert.deepEqual(release.files.map(file=>file.path).sort(),output.filter(file=>file!=='release.json'));
+for(const file of release.files){
+  const bytes=await readFile('dist/'+file.path);
+  assert.equal(bytes.length,file.bytes,file.path);
+  assert.equal(sha(bytes),file.sha256,file.path);
+}
+
+for(const name of await files('public')){
+  const source=await readFile('public/'+name),built=await readFile('dist/'+name);
+  assert(!source.subarray(0,pointerPrefix.length).equals(pointerPrefix),name);
   assert.equal(sha(source),sha(built),'Public asset changed: '+name);
   allowed.add(name);
 }
+
 const [presenceSource,fallbackSource]=await Promise.all([
   readFile('src/scene/presence-exhibit.js','utf8'),
   readFile('src/scene/fallback.js','utf8'),
 ]);
 const modelPaths=[...presenceSource.matchAll(/new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.glb)['"],\s*import\.meta\.url\)/g)].map(match=>match[1]);
-assert.deepEqual(modelPaths,[`${modelDirectory}/murderbird-alignment-${alignmentVersion}.glb`],`The exhibit must select the declared alignment-${alignmentVersion} GLB.`);
-const previewPaths=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
-assert.deepEqual(Object.keys(previewPaths).sort(),['builder','maker','mechanic'],'Fallback must select exactly one preview for each era.');
-for(const [era,path] of Object.entries(previewPaths))assert.equal(path,`${modelDirectory}/${era}-preview.png`,`${era} fallback must select its declared ${alignmentVersion} preview.`);
-const alignmentInventory=JSON.parse(await readFile(`${modelDirectory}/alignment-inventory.json`,'utf8'));
-assert.equal(alignmentInventory.status,'neutral geometry proposal awaiting owner review');
-assert(Array.isArray(alignmentInventory.generatedFiles),'Alignment inventory must enumerate generated source files.');
-const generatedFiles=new Map(alignmentInventory.generatedFiles.map(file=>[file.path,file]));
-assert.equal(generatedFiles.size,alignmentInventory.generatedFiles.length,'Alignment inventory contains duplicate generated paths.');
-const activeModelSources=[...modelPaths,...Object.values(previewPaths)];
-const sources=[];
-for(const path of activeModelSources) {
-  const recorded=generatedFiles.get(path);
-  assert(recorded,`Active exhibit asset is absent from alignment inventory: ${path}`);
-  const bytes=await readFile(path);
-  assert.equal(bytes.length,recorded.bytes,`Inventory byte count differs: ${path}`);
-  assert.equal(sha(bytes),recorded.sha256,`Inventory hash differs: ${path}`);
-  sources.push({path,bytes:recorded.bytes,sha256:recorded.sha256});
+assert.deepEqual(modelPaths,[modelPath],'The exhibit must select the V37 release GLB.');
+const selectedPreviews=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
+assert.deepEqual(selectedPreviews,previewPaths,'The illustrated fallback must use the V37 release previews.');
+
+const manifest=JSON.parse(await readFile(manifestPath,'utf8'));
+assert.deepEqual(Object.keys(manifest).sort(),['assets','schemaVersion','status','version']);
+assert.equal(manifest.schemaVersion,1);
+assert.equal(manifest.version,'v37');
+assert.equal(manifest.status,productionStatus);
+assert(Array.isArray(manifest.assets));
+assert.equal(manifest.assets.length,4,'The V37 manifest must pin one model and three fallback previews.');
+const expectedSources=new Set([modelPath,...Object.values(previewPaths)]);
+const sourceByPath=new Map();
+for(const asset of manifest.assets){
+  assert.deepEqual(Object.keys(asset).sort(),['bytes','path','sha256']);
+  assert(expectedSources.has(asset.path),`Unexpected V37 production source: ${asset.path}`);
+  assert(!sourceByPath.has(asset.path),`Duplicate V37 production source: ${asset.path}`);
+  assert(Number.isSafeInteger(asset.bytes)&&asset.bytes>0,`Invalid byte count: ${asset.path}`);
+  assert.match(asset.sha256,/^[a-f0-9]{64}$/i,`Invalid SHA-256: ${asset.path}`);
+  const bytes=await readFile(asset.path);
+  assert(!bytes.subarray(0,pointerPrefix.length).equals(pointerPrefix),`Unhydrated LFS source: ${asset.path}`);
+  if(asset.path===modelPath)assert.equal(bytes.subarray(0,4).toString(),'glTF','V37 model is not a GLB: '+asset.path);
+  else assert(bytes.subarray(0,8).equals(Buffer.from([0x89,0x50,0x4e,0x47,0x0d,0x0a,0x1a,0x0a])),'V37 fallback is not a PNG: '+asset.path);
+  assert.equal(bytes.length,asset.bytes,`Manifest byte count differs: ${asset.path}`);
+  assert.equal(sha(bytes),asset.sha256.toLowerCase(),`Manifest hash differs: ${asset.path}`);
+  sourceByPath.set(asset.path,asset);
 }
-sources.push(...JSON.parse(await readFile('provenance/story-media-publication-2026-09-27.json','utf8')).assets);
+assert.deepEqual([...sourceByPath.keys()].sort(),[...expectedSources].sort(),'The manifest must cover exactly the active V37 assets.');
+
+const sources=[...sourceByPath.values(),...JSON.parse(await readFile('provenance/story-media-publication-2026-09-27.json','utf8')).assets];
 const emitted=new Map();
-for(const name of output.filter(n=>n.startsWith('assets/'))) {
+for(const name of output.filter(path=>path.startsWith('assets/'))){
   const bytes=await readFile('dist/'+name);
-  assert(!bytes.subarray(0,45).toString().startsWith('version https://git-lfs'),name);
+  assert(!bytes.subarray(0,pointerPrefix.length).equals(pointerPrefix),`LFS pointer in output: ${name}`);
   emitted.set(name,{bytes:bytes.length,sha256:sha(bytes)});
 }
-for(const source of sources) {
+const proof=[];
+for(const source of sources){
   const bytes=await readFile(source.path);
   assert.equal(bytes.length,source.bytes,source.path);
-  assert.equal(sha(bytes),source.sha256,source.path);
-  const matches=[...emitted].filter(([,v])=>v.sha256===source.sha256);
+  assert.equal(sha(bytes),source.sha256.toLowerCase(),source.path);
+  const matches=[...emitted].filter(([,value])=>value.bytes===source.bytes&&value.sha256===source.sha256.toLowerCase());
   assert.equal(matches.length,1,'Expected one exact emitted copy: '+source.path);
-  allowed.add(matches[0][0]);proof.push({...source,emitted:matches[0][0]});
+  allowed.add(matches[0][0]);
+  proof.push({...source,emitted:matches[0][0]});
 }
+
 assertPublicationBoundary(output,allowed);
-execFileSync('python3',['scripts/prepare-review-release.py','--check'],{stdio:'inherit'});
 await mkdir('.local/publication',{recursive:true});
-const report={generatedAt:new Date().toISOString(),status:'passed',revision:process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),modelSha256:generatedFiles.get(modelPaths[0]).sha256,media:proof,files:output};
+const report={
+  generatedAt:new Date().toISOString(),status:'passed',
+  revision:process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
+  modelSha256:sourceByPath.get(modelPath).sha256,media:proof,files:output,
+};
 await writeFile('.local/publication/build-validation.json',JSON.stringify(report,null,2)+'\n');
-console.log(`Local build boundary verified: ${output.length} files; ${proof.length} exact model/folio/fallback assets. This does not verify deployment.`);
+console.log(`Local build boundary verified: ${output.length} files; ${proof.length} exact V37 model/fallback/story-media assets. This does not verify deployment.`);

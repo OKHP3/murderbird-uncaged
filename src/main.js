@@ -20,26 +20,15 @@ const parts=[
   {id:'mind',name:'Mind · processing',title:'Processing is the other.'},
   {id:'guard',name:'Wings · balance & shielding',title:'Tuck. Brace. Drive.',text:'MurderBird is flightless. Its folded wings guard the ribs and help balance close, forceful movements. The shoulder leads a short shove while the elbow drives the armored forewing; the opposite wing counters. The repaired left shoulder keeps a smaller range. The exact joint design is reconstructed for this study.'},
 ];
-const currentGeometryReview = import.meta.env.DEV
-  ? ((new URLSearchParams(location.search).get('review-body') || 'v35-form01') === 'v36-form01'
-      ? '<a href="./assets/audit/whole-character-v36/index.html">Construction review · V36</a>'
-      : (new URLSearchParams(location.search).get('review-body') || 'v35-form01') === 'v35-form01'
-      ? '<a href="./assets/audit/whole-character-v35/index.html">Construction review · V35</a>'
-      : new URLSearchParams(location.search).get('review-body') === 'v34-form01'
-      ? '<a href="./assets/audit/whole-character-v34/index.html">Construction review · V34</a>'
-      : new URLSearchParams(location.search).get('review-body') === 'v33-form06'
-      ? '<a href="./assets/audit/whole-character-v33/index.html">Construction review · V33</a>'
-      : '<a href="./assets/audit/whole-character-v32/index.html">Construction review · V32</a>')
-  : '';
 const app=document.querySelector('#app');
 app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a><div class="site-shell">
-<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="./folio.html">Story &amp; media folio</a>${currentGeometryReview}<a href="./review/">Published review</a><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">THREE MOVEMENT SYSTEMS / 05</span></header>
+<header class="topbar"><a class="wordmark" href="#top"><span class="mark">M/B</span><span>MURDERBIRD<small>UNCAGED</small></span></a><nav aria-label="Main navigation"><a href="./folio.html">Story &amp; media folio</a><a href="#field-notes">Construction record</a><a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Origin story ↗</a></nav><span class="edition">THREE MOVEMENT SYSTEMS / 37</span></header>
 <main id="top"><section class="exhibit" id="specimen" aria-labelledby="exhibit-title">
 <div class="exhibit-heading"><div><p class="eyebrow">AN ENCOUNTER WITH AN IMPOSSIBLE MACHINE</p><h1 id="exhibit-title">MurderBird: <em>Uncaged.</em></h1></div><p>Drag to orbit. Scroll or pinch to move closer.<br>One inherited body. Three ways to move.<br>Operate. Engage. Encounter.</p></div>
 <div class="exhibit-grid"><div class="viewer-column"><div class="viewer" id="viewer">
 <div class="viewer-top"><span id="render-label">LOADING ASSEMBLY…</span><span id="era-label">III · BUILDER</span></div>
 <div id="scene" aria-label="MurderBird exhibit"></div><div id="hotspots" class="hotspots"></div><div class="era-transition" id="era-transition" hidden role="status">Reconstructing the next era…</div><div class="loading" id="loading" role="status">Preparing the mechanical assembly…</div>
-<div class="viewer-bottom"><span id="view-label">ENCLOSURE / EXTERIOR</span><span>LIKENESS REVIEW PENDING</span></div>
+<div class="viewer-bottom"><span id="view-label">ENCLOSURE / EXTERIOR</span><span>FLIGHTLESS · BUILT FOR POWER</span></div>
 </div>
 <div id="controls" class="toolbar" role="group" aria-label="Encounter and inspection controls" tabindex="-1">
 <label class="reach-position" data-capability="advanced" for="reach-position">Your position<select id="reach-position"><option value="-1">Left rail</option><option value="0" selected>Center rail</option><option value="1">Right rail</option></select></label><button id="reach" data-capability="advanced" type="button" class="primary">Reach toward bars</button><button id="retreat" data-capability="advanced" type="button" disabled>Retreat</button><button id="arm-reach" data-capability="advanced" type="button" aria-pressed="false">Tap-to-reach mode</button><button id="power-jump" data-capability="advanced" type="button">Power jump</button><button id="shield-thrust" data-capability="advanced" type="button">Shield thrust</button><button id="claw-scrape" data-capability="advanced" type="button">Claw scrape</button><button id="section-toggle" type="button" aria-pressed="false">Open for inspection</button><button id="reset-view" type="button">Reset view</button></div>
@@ -48,64 +37,11 @@ app.innerHTML=`<a class="skip-link" href="#controls">Skip to exhibit controls</a
 <p id="encounter-status" class="encounter-status" role="status">Loading the specimen.</p>
 <div class="inspection-controls"><label for="separation">Separate assembly <output id="separation-value">0%</output></label><input id="separation" type="range" min="0" max="100" step="1" value="0" disabled /><button id="reassemble" type="button" disabled>Reassemble & return</button></div>
 <div class="secondary-controls"><div class="view-controls" role="group" aria-label="Camera controls"><button data-view="left" aria-label="Orbit left">←</button><button data-view="right" aria-label="Orbit right">→</button><button data-view="up" aria-label="Raise viewpoint">↑</button><button data-view="down" aria-label="Lower viewpoint">↓</button><button data-view="in" aria-label="Zoom in">+</button><button data-view="out" aria-label="Zoom out">−</button></div><button id="pause" type="button" aria-pressed="false">Calm / pause</button><label class="motion-label"><input id="reduced-motion" type="checkbox" /> Reduced motion</label><label class="motion-label"><input id="part-labels" type="checkbox" checked /> Part labels</label><button id="sound-toggle" type="button" aria-pressed="false">Sound off</button></div>
-<p class="viewer-note" id="viewer-note">Geometry and articulation are under review. Final era materials are pending. Hidden construction and the enclosure remain proposals. Music starts only when you choose Play.</p>
+<p class="viewer-note" id="viewer-note">Explore the frame, armor and machinery across three eras. Hidden construction illustrates proposed mechanisms. Music starts only when you choose Play.</p>
 <button id="retry" class="retry" type="button" hidden>Retry 3D</button>
 </div><aside class="inspector" aria-label="Construction details"><div class="inspector-header">THREE ERAS / ONE INHERITED BODY</div><div class="era-picker" role="group" aria-label="Choose construction era">${Object.entries(eras).map(([id,era])=>`<button data-era="${id}" aria-pressed="${id==='builder'}">${era.name}</button>`).join('')}</div><p id="era-summary" class="era-summary"></p><div class="part-list" id="part-list">${parts.map((p,i)=>`<button type="button" data-part="${p.id}" aria-pressed="false"><span>${String(i+1).padStart(2,'0')}</span><span class="part-name">${p.name}</span><span class="part-arrow">↗</span></button>`).join('')}</div><div id="detail" class="detail" aria-live="polite"></div><button id="focus-part" type="button">Center selected part</button><p class="inspector-foot">ILLUSTRATIVE MECHANISMS<br>POWER ≠ COGNITION</p></aside></div></section>
 <section class="timeline" id="field-notes"><p class="eyebrow">THE CONSTRUCTION RECORD</p><h2>Not born. <em>Built.</em></h2><div class="eras"><article><span>I / MAKER</span><h3>Movement from outside.</h3><p>A supported articulated construct. Outside levers move its joints; at rest it stays where its maker placed it. No internal power or intention.</p></article><article><span>II / MECHANIC</span><h3>A machine with limits.</h3><p>A wound spring, reduction gears and a cam sequence allow short steps and segmented turns. The pauses belong to the transmission, not to thought.</p></article><article><span>III / BUILDER</span><h3>Power with intent.</h3><p>An abundant fictional supply feeds coordinated actuators. Sensing and processing give the advanced bird responsive attention, fast attacks and controlled recovery.</p></article></div><p class="source-note">This progression follows the owner’s current exhibit direction. The exact control rods, spring transmission and advanced supply are proposed reconstructions. The preserved story remains a separate source. <a href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Read the published story ↗</a></p></section>
-</main><footer><span>© JAMIE HILL / OVERKILL HILL P³ · CREATIVE CONTENT ALL RIGHTS RESERVED</span><span>WORKING STUDY · ARTISTIC ACCEPTANCE PENDING</span></footer></div>`;
-const localReviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v35-form01') : null;
-if (import.meta.env.DEV && ['v36-form01', 'v35-form01', 'v34-form01', 'v33-form06', 'v32-form01', 'v31-form02', 'v31-form01', 'v10-01', 'v10-02', 'v12-02', 'v13-01', 'v14-03', 'v14-05', 'v14-09', 'v14-11', 'v15-03', 'v15-04', 'v16-02', 'v16-03', 'v17-02', 'v18-01', 'v19-01', 'v19-02', 'v20-runtime01', 'v20-runtime02', 'v21-construction02', 'v21-construction04', 'v21-construction06'].includes(localReviewBody)) {
-  const notice = document.createElement('p');
-  notice.setAttribute('role', 'status');
-  notice.style.cssText = 'margin:0;padding:14px 24px;background:#302c20;color:#f6e4b7;border-bottom:2px solid #a68b52';
-  notice.textContent = localReviewBody === 'v36-form01'
-    ? 'LOCAL V36 FORM 01 · Rejected fit study: shortened feet introduce toe-guard and ankle intersections. Preserved for comparison; not the development default or an accepted correction. Illustrated fallback depicts V9.'
-    : localReviewBody === 'v35-form01'
-    ? 'LOCAL V35 FORM 01 · Larger head, shaped breast, framed flanks and narrower connected knees. Likeness remains below the reference; this is an unapproved construction proposal. See the review for fit findings. Illustrated fallback depicts V9.'
-    : localReviewBody === 'v34-form01'
-    ? 'LOCAL V34 FORM 01 · Fuller rear cranium, rounded shoulder shields and revised load-bearing limbs. This remains an unapproved construction proposal; see the local review for actual fit findings. Illustrated fallback depicts V9.'
-    : localReviewBody === 'v33-form06'
-    ? 'LOCAL V33 FORM 06 · Recessed orbital and throat construction, shorter swept crown plates, and nested rigid neck guards. Construction and likeness remain under review. This is a local shape proposal; illustrated fallback depicts V9.'
-    : localReviewBody === 'v32-form01'
-    ? 'LOCAL V32 FORM 01 · Near-closed formed jaw, returned bill, separate brow and cheek, and revised crown. The two V31 strike collisions are removed. Earlier neck interference and likeness gaps remain; this is an unapproved construction study. Illustrated fallback depicts V9.'
-    : localReviewBody === 'v31-form02'
-    ? 'LOCAL V31 FORM 02 · Rebuilt head, open optic aperture, connected throat and seated control attachments. HELD: likeness remains below target; the strike pose adds two head-to-neck collisions. This is a construction proposal with all three era mechanisms. Illustrated fallback depicts V9.'
-    : localReviewBody === 'v31-form01'
-    ? 'LOCAL V31 FORM 01 · Rebuilt head and authored Maker jaw/wing attachments. Held for jaw, crown and throat intersections; likeness is still below target. This is a diagnostic construction study with the complete era mechanisms. Illustrated fallback depicts V9.'
-    : localReviewBody === 'v21-construction06'
-    ? 'LOCAL V21 CONSTRUCTION 06 · Revised compact shoulder and elbow shields, rebuilt head and linked neck cover. Whole-character likeness and moving clearances remain unresolved. This is a diagnostic construction proposal. Illustrated fallback still depicts V9.'
-    : localReviewBody === 'v21-construction04'
-    ? 'LOCAL V21 CONSTRUCTION 04 · Rebuilt bill and jaw, linked rigid neck cover, thirty breast plates and ankle forks. Overall likeness and contacts with neighboring parts remain unresolved. This is a held construction proposal. Illustrated fallback still depicts V9.'
-    : localReviewBody === 'v21-construction02'
-    ? 'LOCAL V21 CONSTRUCTION STUDY · Curved neck and breast, constructed bill and jaw, overlapping breast panels and ankle forks. Neck guards cross during deep articulation; this candidate is held for joint reconstruction. Likeness remains below target. Illustrated fallback still depicts V9.'
-    : localReviewBody.startsWith('v20-')
-    ? 'LOCAL V20 BODY STUDY · Fuller breast, revised shoulders and supporting legs. Head, neck and plate construction remain unresolved. Rejected neck variants are excluded. This is a motion study, not approved artwork. Illustrated fallback still depicts V9.'
-    : localReviewBody === 'v19-02'
-    ? 'LOCAL V19 ATTEMPT 02 · HELD CONSTRUCTION PROPOSAL. Separate front access door and fixed torso walls, revised breast and narrower jaw opening. Likeness and movement clearance remain unresolved. Illustrated fallback still depicts V9.'
-    : localReviewBody === 'v19-01'
-    ? 'LOCAL V19 CONSTRUCTION PROPOSAL · Revised breast and neck, bottom-opening cover and narrower jaw opening. Likeness and movement clearances remain under review. Illustrated fallback still depicts V9.'
-    : localReviewBody === 'v18-01'
-    ? 'LOCAL V18 CONSTRUCTION PROPOSAL · Revised head fittings, neck junction and lower-leg construction. Whole-character likeness and moving clearances remain under review. Illustrated fallback still depicts V9.'
-    : localReviewBody === 'v17-02'
-    ? 'LOCAL V17 PROPOSAL · HELD FOR CORRECTION. Revised breast layers and passive eye supports still intersect neighboring parts in reviewed poses. Likeness remains below target. Illustrated fallback still depicts V9.'
-    : localReviewBody.startsWith('v16-')
-    ? 'LOCAL V16 PROPORTION STUDY · Fuller breast, lower head, broader shoulders and stronger stance. Joint locations have changed. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9.'
-    : ['v15-03', 'v15-04'].includes(localReviewBody)
-    ? 'LOCAL V15 CONSTRUCTION STUDY · Revised head, breast and leg construction. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
-    : ['v14-03', 'v14-05', 'v14-09', 'v14-11'].includes(localReviewBody)
-    ? 'LOCAL V14 HEAD STUDY · Revised socket, fixed brow and opening crown. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
-    : localReviewBody === 'v13-01'
-    ? 'LOCAL V13 HEAD STUDY · A deeper bill and shorter mandible on the V12 body. Likeness and moving clearance remain unapproved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
-    : localReviewBody === 'v12-02'
-    ? 'LOCAL V12 MOTION STUDY · New neck reconstruction, with no owner likeness approval. Joint clearances and external mechanism attachments remain under review. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.'
-    : 'LOCAL V10 STUDY · Owner-rejected likeness, preserved for diagnosis. Structural clearance remains unresolved. Illustrated fallback still depicts V9. Use the previous exhibit link to compare V9.';
-  const previous = document.createElement('a');
-  previous.href = localReviewBody === 'v36-form01' ? '?review-body=v35-form01' : localReviewBody === 'v35-form01' ? '?review-body=v34-form01' : localReviewBody === 'v34-form01' ? '?review-body=v33-form06' : localReviewBody === 'v33-form06' ? '?review-body=v32-form01' : localReviewBody === 'v32-form01' ? '?review-body=v31-form02' : localReviewBody === 'v21-construction06' ? '?review-body=v21-construction04' : localReviewBody === 'v21-construction04' ? '?review-body=v21-construction02' : localReviewBody === 'v21-construction02' ? '?review-body=v20-runtime02' : localReviewBody.startsWith('v20-') ? '?review-body=v19-02' : localReviewBody.startsWith('v19-') ? '?review-body=v18-01' : localReviewBody === 'v18-01' ? '?review-body=v17-02' : localReviewBody === 'v17-02' ? '?review-body=v16-03' : '?review-body=stable-v9';
-  previous.textContent = localReviewBody === 'v36-form01' ? ' Previous local study (V35 Form01)' : localReviewBody === 'v35-form01' ? ' Previous local study (V34 Form01)' : localReviewBody === 'v34-form01' ? ' Previous local study (V33 Form06)' : localReviewBody === 'v33-form06' ? ' Previous local study (V32 Form01)' : localReviewBody === 'v32-form01' ? ' Previous local study (V31 Form02)' : localReviewBody === 'v21-construction06' ? ' Previous local study (V21 Construction04)' : localReviewBody === 'v21-construction04' ? ' Previous local study (V21 Construction02)' : localReviewBody === 'v21-construction02' ? ' Previous local candidate (V20 Runtime 02)' : localReviewBody.startsWith('v20-') ? ' Previous local candidate (V19 attempt 02)' : localReviewBody.startsWith('v19-') ? ' Previous local candidate (V18 attempt 01)' : localReviewBody === 'v18-01' ? ' Previous local candidate (V17 attempt 02)' : localReviewBody === 'v17-02' ? ' Previous local candidate (V16 attempt 03)' : ' Previous exhibit (V9)';
-  previous.style.color = 'inherit';
-  notice.append(previous);
-  document.getElementById('app').prepend(notice);
-}
+</main><footer><span>© JAMIE HILL / OVERKILL HILL P³ · CREATIVE CONTENT ALL RIGHTS RESERVED</span><span>VERSION 37 · INTERACTIVE EXHIBIT</span></footer></div>`;
 const $=id=>document.getElementById(id);
 const sound=createSoundscape();
 const reviewSeed = import.meta.env.DEV ? Number(new URLSearchParams(location.search).get('review-seed')) : null;
@@ -196,8 +132,8 @@ async function loadExhibit(forceFallback=false){
     $('retry').hidden=false;$('viewer-note').textContent=`Illustrated mode: a fixed MurderBird reference and a separate assembly schematic. ${forced?'':'The 3D model could not load or WebGL is unavailable. '}Use Retry 3D to try again. Component descriptions remain available.`;
     if(import.meta.env.DEV)console.info('Illustrated exhibit:',error.message);
   }
-  loading=false;$('loading').hidden=true;$('render-label').textContent=exhibit.kind==='webgl'?'3D / REFERENCE-INFORMED STUDY':'ILLUSTRATED / FIXED VIEW';
-  if(exhibit.kind==='webgl')$('viewer-note').textContent='Geometry and articulation are under review. Final era materials are pending. Hidden construction and the enclosure remain proposals. Music starts only when you choose Play.';
+  loading=false;$('loading').hidden=true;$('render-label').textContent=exhibit.kind==='webgl'?'3D / MECHANICAL EXHIBIT':'ILLUSTRATED / FIXED VIEW';
+  if(exhibit.kind==='webgl')$('viewer-note').textContent='Explore the frame, armor and machinery across three eras. Hidden construction illustrates proposed mechanisms. Music starts only when you choose Play.';
   document.querySelectorAll('[data-view],#focus-part,#reset-view').forEach(b=>b.disabled=exhibit.kind!=='webgl');
   exhibit.setEra(era);sectionOpen=false;if(section)machine.setInspection(true);exhibit.setSection(false);exhibit.setSeparation(0);exhibit.resize();renderSelection(selected);renderState(true);
 }

@@ -112,12 +112,12 @@ test('a new era preview clears the old failure state and can load', () => {
   exhibit.setEra('mechanic');
   assert.match(image.getAttribute('src'), /mechanic-preview\.png$/);
   assert.equal(image.hidden, false);
-  assert.equal(container.caption.textContent, 'Mechanic exterior study · fixed rendered view');
+  assert.equal(container.caption.textContent, 'Mechanic exhibit · fixed captured view');
 
   image.dispatch('load');
   assert.equal(image.complete, true);
   assert.equal(image.naturalWidth, 960);
   exhibit.resize();
   assert.equal(image.hidden, false);
-  assert.equal(container.caption.textContent, 'Mechanic exterior study · fixed rendered view');
+  assert.equal(container.caption.textContent, 'Mechanic exhibit · fixed captured view');
 });

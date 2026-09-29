@@ -4,13 +4,11 @@
 
 ![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)
 
-**[Enter the exhibit](https://okhp3.github.io/murderbird-uncaged/)** · **[View the assessment gallery](https://okhp3.github.io/murderbird-uncaged/review/)** · **[Read the origin story](https://overkillhill.com/writings/murderbird/)**
+**[Enter the exhibit](https://okhp3.github.io/murderbird-uncaged/)** · **[Read the origin story](https://overkillhill.com/writings/murderbird/)**
 
 Meet a flightless mechanical creature whose construction changes across centuries. Orbit its enclosure, operate the Maker's external controls, engage the Mechanic's limited walking routine, and encounter the Advanced bird's attention, strikes, jump, and shield thrust. Open its assemblies to explore the machinery beneath the armor.
 
-**Published for assessment.** This is a working 3D interpretation, not an owner-approved final character. The banner is reference artwork, not a screenshot. The gallery separates reference images, authoring renders, browser captures, and recorded motion so reviewers can compare what was intended with what was built.
-
-**Local correction branch:** the current checkout loads the separate [alignment-v4 geometry and articulation candidate](docs/alignment-v4-review.md). Its [local comparison gallery](assets/audit/alignment-v4/alignment-review.html) and [editable model](assets/models/uncaged-alignment-v4/README.md) preserve v2 and v3 as historical checkpoints. The public links above do not establish publication of this correction.
+**Version 37 is the current production package.** It presents the latest assembled mechanical bird with three era-specific movement systems, reversible inspection, and matching fixed-view fallbacks. The banner is reference artwork, not a screenshot. Further likeness refinement remains possible; publication is not a claim of validated engineering.
 
 ## Three eras, three ways to move
 
@@ -32,17 +30,13 @@ The wings are flightless guards for balance and shielding. The repaired anatomic
 
 The [story and media folio](https://okhp3.github.io/murderbird-uncaged/folio.html) preserves the illustrated narrative, motion study, and earlier model context. The **main exhibit above is the current interactive implementation**; the folio's earlier construction study is historical context.
 
-## What is ready, and what is still being assessed
+## Current production source
 
-The historical published checkpoint includes three exterior configurations, regional UV/PBR surfaces and its comparison gallery. The active local alignment candidate uses neutral rigid geometry with no image maps or final wear. Both retain era-specific controls, reversible inspection and the theme player.
-
-Likeness, proportions, armor rhythm, wear placement, and character acting remain open artistic questions. Motion is kinematic, not a validated force or collision simulation. Human accessibility acceptance and broader physical-device/browser coverage are separate from automated checks. Do not infer final approval from a passing build or a published page.
-
-Start an assessment with the [stage record](docs/exterior-stage-record.md), [regional attachment map](docs/exterior-regional-map.md), [surface pipeline](docs/exterior-surface-pipeline.md), and [creative authority](docs/creative-authority.md). The [production handoff](docs/production-handoff.md) identifies editable sources, exports, and historical checkpoints.
+[Version 37 release record](docs/production-v37.md) identifies the editable Blender model, exact GLB, browser fallbacks, and validation. Construction is rigid and motion is kinematic. The current model uses neutral mechanical surfaces; it does not claim final reference-matched materials or physical collision simulation.
 
 ## One release source
 
-**GitHub `main` is the integration and deployment source.** GitHub Actions builds the exhibit, folio, and allowlisted review gallery together and publishes one GitHub Pages artifact.
+**GitHub `main` is the integration and deployment source.** GitHub Actions builds the current exhibit and story folio together and publishes one GitHub Pages artifact.
 
 - [Build checks](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/validate.yml)
 - [Pages deployment](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/deploy.yml)

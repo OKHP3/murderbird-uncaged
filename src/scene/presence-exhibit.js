@@ -7,41 +7,7 @@ import { createEraMechanisms } from './era-mechanisms.js';
 import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-pose.js';
 import { layoutMarkers } from './marker-layout.js';
 
-const selectedModelUrl = new URL('../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb', import.meta.url).href;
-// Local study selection is separate from the V9 production build selection.
-const reviewBody = import.meta.env.DEV ? (new URLSearchParams(location.search).get('review-body') || 'v35-form01') : null;
-const reviewModels = import.meta.env.DEV ? {
-  'v36-form01': '/assets/models/whole-character-v36/attempt-form01/murderbird-whole-character-v36.glb',
-  'v35-form01': '/assets/models/whole-character-v35/attempt-form01/murderbird-whole-character-v35.glb',
-  'v34-form01': '/assets/models/whole-character-v34/attempt-form01/murderbird-whole-character-v34.glb',
-  'v33-form06': '/assets/models/whole-character-v33/attempt-form06/murderbird-whole-character-v33.glb',
-  'v32-form01': '/assets/models/whole-character-v32/attempt-form01/murderbird-whole-character-v32.glb',
-  'v31-form02': '/assets/models/whole-character-v31/attempt-form02/murderbird-whole-character-v31.glb',
-  'v31-form01': '/assets/models/whole-character-v31/attempt-form01/murderbird-whole-character-v31.glb',
-  'v21-construction06': '/assets/models/whole-character-v21/attempt-construction06/murderbird-whole-character-v21.glb',
-  'v21-construction04': '/assets/models/whole-character-v21/attempt-construction04/murderbird-whole-character-v21.glb',
-  'v21-construction02': '/assets/models/whole-character-v21/attempt-construction02/murderbird-whole-character-v21.glb',
-  'v20-runtime02': '/assets/models/whole-character-v20/attempt-runtime02/murderbird-whole-character-v20.glb',
-  'v20-runtime01': '/assets/models/whole-character-v20/attempt-runtime01/murderbird-whole-character-v20.glb',
-  'v19-02': '/assets/models/whole-character-v19/attempt-02/murderbird-whole-character-v19.glb',
-  'v19-01': '/assets/models/whole-character-v19/attempt-01/murderbird-whole-character-v19.glb',
-  'v18-01': '/assets/models/whole-character-v18/attempt-01/murderbird-whole-character-v18.glb',
-  'v17-02': '/assets/models/whole-character-v17/attempt-02/murderbird-whole-character-v17.glb',
-  'v16-03': '/assets/models/whole-silhouette-v16/attempt-03/murderbird-whole-silhouette-v16.glb',
-  'v16-02': '/assets/models/whole-silhouette-v16/attempt-02/murderbird-whole-silhouette-v16.glb',
-  'v15-04': '/assets/models/whole-character-v15/attempt-04/murderbird-whole-character-v15.glb',
-  'v15-03': '/assets/models/whole-character-v15/attempt-03/murderbird-whole-character-v15.glb',
-  'v10-01': '/assets/models/uncaged-whole-body-v10/attempt-01/murderbird-whole-body-v10.glb',
-  'v10-02': '/assets/models/uncaged-whole-body-v10/attempt-02/murderbird-whole-body-v10.glb',
-  'v12-02': '/assets/models/uncaged-cervical-envelope-v12/attempt-02/murderbird-cervical-envelope-v12.glb',
-  'v14-11': '/assets/models/uncaged-orbital-crown-v14/attempt-11/murderbird-orbital-crown-v14.glb',
-  'v14-09': '/assets/models/uncaged-orbital-crown-v14/attempt-09/murderbird-orbital-crown-v14.glb',
-  'v14-05': '/assets/models/uncaged-orbital-crown-v14/attempt-05/murderbird-orbital-crown-v14.glb',
-  'v14-03': '/assets/models/uncaged-orbital-crown-v14/attempt-03/murderbird-orbital-crown-v14.glb',
-  'v13-01': '/assets/models/uncaged-constructed-head-v13/attempt-01/murderbird-constructed-head-v13.glb',
-} : {};
-const modelUrl = Object.hasOwn(reviewModels, reviewBody)
-  ? new URL(reviewModels[reviewBody], location.origin).href : selectedModelUrl;
+const modelUrl = new URL('../../assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb', import.meta.url).href;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;

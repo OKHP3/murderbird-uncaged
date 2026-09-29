@@ -37,7 +37,7 @@ app.innerHTML = `
   <div class="site-shell">
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="MurderBird Uncaged home"><span class="mark">M<span class="mark-slash">/</span>B</span><span class="wordmark-text">MURDERBIRD <small>UNCAGED</small></span></a>
-      <nav aria-label="Main navigation"><a href="./">Current 3D review</a><a href="./review/">Review evidence</a><a href="#specimen">The folio</a><a href="#field-notes">Three eras</a><a href="#motion-sound">Motion and music</a><a class="nav-story" href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Read the story ↗</a></nav>
+      <nav aria-label="Main navigation"><a href="./">Interactive exhibit</a><a href="#specimen">The folio</a><a href="#field-notes">Three eras</a><a href="#motion-sound">Motion and music</a><a class="nav-story" href="https://overkillhill.com/writings/murderbird/" target="_blank" rel="noopener noreferrer">Read the story ↗</a></nav>
     </header>
 
     <main id="top">
