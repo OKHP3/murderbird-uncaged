@@ -1,0 +1,131 @@
+{
+  "status": "PASS bounded exact-composition attachment/era and14strict head-neck pose samples; no artistic/full-motion acceptance",
+  "native": {
+    "path": "assets/models/whole-character-v34/attempt-form01/murderbird-whole-character-v34.blend",
+    "sha256": "3f4c12983feea5e4d45f5609d749c1dfa78ecdafc34936d3e702ffa403fed716",
+    "bytes": 3420875
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v34/attempt-form01/murderbird-whole-character-v34.glb",
+    "sha256": "32a53dd3c26209fda81a2a6cfbc6a16080910bdf1ec73ed6b6000fec1251c41d",
+    "bytes": 13169324
+  },
+  "exportReceiptSHA256": "35a3edbbfce6354c80eb61c4083ed13c41dc0e9c14ce1501cd5ab9f43fd08508",
+  "compositionReceiptSHA256": "a70b1b53352a50806c160c8ebf3df6ac5ef7000ac878c82ce194ec2602832457",
+  "roundtrip": {
+    "receipt": "../export/actual-runtime-roundtrip/roundtrip-receipt.json",
+    "receiptSHA256": "12e757ac3d37dabc62b2d880b0344e720b57e31f92e3b9d5a40916fb89713c3d",
+    "loadedMeshes": 657,
+    "worldMatricesCompared": 711,
+    "maximumWorldMatrixDelta": 2.9802322387695312e-08,
+    "runtimeSourceSHA256": "97e1096c3b16c0ce774916471c40a35dc1364d88e74bf3077b07b130a7aaeff9",
+    "checks": {
+      "actualGLTFLoader": true,
+      "allLoadedVertexAttributesFinite": true,
+      "worldRestsMatchNativeWithin1eMinus6": true,
+      "allChainPositionsFixed": true,
+      "unitRigidJointBases": true,
+      "pitchSumCorrect": true,
+      "poseRestoreExact": true,
+      "originalFilesUnmodified": true
+    }
+  },
+  "eraIntegration": {
+    "receipt": "../era-integration/integration.json",
+    "receiptSHA256": "cb24a79a1f2801df52ebe68fc2feb3073aa18c5030bbcbcf63cd679570fe862f",
+    "status": "BOUNDED INTEGRATION CHECK COMPLETE",
+    "sampleCount": 66,
+    "failures": 0,
+    "fitRisks": 0
+  },
+  "head": {
+    "allHeadMeshCount": 140,
+    "poses": [
+      {
+        "kind": "jaw",
+        "delta": 0,
+        "pairs": 0
+      },
+      {
+        "kind": "jaw",
+        "delta": 0.08,
+        "pairs": 0
+      },
+      {
+        "kind": "jaw",
+        "delta": 0.16,
+        "pairs": 0
+      },
+      {
+        "kind": "jaw",
+        "delta": 0.24,
+        "pairs": 0
+      },
+      {
+        "kind": "jaw",
+        "delta": 0.32,
+        "pairs": 0
+      },
+      {
+        "kind": "cap",
+        "delta": 0,
+        "pairs": 0
+      },
+      {
+        "kind": "cap",
+        "delta": 0.08,
+        "pairs": 0
+      }
+    ],
+    "kernelSHA256": "b290574245203be09e4eb1e76dba44c1cb9c174b540b962bfef404d2424ee84a",
+    "executedSourceSHA256": "3918c397809053ebbb37c88d4e38478a0a7a6d46b0808e6be08ebece633d89b1"
+  },
+  "neck": {
+    "screen": "neck/screen.json",
+    "poses": [
+      {
+        "name": "rest",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      },
+      {
+        "name": "maker-neck-jaw",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      },
+      {
+        "name": "attention",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      },
+      {
+        "name": "contact-neck",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      },
+      {
+        "name": "thrust-neck",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      },
+      {
+        "name": "yaw-minus",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      },
+      {
+        "name": "yaw-plus",
+        "pairs": 0,
+        "screenedGuardCount": 40
+      }
+    ],
+    "executedSourceSHA256": "324f44167b1812cc6014ffffd1422cf4eb57e4b96ee994131a79b05ccfb756f2"
+  },
+  "readOnlyInputsUnchanged": true,
+  "limits": [
+    "Strict evaluated triangle edge-through-face screens exclude coplanar/tangent/containment and same-owner contacts; seven discrete jaw/cap and seven neck states, not continuous physics or whole-character collision clearance.",
+    "66actual runtime mechanism samples validate discrete surfaces/endpoints/visibility/reset, not a full mechanism collision screen or WebGL appearance.",
+    "No model, geometry, application, material or default-selection changes in this task.",
+    "Full-body/head likeness remains rejected/pending owner review; native/exactGLB availability and technical checks do not confer approval."
+  ]
+}

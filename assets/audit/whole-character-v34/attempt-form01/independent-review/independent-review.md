@@ -1,0 +1,7 @@
+# V34 Form01 independent review
+
+The shoulder mantle and chest are more constructed than the preceding blank-chest form: the new breast courses add visible overlap, and the shoulder envelope reads more rounded. This is a useful structural study, not a likeness pass.
+
+The main remaining mismatch is the chest as a large, regular, egg-like shield. The 33 added panels give it a fish-scale rhythm, but their broad regular courses do not yet reproduce the owner reference’s dense, irregular mechanical layering or its exposed dark frame between armor. The face remains dominated by a plain annular eye and open blank plate. At whole-body scale the shoulder roots also remain visibly open, and the horizontal leg axles interrupt the vertical load-member read; the stance still looks like a mechanism assembled beneath a smooth body rather than one integrated character.
+
+The neutral gray Workbench views support judgments about silhouette and construction only, not materials or finish. The seven-state screen is limited to the shoulder/mantle changes, new breast panels, and four body-owned hip/sternal receivers against V33 Form06; it reports no new strict pair identities in that scope and resolves 17 identities per sampled state. It does not cover cranial changes, all leg pairs, continuous motion, containment, or human likeness acceptance. See [screen manifest](body-screen/manifest.json) for exact hashes and scope.

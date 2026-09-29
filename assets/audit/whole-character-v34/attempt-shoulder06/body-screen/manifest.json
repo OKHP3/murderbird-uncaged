@@ -1,0 +1,568 @@
+{
+  "status": "Read-only seven-state strict-crossing screen; proposal only, not visual acceptance.",
+  "native": {
+    "path": "assets/models/whole-character-v34/attempt-shoulder06/murderbird-whole-character-v34.blend",
+    "sha256": "1e5f4d93ae2ed4986eb0fff4b10bfa1c4512db9b180b9bff5ce9fab1643aa0eb",
+    "unchanged": true
+  },
+  "baseline": {
+    "path": "assets/models/whole-character-v33/attempt-form06/murderbird-whole-character-v33.blend",
+    "sha256": "5fdfe66693db848fcf624b28484c3eaba220a8d7f389248390a4f21a571d108d"
+  },
+  "receipt": {
+    "path": "assets/audit/whole-character-v34/attempt-shoulder06/receipt.json",
+    "sha256": "cfd8731a417c80eaba88f40904ff7396cf9109c412812403b0dbb34757933073"
+  },
+  "executedScreen": {
+    "path": "assets/audit/whole-character-v34/attempt-shoulder06/body-screen/executed-screen.py",
+    "sha256": "934ec7fa0506aff0e03645a32413c927e9d60a01d832e0c8865a26919783df5e",
+    "kernelSourceSha256": "f35253b1ebd533532532c964b7403212c983f41b60768b554d88950e0179899a",
+    "runLogSha256": "93a38e96a6ad0afcceabfeed98dd53bf26e3178156460a4987efb95db05a64b2"
+  },
+  "scope": "All builder-era eligible meshes in each exact native; every pair with at least one of the 90 changed mesh names tested against all other eligible mesh names. Same-owner distinct meshes included and categorized. The exact V33 Form06 baseline is run at the same seven states for inherited/new/resolved pair identity comparison. Does not test intra-mesh self-intersection, containment, coplanar/tangent contacts, continuous motion, or whole-controller actions.",
+  "summary": {
+    "states": 7,
+    "changedMeshes": 84,
+    "baselinePairCounts": [
+      207,
+      207,
+      207,
+      207,
+      207,
+      207,
+      206
+    ],
+    "candidatePairCounts": [
+      228,
+      224,
+      224,
+      224,
+      224,
+      227,
+      226
+    ],
+    "newPairIdentityUnion": 27,
+    "resolvedPairIdentityUnion": 5,
+    "inheritedIdentityRange": [
+      202,
+      203
+    ]
+  },
+  "newPairIdentities": [
+    {
+      "meshes": [
+        "V21 refined left shoulder journal bonnet",
+        "V28 left canopy receiving load bow 1"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 46,
+      "identity": "V21 refined left shoulder journal bonnet <> V28 left canopy receiving load bow 1"
+    },
+    {
+      "meshes": [
+        "V21 refined right shoulder journal bonnet",
+        "V28 right canopy receiving load bow 1"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 46,
+      "identity": "V21 refined right shoulder journal bonnet <> V28 right canopy receiving load bow 1"
+    },
+    {
+      "meshes": [
+        "V23 cervical 1 directional guard 1",
+        "V30 long oblique breast cheek -1"
+      ],
+      "states": [
+        "closed-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 54,
+      "identity": "V23 cervical 1 directional guard 1 <> V30 long oblique breast cheek -1"
+    },
+    {
+      "meshes": [
+        "V23 cervical 1 directional guard 5",
+        "V30 long oblique breast cheek 1"
+      ],
+      "states": [
+        "closed-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 13,
+      "identity": "V23 cervical 1 directional guard 5 <> V30 long oblique breast cheek 1"
+    },
+    {
+      "meshes": [
+        "V23 cervical 1 directional guard 6",
+        "V30 long fixed shoulder flank 1"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 54,
+      "identity": "V23 cervical 1 directional guard 6 <> V30 long fixed shoulder flank 1"
+    },
+    {
+      "meshes": [
+        "V23 cervical 1 directional guard 6",
+        "V30 long oblique breast cheek 1"
+      ],
+      "states": [
+        "closed-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 27,
+      "identity": "V23 cervical 1 directional guard 6 <> V30 long oblique breast cheek 1"
+    },
+    {
+      "meshes": [
+        "V23 cervical 1 directional guard 9",
+        "V30 long fixed shoulder flank -1"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 48,
+      "identity": "V23 cervical 1 directional guard 9 <> V30 long fixed shoulder flank -1"
+    },
+    {
+      "meshes": [
+        "V23 cervical 1 directional guard 9",
+        "V30 long oblique breast cheek -1"
+      ],
+      "states": [
+        "closed-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 10,
+      "identity": "V23 cervical 1 directional guard 9 <> V30 long oblique breast cheek -1"
+    },
+    {
+      "meshes": [
+        "V28 left canopy anterior folded return",
+        "V28 left canopy oblique course 1 plate 1"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 301,
+      "identity": "V28 left canopy anterior folded return <> V28 left canopy oblique course 1 plate 1"
+    },
+    {
+      "meshes": [
+        "V28 left canopy receiving load bow 1",
+        "left oblique shoulder saddle v4"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 50,
+      "identity": "V28 left canopy receiving load bow 1 <> left oblique shoulder saddle v4"
+    },
+    {
+      "meshes": [
+        "V28 left canopy receiving load bow 2",
+        "left oblique shoulder saddle v4"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 56,
+      "identity": "V28 left canopy receiving load bow 2 <> left oblique shoulder saddle v4"
+    },
+    {
+      "meshes": [
+        "V28 right canopy anterior folded return",
+        "V28 right canopy oblique course 1 plate 1"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 307,
+      "identity": "V28 right canopy anterior folded return <> V28 right canopy oblique course 1 plate 1"
+    },
+    {
+      "meshes": [
+        "V28 right canopy receiving load bow 1",
+        "right oblique shoulder saddle v4"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 50,
+      "identity": "V28 right canopy receiving load bow 1 <> right oblique shoulder saddle v4"
+    },
+    {
+      "meshes": [
+        "V28 right canopy receiving load bow 2",
+        "right oblique shoulder saddle v4"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 58,
+      "identity": "V28 right canopy receiving load bow 2 <> right oblique shoulder saddle v4"
+    },
+    {
+      "meshes": [
+        "V30 continuous dorsal pelvic liner",
+        "V34 left shoulder crown return 2"
+      ],
+      "states": [
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 12,
+      "identity": "V30 continuous dorsal pelvic liner <> V34 left shoulder crown return 2"
+    },
+    {
+      "meshes": [
+        "V30 long fixed shoulder flank -1",
+        "V34 right shoulder crown return 2"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 88,
+      "identity": "V30 long fixed shoulder flank -1 <> V34 right shoulder crown return 2"
+    },
+    {
+      "meshes": [
+        "V30 long fixed shoulder flank -1",
+        "right oblique shoulder saddle v4"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 16,
+      "identity": "V30 long fixed shoulder flank -1 <> right oblique shoulder saddle v4"
+    },
+    {
+      "meshes": [
+        "V30 long fixed shoulder flank 1",
+        "V34 left shoulder crown return 2"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 173,
+      "identity": "V30 long fixed shoulder flank 1 <> V34 left shoulder crown return 2"
+    },
+    {
+      "meshes": [
+        "V30 long fixed shoulder flank 1",
+        "left oblique shoulder saddle v4"
+      ],
+      "states": [
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 22,
+      "identity": "V30 long fixed shoulder flank 1 <> left oblique shoulder saddle v4"
+    },
+    {
+      "meshes": [
+        "V30 long swept dorsal cheek -1",
+        "V34 right shoulder crown return 2"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 28,
+      "identity": "V30 long swept dorsal cheek -1 <> V34 right shoulder crown return 2"
+    },
+    {
+      "meshes": [
+        "V30 long swept dorsal cheek 1",
+        "V34 left shoulder crown return 2"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "different-owner",
+      "maxStrictTrianglePairs": 28,
+      "identity": "V30 long swept dorsal cheek 1 <> V34 left shoulder crown return 2"
+    },
+    {
+      "meshes": [
+        "V34 left shoulder crown return 1",
+        "left profiled mantle backing v4 left-mantle"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 33,
+      "identity": "V34 left shoulder crown return 1 <> left profiled mantle backing v4 left-mantle"
+    },
+    {
+      "meshes": [
+        "V34 left shoulder crown return 2",
+        "left profiled mantle backing v4 left-mantle"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 54,
+      "identity": "V34 left shoulder crown return 2 <> left profiled mantle backing v4 left-mantle"
+    },
+    {
+      "meshes": [
+        "V34 left shoulder crown return 3",
+        "left profiled mantle backing v4 left-mantle"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 26,
+      "identity": "V34 left shoulder crown return 3 <> left profiled mantle backing v4 left-mantle"
+    },
+    {
+      "meshes": [
+        "V34 right shoulder crown return 1",
+        "right profiled mantle backing v4 right-mantle"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 31,
+      "identity": "V34 right shoulder crown return 1 <> right profiled mantle backing v4 right-mantle"
+    },
+    {
+      "meshes": [
+        "V34 right shoulder crown return 2",
+        "right profiled mantle backing v4 right-mantle"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 52,
+      "identity": "V34 right shoulder crown return 2 <> right profiled mantle backing v4 right-mantle"
+    },
+    {
+      "meshes": [
+        "V34 right shoulder crown return 3",
+        "right profiled mantle backing v4 right-mantle"
+      ],
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ],
+      "ownerRelation": "same-owner",
+      "maxStrictTrianglePairs": 29,
+      "identity": "V34 right shoulder crown return 3 <> right profiled mantle backing v4 right-mantle"
+    }
+  ],
+  "resolvedPairIdentities": [
+    {
+      "identity": "Proposed later left bearing strap v4 <> V28 left canopy oblique course 1 plate 4",
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded"
+      ]
+    },
+    {
+      "identity": "Proposed later left bearing strap v4 <> V28 left canopy oblique course 1 plate 5",
+      "states": [
+        "closed-guard",
+        "closed-short-shove"
+      ]
+    },
+    {
+      "identity": "Proposed later left bearing strap v4 <> left profiled mantle backing v4 left-mantle",
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ]
+    },
+    {
+      "identity": "V28 left canopy oblique course 1 plate 4 <> V28 left canopy oblique course 2 plate 4",
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ]
+    },
+    {
+      "identity": "V28 right canopy oblique course 1 plate 4 <> V28 right canopy oblique course 2 plate 4",
+      "states": [
+        "closed-folded",
+        "opening-25-folded",
+        "opening-50-folded",
+        "opening-75-folded",
+        "opening-100-folded",
+        "closed-guard",
+        "closed-short-shove"
+      ]
+    }
+  ],
+  "visualReview": {
+    "referenceAngleSha256": "c1640795546007176048416cb3c3617a781aa93da6a8d32dc48c65506187e6ee",
+    "frontSha256": "b017ad4bcb442deebeb3f00296aca0082e1236de9d87b281d198fa7c6e1b0afa",
+    "finding": "The upper returns visibly soften the front-facing opening and retain the rounded canopy; at exhibit scale the change is modest, and the shoulder still reads as a side pod beside a plain breast rather than a continuous mantle-to-breast mass. Their crossings with the mantle backings and fixed body flanks require fit review before retaining this iteration."
+  },
+  "limits": "Copied V30 body-screen strict edge-through-face kernel: evaluated world-space BVH candidates followed by strict triangle edge crossing through triangle interior; plane epsilon 1e-7 m, barycentric/edge margin 1e-6. Bounds used only to prune disjoint objects. Same-owner pairs are reported separately, not suppressed. Same discrete breast opening, guard and shove angles as V30 body-screen. Same-owner pairs are reported, not presumed intentional. No continuous-motion, containment, tangency/coplanarity, self-intersection, or physical-fit claim."
+}

@@ -1,0 +1,7 @@
+# Supplemental Advanced jump visual check
+
+This is a separate browser capture, `../advanced-jump-timing.webm`, paired with `../advanced-jump-timing.json`. The trace records a queued jump request during settling; the power move starts at 0.4489 s. At the requested samples, the trace reports: 0.70 s load/grounded; 1.05 s airborne at 0.35998 m; 1.30 s airborne at 0.08255 m; 1.75 s recovery/grounded. The source video SHA-256 and frame hashes are in `supplemental-ui-jump/manifest.json`.
+
+The stills agree with that trace: the bird compresses into load, rises clearly above its shadow at 1.05 s, descends by 1.30 s, and is grounded again by 1.75 s. This demonstrates a brief, mostly vertical hop in this capture. The folded wings and close-tucked legs make the airborne pose compact; the large vertical separation is visible, but the movement does not read as a traveling leap. I saw no obvious gross part detachment in these five frames; dark rear linkage and the bulky transverse leg axles remain visually prominent.
+
+This targeted capture corrects the provisional judgment in `../review.md`: the original full recording's sparse frames missed the queued jump's actual airborne interval, so its Advanced jump appearance should not be called unverified overall. The supplement confirms only the sampled jump's visual action. It does not establish continuous clearance, collision absence, physical behavior, or artistic acceptance.

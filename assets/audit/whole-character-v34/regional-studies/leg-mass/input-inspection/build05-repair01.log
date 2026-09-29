@@ -1,0 +1,14 @@
+00:00.278  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v33/attempt-form06/murderbird-whole-character-v33.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v34/regional-studies/leg-mass/input-inspection/executed-build05-repair01.py", line 14, in <module>
+    result=runpy.run_path(str(A/'executed-leg-mass.py'))['apply']();after=h['scene_snapshot']();changed=set(result['changedMeshes'])
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v34/regional-studies/leg-mass/coarse05-repair01/executed-leg-mass.py", line 227, in apply
+    for lateral in (-1,1):reliefs.append(_receiving_relief(obj,bpy.data.objects[f'V25 {side} shin distal captive cheek {lateral}'],'Finite proximal instep receiving aperture around independent shin socket.'))
+                                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v34/regional-studies/leg-mass/coarse05-repair01/executed-leg-mass.py", line 120, in _receiving_relief
+    assert len(bm.faces)>0 and all(e.is_manifold for e in bm.edges),target.name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: left curved instep guard
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

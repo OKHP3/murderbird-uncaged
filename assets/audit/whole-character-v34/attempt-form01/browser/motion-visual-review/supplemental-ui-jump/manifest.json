@@ -1,0 +1,118 @@
+{
+  "sourceVideo": "../../advanced-jump-timing.webm",
+  "sourceVideoSha256": "05ebc824cbff9983b05f5bc23e10f4016bfc273b63778831decf7f553404dc88",
+  "sourceVideoBytes": 262154,
+  "timingTrace": "../../advanced-jump-timing.json",
+  "timingTraceSha256": "eebb8e2202dc9f2d43916136348845ac23750d5c5e4360b176836539744b5670",
+  "ffprobeDurationSeconds": 1.802442,
+  "extraction": "ffmpeg still extraction from supplemental browser capture only",
+  "frames": [
+    {
+      "file": "jump-0.15s.png",
+      "bytes": 87517,
+      "sha256": "b5b114a830007ec660e3afc65f85dc9daf3441ff46c936310d8a5cad603b9059"
+    },
+    {
+      "file": "jump-0.70s.png",
+      "bytes": 90436,
+      "sha256": "c6cd9fad0666534ea2d0cab5def9dd83f720e72d4b11fdbdfa3cec80c2ba5642"
+    },
+    {
+      "file": "jump-1.05s.png",
+      "bytes": 96271,
+      "sha256": "3d417e90aec0ba3199be312f6474dfb5bc3cb135977641a5cbbbbf97156aacca"
+    },
+    {
+      "file": "jump-1.30s.png",
+      "bytes": 95040,
+      "sha256": "228abaa595b33b279ed32ae3cbe07b9c715239ab2d90ee80ae40786c40011597"
+    },
+    {
+      "file": "jump-1.75s.png",
+      "bytes": 91656,
+      "sha256": "c79fcf894056ba6f334203c27a4bf89b6198ac56c198c31e43222d1b771973fb"
+    }
+  ],
+  "nearestPerFrameTrace": [
+    {
+      "requestedSeconds": 0.15,
+      "nearestTraceSeconds": 0.15180000001192093,
+      "state": "settle",
+      "pose": null,
+      "power": null
+    },
+    {
+      "requestedSeconds": 0.7,
+      "nearestTraceSeconds": 0.6953000000119209,
+      "state": "power-jump",
+      "pose": {
+        "grounded": true,
+        "height": 0,
+        "kind": "jump",
+        "phase": 0.17857142857142858,
+        "stage": "load"
+      },
+      "power": {
+        "duration": 1.4,
+        "kind": "jump",
+        "phase": 0.17857142857142858,
+        "stage": "load"
+      }
+    },
+    {
+      "requestedSeconds": 1.05,
+      "nearestTraceSeconds": 1.0510999999940396,
+      "state": "power-jump",
+      "pose": {
+        "grounded": false,
+        "height": 0.35998496459808565,
+        "kind": "jump",
+        "phase": 0.4286428571429238,
+        "stage": "airborne"
+      },
+      "power": {
+        "duration": 1.4,
+        "kind": "jump",
+        "phase": 0.4286428571429238,
+        "stage": "flight"
+      }
+    },
+    {
+      "requestedSeconds": 1.3,
+      "nearestTraceSeconds": 1.3049000000059603,
+      "state": "power-jump",
+      "pose": {
+        "grounded": false,
+        "height": 0.08255056226552146,
+        "kind": "jump",
+        "phase": 0.6143571428572097,
+        "stage": "airborne"
+      },
+      "power": {
+        "duration": 1.4,
+        "kind": "jump",
+        "phase": 0.6143571428572097,
+        "stage": "flight"
+      }
+    },
+    {
+      "requestedSeconds": 1.75,
+      "nearestTraceSeconds": 1.745800000011921,
+      "state": "power-jump",
+      "pose": {
+        "grounded": true,
+        "height": 0,
+        "kind": "jump",
+        "phase": 0.928714285714336,
+        "stage": "recover"
+      },
+      "power": {
+        "duration": 1.4,
+        "kind": "jump",
+        "phase": 0.928714285714336,
+        "stage": "recover"
+      }
+    }
+  ],
+  "limits": "Visual stills corroborate visible pose only; discrete samples do not establish continuous surface clearance."
+}

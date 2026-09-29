@@ -1,0 +1,14 @@
+00:00.281  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v34/attempt-upper01/murderbird-whole-character-v34.blend"
+Traceback (most recent call last):
+  File "/tmp/v34-breast-hierarchy/build02.py", line 14, in <module>
+    m=runpy.run_path(str(A/'executed-breast-hierarchy.py'));m['apply'].__globals__['ROOT']=ROOT;result=m['apply']();after=h['scene_snapshot']();assert before['empties']==after['empties'];assert mats=={m.name:h['material_signature'](m) for m in bpy.data.materials}
+                                                                                                       ~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v34/regional-studies/breast-hierarchy/attempt02/executed-breast-hierarchy.py", line 70, in apply
+    name=f'V34 formed breast course {row+1} plate {col+1}';mesh=bpy.data.meshes.new(name+' finite surface');o=bpy.data.objects.new(name,mesh);bpy.context.scene.collection.objects.link(o);o.parent=bpy.data.objects['breastplate'];o.matrix_parent_inverse=Matrix.Identity(4);o.matrix_basis=Matrix.Identity(4);bpy.context.view_layer.update();inv=o.matrix_world.inverted();mesh.from_pydata([inv@v for v in verts],[],faces);mesh.update()
+                                                                                                                                                                                                                                                            ^^^^^^
+UnboundLocalError: cannot access local variable 'Matrix' where it is not associated with a value
+
+Error: script failed, file: '/tmp/v34-breast-hierarchy/build02.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

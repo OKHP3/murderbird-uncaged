@@ -1,0 +1,1 @@
+(()=>{const canvas=document.querySelector('#scene canvas'),gl=canvas.getContext('webgl2')||canvas.getContext('webgl');if(!gl)throw Error('Actual WebGL canvas unavailable');gl.getExtension('WEBGL_lose_context').loseContext();return {requested:true};})()
