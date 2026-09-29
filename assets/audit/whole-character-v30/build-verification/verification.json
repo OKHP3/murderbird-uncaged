@@ -1,0 +1,62 @@
+{
+  "status": "PASS for requested local publication boundary checks",
+  "checkedAtUtc": "2026-09-29T09:55:19Z",
+  "commands": {
+    "npm ci": {
+      "result": "PASS, run by root; preserved log attached"
+    },
+    "npm run build": {
+      "result": "PASS, exit 0"
+    },
+    "node --test tests/publication-boundary.test.mjs": {
+      "result": "PASS, 2 tests, 0 failures"
+    }
+  },
+  "logs": {
+    "npm-ci.log": {
+      "path": "assets/audit/whole-character-v30/build-verification/npm-ci.log",
+      "bytes": 449,
+      "sha256": "38786ee6f3a30eb80e047f152bcafe233dcfbd251e62b30bfaf4f7f5c74cf63f"
+    },
+    "npm-run-build.log": {
+      "path": "assets/audit/whole-character-v30/build-verification/npm-run-build.log",
+      "bytes": 4004,
+      "sha256": "0f71a72da6e8e1ff7688a2f36159dddfb42f2e0f8243cd42600dee25925bd635"
+    },
+    "publication-boundary-test.log": {
+      "path": "assets/audit/whole-character-v30/build-verification/publication-boundary-test.log",
+      "bytes": 265,
+      "sha256": "8d8b12c20e7139f1d184cf0810b685245c8ad0a445955e70e3a0cd228499993c"
+    }
+  },
+  "dist": {
+    "manifestPath": "dist/release.json",
+    "revision": "0efd08a28b7939923e9c8b0891c55ce67506fa82",
+    "workingTreeDirtyAtBuild": true,
+    "declaredOutputFiles": 133,
+    "physicalOutputFiles": 134,
+    "manifestSha256": "62c7145c0234e53d9eb04a58d6971b506590574d1462bb599cded39034b797bf",
+    "listedFileChecks": 133,
+    "listedFileHashOrByteFailures": [],
+    "excludedPathHits": [],
+    "v30_native_audit_private_source_provenance_or_blend_emitted": false
+  },
+  "localProductionModel": {
+    "sourceSelectionPath": "../../assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb",
+    "distReference": [
+      "murderbird-alignment-v9-_aFpjtq5.glb"
+    ],
+    "sourceAssetSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+    "distAssetSha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e",
+    "sourceAndDistMatch": true,
+    "note": "This is local dist V9 evidence; the separately fetched live Pages release serves exterior-v1."
+  },
+  "warnings": [
+    "Vite reports the Three.js chunk exceeds 500 kB minified.",
+    "npm ci reports fsevents@2.3.3 install script not covered by allowScripts; npm ci otherwise completed with 0 vulnerabilities."
+  ],
+  "scopeLimits": [
+    "Local build and two publication-boundary tests only.",
+    "No remote CI, deployment, artistic approval, or V30 app integration established."
+  ]
+}

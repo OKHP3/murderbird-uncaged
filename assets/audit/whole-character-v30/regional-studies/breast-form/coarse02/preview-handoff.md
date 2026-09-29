@@ -1,0 +1,9 @@
+# V30 breast form preview handoff
+
+Coarse02 is the full-mass preview for root macroform review before stance composition or strict screening. The initial thinner coarse01 native/source/views are preserved separately. No candidate is accepted artwork or validated engineering.
+
+The actual viewed owner whole-bird and common master candidate03 references show a continuous curved breast/shoulder mass with taper toward the lower sternum, rather than three horizontal padded bands. The module replaces only 18 body/breastplate skins with a smooth authored full-depth upper profile, narrower lower taper, long central sternal keel, paired oblique cheeks/local lower overlaps and continuous fixed flank/dorsal skins. Two small finite C-section tabs connect the exact retained moving-return rear webs to actual evaluated liner seats. These are construction proposals, not dimensions measured from art.
+
+All 54 named empty rests/properties and 546 outside mesh records remain exact, including the V29 fixed/moving hinge seats, forks/shaft/frames, neck/head/wing/journal/leg/foot geometry. Original material definitions and era machinery remain; new parts are passive with single body/breastplate ownership. The original breast axis and independent opening owner remain. All 14 new evaluated solids are finite, closed-edge, positive-volume with zero loose vertices; native saves/reopens exactly. No strict clearance, movement or complete attachment screen has run.
+
+Actual whole front/side/three-quarter views and matched V29 before renders are here. Root will apply this module first and its coherent lower stance last; the preview native retains the original stance. Reference binary hashes, source/native hashes and exact changed names/attachments are in `reference-and-preview-receipt.json`; `manifest.json` binds the preserved local package.
