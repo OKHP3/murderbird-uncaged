@@ -1,0 +1,43 @@
+✔ four rest-relative joints share pitch while root yaw remains independent and translations stay rigid (22.542917ms)
+✔ repeated contact probes restore every joint and final head pose exactly (11.613167ms)
+✔ era contact precompute and Maker/Advanced/reset exercise the optional four-joint fixture (897.813792ms)
+✔ invalid declared hierarchy, weights and names are rejected before animation (49.921791ms)
+✔ undeclared V21 retains the legacy 35/65 split and linked receiver (9.908625ms)
+✖ contact counterrotation clears on direct Maker, claw and reset boundaries without caller pose resets (732.93975ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1829.553292
+
+✖ failing tests:
+
+test at tests/cervical-chain.test.mjs:129:1
+✖ contact counterrotation clears on direct Maker, claw and reset boundaries without caller pose resets (732.93975ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   -0.3573054032062288,
+      0,
+  +   -0,
+  +   0.9339876063629722
+  -   0,
+  -   0,
+  -   1
+    ]
+  
+      at assertHeadRest (file:///Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/tests/cervical-chain.test.mjs:137:35)
+      at TestContext.<anonymous> (file:///Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/tests/cervical-chain.test.mjs:139:82)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ -0.3573054032062288, 0, -0, 0.9339876063629722 ],
+    expected: [ 0, 0, 0, 1 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

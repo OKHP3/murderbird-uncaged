@@ -1,0 +1,11 @@
+# V23 neutral whole-form visual contract
+
+Ordered by silhouette impact. Compared the owner whole-bird target with V22 Frame04 front, side, and three-quarter views. July image is head-only guidance, not body/neck/wing/leg proportion authority. Both references use perspective; these are visual relationships, not measurements.
+
+1. **Head, bill, and jaw.** Make the head a substantial forward-set predator mass flowing into the throat, not a smooth cap perched above the body. Keep the deep hooked upper bill distinct from a visible lower jaw/cheek opening. The whole-bird target has a bill dropping in front of the eye and a separate dark jaw edge; Frame04’s plain continuous bill and smooth face weaken that construction. Use July only for brow/socket, crest, and jaw detail; its broad gape does not define the whole-bird mouth opening.
+2. **Curved, covered throat.** Replace the short straight neck column with the target’s forward-curving throat, descending from behind the jaw into the breast and carrying nape plates back toward the shoulder. Show continuous exterior coverage with narrow seams, not broad gaps, bare rods, or stacked rings.
+3. **Breast taper.** Keep the breast full and forward, then taper it under and rearward into a visible leg-root frame. Frame04’s smooth egg/barrel remains broad through the lower body. Separate upper chest volume, narrower underside, and exposed pelvis/support structure.
+4. **Shoulder-to-nape transition.** Join the compact folded mantle to throat, nape, and chest as one layered envelope. The target armor wraps over the joint into neck-side plates; Frame04’s shields are detached from the breast, leaving blank body and visible supports. Keep the shield compact, not a long scalloped wing.
+5. **Leg stance.** Keep substantial exposed legs with clear thigh/knee/ankle transitions and planted multi-toed feet. The target’s long load path is slightly bent and weight-bearing; Frame04 is too straight and sparse, with round joints dominating thin members. Strengthen the visible load path without turning feet into boots.
+
+A successful neutral view should read as the same heavy, curved-neck terror bird: hooked head, covered throat, full-but-tapered chest, integrated folded mantle, and grounded legs. This is a visual target, not owner acceptance or a clearance criterion.

@@ -1,0 +1,64 @@
+{
+  "status": "PASS optional cervical code contract and bounded regressions; no V23 geometry/runtime appearance acceptance",
+  "sources": [
+    {
+      "path": "src/scene/cervical-articulation.js",
+      "sha256": "97e1096c3b16c0ce774916471c40a35dc1364d88e74bf3077b07b130a7aaeff9",
+      "frozenCopy": "assets/audit/whole-character-v23/runtime-support-checks/sources/cervical-articulation.js"
+    },
+    {
+      "path": "src/scene/era-motion.js",
+      "sha256": "b8c617efc8bca34f537568611a113f1cd77b8abb1176579cd87f2327e33d9f4a",
+      "frozenCopy": "assets/audit/whole-character-v23/runtime-support-checks/sources/era-motion.js"
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "sha256": "477537cd3b6ad53bf2c15a348e88a5aaa0615e5ed19d8d8a024037dd9c0d0ed6",
+      "frozenCopy": "assets/audit/whole-character-v23/runtime-support-checks/sources/presence-exhibit.js"
+    },
+    {
+      "path": "tests/cervical-chain.test.mjs",
+      "sha256": "fafe9436149d390e47325c51af9e852b9c4c8ef96e3a2f28f1a9a71482002203",
+      "frozenCopy": "assets/audit/whole-character-v23/runtime-support-checks/sources/cervical-chain.test.mjs"
+    }
+  ],
+  "tests": {
+    "command": "node --test tests/cervical-chain.test.mjs tests/cervical-receivers.test.mjs tests/publication-boundary.test.mjs",
+    "exitCode": 0,
+    "passed": 10,
+    "log": "tests.log",
+    "postResetFix": true
+  },
+  "preFixRegression": {
+    "log": "transition-before-fix.log",
+    "status": "FAIL reproduced contact\u2192Maker retained head counterrotation"
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "log": "build.log",
+    "postResetFix": true,
+    "outputReviewAllowlistAndLinks": "PASS",
+    "ordinaryChunkSizeWarning": true
+  },
+  "npmCiBasis": {
+    "command": "npm ci",
+    "exitCode": 0,
+    "timing": "Completed earlier in same optional-chain task BEFORE head-reset fix; not repeated because package dependencies and lockfile did not change",
+    "packageLockSha256": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab",
+    "auditVulnerabilities": 0,
+    "installScriptsWarning": "fsevents install scripts require npm allowScripts approval; no dependency changes requested"
+  },
+  "earlierRegressionBasis": {
+    "commands": [
+      "node --test tests/cage-families.test.mjs tests/claw-action.test.mjs"
+    ],
+    "passed": 9,
+    "timing": "Passed before reset fix; not rerun, since only declared4joint head reset changed and post-fix10tests exercise relevant boundaries."
+  },
+  "limits": [
+    "Actual V21 fixture adapted to four-chain attachment contract, not V23 armor/motion acceptance.",
+    "Legacy default/reset behavior unchanged; optional four-chain restores captured head rest quaternion at action and direct reset boundaries.",
+    "No model URL/default/gallery selection changed."
+  ]
+}

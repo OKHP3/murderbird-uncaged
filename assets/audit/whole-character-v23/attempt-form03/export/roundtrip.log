@@ -1,0 +1,190 @@
+{
+  "status": "PASS bounded actual-GLB attachment roundtrip; no armor clearance or appearance acceptance",
+  "nativeSHA256": "66b6ff8c17e468c0e1ab7874728a3aea889a5630fd25dafc3392d954a1343e62",
+  "glbSHA256": "59879be82a037929cfe292931e8ec5a2c2ae1428a61d0c6cd94e811ea1d9475d",
+  "glbBytes": 11798912,
+  "sourceSHA256": "e93ffb40e1989bb5b0da0e7b86866f0c574d4d36e0fdf1c6f9421fd577ce2158",
+  "runtimeSourceSHA256": "2af3451c1a1893b5447e808c75223ceb89c97c9791b7e4f7c5933544608e0372",
+  "counts": {
+    "loadedMeshes": 631,
+    "loadedVertices": 424914,
+    "nativeWorldMatricesCompared": 685
+  },
+  "maximumWorldMatrixDelta": 3.166496753692627e-8,
+  "checks": {
+    "actualGLTFLoader": true,
+    "allLoadedVertexAttributesFinite": true,
+    "worldRestsMatchNativeWithin1e6": true,
+    "allChainPositionsFixed": true,
+    "unitRigidJointBases": true,
+    "pitchSumCorrect": true,
+    "poseRestoreExact": true,
+    "originalFilesUnmodified": true
+  },
+  "cervicalLayoutV2": {
+    "schema": 1,
+    "pitchJoints": [
+      "neck",
+      "cervical-mid-a",
+      "cervical-mid-b",
+      "cervical-upper"
+    ],
+    "weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "rootYaw": "neck",
+    "headOwner": "head",
+    "status": "proposed rigid serial articulation"
+  },
+  "samples": [
+    {
+      "label": "maker",
+      "totalPitch": -0.14,
+      "rootYaw": -0.45,
+      "headPitch": 0,
+      "headYaw": 0,
+      "pitchSum": -0.14,
+      "maximumPositionError": 0,
+      "maximumUnitBasisError": 1.1102230246251565e-16,
+      "maximumOrthogonalityError": 1.3877787807814457e-17,
+      "joints": [
+        {
+          "name": "neck",
+          "weight": 0.25,
+          "pitch": -0.03500000000000002,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-a",
+          "weight": 0.25,
+          "pitch": -0.035,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-b",
+          "weight": 0.25,
+          "pitch": -0.035,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-upper",
+          "weight": 0.25,
+          "pitch": -0.035,
+          "translationError": 0
+        }
+      ]
+    },
+    {
+      "label": "attention",
+      "totalPitch": 0.08,
+      "rootYaw": 0.288,
+      "headPitch": -0.05,
+      "headYaw": 0.312,
+      "pitchSum": 0.08000000000000002,
+      "maximumPositionError": 0,
+      "maximumUnitBasisError": 2.220446049250313e-16,
+      "maximumOrthogonalityError": 1.3877787807814457e-17,
+      "joints": [
+        {
+          "name": "neck",
+          "weight": 0.25,
+          "pitch": 0.020000000000000004,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-a",
+          "weight": 0.25,
+          "pitch": 0.020000000000000004,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-b",
+          "weight": 0.25,
+          "pitch": 0.020000000000000004,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-upper",
+          "weight": 0.25,
+          "pitch": 0.020000000000000004,
+          "translationError": 0
+        }
+      ]
+    },
+    {
+      "label": "contact",
+      "totalPitch": 0.65,
+      "rootYaw": 0,
+      "headPitch": -0.731,
+      "headYaw": 0,
+      "pitchSum": 0.65,
+      "maximumPositionError": 0,
+      "maximumUnitBasisError": 2.220446049250313e-16,
+      "maximumOrthogonalityError": 0,
+      "joints": [
+        {
+          "name": "neck",
+          "weight": 0.25,
+          "pitch": 0.1625,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-a",
+          "weight": 0.25,
+          "pitch": 0.1625,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-b",
+          "weight": 0.25,
+          "pitch": 0.1625,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-upper",
+          "weight": 0.25,
+          "pitch": 0.1625,
+          "translationError": 0
+        }
+      ]
+    }
+  ],
+  "contactAdjustments": [
+    {
+      "name": "bill-contact",
+      "oldWorld": [
+        0,
+        -0.7491098046302795,
+        1.5733381509780884
+      ],
+      "newWorld": [
+        0,
+        -0.7164018154144287,
+        1.592682123184204
+      ],
+      "surfaceObject": "Profiled upper bill blade 1"
+    },
+    {
+      "name": "anchor-beak",
+      "oldWorld": [
+        0,
+        -0.7270224094390869,
+        1.5740078687667847
+      ],
+      "newWorld": [
+        0,
+        -0.7164018154144287,
+        1.592682123184204
+      ],
+      "surfaceObject": "Profiled upper bill blade 1"
+    }
+  ],
+  "limits": [
+    "Texture bindings stripped only from the in-memory loader input by existing loadRigidValidation helper; original GLB is unchanged.",
+    "Maker/attention/contact angle samples validate transforms, not armor clearance, era mechanism fit, WebGL appearance or owner acceptance.",
+    "Attention sample is a bounded simultaneous yaw/pitch contract sample, not a claim that every dynamic attention state was played."
+  ]
+}

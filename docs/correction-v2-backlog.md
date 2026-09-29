@@ -121,3 +121,7 @@ This updates the current work state without changing historical receipts or insp
 | F10 | Current local modified-tree build and dynamic publication boundary PASS. No V22 models/studies are in distribution. No remote CI/deployment claim. |
 
 Likeness remains below target in all three eras. No new numeric visual score or owner acceptance is inferred from these checks.
+
+## V23 coordinated form checkpoint
+
+Form03 (`66b6ff8c…343e62`) implements a connected curved throat, tapered opening breast, four short neck links, rebuilt bill/mandible and arched inner mantle caps. A local GLB comparison now exists; V22 and every V23 attempt remain preserved. Independent visual review finds improvement, not acceptance. Mask-like face, weak shoulder-to-breast transition, repetitive breast plates, inherited limb gaps, new guard intersections and stale full-exhibit mechanism sockets remain open. See `docs/whole-character-v23-checkpoint.md` and `assets/audit/whole-character-v23/index.html`. Do not promote the local neck demonstration to full era behavior or publication evidence.
