@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+import * as THREE from '/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/node_modules/three/build/three.module.js';
+import {solveTransverseLeg} from '/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/src/scene/rigid-leg-kinematics.js';
+const r=JSON.parse(fs.readFileSync('/tmp/v28-torso-pelvis/inventory.json'));const point=n=>{let m=r.nodes[n].world;return new THREE.Vector3(m[0][3],m[2][3],-m[1][3]);};const nq=q=>[q.x,-q.z,q.y,q.w];let states={};
+for(let name of ['step','crouch']){let s={bodyDeltaNative:[0,0,name==='crouch'?-.09:0],legs:{}};for(let side of ['left','right']){let h=point(side+'-thigh'),k=point(side+'-shin'),f=point(side+'-foot');let target=f.clone().sub(h);if(name==='crouch')target.y+=.09;if(name==='step'&&side==='left'){target.y+=.10;target.z+=.10;}let sol=solveTransverseLeg(k.clone().sub(h),f.clone().sub(k),target);s.legs[side]={hipQuaternionNative:nq(sol.hipQuaternion),kneeQuaternionNative:nq(sol.kneeQuaternion),targetBrowser:target.toArray(),clamped:sol.clamped};}states[name]=s;}
+fs.writeFileSync('/tmp/v28-torso-pelvis/leg-studies.json',JSON.stringify({method:'Existing solveTransverseLeg; illustrative IK studies, not controller animation poses',states},null,2));

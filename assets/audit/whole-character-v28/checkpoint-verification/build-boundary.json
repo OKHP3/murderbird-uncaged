@@ -1,0 +1,24 @@
+{
+  "status": "PASS local build and exact emitted manifest inventory",
+  "revision": "2874b5f70b723b32ec18f4602a0c412e30ab8616",
+  "workingTreeDirty": true,
+  "files": 134,
+  "checksRun": [
+    "npm ci",
+    "npm run build",
+    "node --test tests/publication-boundary.test.mjs"
+  ],
+  "publicationBoundaryTests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "allDeclaredBytesAndHashesMatch": true,
+  "v28StudyNativeAndPrivatePathsExcluded": true,
+  "selectedProductionModel": "V9 unchanged",
+  "warnings": [
+    "Existing >500kB bundle warning",
+    "fsevents install-script policy warning; no approval granted"
+  ],
+  "remoteCI": "not run",
+  "deployment": "not run"
+}
