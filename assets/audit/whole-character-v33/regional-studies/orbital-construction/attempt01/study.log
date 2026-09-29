@@ -1,0 +1,20 @@
+00:00.274  blend            | Read blend: "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/models/whole-character-v32/attempt-form01/murderbird-whole-character-v32.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v33/regional-studies/orbital-construction/attempt01/executed-study.py", line 5, in <module>
+    BASE=ROOT/'assets/models/whole-character-v32/attempt-form01/murderbird-whole-character-v32.blend';SRC=OUT/'executed-region.py';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert sha(BASE)=='676c7226c57d492c6f63e1ce873c1d89e6222fdd46d4ec954aa4ec0db26bc26f';bpy.ops.wm.open_mainfile(filepath=str(BASE));bpy.context.view_layer.update();helper=runpy.run_path(str(ROOT/'scripts/build-uncaged-alignment-v7.py'));mats={m.name:helper['material_signature'](m) for m in bpy.data.materials};result=runpy.run_path(str(SRC))['apply']();snapshot=helper['scene_snapshot']();assert mats=={m.name:helper['material_signature'](m) for m in bpy.data.materials};native=OUT/'orbital-construction.blend';assert not native.exists();bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(native),check_existing=False);bpy.ops.wm.open_mainfile(filepath=str(native));assert helper['scene_snapshot']()==snapshot
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v33/regional-studies/orbital-construction/attempt01/executed-region.py", line 89, in apply
+    for i,(a,b) in enumerate(bands):add(f'V33 tapered throat cheek plate {side} {i}',throat(side,a,b,i),role='receiving-plate')
+                                                                                     ~~~~~~^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/assets/audit/whole-character-v33/regional-studies/orbital-construction/attempt01/executed-region.py", line 86, in throat
+    return h['finite_sheet'](fn,nu=32,nv=14,wall=.005,reference=lambda p:Vector((p.x,p.y+.035,0)))
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/scripts/regions/whole-character-v31-head-reconstruction.py", line 37, in finite_sheet
+    u=i/nu;t=j/nv;p=Vector(fn(u,t));du=Vector(fn(min(1,u+.0001),t))-Vector(fn(max(0,u-.0001),t));dv=Vector(fn(u,min(1,t+.0001)))-Vector(fn(u,max(0,t-.0001)));n=du.cross(dv);assert n.length>1e-12;n.normalize()
+                                                                                                                                                                                    ^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'assets/audit/whole-character-v33/regional-studies/orbital-construction/attempt01/executed-study.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

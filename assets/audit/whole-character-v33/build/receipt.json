@@ -1,0 +1,187 @@
+{
+  "status": "Local build/publication boundary verified; no commit or deployment/publication",
+  "provenance": {
+    "gitHEAD": "e881ed246628b22d85b7713b68b200bd17b54996",
+    "releaseRevision": "e881ed246628b22d85b7713b68b200bd17b54996",
+    "workingTreeDirty": true,
+    "sourceState": "Local modified worktree; HEAD identifies base revision, not a committed V33 or app release",
+    "buildAfterRootNavigationFix": true,
+    "npmCi": "Root ran npm ci successfully this turn; raw log preserved, not rerun by this worker"
+  },
+  "commands": [
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": {
+        "path": "assets/audit/whole-character-v33/build/build.log",
+        "bytes": 4004,
+        "sha256": "af375b0d3756a89d094dd2776123cb50f7256be0bbb9b83bedfa957370bda399"
+      }
+    },
+    {
+      "command": "node --test tests/publication-boundary.test.mjs",
+      "exitCode": 0,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "log": {
+        "path": "assets/audit/whole-character-v33/build/publication-boundary-test.log",
+        "bytes": 265,
+        "sha256": "6873541a45a0f3e284e180f105ea9c6407f5424951bf45b440f2568ba7147b9b"
+      }
+    }
+  ],
+  "npmCiLog": {
+    "path": "assets/audit/whole-character-v33/build/npm-ci.log",
+    "bytes": 449,
+    "sha256": "33611946fd55c07d08d64dc4e680f461a15595133590e52a98f9b1564f33d394"
+  },
+  "warnings": [
+    {
+      "scope": "npm ci",
+      "message": "One package, fsevents@2.3.3, has install scripts not covered by allowScripts; root log reports18 packages audited and0 vulnerabilities."
+    },
+    {
+      "scope": "production build",
+      "message": "Some chunks exceed500kB after minification; Three.js chunk is619456bytes. Build completed successfully."
+    }
+  ],
+  "dist": {
+    "releaseManifest": {
+      "path": "assets/audit/whole-character-v33/build/executed-dist-release.json",
+      "bytes": 24153,
+      "sha256": "8fcab17a629ccbfdc8fde22f8e2dc490bbf87ba19e63bf99bda9527945289d70"
+    },
+    "listedFileCount": 133,
+    "actualFileCountIncludingReleaseManifest": 134,
+    "allPathsBytesAndHashesMatch": true,
+    "inventory": {
+      "path": "assets/audit/whole-character-v33/build/dist-file-inventory.json",
+      "bytes": 22725,
+      "sha256": "4af9ff3c6f22e4e0385d32a21c65160500cb69d21ab05caf06195162af52db94"
+    },
+    "publicSourceFilesCopiedExact": 22,
+    "pinnedReviewOutputs": 83,
+    "pinnedMediaCount": 82,
+    "pinnedMediaHashesExact": true,
+    "forbiddenFilePaths": [],
+    "v33AndPrivatePreviewTextReferences": [],
+    "onlyPackagedModel": {
+      "path": "assets/murderbird-alignment-v9-_aFpjtq5.glb",
+      "bytes": 4636460,
+      "sha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e"
+    },
+    "productionModelSource": {
+      "path": "assets/models/uncaged-alignment-v9/murderbird-alignment-v9.glb",
+      "bytes": 4636460,
+      "sha256": "f5c0f5ad99ace316ed84426d2a1148a093706612c9602d78b93023d46d989e6e"
+    },
+    "reviewPageAuditNativeLinks": "Existing pinned immutable repository links remain in review/index.html; no audit/native files are copied. Three.js .blend/.local property tokens are not native file paths."
+  },
+  "actualForm06": {
+    "native": {
+      "path": "assets/models/whole-character-v33/attempt-form06/murderbird-whole-character-v33.blend",
+      "bytes": 3333698,
+      "sha256": "5fdfe66693db848fcf624b28484c3eaba220a8d7f389248390a4f21a571d108d"
+    },
+    "glb": {
+      "path": "assets/models/whole-character-v33/attempt-form06/murderbird-whole-character-v33.glb",
+      "bytes": 12732280,
+      "sha256": "7430fd397ad44e066e4f9197b023ba2f0f239451e12cb256ba34de8d9d4148ad"
+    },
+    "roundtripReceipt": {
+      "path": "assets/audit/whole-character-v33/attempt-form06/export/actual-runtime-roundtrip/roundtrip-receipt.json",
+      "bytes": 5078,
+      "sha256": "2d274364d64bdc548cf1cf05f136cb03a2672e688eab626fe7021d57c0937dec"
+    },
+    "roundtripStatus": "PASS bounded actual-GLB attachment roundtrip; no armor clearance or appearance acceptance",
+    "roundtripCounts": {
+      "loadedMeshes": 624,
+      "loadedVertices": 438213,
+      "nativeWorldMatricesCompared": 678
+    },
+    "roundtripMaximumWorldMatrixDelta": 2.9802322387695312e-08,
+    "motionReceipt": {
+      "path": "assets/audit/whole-character-v33/attempt-form06/motion/motion-validation.json",
+      "bytes": 26443,
+      "sha256": "0abcf44c8dcb09cff55410afb5c62d295df29b9f4c3334fb6a4bd2ad7844791e"
+    },
+    "motionStatus": "PASS WITH EXCLUDED PROCEDURAL TAIL",
+    "motionSummary": {
+      "passed": 9,
+      "failed": 0,
+      "partial": 1,
+      "physicalTail": "NOT TESTED",
+      "proceduralHardware": "NOT TESTED",
+      "continuousCollision": "NOT TESTED"
+    },
+    "motionCheckCount": 10,
+    "motionFrames": 5124,
+    "motionGeometrySamples": 1045,
+    "maximumFootSolveErrorM": 4.996003610813204e-16,
+    "maximumSupportActualDriftM": 4.965068306494546e-16,
+    "maximumPlantedFloorOffsetM": 2.203098814490545e-16,
+    "violations": [],
+    "physicalTailBoundary": "Controller-only motion harness has no procedural tail: one explicit PARTIAL/NOT TESTED result. Separate exact Form06 era-integration includes createEraMechanisms and physical tail; its66-sample zero-failure record retains separate scope.",
+    "mechanicalMetrics": "Mechanic traversed2.22m with31result steps; Advanced actual-surface contact recorded3samples each at centre/off-centre; jump peak.359983m; thrust right/left angles.72/.18rad; resets exact within1e\u22128."
+  },
+  "inputs": [
+    {
+      "path": "package.json",
+      "bytes": 677,
+      "sha256": "bfd05105c6053d80ba5657ede9014e138684684cb5aba69fae326860c945fbcc"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 25338,
+      "sha256": "1cfc7c2eec8fd5cc844d2aa0dde7d386dec94c6146e9863883e405d3b436caab"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 3894,
+      "sha256": "cad485e4c3ddfa5e03b9c8b948cb6f56fa292e21a2a492c0d9a5cf2e58d92fde"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 37089,
+      "sha256": "ee2d2293a46f3879322753492d10bde2faa2a6718bbb870947d8355c25a5f5b9"
+    },
+    {
+      "path": "src/scene/presence-exhibit.js",
+      "bytes": 29047,
+      "sha256": "391e869378de1ad4b556920afcaa6575c3550a5d04f654479d431cd6c3f05bdd"
+    },
+    {
+      "path": "scripts/prepare-review-release.py",
+      "bytes": 14910,
+      "sha256": "3570a700d3332aba92bb348f8d9dcba51c1bd9374f4c43d1054338e4bf0901fd"
+    },
+    {
+      "path": "scripts/write-release-manifest.mjs",
+      "bytes": 1281,
+      "sha256": "85647dc0252507360d5846d9b8df2ed0e485c91f772a43431b7cf758b1a217fa"
+    },
+    {
+      "path": "scripts/publication-boundary.mjs",
+      "bytes": 634,
+      "sha256": "e09a6bf0a39767e613bf044a0684db49ace14d8d2866bb0ce49ef4f2f65cb10c"
+    },
+    {
+      "path": "tests/publication-boundary.test.mjs",
+      "bytes": 779,
+      "sha256": "d9b3db5b10378086b2e26ade13d39e9e19892ca2751278e2552177f59af3cef9"
+    },
+    {
+      "path": "assets/review/exterior-v1-publication.json",
+      "bytes": 22283,
+      "sha256": "e283278eacebebc6c1adff56f6467f7fd780537d43f86dcd62dadfed70744008"
+    }
+  ],
+  "limits": [
+    "Actual WebGL/browser captures are root-owned separate evidence.",
+    "Local build and two fixture boundary tests are not CI, deployment, publication or owner artistic acceptance.",
+    "Motion/roundtrip are discrete rigid kinematics and attachment metrics, not continuous collision, physical support or full engineering fit.",
+    "No V33 model is promoted into the production build; V9 remains selected."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "status": "review GLB derivative; not selected or accepted",
+  "native": {
+    "path": "assets/models/whole-character-v33/attempt-form05/murderbird-whole-character-v33.blend",
+    "bytes": 3455447,
+    "sha256": "2a1a37b4aa79e45c50e3d738224b32fd67cd6a2d8524c8f2006a93edbf89edcb"
+  },
+  "glb": {
+    "path": "assets/models/whole-character-v33/attempt-form05/murderbird-whole-character-v33.glb",
+    "sha256": "ea0b0bae9f2ab7951b943b8f2e39c01176b361da2d45ea23ea6e6283c8ed34f7",
+    "bytes": 13172056
+  },
+  "exporter": {
+    "path": "assets/audit/whole-character-v33/attempt-form05/export/executed-export.py",
+    "sha256": "1f0f8ab24402f4e69a34682ae8b679b932de20bf55d1eccc209630ec53aba953"
+  },
+  "validator": {
+    "path": "assets/audit/whole-character-v33/attempt-form05/export/executed-export.py",
+    "sha256": "1f0f8ab24402f4e69a34682ae8b679b932de20bf55d1eccc209630ec53aba953"
+  },
+  "validationOnly": false,
+  "excludedAuthoringGuides": [
+    "V32 authoring cutting-seat",
+    "V32 authoring dorsal-bill",
+    "V32 authoring mandible-lip"
+  ],
+  "counts": {
+    "meshObjects": 624,
+    "emptyObjects": 54,
+    "glbNodes": 678,
+    "glbMeshes": 624,
+    "accessors": 1513,
+    "triangles": 500928,
+    "materials": 8
+  },
+  "checks": {
+    "nativeUnmodified": true,
+    "exactNamesAndParenting": true,
+    "extrasPreserved": true,
+    "meshTriangleCountsPreserved": true,
+    "evaluatedModifiersInIndependentCopies": true,
+    "allAccessorsFinite": true,
+    "materialDefinitionsUnmodifiedAndPrimitiveAssignmentsPreserved": true,
+    "noCamerasLightsAnimations": true
+  },
+  "cervicalLayoutV2": {
+    "schema": 1,
+    "pitchJoints": [
+      "neck",
+      "cervical-mid-a",
+      "cervical-mid-b",
+      "cervical-upper"
+    ],
+    "weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "rootYaw": "neck",
+    "headOwner": "head",
+    "status": "proposed rigid serial articulation"
+  },
+  "contactAdjustments": [
+    {
+      "name": "bill-contact",
+      "oldWorld": [
+        0.0,
+        -0.7366440296173096,
+        1.5967223644256592
+      ],
+      "newWorld": [
+        0.0,
+        -0.7366440296173096,
+        1.5967223644256592
+      ],
+      "surfaceObject": "V32 returned upper bill course 1"
+    },
+    {
+      "name": "anchor-beak",
+      "oldWorld": [
+        0.0,
+        -0.7366440296173096,
+        1.5967223644256592
+      ],
+      "newWorld": [
+        0.0,
+        -0.7366440296173096,
+        1.5967223644256592
+      ],
+      "surfaceObject": "V32 returned upper bill course 1"
+    }
+  ],
+  "limits": [
+    "Node/geometry/material identity export validation only; no armor clearance, engineering, appearance or owner acceptance.",
+    "Historical CURVE geometry excluded by explicit mesh/EMPTY selection.",
+    "Actual GLTFLoader joint validation is separate."
+  ]
+}

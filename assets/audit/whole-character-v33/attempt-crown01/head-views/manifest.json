@@ -1,0 +1,255 @@
+{
+  "status": "Bounded V33 crown/head validation; no native edits",
+  "native": {
+    "path": "assets/models/whole-character-v33/attempt-crown01/murderbird-whole-character-v33.blend",
+    "sha256": "ea4ae32563566b39604e0fd8ced46c74fa8dd74aab7b52edf418913e0215b3c3",
+    "expectedSHA256": "ea4ae32563566b39604e0fd8ced46c74fa8dd74aab7b52edf418913e0215b3c3",
+    "unchanged": true
+  },
+  "frozenInputs": {
+    "executedCheckSHA256": "c69e82c3f6e2c733d48657f4aae6229a678dfc2a5500b9b15d657286b78fbaec",
+    "strictKernelSHA256": "b290574245203be09e4eb1e76dba44c1cb9c174b540b962bfef404d2424ee84a",
+    "cameraInputSHA256": "3be9a7f08bdef7ce5b9c4306e87b3a2358a9984a5b1dc286e1ffdd6aecc2c547",
+    "executedSameOwnerScreenSHA256": "67a39231e8e3b8d2433f057ca688a144e63f75ee7a70ad3b3a7593ae3fb62a7c"
+  },
+  "headViews": {
+    "count": 7,
+    "names": [
+      "closed-head",
+      "closed-side",
+      "closed-front",
+      "open-head",
+      "open-side",
+      "open-front",
+      "cap-open"
+    ],
+    "cameraInput": "Copied unchanged from V32 attempt-form01; identical hash above"
+  },
+  "jawAndCapStrictScreen": {
+    "poses": [
+      [
+        "jaw",
+        0,
+        0
+      ],
+      [
+        "jaw",
+        0.08,
+        0
+      ],
+      [
+        "jaw",
+        0.16,
+        0
+      ],
+      [
+        "jaw",
+        0.24,
+        0
+      ],
+      [
+        "jaw",
+        0.32,
+        0
+      ],
+      [
+        "cap",
+        0,
+        0
+      ],
+      [
+        "cap",
+        0.08,
+        0
+      ]
+    ],
+    "scope": "V33 dynamic head-subtree meshes; active jaw/cap vs every other head-subtree rigid owner. Evaluated BVH strict edge-through-face crossings,1e-7 plane epsilon,1e-6 edge/barycentric margin. Tangencies/coplanar/contained and same-owner contacts excluded. Seven discrete poses, not continuous physics clearance."
+  },
+  "sameOwnerCrownRestScreen": {
+    "crownLeafMeshes": 29,
+    "distinctMeshPairsTested": 406,
+    "BVHCandidateMeshPairs": 9,
+    "BVHCandidateTrianglePairs": 1613,
+    "strictCrossingMeshPairs": 9,
+    "crossingPairs": [
+      {
+        "meshA": "V33 swept cranial leaf 0 0",
+        "meshB": "V33 swept cranial leaf 1 0",
+        "trianglePairCount": 212,
+        "witnessCentroidWorld": [
+          0.1288803666830063,
+          -0.48533663153648376,
+          1.7923659086227417
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 0 0",
+        "meshB": "V33 swept cranial leaf 2 0",
+        "trianglePairCount": 77,
+        "witnessCentroidWorld": [
+          0.1182415708899498,
+          -0.4099898040294647,
+          1.7958234548568726
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 0 6",
+        "meshB": "V33 swept cranial leaf 1 6",
+        "trianglePairCount": 214,
+        "witnessCentroidWorld": [
+          -0.11661239713430405,
+          -0.4884129464626312,
+          1.8036588430404663
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 0 6",
+        "meshB": "V33 swept cranial leaf 2 6",
+        "trianglePairCount": 79,
+        "witnessCentroidWorld": [
+          -0.11800595372915268,
+          -0.41014692187309265,
+          1.7952985763549805
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 1 0",
+        "meshB": "V33 swept cranial leaf 2 0",
+        "trianglePairCount": 320,
+        "witnessCentroidWorld": [
+          0.11957260966300964,
+          -0.40417516231536865,
+          1.796820878982544
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 1 6",
+        "meshB": "V33 swept cranial leaf 2 6",
+        "trianglePairCount": 324,
+        "witnessCentroidWorld": [
+          -0.11863180249929428,
+          -0.40433549880981445,
+          1.796863317489624
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 3 2",
+        "meshB": "V33 swept cranial leaf 4 2",
+        "trianglePairCount": 65,
+        "witnessCentroidWorld": [
+          0.04112738370895386,
+          -0.25406384468078613,
+          1.7376735210418701
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 3 3",
+        "meshB": "V33 swept cranial leaf 4 3",
+        "trianglePairCount": 70,
+        "witnessCentroidWorld": [
+          0.008313655853271484,
+          -0.2449718713760376,
+          1.724255919456482
+        ]
+      },
+      {
+        "meshA": "V33 swept cranial leaf 3 4",
+        "meshB": "V33 swept cranial leaf 4 4",
+        "trianglePairCount": 66,
+        "witnessCentroidWorld": [
+          -0.03042878769338131,
+          -0.25523650646209717,
+          1.7391090393066406
+        ]
+      }
+    ],
+    "scope": "Reused frozen proper-crossing kernel: 1e-7 plane epsilon and 1e-6 barycentric/edge margin. BVH candidates are reported separately from strict crossings; coplanar/tangent/containment cases are not established. No intra-mesh self-intersection check."
+  },
+  "limits": [
+    "Seven discrete jaw/cap states are not continuous clearance.",
+    "Same-owner results test inter-mesh crown-leaf crossings at rest only; no intra-mesh self-intersection, containment, physical, or artistic claim.",
+    "This validation does not mutate or save the native file."
+  ],
+  "files": [
+    {
+      "path": "cap-open.png",
+      "bytes": 949107,
+      "sha256": "de4b211f2921b5727a43fb3ce6d4bb2b6ce4804102aae69f47244f41127b913c"
+    },
+    {
+      "path": "check.log",
+      "bytes": 1630,
+      "sha256": "392189afb15f3aaa4e574f68b4ce47227814a4e699b9effa84ef66221082c3c0"
+    },
+    {
+      "path": "closed-front.png",
+      "bytes": 924507,
+      "sha256": "3258cc058565b3663a558dd2bc871e2c0c0e0284e6beb67ff16b78371c28e8ec"
+    },
+    {
+      "path": "closed-head.png",
+      "bytes": 935489,
+      "sha256": "0bc313a55b09b9df03ea96e02ab83f144d71ffed47cf1916fb78596b816b6865"
+    },
+    {
+      "path": "closed-side.png",
+      "bytes": 937083,
+      "sha256": "cca9f23f0d68dddb27394e1a24c78d5c210067f41ca621e422fdf39a58565f40"
+    },
+    {
+      "path": "executed-check.py",
+      "bytes": 4593,
+      "sha256": "c69e82c3f6e2c733d48657f4aae6229a678dfc2a5500b9b15d657286b78fbaec"
+    },
+    {
+      "path": "executed-same-owner-crown-screen.py",
+      "bytes": 4083,
+      "sha256": "67a39231e8e3b8d2433f057ca688a144e63f75ee7a70ad3b3a7593ae3fb62a7c"
+    },
+    {
+      "path": "executed-strict-kernel.py",
+      "bytes": 2963,
+      "sha256": "b290574245203be09e4eb1e76dba44c1cb9c174b540b962bfef404d2424ee84a"
+    },
+    {
+      "path": "executed-v31-camera-input.json",
+      "bytes": 66350,
+      "sha256": "3be9a7f08bdef7ce5b9c4306e87b3a2358a9984a5b1dc286e1ffdd6aecc2c547"
+    },
+    {
+      "path": "open-front.png",
+      "bytes": 923550,
+      "sha256": "6fdec1946de95a79c45e4e49c8b2ba96792f64922e83afe72a7f16cf2981b047"
+    },
+    {
+      "path": "open-head.png",
+      "bytes": 936621,
+      "sha256": "b12bbecbb90341e592a9b71090b885fe5214a789710d6c0ca83c127d59afcbf4"
+    },
+    {
+      "path": "open-side.png",
+      "bytes": 937348,
+      "sha256": "986477913e9f3b31d902a6b54885b163420c07aff1fad2f67b935303f0aa9821"
+    },
+    {
+      "path": "render-receipt.json",
+      "bytes": 3392,
+      "sha256": "bbd1959f28bc457ce379782ce513e5164995ba0b213900b4bc22088d301ea2d1"
+    },
+    {
+      "path": "same-owner-crown-screen.json",
+      "bytes": 12863,
+      "sha256": "22bc67869feed32e6ba8df2aa7a7e7bd00e8be62853ab88a61c73a20b4ac9c18"
+    },
+    {
+      "path": "same-owner-screen.log",
+      "bytes": 12112,
+      "sha256": "e32ee1360fadaac5d14923c6a65a7fa2af2e561d168dc391a5455c757ad8e978"
+    },
+    {
+      "path": "screen.json",
+      "bytes": 5528,
+      "sha256": "a88a07d82828549257671a16c491eaf27d46dd344def251fb0ee8e5f8ab10cc5"
+    }
+  ]
+}

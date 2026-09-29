@@ -1,0 +1,132 @@
+{
+  "nativeSHA256": "2a1a37b4aa79e45c50e3d738224b32fd67cd6a2d8524c8f2006a93edbf89edcb",
+  "executedScreenSHA256": "96fd6b0fc9afca51baff4697a49324c1f9dbe85395e382b54b61d02cc02aef75",
+  "kernelSHA256": "b290574245203be09e4eb1e76dba44c1cb9c174b540b962bfef404d2424ee84a",
+  "scope": "Distinct V33 swept cranial leaf pairs owned by cranial-cover and distinct swept temporal leaf pairs owned by head, at native rest. Cross-owner cranial/temporal pairs and intra-mesh self-intersections are excluded. Each mesh is evaluated and transformed to world space before BVH overlap and strict edge-through-face confirmation.",
+  "method": "Reused frozen proper-crossing kernel: 1e-7 plane epsilon and 1e-6 barycentric/edge margin. BVH candidates are reported separately from strict crossings; coplanar/tangent/containment cases are not established. No intra-mesh self-intersection check.",
+  "pose": "native rest (jaw delta 0, cranial-cover lift 0)",
+  "groups": {
+    "cranial-cover": {
+      "leafMeshCount": 29,
+      "candidateMeshPairCount": 406,
+      "bvhCandidateMeshPairCount": 2,
+      "totalBvhCandidateTrianglePairs": 76,
+      "strictCrossingMeshPairCount": 2,
+      "pairs": [
+        {
+          "meshA": "V33 swept cranial leaf 3 2",
+          "meshB": "V33 swept cranial leaf 4 2",
+          "owner": "cranial-cover",
+          "bvhCandidateTrianglePairs": 38,
+          "strictCrossingTrianglePairs": 34,
+          "firstWitness": {
+            "triangleIndices": [
+              1658,
+              1088
+            ],
+            "triangleAWorld": [
+              [
+                0.017392810434103012,
+                -0.17223000526428223,
+                1.6204710006713867
+              ],
+              [
+                0.019357450306415558,
+                -0.18027988076210022,
+                1.6293054819107056
+              ],
+              [
+                0.01933802291750908,
+                -0.1815064549446106,
+                1.6302188634872437
+              ]
+            ],
+            "triangleBWorld": [
+              [
+                0.020236188545823097,
+                -0.1859721541404724,
+                1.6315416097640991
+              ],
+              [
+                0.01933881640434265,
+                -0.1782737374305725,
+                1.6267375946044922
+              ],
+              [
+                0.018718482926487923,
+                -0.17796361446380615,
+                1.6267060041427612
+              ]
+            ],
+            "combinedCentroidWorld": [
+              0.01906362920999527,
+              -0.17937098443508148,
+              1.6274969577789307
+            ]
+          }
+        },
+        {
+          "meshA": "V33 swept cranial leaf 3 4",
+          "meshB": "V33 swept cranial leaf 4 4",
+          "owner": "cranial-cover",
+          "bvhCandidateTrianglePairs": 38,
+          "strictCrossingTrianglePairs": 37,
+          "firstWitness": {
+            "triangleIndices": [
+              1631,
+              1085
+            ],
+            "triangleAWorld": [
+              [
+                -0.019180040806531906,
+                -0.19065186381340027,
+                1.6337478160858154
+              ],
+              [
+                -0.019078731536865234,
+                -0.18866848945617676,
+                1.6334983110427856
+              ],
+              [
+                -0.017055097967386246,
+                -0.17628228664398193,
+                1.6269603967666626
+              ]
+            ],
+            "triangleBWorld": [
+              [
+                -0.01816892996430397,
+                -0.18714585900306702,
+                1.6320987939834595
+              ],
+              [
+                -0.018178045749664307,
+                -0.17826807498931885,
+                1.6269910335540771
+              ],
+              [
+                -0.018866168335080147,
+                -0.18596643209457397,
+                1.6318442821502686
+              ]
+            ],
+            "combinedCentroidWorld": [
+              -0.018421169370412827,
+              -0.1844971626996994,
+              1.6308568716049194
+            ]
+          }
+        }
+      ]
+    },
+    "head": {
+      "leafMeshCount": 14,
+      "candidateMeshPairCount": 91,
+      "bvhCandidateMeshPairCount": 0,
+      "totalBvhCandidateTrianglePairs": 0,
+      "strictCrossingMeshPairCount": 0,
+      "pairs": []
+    }
+  },
+  "nativeUnchanged": true
+}
