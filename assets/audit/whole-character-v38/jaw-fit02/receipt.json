@@ -1,0 +1,691 @@
+{
+  "status": "Bounded rigid jaw-fit proposal; not selected, owner accepted or full motion-clearance validated",
+  "inputs": {
+    "native": {
+      "path": "assets/models/whole-character-v38/bill-shell02/murderbird-v38-bill-shell02.blend",
+      "bytes": 3705561,
+      "sha256": "b1f1bb96ccc1595dbf735ec77a9a54f416eeef549cb78b9dd6c6a8c6d2442216"
+    },
+    "glb": {
+      "path": "assets/models/whole-character-v38/bill-shell02/murderbird-v38-bill-shell02-rigid.glb",
+      "bytes": 12549212,
+      "sha256": "0b7622bcaf131e3179b130f4898af04dd045a33690d35e1c4eff0585c42a98fe"
+    },
+    "viewedReferences": [
+      {
+        "path": "/Volumes/OKH-Local/04_GitHub_Mirrors/murderbird-uncaged/context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+        "bytes": 2782772,
+        "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9"
+      },
+      {
+        "path": "/Volumes/OKH-Local/04_GitHub_Mirrors/murderbird-uncaged/assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+        "bytes": 2319632,
+        "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633"
+      },
+      {
+        "path": "/Volumes/OKH-Local/04_GitHub_Mirrors/murderbird-uncaged/assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png",
+        "bytes": 2941763,
+        "sha256": "93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9"
+      }
+    ]
+  },
+  "outputs": {
+    "native": {
+      "path": "assets/models/whole-character-v38/jaw-fit02/murderbird-v38-jaw-fit02.blend",
+      "bytes": 3704417,
+      "sha256": "92470b6c7eb52004d9d3874645dc82bb5ecc2543482bdcede7f738898aea4ca9"
+    },
+    "rigidGlb": {
+      "path": "assets/models/whole-character-v38/jaw-fit02/murderbird-v38-jaw-fit02-rigid.glb",
+      "bytes": 12549316,
+      "sha256": "1f0091611676d1a8a75e609e5e0154f05acdd93c92a00ece24929fc87e0cc600"
+    }
+  },
+  "recipes": {
+    "scripts/build-v38-jaw-fit.py": "e46fa8e1c9eeb4f447188aaa1a300036b4e1446332f26a31c73e95559c6a1a24",
+    "scripts/regions/v38-jaw-fit.py": "d3abccf265604827239ff5cca9c2a6648b7e1839083614bd9635fc9010f5fdd6"
+  },
+  "executedSourceCopies": [
+    "executed-builder.py",
+    "executed-region.py"
+  ],
+  "contract": {
+    "changedMeshes": [
+      "V32 formed mandibular bowl"
+    ],
+    "changedNodes": [],
+    "addedMeshes": [],
+    "removedMeshes": [],
+    "contactBefore": {
+      "leadingObject": "V32 returned upper bill course 1",
+      "leadingPointNativeXYZ": [
+        0.030648719519376755,
+        -0.8062570095062256,
+        1.6321558952331543
+      ],
+      "actualTriangleVertexBounds": [
+        [
+          -0.12643998861312866,
+          0.12643998861312866
+        ],
+        [
+          -0.8062570095062256,
+          -0.5986999869346619
+        ],
+        [
+          1.500100016593933,
+          1.8194400072097778
+        ]
+      ]
+    },
+    "contactAfter": {
+      "leadingObject": "V32 returned upper bill course 1",
+      "leadingPointNativeXYZ": [
+        0.030648719519376755,
+        -0.8062570095062256,
+        1.6321558952331543
+      ],
+      "actualTriangleVertexBounds": [
+        [
+          -0.12643998861312866,
+          0.12643998861312866
+        ],
+        [
+          -0.8062570095062256,
+          -0.5986999869346619
+        ],
+        [
+          1.500100016593933,
+          1.8194400072097778
+        ]
+      ]
+    },
+    "contactLandmarksChanged": false,
+    "protectedActualSocketIndex": 283,
+    "protectedSourceSocketIndex": 397,
+    "protectedRootRows": "Rows0..14 existing keys outer/inner exact, true socket neighborhood row10..14/col0..4 intact",
+    "protectedRootCoordinateMaxErrorM": 0.0,
+    "all856SourcePairedStockVectorsPreservedMaxErrorM": 5.960464477539063e-08,
+    "actualMaximumDisplacementM": 0.0250599281175782,
+    "modifiedOuterVertices": 532,
+    "modifiedInnerVertices": 532,
+    "exactVertexAllowlist": "Existing source-grid rows15..52,cols0..6/26..32 and paired inner+856; only native world Y/Z changed",
+    "displacementField": "01 descending depth retained; smooth22mm posterior shortening afteru.30 and6mm terminal upturn afteru.70; source X/stock retained. No thinning/removal or upper hook change.",
+    "attachmentAndEraMap": [
+      {
+        "name": "V32 formed mandibular bowl",
+        "owner": "jaw",
+        "parentLocalMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "eras": "maker,mechanic,builder",
+        "materials": [
+          "V38 contrast / plate"
+        ],
+        "rigid": true,
+        "stock": "All856 actual paired vectors retained; paired length not universal normal-thickness certificate",
+        "closedEdgeManifold": true,
+        "positiveVolumeM3": 0.00017140627472445253,
+        "mechanism": "Retained actual jaw pivot and Maker socket; inherited era drive and inspection ownership"
+      }
+    ],
+    "confirmation": "ActualJuly HEAD ONLY slender substantial curved lower return and improved fixed hook; Master03/Maker-clean wholebird crosscheck",
+    "reconstruction": "Exact displacement/hidden stock/jaw profile authored proposal, not measured art or manufacturing",
+    "limits": [
+      "Actual complete finite jaw versus head screen follows visible gate; no continuous collision, physical simulation or owner acceptance.",
+      "Existing9breast contacts/16.25mm receiver warning and broad temple remain outside scope.",
+      "Upperbill contact geometry/marker, true socket footprint, root hardware and all other regions exactly retained."
+    ]
+  },
+  "changedBeforeSignatures": {
+    "V32 formed mandibular bowl": {
+      "type": "MESH",
+      "parent": "jaw",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.47920000553131104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.6152839660644531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "jaw",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38BillShell": "Exact functional socket root; true through-opening between narrow paired descending rails with closed inside rims",
+        "v38BillSocketFit": "Functional source-seat restoration only; artistic01 contour retained, no third artistic attempt"
+      },
+      "meshSignature": "00743dbb1d66b4bbda158e7850c2b732d2670eb5a6e240184d1940218b7a4175",
+      "materialSlots": [
+        "V38 contrast / plate"
+      ],
+      "modifiers": []
+    }
+  },
+  "changedAfterSignatures": {
+    "V32 formed mandibular bowl": {
+      "type": "MESH",
+      "parent": "jaw",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.47920000553131104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.6152839660644531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "jaw",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38BillShell": "Exact functional socket root; true through-opening between narrow paired descending rails with closed inside rims",
+        "v38BillSocketFit": "Functional source-seat restoration only; artistic01 contour retained, no third artistic attempt",
+        "v38JawFit": "Finite source rail stock, localized descending distal return and deeper band; proposal"
+      },
+      "meshSignature": "1bbe9eead83dffcef25cd104daeb91e0567e25e25e8556ea49013034b7fb5748",
+      "materialSlots": [
+        "V38 contrast / plate"
+      ],
+      "modifiers": []
+    }
+  },
+  "newAfterSignatures": {},
+  "exclusionsDigest": "77fe3eb6d9a01050d27659f8461fcc2c27ceee9b02cbe8c5e76b39e245880099",
+  "preservation": {
+    "originalObjectsExactExceptDeclaredJawFitMesh": 1218,
+    "retainedOwnersJointPivotsTransformsAndContactMarkerExact": true,
+    "leftRestrictionAndRepairLandmarkExact": true,
+    "allExcludedHeadNeckMantleReceiversHingeSocketElbowMachineryExact": true,
+    "existingMaterialsAndEraProfilesExact": true,
+    "nativeSaveReopenExact": true,
+    "glbNodeNamesAndRigidParentsExact": true,
+    "standardPbrRecordsAndEraFinishesCopiedExactlyFromSourceGlb": true
+  },
+  "views": {
+    "baseline": [
+      {
+        "path": "assets/audit/whole-character-v38/bill-shell02/candidate-full-bird-three-quarter.png",
+        "bytes": 1646222,
+        "sha256": "0fc18522f0e5ae463fcb52be9dda0e9a1af792fb0f22118d73dbae8f72ca1a07",
+        "camera": {
+          "position": [
+            -6,
+            -3.5,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-shell02/candidate-full-bird-profile.png",
+        "bytes": 1644452,
+        "sha256": "692749272dbe23a1e87de3ca6838fe933d052c34222c8a267366919ca6b60da4",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-shell02/candidate-full-bird-front.png",
+        "bytes": 1622108,
+        "sha256": "474318dc75ed1eb3c566c045b7a9677efc773075c069e6217e446773985cb4f3",
+        "camera": {
+          "position": [
+            0,
+            -7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-shell02/candidate-full-bird-rear.png",
+        "bytes": 1610093,
+        "sha256": "7945fc2b02b255c08bf38b2496750709e549638f09104b9ceb3bb20026de94d3",
+        "camera": {
+          "position": [
+            0,
+            7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-shell02/candidate-head-three-quarter.png",
+        "bytes": 1767006,
+        "sha256": "987a25ce517ee5c7d2ec7e5ef475119f64b410b34343587270e6a28ec334789c",
+        "camera": {
+          "position": [
+            -5,
+            -3.8,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Exact source bill-shell02 headbaseline samecamera/render"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-shell02/candidate-head-profile.png",
+        "bytes": 1742829,
+        "sha256": "ae7bcd80dceb3764a9c39ba2c31ea6f543c6a8e7e2821f02a20f8b5310b120d3",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Exact source bill-shell02 headbaseline samecamera/render"
+      }
+    ],
+    "candidate": [
+      {
+        "path": "assets/audit/whole-character-v38/jaw-fit02/candidate-full-bird-three-quarter.png",
+        "bytes": 1646435,
+        "sha256": "42f61cd90e49bc6bfed6975108e0bf75fc9f7ba5a0e179ff363e6397aa1a0a61",
+        "camera": {
+          "position": [
+            -6,
+            -3.5,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/jaw-fit02/candidate-full-bird-profile.png",
+        "bytes": 1644299,
+        "sha256": "9595df82ee65b91b92adb62a96c7a94b8781c99cde14cf1642a4ed45e6f5cf55",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/jaw-fit02/candidate-full-bird-front.png",
+        "bytes": 1622432,
+        "sha256": "f00f2dd15ad90959272f461636dd6f30e4d592f34145770587233332c0c2e040",
+        "camera": {
+          "position": [
+            0,
+            -7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/jaw-fit02/candidate-full-bird-rear.png",
+        "bytes": 1610087,
+        "sha256": "6242af1a75cdbf4af292fcf364cf46fc9c234fbe2fc75e7418be6a36e330f452",
+        "camera": {
+          "position": [
+            0,
+            7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/jaw-fit02/candidate-head-three-quarter.png",
+        "bytes": 1766770,
+        "sha256": "fcbd02460553ad8dde896b43d4a1e7120599507a5f65338788b828271833f3d1",
+        "camera": {
+          "position": [
+            -5,
+            -3.8,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/jaw-fit02/candidate-head-profile.png",
+        "bytes": 1744208,
+        "sha256": "bb18cc8a0d1f4ac10cbb5f17864b7c4f93313cea36461a6a6c328cb9752d4a2d",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      }
+    ],
+    "baselineAuthoredPoseGlances": [],
+    "candidateAuthoredPoseGlances": []
+  },
+  "poseDirections": {},
+  "poseScope": "Authored retained-owner local-X rotations from existing exhibit amplitude direction; baseline/candidate matched. Feet/body unchanged. Not captured runtime playback or force/ground-contact certification.",
+  "limits": [
+    "Confirmed direction: compact flightless balance/shield/shove. Exact plates, unseen far side and hidden receiving construction remain proposals.",
+    "No runtime edits, illustrated fallback, release, publication, full validation suite or owner likeness/motion acceptance.",
+    "Targeted triangle diagnostic is separate; any actual intersections and sampling scope must be reviewed before integration."
+  ]
+}
