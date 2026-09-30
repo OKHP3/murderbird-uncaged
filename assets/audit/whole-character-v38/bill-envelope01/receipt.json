@@ -1,0 +1,1677 @@
+{
+  "status": "Bounded reconstructed fixed head-owned bill envelope proposal; not selected, owner accepted or full motion-clearance validated",
+  "inputs": {
+    "native": {
+      "path": "assets/models/whole-character-v38/breast-course02/murderbird-v38-breast-course02.blend",
+      "bytes": 3597178,
+      "sha256": "5e1738c2fc048051c73480cdd6b66375c7c1e3dfa0bbd11441892c418732f523"
+    },
+    "glb": {
+      "path": "assets/models/whole-character-v38/breast-course02/murderbird-v38-breast-course02-rigid.glb",
+      "bytes": 12526260,
+      "sha256": "fa9b26f0267a880c20ea902350d6fb0ef264be150c08a1233b5ac9265d4ce771"
+    },
+    "viewedReferences": [
+      {
+        "path": "/Volumes/OKH-Local/04_GitHub_Mirrors/murderbird-uncaged/context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+        "bytes": 2782772,
+        "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9"
+      },
+      {
+        "path": "/Volumes/OKH-Local/04_GitHub_Mirrors/murderbird-uncaged/assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+        "bytes": 2319632,
+        "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633"
+      },
+      {
+        "path": "/Volumes/OKH-Local/04_GitHub_Mirrors/murderbird-uncaged/assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png",
+        "bytes": 2941763,
+        "sha256": "93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9"
+      }
+    ]
+  },
+  "outputs": {
+    "native": {
+      "path": "assets/models/whole-character-v38/bill-envelope01/murderbird-v38-bill-envelope01.blend",
+      "bytes": 3811874,
+      "sha256": "87a5e39fe13014ebbd5feaf24bb5b9813a15d98a80a228c6c0e4b5fef21f0da5"
+    },
+    "rigidGlb": {
+      "path": "assets/models/whole-character-v38/bill-envelope01/murderbird-v38-bill-envelope01-rigid.glb",
+      "bytes": 12670068,
+      "sha256": "f542a99919068a099d1e2d866bf4067d4a60e0636bb779f0c68b72bcb763bad6"
+    }
+  },
+  "recipes": {
+    "scripts/build-v38-bill-envelope.py": "51d3e1b00672304c927a4ca384bce7153e5dc164565ebe2f94b6953bb5d954ab",
+    "scripts/regions/v38-bill-envelope.py": "ad3f427d4ce1250737ba0046120ace99c0277fb4365e50a322de23b16a072103"
+  },
+  "executedSourceCopies": [
+    "executed-builder.py",
+    "executed-region.py"
+  ],
+  "contract": {
+    "changedMeshes": [
+      "V32 returned upper bill course 0",
+      "V32 returned upper bill course 1",
+      "V32 returned upper bill course 2",
+      "V32 formed mandibular bowl"
+    ],
+    "changedNodes": [
+      "bill-contact"
+    ],
+    "addedMeshes": [],
+    "removedMeshes": [],
+    "attachmentAndEraMap": [
+      {
+        "name": "V32 returned upper bill course 0",
+        "owner": "upper-bill",
+        "eras": "maker,mechanic,builder",
+        "materials": [
+          "V38 contrast / bill"
+        ],
+        "globalParameterRange": [
+          0,
+          0.36
+        ],
+        "method": "Side shell between independently authored dorsal/cutting profile, restrained transverse camber; outer/inner fields identical across allcourse boundaries",
+        "closedEdgeManifold": true,
+        "positiveVolumeM3": 0.00021061948314551147,
+        "normalStockMinMaxM": [
+          0.0029999403952960684,
+          0.0030000623717427884
+        ],
+        "newVertices": 4704
+      },
+      {
+        "name": "V32 returned upper bill course 1",
+        "owner": "upper-bill",
+        "eras": "maker,mechanic,builder",
+        "materials": [
+          "V38 contrast / bill"
+        ],
+        "globalParameterRange": [
+          0.36,
+          0.72
+        ],
+        "method": "Side shell between independently authored dorsal/cutting profile, restrained transverse camber; outer/inner fields identical across allcourse boundaries",
+        "closedEdgeManifold": true,
+        "positiveVolumeM3": 0.00012784874972944754,
+        "normalStockMinMaxM": [
+          0.0029999360727387637,
+          0.00300006209463687
+        ],
+        "newVertices": 4704
+      },
+      {
+        "name": "V32 returned upper bill course 2",
+        "owner": "upper-bill",
+        "eras": "maker,mechanic,builder",
+        "materials": [
+          "V38 contrast / bill"
+        ],
+        "globalParameterRange": [
+          0.72,
+          1
+        ],
+        "method": "Side shell between independently authored dorsal/cutting profile, restrained transverse camber; outer/inner fields identical across allcourse boundaries",
+        "closedEdgeManifold": true,
+        "positiveVolumeM3": 3.083640762226401e-06,
+        "normalStockMinMaxM": [
+          0.0029999480931149646,
+          0.003000050949391924
+        ],
+        "newVertices": 4704
+      },
+      {
+        "name": "V32 formed mandibular bowl",
+        "owner": "jaw",
+        "eras": "maker,mechanic,builder",
+        "materials": [
+          "V38 contrast / plate"
+        ],
+        "method": "Exact first21rows/socket397 retained; shared boundary/source tangent transitions to slender descending paired walls/rim with restrained upturn; distal bowl depth6mm",
+        "closedEdgeManifold": true,
+        "positiveVolumeM3": 0.00030595269076197297,
+        "sourcePairedStockVectorMaxErrorM": 1.862645149230957e-09,
+        "all1749PairedStockVectorsRetained": true
+      }
+    ],
+    "actualSharedSeams": [
+      {
+        "coursePair": [
+          0,
+          1
+        ],
+        "parameter": 0.36,
+        "actualOuterSeamMaxDistanceM": 0.0,
+        "actualInnerSeamMaxDistanceM": 0.0,
+        "tangent": "Both sides use the same global derivative, no independent courseframe",
+        "join": "Shared finite butt seam; coincident endlands not a separate lap/fastener/load certificate"
+      },
+      {
+        "coursePair": [
+          1,
+          2
+        ],
+        "parameter": 0.72,
+        "actualOuterSeamMaxDistanceM": 0.0,
+        "actualInnerSeamMaxDistanceM": 0.0,
+        "tangent": "Both sides use the same global derivative, no independent courseframe",
+        "join": "Shared finite butt seam; coincident endlands not a separate lap/fastener/load certificate"
+      }
+    ],
+    "globalDorsalCuttingProfile": [
+      [
+        -0.6532,
+        1.81944,
+        -0.5987,
+        1.663,
+        0.105
+      ],
+      [
+        -0.714,
+        1.803,
+        -0.66,
+        1.655,
+        0.099
+      ],
+      [
+        -0.778,
+        1.755,
+        -0.724,
+        1.621,
+        0.076
+      ],
+      [
+        -0.81,
+        1.69,
+        -0.772,
+        1.587,
+        0.055
+      ],
+      [
+        -0.811,
+        1.606,
+        -0.797,
+        1.562,
+        0.032
+      ],
+      [
+        -0.765,
+        1.496,
+        -0.763,
+        1.5,
+        0.007
+      ]
+    ],
+    "contactBefore": {
+      "leadingObject": "V32 returned upper bill course 1",
+      "leadingPointNativeXYZ": [
+        0.0,
+        -0.8247128129005432,
+        1.6194096803665161
+      ],
+      "actualTriangleVertexBounds": [
+        [
+          -0.12643998861312866,
+          0.12643998861312866
+        ],
+        [
+          -0.8247128129005432,
+          -0.5986800193786621
+        ],
+        [
+          1.4308040142059326,
+          1.819443941116333
+        ]
+      ]
+    },
+    "contactAfter": {
+      "leadingObject": "V32 returned upper bill course 1",
+      "leadingPointNativeXYZ": [
+        0.0,
+        -0.8154844045639038,
+        1.6455724239349365
+      ],
+      "actualTriangleVertexBounds": [
+        [
+          -0.12643998861312866,
+          0.12643998861312866
+        ],
+        [
+          -0.8154844045639038,
+          -0.5986999869346619
+        ],
+        [
+          1.4957926273345947,
+          1.8194400072097778
+        ]
+      ]
+    },
+    "contactMarkerBeforeWorld": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.8028910756111145
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.6243765354156494
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "contactMarkerAfterWorld": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.8154844045639038
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.6455724239349365
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "contactLandmarksChanged": true,
+    "confirmation": "ActualJuly HEAD ONLY blade-like broadroot curved hook/narrow pairedmouth; Master03/Maker-clean wholebird crosscheck",
+    "reconstruction": "Exactprofiles, finite stock/seams/hidden interfaces authored, not rasterdimensions/manufacturing acceptance",
+    "limits": [
+      "Four lowercheek receivers and real coaxial hardware untouched; original socket397/root exact.",
+      "Shared seam/pairednormalstock not continuouscollision/selfintersection/fabrication certificate.",
+      "Runtime actualtrianglecontact solver root-owned, no fixedmarker substitute."
+    ]
+  },
+  "changedBeforeSignatures": {
+    "V32 formed mandibular bowl": {
+      "type": "MESH",
+      "parent": "jaw",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.47920000553131104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.6152839660644531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "jaw",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38BillSocketFit": "Functional source-seat restoration only; artistic01 contour retained, no third artistic attempt"
+      },
+      "meshSignature": "197dbf58f1019f990a12fd7ea34548a4cb6580ecb507270f3ca382887e25ff2b",
+      "materialSlots": [
+        "V38 contrast / plate"
+      ],
+      "modifiers": []
+    },
+    "V32 returned upper bill course 0": {
+      "type": "MESH",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5565633773803711
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.30666983127594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "upper-bill",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38HeadProfile": "Constructed bill planes and cheek opening proposal; no likeness or motion acceptance"
+      },
+      "meshSignature": "57e867bee314fe5218a748c8ce4ff6db6204d3947c453b9406adb1f0b16bbbc7",
+      "materialSlots": [
+        "V38 contrast / bill"
+      ],
+      "modifiers": []
+    },
+    "V32 returned upper bill course 1": {
+      "type": "MESH",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5565633773803711
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.30666983127594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "upper-bill",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38HeadProfile": "Constructed bill planes and cheek opening proposal; no likeness or motion acceptance"
+      },
+      "meshSignature": "67b0e89316d658a2a0f45da2a335998a62ebf00a698a6205635bc7862f331304",
+      "materialSlots": [
+        "V38 contrast / bill"
+      ],
+      "modifiers": []
+    },
+    "V32 returned upper bill course 2": {
+      "type": "MESH",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5565633773803711
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.30666983127594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "upper-bill",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38HeadProfile": "Constructed bill planes and cheek opening proposal; no likeness or motion acceptance"
+      },
+      "meshSignature": "eee7226f6b108b96173e71ef9df79aa4eb6d6525e9fb553ba90aa0230a09b1de",
+      "materialSlots": [
+        "V38 contrast / bill"
+      ],
+      "modifiers": []
+    },
+    "bill-contact": {
+      "type": "EMPTY",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.8028910756111145
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.6243765354156494
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.2463276982307434
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.3177067041397095
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {},
+      "meshSignature": null,
+      "materialSlots": null,
+      "modifiers": []
+    }
+  },
+  "changedAfterSignatures": {
+    "V32 formed mandibular bowl": {
+      "type": "MESH",
+      "parent": "jaw",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.47920000553131104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.6152839660644531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "jaw",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillEnvelope": "Source hinge/socket root with directly continued slender curved return, paired source stock",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38BillSocketFit": "Functional source-seat restoration only; artistic01 contour retained, no third artistic attempt"
+      },
+      "meshSignature": "b466938d9401d989fe34fe4b6bcfa3e03d9cd57e084f4d37f0043b26d5d17009",
+      "materialSlots": [
+        "V38 contrast / plate"
+      ],
+      "modifiers": []
+    },
+    "V32 returned upper bill course 0": {
+      "type": "MESH",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5565633773803711
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.30666983127594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "upper-bill",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillEnvelope": "One globally parameterized finite plate shell, three shared seam courses; proposal",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38HeadProfile": "Constructed bill planes and cheek opening proposal; no likeness or motion acceptance"
+      },
+      "meshSignature": "5e84f27aad19ddfaf19e12486e66e7c9791c72b53020fbf526a97ec609e61553",
+      "materialSlots": [
+        "V38 contrast / bill"
+      ],
+      "modifiers": []
+    },
+    "V32 returned upper bill course 1": {
+      "type": "MESH",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5565633773803711
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.30666983127594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "upper-bill",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillEnvelope": "One globally parameterized finite plate shell, three shared seam courses; proposal",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38HeadProfile": "Constructed bill planes and cheek opening proposal; no likeness or motion acceptance"
+      },
+      "meshSignature": "7d898161d5bbd1a6ab1deb5dd2a81835952d398aba3f9ff8b467ee2f1a2a7bf1",
+      "materialSlots": [
+        "V38 contrast / bill"
+      ],
+      "modifiers": []
+    },
+    "V32 returned upper bill course 2": {
+      "type": "MESH",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5565633773803711
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.30666983127594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {
+        "articulatesAcrossJoint": false,
+        "constructionClass": "inherited-passive",
+        "constructionDescription": "V32 near-closed profile, finite formed rigid surface",
+        "constructionOwner": "upper-bill",
+        "exteriorEras": "maker,mechanic,builder",
+        "proportionStudy": "whole-silhouette-v16",
+        "proposal": true,
+        "region": "head",
+        "silhouetteRevision": "V11 whole-body rest reconstruction; unapproved",
+        "surfaceRole": "plate",
+        "v23Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v24Construction": "reference-built finite rigid head form; proposed hidden seating",
+        "v35HeadPresence": "Baked head envelope proportion proposal; fixed cervical bearing retained",
+        "v38BillEnvelope": "One globally parameterized finite plate shell, three shared seam courses; proposal",
+        "v38BillIdentity": "bill-identity01 finite hooked bill and open swept mandible proposal; no final likeness/fit acceptance",
+        "v38HeadProfile": "Constructed bill planes and cheek opening proposal; no likeness or motion acceptance"
+      },
+      "meshSignature": "7552ea228002dec58fb1e492142afee74ba72c1653f8cbd0a87001f5a49215c2",
+      "materialSlots": [
+        "V38 contrast / bill"
+      ],
+      "modifiers": []
+    },
+    "bill-contact": {
+      "type": "EMPTY",
+      "parent": "upper-bill",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.8154844045639038
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.6455724239349365
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixLocal": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.2589210271835327
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.3389025926589966
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrixParentInverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visibility": [
+        false,
+        false,
+        false
+      ],
+      "props": {},
+      "meshSignature": null,
+      "materialSlots": null,
+      "modifiers": []
+    }
+  },
+  "newAfterSignatures": {},
+  "exclusionsDigest": "5ff7495ce69d2314499807ce144199236a2cf704a870adb1106131c38761aea7",
+  "preservation": {
+    "originalObjectsExactExceptDeclaredBillEnvelopeMeshes": 1214,
+    "retainedOwnersJointPivotsTransformsExactExceptDeclaredContactMarker": true,
+    "leftRestrictionAndRepairLandmarkExact": true,
+    "allExcludedHeadNeckMantleReceiversHingeSocketElbowMachineryExact": true,
+    "existingMaterialsAndEraProfilesExact": true,
+    "nativeSaveReopenExact": true,
+    "glbNodeNamesAndRigidParentsExact": true,
+    "standardPbrRecordsAndEraFinishesCopiedExactlyFromSourceGlb": true
+  },
+  "views": {
+    "baseline": [
+      {
+        "path": "assets/audit/whole-character-v38/breast-course02/candidate-full-bird-three-quarter.png",
+        "bytes": 1647676,
+        "sha256": "ea73c666dda8ae8654b297fc56ab0cd8173b99b63dd14dec9f615e0b4f369520",
+        "camera": {
+          "position": [
+            -6,
+            -3.5,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/breast-course02/candidate-full-bird-profile.png",
+        "bytes": 1645741,
+        "sha256": "40a15748e0875ad55d5bf73108ec4bad6b2aa1ae2295bd634e783226fe9635d1",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/breast-course02/candidate-full-bird-front.png",
+        "bytes": 1618139,
+        "sha256": "69a4863275bcf4a8617099c16a8aa9b385836c0dc2bd362663407be2eee0d855",
+        "camera": {
+          "position": [
+            0,
+            -7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/breast-course02/candidate-full-bird-rear.png",
+        "bytes": 1610143,
+        "sha256": "187fc5bf9a6e209d4788ee62c2a08bea5ae8553a40095fa46422cadd004de518",
+        "camera": {
+          "position": [
+            0,
+            7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Byte-exact prior neutral baseline: same actual input and camera/render settings"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/head-readability01/baseline-head-three-quarter.png",
+        "bytes": 1767157,
+        "sha256": "fde0655894e7fd27b662a46adea5a03a21c81908f94fe42e10fcd83c4620b8e1",
+        "camera": {
+          "position": [
+            -5,
+            -3.8,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Exact source breast-course02 headbaseline samecamera/render"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/head-readability01/baseline-head-profile.png",
+        "bytes": 1750592,
+        "sha256": "d59bd4cfdd708e9c9ee5fc905e42c53fad32426e735ded8472efc254258b2c5e",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "Exact source breast-course02 headbaseline samecamera/render"
+      }
+    ],
+    "candidate": [
+      {
+        "path": "assets/audit/whole-character-v38/bill-envelope01/candidate-full-bird-three-quarter.png",
+        "bytes": 1646784,
+        "sha256": "2f8aac69ae123aa7890cbbb2c57a97d93ecb69afce0420104f9394948a265af5",
+        "camera": {
+          "position": [
+            -6,
+            -3.5,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-envelope01/candidate-full-bird-profile.png",
+        "bytes": 1645001,
+        "sha256": "42d732c126f7b02af62eb87e00355f2b270bc7fe41ae4c1ffce2aaac409ec1b4",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-envelope01/candidate-full-bird-front.png",
+        "bytes": 1620702,
+        "sha256": "e4d0b867bd397219f29ba4fe900d2a6cd3324d65a1d18dd91f4bbddd7e9936dc",
+        "camera": {
+          "position": [
+            0,
+            -7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-envelope01/candidate-full-bird-rear.png",
+        "bytes": 1610140,
+        "sha256": "fe450b658a1b600a49505526be91ab0aa68a7daaa9f72a2972f7eb26bf05211c",
+        "camera": {
+          "position": [
+            0,
+            7,
+            2.75
+          ],
+          "target": [
+            0,
+            -0.08,
+            1.03
+          ],
+          "orthoScale": 2.4
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-envelope01/candidate-head-three-quarter.png",
+        "bytes": 1768702,
+        "sha256": "84d7c69768e0899a0ba0bf496552748281c26351eeb7ce2bc18e4ea10bbac46a",
+        "camera": {
+          "position": [
+            -5,
+            -3.8,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      },
+      {
+        "path": "assets/audit/whole-character-v38/bill-envelope01/candidate-head-profile.png",
+        "bytes": 1749865,
+        "sha256": "a1dcf52cc3817d9b488891970c01a7e6c9f22936c42069d21006858af4694232",
+        "camera": {
+          "position": [
+            -7,
+            0,
+            2.1
+          ],
+          "target": [
+            0,
+            -0.55,
+            1.7
+          ],
+          "orthoScale": 0.68
+        },
+        "size": [
+          1200,
+          1200
+        ],
+        "render": "neutral Workbench single color, no cast shadows"
+      }
+    ],
+    "baselineAuthoredPoseGlances": [],
+    "candidateAuthoredPoseGlances": []
+  },
+  "poseDirections": {},
+  "poseScope": "Authored retained-owner local-X rotations from existing exhibit amplitude direction; baseline/candidate matched. Feet/body unchanged. Not captured runtime playback or force/ground-contact certification.",
+  "limits": [
+    "Confirmed direction: compact flightless balance/shield/shove. Exact plates, unseen far side and hidden receiving construction remain proposals.",
+    "No runtime edits, illustrated fallback, release, publication, full validation suite or owner likeness/motion acceptance.",
+    "Targeted triangle diagnostic is separate; any actual intersections and sampling scope must be reviewed before integration."
+  ]
+}

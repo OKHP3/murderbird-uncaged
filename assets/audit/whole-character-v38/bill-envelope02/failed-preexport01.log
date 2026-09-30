@@ -1,0 +1,15 @@
+00:00.641  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/breast-course02/murderbird-v38-breast-course02.blend"
+00:00.795  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/breast-course02/murderbird-v38-breast-course02.blend"
+/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-bill-envelope.py:39: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  'nodes':[(n.name,n.type,[(i.name,repr(i.default_value)) for i in n.inputs if hasattr(i,'default_value')]) for n in m.node_tree.nodes] if m.use_nodes else []} for m in bpy.data.materials}
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-bill-envelope.py", line 98, in <module>
+    module=ROOT/'scripts/regions/v38-bill-envelope.py';regional=runpy.run_path(str(module));contract=regional['apply']();after=snapshot()
+                                                                                                     ~~~~~~~~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-bill-envelope.py", line 64, in apply
+    assert stock.length>.002;front.append(pnt);back.append(pnt+stock)
+           ^^^^^^^^^^^^^^^^^
+AssertionError
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

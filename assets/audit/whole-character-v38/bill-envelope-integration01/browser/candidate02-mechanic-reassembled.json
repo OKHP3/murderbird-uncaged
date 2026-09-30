@@ -1,0 +1,273 @@
+{
+  "camera": {
+    "camera": [
+      -1.194835662289954,
+      1.7895094761169696,
+      1.1148289596248395
+    ],
+    "lighting": "neutral",
+    "target": [
+      0,
+      1.6102841267734769,
+      0.21870221290737393
+    ]
+  },
+  "contactPlane": 2.1,
+  "contactTip": [
+    0,
+    1.5805724239349366,
+    0.5654844054952264
+  ],
+  "era": "mechanic",
+  "finishes": {
+    "appliedMaterials": 10,
+    "era": "mechanic",
+    "ineligibleMaterials": 2,
+    "invalidMaterials": 0,
+    "issues": [],
+    "taggedMaterials": 12
+  },
+  "frameCount": 7154,
+  "frameDocumentHidden": false,
+  "kind": "webgl",
+  "mechanisms": {
+    "anchors": [
+      {
+        "available": true,
+        "id": "drive"
+      },
+      {
+        "available": true,
+        "id": "power"
+      },
+      {
+        "available": false,
+        "id": "mind"
+      }
+    ],
+    "attachmentLayout": {
+      "distributionPosition": [
+        -0.21,
+        0.29,
+        0.07
+      ],
+      "makerControlOffsets": [
+        [
+          0.065,
+          0.015,
+          0.045
+        ],
+        [
+          -0.08643899773165903,
+          -0.20761706436182023,
+          -0.03922407128577299
+        ],
+        [
+          -0.07,
+          0,
+          -0.16
+        ],
+        [
+          -0.16,
+          0.06,
+          0.02
+        ],
+        [
+          -0.12762210726737974,
+          0.01019780158996582,
+          0.107223219871521
+        ]
+      ],
+      "makerCradleWidth": 0.62,
+      "makerOwnerSockets": [
+        {
+          "control": "wing",
+          "owner": "right-mantle",
+          "point": [
+            -0.08643899773165903,
+            -0.20761706436182023,
+            -0.03922407128577299
+          ],
+          "surfaceObject": "right swept upper wing load member"
+        },
+        {
+          "control": "jaw",
+          "owner": "jaw",
+          "point": [
+            -0.12762210726737974,
+            0.01019780158996582,
+            0.107223219871521
+          ],
+          "surfaceObject": "V32 formed mandibular bowl"
+        }
+      ],
+      "status": "authored-model-points",
+      "tailPosition": [
+        0,
+        0.2,
+        -0.31
+      ],
+      "transmissionPosition": [
+        0,
+        0,
+        0
+      ],
+      "version": 1
+    },
+    "builderTargets": [
+      "left-thigh/left-shin",
+      "right-thigh/right-shin",
+      "right-mantle/right-wing-shield"
+    ],
+    "era": "mechanic",
+    "externalControlTargets": [
+      "left-foot",
+      "right-mantle",
+      "compact-articulated-tail",
+      "neck",
+      "jaw"
+    ],
+    "inspectionConnections": {
+      "cervical": [
+        {
+          "endpointDistance": 0.13261236452026712,
+          "mode": "not-eligible",
+          "side": "left"
+        },
+        {
+          "endpointDistance": 0.13260776986009368,
+          "mode": "not-eligible",
+          "side": "right"
+        }
+      ],
+      "mechanicSlidingLinks": {
+        "left": 0.19254332965197857,
+        "right": 0.1442561664307366
+      },
+      "powerCore": {
+        "endpointDistance": 0.2420603399460518,
+        "mode": "not-eligible"
+      },
+      "separationMode": "not-eligible",
+      "wing": {
+        "endpointDistance": 0.2335199553718132,
+        "mode": "not-eligible"
+      }
+    },
+    "inventory": [
+      {
+        "eras": [
+          "maker"
+        ],
+        "id": "maker-support-controls",
+        "role": "external support cradle, levers, rods and tension lines"
+      },
+      {
+        "eras": [
+          "mechanic"
+        ],
+        "id": "mechanic-wound-drive",
+        "role": "one mainspring, reduction pair, camshaft and kinematic telescoping knee links"
+      },
+      {
+        "eras": [
+          "builder"
+        ],
+        "id": "builder-power-actuation",
+        "role": "fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated"
+      }
+    ],
+    "mechanicTargets": [
+      "left-thigh/left-shin",
+      "right-thigh/right-shin"
+    ],
+    "tickCount": 7154,
+    "visible": {
+      "builder": false,
+      "maker": false,
+      "mechanic": true
+    }
+  },
+  "model": "http://127.0.0.1:5185/assets/models/whole-character-v38/bill-envelope02/murderbird-v38-bill-envelope02-rigid.glb",
+  "motion": {
+    "cervical": {
+      "baseTranslationError": 0,
+      "contactMethod": "upper-bill triangle / rail-centre plane",
+      "jointCount": 4,
+      "linkedCoverPitch": null,
+      "linkedCoverTranslationError": null,
+      "lowerPitchFraction": 0.25,
+      "maxContactPitch": 0.65,
+      "neckPitch": 0,
+      "outerReceivers": [],
+      "pitchJoints": [
+        {
+          "name": "neck",
+          "pitch": 0,
+          "translationError": 0,
+          "weight": 0.25
+        },
+        {
+          "name": "cervical-mid-a",
+          "pitch": 0,
+          "translationError": 0,
+          "weight": 0.25
+        },
+        {
+          "name": "cervical-mid-b",
+          "pitch": 0,
+          "translationError": 0,
+          "weight": 0.25
+        },
+        {
+          "name": "cervical-upper",
+          "pitch": 0,
+          "translationError": 0,
+          "weight": 0.25
+        }
+      ],
+      "skullPitch": 0,
+      "skullTranslationError": 0,
+      "totalPitch": 0,
+      "upperPitch": 0,
+      "upperTranslationError": 0
+    },
+    "contact": false
+  },
+  "open": 0,
+  "paused": true,
+  "pendingEra": null,
+  "performance": {
+    "drawCalls": 1100,
+    "fpsP05": 60,
+    "fpsP50": 60,
+    "frameMsP50": 16.666666666666668,
+    "frameMsP95": 16.666666666666668,
+    "geometries": 910,
+    "gpuTextures": 4,
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+    "softwareRenderer": false,
+    "triangles": 817866,
+    "viewport": {
+      "bufferHeight": 640,
+      "bufferWidth": 841,
+      "height": 640,
+      "pixelRatio": 1,
+      "width": 841
+    }
+  },
+  "powerMove": null,
+  "powerMovePending": null,
+  "reference": {
+    "mode": "head",
+    "source": "../../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"
+  },
+  "separation": 0,
+  "state": "mechanical-ready",
+  "wingAngles": {
+    "leftElbow": 0,
+    "leftShoulder": 0,
+    "rightElbow": 0,
+    "rightShoulder": 0
+  }
+}
