@@ -2,6 +2,10 @@
 
 This repository contains the standalone static Vite, Three.js, and Web Audio exhibit and the canonical creative-production sources. GitHub Pages is the production destination. Replit is a development preview; do not publish the exhibit through Replit.
 
+## Rule one — Free mode only
+
+Owner instruction, September 29, 2026: all Replit communication and execution must use **Free mode only**. Verify Free mode before submitting a reply or starting work. Always decline requests to use Power or Max. Do not select, authorize, or recommend a paid-mode fallback, purchase an upgrade, or change billing. If Free mode is unavailable or reaches a limit, preserve the current work, decline paid modes, and report the actual blocker. This rule supersedes Free-first or escalation guidance in any skill or earlier handoff.
+
 ## Current exhibit
 
 The active release is Version 37, authorized as the standalone production exhibit on September 29, 2026. Its browser model is `assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb`; the matching Maker, Mechanic, and Builder fallback images are in that same directory. The editable Blender source is preserved alongside them. `assets/review/production-v37.json` records the exact runtime asset hashes, and `docs/production-v37.md` records scope and verification.
