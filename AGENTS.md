@@ -27,6 +27,8 @@ These instructions govern work in this repository only. They do not replace or m
 
 ## Changes and verification
 
+- Use [the incremental delivery workflow](docs/incremental-delivery.md) for short visual checkpoints, bounded parallel work, and confirmed remote synchronization.
+
 - Preserve the existing Vite, Three.js, and Web Audio architecture. Do not add dependencies or turn this exhibit into a general publishing or backend application without a separately scoped request.
 - Keep changes small and limited to the requested asset, story, or exhibit scope. Use lowercase kebab-case for new ordinary files and directories; retain tool-required names and established source paths.
 - For app or asset-reference changes, run `npm ci` and `npm run build`. Review the emitted `dist/` paths and confirm referenced assets resolve. For scene changes, check both the WebGL scene and the illustrated fallback; see `.agents/memory/webgl-preview.md`.
