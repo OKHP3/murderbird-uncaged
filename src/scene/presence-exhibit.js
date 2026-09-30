@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'temporal-construction02': '/assets/models/whole-character-v38/temporal-construction02/murderbird-v38-temporal-construction02-rigid.glb',
+  'temporal-construction01': '/assets/models/whole-character-v38/temporal-construction01/murderbird-v38-temporal-construction01-rigid.glb',
   'jaw-fit02': '/assets/models/whole-character-v38/jaw-fit02/murderbird-v38-jaw-fit02-rigid.glb',
   'jaw-fit01': '/assets/models/whole-character-v38/jaw-fit01/murderbird-v38-jaw-fit01-rigid.glb',
   'bill-shell02': '/assets/models/whole-character-v38/bill-shell02/murderbird-v38-bill-shell02-rigid.glb',
