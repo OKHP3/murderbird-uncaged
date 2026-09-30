@@ -24,6 +24,8 @@ Iron Verdict v3 is an owner-accepted synthesized sung performance. No human voca
 
 ## Replit preview and synchronization
 
+If the Agent is waiting for input and its response form is hidden, use a direct message to ask it to restate the specific question and choices. Answer that request within the authorized assignment in verified Free mode and confirm the acknowledgment. Do not guess the hidden question or retry unrelated completion work. Leave genuine human approval to the owner.
+
 For a local Replit development preview, install dependencies with `npm ci` and run `npm run dev -- --host 0.0.0.0 --port 5000`. This does not publish the application or prove that Replit is synchronized with GitHub. Do not invent a sync script; use the project's actual Git integration and inspect its configured remote and commit.
 
 GitHub `origin/main` is canonical. Before integrating it into an existing Replit checkout, inspect its current branch, working-tree changes, local-only commits, and remote tips, then fetch and compare histories. Preserve dirty files and both divergent tips before resolving divergence. Integrate deliberately after review; never force-push, reset away local work, or remove the `gitsafe-backup` remote. If commits diverge, retain recoverable refs and compare their content before choosing an integration path.
