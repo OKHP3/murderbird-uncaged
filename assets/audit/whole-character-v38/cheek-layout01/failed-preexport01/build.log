@@ -1,0 +1,27 @@
+00:00.639  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/cheek-interface01/murderbird-v38-cheek-interface01.blend"
+00:00.798  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/cheek-interface01/murderbird-v38-cheek-interface01.blend"
+/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-cheek-layout.py:39: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  'nodes':[(n.name,n.type,[(i.name,repr(i.default_value)) for i in n.inputs if hasattr(i,'default_value')]) for n in m.node_tree.nodes] if m.use_nodes else []} for m in bpy.data.materials}
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-cheek-layout.py", line 98, in <module>
+    module=ROOT/'scripts/regions/v38-cheek-layout.py';regional=runpy.run_path(str(module));contract=regional['apply']();after=snapshot()
+                                                                                                    ~~~~~~~~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cheek-layout.py", line 47, in apply
+    wall=f'V31 fixed temporal receiving wall {side}';wp,wf=patch(wall,back,.005,0,'Recessed compound-curved rear receiving skull support beneath explicit guards; no filled exterior oval')
+                                                           ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cheek-layout.py", line 42, in patch
+    fs=[tuple(idx(v)for v in t)for t in tri];n=len(p);v=p+[q-Vector((side*stock,0,0))for q in p];faces=fs+[tuple(n+i for i in reversed(f))for f in fs]
+        ~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cheek-layout.py", line 42, in <genexpr>
+    fs=[tuple(idx(v)for v in t)for t in tri];n=len(p);v=p+[q-Vector((side*stock,0,0))for q in p];faces=fs+[tuple(n+i for i in reversed(f))for f in fs]
+              ~~~^^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cheek-layout.py", line 41, in <lambda>
+    idx=lambda v: next(i for i,q in enumerate(p)if (q-v).length<1e-8)
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cheek-layout.py", line 41, in <genexpr>
+    idx=lambda v: next(i for i,q in enumerate(p)if (q-v).length<1e-8)
+                                                    ~^~
+AttributeError: Vector subtraction: (Vector - int) invalid type for this operation
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
