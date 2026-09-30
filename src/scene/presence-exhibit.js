@@ -28,6 +28,9 @@ const reviewModels = import.meta.env.DEV ? {
   'mantle-study02': '/assets/models/whole-character-v38/mantle-study02/murderbird-v38-mantle-study02-rigid.glb',
   'breast-study01': '/assets/models/whole-character-v38/breast-study01/murderbird-v38-breast-study01-rigid.glb',
   'breast-study02': '/assets/models/whole-character-v38/breast-study02/murderbird-v38-breast-study02-rigid.glb',
+  'bill-identity01-socket-fit01': '/assets/models/whole-character-v38/bill-identity01-socket-fit01/murderbird-v38-bill-identity01-socket-fit01-rigid.glb',
+  'bill-identity02': '/assets/models/whole-character-v38/bill-identity02/murderbird-v38-bill-identity02-rigid.glb',
+  'bill-identity01': '/assets/models/whole-character-v38/bill-identity01/murderbird-v38-bill-identity01-rigid.glb',
   'breast-clearance01': '/assets/models/whole-character-v38/breast-clearance01/murderbird-v38-breast-clearance01-rigid.glb',
   'breast-clearance02': '/assets/models/whole-character-v38/breast-clearance02/murderbird-v38-breast-clearance02-rigid.glb',
 } : {};
