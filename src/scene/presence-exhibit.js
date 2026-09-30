@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'temple-layering02': '/assets/models/whole-character-v38/temple-layering02/murderbird-v38-temple-layering02-rigid.glb',
+  'temple-layering01': '/assets/models/whole-character-v38/temple-layering01/murderbird-v38-temple-layering01-rigid.glb',
   'cheek-interface01': '/assets/models/whole-character-v38/cheek-interface01/murderbird-v38-cheek-interface01-rigid.glb',
   'cheek-supported02': '/assets/models/whole-character-v38/cheek-supported02/murderbird-v38-cheek-supported02-rigid.glb',
   'cheek-supported01': '/assets/models/whole-character-v38/cheek-supported01/murderbird-v38-cheek-supported01-rigid.glb',
