@@ -24,6 +24,8 @@ const reviewModels = import.meta.env.DEV ? {
   'neck-study01': '/assets/models/whole-character-v38/neck-study01/murderbird-v38-neck-study01-rigid.glb',
   'neck-study02': '/assets/models/whole-character-v38/neck-study02/murderbird-v38-neck-study02-rigid.glb',
   'neck-clearance01': '/assets/models/whole-character-v38/neck-clearance01/murderbird-v38-neck-clearance01-rigid.glb',
+  'mantle-study01': '/assets/models/whole-character-v38/mantle-study01/murderbird-v38-mantle-study01-rigid.glb',
+  'mantle-study02': '/assets/models/whole-character-v38/mantle-study02/murderbird-v38-mantle-study02-rigid.glb',
 } : {};
 const reviewModel = import.meta.env.DEV ? reviewModels[new URLSearchParams(location.search).get('review-candidate')] : undefined;
 const modelUrl = reviewModel
