@@ -1,0 +1,479 @@
+{
+  "model": "http://127.0.0.1:5185/assets/models/whole-character-v38/breast-clearance02/murderbird-v38-breast-clearance02-rigid.glb",
+  "kind": "webgl",
+  "era": "builder",
+  "frameDocumentHidden": false,
+  "reference": {
+    "mode": "era",
+    "source": "../../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png"
+  },
+  "state": "cage-test",
+  "paused": true,
+  "pendingEra": null,
+  "mechanisms": {
+    "era": "builder",
+    "tickCount": 4580,
+    "visible": {
+      "maker": false,
+      "mechanic": false,
+      "builder": true
+    },
+    "attachmentLayout": {
+      "status": "authored-model-points",
+      "version": 1,
+      "makerCradleWidth": 0.62,
+      "makerControlOffsets": [
+        [
+          0.065,
+          0.015,
+          0.045
+        ],
+        [
+          -0.08643899773165903,
+          -0.20761706436182026,
+          -0.03922407128577299
+        ],
+        [
+          -0.07,
+          0,
+          -0.16
+        ],
+        [
+          -0.16,
+          0.06,
+          0.02
+        ],
+        [
+          -0.12762210726737974,
+          0.01019780158996582,
+          0.10722321987152099
+        ]
+      ],
+      "makerOwnerSockets": [
+        {
+          "control": "wing",
+          "owner": "right-mantle",
+          "point": [
+            -0.08643899773165903,
+            -0.20761706436182026,
+            -0.03922407128577299
+          ],
+          "surfaceObject": "right swept upper wing load member"
+        },
+        {
+          "control": "jaw",
+          "owner": "jaw",
+          "point": [
+            -0.12762210726737974,
+            0.01019780158996582,
+            0.10722321987152099
+          ],
+          "surfaceObject": "V32 formed mandibular bowl"
+        }
+      ],
+      "tailPosition": [
+        0,
+        0.2,
+        -0.31
+      ],
+      "transmissionPosition": [
+        0,
+        0,
+        0
+      ],
+      "distributionPosition": [
+        -0.21,
+        0.29,
+        0.07
+      ]
+    },
+    "anchors": [
+      {
+        "id": "drive",
+        "available": true
+      },
+      {
+        "id": "power",
+        "available": true
+      },
+      {
+        "id": "mind",
+        "available": true
+      }
+    ],
+    "externalControlTargets": [
+      "left-foot",
+      "right-mantle",
+      "compact-articulated-tail",
+      "neck",
+      "jaw"
+    ],
+    "mechanicTargets": [
+      "left-thigh/left-shin",
+      "right-thigh/right-shin"
+    ],
+    "builderTargets": [
+      "left-thigh/left-shin",
+      "right-thigh/right-shin",
+      "right-mantle/right-wing-shield"
+    ],
+    "inventory": [
+      {
+        "id": "maker-support-controls",
+        "eras": [
+          "maker"
+        ],
+        "role": "external support cradle, levers, rods and tension lines"
+      },
+      {
+        "id": "mechanic-wound-drive",
+        "eras": [
+          "mechanic"
+        ],
+        "role": "one mainspring, reduction pair, camshaft and kinematic telescoping knee links"
+      },
+      {
+        "id": "builder-power-actuation",
+        "eras": [
+          "builder"
+        ],
+        "role": "fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated"
+      }
+    ],
+    "inspectionConnections": {
+      "separationMode": "connected",
+      "wing": {
+        "mode": "connected",
+        "endpointDistance": 0.2335199553718132
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "connected",
+          "endpointDistance": 0.13181329703349637
+        },
+        {
+          "side": "right",
+          "mode": "connected",
+          "endpointDistance": 0.13191607786986967
+        }
+      ],
+      "powerCore": {
+        "mode": "connected",
+        "endpointDistance": 0.24206033994605178
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.1920333615537985,
+        "right": 0.11921352391373713
+      }
+    }
+  },
+  "powerMove": null,
+  "powerMovePending": null,
+  "motion": {
+    "era": "builder",
+    "powerMove": null,
+    "clawAction": null,
+    "cageAction": {
+      "family": "seam-rattle",
+      "phase": 0.23289305931405554,
+      "envelope": 0.4909298426911656,
+      "extension": 0.7336709468065264,
+      "load": 0.1614076082974358,
+      "guard": 0.13206077042517472,
+      "jaw": 0.029346837872261056,
+      "contact": false
+    },
+    "root": {
+      "x": 1.1961698590029723,
+      "z": 1.0110414890086208,
+      "yaw": 0,
+      "speed": 0
+    },
+    "distance": 4.1141641900587915,
+    "steps": 39,
+    "time": 18.063999999999982,
+    "motionFrame": 5703,
+    "settled": true,
+    "arrived": true,
+    "aligned": true,
+    "contact": false,
+    "camAngle": 0,
+    "mechanicalPhase": 0,
+    "mechanicalStage": "disengaged",
+    "actualArticulation": {
+      "leg": 0,
+      "wing": 0,
+      "tail": 0,
+      "neck": 0,
+      "jaw": 0
+    },
+    "cervical": {
+      "jointCount": 4,
+      "lowerPitchFraction": 0.25,
+      "upperTranslationError": 0,
+      "upperPitch": 0.12173239172480882,
+      "linkedCoverPitch": null,
+      "linkedCoverTranslationError": null,
+      "outerReceivers": [],
+      "totalPitch": 0.4869295668992353,
+      "pitchJoints": [
+        {
+          "name": "neck",
+          "weight": 0.25,
+          "pitch": 0.1217323917248088,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-a",
+          "weight": 0.25,
+          "pitch": 0.12173239172480882,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-b",
+          "weight": 0.25,
+          "pitch": 0.12173239172480882,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-upper",
+          "weight": 0.25,
+          "pitch": 0.12173239172480882,
+          "translationError": 0
+        }
+      ],
+      "baseTranslationError": 0,
+      "skullTranslationError": 0,
+      "neckPitch": 0.1217323917248088,
+      "skullPitch": -0.5406746321075473,
+      "maxContactPitch": 0.65,
+      "contactMethod": "upper-bill triangle / rail-centre plane"
+    },
+    "contactApproach": {
+      "z": 1.0119343622752168,
+      "requestedZ": 1.0119343622752168,
+      "minimumSurfaceReach": 1.0750656377247834,
+      "arrivalMargin": 0.008,
+      "maximumPitch": 0.65,
+      "clamped": false
+    },
+    "jawHinge": {
+      "axis": "local X",
+      "openingSign": 1,
+      "angle": 0.007923646225510485,
+      "makerMaximum": 0.32
+    },
+    "contactPoint": [
+      1.2,
+      1.455732589693133,
+      2.0182576315127028
+    ],
+    "pose": {
+      "load": 0.1614076082974358,
+      "extension": 0.7336709468065264,
+      "jaw": 0.029346837872261056,
+      "gaze": 0.0029563507655716143,
+      "guard": 0.13206077042517472,
+      "counter": -0.0019239730679139234
+    },
+    "maxFootError": 6.955527313080394e-16,
+    "reachDrop": 0,
+    "maxReachDrop": 0.12,
+    "feet": [
+      {
+        "side": "left",
+        "target": [
+          1.5011698661555297,
+          0.2765976522564888,
+          0.9730414790546451
+        ],
+        "actual": [
+          1.5011698661555297,
+          0.2765976522564888,
+          0.973041479054645
+        ],
+        "swinging": false,
+        "phase": 1,
+        "yaw": 2.7755575615628914e-17,
+        "steps": 20,
+        "solveError": 1.1102230246251565e-16,
+        "kneeHinge": {
+          "axis": "local X",
+          "angle": 0.5033290507689228,
+          "offAxisQuaternion": 0
+        },
+        "digits": [
+          {
+            "name": "left-digit-1-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-1-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-2-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-2-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-3-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-3-distal",
+            "angle": 0,
+            "restAngle": 0
+          }
+        ],
+        "groundMin": 0.0020000000000000434
+      },
+      {
+        "side": "right",
+        "target": [
+          0.891169851850415,
+          0.2765976522564888,
+          0.9730414790546451
+        ],
+        "actual": [
+          0.891169851850415,
+          0.2765976522564888,
+          0.9730414790546451
+        ],
+        "swinging": false,
+        "phase": 1,
+        "yaw": 0,
+        "steps": 19,
+        "solveError": 0,
+        "kneeHinge": {
+          "axis": "local X",
+          "angle": 0.5117605084726753,
+          "offAxisQuaternion": 0
+        },
+        "digits": [
+          {
+            "name": "right-digit-1-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-1-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-2-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-2-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-3-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-3-distal",
+            "angle": 0,
+            "restAngle": 0
+          }
+        ],
+        "groundMin": 0.001999999999999988
+      }
+    ],
+    "bodyBounds": {
+      "min": [
+        0.6957356391657836,
+        0.001999999999999988,
+        0.5784240531779574
+      ],
+      "max": [
+        1.7165738998164184,
+        1.7864502518575238,
+        2.018646525762848
+      ]
+    },
+    "headBounds": {
+      "min": [
+        1.005984162574594,
+        1.252316137854594,
+        1.3341905127290403
+      ],
+      "max": [
+        1.3808520470784111,
+        1.7864502518575238,
+        2.018646525762848
+      ]
+    }
+  },
+  "frameCount": 4580,
+  "open": 0,
+  "separation": 0,
+  "camera": {
+    "lighting": "neutral",
+    "camera": [
+      -1.7920000000000005,
+      1.7999999999999998,
+      2.502
+    ],
+    "target": [
+      0,
+      1,
+      -0.25
+    ]
+  },
+  "performance": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+    "softwareRenderer": false,
+    "viewport": {
+      "width": 831,
+      "height": 640,
+      "bufferWidth": 831,
+      "bufferHeight": 640,
+      "pixelRatio": 1
+    },
+    "frameMsP50": 16.666666666666668,
+    "frameMsP95": 16.666666666666668,
+    "fpsP50": 60,
+    "fpsP05": 60,
+    "drawCalls": 859,
+    "triangles": 476194,
+    "geometries": 791,
+    "gpuTextures": 4
+  },
+  "finishes": {
+    "era": "builder",
+    "taggedMaterials": 12,
+    "appliedMaterials": 12,
+    "ineligibleMaterials": 0,
+    "invalidMaterials": 0,
+    "issues": []
+  },
+  "wingAngles": {
+    "leftShoulder": 0.00925734065140623,
+    "leftElbow": 0.02377093867653145,
+    "rightShoulder": -0.02977061183412801,
+    "rightElbow": 0.05018309276156639
+  },
+  "contactTip": [
+    1.194314184343359,
+    1.4559157381980343,
+    2.018646525762848
+  ],
+  "contactPlane": 2.1,
+  "label": "advanced-return",
+  "observedAt": "2026-09-30T10:08:29.985Z"
+}
