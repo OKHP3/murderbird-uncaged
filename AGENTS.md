@@ -24,6 +24,7 @@ These instructions govern work in this repository only. They do not replace or m
 - Never put provenance ledgers, source archives, production sessions, private material, or imported historical support files under `public/`. Vite copies `public/` into the website build. Browser use of any other file must be explicit in application code.
 - Before a release, build with `npm run build` and inspect `dist/` to verify that only intended, approved runtime files are included. A local build does not prove a successful GitHub Pages deployment; verify the exact deployment run and SHA for publication claims.
 - Replit is a development preview only. Do not publish this application through Replit. Connector authorization and mirror state must be checked before claiming live remote synchronization.
+- Replit communication and execution must use **Free mode only**. Always decline Power or Max prompts. Never select, authorize, or recommend a paid-mode fallback or change billing. If Free mode cannot continue, preserve the checkpoint and report the actual limit. This explicit owner rule supersedes any skill's Free-first or escalation guidance.
 
 ## Changes and verification
 
