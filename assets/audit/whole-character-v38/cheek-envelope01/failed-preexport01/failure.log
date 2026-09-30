@@ -1,0 +1,34 @@
+00:00.651  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/optic-cheek02-seat-fit01/murderbird-v38-optic-cheek02-seat-fit01.blend"
+00:01.182  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-full-bird-three-quarter.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-full-bird-three-quarter.png
+00:01.363  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-profile.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-profile.png
+00:01.507  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-three-quarter.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-three-quarter.png
+00:01.635  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-front.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-front.png
+00:01.760  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-rear.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-head-rear.png
+00:01.802  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/optic-cheek02-seat-fit01/murderbird-v38-optic-cheek02-seat-fit01.blend"
+00:02.052  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-jaw-open-full-bird-three-quarter.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-jaw-open-full-bird-three-quarter.png
+00:02.184  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-jaw-open-head-profile.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-jaw-open-head-profile.png
+00:02.321  render           | Saved: '/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-jaw-open-head-three-quarter.png'
+MEDIA /Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/audit/whole-character-v38/cheek-envelope01/baseline-jaw-open-head-three-quarter.png
+00:02.365  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/optic-cheek02-seat-fit01/murderbird-v38-optic-cheek02-seat-fit01.blend"
+/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-cheek-envelope.py:38: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  'nodes':[(n.name,n.type,[(i.name,repr(i.default_value)) for i in n.inputs if hasattr(i,'default_value')]) for n in m.node_tree.nodes] if m.use_nodes else []} for m in bpy.data.materials}
+00:03.364  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/bill-identity01-socket-fit01/murderbird-v38-bill-identity01-socket-fit01.blend"
+00:03.437  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/optic-cheek02-seat-fit01/murderbird-v38-optic-cheek02-seat-fit01.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-cheek-envelope.py", line 90, in <module>
+    module=ROOT/'scripts/regions/v38-cheek-envelope.py';regional=runpy.run_path(str(module));contract=regional['apply']();after=snapshot()
+                                                                                                      ~~~~~~~~~~~~~~~~~^^
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cheek-envelope.py", line 19, in apply
+    records.append({'name':name,'owner':o.parent.name,'eras':o.get('exteriorEras'),'constructionClass':o.get('constructionClass'),'materials':[m.name for m in o.data.materials],'method':'Exact selected bill/socket baseline finite cheek contour/axle receiving bore restored, never the rejected head02 recipe.','changedVertexIndices':[i for i,v in enumerate(o.data.vertices) if v.co!=before[i]],'restoredSourceSignature':hashlib.sha256(json.dumps([list(p) for p in reference[name]]).encode()).hexdigest(),'maximumMovementM':max((v.co-before[i]).length for i,v in enumerate(o.data.vertices)),'closedEdgeManifold':closed,'positiveVolumeM3':volume})
+                                                                                                                                               ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
