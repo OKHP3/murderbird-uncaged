@@ -1,0 +1,190 @@
+{
+  "status": "VISUAL AND FIT HOLD; neither candidate adopted",
+  "reviewModel": "bill-construction02",
+  "observations": {
+    "allThreeEras": {
+      "kind": "webgl",
+      "invalidFinishProfiles": 0,
+      "evidence": [
+        "bill02-head-oblique.png",
+        "bill02-maker-jaw-open.png",
+        "bill02-mechanic.png"
+      ]
+    },
+    "makerJaw": {
+      "UIControlPercent": [
+        100,
+        0
+      ],
+      "observedStates": [
+        "puppet-articulation",
+        "puppet-rest"
+      ],
+      "evidence": [
+        "bill02-maker-jaw-open.png",
+        "bill02-maker-jaw-return.png"
+      ]
+    },
+    "mechanicInspection": {
+      "observedOpen": [
+        1,
+        0
+      ],
+      "separation": 0,
+      "evidence": [
+        "bill02-inspection.png",
+        "bill02-restored.png"
+      ]
+    },
+    "advancedContact": {
+      "samplesSaved": 53,
+      "states": [
+        "contact",
+        "strike",
+        "warning"
+      ],
+      "contactObserved": true,
+      "maxTranslationError": 0,
+      "contactSamples": [
+        {
+          "motion": {
+            "cervical": {
+              "baseTranslationError": 0,
+              "contactMethod": "upper-bill triangle / rail-centre plane",
+              "jointCount": 4,
+              "linkedCoverPitch": null,
+              "linkedCoverTranslationError": null,
+              "lowerPitchFraction": 0.25,
+              "maxContactPitch": 0.65,
+              "neckPitch": 0.12066249847412112,
+              "outerReceivers": [],
+              "pitchJoints": [
+                {
+                  "name": "neck",
+                  "pitch": 0.12066249847412112,
+                  "translationError": 0,
+                  "weight": 0.25
+                },
+                {
+                  "name": "cervical-mid-a",
+                  "pitch": 0.12066249847412112,
+                  "translationError": 0,
+                  "weight": 0.25
+                },
+                {
+                  "name": "cervical-mid-b",
+                  "pitch": 0.12066249847412112,
+                  "translationError": 0,
+                  "weight": 0.25
+                },
+                {
+                  "name": "cervical-upper",
+                  "pitch": 0.12066249847412112,
+                  "translationError": 0,
+                  "weight": 0.25
+                }
+              ],
+              "skullPitch": -0.564691680218872,
+              "skullTranslationError": 0,
+              "totalPitch": 0.4826499938964845,
+              "upperPitch": 0.12066249847412112,
+              "upperTranslationError": 0
+            },
+            "contact": true
+          },
+          "plane": 2.1,
+          "state": "contact",
+          "tip": [
+            0.00027412310085256223,
+            1.3713275345213587,
+            2.0790297832392537
+          ]
+        }
+      ],
+      "afterRecoveryState": "agitated",
+      "limitations": "Kinematic state and samples only. Contact marker need not coincide with current leading triangle after rotation. No penetration depth or complete swept clearance claim."
+    },
+    "fallback": {
+      "kind": "illustrated",
+      "era": "builder",
+      "candidateFallbackAuthored": false
+    }
+  },
+  "observationLimit": "Browser observation loop timed out and reset its helper session during approach. Screenshots already saved remain intact; volatile pre-timeout metadata records were not saved as a complete raw trace. Following the timeout, the same live tab/encounter was inspected and resumed at warning, and each subsequent sample was saved immediately. No restart or fabricated missing samples. Earlier source one-second samples miss the short contact window.",
+  "checks": {
+    "npmCi": "PASS zero vulnerabilities",
+    "npmBuild": "PASS",
+    "publicationBoundary": "PASS 52 files and16 exact V37 media; excludes candidate/native/audit/private/provenance files",
+    "warnings": [
+      "existing fsevents install-script policy",
+      "existing Three module chunk above500kB"
+    ],
+    "notRun": [
+      "full movement envelope",
+      "browser separation sweep",
+      "jump and shield thrust",
+      "sustained performance",
+      "console audit",
+      "candidate fallback",
+      "deployment or artistic acceptance"
+    ]
+  },
+  "screenshots": [
+    {
+      "path": "browser/bill02-head-oblique.png",
+      "sha256": "c8e21e7a941cf3cd4c3c3f286c0fdee509ac8e15e4677a0af55d7eba44ba4c23"
+    },
+    {
+      "path": "browser/bill02-inspection.png",
+      "sha256": "1d826240d40ef52de056667e1e75272e28b2c6ee4ba6e13fbbe5637359b25b5c"
+    },
+    {
+      "path": "browser/bill02-maker-jaw-open.png",
+      "sha256": "f70a4a0b677d37d7bcebd9be6dd0a9a3e6fe07ac3d97000d9b9c1a50cee6b030"
+    },
+    {
+      "path": "browser/bill02-maker-jaw-return.png",
+      "sha256": "323d2751b7ad53fa5b84484d632b41e189f0a48743c2e06478e3061dec1b0e9c"
+    },
+    {
+      "path": "browser/bill02-mechanic.png",
+      "sha256": "1e1e97fb924e11174891a5d3560dd03cb4b2cce8d35714c28b70be6d6191e9b9"
+    },
+    {
+      "path": "browser/bill02-recovery.png",
+      "sha256": "741495f4d95df2f88f1313c4fc6e087ef0e5875df07d60eeb70f892f5b5518b2"
+    },
+    {
+      "path": "browser/bill02-restored.png",
+      "sha256": "c4fed13dff3f840be97c89e9d7e090c4b25912116157c7b4f7a02da354303bcf"
+    },
+    {
+      "path": "browser/bill02-strike.png",
+      "sha256": "30281465074b18e50a68d394ed516b6723b5c17286c7f605cb1a5f03f650161d"
+    },
+    {
+      "path": "browser/bill02-wholebird.png",
+      "sha256": "f4eba1125b54ad2b068a8d10257144bf21d78dd9264def11f9bce7ff021c321d"
+    },
+    {
+      "path": "browser/fixed-v37-fallback.png",
+      "sha256": "9b6909a026109d6d7159d45807d2d641f31a7820df48acdce3ec0d3f3214a33c"
+    },
+    {
+      "path": "browser/source-head-oblique.png",
+      "sha256": "abee39fa5724885040b3cd54b03a0d922058b75fe6fd2833a81e664275cec4b5"
+    },
+    {
+      "path": "browser/source-head-profile.png",
+      "sha256": "5b70fd5891c5325f1b11678425bf28db9610b9bee25cfce42a5aec0964bdd21a"
+    },
+    {
+      "path": "browser/source-head.png",
+      "sha256": "5d23fca5d82ea7f4ba4b3f4bb8b9e84e383ed32432b46414950c012bd383258d"
+    },
+    {
+      "path": "browser/source-wholebird.png",
+      "sha256": "9851193c9ceb015c8814c093d5a071b5c72e0371d8c4177f7346af5e364bc56e"
+    }
+  ]
+}

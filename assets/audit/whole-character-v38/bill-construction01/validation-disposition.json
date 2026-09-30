@@ -1,0 +1,93 @@
+{
+  "status": "VISUAL HOLD and FIT HOLD; no adoption, all shaping stopped",
+  "visual": "Smoother upper bill is a local gain, but pinched/flaring terminal and abrupt stepped blunt lowerjaw prevent adoption.",
+  "functionalIntroductions": [
+    [
+      "V31 jaw captive rotating axle -1",
+      "V33 formed lower cheek receiver -1 1"
+    ],
+    [
+      "V31 jaw captive rotating axle 1",
+      "V33 formed lower cheek receiver 1 1"
+    ],
+    [
+      "V31 jaw moving journal cap -1",
+      "V33 formed lower cheek receiver -1 1"
+    ],
+    [
+      "V31 jaw moving journal cap 1",
+      "V33 formed lower cheek receiver 1 1"
+    ]
+  ],
+  "otherIntroductions": [],
+  "screen": [
+    {
+      "pose": "rest",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    },
+    {
+      "pose": "jaw-half",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    },
+    {
+      "pose": "jaw-extreme",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    },
+    {
+      "pose": "cover-half",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    },
+    {
+      "pose": "cover-open",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    },
+    {
+      "pose": "cover-separate-half",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    },
+    {
+      "pose": "cover-separate-full",
+      "source": 12,
+      "candidate": 16,
+      "introduced": 4,
+      "retained": 12,
+      "removed": 0
+    }
+  ],
+  "functionalCause": "Full3D radius mask about jaw pivot failed to protect lateral coaxial receiving bore; actual lateral receiver vertices outside42mm mask were moved, introducing receiver/axle/cap pairs despite preserved true hardware. No hiding or tolerance waiver.",
+  "seamCause": "Independent per-course profile tangent frames and field sampling do not share compatible outer/inner seam loops;02actualcourse0/1 crossing and visible gap/tangent break.",
+  "socket": "Actual vertex397 and socket metadata/local matrices exact, error<1\u00b5m in allsampledposes; does not waive receiver crossings.",
+  "contactMarker": "bill-contact transform deliberately relocated onto actual leading upper-bill surface vertex; actualleadingextrema changed and recorded. Runtime solver validation root-owned.",
+  "geometryAndMaterialPreservation": "Eight meshes plus bill-contact marker only;1210 excluded signatures exact;12native/materialPBR/profiles unchanged.",
+  "recipeDisposition": "01failed pre-export parser bytes/log preserved, syntax-only correction then successful model. Existing receipt blanket retained-transform flag has declared bill-contact exception.",
+  "limits": [
+    "Native manifold/positivevolume and paired source stock vectors do not certify minimum normal wall/fullsolid/continuous motion.",
+    "Same strict predicate;8changedmeshes against actualfullHEADsubtree Builderfinitepool including sameowner. No fullbody rerun.",
+    "Source ninebreastcontacts/16.25mm receiverWARN remain outside scope.",
+    "No worker app/runtime/fallback/build/publication/commit/owner acceptance."
+  ]
+}
