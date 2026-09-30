@@ -1,0 +1,36 @@
+{
+  "workingDirectory": "/Users/okh/.codex/worktrees/v38-hip-transition/murderbird-uncaged",
+  "blender": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "build": "blender -b --python scripts/build-v38-shoulder-form.py",
+  "screen": {
+    "01": [
+      "-b",
+      "--python",
+      "assets/audit/whole-character-v38/shoulder-study01/executed-clearance-screen.py",
+      "--",
+      "assets/models/whole-character-v38/body-finish01/murderbird-v38-material-body-finish01.blend",
+      "assets/models/whole-character-v38/shoulder-study01/murderbird-v38-shoulder-study01.blend",
+      "assets/audit/whole-character-v38/shoulder-study01/clearance-screen.json"
+    ],
+    "02": [
+      "-b",
+      "--python",
+      "assets/audit/whole-character-v38/shoulder-study02/executed-clearance-screen.py",
+      "--",
+      "assets/models/whole-character-v38/body-finish01/murderbird-v38-material-body-finish01.blend",
+      "assets/models/whole-character-v38/shoulder-study02/murderbird-v38-shoulder-study02.blend",
+      "assets/audit/whole-character-v38/shoulder-study02/clearance-screen.json"
+    ]
+  },
+  "loader": {
+    "node": "node",
+    "arguments": [
+      "assets/audit/whole-character-v38/shoulder-study02/executed-gltf-check.mjs",
+      "assets/models/whole-character-v38/shoulder-study02/murderbird-v38-shoulder-study02-rigid.glb",
+      "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/src/scene/era-finish.js",
+      "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/node_modules/three",
+      "assets/audit/whole-character-v38/shoulder-study02/gltf-loader-check.json"
+    ],
+    "helperSha256": "e76cc588b00cf41a0ac6d3b2d17a01b45e5c5d80ec3ce5f1ce2ccff73219cdb9"
+  }
+}
