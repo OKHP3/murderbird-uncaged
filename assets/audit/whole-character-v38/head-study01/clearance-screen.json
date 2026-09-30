@@ -1,0 +1,136 @@
+{
+  "status": "DIAGNOSTIC; inspect introduced and inherited triangle crossings before motion acceptance",
+  "inputs": {
+    "base": "assets/models/whole-character-v38/shoulder-study01/murderbird-v38-shoulder-study01.blend",
+    "baseSha256": "01d608985c96016e8daecf66a4c2729e2893afbaa64b06cf451f915af4af6e1c",
+    "candidate": "assets/models/whole-character-v38/head-study01/murderbird-v38-head-study01.blend",
+    "candidateSha256": "8e9ee9c5013378d548d195c1bcc44e03891a2aafeb59191e669c1ebbd81bd3d7"
+  },
+  "scriptSha256": "899e1b0ba96b845fd7542ea14c45cadec6b0cdc0e7ccba1f33bb593da15d1afd",
+  "poses": {
+    "rest": {},
+    "jaw-mid": {
+      "jaw": 0.16
+    },
+    "jaw-open": {
+      "jaw": 0.32
+    }
+  },
+  "baseline": {
+    "rest": {
+      "testedObjectPairs": 4321,
+      "aggregatePairTriangleCounts": {
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0": 145
+      },
+      "actualCrossOwnerIntersections": [
+        {
+          "a": "V32 returned upper bill course 0",
+          "b": "V31 frontal cranial cap receiving seat",
+          "trianglePairs": 145
+        }
+      ]
+    },
+    "jaw-mid": {
+      "testedObjectPairs": 4321,
+      "aggregatePairTriangleCounts": {
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0": 145
+      },
+      "actualCrossOwnerIntersections": [
+        {
+          "a": "V32 returned upper bill course 0",
+          "b": "V31 frontal cranial cap receiving seat",
+          "trianglePairs": 145
+        }
+      ]
+    },
+    "jaw-open": {
+      "testedObjectPairs": 4321,
+      "aggregatePairTriangleCounts": {
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0": 145
+      },
+      "actualCrossOwnerIntersections": [
+        {
+          "a": "V32 returned upper bill course 0",
+          "b": "V31 frontal cranial cap receiving seat",
+          "trianglePairs": 145
+        }
+      ]
+    }
+  },
+  "candidate": {
+    "rest": {
+      "testedObjectPairs": 4321,
+      "aggregatePairTriangleCounts": {
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0": 111
+      },
+      "actualCrossOwnerIntersections": [
+        {
+          "a": "V32 returned upper bill course 0",
+          "b": "V31 frontal cranial cap receiving seat",
+          "trianglePairs": 111
+        }
+      ]
+    },
+    "jaw-mid": {
+      "testedObjectPairs": 4321,
+      "aggregatePairTriangleCounts": {
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0": 111
+      },
+      "actualCrossOwnerIntersections": [
+        {
+          "a": "V32 returned upper bill course 0",
+          "b": "V31 frontal cranial cap receiving seat",
+          "trianglePairs": 111
+        }
+      ]
+    },
+    "jaw-open": {
+      "testedObjectPairs": 4321,
+      "aggregatePairTriangleCounts": {
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0": 111
+      },
+      "actualCrossOwnerIntersections": [
+        {
+          "a": "V32 returned upper bill course 0",
+          "b": "V31 frontal cranial cap receiving seat",
+          "trianglePairs": 111
+        }
+      ]
+    }
+  },
+  "delta": {
+    "rest": {
+      "newAggregatePairs": [],
+      "inheritedAggregatePairs": [
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0"
+      ],
+      "removedAggregatePairs": [],
+      "baselinePairCount": 1,
+      "candidatePairCount": 1
+    },
+    "jaw-mid": {
+      "newAggregatePairs": [],
+      "inheritedAggregatePairs": [
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0"
+      ],
+      "removedAggregatePairs": [],
+      "baselinePairCount": 1,
+      "candidatePairCount": 1
+    },
+    "jaw-open": {
+      "newAggregatePairs": [],
+      "inheritedAggregatePairs": [
+        "V31 frontal cranial cap receiving seat | V32 returned upper bill course 0"
+      ],
+      "removedAggregatePairs": [],
+      "baselinePairCount": 1,
+      "candidatePairCount": 1
+    }
+  },
+  "limits": [
+    "Actual triangulated mesh surface crossings at three authored native local-X jaw states, epsilon 0.1 micrometre. AABB only filters candidates; BVH actual triangles decide crossings.",
+    "Includes changed bill/cheek groups against builder-eligible rigid meshes with different direct owners and against the other changed groups. Excludes same-owner overlaps, curves and authoring guides.",
+    "Intentional receiving overlaps, fasteners and inherited joint/support intersections are not certified as clearance. Triangle counts differ with tessellation and are not penetration depth.",
+    "Surface test misses containment without triangle crossings, does not sweep between states, and does not model forces, soft tissue, hidden hardware or runtime motion. No full collision PASS is claimed."
+  ]
+}

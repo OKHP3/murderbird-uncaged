@@ -16,6 +16,7 @@ const reviewModels = import.meta.env.DEV ? {
   'body-finish01': '/assets/models/whole-character-v38/body-finish01/murderbird-v38-material-body-finish01.glb',
   'shoulder-study01': '/assets/models/whole-character-v38/shoulder-study01/murderbird-v38-shoulder-study01-rigid.glb',
   'shoulder-study02': '/assets/models/whole-character-v38/shoulder-study02/murderbird-v38-shoulder-study02-rigid.glb',
+  'head-study01': '/assets/models/whole-character-v38/head-study01/murderbird-v38-head-study01-rigid.glb',
 } : {};
 const reviewModel = import.meta.env.DEV ? reviewModels[new URLSearchParams(location.search).get('review-candidate')] : undefined;
 const modelUrl = reviewModel

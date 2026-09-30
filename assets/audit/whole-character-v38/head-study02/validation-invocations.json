@@ -1,0 +1,60 @@
+{
+  "workingDirectory": "/Users/okh/.codex/worktrees/v38-head-profile/murderbird-uncaged",
+  "builder": [
+    "blender",
+    "-b",
+    "--python",
+    "scripts/build-v38-head-profile.py"
+  ],
+  "screen": {
+    "01": [
+      "blender",
+      "-b",
+      "--python",
+      "assets/audit/whole-character-v38/head-study01/executed-clearance-screen.py",
+      "--",
+      "assets/models/whole-character-v38/shoulder-study01/murderbird-v38-shoulder-study01.blend",
+      "assets/models/whole-character-v38/head-study01/murderbird-v38-head-study01.blend",
+      "assets/audit/whole-character-v38/head-study01/clearance-screen.json"
+    ],
+    "02": [
+      "blender",
+      "-b",
+      "--python",
+      "assets/audit/whole-character-v38/head-study02/executed-clearance-screen.py",
+      "--",
+      "assets/models/whole-character-v38/shoulder-study01/murderbird-v38-shoulder-study01.blend",
+      "assets/models/whole-character-v38/head-study02/murderbird-v38-head-study02.blend",
+      "assets/audit/whole-character-v38/head-study02/clearance-screen.json"
+    ]
+  },
+  "loader": {
+    "01": [
+      "node",
+      "assets/audit/whole-character-v38/head-study01/executed-gltf-check.mjs",
+      "assets/models/whole-character-v38/head-study01/murderbird-v38-head-study01-rigid.glb",
+      "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/src/scene/era-finish.js",
+      "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/node_modules/three",
+      "assets/audit/whole-character-v38/head-study01/gltf-loader-check.json"
+    ],
+    "02": [
+      "node",
+      "assets/audit/whole-character-v38/head-study02/executed-gltf-check.mjs",
+      "assets/models/whole-character-v38/head-study02/murderbird-v38-head-study02-rigid.glb",
+      "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/src/scene/era-finish.js",
+      "/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged/node_modules/three",
+      "assets/audit/whole-character-v38/head-study02/gltf-loader-check.json"
+    ]
+  },
+  "boundary": [
+    "blender",
+    "-b",
+    "--python",
+    "assets/audit/whole-character-v38/head-study02/executed-boundary-check.py",
+    "--",
+    "assets/models/whole-character-v38/shoulder-study01/murderbird-v38-shoulder-study01.blend",
+    "assets/models/whole-character-v38/head-study01/murderbird-v38-head-study01.blend",
+    "assets/models/whole-character-v38/head-study02/murderbird-v38-head-study02.blend",
+    "assets/audit/whole-character-v38/head-study02/boundary-check.json"
+  ]
+}
