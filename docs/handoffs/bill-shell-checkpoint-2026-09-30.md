@@ -1,0 +1,31 @@
+# Direct bill shell checkpoint — 2026-09-30
+
+02 is a **visual improvement and next jaw-fit candidate basis**, with **JAW FIT HOLD**. Neither 01 nor 02 is adopted, owner accepted or production-selected. Actual breast-course02 remains the runtime source/fallback; prior envelope/construction studies stay held. Two shape attempts frozen; no 03.
+
+Actual input native SHA `5e1738c2fc048051c73480cdd6b66375c7c1e3dfa0bbd11441892c418732f523`, GLB `fa9b26f0267a880c20ea902350d6fb0ef264be150c08a1233b5ac9265d4ce771`. July HEAD ONLY controls the broad-rooted constructed hook/paired mouth; Master03/Maker-clean cross-check wholebird. Reference paths/hashes and exact reused baseline images/cameras are in receipts. Hidden stock/interfaces and authored coordinates are reconstruction, not measured dimensions from art.
+
+## Exact region and era/attachment contract
+
+Only four geometry objects change: `V32 returned upper bill course0/1/2` (actual names include space before course number), owned by upper-bill, and `V32 formed mandibular bowl`, owned by jaw. Only the actual `bill-contact` marker additionally moves onto rebuilt leading surface. No objects/parts added/deleted. 1214 excluded object signatures/materials/properties/rest matrices/parents exact; signatures and digest/count in receipts. Optic cup/floor/lip/Builder aperture, lower cheek receivers, true jaw axle/journal/caps, cranial-cover independent motion, body/neck/mantle/left restriction/Maker sockets preserved. All four meshes retain inherited passive Maker/Mechanic/Builder eligibility and exact standard PBR/era profiles; no powered hardware introduced. Jaw moves rigidly on retained pivot, upper bill on retained owner. These relationships do not certify stock/contact strength.
+
+Upper shell uses a directly oriented side-profile domain: explicit right flank, cutting bridge, left flank, dorsal bridge; finite inner domain is inset analytically. No radial normal sign choice or independently rotated sections. Three courses use exactly shared outer/inner seam rings and one parameter field. 1001 longitudinal×5 transverse samples verify positive signed side-domain Jacobian, ordered contours and bounded positive stock before export. A first independently authored cutting contour was rejected before any model save at q.826; exact failed recipe/log retained. Monotone cutting domain repaired first attempt;02 contracts it smoothly toward dorsal curve with `Cnew=D+(1-alpha)*(C-D)` and restores dorsal root endpoint near actual source cranial seat. This yields clean hook/tip and curved gape; broad upper plate and thin distal jaw remain artistic gaps.
+
+Lower jaw preserves first6 full source rows as rigid root bridge, source side patches through row14, and the actual source397 socket neighborhood (rows10..14,cols0..4 outer/inner). Central floor is genuinely absent after row5; two substantial finite curved rails connect through the retained root, with closed inside rims/undersides. Source physical socket397 is reindexed to283; actual metadata/local matrices unchanged and physical footprint compared, not old numeric index blindly reused. Retained root point differences<1e-7m, sampled socket distance<1e-6m. Finite distal paired stock uses actual root-column direction and4.5mm length; this is not normal-thickness/fabrication proof.02 deepens/descends the return without restoring a filled scoop.
+
+## Actual fit evidence
+
+Both actual four-mesh nonadjacent self-triangle screens report0 strict witnesses in every changed mesh; source course1 reports 304. This removes the prior generated frayed self-fold in the bounded predicate. It does not establish containment/coplanar/full solid clearance or continuous motion.
+
+Both interobject screens select exactly changed4 against full Builder-eligible finite head subtree including same-owner pairs, unchanged strict plane/edge tolerances. At rest source4→candidate2: retained frontal cranial cap receiving seat↔upperbill course0, plus **introduced mandibular bowl↔upperbill course2**.01 retains the jaw crossing at.16 and clears at.32;02 clears at both.16/.32. Cranial open/separate samples retain the rest crossing. Seven samples are not a swept-clearance proof. Actual tip meeting is visible in profile; deliberate contact does not waive strict crossing. `jaw-interface-witness.json` saves first actual triangles/local footprint and mutual signed plane excursions; these are not full penetration depth. Counts are not aggregate acceptance scores.
+
+Root/peer prefer02 visually: clean tapered hook and true open gape improve on retained long segmented/faceted bill. The proximal root and thin distal rail still need likeness work, but next step is localized actual jaw interface correction on02, not another unrelated artistic variant. Existing9breast lap contacts/16.25mm receiver warning retained outside scope. Root owns runtime/browser/build and reports it independently; no worker full suite/physics/publication or owner acceptance.
+
+Native save/reopen and exact exclusions/material/hierarchy parser checks pass. Actual GLTFLoader→applyEraFinishes passes all eras on12 loaded materials,0invalid; shared references/visibility retained. This is metadata/PBR behavior, not rendered era likeness.
+
+## Frozen outputs and reproduction
+
+01 native `9e17806ff4152ba3552c208503cba33ddd5b6c1667dc914e43f90679e35f503d`; GLB `e106f83624221a4a616c38e53ecb4f61cbdda9353d583ee4e8dbc3cda22fb1a7`.
+
+02 native `b1f1bb96ccc1595dbf735ec77a9a54f416eeef549cb78b9dd6c6a8c6d2442216`; GLB `0b7622bcaf131e3179b130f4898af04dd045a33690d35e1c4eff0585c42a98fe`.
+
+Current builder/region reproduce02 and refuse existing saved outputs. Run Blender background `--python scripts/build-v38-bill-shell.py` from an isolated normal repo root with exact input pair; actual canonical reference paths are explicit machine-specific read-only inputs.01 reproduction uses its frozen executed builder/region restored into normal scripts/regions layout, not current02 entry. GLTFLoader check takes explicit GLB/helper/Three-directory/output args; existing runtimes only. Each version retains exact executed sources, native+rigid GLB,6 matched neutral views, receipts/dispositions/screens/first witnesses/logs. The union manifest covers all owned artifacts and this handoff; prior dirty worker state and historical assets remain untouched. No commits/pushes/runtime edits.
