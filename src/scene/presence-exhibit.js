@@ -8,9 +8,16 @@ import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-p
 import { layoutMarkers } from './marker-layout.js';
 import { applyEraFinishes } from './era-finish.js';
 
-const modelUrl = import.meta.env.DEV && new URLSearchParams(location.search).get('review-candidate') === 'mechanical-finish01'
-  // Serve the unselected study from the development root; do not emit it into dist.
-  ? new URL('/assets/models/whole-character-v37/finish-study01/murderbird-v37-mechanical-finish-study01.glb', location.origin).href
+// Development studies are served from the source tree without emitting them
+// into the production build. Production continues to use the selected V37.
+const reviewModels = import.meta.env.DEV ? {
+  'mechanical-finish01': '/assets/models/whole-character-v37/finish-study01/murderbird-v37-mechanical-finish-study01.glb',
+  'contrast-study01': '/assets/models/whole-character-v38/contrast-study01/murderbird-v38-material-contrast-study01.glb',
+  'body-finish01': '/assets/models/whole-character-v38/body-finish01/murderbird-v38-material-body-finish01.glb',
+} : {};
+const reviewModel = import.meta.env.DEV ? reviewModels[new URLSearchParams(location.search).get('review-candidate')] : undefined;
+const modelUrl = reviewModel
+  ? new URL(reviewModel, location.origin).href
   : new URL('../../assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb', import.meta.url).href;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
@@ -227,6 +234,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   }
   function reviewCamera(name) {
     const views={
+      wholeBirdTight:{target:[0,1,0],offset:[-1.792,.80,2.752]},
       threeQuarter:{target:[0,1,0],offset:[-2.8,1.25,4.3]},
       threeQuarterLeft:{target:[0,1,0],offset:[2.8,1.25,4.3]},
       elevated:{target:[0,1,0],offset:[-2.8,3.4,4.3]},
