@@ -11,6 +11,7 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'cheek-assembly02': '/assets/models/whole-character-v38/cheek-assembly02/murderbird-v38-cheek-assembly02-rigid.glb',
   'orbital-frame02': '/assets/models/whole-character-v38/orbital-frame02/murderbird-v38-orbital-frame02-rigid.glb',
   'head-readability02': '/assets/models/whole-character-v38/head-readability02/murderbird-v38-head-readability02-rigid.glb',
   'head-readability01': '/assets/models/whole-character-v38/head-readability01/murderbird-v38-head-readability01-rigid.glb',
@@ -291,13 +292,25 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     };
     const view=views[name];if(!view)throw new RangeError(`Unknown review camera: ${name}`);
     const closeup=['leftShoulder','rightShoulder','head','neck','breast','feet'].includes(name);
-    controls.minDistance=closeup?1.2:3.0;controls.maxDistance=closeup?4.0:12.0;
+    controls.minDistance=name==='head'?.5:closeup?1.2:3.0;controls.maxDistance=closeup?4.0:12.0;
     model.updateMatrixWorld(true);
     const rigRoot=model.getObjectByName('murderbird')||model;
     const origin=rigRoot.getWorldPosition(new THREE.Vector3());
     const orientation=rigRoot.getWorldQuaternion(new THREE.Quaternion());
     const target=new THREE.Vector3(...view.target).applyQuaternion(orientation).add(origin);
     const offset=new THREE.Vector3(...view.offset).applyQuaternion(orientation);
+    if(name==='head') {
+      // Frame the actual articulated head, not an assumed rest-space height.
+      const bounds=new THREE.Box3().setFromObject(nodes.head);
+      if(!bounds.isEmpty()) {
+        bounds.getCenter(target);
+        const sphere=bounds.getBoundingSphere(new THREE.Sphere());
+        const vertical=THREE.MathUtils.degToRad(camera.fov)/2;
+        const horizontal=Math.atan(Math.tan(vertical)*camera.aspect);
+        const distance=sphere.radius/Math.sin(Math.min(vertical,horizontal))*1.12;
+        offset.normalize().multiplyScalar(Math.max(.5,distance));
+      }
+    }
     controls.target.copy(target);camera.position.copy(target).add(offset);controls.update();
     return {name,camera:camera.position.toArray(),target:controls.target.toArray()};
   }
