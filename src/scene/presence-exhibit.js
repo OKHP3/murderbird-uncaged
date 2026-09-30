@@ -23,6 +23,7 @@ const reviewModels = import.meta.env.DEV ? {
   'crown-fit02': '/assets/models/whole-character-v38/crown-fit02/murderbird-v38-crown-fit02-rigid.glb',
   'neck-study01': '/assets/models/whole-character-v38/neck-study01/murderbird-v38-neck-study01-rigid.glb',
   'neck-study02': '/assets/models/whole-character-v38/neck-study02/murderbird-v38-neck-study02-rigid.glb',
+  'neck-clearance01': '/assets/models/whole-character-v38/neck-clearance01/murderbird-v38-neck-clearance01-rigid.glb',
 } : {};
 const reviewModel = import.meta.env.DEV ? reviewModels[new URLSearchParams(location.search).get('review-candidate')] : undefined;
 const modelUrl = reviewModel
