@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MurderBird · mechanical finish checkpoint</title>
+  <style>
+    :root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background: #182320; color: #eae6d9; }
+    body { margin: 0; } main { max-width: 1600px; margin: auto; padding: 24px; }
+    h1 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.5rem); line-height: 1.2; }
+    p { max-width: 100ch; } a { color: #e7c58a; }
+    .notice { padding: 14px 18px; border-left: 4px solid #cba36a; background: #30382c; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; padding: 16px; background: #26332e; border: 1px solid #607065; }
+    label { display: grid; gap: 4px; font-size: .85rem; }
+    select, button { font: inherit; color: inherit; background: #17211e; border: 1px solid #89988c; border-radius: 4px; padding: 9px 12px; }
+    button { cursor: pointer; } button:disabled { opacity: .45; cursor: default; }
+    :focus-visible { outline: 3px solid #e7c58a; outline-offset: 3px; }
+    .status { margin: 12px 0; padding: 12px 16px; background: #26332e; }
+    #model-status { font-size: .85rem; overflow-wrap: anywhere; }
+    iframe { display: block; width: 100%; height: 1020px; border: 1px solid #607065; background: #232b29; }
+    .footnote { font-size: .85rem; color: #bac5ba; }
+    @media (max-width: 680px) { main { padding: 14px; } .controls label { flex: 1 1 44%; } iframe { height: 1400px; } }
+  </style>
+</head>
+<body><main>
+  <h1>MurderBird · mechanical finish checkpoint</h1>
+  <p class="notice"><strong>Local study · owner likeness acceptance remains pending.</strong> V37 is the production baseline. The material candidate changes surface response on the inherited V37 geometry. The separate V38 hip study is not selected here.</p>
+  <div class="controls" role="group" aria-label="Checkpoint review controls">
+    <label>Assembly<select id="assembly"><option value="baseline">V37 production baseline</option><option value="mechanical-finish01">V37 material candidate · study 01</option></select></label>
+    <label>Display<select id="display"><option value="webgl">Request actual WebGL</option><option value="illustrated">Current illustrated fallback</option></select></label>
+    <label>Era<select id="era"><option value="maker">I · Maker</option><option value="mechanic">II · Mechanic</option><option value="builder">III · Advanced</option></select></label>
+    <label>Camera<select id="camera"><option value="threeQuarter">Whole bird · three-quarter right</option><option value="threeQuarterLeft">Whole bird · three-quarter left</option><option value="front">Front</option><option value="rear">Rear</option><option value="left">Left profile</option><option value="right">Right profile</option><option value="elevated">Elevated</option><option value="low">Low</option><option value="head">Head</option><option value="neck">Neck</option><option value="breast">Breast</option><option value="leftShoulder">Left shoulder</option><option value="rightShoulder">Right shoulder</option><option value="feet">Feet</option></select></label>
+    <label>Light<select id="light"><option value="neutral">Neutral review light</option><option value="exhibit">Exhibit light</option></select></label>
+    <button id="pause" type="button" disabled>Pause encounter</button>
+    <button id="step" type="button" disabled>Advance 1 frame</button>
+    <button id="second" type="button" disabled>Advance 1 second</button>
+  </div>
+  <div class="status" role="status" aria-live="polite"><strong id="render-status">Loading local exhibit…</strong><div id="model-status"></div></div>
+  <p id="message">Controls connect to the development preview when its assembly is ready.</p>
+  <p class="footnote">The fallback contains current fixed V37 captures and a separate assembly schematic. Material-candidate fallback captures have not been authored; the fallback cannot establish a matching candidate finish. Switching assemblies reloads the encounter; camera and light presets are reapplied, but an identical motion phase is not claimed.</p>
+  <p><a id="direct" href="../../../../">Open selected exhibit directly</a> · <a href="../../whole-character-v37/finish-study01/receipt.json">Material provenance and preservation receipt</a></p>
+  <iframe id="exhibit" title="Actual local MurderBird exhibit for checkpoint review" src="about:blank"></iframe>
+  <p class="footnote">This page is an audit artifact served by the local development server. It is outside the production build entry points. These controls use existing development hooks and visible exhibit buttons; deployment and owner acceptance remain separate checks.</p>
+  <script type="module">
+    const $ = id => document.getElementById(id);
+    const frame = $('exhibit');
+    const base = new URL('../../../../', location.href);
+    let initialized = false, applyView = true, requestedEra = '', lastStatus = '';
+    function access() {
+      try { return { api: frame.contentWindow?.__uncaged, doc: frame.contentDocument }; }
+      catch { return {}; }
+    }
+    function message(text) { $('message').textContent = text; }
+    function load() {
+      const url = new URL(base);
+      if ($('assembly').value !== 'baseline') url.searchParams.set('review-candidate', $('assembly').value);
+      if ($('display').value === 'illustrated') url.searchParams.set('view', 'illustrated');
+      initialized = false; requestedEra = ''; applyView = true; lastStatus = '';
+      for (const id of ['pause', 'step', 'second', 'era', 'camera', 'light']) $(id).disabled = true;
+      $('render-status').textContent = 'Loading local exhibit…'; $('model-status').textContent = '';
+      $('direct').href = url.href; frame.src = url.href;
+      message('Preparing the selected assembly and display.');
+    }
+    function refresh() {
+      const { api, doc } = access();
+      if (!api) {
+        const label = doc?.getElementById('render-label')?.textContent;
+        if (label && !label.includes('LOADING')) {
+          $('render-status').textContent = label;
+          message('Development controls are unavailable here. Use the visible controls inside the exhibit; open this review page on the local development server for camera and frame stepping.');
+        }
+        return;
+      }
+      const metrics = api.metrics(), snapshot = api.getSnapshot();
+      if (!metrics) return;
+      if (!initialized) {
+        initialized = true;
+        if (!snapshot.paused) doc.getElementById('pause')?.click();
+      }
+      const desired = $('era').value;
+      if (requestedEra !== desired) { requestedEra = desired; applyView = true; api.era(desired); }
+      const settled = metrics.era === desired && !snapshot.pendingEra;
+      const webgl = metrics.kind === 'webgl';
+      if (applyView && settled) {
+        if (webgl) { api.reviewCamera($('camera').value); api.reviewLighting($('light').value); }
+        applyView = false;
+      }
+      $('era').disabled = false;
+      $('camera').disabled = $('light').disabled = !webgl || !settled;
+      $('pause').disabled = !settled;
+      $('pause').textContent = snapshot.paused ? 'Resume encounter' : 'Pause encounter';
+      $('pause').setAttribute('aria-pressed', String(snapshot.paused));
+      $('step').disabled = $('second').disabled = !webgl || !settled || !snapshot.paused;
+      const status = `${metrics.kind}|${metrics.era}|${snapshot.pendingEra}|${metrics.modelUrl || ''}|${metrics.review?.lighting}|${JSON.stringify(metrics.finishes)}`;
+      if (status !== lastStatus) {
+        lastStatus = status;
+        $('render-status').textContent = webgl ? `Actual WebGL · ${metrics.era}${snapshot.pendingEra ? ' · changing era…' : ''}` : 'Illustrated fallback · fixed V37 captures';
+        $('model-status').textContent = webgl ? `Loaded model: ${metrics.modelUrl} · Era: ${metrics.era} · Light: ${metrics.review?.lighting || 'unknown'} · Kind: ${metrics.kind}${metrics.finishes ? ` · Profiles: ${metrics.finishes.appliedMaterials} applied / ${metrics.finishes.taggedMaterials} tagged / ${metrics.finishes.ineligibleMaterials} ineligible / ${metrics.finishes.invalidMaterials} invalid` : ' · Finish profile summary unavailable'}` : 'Unchanged V37 fallback. Candidate material fallback not authored. Kind: illustrated.';
+        if (webgl && $('assembly').value === 'mechanical-finish01' && !String(metrics.modelUrl).includes('finish-study01')) message('Candidate was requested, but the loaded model is still the baseline. Candidate runtime wiring is not active in this preview.');
+        else message(webgl ? 'Inspect the real scene. Pause holds the encounter while orbit controls remain available.' : 'Current fallback only. Camera, lighting and motion comparisons require WebGL.');
+      }
+    }
+    for (const id of ['assembly', 'display']) $(id).addEventListener('change', load);
+    $('era').addEventListener('change', refresh);
+    for (const id of ['camera', 'light']) $(id).addEventListener('change', () => { applyView = true; refresh(); });
+    $('pause').addEventListener('click', () => { access().doc?.getElementById('pause')?.click(); refresh(); });
+    function step(seconds) {
+      const { api, doc } = access();
+      if (!api || !api.getSnapshot().paused || api.getSnapshot().pendingEra || api.metrics()?.kind !== 'webgl') return;
+      const pause = doc.getElementById('pause');
+      if (!pause) return;
+      // Synchronous unpause/step/pause prevents an intervening browser frame.
+      // Advance the existing application; never synthesize a replacement pose.
+      pause.click();
+      try { api.step(seconds); }
+      finally { if (!api.getSnapshot().paused) pause.click(); }
+      refresh();
+      message(`Advanced ${seconds === 1 ? 'one second' : 'one simulation frame'} and paused. Autonomous browser frames are held by the exhibit’s pause control.`);
+    }
+    $('step').addEventListener('click', () => step(1 / 60));
+    $('second').addEventListener('click', () => step(1));
+    frame.addEventListener('load', refresh);
+    setInterval(refresh, 300);
+    load();
+  </script>
+</main></body></html>

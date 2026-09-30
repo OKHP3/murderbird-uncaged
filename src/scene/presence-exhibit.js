@@ -6,8 +6,12 @@ import { createEraMotion } from './era-motion.js';
 import { createEraMechanisms } from './era-mechanisms.js';
 import { applyInspectionPose, INSPECTION_EXPLODED_OFFSETS } from './inspection-pose.js';
 import { layoutMarkers } from './marker-layout.js';
+import { applyEraFinishes } from './era-finish.js';
 
-const modelUrl = new URL('../../assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb', import.meta.url).href;
+const modelUrl = import.meta.env.DEV && new URLSearchParams(location.search).get('review-candidate') === 'mechanical-finish01'
+  // Serve the unselected study from the development root; do not emit it into dist.
+  ? new URL('/assets/models/whole-character-v37/finish-study01/murderbird-v37-mechanical-finish-study01.glb', location.origin).href
+  : new URL('../../assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb', import.meta.url).href;
 const FRONT = 2.10;
 const smooth = t => t * t * (3 - 2 * t);
 const clamp = THREE.MathUtils.clamp;
@@ -207,12 +211,14 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   const contactBounds = new THREE.Box3();
   const frameTimes = [];
   let lightingMode='exhibit';
+  let finishReport;
   const highlight = new THREE.Box3Helper(new THREE.Box3(),0xd9b87b); highlight.visible=false;scene.add(highlight);
 
   function setEra(value) {
     era=value;
     motion.resetEra(value);mechanisms.setEra(value);
     exteriorSurfaces.forEach(entry=>{entry.object.visible=entry.eras.has(value);});
+    finishReport=applyEraFinishes(model,value);
     nodes['winding-drive'].visible=false;
     nodes['power-core'].visible=value==='builder';
     nodes.processing.visible=value==='builder';
@@ -279,7 +285,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     return {
       kind:'webgl',modelUrl,era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),
       performance:{renderer:rendererName,softwareRenderer:Boolean(softwareRenderer),viewport:{width:lastWidth,height:lastHeight,bufferWidth:canvas.width,bufferHeight:canvas.height,pixelRatio:renderer.getPixelRatio()},frameMsP50:frameP50===null?null:frameP50*1000,frameMsP95:frameP95===null?null:frameP95*1000,fpsP50:frameP50>0?1/frameP50:null,fpsP05:frameP95>0?1/frameP95:null,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,geometries:renderer.info.memory.geometries,gpuTextures:renderer.info.memory.textures},
-      exterior:exteriorMetrics(),review:{lighting:lightingMode,camera:camera.position.toArray(),target:controls.target.toArray()},
+      exterior:exteriorMetrics(),finishes:finishReport,review:{lighting:lightingMode,camera:camera.position.toArray(),target:controls.target.toArray()},
       tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,
       wingAngles:{leftShoulder:nodes['left-mantle'].rotation.x,leftElbow:nodes['left-wing-shield'].rotation.x,rightShoulder:nodes['right-mantle'].rotation.x,rightElbow:nodes['right-wing-shield'].rotation.x},
       wingBounds:{left:new THREE.Box3().setFromObject(nodes['left-mantle'],true),right:new THREE.Box3().setFromObject(nodes['right-mantle'],true)},contactPlane:FRONT,
