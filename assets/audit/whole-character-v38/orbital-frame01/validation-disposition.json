@@ -1,0 +1,20 @@
+{
+  "status": "GENERATION FAILURE; orbital-frame01 is not an artistic success or runtime candidate",
+  "cause": "Catmull-Rom cubic coefficient was -a+3b-4c+d instead of -a+3b-3c+d. Curve intervals ended at half next coordinates, generating long discontinuous plates outside the head.",
+  "diagnosedFrom": "Actual saved head-profile and full-bird renders plus executed-region.py cubic term",
+  "preservation": "All malformed01 native/GLB/media/receipt/executed sources remain byte-exact locally. Transfer includes this disposition, original executed sources, build log and hash inventory only.",
+  "correctedVersion": "orbital-frame02 separately saved, coefficient corrected and bounds assertion added before mesh save/export",
+  "originalModelHashes": {
+    "native": {
+      "path": "assets/models/whole-character-v38/orbital-frame01/murderbird-v38-orbital-frame01.blend",
+      "bytes": 3671244,
+      "sha256": "22156660986f12901ed94dc6df3dd9748a9a2eaa465b213a2be62f0b67a5c093"
+    },
+    "rigidGlb": {
+      "path": "assets/models/whole-character-v38/orbital-frame01/murderbird-v38-orbital-frame01-rigid.glb",
+      "bytes": 12409484,
+      "sha256": "91a40e4c5fa86e8ef6622b6965c18ce81ad30055df9e5b34cfad8eb51eb18eb3"
+    }
+  },
+  "limits": "Manifold/positive volume alone did not detect malformed silhouette; no01 contact or loader acceptance claimed."
+}
