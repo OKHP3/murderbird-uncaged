@@ -13,6 +13,8 @@ import { applyEraFinishes } from './era-finish.js';
 const reviewModels = import.meta.env.DEV ? {
   'pectoral-construction01': '/assets/models/whole-character-v38/pectoral-construction01/murderbird-v38-pectoral-construction01-rigid.glb',
   'pectoral-connected01': '/assets/models/whole-character-v38/pectoral-connected01/murderbird-v38-pectoral-connected01-rigid.glb',
+  'pectoral-interfaces01': '/assets/models/whole-character-v38/pectoral-interfaces01/murderbird-v38-pectoral-interfaces01-rigid.glb',
+  'pectoral-interfaces02': '/assets/models/whole-character-v38/pectoral-interfaces02/murderbird-v38-pectoral-interfaces02-rigid.glb',
   'pectoral-envelope02': '/assets/models/whole-character-v38/pectoral-envelope02/murderbird-v38-pectoral-envelope02-rigid.glb',
   'pectoral-envelope01': '/assets/models/whole-character-v38/pectoral-envelope01/murderbird-v38-pectoral-envelope01-rigid.glb',
   'compact-mantle02': '/assets/models/whole-character-v38/compact-mantle02/murderbird-v38-compact-mantle02-rigid.glb',
