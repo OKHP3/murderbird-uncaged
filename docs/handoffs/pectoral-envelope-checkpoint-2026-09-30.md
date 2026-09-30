@@ -1,0 +1,28 @@
+# Pectoral envelope checkpoint — 2026-09-30
+
+Both attempted forms are **ARTISTIC AND FIT HOLD**. No continuation selection: actual compact-mantle02 remains the baseline. Root and independent reviewer found01 too subtle/round and02 a broad under-armored bib with an abrupt throat ledge. Two attempts used; all shaping stopped.
+
+Input: exact fetched `origin/codex/v38-compact-mantle-integration-01` at `43a2ba571da703215eafdabfaf2a835f62b4851e`; worker branch and all previous dirty/hydrated assets preserved. Actual compact-mantle02 native `f2ba1cc298cc82a77e2dfb62f7e46235e985a715e7e68c084e3403a6039db373`, GLB `9cba426f407057be8d0ee47bef4d1bb8f5364ba1e737205179c520fa7375a451`.
+
+Actual Master03, Maker-clean and Mechanic binaries control the breast-to-shoulder flow. Paths/hashes are in both receipts. July is head-only and does not govern this region. Authored dimensions, hidden construction and fit remain reconstructed proposals, not art metrology or owner/engineering acceptance.
+
+01 changed27 meshes: V34 formed breast courses1–4 (5/6/7/6 plates), V30 continuous tapered breast liner and ± liner receiving tabs;1192 excluded objects exact.02 changed21 meshes: courses1–3 (5/6/7 plates), liner and ±tabs;1198 excluded objects exact. Full explicit names, vertex scope, before/after geometry signatures, stock-pair indices/errors, owner/material/era map and return-seat coordinates are in each receipt. No objects added/deleted. All materials, rigid owners, transforms/pivots, receiving frame, head/neck, compact mantle, sockets, left restriction, mechanisms and hip/leg regions remain exact. Snapshot assertions ran before save and after native reopen; exported node identities/parents and standard PBR records/era extras are exact to source.
+
+All changed pieces remain rigid `breastplate` children, passive inherited/proposed exterior or frame, eligible Maker/Mechanic/Builder; no flexible tissue or new powered hardware. Breastplate remains a body child with existing local-X +1.1rad inspection hinge and separation semantics. Original returns/shaft/bearings and frame exact; first8vertices of each tab remain byte-exact. Continuous liner was reshaped with formed cover plates; tab liner-side sections follow the actual new liner nearest section-center surface. This proves neither finite footprint seating nor fabrication fit. The historical16.25mm fixed cheek/sideguard gap remains WARN, unchanged. No supporting skeleton was enlarged.
+
+Actual scoped strict screen uses the unchanged breast-clearance02 union40 selector (breast36+four fixed receiver meshes) against all Builder-eligible finite surfaces, including the receiver/body same-owner adjunct; same-breast-owner internal joins are excluded. Rest plus .25/.5/.75/1 inspection opening at zero separation use actual local-X +1.1 mapper. Baseline counts18/15/15/15/15.01 counts22/15/15/15/15: four added rest liner↔V35 sideguard±1 course0/scapular±1 course0.02 counts26/15/15/15/15: six added breast-course1↔cervical1 guard pairs and two course1↔scapular0 pairs. All18 inherited rest pairs remain. Exact pair identities, first triangle witnesses and predicates are in saved screen JSON. Open samples passing do not cancel rest failures. No containment, continuous sweep, all-era action or full engineering certification.
+
+01 maximum movement40.161mm;02 maximum162.107mm. Matched finite stock vectors preserved (max errors4.215e-8m/2.981e-8m); Boolean-trimmed unmatched vertices have no universal wall metrology claim. Source/candidate edge-manifold and positive-volume checks passed for selected meshes, not solid self-intersection certification.02 tabs' tiny declared~30nm liner-seat numerical shifts are not meaningful support reconstruction.
+
+Both actual GLBs passed GLTFLoader→applyEraFinishes for36 inherited tagged breast parts in all three eras: zero invalid profiles; visibility/shared references preserved. Eight matched neutral1200px full-bird front/profile/three-quarter/rear baseline/candidate PNGs per attempt. These native renders do not establish runtime motion, fallback behavior or artistic acceptance; root owns those checks/build/publication.
+
+Native/GLB hashes:
+
+| Study | Native | Rigid GLB |
+|---|---|---|
+|01|d927c39aa54253f1e381eceb99645de153b4168327f83e1cf441a15792cb8239|77f43267440c8e2b400f93075c5df2067cadf6ddecfd7f932af094caa8062286|
+|02|c144e8516c81f4526c02fc2f4df5b3d7c1d3f9ca5cb2e7833b65f84b5ec00eb5|ef4d9cd5d49f36b54b62f1469526bc53b4538e175d0cde8531fac716491fc236|
+
+Executed recipes, screens, logs and manifests are isolated in each versioned audit directory. Current top-level builder/region reproduce held02, enforce write-once native/GLB outputs, and use original compact-mantle02 inputs. Run from repository root: `/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/build-v38-pectoral-envelope.py`. Historical01 requires its frozen builder/region copied into an isolated normal repository layout, not replaying current02.01 executed region had a stale Breast-study01/forward-full comment; executed bytes retained and validation disposition corrects it.02 execution headers accurately name pectoral02. Machine-specific Blender/canonical reference/helper paths are explicit in sources and exported profile receipt; no dependency installs.
+
+Next separately scoped method: reconstruct coherent upper pectoral panels and their neck/shoulder support connections together, preserve overlap and inspection, rather than more warps of these plates. No automatic baseline promotion. No worker app edits, full suite/build, Git commit/push, publishing or new agents. Prior frozen work untouched.
