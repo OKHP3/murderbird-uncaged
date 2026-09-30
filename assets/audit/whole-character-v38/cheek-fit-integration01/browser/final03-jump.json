@@ -1,0 +1,1475 @@
+{
+  "model": "http://127.0.0.1:5185/assets/models/whole-character-v38/cheek-seated03/murderbird-v38-cheek-seated03-rigid.glb",
+  "kind": "webgl",
+  "era": "builder",
+  "frameDocumentHidden": false,
+  "reference": {
+    "mode": "whole",
+    "source": "../../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png"
+  },
+  "state": "recover",
+  "paused": true,
+  "pendingEra": null,
+  "mechanisms": {
+    "era": "builder",
+    "tickCount": 9694,
+    "visible": {
+      "maker": false,
+      "mechanic": false,
+      "builder": true
+    },
+    "attachmentLayout": {
+      "status": "authored-model-points",
+      "version": 1,
+      "makerCradleWidth": 0.62,
+      "makerControlOffsets": [
+        [
+          0.065,
+          0.015,
+          0.045
+        ],
+        [
+          -0.08643899773165903,
+          -0.20761706436182026,
+          -0.03922407128577299
+        ],
+        [
+          -0.07,
+          0,
+          -0.16
+        ],
+        [
+          -0.16,
+          0.06,
+          0.02
+        ],
+        [
+          -0.12762210726737974,
+          0.01019780158996582,
+          0.10722321987152099
+        ]
+      ],
+      "makerOwnerSockets": [
+        {
+          "control": "wing",
+          "owner": "right-mantle",
+          "point": [
+            -0.08643899773165903,
+            -0.20761706436182026,
+            -0.03922407128577299
+          ],
+          "surfaceObject": "right swept upper wing load member"
+        },
+        {
+          "control": "jaw",
+          "owner": "jaw",
+          "point": [
+            -0.12762210726737974,
+            0.01019780158996582,
+            0.10722321987152099
+          ],
+          "surfaceObject": "V32 formed mandibular bowl"
+        }
+      ],
+      "tailPosition": [
+        0,
+        0.2,
+        -0.31
+      ],
+      "transmissionPosition": [
+        0,
+        0,
+        0
+      ],
+      "distributionPosition": [
+        -0.21,
+        0.29,
+        0.07
+      ]
+    },
+    "anchors": [
+      {
+        "id": "drive",
+        "available": true
+      },
+      {
+        "id": "power",
+        "available": true
+      },
+      {
+        "id": "mind",
+        "available": true
+      }
+    ],
+    "externalControlTargets": [
+      "left-foot",
+      "right-mantle",
+      "compact-articulated-tail",
+      "neck",
+      "jaw"
+    ],
+    "mechanicTargets": [
+      "left-thigh/left-shin",
+      "right-thigh/right-shin"
+    ],
+    "builderTargets": [
+      "left-thigh/left-shin",
+      "right-thigh/right-shin",
+      "right-mantle/right-wing-shield"
+    ],
+    "inventory": [
+      {
+        "id": "maker-support-controls",
+        "eras": [
+          "maker"
+        ],
+        "role": "external support cradle, levers, rods and tension lines"
+      },
+      {
+        "id": "mechanic-wound-drive",
+        "eras": [
+          "mechanic"
+        ],
+        "role": "one mainspring, reduction pair, camshaft and kinematic telescoping knee links"
+      },
+      {
+        "id": "builder-power-actuation",
+        "eras": [
+          "builder"
+        ],
+        "role": "fictional supply, distribution, leg/wing/cervical actuators; sensing and processing are separately gated"
+      }
+    ],
+    "inspectionConnections": {
+      "separationMode": "connected",
+      "wing": {
+        "mode": "connected",
+        "endpointDistance": 0.23351995537181316
+      },
+      "cervical": [
+        {
+          "side": "left",
+          "mode": "connected",
+          "endpointDistance": 0.14181252383387521
+        },
+        {
+          "side": "right",
+          "mode": "connected",
+          "endpointDistance": 0.12533789070392048
+        }
+      ],
+      "powerCore": {
+        "mode": "connected",
+        "endpointDistance": 0.24206033994605192
+      },
+      "mechanicSlidingLinks": {
+        "left": 0.1924576337920478,
+        "right": 0.143816514429493
+      }
+    }
+  },
+  "powerMove": null,
+  "powerMovePending": null,
+  "motion": {
+    "era": "builder",
+    "powerMove": null,
+    "clawAction": null,
+    "cageAction": null,
+    "root": {
+      "x": 1.2004083970981352,
+      "z": 0.9864491384791502,
+      "yaw": 12.566370614359172,
+      "speed": 0
+    },
+    "distance": 13.735226665402536,
+    "steps": 135,
+    "time": 78.00540000000146,
+    "motionFrame": 9706,
+    "settled": true,
+    "arrived": true,
+    "aligned": true,
+    "contact": false,
+    "camAngle": 0,
+    "mechanicalPhase": 0,
+    "mechanicalStage": "disengaged",
+    "actualArticulation": {
+      "leg": 0,
+      "wing": 0,
+      "tail": 0,
+      "neck": 0,
+      "jaw": 0
+    },
+    "cervical": {
+      "jointCount": 4,
+      "lowerPitchFraction": 0.25,
+      "upperTranslationError": 0,
+      "upperPitch": 0.0020867157227841423,
+      "linkedCoverPitch": null,
+      "linkedCoverTranslationError": null,
+      "outerReceivers": [],
+      "totalPitch": 0.008346862891136569,
+      "pitchJoints": [
+        {
+          "name": "neck",
+          "weight": 0.25,
+          "pitch": 0.0020867157227841423,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-a",
+          "weight": 0.25,
+          "pitch": 0.0020867157227841423,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-mid-b",
+          "weight": 0.25,
+          "pitch": 0.0020867157227841423,
+          "translationError": 0
+        },
+        {
+          "name": "cervical-upper",
+          "weight": 0.25,
+          "pitch": 0.0020867157227841423,
+          "translationError": 0
+        }
+      ],
+      "baseTranslationError": 0,
+      "skullTranslationError": 0,
+      "neckPitch": 0.0020867157227841423,
+      "skullPitch": -0.009308855459103278,
+      "maxContactPitch": 0.65,
+      "contactMethod": "upper-bill triangle / rail-centre plane"
+    },
+    "contactApproach": {
+      "z": 0.9903697020112008,
+      "requestedZ": 0.9903697020112008,
+      "minimumSurfaceReach": 1.0966302979887994,
+      "arrivalMargin": 0.008,
+      "maximumPitch": 0.65,
+      "clamped": false
+    },
+    "jawHinge": {
+      "axis": "local X",
+      "openingSign": 1,
+      "angle": 6.7916966745035045e-118,
+      "makerMaximum": 0.32
+    },
+    "contactPoint": [
+      1.0027885063174842,
+      1.5510310178026034,
+      1.7802146506746364
+    ],
+    "pose": {
+      "load": 0.0051929423372022,
+      "extension": 0.012364148421910012,
+      "jaw": 2.5154432127790756e-117,
+      "gaze": -0.417241895219371,
+      "guard": 0.005687508274078604,
+      "counter": 3.158726002908442e-8
+    },
+    "maxFootError": 6.377745716588144e-16,
+    "reachDrop": 0,
+    "maxReachDrop": 0.12,
+    "feet": [
+      {
+        "side": "left",
+        "target": [
+          1.5054084042506921,
+          0.2765976522564888,
+          0.9484491285251714
+        ],
+        "actual": [
+          1.5054084042506921,
+          0.27659765225648875,
+          0.9484491285251714
+        ],
+        "swinging": false,
+        "phase": 1,
+        "yaw": 12.566370614359183,
+        "steps": 68,
+        "solveError": 5.551115123125783e-17,
+        "kneeHinge": {
+          "axis": "local X",
+          "angle": 0.5160827334102918,
+          "offAxisQuaternion": 0
+        },
+        "digits": [
+          {
+            "name": "left-digit-1-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-1-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-2-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-2-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-3-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "left-digit-3-distal",
+            "angle": 0,
+            "restAngle": 0
+          }
+        ],
+        "groundMin": 0.0019999999999999463
+      },
+      {
+        "side": "right",
+        "target": [
+          0.8954083899455774,
+          0.2765976522564888,
+          0.9484491285251776
+        ],
+        "actual": [
+          0.8954083899455774,
+          0.2765976522564888,
+          0.9484491285251776
+        ],
+        "swinging": false,
+        "phase": 1,
+        "yaw": 12.566370614359183,
+        "steps": 67,
+        "solveError": 0,
+        "kneeHinge": {
+          "axis": "local X",
+          "angle": 0.5160825946290323,
+          "offAxisQuaternion": 0
+        },
+        "digits": [
+          {
+            "name": "right-digit-1-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-1-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-2-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-2-distal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-3-proximal",
+            "angle": 0,
+            "restAngle": 0
+          },
+          {
+            "name": "right-digit-3-distal",
+            "angle": 0,
+            "restAngle": 0
+          }
+        ],
+        "groundMin": 0.0020000000000000018
+      }
+    ],
+    "bodyBounds": {
+      "min": [
+        0.6999741772609507,
+        0.0019999999999999463,
+        0.45000351668594624
+      ],
+      "max": [
+        1.7208124379115852,
+        1.877214132882786,
+        1.7802146506746364
+      ]
+    },
+    "headBounds": {
+      "min": [
+        0.8858417476172561,
+        1.340383946667266,
+        1.1011953240069954
+      ],
+      "max": [
+        1.3690821377296434,
+        1.877214132882786,
+        1.7802146506746364
+      ]
+    }
+  },
+  "frameCount": 9694,
+  "open": 0,
+  "separation": 0,
+  "camera": {
+    "lighting": "neutral",
+    "camera": [
+      -0.5915916029018662,
+      1.7999999999999998,
+      3.738449138479149
+    ],
+    "target": [
+      1.2004083970981352,
+      1,
+      0.9864491384791503
+    ]
+  },
+  "performance": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+    "softwareRenderer": false,
+    "viewport": {
+      "width": 507,
+      "height": 608,
+      "bufferWidth": 507,
+      "bufferHeight": 608,
+      "pixelRatio": 1
+    },
+    "frameMsP50": 10,
+    "frameMsP95": 11.69999999999709,
+    "fpsP50": 100,
+    "fpsP05": 85.47008547010674,
+    "drawCalls": 1474,
+    "triangles": 877428,
+    "geometries": 797,
+    "gpuTextures": 4
+  },
+  "finishes": {
+    "era": "builder",
+    "taggedMaterials": 12,
+    "appliedMaterials": 12,
+    "ineligibleMaterials": 0,
+    "invalidMaterials": 0,
+    "issues": []
+  },
+  "nodes": {
+    "winding-drive": false,
+    "power-core": true,
+    "processing": true,
+    "builder-optics": true
+  },
+  "headSurfaces": [
+    {
+      "name": "V31_Advanced_optical_aperture_1",
+      "eras": [
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "optic",
+      "visible": true
+    },
+    {
+      "name": "V31_Advanced_optical_aperture_-1",
+      "eras": [
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "optic",
+      "visible": true
+    },
+    {
+      "name": "V31_cranial_load_bow_shaft_seat_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_cranial_load_bow_shaft_seat_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_fixed_temporal_receiving_wall_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V31_fixed_temporal_receiving_wall_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V31_frontal_cranial_cap_receiving_seat",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V31_jaw_cheek_clevis_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_jaw_cheek_clevis_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_optic_recessed_receiving_cup_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "recess",
+      "visible": true
+    },
+    {
+      "name": "V31_optic_recessed_receiving_cup_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "recess",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_cranial_load_bow_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_cranial_load_bow_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_optic_cavity_floor_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "recess",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_optic_cavity_floor_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "recess",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_temporal_fitting_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_temporal_fitting_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_temporal_fitting_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_temporal_fitting_-1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_temporal_fitting_-1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_passive_temporal_fitting_-1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V31_temporal_fitting_root_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_temporal_fitting_root_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_temporal_fitting_root_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_temporal_fitting_root_-1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_temporal_fitting_root_-1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V31_temporal_fitting_root_-1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head-reconstruction",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V33_diagonal_brow_receiver_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_diagonal_brow_receiver_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_diagonal_brow_receiver_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_diagonal_brow_receiver_-1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_diagonal_brow_receiver_-1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_diagonal_brow_receiver_-1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_formed_lower_cheek_receiver_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_formed_lower_cheek_receiver_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_formed_lower_cheek_receiver_-1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_formed_lower_cheek_receiver_-1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_recessed_optic_retaining_lip_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V33_recessed_optic_retaining_lip_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "bearing",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_3",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_4",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_5",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_1_6",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_3",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_4",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_5",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_swept_temporal_leaf_-1_6",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_0_0_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_0_0_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_0_0_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_0_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_0_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_0_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_1_0_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_1_0_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_1_0_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_1_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_1_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_1_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_-1_0_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_-1_0_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_-1_0_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_-1_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_-1_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V33_tapered_throat_cheek_plate_-1_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V38_optic_cheek_shield_1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V38_optic_cheek_shield_1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V38_optic_cheek_shield_1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V38_optic_cheek_shield_-1_0",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V38_optic_cheek_shield_-1_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V38_optic_cheek_shield_-1_2",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "visible": true
+    },
+    {
+      "name": "V24_rising_thoracic_receiving_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "breast",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V24_rising_thoracic_receiving_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "breast",
+      "surfaceRole": "plate",
+      "visible": true
+    },
+    {
+      "name": "V25_left_shin_distal_captive_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V25_left_shin_distal_captive_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V25_left_thigh_distal_captive_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V25_left_thigh_distal_captive_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V28_left_thigh_proximal_formed_load_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V28_left_thigh_proximal_formed_load_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V25_right_shin_distal_captive_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V25_right_shin_distal_captive_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V25_right_thigh_distal_captive_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V25_right_thigh_distal_captive_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "bearing-frame",
+      "visible": true
+    },
+    {
+      "name": "V28_right_thigh_proximal_formed_load_cheek_1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "frame",
+      "visible": true
+    },
+    {
+      "name": "V28_right_thigh_proximal_formed_load_cheek_-1",
+      "eras": [
+        "maker",
+        "mechanic",
+        "builder"
+      ],
+      "region": "leg-structure",
+      "surfaceRole": "frame",
+      "visible": true
+    }
+  ],
+  "wingAngles": {
+    "leftShoulder": 0.0003696769822740991,
+    "leftElbow": 0.0010237514893341488,
+    "rightShoulder": -0.0013650335730388942,
+    "rightElbow": 0.0021612531441498697
+  },
+  "contactTip": [
+    0.9801791810431042,
+    1.5577943872096154,
+    1.7496984261589679
+  ],
+  "contactPlane": 2.1,
+  "label": "final03-jump",
+  "observedAt": "2026-09-30T13:06:53.503Z"
+}
