@@ -13,3 +13,13 @@ Actual browser: Advanced contact then recover, sampled cervical base/skull trans
 Replit Free ONLY, always decline Power/Max. Fast-forward only clean detached preview at parent; hydrate only this checkpoint's asset-routes.json through public GitHub media. Preserve92 previously hydrated media, workspace main, briefs, servers and dependencies. First/native sources remain pointers unless separately needed. Run verify-preview.py once with exact SHA,parent,port5000, refresh only listed stale metadata if necessary, report exact SHA/clean/routes and stop. No archive scan, credential retry, install, build, restart, push, main edits or publication. Restate hidden blockers in ordinary chat. Pending narrower-versus-fuller neck choice remains unanswered.
 
 Next: address the head's missing constructed brow/optic integration rather than another bill-hook outline change. Likeness and full motion remain incomplete.
+
+## Replit recovery after checkpoint push
+
+The initially targeted detached preview directory disappeared during a Replit workspace restart. Its old Git registration remains preserved. The clean replacement is `/home/runner/workspace/review-previews/bill-vault-ded8e7f`, initially restored at model checkpoint `ded8e7fafcacee562987c8b7e26c3e3eaa97e18a`. Use this replacement for subsequent fast-forwards; do not recreate or prune the old missing path. A local-only `/review-previews/` exclusion was appended to `.git/info/exclude`, with tracked main files and prior entries preserved.
+
+Replit confirmed 102 recovered files against committed LFS hashes/sizes: 94 unique paths from the eleven checkpoint manifests, four selected references, and four V37 GLB/fallback assets. This does not establish recovery of all 106 previously counted cache files. Native sources remain pointers. Main, briefs and installed dependencies were preserved.
+
+Do not put a served worktree beneath `.local`: Vite deliberately denies that private path. A Python static server is not a valid replacement for Vite source transformation. The temporary static server was stopped; fs.deny and `.replit` were unchanged. Vite 8.3.1 PID1486 serves port5000 at the recovery observation; revalidate the process on future work.
+
+Root independently opened the remote review and confirmed actual WebGL loaded the final bill GLB, with 12 applicable material profiles and zero invalid/ineligible profiles in Advanced neutral light. This is remote delivery evidence, not deployment or owner acceptance. The checkpoint verifier ran once before relocation; asset checks passed and status metadata was refreshed. Replit then reported clean status and verified transformed JavaScript, review and GLB routes under Vite. No repeated whole-cache hash pass was required. Free mode only throughout.
