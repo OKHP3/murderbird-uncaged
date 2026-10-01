@@ -1,0 +1,374 @@
+{
+  "status": "HOLD: final second attempt; new same-owner leaf seams and contact rear-stage crossings remain. No third attempt. Visual acceptance unresolved.",
+  "sourceCheckpoint": "53dfac6aec9a90fe6ef8a483f8b3447efaa67eb9",
+  "finalOutputs": {
+    "native": {
+      "path": "assets/models/whole-character-v38/upper-joint-fit01/attempt02/murderbird-v38-upper-joint-fit01-attempt02.blend",
+      "bytes": 4026513,
+      "sha256": "27bfe4b45a8a5c91f94c0872265273e21aadc39de41f899dfe06d4f214468387"
+    },
+    "rigidGlb": {
+      "path": "assets/models/whole-character-v38/upper-joint-fit01/attempt02/murderbird-v38-upper-joint-fit01-attempt02-rigid.glb",
+      "bytes": 11239964,
+      "sha256": "f25d8af6b2f3717d243351cdcd78be6858aa13e56ae529289dfe9969bd957834"
+    }
+  },
+  "recipes": {
+    "scripts/build-v38-upper-joint-fit01.py": "2b1e119fabe95ee2d1104e2b907be12e488210a16c175608bdad91c5d810f0e2",
+    "scripts/regions/v38-upper-joint-fit01.py": "f20bcd2db81101e0666eec232659f943a27d06bd6b0cc024d2752ef42ece81ec"
+  },
+  "scope": "Same18 declared meshes;1211 other native objects exact; no added/removed/reparented nodes; body33 plates/head identity/materials/era profiles/joints/rest transforms unchanged.",
+  "metadataQualification": [
+    "Raw copied originalObjectsExactExceptDeclaredTorsoMeshes label means exact except18 declared UPPER-JOINT meshes, not torso changes. There are no torso changes.",
+    "Layer order is head lap OUTSIDE neck receiver. Final nominal separation is7.5mm front and9.5mm side; neither proves actual finite fit.",
+    "Parameter rows are construction-grid indices, not a new texture UV/image pipeline.",
+    "Source historical fit annotations remain historical; current contract and finite results govern this proposal."
+  ],
+  "relativeFirst": {
+    "neutral": {
+      "sourcePairs": 20,
+      "candidatePairs": 10,
+      "newPairs": 2,
+      "removedPairs": 12,
+      "inheritedIncreases": []
+    },
+    "capturedContact": {
+      "sourcePairs": 20,
+      "candidatePairs": 14,
+      "newPairs": 4,
+      "removedPairs": 10,
+      "inheritedIncreases": [
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 2",
+          "other": "V23 cervical 4 directional guard 8",
+          "owners": [
+            "head",
+            "cervical-upper"
+          ],
+          "sourceStrictTrianglePairs": 332,
+          "candidateStrictTrianglePairs": 338,
+          "sourceChangedTriangles": 147,
+          "candidateChangedTriangles": 135
+        }
+      ]
+    },
+    "maximumPitch": {
+      "sourcePairs": 20,
+      "candidatePairs": 12,
+      "newPairs": 2,
+      "removedPairs": 10,
+      "inheritedIncreases": [
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 2",
+          "other": "V23 cervical 4 directional guard 8",
+          "owners": [
+            "head",
+            "cervical-upper"
+          ],
+          "sourceStrictTrianglePairs": 332,
+          "candidateStrictTrianglePairs": 338,
+          "sourceChangedTriangles": 147,
+          "candidateChangedTriangles": 135
+        }
+      ]
+    },
+    "makerDip": {
+      "sourcePairs": 23,
+      "candidatePairs": 13,
+      "newPairs": 2,
+      "removedPairs": 12,
+      "inheritedIncreases": []
+    },
+    "attentionYaw": {
+      "sourcePairs": 20,
+      "candidatePairs": 10,
+      "newPairs": 2,
+      "removedPairs": 12,
+      "inheritedIncreases": []
+    }
+  },
+  "relativePinnedNeckBearing02FromExistingScreens": {
+    "neutral": {
+      "sourcePairs": 113,
+      "candidatePairs": 10,
+      "newPairs": [
+        {
+          "changed": "V33 tapered throat cheek plate 0 0 2",
+          "other": "V33 tapered throat cheek plate 1 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 59,
+          "changedTriangles": 26,
+          "otherTriangles": 29
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 0",
+          "other": "V33 tapered throat cheek plate 0 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 64,
+          "changedTriangles": 32,
+          "otherTriangles": 28
+        }
+      ],
+      "inheritedIncreases": []
+    },
+    "capturedContact": {
+      "sourcePairs": 91,
+      "candidatePairs": 14,
+      "newPairs": [
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 2",
+          "other": "V23 cervical 3 directional guard 8",
+          "owners": [
+            "head",
+            "cervical-mid-b"
+          ],
+          "sameOwner": false,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 44,
+          "changedTriangles": 26,
+          "otherTriangles": 17
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 0",
+          "other": "V33 tapered throat cheek plate 0 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 64,
+          "changedTriangles": 32,
+          "otherTriangles": 28
+        },
+        {
+          "changed": "V33 tapered throat cheek plate 1 0 2",
+          "other": "V23 cervical 3 directional guard 7",
+          "owners": [
+            "head",
+            "cervical-mid-b"
+          ],
+          "sameOwner": false,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 50,
+          "changedTriangles": 32,
+          "otherTriangles": 16
+        },
+        {
+          "changed": "V33 tapered throat cheek plate 0 0 2",
+          "other": "V33 tapered throat cheek plate 1 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 59,
+          "changedTriangles": 26,
+          "otherTriangles": 29
+        }
+      ],
+      "inheritedIncreases": [
+        {
+          "changed": "V33 tapered throat cheek plate 1 0 2",
+          "other": "V23 cervical 4 directional guard 7",
+          "sourceStrictTrianglePairs": 260,
+          "candidateStrictTrianglePairs": 320,
+          "sourceChangedTriangles": 117,
+          "candidateChangedTriangles": 131
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 2",
+          "other": "V23 cervical 4 directional guard 8",
+          "sourceStrictTrianglePairs": 254,
+          "candidateStrictTrianglePairs": 338,
+          "sourceChangedTriangles": 113,
+          "candidateChangedTriangles": 135
+        }
+      ]
+    },
+    "maximumPitch": {
+      "sourcePairs": 92,
+      "candidatePairs": 12,
+      "newPairs": [
+        {
+          "changed": "V33 tapered throat cheek plate 0 0 2",
+          "other": "V33 tapered throat cheek plate 1 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 59,
+          "changedTriangles": 26,
+          "otherTriangles": 29
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 0",
+          "other": "V33 tapered throat cheek plate 0 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 64,
+          "changedTriangles": 32,
+          "otherTriangles": 28
+        }
+      ],
+      "inheritedIncreases": [
+        {
+          "changed": "V33 tapered throat cheek plate 1 0 2",
+          "other": "V23 cervical 4 directional guard 7",
+          "sourceStrictTrianglePairs": 260,
+          "candidateStrictTrianglePairs": 320,
+          "sourceChangedTriangles": 117,
+          "candidateChangedTriangles": 131
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 2",
+          "other": "V23 cervical 4 directional guard 8",
+          "sourceStrictTrianglePairs": 254,
+          "candidateStrictTrianglePairs": 338,
+          "sourceChangedTriangles": 113,
+          "candidateChangedTriangles": 135
+        }
+      ]
+    },
+    "makerDip": {
+      "sourcePairs": 116,
+      "candidatePairs": 13,
+      "newPairs": [
+        {
+          "changed": "V33 tapered throat cheek plate 0 0 2",
+          "other": "V33 tapered throat cheek plate 1 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 59,
+          "changedTriangles": 26,
+          "otherTriangles": 29
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 0",
+          "other": "V33 tapered throat cheek plate 0 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 64,
+          "changedTriangles": 32,
+          "otherTriangles": 28
+        }
+      ],
+      "inheritedIncreases": []
+    },
+    "attentionYaw": {
+      "sourcePairs": 113,
+      "candidatePairs": 10,
+      "newPairs": [
+        {
+          "changed": "V33 tapered throat cheek plate 0 0 2",
+          "other": "V33 tapered throat cheek plate 1 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 59,
+          "changedTriangles": 26,
+          "otherTriangles": 29
+        },
+        {
+          "changed": "V33 tapered throat cheek plate -1 0 0",
+          "other": "V33 tapered throat cheek plate 0 0 0",
+          "owners": [
+            "head",
+            "head"
+          ],
+          "sameOwner": true,
+          "eraIntersection": [
+            "builder",
+            "maker",
+            "mechanic"
+          ],
+          "strictTrianglePairs": 64,
+          "changedTriangles": 32,
+          "otherTriangles": 28
+        }
+      ],
+      "inheritedIncreases": []
+    }
+  },
+  "stockQualification": "All18 final stocks positive signed volume, zero nonmanifold edges and zero sampled nonadjacent strict triangle self-crossings. Each support is one connected mesh; finite root/end common volumes do not establish welds, fasteners, normal thickness everywhere, containment or continuous swept clearance.",
+  "finiteRecipeSHA256": "8155278e396d7429f433a2ff53dd52a25abdabf42b53dba3c4de2bfded7cd526",
+  "finiteReportSHA256": "e79b96247e7acd32f9f94707e279aab3c55ba2fcd0297758974869a4e0a84115",
+  "poseQualification": "Body-rest samples: neutral; captured four rest-localX+.10675220489501955/headX-.5090505059024657; maximum four+.1625/head-.5090505059 authored stress; Maker four-.035/root nativeZ-.45 authored dip; attention root nativeZ+.312 authored yaw. Native yawZ corresponds glTF yawY. No full runtime strike/action capture or continuous sweep.",
+  "limits": [
+    "Five static body-rest samples;18 changed upper joint cover/receiver/support meshes against finite wholemesh neighbors via bounds acceleration. No containment/swept/physical fit certificate.",
+    "Sameowner and era-common surfaces included; no exemption for supportseats.",
+    "Actual legextreme not sampled until captured runtime quaternion supplied."
+  ]
+}
