@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MurderBird · head fit review</title>
+  <style>
+    :root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background: #182320; color: #eae6d9; }
+    body { margin: 0; } main { max-width: 1440px; margin: auto; padding: 24px; }
+    h1 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.5rem); line-height: 1.2; }
+    p { max-width: 100ch; } a { color: #e7c58a; }
+    .notice { padding: 14px 18px; border-left: 4px solid #cba36a; background: #30382c; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; padding: 16px; background: #26332e; border: 1px solid #607065; }
+    label { display: grid; gap: 4px; font-size: .85rem; }
+    select, button { font: inherit; color: inherit; background: #17211e; border: 1px solid #89988c; border-radius: 4px; padding: 9px 12px; }
+    button { cursor: pointer; } button:disabled { opacity: .45; cursor: default; }
+    :focus-visible { outline: 3px solid #e7c58a; outline-offset: 3px; }
+    .status { margin: 12px 0; padding: 12px 16px; background: #26332e; }
+    #model-status { font-size: .85rem; overflow-wrap: anywhere; }
+    iframe { display: block; width: 100%; height: 1220px; border: 1px solid #607065; background: #232b29; }
+    .compare { display: grid; grid-template-columns: minmax(220px, .45fr) minmax(0, 1fr); gap: 12px; align-items: start; }
+    figure { margin: 0; } figure img { width: 100%; height: 560px; object-fit: cover; object-position: 72% center; display: block; } figcaption { font-size: .85rem; padding: 8px 0; color: #bac5ba; }
+    @media (max-width: 860px) { .compare { grid-template-columns: 1fr; } figure { max-width: 500px; } }
+    .head-crop {height:350px;overflow:hidden} .head-crop img {width:200%;height:auto;max-width:none;margin-left:-100%;object-fit:initial}
+    .footnote { font-size: .85rem; color: #bac5ba; }
+    @media (max-width: 680px) { main { padding: 14px; } .controls label { flex: 1 1 44%; } iframe { height: 1520px; } }
+  </style>
+</head>
+<body><main>
+  <h1>MurderBird · head fit review</h1>
+  <p class="notice"><strong>Head fit · visual and assembly hold.</strong> Both studies repair the detected crown folds. Study01 retains jaw interference; Study02 moves it into the optic cup. Neither is adopted. The broad rear shell and hollow cheek reveal still need work. Production remains V37; this is a local proposal.</p>
+  <div class="compare"><figure><div id="reference-window"><img id="reference-image" src="../../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png" alt="Selected MurderBird whole-body reference"></div><figcaption id="reference-caption">Controlling whole-body illustration, cropped to the character for display. Camera and light differ from the model; no exact perspective dimensions are claimed.</figcaption></figure><iframe id="exhibit" title="Actual local MurderBird exhibit for checkpoint review" src="about:blank"></iframe></div>
+  <div class="controls" role="group" aria-label="Checkpoint review controls">
+    <label>Assembly<select id="assembly"><option value="head-fit01" selected>Head fit 01 · hold</option><option value="head-fit02">Head fit 02 · cup regression</option><option value="cheek-nape02">Previous cheek/nape · held</option></select></label>
+    <label>Display<select id="display"><option value="webgl">Request actual WebGL</option><option value="illustrated">Current illustrated fallback</option></select></label>
+    <label>Era<select id="era"><option value="maker">I · Maker</option><option value="mechanic">II · Mechanic</option><option value="builder" selected>III · Advanced</option></select></label>
+    <label>Reference<select id="reference"><option value="era">Selected reference for this era</option><option value="whole" selected>Whole bird · candidate03</option><option value="head">Head only · owner July selection</option></select></label>
+    <label>Camera<select id="camera"><option value="wholeBirdTight" selected>Whole bird · close three-quarter</option><option value="threeQuarter">Whole bird · three-quarter right</option><option value="threeQuarterLeft">Whole bird · three-quarter left</option><option value="front">Front</option><option value="rear">Rear</option><option value="left">Left profile</option><option value="right">Right profile</option><option value="elevated">Elevated</option><option value="low">Low</option><option value="head">Head</option><option value="headOblique">Head · oblique</option><option value="headProfile">Head · profile</option><option value="neck">Neck</option><option value="breast">Breast</option><option value="leftShoulder">Left shoulder</option><option value="rightShoulder">Right shoulder</option><option value="feet">Feet</option></select></label>
+    <label>Light<select id="light"><option value="neutral">Neutral review light</option><option value="exhibit">Exhibit light</option></select></label>
+    <button id="pause" type="button" disabled>Pause encounter</button>
+    <button id="step" type="button" disabled>Advance 1 frame</button>
+    <button id="second" type="button" disabled>Advance 1 second</button>
+    <button id="demonstrate-thrust" type="button" disabled>Shield thrust · held preview</button>
+    <button id="demonstrate-jump" type="button" disabled>Power jump · held preview</button>
+    <button id="maker-jaw-open" type="button" disabled>Maker jaw · open</button>
+    <button id="maker-jaw-close" type="button" disabled>Maker jaw · return</button>
+    <button id="maker-neck-turn" type="button" disabled>Maker neck · turn</button>
+    <button id="maker-neck-return" type="button" disabled>Maker neck · return</button>
+    <button id="maker-leg-up" type="button" disabled>Maker leg · lift</button>
+    <button id="maker-leg-return" type="button" disabled>Maker leg · return</button>
+    <button id="maker-wing-up" type="button" disabled>Maker shield · raise</button>
+    <button id="maker-wing-return" type="button" disabled>Maker shield · return</button>
+    <button id="maker-tail-up" type="button" disabled>Maker rear · lift</button>
+    <button id="maker-tail-return" type="button" disabled>Maker rear · return</button>
+    <button id="mechanic-engage" type="button" disabled>Mechanic · engage</button>
+    <button id="mechanic-stop" type="button" disabled>Mechanic · stop after cycle</button>
+    <button id="demonstrate-strike" type="button" disabled>Strike · hold contact</button>
+    <button id="restore-assembly" type="button" disabled>Reassemble &amp; return</button>
+  </div>
+  <div class="status" role="status" aria-live="polite"><strong id="render-status">Loading local exhibit…</strong><div id="model-status"></div></div>
+  <p id="message">Controls connect to the development preview when its assembly is ready.</p>
+  <p class="footnote">The fallback contains current fixed V37 captures and a separate assembly schematic. Candidate fallback captures have not been authored; the fallback cannot establish a matching candidate finish. Switching assemblies reloads the encounter; camera and light presets are reapplied, but an identical motion phase is not claimed.</p>
+  <p><a id="direct" href="../../../../">Open selected exhibit directly</a> · <a href="browser-evidence.json">Checkpoint evidence</a></p>
+  <details><summary>Controlling references and neutral geometry views</summary>
+    <p>The source images are perspective illustrations with different lighting. They control visible identity and era treatment, without certifying dimensions or newly reconstructed parts. The July selection controls the head only.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a href="../../../img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png">Maker reference</a>
+      <a href="../../../img/library/murderbird-unified-mechanic-candidate-2026-09-06.png">Mechanic reference</a>
+      <a href="../../../img/library/murderbird-unified-master-candidate-03-2026-09-06.png">Whole-bird identity reference</a>
+      <a href="../../../img/library/murderbird-unified-heart-candidate-2026-09-06.png">Advanced inspection reference</a>
+      <a href="../../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png">July head-only reference</a>
+
+      <a href="../head-fit02/candidate-head-three-quarter.png">Head-fit02 · head</a>
+      <a href="../head-fit02/candidate-head-profile.png">Head-fit02 · profile</a>
+      <a href="../head-fit02/candidate-full-bird-three-quarter.png">Head-fit02 · whole bird</a>
+      <a href="../cheek-nape02/candidate-head-three-quarter.png">Previous held cheek/nape · head</a>
+      <a href="../cheek-nape02/candidate-head-profile.png">Previous held cheek/nape · profile</a>
+      <a href="../cheek-nape02/candidate-full-bird-three-quarter.png">Previous held cheek/nape · whole bird</a>
+    </div>
+  </details>
+  <details><summary>Runtime observations for this preview</summary><pre id="observations" style="white-space:pre-wrap;overflow-wrap:anywhere">Preparing observations…</pre></details>
+
+  <p class="footnote">This page is an audit artifact served by the local development server. It is outside the production build entry points. Review styling hides surrounding story, construction-detail and audio panels inside the frame; actual exhibit controls and scene remain active. These controls use existing development hooks and visible exhibit buttons; deployment and owner acceptance remain separate checks.</p>
+  <script type="module">
+    const $ = id => document.getElementById(id);
+    const frame = $('exhibit');
+    const base = new URL('../../../../', location.href);
+    let initializedDocument = null, expectedUrl = '', applyView = true, requestedEra = '', lastStatus = '';
+    function access() {
+      try { return { api: frame.contentWindow?.__uncaged, doc: frame.contentDocument }; }
+      catch { return {}; }
+    }
+    function message(text) { $('message').textContent = text; }
+    function load() {
+      const url = new URL(base);
+      url.searchParams.set('review-candidate', $('assembly').value);
+      url.searchParams.set('review-seed', '41');
+      if ($('display').value === 'illustrated') url.searchParams.set('view', 'illustrated');
+      initializedDocument = null; expectedUrl = url.href; requestedEra = ''; applyView = true; lastStatus = '';
+      for (const id of ['maker-leg-up','maker-leg-return','maker-wing-up','maker-wing-return','maker-tail-up','maker-tail-return','mechanic-engage','mechanic-stop','pause', 'step', 'second', 'demonstrate-thrust', 'demonstrate-jump', 'restore-assembly', 'maker-jaw-open', 'maker-jaw-close', 'maker-neck-turn', 'maker-neck-return', 'demonstrate-strike', 'era', 'camera', 'light']) $(id).disabled = true;
+      $('render-status').textContent = 'Loading local exhibit…'; $('model-status').textContent = '';
+      $('direct').href = url.href; frame.src = url.href;
+      message('Preparing the selected assembly and display.');
+    }
+    function refresh() {
+      const { api, doc } = access();
+      // Ignore the previous document while a new iframe navigation is pending.
+      if (!doc || doc.URL !== expectedUrl || doc.readyState !== 'complete') return;
+      if (!api) {
+        const label = doc?.getElementById('render-label')?.textContent;
+        if (label && !label.includes('LOADING')) {
+          $('render-status').textContent = label;
+          message('Development controls are unavailable here. Use the visible controls inside the exhibit; open this review page on the local development server for camera and frame stepping.');
+        }
+        return;
+      }
+      const metrics = api.metrics(), snapshot = api.getSnapshot();
+      if (!metrics) return;
+      $('observations').textContent = JSON.stringify({
+        model:metrics.modelUrl, kind:metrics.kind, era:metrics.era, frameDocumentHidden:doc.hidden,
+        reference:{mode:$('reference').value, source:$('reference-image').getAttribute('src')},
+        state:snapshot.state, paused:snapshot.paused, pendingEra:snapshot.pendingEra, mechanisms:metrics.mechanisms,
+        powerMove:snapshot.powerMove, powerMovePending:snapshot.powerMovePending, motion:metrics.motion ? {cervical:metrics.motion.cervical, contact:metrics.motion.contact} : null,
+        frameCount:metrics.frameCount, open:metrics.open, separation:metrics.separation,
+        camera:metrics.review, performance:metrics.performance, finishes:metrics.finishes,
+        wingAngles:metrics.wingAngles, contactTip:metrics.tip, contactPlane:metrics.contactPlane,
+      }, null, 2);
+      if (initializedDocument !== doc) {
+        initializedDocument = doc;
+        // Review-only presentation: same actual exhibit, fewer surrounding panels.
+        const reviewStyle = doc.createElement('style');
+        reviewStyle.textContent = '.topbar,.exhibit-heading,.timeline,footer,.theme-player,.viewer-note,.inspector,.skip-link{display:none!important}.site-shell{max-width:none;margin:0}.exhibit{padding:0!important}.exhibit-grid{grid-template-columns:1fr!important;gap:0}.viewer{height:640px!important;border:0}.viewer-column{width:100%}body{margin:0;color:#1f231c;background:#dedacb}';
+        doc.head.appendChild(reviewStyle);
+        const labels = doc.getElementById('part-labels');
+        if (labels?.checked) labels.click();
+        if (!snapshot.paused) doc.getElementById('pause')?.click();
+      }
+      const desired = $('era').value;
+      if (requestedEra !== desired) { requestedEra = desired; applyView = true; api.era(desired); }
+      const settled = metrics.era === desired && !snapshot.pendingEra;
+      const webgl = metrics.kind === 'webgl';
+      if (applyView && settled) {
+        if (webgl) { api.reviewCamera($('camera').value); api.reviewLighting($('light').value); }
+        // Redraw the actual paused scene after camera/light changes, including background tabs.
+        if (webgl && api.getSnapshot().paused) api.step(1 / 60);
+        applyView = false;
+        return refresh();
+      }
+      $('era').disabled = false;
+      $('camera').disabled = $('light').disabled = !webgl || !settled;
+      $('pause').disabled = !settled;
+      $('restore-assembly').disabled = !settled;
+      for (const id of ['maker-jaw-open','maker-jaw-close','maker-neck-turn','maker-neck-return','maker-leg-up','maker-leg-return','maker-wing-up','maker-wing-return','maker-tail-up','maker-tail-return']) $(id).disabled = !settled || !webgl || metrics.era !== 'maker' || !snapshot.paused || metrics.open > 0 || metrics.separation > 0;
+      for (const id of ['mechanic-engage','mechanic-stop']) $(id).disabled = !settled || !webgl || metrics.era !== 'mechanic' || !snapshot.paused || metrics.open > 0 || metrics.separation > 0;
+      $('demonstrate-strike').disabled = !settled || !webgl || metrics.era !== 'builder' || !snapshot.paused || metrics.open > 0 || metrics.separation > 0;
+      $('pause').textContent = snapshot.paused ? 'Resume encounter' : 'Pause encounter';
+      $('pause').setAttribute('aria-pressed', String(snapshot.paused));
+      $('step').disabled = $('second').disabled = !webgl || !settled || !snapshot.paused;
+      for (const id of ['demonstrate-thrust', 'demonstrate-jump']) $(id).disabled = !webgl || !settled || !snapshot.paused || metrics.era !== 'builder' || metrics.open > 0 || metrics.separation > 0;
+      const status = `${metrics.kind}|${metrics.era}|${snapshot.pendingEra}|${metrics.modelUrl || ''}|${metrics.review?.lighting}|${JSON.stringify(metrics.finishes)}`;
+      if (status !== lastStatus) {
+        lastStatus = status;
+        $('render-status').textContent = webgl ? `Actual WebGL · ${metrics.era}${snapshot.pendingEra ? ' · changing era…' : ''}` : 'Illustrated fallback · fixed V37 captures';
+        $('model-status').textContent = webgl ? `Loaded model: ${metrics.modelUrl} · Era: ${metrics.era} · Light: ${metrics.review?.lighting || 'unknown'} · Kind: ${metrics.kind}${metrics.finishes ? ` · Profiles: ${metrics.finishes.appliedMaterials} applied / ${metrics.finishes.taggedMaterials} tagged / ${metrics.finishes.ineligibleMaterials} ineligible / ${metrics.finishes.invalidMaterials} invalid` : ' · Finish profile summary unavailable'}` : 'Unchanged V37 fallback. Candidate fallback not authored. Kind: illustrated.';
+        const expectedModel = $('assembly').value;
+        if (webgl && expectedModel && !String(metrics.modelUrl).includes(expectedModel)) message('Candidate was requested, but the loaded model is still the baseline. Candidate runtime wiring is not active in this preview.');
+        else message(webgl ? 'Inspect the real scene. Pause holds the encounter while orbit controls remain available.' : 'Current fallback only. Camera, lighting and motion comparisons require WebGL.');
+      }
+    }
+    for (const id of ['assembly', 'display']) $(id).addEventListener('change', load);
+    function updateReference() {
+      const mode=$('reference').value,head=mode==='head',era=mode==='era'?$('era').value:'builder';
+      const files={maker:'murderbird-unified-maker-clean-candidate-2026-09-06.png',mechanic:'murderbird-unified-mechanic-candidate-2026-09-06.png',builder:'murderbird-unified-master-candidate-03-2026-09-06.png'};
+      $('reference-window').className=head?'head-crop':'';
+      $('reference-image').src=head?'../../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png':`../../../img/library/${files[era]}`;
+      $('reference-image').style.objectPosition=era==='mechanic'?'54% center':'72% center';
+      $('reference-image').alt=head?'Owner-selected July head reference':`Selected ${era} MurderBird reference`;
+      $('reference-caption').textContent=head?'Owner-selected July reference, cropped to its head for display. Its body, perch and long wing train are excluded from the selection. Perspective dimensions are not measured.':`Selected ${era} illustration, cropped to the bird for display. Camera and light differ from the model; no exact perspective dimensions are claimed.`;
+    }
+    $('reference').addEventListener('change',()=>{updateReference();refresh();});
+    $('era').addEventListener('change',()=>{updateReference();refresh();});
+    for (const id of ['camera', 'light']) $(id).addEventListener('change', () => { applyView = true; refresh(); });
+    $('restore-assembly').addEventListener('click', () => { access().doc?.getElementById('reassemble')?.click(); refresh(); });
+    $('pause').addEventListener('click', () => { access().doc?.getElementById('pause')?.click(); refresh(); });
+    function step(seconds) {
+      const { api, doc } = access();
+      if (!api || !api.getSnapshot().paused || api.getSnapshot().pendingEra || api.metrics()?.kind !== 'webgl') return;
+      const pause = doc.getElementById('pause');
+      if (!pause) return;
+      // Synchronous unpause/step/pause prevents an intervening browser frame.
+      // Advance the existing application; never synthesize a replacement pose.
+      pause.click();
+      try { api.step(seconds); }
+      finally { if (!api.getSnapshot().paused) pause.click(); }
+      refresh();
+      message(`Advanced ${seconds === 1 ? 'one second' : 'one simulation frame'} and paused. Autonomous browser frames are held by the exhibit’s pause control.`);
+    }
+    $('step').addEventListener('click', () => step(1 / 60));
+    $('second').addEventListener('click', () => step(1));
+    function actionPreview(id, seconds) {
+      const { api, doc } = access();
+      if (!api || !api.getSnapshot().paused || api.metrics()?.kind !== 'webgl') return;
+      const pause = doc.getElementById('pause'), action = doc.getElementById(id);
+      if (!pause || !action) return;
+      pause.click();
+      try {
+        if (action.disabled) { message('The exhibit cannot start that action in its current state. Reassemble or let it recover first.'); return; }
+        action.click();
+        // Pending moves first settle the inherited encounter. Pausing early cancels them.
+        for (let i = 0; i < 180 && !api.getSnapshot().powerMove; i++) api.step(1 / 60);
+        if (api.getSnapshot().powerMove) api.step(seconds);
+      } finally { if (!api.getSnapshot().paused) pause.click(); }
+      refresh();
+      const move = api.getSnapshot().powerMove;
+      message(move ? `Held the actual ${move.kind} at ${move.stage}, phase ${move.phase.toFixed(3)}. Advance frames to inspect recovery.` : `Action requested; observed ${api.getSnapshot().state}. No active power pose is claimed.`);
+    }
+    function makerPreview(articulation,value) {
+      const {api,doc}=access(); if (!api || !api.getSnapshot().paused || api.metrics()?.era !== 'maker') return;
+      const pause=doc.getElementById('pause'),control=doc.getElementById(`lever-${articulation}`);
+      pause.click(); try { control.value=String(value); control.dispatchEvent(new Event('input',{bubbles:true})); api.step(1); }
+      finally { if (!api.getSnapshot().paused) pause.click(); }
+      refresh(); message(`Actual Maker ${articulation} control set to ${value}%.`);
+    }
+    $('maker-jaw-open').addEventListener('click',()=>makerPreview('jaw',100));
+    $('maker-jaw-close').addEventListener('click',()=>makerPreview('jaw',0));
+    $('maker-neck-turn').addEventListener('click',()=>makerPreview('neck',100));
+    $('maker-neck-return').addEventListener('click',()=>makerPreview('neck',0));
+    for (const [id, articulation, value] of [['maker-leg-up','leg',100],['maker-leg-return','leg',0],['maker-wing-up','wing',100],['maker-wing-return','wing',0],['maker-tail-up','tail',100],['maker-tail-return','tail',0]]) $(id).addEventListener('click',()=>makerPreview(articulation,value));
+    for (const [id, controlId] of [['mechanic-engage','run-mechanism'],['mechanic-stop','stop-mechanism']]) $(id).addEventListener('click',()=>{
+      const {api,doc}=access(); if(!api || !api.getSnapshot().paused || api.metrics()?.era !== 'mechanic') return;
+      const pause=doc.getElementById('pause'),control=doc.getElementById(controlId);
+      pause.click();try{if(!control.disabled){control.click();api.step(1/60);}}finally{if(!api.getSnapshot().paused)pause.click();}
+      refresh();message(`Requested actual ${controlId}; advance frames to inspect its sequence.`);
+    });
+    $('demonstrate-strike').addEventListener('click',()=>{
+      const {api,doc}=access(); if (!api || !api.getSnapshot().paused || api.metrics()?.era !== 'builder') return;
+      const pause=doc.getElementById('pause'),reach=doc.getElementById('reach');
+      pause.click(); try {
+        if (reach.disabled) {message('Encounter must recover before another reach.');return;}
+        reach.click();
+        // Bounded review of the real encounter; never assign a pose or state.
+        for(let frame=0;frame<600;frame++) {
+          api.step(1/60);
+          const current=api.getSnapshot().state;
+          if(current==='contact'||current==='recover'||current==='agitated')break;
+        }
+      } finally {if(!api.getSnapshot().paused)pause.click();}
+      applyView = true;
+      refresh();message(`Requested the actual encounter and advanced at most 600 frames; observed ${api.getSnapshot().state}. Contact is confirmed only when the recorded state and motion feedback say so. Advance seconds to inspect recovery.`);
+    });
+    $('demonstrate-thrust').addEventListener('click', () => actionPreview('shield-thrust', .4));
+    $('demonstrate-jump').addEventListener('click', () => actionPreview('power-jump', .5));
+    frame.addEventListener('load', refresh);
+    setInterval(() => { if (!document.hidden) refresh(); }, 750);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
+    updateReference();
+    load();
+  </script>
+</main></body></html>
