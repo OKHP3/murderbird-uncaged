@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'orbital-clearance02': '/assets/models/whole-character-v38/orbital-clearance02/murderbird-v38-orbital-clearance02-rigid.glb',
+  'orbital-clearance01': '/assets/models/whole-character-v38/orbital-clearance01/murderbird-v38-orbital-clearance01-rigid.glb',
   'head-fit02': '/assets/models/whole-character-v38/head-fit02/murderbird-v38-head-fit02-rigid.glb',
   'head-fit01': '/assets/models/whole-character-v38/head-fit01/murderbird-v38-head-fit01-rigid.glb',
   'cheek-nape02': '/assets/models/whole-character-v38/cheek-nape02/murderbird-v38-cheek-nape02-rigid.glb',

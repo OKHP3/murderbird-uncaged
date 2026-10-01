@@ -1,0 +1,33 @@
+{
+  "commands": [
+    {
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.76,
+      "log": "npm-ci.txt"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.16,
+      "log": "npm-build.txt"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-publication.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.2,
+      "log": "publication.txt"
+    }
+  ],
+  "scope": "Single local integration pass. Not CI, deployment or artistic acceptance."
+}
