@@ -1,0 +1,13 @@
+# Jaw-stock01 bounded handoff
+
+**One jaw stock repair; scoped samples pass.** The deeper bill/open crescent proposal is preserved. Actual final bill-gape jaw contained66 strict self pairs:63inner/outer and3inner/rimwall, all rows45–50. Complete triangle indices/layer/row/native-center witnesses are in `inspect-self.json`. Terminal tangential normal inset backtracked into earlier stock; central cap49 also flipped inset orientation.
+
+Rebuilt only `V32 formed mandibular bowl` inner freewall, with globally ordered native+Z3.5mm extrusion and actual root-vector blend15–22. Every932 exterior local coordinate is byte-exact, as are648 paired root vertices through14 and Maker socket283. Original rim/cap connectivity remains; closed manifold positive volume0.00017421556394187513m³, one connected component.3.5mm is vertical separation, not uniform normal thickness. No pivot/node/owner/material/contact-marker change. Upper bill/crown/optic/neck/body exact.
+
+Native `assets/models/whole-character-v38/jaw-stock01/murderbird-v38-jaw-stock01.blend`:507a58f5670677276f8f06d3769deb9eb6cbd178a20f20a2993986d02374f63a. GLB `murderbird-v38-jaw-stock01-rigid.glb`:0099e5026750db916bb05ac1c66f3fc51a169d941448d6b834d6058e33d0dc04. Frozen source is bill-gape01/attempt02 native7665bf8a14e6a2b95cd311d8c1d4b8938d08a1a730a50a91265dbfd83f01a784.
+
+One changed-jaw finite screen: rest and Maker jaw localX+.32 at body rest. Self66→0. Each pose nearby strict crossing identities3→3 with all counts exact: temporal receiving walls±1 and head-owned stage5 neck shell. No new/increased crossing. These inherited contacts remain unresolved; static strict triangle samples are not full physical/containment/coplanar/swept clearance, strength or likeness certification. No separate final strike packet reused.
+
+Matched candidate headprofile/head3Q/whole3Q use exact bill-gape02 cameras; compare prior frozen images directly. `candidate-jaw-cutaway.png` isolates right stock after export, without modifying saved geometry. Additional source/candidate rest/Maker endpoint images from same narrow screen.
+
+Ready audit: `scope.json`, `contract.json`, immutable `receipt.json`, `qualified-receipt.json`, `finite-screen.py/json/log`, `inspect-self.py/json/log`, section diagnostic and executed builder/region. Canonical new builder/region paths reproduce from pinned source and refuse overwrites. Initial rootlookup bug failed before save; erroneous script/log retained `pre-save-rootlookup-*`. It was repaired without a shape redesign. No second attempt; no app/build/test/push or publication by worker. Root owns independent integration/runtime. Owner likeness approval and pending neck outline remain separate.

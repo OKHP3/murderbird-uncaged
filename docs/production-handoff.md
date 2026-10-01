@@ -1,4 +1,6 @@
-> Latest development checkpoint: [bill/gape proposal](handoffs/bill-gape-integration-2026-10-01.md). Visible head gain; final FIT HOLD for jaw self-crossings. Neither proposal adopted; V37 production unchanged.
+> Latest development checkpoint: [jaw stock repair](handoffs/jaw-stock-integration-2026-10-01.md). Introduced jaw self-crossings cleared with exact exterior; inherited contacts and likeness remain unresolved. V37 production unchanged.
+
+> Previous development checkpoint: [bill/gape proposal](handoffs/bill-gape-integration-2026-10-01.md). Visible head gain; final FIT HOLD for jaw self-crossings. Neither proposal adopted; V37 production unchanged.
 
 # MurderBird: Uncaged — local production handoff
 
