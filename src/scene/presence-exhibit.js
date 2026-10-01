@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'torso-support01': '/assets/models/whole-character-v38/torso-support01/murderbird-v38-torso-support01-rigid.glb',
+  'torso-support02': '/assets/models/whole-character-v38/torso-support01/attempt02/murderbird-v38-torso-support01-attempt02-rigid.glb',
   'torso-coherent02': '/assets/models/whole-character-v38/torso-coherent01/attempt02/murderbird-v38-torso-coherent01-attempt02-rigid.glb',
   'torso-coherent01': '/assets/models/whole-character-v38/torso-coherent01/murderbird-v38-torso-coherent01-rigid.glb',
   'breast-layout02': '/assets/models/whole-character-v38/breast-layout01/smooth02/murderbird-v38-breast-layout01-smooth02-rigid.glb',

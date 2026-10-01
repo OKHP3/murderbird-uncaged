@@ -4,9 +4,9 @@
 
 The current production selection is V37, approved by the owner for deployment with final likeness still unresolved. The dated V9–V18 default/production statements below are historical, not current selectors. This note does not re-verify live deployment.
 
-The most recent completed review checkpoint is [`e747695d60c2655a99a84e8e25b34e111041008c`](https://github.com/OKHP3/murderbird-uncaged/commit/e747695d60c2655a99a84e8e25b34e111041008c), branch `codex/v38-breast-layout-integration-01`; see [its concise handoff](handoffs/breast-layout-integration-2026-10-01.md). Both plate proposals remain held. GitHub, two Codex workers and Replit's isolated bare repository acknowledged that exact revision; Replit preview parity and Claude receipt are not established.
+The latest support reconstruction is on `codex/v38-torso-support-integration-01`; see [its concise handoff](handoffs/torso-support-integration-2026-10-01.md). The first support proposal retains the fuller torso but remains HOLD for moving-part clashes and neck-cover separation. The second subtractive attempt is rejected for lost attachment areas and damaged support stock. No held geometry is selected for production.
 
-The [coherent torso checkpoint](handoffs/torso-coherent-integration-2026-10-01.md), branch `codex/v38-torso-coherent-integration-01`, removes the ledge and pinched waist in its first proposal. That is the stronger visual direction, but fit remains held. The second interface attempt is rejected for a detached shell appearance. Its containing commit identifies the frozen review; next work must reconcile supporting members with the fuller continuous shell. Source references and earlier studies remain preserved. No held geometry is selected for production.
+The parent [coherent torso checkpoint](handoffs/torso-coherent-integration-2026-10-01.md), `e1265c87e4e5e87ba0289b1990f4f08f58de4c53`, was acknowledged by GitHub, Codex workers and Replit's isolated bare repository. Replit preview parity and Claude receipt remain unconfirmed. Historical studies and source references remain preserved.
 
 Follow [incremental delivery](incremental-delivery.md): short visible checkpoints, exact GitHub receipts, and Replit Free mode only. If Replit hides a response card, ask it to repeat the actual question in ordinary chat. Idle status alone is not an unanswered question.
 
