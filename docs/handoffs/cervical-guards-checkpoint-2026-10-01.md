@@ -1,0 +1,31 @@
+# Cervical guard checkpoint — 2026-10-01
+
+Both saved versions are VISUAL HOLD. Final02 is also FIT / SELF HOLD; neither is adopted. Bill-relationship02 remains the cumulative source. Production V37 and runtime are untouched. Two shapes complete; no03.
+
+## Actual inputs and reference scope
+
+Fetched/read root checkpoint `codex/v38-bill-relationship-integration-01` at `60033fb4c9ef3a2eb0ba4a13abfcba93403b7a2b`. Input is actual bill-relationship02 native `e5e7feb29582b6f3f85d0b767038220b7b29e332729b178938e4292ee5b2d329`, GLB `566eff76b7d354fc82b962a10cb344215754442b5a8316d12c3834e9c88dd7af`, not rejected occipital studies. Actual July head-only/immediate-throat and Master03 whole-bird binaries were reopened; Maker-clean is the scoped corroborating whole-bird reference. Geometry dimensions are authored proposals, not measurements recovered from art.
+
+## Versions and construction
+
+01 changed all40 `V23 cervical {1..4} directional guard {1..10}`. It narrowed/diagonally staggered the free surfaces with explicit finite lateral stock, retaining rows18–20. Root/reviewer rejected the narrow pennants, open slots and unchanged upper collar. Its pair/self diagnostics are NOT RUN after visual rejection; no clearance claim.
+
+02 starts again from the original bill-relationship02. It restores all30 lower neck guards EXACT. Changed28: upper10 `V23 cervical 4 directional guard {1..10}` plus18 `V33 tapered throat cheek plate {−1,0,1} {0,1} {0,1,2}`. Exact names, per-owner/era/material map and before/after signatures are in receipt.json. Inventory identified these head-owned throat plates as the actual broad collar (source Z1.448–1.632, lateral extent about0.145m); the fixed occipital closure is higher and remains exact. 02 shortened/drew their free ends inward and kept fuller upper guard widths. Root/reviewer still rejected flared/jagged upper edges, gaps and lanky transition; no clear whole-bird gain.
+
+Upper guards remain cervical-upper-owned; their source outer/inner receiving rows18–20 are exact, including prior guard4/10 rows19/20 columns6–14 +pairedinner repair. The18 throat plates stay head-owned; rows29–32 on both skins and all source paired-stock vectors are exact. Source load links/races/pins, cranial load bows, four joint pivots/rest matrices, bill/contact, jaw/socket, optics, independent cover, body/wing asymmetry and all material definitions/profiles stay exact. No addition/removal/reparent or powered early-era hardware. This confirms retained geometry/ownership, not an accepted plate-to-frame support footprint: actual full receiving seats remain unknown/unresolved. All plates are rigid/passive/all-era. No rigid head-neck bridge or flexible metal construction is claimed.
+
+## Bounded evidence and failure
+
+02 uses58 WATCH meshes (40 guards+18 throat plates), only28 actually changed, against the entire Builder-eligible finite model pool including same-owner pairs. Baseline/candidate use identical original seven native four-joint poses plus eighth actual browser-contact sample. Strict edge-through-face predicate remains1e−7m plane /1e−6 edge+barycentric margin; unchanged reproducible predicate and first witness per unordered pair are preserved. All eight samples report22→31 pairs,10 introduced/1 removed. Introduced: six throat plates vs same-side actual V31 passive cranial load bow, plus four adjacent throat plate pairs. These are unresolved finite crossings, not automatically acceptable insertion/contact. The actual browser contact sample is totalpitch0.48122177124, head−0.56326345756, jaw0.02539279294; maxpitch0.65/head−0.731 is also sampled, with retained fixed-length rest translations. No continuous sweep, containment or maximum penetration result.
+
+Evaluated same28 self-screen reports source722→candidate794 strict nonadjacent triangle pairs. Source lower throat plate ±1/0/1 already has361 each; candidate273 each, but ±1/0/0 gains1 each and ±1/0/2 gains123 each. All10 upper guards have0 source/candidate self witnesses. Reduction in one inherited fold does not excuse new folds. Constant/blended3.5mm upperguard stock and preserved throat pair vectors are construction descriptions; no all-surface projected stock, fabricability or engineering PASS. The source throat topology/stock is not approved merely because preserved.
+
+Native snapshot/save-reopen and export identity/parents/source12material profiles pass. 02 GLTFLoader applies all three era profiles with0 invalid materials (9/10/12 eligible). 01 has its native/export checks in the builder receipt; no separate loader rerun. 01 preserves1181 exclusions;02 preserves1193 exclusions, exact exclusion digests in receipts. Three matching1200px neutral images per version: head profile/3quarter and whole-bird3quarter; baseline links reuse exact source image bytes. Worker did no app/runtime/build/publication checks; root owns those.
+
+## Provenance, reconstruction and next method
+
+First01 generation stopped at a syntax error before saving any model. Its failed builder/region/log are preserved; parser spacing was corrected before the successful first shape. Each successful native/GLB and executed recipe is write-once. Current top-level builder reproduces02 from the pinned source; archived executed01 copies reproduce01 when restored to normal `scripts/` and `scripts/regions/` locations in an isolated reconstruction root with the pinned input. Neither current nor archived builders overwrite saved output.
+
+This turn ruled out free-edge/root-band warping as a solution. Next method must reconstruct the actual18 collar plates and deliberate compatible finite supporting connections on the true load frame, with directional throat/nape overlap; source root bands are historical geometry, not owner-approved attachment design. Preserve confirmed articulation/control frames, but reconcile unapproved plate seats deliberately rather than treating arbitrary root strips as sacred. Rebuild folded topology instead of morphing retained paired grids. No next shape is performed here.
+
+Both receipts, executed scripts, failure logs, exact models/images and diagnostics are enumerated in `assets/audit/whole-character-v38/cervical-guards02/union-manifest.json`. No private files or historical outputs are included/altered.

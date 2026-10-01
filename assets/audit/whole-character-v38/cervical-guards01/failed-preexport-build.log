@@ -1,0 +1,17 @@
+00:00.610  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/bill-relationship02/murderbird-v38-bill-relationship02.blend"
+00:00.719  blend            | Read blend: "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/assets/models/whole-character-v38/bill-relationship02/murderbird-v38-bill-relationship02.blend"
+/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-cervical-guards.py:39: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  'nodes':[(n.name,n.type,[(i.name,repr(i.default_value)) for i in n.inputs if hasattr(i,'default_value')]) for n in m.node_tree.nodes] if m.use_nodes else []} for m in bpy.data.materials}
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/build-v38-cervical-guards.py", line 94, in <module>
+    module=ROOT/'scripts/regions/v38-cervical-guards.py';regional=runpy.run_path(str(module));contract=regional['apply']();after=snapshot()
+                                                                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 259, in _get_code_from_file
+  File "/Users/okh/.codex/worktrees/v38-cervical-envelope/murderbird-uncaged/scripts/regions/v38-cervical-guards.py", line 18
+    outer=[];target=(1.501 if guard in[1,2,3,4,5]else1.507 if guard in[7,8,10]else1.486);top=sum(p.z for p in source[:19])/19
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: expected 'else' after 'if' expression
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
