@@ -4,9 +4,9 @@
 
 The current production selection is V37, approved by the owner for deployment with final likeness still unresolved. The dated V9–V18 default/production statements below are historical, not current selectors. This note does not re-verify live deployment.
 
-The latest support reconstruction is on `codex/v38-torso-support-integration-01`; see [its concise handoff](handoffs/torso-support-integration-2026-10-01.md). The first support proposal retains the fuller torso but remains HOLD for moving-part clashes and neck-cover separation. The second subtractive attempt is rejected for lost attachment areas and damaged support stock. No held geometry is selected for production.
+The current [articulated neck review](handoffs/neck-bearing-integration-2026-10-01.md) is on `codex/v38-neck-bearing-integration-01`. Its final head/neck overlap visibly closes most of the front gap during strike, but introduces upper-joint intersections and remains fit HOLD. The fuller torso and all joint locations remain intact. No held geometry is selected for production.
 
-The parent [coherent torso checkpoint](handoffs/torso-coherent-integration-2026-10-01.md), `e1265c87e4e5e87ba0289b1990f4f08f58de4c53`, was acknowledged by GitHub, Codex workers and Replit's isolated bare repository. Replit preview parity and Claude receipt remain unconfirmed. Historical studies and source references remain preserved.
+Parent checkpoint `88ef9a8c574dcdc7a95b126ffe251481adf929a1` was acknowledged by GitHub, two Codex workers and Replit's isolated bare repository. Replit preview parity and Claude receipt remain unconfirmed. Historical studies and source references remain preserved.
 
 Follow [incremental delivery](incremental-delivery.md): short visible checkpoints, exact GitHub receipts, and Replit Free mode only. If Replit hides a response card, ask it to repeat the actual question in ordinary chat. Idle status alone is not an unanswered question.
 

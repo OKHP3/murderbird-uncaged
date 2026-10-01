@@ -1,0 +1,19 @@
+# Neck-bearing01 first bounded proposal
+
+**Fit HOLD.** Root visual review pending at receipt creation; no second attempt yet. All prior history preserved. No runtime, material, era, pivot, body or joint-location edits.
+
+Source: immutable FIRST torso-support01 native bc3089a2aee2f9834186cadf55adadeb4291332499ca5bc7f43a46128e327904 / GLB189bf905ee5e74ad736b417b31ea36a3328a9da5e527aa69e213508d2b3089ba, checkpoint88ef9a8c574dcdc7a95b126ffe251481adf929a1. Rejected support attempt02 excluded.
+
+Frozen native `assets/models/whole-character-v38/neck-bearing01/murderbird-v38-neck-bearing01.blend`:696aaa4fe3ba7b2d340c755015848d4e0d934e392f96de0e41b3e684c3c10eb1. GLB `murderbird-v38-neck-bearing01-rigid.glb`:73ce757b6b24a1cffb8e755e86a21221dfd370478d1e1d7974ceaf3adda59cbb.
+
+Changed exactly12 meshes: ten `V23 cervical {1,2} directional guard {1..5}` and two `V38 curved-neck formed yoke neck ±1`. The upper nine parameter rows of each guard retain actual source receiving lands. First torso exterior/all33 plates, body supports/returns/scapular parts, head identity, all undeclared1217 objects and every rigid owner/rest transform/material/era profile exact. Passive all-era structure; no independent receiver runtime.
+
+Actual base pivot(0,-.188,1.215); next bearing axis(0,-.234,1.2655). Root brackets land in finite anterior annular-race stock at x±.071/radius24mm and route outboard x±.096 before the guard landing, rather than a remote next-link straight loft. Each one connected positive closed stock; actual common root/end stock volumes are recorded. These do not establish continuous mating area, valid weld/fastener or torsional self-clearance. The asymmetrical +side end-volume and inherited next-fan crossing remain warnings.
+
+Actual guard changes move lowest free tips forward14–18mm/down15mm and second tips forward4mm/down7mm, plus diagonal variation. Earlier proposal backward-profile language does not mean backward displacement. Captured profile retains a lowest projecting lip and upper-course gap; no clear whole-bird gain claimed. Rest/full3Q/profile/front/rear and matched rest/contact profile images are under this audit directory. Front/rear were added by render-only `render-remaining.py`; frozen models/executed recipes unchanged. Reused baseline full views are hash-linked in receipt.
+
+One targeted twelve-mesh finite screen against FIRST support: neutral28→20/2new/4increases; captured pitch42→33/2new/8increases; authored maximum pitch50→50/10new/8increases; Maker dip36→24/2new/4increases; attention yaw30→20/2new/3increases. The recurring two new pairs are finite own-guard bracket seats, INCLUDED, not exempt. Maximum adds8 new guard/guard and guard/breast moving conflicts. Inherited higher fan/guard crossings and inherited count/triangle increases remain counted. No physical swept fit certificate, contained/coplanar volume or penetration-depth claim.
+
+Captured pitch is four localX+.10675220489501955/head-.5090505059024657 at body rest, NOT complete strike. Maximum four+.1625/head-.509 is authored stress; Maker four-.035/nativeZ root yaw-.45; attention nativeZ+.312. No negative attention yaw sample or full runtime action captured here. Root owns actual browser motion/era review.
+
+Compact authoritative qualification: `qualified-receipt.json`; raw source/changed signatures `receipt.json`; exactGLB allowlist `scope.json`; `finite-screen.py/json/log`; source coordinates `inspect-source.py/log`; frozen `executed-builder.py`/`executed-region.py`; `build.log`. Canonical scripts match frozen first versions. Reproduction requires staging frozen builder and region at their declared `scripts/` paths with pinned source in a fresh repository-shaped scratch directory; direct audit-directory execution computes wrong ROOT. Write-once outputs prevent frozen overwrite.
