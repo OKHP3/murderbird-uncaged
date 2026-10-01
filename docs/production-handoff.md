@@ -4,9 +4,9 @@
 
 The current production selection is V37, approved by the owner for deployment with final likeness still unresolved. The dated V9–V18 default/production statements below are historical, not current selectors. This note does not re-verify live deployment.
 
-The current [coherent neck review](handoffs/neck-envelope-integration-2026-10-01.md) is on `codex/v38-neck-envelope-integration-01`, from parent `1973975dba5ec59e688cd36f034cfc14cd313214`. First improves curved armored continuity but remains fit HOLD. Final is rejected for jagged openings and folded geometry. Two frozen attempts are preserved; no held geometry is selected for production.
+The current [raised skull joint review](handoffs/cervical-laps-integration-2026-10-01.md) is on `codex/v38-cervical-laps-integration-01`, from parent `9dcf57991c1bd9a6a8cb36390cb11e8d508cd5d3`. Both exterior attempts are rejected: broad cuff, rectangular courses and open side channel remain. The raised pivot preserves skull rest geometry and fresh rail contact, but fit and likeness remain unresolved. No third attempt or production promotion.
 
-Replit’s private preview has been independently rendered on the Mac from its isolated clean1973975 checkout, with reference PNGs hydrated. Its old workspace main2622423 and local commits remain preserved/divergent. New checkpoint receipt must be confirmed separately after push. Claude receipt remains unconfirmed. Replit explicitly confirms its waiting banner currently means idle with no unanswered question, and will repeat future questions in plain chat.
+Replit's last confirmed isolated preview is clean at `9dcf579`; the old workspace main and local commits remain preserved. New checkpoint receipt must be confirmed separately after push. Claude receipt remains unconfirmed. Replit explicitly says its waiting banner currently means idle with no unanswered question, and will repeat future questions in plain chat.
 
 Follow [incremental delivery](incremental-delivery.md): short visible checkpoints, exact GitHub receipts, and Replit Free mode only. If Replit hides a response card, ask it to repeat the actual question in ordinary chat. Idle status alone is not an unanswered question.
 
