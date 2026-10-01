@@ -11,6 +11,7 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'neck-laps01': '/assets/models/whole-character-v38/neck-laps01/murderbird-v38-neck-laps01-rigid.glb',
   'throat-receiver02': '/assets/models/whole-character-v38/throat-receiver01/murderbird-v38-throat-receiver01-receiver02-transformfix-rigid.glb',
   'throat-receiver01': '/assets/models/whole-character-v38/throat-receiver01/murderbird-v38-throat-receiver01-rigid.glb',
   'curved-neck01': '/assets/models/whole-character-v38/curved-neck01/murderbird-v38-curved-neck01-rigid.glb',
@@ -361,9 +362,10 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     const orientation=rigRoot.getWorldQuaternion(new THREE.Quaternion());
     const target=new THREE.Vector3(...view.target).applyQuaternion(orientation).add(origin);
     const offset=new THREE.Vector3(...view.offset).applyQuaternion(orientation);
-    if(headView) {
-      // Frame the actual articulated head, not an assumed rest-space height.
-      const bounds=new THREE.Box3().setFromObject(nodes.head);
+    if(headView || name==='neck') {
+      // Frame the moving assembly; fixed rest-space heights clip the throat
+      // during contact. The neck subtree includes its attached skull.
+      const bounds=new THREE.Box3().setFromObject(name==='neck'?nodes.neck:nodes.head);
       if(!bounds.isEmpty()) {
         bounds.getCenter(target);
         const sphere=bounds.getBoundingSphere(new THREE.Sphere());
@@ -451,7 +453,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     mechanisms.tick(dt,snapshot,motion.driveMetrics(),{open,separation});
     billTip.getWorldPosition(worldTip);
     const state=snapshot.state;
-    target.visible=armed||snapshot.visitorPresent;
+    target.visible=lightingMode!=='neutral'&&(armed||snapshot.visitorPresent);
     target.position.x=snapshot.lookTarget?.x??0;
     target.position.y=1.60;
     const motionInfo=motion.feedback();
