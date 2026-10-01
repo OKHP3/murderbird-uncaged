@@ -1,0 +1,3 @@
+import bpy,json
+from pathlib import Path
+r=Path(__file__).resolve().parents[4];bpy.ops.wm.open_mainfile(filepath=str(r/'assets/models/whole-character-v38/orbital-clearance02/murderbird-v38-orbital-clearance02.blend'));o=bpy.data.objects['V32 formed mandibular bowl'];keys=[(r,k)for r in range(53)for k in range(33)if r<=5 or k<=6 or k>=26];lookup={k:i for i,k in enumerate(keys)};p=[o.matrix_world@v.co for v in o.data.vertices];half=len(keys);data={k:list(p[lookup[(14,k)]+half]-p[lookup[(14,k)]])for k in list(range(7))+list(range(26,33))};print(data);(Path(__file__).resolve().parent/'stock-diagnosis.json').write_text(json.dumps(data,indent=2)+'\n')

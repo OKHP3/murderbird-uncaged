@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'bill-relationship02': '/assets/models/whole-character-v38/bill-relationship02/murderbird-v38-bill-relationship02-rigid.glb',
+  'bill-relationship01': '/assets/models/whole-character-v38/bill-relationship01/murderbird-v38-bill-relationship01-rigid.glb',
   'occipital-envelope01': '/assets/models/whole-character-v38/occipital-envelope01/murderbird-v38-occipital-envelope01-rigid.glb',
   'occipital-envelope02': '/assets/models/whole-character-v38/occipital-envelope02/murderbird-v38-occipital-envelope02-rigid.glb',
   'orbital-clearance02': '/assets/models/whole-character-v38/orbital-clearance02/murderbird-v38-orbital-clearance02-rigid.glb',
