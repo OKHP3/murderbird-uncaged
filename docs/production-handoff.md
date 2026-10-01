@@ -4,9 +4,9 @@
 
 The current production selection is V37, approved by the owner for deployment with final likeness still unresolved. The dated V9–V18 default/production statements below are historical, not current selectors. This note does not re-verify live deployment.
 
-The current [upper-joint construction review](handoffs/upper-joint-fit-integration-2026-10-01.md) is on `codex/v38-upper-joint-fit-integration-01`. Two proposals are frozen. Final support stock improves and sampled crossing totals decrease, but tall side slots and new leaf/rear contact crossings keep the result HOLD, with little whole-character likeness gain. No held geometry is selected for production.
+The current [constructed mandible review](handoffs/mandible-integration-2026-10-01.md) is on `codex/v38-mandible-integration-01`, from parent `140bb51219b7901287dde7c81590e19d4fcb559e`. One rigid jaw mesh now has broader convex side blades. Root and independent review retain this regional gain; tip, head likeness and inherited fit remain unresolved. No held geometry is selected for production.
 
-Parent checkpoint `53dfac6aec9a90fe6ef8a483f8b3447efaa67eb9` was acknowledged by GitHub, two Codex workers and Replit's isolated bare repository. Fresh Replit UI diagnosis reports a clean divergent preview main at `262242363b48fe18910e4c12ae5633774b0d2ab3`, with no active rebase; its exact older-base comparison is 11 ahead/84 behind. Preview parity and Claude receipt remain unconfirmed. Historical studies and source references remain preserved.
+Parent140bb512 was acknowledged by both Codex workers and Replit. Replit reports a separate clean detached checkout at that SHA, with no hydrated assets, dependencies or new server yet. Its existing preview main remains divergent at2622423. Running-preview parity and Claude receipt remain unconfirmed. Replit explicitly confirms its waiting banner currently means idle with no pending question.
 
 Follow [incremental delivery](incremental-delivery.md): short visible checkpoints, exact GitHub receipts, and Replit Free mode only. If Replit hides a response card, ask it to repeat the actual question in ordinary chat. Idle status alone is not an unanswered question.
 
