@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-10-01T05:20:39.101Z",
+  "model": "assets/models/whole-character-v38/lower-support02/murderbird-v38-lower-support02-rigid.glb",
+  "checks": [
+    {
+      "name": "three-front-rails-use-articulated-cervical-contact-through-recovery",
+      "status": "passed",
+      "result": {
+        "rails": [
+          {
+            "normalizedX": -1,
+            "targetX": -1.2,
+            "root": {
+              "x": -1.19752184384354,
+              "z": 1.0165596051909687,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              -1.2,
+              1.3774781432160883,
+              2.079000187180899
+            ],
+            "radial": 0.020999812819101127,
+            "maxPitch": 0.1391456264676983,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.2399176638377368,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.065038990409812,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 0,
+            "targetX": 0,
+            "root": {
+              "x": 0,
+              "z": 1.015319755286315,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              0,
+              1.3752224461256337,
+              2.0790001855244595
+            ],
+            "radial": 0.020999814475540557,
+            "maxPitch": 0.1391456264676983,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009382445945324,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497269809442745,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 1,
+            "targetX": 1.2,
+            "root": {
+              "x": 1.19752184384354,
+              "z": 1.0165596051909687,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              1.2,
+              1.3774781432160883,
+              2.079000187180899
+            ],
+            "radial": 0.020999812819101127,
+            "maxPitch": 0.1391456264676983,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009379439817272,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497270196505192,
+            "finishedState": "recover"
+          }
+        ],
+        "noTelescoping": true,
+        "allThreeRailsContacted": true
+      }
+    },
+    {
+      "name": "maker-five-controls-have-visible-structural-response",
+      "status": "passed",
+      "result": {
+        "channels": {
+          "leg": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "wing": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "tail": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": "compact-articulated-tail"
+          },
+          "neck": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "jaw": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          }
+        },
+        "rootRemainsFixed": true
+      }
+    },
+    {
+      "name": "mechanic-turn-retains-grounded-motion-without-builder-contact",
+      "status": "passed",
+      "result": {
+        "maxYaw": 1.5707963267948966,
+        "steps": 8,
+        "maxFootError": 2.4902799884605145e-16,
+        "routineRunning": true
+      }
+    },
+    {
+      "name": "jump-and-thrust-inspection-wait-for-safe-pose",
+      "status": "passed",
+      "result": {
+        "jumpPhaseAtRequest": 0.30952380952380953,
+        "jumpInspectionWaitedForLanding": true,
+        "thrustPhaseAtRequest": 0.303030303030303,
+        "thrustInspectionWaitedForSettle": true
+      }
+    }
+  ],
+  "modelSha256": "8fe504d3debef900dd5709bef9c2a395562baf2ddaf0a8eb8e209ecc24cd4e03",
+  "modelBytes": 11918512,
+  "status": "passed",
+  "report": "assets/audit/whole-character-v38/lower-support-integration01/candidate02/structural-motion-validation.json"
+}

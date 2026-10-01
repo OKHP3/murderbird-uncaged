@@ -34,6 +34,7 @@ function createRun({ seed = 927, dt = 1 / 60 } = {}) {
   assert.ok(Object.values(nodes).every(Boolean), 'v1 GLB is missing a required motion node');
   const rest = Object.fromEntries(NODE_NAMES.map(name => [name, {
     position: nodes[name].position.clone(), rotation: nodes[name].rotation.clone(),
+    quaternion: nodes[name].quaternion.clone(),
   }]));
   const motion = createEraMotion(model, nodes, rest);
   const mechanisms = createEraMechanisms({ scene, model, nodes, rest });
@@ -81,16 +82,26 @@ function checkFixedNeckAndHead(run, metrics = run.motion.metrics()) {
   assert.ok(metrics.cervical.upperTranslationError < 1e-9, 'intermediate neck pivot translated');
   assert.ok(Math.abs(metrics.cervical.totalPitch) <= metrics.cervical.maxContactPitch + 1e-6,
     'total cervical bend exceeded its bound');
-  const upper = run.nodes['cervical-upper'];
-  assert.equal(metrics.cervical.jointCount, upper ? 2 : 1);
-  if (upper) {
-    assert.equal(upper.parent, run.nodes.neck);
-    assert.equal(run.nodes.head.parent, upper);
-    assert.ok(upper.position.distanceTo(run.rest['cervical-upper'].position) < 1e-9,
-      'intermediate attachment length changed');
-    assert.ok(Math.hypot(upper.quaternion.y, upper.quaternion.z) < 1e-9,
-      'intermediate journal rotated off its local X axis');
+  const chainDeclared = run.nodes.body.userData.cervicalLayoutV2 !== undefined
+    || run.nodes.body.userData.extras?.cervicalLayoutV2 !== undefined;
+  const jointNames = chainDeclared
+    ? ['neck', 'cervical-mid-a', 'cervical-mid-b', 'cervical-upper']
+    : ['neck', ...(run.nodes['cervical-upper'] ? ['cervical-upper'] : [])];
+  assert.equal(metrics.cervical.jointCount, jointNames.length);
+  for (const [index, name] of jointNames.entries()) {
+    const joint = run.nodes[name];
+    assert.ok(joint, `missing cervical joint ${name}`);
+    assert.equal(joint.parent, index ? run.nodes[jointNames[index - 1]] : run.nodes.body,
+      `incorrect serial attachment for ${name}`);
+    assert.ok(joint.position.distanceTo(run.rest[name].position) < 1e-9,
+      `${name} attachment length changed`);
+    if (index) {
+      const relative = run.rest[name].quaternion.clone().invert().multiply(joint.quaternion);
+      assert.ok(Math.hypot(relative.y, relative.z) < 1e-9,
+        `${name} journal rotated off its rest-relative X axis`);
+    }
   }
+  assert.equal(run.nodes.head.parent, run.nodes[jointNames.at(-1)]);
   assert.ok(Math.abs(metrics.cervical.neckPitch - run.rest.neck.rotation.x) <= metrics.cervical.maxContactPitch + 1e-6,
     `neck pitch exceeded its ${metrics.cervical.maxContactPitch}rad bound`);
 }
@@ -227,7 +238,9 @@ async function main() {
   const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
   template = await loadRigidValidation(bytes);
   assert.ok(template.scene, 'GLB parse returned no scene');
-  if (template.scene.getObjectByName('cervical-upper')) NODE_NAMES.push('cervical-upper');
+  for (const name of ['cervical-mid-a', 'cervical-mid-b', 'cervical-upper']) {
+    if (template.scene.getObjectByName(name)) NODE_NAMES.push(name);
+  }
   check('three-front-rails-use-articulated-cervical-contact-through-recovery', verifyThreeRailContact);
   check('maker-five-controls-have-visible-structural-response', verifyMakerChannels);
   check('mechanic-turn-retains-grounded-motion-without-builder-contact', verifyMechanicTurn);
