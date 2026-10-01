@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'occipital-envelope01': '/assets/models/whole-character-v38/occipital-envelope01/murderbird-v38-occipital-envelope01-rigid.glb',
+  'occipital-envelope02': '/assets/models/whole-character-v38/occipital-envelope02/murderbird-v38-occipital-envelope02-rigid.glb',
   'orbital-clearance02': '/assets/models/whole-character-v38/orbital-clearance02/murderbird-v38-orbital-clearance02-rigid.glb',
   'orbital-clearance01': '/assets/models/whole-character-v38/orbital-clearance01/murderbird-v38-orbital-clearance01-rigid.glb',
   'head-fit02': '/assets/models/whole-character-v38/head-fit02/murderbird-v38-head-fit02-rigid.glb',
@@ -317,12 +319,13 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
       head:{target:[0,1.72,.1],offset:[-.82,.45,1.92]},
       headOblique:{target:[0,1.72,.1],offset:[-1.6,.24,1.2]},
       headProfile:{target:[0,1.72,.1],offset:[-2,.12,0]},
+      headRearOblique:{target:[0,1.72,.1],offset:[-1.4,.25,-1.45]},
       neck:{target:[0,1.48,.02],offset:[-.78,.18,1.55]},
       breast:{target:[0,1.12,.14],offset:[-.68,.12,1.42]},
       feet:{target:[0,.24,0],offset:[-.60,.10,1.30]},
     };
     const view=views[name];if(!view)throw new RangeError(`Unknown review camera: ${name}`);
-    const headView=['head','headOblique','headProfile'].includes(name);
+    const headView=['head','headOblique','headProfile','headRearOblique'].includes(name);
     const closeup=headView||['leftShoulder','rightShoulder','neck','breast','feet'].includes(name);
     controls.minDistance=headView?.5:closeup?1.2:3.0;controls.maxDistance=closeup?4.0:12.0;
     model.updateMatrixWorld(true);

@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-10-01T02:10:46.252739+00:00",
+  "runs": [
+    {
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "log": "npm-ci.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "log": "build.log"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-publication.mjs"
+      ],
+      "exitCode": 0,
+      "log": "publication.log"
+    }
+  ],
+  "scope": "Local build and production boundary only; not CI, publication or artistic acceptance"
+}
