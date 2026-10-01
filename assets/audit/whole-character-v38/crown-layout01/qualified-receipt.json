@@ -1,0 +1,52 @@
+{
+  "status": "REJECTED visual proposal; STOCK/FIT HOLD. No second attempt, no adoption.",
+  "source": "retained jaw-stock01; held crown-plate studies not used",
+  "nativeSHA256": "cf8ad159a977b4f245867e25bb7547695e264e62df4cbb2008cf0d6aee3c3386",
+  "glbSHA256": "3e9f7fd3d88fdda6d6360d369f788a78d7b473085b7a1c0edb1a95bb8a290edb",
+  "scope": "58 active old crown leaves removed,13 new crown plates added; surviving mesh geometry, local transforms, owners, materials and backing unchanged by builder checks. Root independently verifies export.",
+  "visualVerdict": "Root/independent reviewer: too smooth domed cap, negligible whole-bird gain. Rejected rather than a topology-repair basis.",
+  "stockQualification": "Four clipped boundary solids have24 nonmanifold edges: course1 panels4/5, course2 panel4, course3 panel3. All13 oneconnected component and positive signed volume; these do not establish valid solids. Own strict self pairs0 does not waive nonmanifold stock.",
+  "seatingQualification": "Root triangle area is authored source-surface correspondence only. Failed topology invalidates supported-solid acceptance; strict triangle crossing cannot certify coplanar seat area or containment. Nominal1mm lap separation not full actual clearance.",
+  "actualFinite": {
+    "neutral": {
+      "source": {
+        "meshes": 58,
+        "nonManifoldEdges": 0,
+        "nonAdjacentSelfStrictTrianglePairs": 0,
+        "crownToCrown": 70,
+        "crownToUnchangedHead": 38
+      },
+      "candidate": {
+        "meshes": 13,
+        "nonManifoldEdges": 24,
+        "nonAdjacentSelfStrictTrianglePairs": 0,
+        "crownToCrown": 0,
+        "crownToUnchangedHead": 31
+      }
+    },
+    "cranialInspection": {
+      "source": {
+        "meshes": 0,
+        "nonManifoldEdges": 0,
+        "nonAdjacentSelfStrictTrianglePairs": 0,
+        "crownToCrown": 70,
+        "crownToUnchangedHead": 4
+      },
+      "candidate": {
+        "meshes": 0,
+        "nonManifoldEdges": 0,
+        "nonAdjacentSelfStrictTrianglePairs": 0,
+        "crownToCrown": 0,
+        "crownToUnchangedHead": 12
+      }
+    }
+  },
+  "finiteLimits": "Bodyrest and cranial-cover nativeZ+.08 only; strict edge-through-face with1e-7m plane epsilon/1e-6 interior margin, same-owner included. Different crown identities mean pair sets cannot be called inherited. No coplanar/containment/grazing/continuous-motion acceptance.",
+  "timing": "Finite session94080 launched just before root stop decision and already completed when stop arrived; preserved diagnostic only, no rerun.",
+  "metadataOverride": "Frozen receipt visualpending and constructionDescription intended stock/seating prose are superseded by this REJECT/STOCK HOLD qualification. Native/GLB/executed recipes unchanged.",
+  "recipeHashes": {
+    "executed-builder.py": "6511d4351ac69ed44e0fcc4eaf11d1f6bd30204c0fcc808d51ccfadbbead557c",
+    "executed-region.py": "0e0a59705e190d99708a1a6338207eeff5c3ce9d0c230a3ab528dc3c7eca0416",
+    "finite-screen.py": "b29c06db1c85a61e3556e0a4d435cf683b8036e2e5e5985c166c4af6c32d50cf"
+  }
+}
