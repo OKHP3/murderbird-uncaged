@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — local production handoff
 
+**Latest bounded checkpoint — October 1:** [Neck joint fit](handoffs/neck-fit-integration-2026-10-01.md) preserves two attempts and matched views. Final candidate is **FIT HOLD**: lower bearing crossings removed in sampled poses, four new upper support/socket intersections. DEV review only; V37 production unchanged. No owner outline acceptance or promotion.
+
 ## Current correction entry point — October 1, 2026
 
 The current production selection is V37, approved by the owner for deployment with final likeness still unresolved. The dated V9–V18 default/production statements below are historical, not current selectors. This note does not re-verify live deployment.
