@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-10-01T15:13:56.603Z",
+  "model": "assets/models/whole-character-v38/neck-profile01/attempt02/murderbird-v38-neck-profile01-attempt02-rigid.glb",
+  "checks": [
+    {
+      "name": "three-front-rails-use-articulated-cervical-contact-through-recovery",
+      "status": "passed",
+      "result": {
+        "rails": [
+          {
+            "normalizedX": -1,
+            "targetX": -1.2,
+            "root": {
+              "x": -1.1973521051308447,
+              "z": 0.9557615427618441,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              -1.2,
+              1.321003859910821,
+              2.079001153556792
+            ],
+            "radial": 0.02099884644320804,
+            "maxPitch": 0.1391456264676983,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.2395515562700012,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06538730465183498,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 0,
+            "targetX": 0,
+            "root": {
+              "x": 0,
+              "z": 0.9547845800666432,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              0,
+              1.3192858822303806,
+              2.0790009408501593
+            ],
+            "radial": 0.020999059149840793,
+            "maxPitch": 0.1391456264676983,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24009380624676402,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06497270043945332,
+            "finishedState": "recover"
+          },
+          {
+            "normalizedX": 1,
+            "targetX": 1.2,
+            "root": {
+              "x": 1.1973521051308447,
+              "z": 0.9557615427618441,
+              "yaw": 0,
+              "speed": 0
+            },
+            "contactPoint": [
+              1.2,
+              1.321003859910821,
+              2.079001153556792
+            ],
+            "radial": 0.02099884644320804,
+            "maxPitch": 0.1391456264676983,
+            "maxNeckTranslation": 0,
+            "maxHeadTranslation": 0,
+            "maxJaw": 0.022596583554740247,
+            "maxRightWing": 0.24108897794680983,
+            "maxRightElbow": 0.37996960756311937,
+            "maxLeftWing": 0.06484456431634444,
+            "finishedState": "recover"
+          }
+        ],
+        "noTelescoping": true,
+        "allThreeRailsContacted": true
+      }
+    },
+    {
+      "name": "maker-five-controls-have-visible-structural-response",
+      "status": "passed",
+      "result": {
+        "channels": {
+          "leg": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "wing": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "tail": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": "compact-articulated-tail"
+          },
+          "neck": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          },
+          "jaw": {
+            "applied": 0.9816843611112657,
+            "visible": true,
+            "tailPivot": null
+          }
+        },
+        "rootRemainsFixed": true
+      }
+    },
+    {
+      "name": "mechanic-turn-retains-grounded-motion-without-builder-contact",
+      "status": "passed",
+      "result": {
+        "maxYaw": 1.5707963267948966,
+        "steps": 8,
+        "maxFootError": 2.4902799884605145e-16,
+        "routineRunning": true
+      }
+    },
+    {
+      "name": "jump-and-thrust-inspection-wait-for-safe-pose",
+      "status": "passed",
+      "result": {
+        "jumpPhaseAtRequest": 0.30952380952380953,
+        "jumpInspectionWaitedForLanding": true,
+        "thrustPhaseAtRequest": 0.303030303030303,
+        "thrustInspectionWaitedForSettle": true
+      }
+    }
+  ],
+  "modelSha256": "96adf5964eb61a024ea24677ba65ecaf638fed5ce4b5fe82bd628eb332ea4975",
+  "modelBytes": 10375692,
+  "status": "passed",
+  "report": "assets/audit/whole-character-v38/neck-profile-integration01/structural-motion-validation.json"
+}
