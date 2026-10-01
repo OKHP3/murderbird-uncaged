@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'neck-interface01': '/assets/models/whole-character-v38/neck-interface01/murderbird-v38-neck-interface01-rigid.glb',
+  'neck-interface01-supported02': '/assets/models/whole-character-v38/neck-interface01/murderbird-v38-neck-interface01-supported02-rigid.glb',
   'neck-continuity01-swept02': '/assets/models/whole-character-v38/neck-continuity01/murderbird-v38-neck-continuity01-swept02-rigid.glb',
   'neck-continuity01': '/assets/models/whole-character-v38/neck-continuity01/murderbird-v38-neck-continuity01-rigid.glb',
   'breast-support02-seam01': '/assets/models/whole-character-v38/breast-support02/murderbird-v38-breast-support02-seam01-rigid.glb',
