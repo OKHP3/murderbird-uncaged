@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'crown-plate02': '/assets/models/whole-character-v38/crown-plate01/attempt02/murderbird-v38-crown-plate01-attempt02-rigid.glb',
+  'crown-plate01': '/assets/models/whole-character-v38/crown-plate01/murderbird-v38-crown-plate01-rigid.glb',
   'jaw-stock01': '/assets/models/whole-character-v38/jaw-stock01/murderbird-v38-jaw-stock01-rigid.glb',
   'bill-gape02': '/assets/models/whole-character-v38/bill-gape01/attempt02/murderbird-v38-bill-gape01-attempt02-rigid.glb',
   'bill-gape01': '/assets/models/whole-character-v38/bill-gape01/murderbird-v38-bill-gape01-rigid.glb',
