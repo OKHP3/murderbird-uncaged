@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'ribcage-envelope02': '/assets/models/whole-character-v38/ribcage-envelope01/attempt02/murderbird-v38-ribcage-envelope01-attempt02-rigid.glb',
+  'ribcage-envelope01': '/assets/models/whole-character-v38/ribcage-envelope01/murderbird-v38-ribcage-envelope01-rigid.glb',
   'neck-laps01': '/assets/models/whole-character-v38/neck-laps01/murderbird-v38-neck-laps01-rigid.glb',
   'throat-receiver02': '/assets/models/whole-character-v38/throat-receiver01/murderbird-v38-throat-receiver01-receiver02-transformfix-rigid.glb',
   'throat-receiver01': '/assets/models/whole-character-v38/throat-receiver01/murderbird-v38-throat-receiver01-rigid.glb',
