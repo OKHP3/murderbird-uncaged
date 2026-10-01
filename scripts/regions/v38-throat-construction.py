@@ -1,0 +1,83 @@
+"""Throat-construction02: fresh directional finite plates and two open receiving arches.
+Actual bill-relationship02 input; existing four cervical chain, controls and true hardware exact.
+No historical throat topology/receiving-strip constraint is retained.
+"""
+import bpy,bmesh,math,json
+from mathutils import Vector,Matrix
+NAMES=[f'V33 tapered throat cheek plate {s} {r} {i}'for s in(-1,0,1)for r in(0,1)for i in range(3)]
+GUARDS=[f'V23 cervical 4 directional guard {i}'for i in range(1,11)]
+ADDED=['V38 lower cranial throat receiving arch','V38 upper cranial throat receiving arch']
+WATCH=[f'V23 cervical {c} directional guard {i}'for c in range(1,5)for i in range(1,11)]+NAMES+ADDED
+def archfield(a,row):
+ z=(1.562 if row==0 else 1.624)+.006*math.sin(2*a)
+ rx=.108 if row==0 else .127;ry=.090 if row==0 else .104
+ return Vector((rx*math.sin(a),-.344-ry*math.cos(a),z))
+def radial(a):return Vector((math.sin(a),-math.cos(a),0))
+def closed_grid(outer,inner,nu,nv):
+ n=len(outer);faces=[]
+ for i in range(nu):
+  for j in range(nv):k=i*(nv+1)+j;q=k+nv+1;faces.extend([(k,q,q+1,k+1),(n+k+1,n+q+1,n+q,n+k)])
+ stride=nv+1;border=list(range(stride))+[i*stride+nv for i in range(1,nu+1)]+[nu*stride+j for j in range(nv-1,-1,-1)]+[i*stride for i in range(nu-1,0,-1)]
+ for i,k in enumerate(border):q=border[(i+1)%len(border)];faces.append((k,q,n+q,n+k))
+ return outer+inner,faces
+
+def apply():
+ bpy.context.view_layer.update();records=[];footprints=[]
+ def install(name,verts,faces,new=False,template=None):
+  if new:
+   source=bpy.data.objects[template];o=bpy.data.objects.new(name,bpy.data.meshes.new(name));bpy.context.scene.collection.objects.link(o);o.parent=bpy.data.objects['head'];o.matrix_parent_inverse=Matrix.Identity(4);o.matrix_basis=Matrix.Identity(4)
+   for k,v in source.items():o[k]=v
+   o['exteriorEras']='maker,mechanic,builder';o['constructionClass']='inherited-passive';o['surfaceRole']='frame';o['constructionOwner']='head';mats=list(source.data.materials)
+  else:o=bpy.data.objects[name];mats=list(o.data.materials)
+  bpy.context.view_layer.update();inv=o.matrix_world.inverted();mesh=bpy.data.meshes.new(name+' fresh finite topology');mesh.from_pydata([inv@p for p in verts],[],faces);mesh.update()
+  for m in mats:mesh.materials.append(m)
+  o.data=mesh;o.modifiers.clear();bm=bmesh.new();bm.from_mesh(mesh);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));assert all(e.is_manifold for e in bm.edges),name
+  if bm.calc_volume(signed=True)<0:bmesh.ops.reverse_faces(bm,faces=list(bm.faces))
+  volume=bm.calc_volume(signed=True);assert volume>0,name;bm.to_mesh(mesh);bm.free()
+  for p in mesh.polygons:p.use_smooth=False
+  o['v38ThroatConstruction']='Fresh supported directional throat/nape proposal; no fixed-to-moving owner bridge'
+  records.append({'name':name,'owner':o.parent.name,'eras':o.get('exteriorEras'),'materials':[m.name if m else None for m in mats],'vertices':len(mesh.vertices),'positiveVolumeM3':volume,'closedEdgeManifold':True,'rigidPassive':True})
+  return o
+ # Two narrow structural open-back arches. They are receiving frames below
+ # the plates, not an exterior armored cuff; actual bow interfaces remain diagnostic.
+ for row,name in enumerate(ADDED):
+  nu,nv=112,2;outer=[];inner=[]
+  for i in range(nu+1):
+   a=-2.86+5.72*i/nu;p=archfield(a,row);n=radial(a)
+   for j in range(nv+1):q=p+Vector((0,0,(j/nv-.5)*.012));outer.append(q);inner.append(q-n*.004)
+  verts,faces=closed_grid(outer,inner,nu,nv);install(name,verts,faces,True,'V31 passive cranial load bow 1')
+  for side in(-1,1):
+   target=bpy.data.objects[f'V31 passive cranial load bow {side}'];m=target.data;m.calc_loop_triangles();v=[target.matrix_world@x.co for x in m.vertices];center=Vector((side*(.100 if row==0 else .120),-.379,1.566 if row==0 else 1.616));tris=[]
+   for t in m.loop_triangles:
+    p=[v[k]for k in t.vertices];c=sum(p,Vector())/3
+    if abs(c.x-center.x)<.009 and abs(c.y-center.y)<.010 and abs(c.z-center.z)<.011:tris.append({'triangle':t.index,'vertices':[list(q)for q in p]})
+   footprints.append({'arch':name,'receiver':target.name,'chosenActualFinitePatchTriangles':tris,'state':'Actual regional bow triangles surveyed over approximately18x20x22mm box; receiving arch-vs-bow surface union/interference NOT accepted from box or centroid alone.'})
+ # Individually swept broad short plates, source root strips discarded.
+ for side in(-1,0,1):
+  bands=[(-.64,-.205),(-.20,.20),(.205,.64)]if side==0 else[(.66,1.36),(1.49,2.24),(2.30,2.99)]
+  for row in(0,1):
+   for col,(lo,hi)in enumerate(bands):
+    name=f'V33 tapered throat cheek plate {side} {row} {col}';nu,nv=24,14;outer=[];inner=[]
+    for i in range(nu+1):
+     t=i/nu;length=([.082,.069,.076]if row==0 else[.080,.072,.087])[col]if side else([.083,.078,.082]if row==0 else[.077,.072,.081])[col];narrow=1-.28*t*t
+     for j in range(nv+1):
+      u=j/nv;a=(lo+hi)/2+(u-.5)*(hi-lo)*narrow+.22*t
+      if side==-1:a=-a
+      root=archfield(a,row);n=radial(a)
+      # Upper root inner skin begins at actual authored arch outer field.
+      # Swept sides taper toward the neck rather than flare outward.
+      q=root+n*(.0035-.012*t*t)+Vector((0,-.006*t,-length*t+(.026 if col%2 else-.020)*(u-.5)*t+.006*math.sin(math.pi*u)*t))
+      q.z+=.002*math.sin(math.pi*u)*math.sin(math.pi*t)
+      outer.append(q);inner.append(q-n*.0035)
+    verts,faces=closed_grid(outer,inner,nu,nv);install(name,verts,faces)
+    records[-1]['receivingMember']=ADDED[row];records[-1]['rootInterface']='Root inner boundary matches shared archfield at sampled angular points; full intervening finite faces still screened, not point-hit attachment acceptance.';records[-1]['nominalLateralStockM']=.0035;records[-1]['spanM']=length
+ # Joint-owned upper lip follows this collar; only free-band geometry changes.
+ for name in GUARDS:
+  o=bpy.data.objects[name];old=[v.co.copy()for v in o.data.vertices];assert len(old)==798;world=o.matrix_world.copy();inv=world.inverted();p=[world@v for v in old];o.data=o.data.copy();center=Vector((0,-.322,1.424));maximum=0
+  for i in range(399):
+   row=i//19;free=max(0,(18-row)/18);free=free*free*(3-2*free);q=p[i].copy();rad=q-center;rad.z=0;rad.normalize();delta=-rad*.007*free
+   o.data.vertices[i].co=inv@(p[i]+delta);o.data.vertices[i+399].co=inv@(p[i+399]+delta);maximum=max(maximum,delta.length)
+  o.data.update();assert all((o.data.vertices[i].co-old[i]).length<1e-7 for i in list(range(342,399))+list(range(741,798)))
+  o['v38ThroatConstruction']='Upper freeband inboard7mm maximum; supported lower3rows/special4-10 repair and source pairedstock exact'
+  records.append({'name':name,'owner':o.parent.name,'eras':o.get('exteriorEras'),'materials':[m.name if m else None for m in o.data.materials],'maximumDisplacementM':maximum,'rootRows18to20BothSkinsExact':True,'sourcePairedStockVectorsExact':True})
+ return {'changedMeshes':NAMES+GUARDS,'changedNodes':[],'addedMeshes':ADDED,'removedMeshes':[],'watchMeshes':WATCH,'attachmentAndEraMap':records,'actualBowFootprintSurvey':footprints,'construction':'18 fresh closed directional grids with short tapered down/back outline; two narrow head-owned passive open-back receiving arches; Lower30 cervical guards exact; upper10 freebands drawn7mm inboard.','rigidVsFlexible':'Rigid head-owned passive all-era plates/frame; separate sliding cervical overlap, no joint bridge or early sensing.','confirmation':'Actual V31 load-bow surfaces surveyed; true articulation/control frames retained.','reconstruction':'Plate outlines, arches, stock and compatible interfaces remain authored mechanical proposals.','protected':'Bill/jaw/socket/optic/crown/body, all4 cervical joint axes/rest/endpoints and lower30 guards exact; upper10 supported roots exact.','limits':['Closed topology and positive volume do not prove self-fit or support.','Shared root field vertices do not prove finite face conformity; screen actual root/arch/bow triangles.','Arches terminate at open rear; nape plates are cantilevered from head support, not attached to moving neck.','No source throat topology/receiving band preservation assertion; prior folded approximation replaced.']}
