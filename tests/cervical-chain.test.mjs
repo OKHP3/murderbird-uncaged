@@ -59,6 +59,66 @@ function assertSnapshot(snapshot) {
   });
 }
 
+function addSkullReceiver(f) {
+  const receiver = new THREE.Group(); receiver.name = 'cervical-skull-cover';
+  receiver.position.copy(f.nodes.head.position);
+  f.joints[3].add(receiver);
+  f.nodes.body.userData.cervicalLayoutV2 = JSON.stringify({...layout, skullReceiver:receiver.name});
+  return receiver;
+}
+
+test('declared rigid skull receiver bisects multi-axis motion at the shared pivot and restores snapshots', async()=> {
+  const f=await fixture({nonIdentity:true}), receiver=addSkullReceiver(f);
+  f.nodes.head.rotation.set(.13,-.09,.04); receiver.rotation.set(-.06,.08,.03);
+  const headRest=f.nodes.head.quaternion.clone(), coverRest=receiver.quaternion.clone();
+  const c=createCervicalArticulation(f.model,f.nodes,f.rest);
+  for (const angles of [[-.509,0,0],[-.35,.3,-.06],[.1,-.45,.08]]) {
+    const delta=new THREE.Quaternion().setFromEuler(new THREE.Euler(...angles));
+    f.nodes.head.quaternion.copy(delta).multiply(headRest);
+    c.updateCovers();
+    const actual=receiver.quaternion.clone().multiply(coverRest.clone().invert());
+    // Two receiver excursions reproduce the full head excursion. This checks
+    // compound rotation, where halving Euler components gives a wrong result.
+    assert.ok(actual.clone().multiply(actual).angleTo(delta)<1e-7);
+    close(receiver.position.distanceTo(f.nodes.head.position),0);
+    const saved=c.capturePose(); c.restoreAttachments();
+    assert.deepEqual(receiver.quaternion.toArray(),coverRest.toArray());
+    c.restorePose(saved); assertSnapshot(saved);
+  }
+});
+
+test('four-stage skull receiver must be explicitly declared and share the actual head centre', async()=> {
+  for (const defect of ['undeclared','missing','parent','centre','name']) {
+    const f=await fixture(), receiver=addSkullReceiver(f);
+    if(defect==='undeclared') f.nodes.body.userData.cervicalLayoutV2=JSON.stringify(layout);
+    if(defect==='missing') receiver.removeFromParent();
+    if(defect==='parent') f.nodes.neck.add(receiver);
+    if(defect==='centre') receiver.position.x+=.002;
+    if(defect==='name') f.nodes.body.userData.cervicalLayoutV2=JSON.stringify({...layout,skullReceiver:'arbitrary'});
+    assert.throws(()=>createCervicalArticulation(f.model,f.nodes,f.rest),/receiver|Receiver|cover owners/);
+  }
+});
+
+test('receiver follows final contact and clears through Maker, claw, power and reset paths', async()=> {
+  const f=await fixture(), receiver=addSkullReceiver(f);
+  const motion=createEraMotion(f.model,f.nodes,f.rest);
+  const atRest=()=>close(receiver.quaternion.angleTo(new THREE.Quaternion()),0,1e-7);
+  for(let i=0;i<180;i++) motion.tick(1/60,{era:'builder',state:'contact',phase:1,
+    goal:{x:0,z:motion.metrics().contactApproach.z},speed:.42});
+  assert.ok(receiver.rotation.x<-.15,'Receiver did not follow final contact counterrotation');
+  assert.ok(receiver.quaternion.clone().multiply(receiver.quaternion).angleTo(f.nodes.head.quaternion)<1e-7);
+  for(const snapshot of [
+    {era:'maker',state:'external-control',articulation:{neck:1}},
+    {era:'mechanic',state:'rest'},
+    {era:'builder',state:'watch',clawAction:{side:'left',stage:'lift',phase:.2}},
+    {era:'builder',state:'watch',powerMove:{kind:'jump',phase:.5}},
+  ]) {
+    motion.tick(1/60,snapshot); atRest();
+    close(motion.metrics().cervical.outerReceivers[0].jointCentreError,0);
+  }
+  receiver.rotation.x=.2; motion.resetEra('maker'); atRest();
+});
+
 test('four rest-relative joints share pitch while root yaw remains independent and translations stay rigid', async()=> {
   const f=await fixture({nonIdentity:true}); const c=createCervicalArticulation(f.model,f.nodes,f.rest);
   const positions=f.joints.map(joint=>joint.position.clone()); const origins=f.joints.map(joint=>joint.quaternion.clone());

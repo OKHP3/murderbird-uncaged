@@ -43,13 +43,34 @@ function createChain(model, nodes, rest, layout) {
       || joints[0] !== nodes.neck || nodes.head.parent !== joints[3]) {
     throw new Error('Four-stage cervical hierarchy is incomplete.');
   }
-  if (['cervical-joint-cover', 'cervical-root-cover', 'cervical-skull-cover'].some(name => model.getObjectByName(name))) {
+  if (layout.skullReceiver !== undefined && layout.skullReceiver !== 'cervical-skull-cover') {
+    throw new Error('Invalid cervicalLayoutV2 skullReceiver.');
+  }
+  const receiver = model.getObjectByName('cervical-skull-cover');
+  if (['cervical-joint-cover', 'cervical-root-cover'].some(name => model.getObjectByName(name))
+      || (receiver && !layout.skullReceiver)) {
     throw new Error('Four-stage cervical layout does not declare legacy cover owners.');
+  }
+  if (layout.skullReceiver && (!receiver || receiver.parent !== joints[3]
+      || receiver.position.distanceTo(nodes.head.position) > 1e-6)) {
+    throw new Error('Declared skull receiver must share the head parent and centre.');
   }
   const origins = joints.map(node => ({ position: node.position.clone(), quaternion: node.quaternion.clone(),
     inverse: node.quaternion.clone().invert() }));
   const headOrigin = nodes.head.position.clone();
   const headOrientation = nodes.head.quaternion.clone();
+  const receiverRest = receiver ? { position: receiver.position.clone(), quaternion: receiver.quaternion.clone() } : null;
+  const inverseHeadRest = headOrientation.clone().invert();
+  const headDelta = headOrientation.clone(), half = headOrientation.clone();
+  function updateCovers() {
+    if (!receiver) return false;
+    // Both owners share the skull bearing. Bisect the head's rest-relative
+    // rotation in parent space; the receiver and its armor remain rigid.
+    headDelta.copy(nodes.head.quaternion).multiply(inverseHeadRest);
+    half.identity().slerp(headDelta, .5);
+    receiver.quaternion.copy(half).multiply(receiverRest.quaternion);
+    return true;
+  }
   const euler = nodes.neck.rotation.clone(); const delta = nodes.neck.quaternion.clone();
   function relativeAngles(index) {
     delta.copy(origins[index].inverse).multiply(joints[index].quaternion);
@@ -57,8 +78,8 @@ function createChain(model, nodes, rest, layout) {
   }
   return {
     upper: joints[3], joints,
-    ...poseHelpers([...joints, nodes.head]),
-    updateCovers() { return false; },
+    ...poseHelpers([...joints, nodes.head, receiver]),
+    updateCovers,
     restoreAttachments() {
       joints.forEach((joint, i) => {
         joint.position.copy(origins[i].position); joint.quaternion.copy(origins[i].quaternion);
@@ -68,6 +89,10 @@ function createChain(model, nodes, rest, layout) {
       // each authored-chain action from its captured rest, then let normal
       // attention/contact logic apply the current frame counterrotation.
       nodes.head.quaternion.copy(headOrientation);
+      if (receiver) {
+        receiver.position.copy(receiverRest.position);
+        receiver.quaternion.copy(receiverRest.quaternion);
+      }
     },
     setPitch(pitch, yaw, roll) {
       if (yaw === undefined || roll === undefined) {
@@ -85,7 +110,11 @@ function createChain(model, nodes, rest, layout) {
       return { jointCount: 4, lowerPitchFraction: layout.weights[0],
         upperTranslationError: joints[3].position.distanceTo(origins[3].position),
         upperPitch: relativeAngles(3).x, linkedCoverPitch: null,
-        linkedCoverTranslationError: null, outerReceivers: [], totalPitch: this.pitch,
+        linkedCoverTranslationError: null, outerReceivers: receiver ? [{
+          name: receiver.name, translationError: receiver.position.distanceTo(receiverRest.position),
+          jointCentreError: receiver.position.distanceTo(nodes.head.position),
+          quaternion: receiver.quaternion.toArray(),
+        }] : [], totalPitch: this.pitch,
         pitchJoints: joints.map((joint, i) => ({ name: joint.name, weight: layout.weights[i],
           pitch: relativeAngles(i).x, translationError: joint.position.distanceTo(origins[i].position) })) };
     },

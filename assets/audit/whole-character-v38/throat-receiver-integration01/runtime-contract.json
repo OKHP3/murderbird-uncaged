@@ -1,0 +1,25 @@
+{
+  "status": "PASS focused behavior, geometry acceptance pending",
+  "command": "node --test tests/cervical-chain.test.mjs",
+  "result": {
+    "tests": 9,
+    "pass": 9,
+    "fail": 0
+  },
+  "sourceHashes": {
+    "src/scene/cervical-articulation.js": "0817d6418ee056c184df8215af7e65e64862b1b2d230dcf3ad04bb2f17bb84a5",
+    "tests/cervical-chain.test.mjs": "e070eed412214b0d013214436508fdb4aafb8718efd00d4e0c11a3041312c8c1"
+  },
+  "contract": {
+    "declaration": "cervicalLayoutV2.skullReceiver = cervical-skull-cover",
+    "attachment": "Sibling of head under cervical-upper, same local centre within 1e-6",
+    "rotation": "Half shortest head delta in shared parent coordinates, composed with receiver authored rest quaternion",
+    "surface": "Rigid mesh attachment, no deformation or translation",
+    "restoration": "Pose probes, per-frame rest, direct era reset and early Maker/Mechanic/claw/power returns",
+    "eligibility": "Passive inherited guard; no powered component added"
+  },
+  "limits": [
+    "Synthetic four-joint fixture adapted from actual V21 validates motion logic, not new plate clearance.",
+    "No physical simulation or full-movement/artistic acceptance claimed."
+  ]
+}
