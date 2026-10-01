@@ -1,5 +1,7 @@
 # MurderBird: Uncaged — local production handoff
 
+**Latest bounded checkpoint — October 1:** [Cranial support route](handoffs/cranial-route-integration-2026-10-01.md) corrects four internal parts. Selected crossings and self-crossings clear in the captured poses; whole-bird likeness remains unresolved. DEV review only, owner outline direction pending, V37 production unchanged.
+
 **Latest bounded checkpoint — October 1:** [Neck joint fit](handoffs/neck-fit-integration-2026-10-01.md) preserves two attempts and matched views. Final candidate is **FIT HOLD**: lower bearing crossings removed in sampled poses, four new upper support/socket intersections. DEV review only; V37 production unchanged. No owner outline acceptance or promotion.
 
 ## Current correction entry point — October 1, 2026
