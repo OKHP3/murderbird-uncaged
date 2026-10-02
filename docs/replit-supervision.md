@@ -2,6 +2,10 @@
 
 Owner direction, October 1, 2026: reuse Message Agent to uncover hidden questions and prevent assigned work from silently stalling. Use existing subscribed tools for bounded useful work. Root remains the integrator; visible improvement and verified deliverables are the measure of progress.
 
+## Current goal priority
+
+The [cinematic visual-first mandate](cinematic-visual-first-goal.md) governs new assignments. Prioritize source-matched full-bird color, texture and screen appearance. Do not resume old mechanical fit or head-support tasks merely because their historical receipts contain a next action. No active assignment means remain idle; a goal update alone is not a Replit work order. Free mode only remains mandatory.
+
 ## Reusable check-in message
 
 > FREE MODE ONLY. Checkpoint now: what concrete result has changed since your last update? State the active assignment, exact checkout SHA, latest completed artifact or check, and the single next action. If a command is still running, identify its live handle/process and latest output; do not restart it merely because it is slow. If a question or response card is hidden, repeat the exact question and choices here in ordinary chat. If you are blocked, state the actual error and smallest safe recovery. If the assignment is complete, give the deliverable and evidence, then say idle; do not invent more work. Continue the currently authorized next action when safe. Do not enter Power or Max, change billing, publish through Replit, overwrite another worker's work, or treat a pending owner artistic choice as answered. Keep this reply concise and produce the next reviewable result within the existing checkpoint window.

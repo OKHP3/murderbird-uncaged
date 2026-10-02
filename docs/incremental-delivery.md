@@ -1,8 +1,10 @@
-# MurderBird operating goal — incremental visual delivery
+# MurderBird operating goal — cinematic visual delivery
+
+**Latest owner direction, October 1, 2026:** Movie/video-game CG appearance is the target. Color, texture, regional surfaces, material response, lighting and overall likeness come first. Return to mechanics and fitment after the bird visually matches the selected pictures and video. This supersedes prior fit-before-finish and structure-before-surfacing sequencing. The target is a convincing screen character, not a fabrication blueprint. See [the current visual-first mandate](cinematic-visual-first-goal.md).
 
 Owner direction, September 29, 2026: improve MurderBird's resemblance to the selected images through fast, visible, reviewable increments. Functionality is useful, but a pale, ghostlike model with the wrong character likeness is not the target. Measure progress by a visible gain in the complete bird, not worker activity, test counts, or accumulated versions.
 
-Start from the released V37 assembly. Keep one recognizable flightless mechanical bird across Maker, Mechanic, and Advanced. Prioritize the largest visible likeness gap; a cycle may address silhouette, a body region's construction, or mechanical material response, but must show how that change improves the whole character against its controlling reference.
+Start from the released V37 assembly. Keep one recognizable flightless mechanical bird across Maker, Mechanic, and Advanced. Prioritize a coherent full-bird color and surface pass. Change geometry when needed for the visible CG result, without requiring engineering fit to be resolved first. Show how the change improves the complete character against its controlling references.
 
 This is the current operating mandate for Codex, Claude, and Replit. It replaces the earlier open-ended correction loop and its blanket high-effort supervision cadence. Existing creative authority, source provenance, and repository boundaries remain in force. This mandate update changes instructions only; it does not regenerate the model or restart unattended work.
 
