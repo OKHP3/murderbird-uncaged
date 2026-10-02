@@ -33,6 +33,10 @@ These are verified existing binaries, not new artistic approvals. Candidate 03 a
 3. Present matched reference/candidate views under neutral and intended exhibit lighting, plus relevant First Choice video frames. Judge the full-body image and close-ups together. Show one useful before/after checkpoint within 15–30 minutes of active implementation and within the milestone's token budget (Milestone 1: 15 minutes / 3,000 tokens total, including workers and integration); allow at most two focused attempts before presenting it. A checkpoint that cannot show a visible result within budget stops and reports — it does not spend its way through.
 4. After owner review establishes the desired visual direction, a return to mechanics and fitment may be proposed as a separate phase. That phase requires its own explicit owner authorization and bounded plan. Approval of a visual checkpoint is not authorization to resume engineering work.
 
+## Optic canon by era
+
+The owner’s October 2 restatement explicitly confirms dark, non-awakened optics for Maker and Mechanic; Advanced has restrained awakened orange optics. This era-specific rule resolves the earlier general orange-optic statement. It does not authorize surface implementation beyond the currently approved milestone.
+
 ## Track completion
 
 The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: `docs/cinematic-cg-milestone-plan.md`. Only Milestone 1 is authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.

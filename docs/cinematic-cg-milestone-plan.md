@@ -13,4 +13,4 @@ Budgets include workers and integration. Stop at each milestone and report rende
 
 Milestone 1 status: separate branches pushed and base GLB verified; Sept 22 composite identity unresolved. No cameras locked, no baseline render delivered, no Milestone 2 modeling started. Existing July/era/video binaries are located and hashed in the mandate. No substitution is authorized.
 
-The latest draft retains dark optics for Maker/Mechanic and awakened orange for Advanced. The prior reset said orange optics are required canon. Resolve whether the non-awakened era exception remains before authoring those eras; this does not authorize extra scope beyond Milestone 1.
+Optic rule confirmed by the owner’s October 2 mandate: Maker and Mechanic retain dark, non-awakened optics; Advanced retains restrained awakened orange optics. The prior optics-scope question is resolved. No authority beyond Milestone 1 is implied.
