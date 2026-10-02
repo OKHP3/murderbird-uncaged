@@ -1,0 +1,36 @@
+{
+  "status": "First frozen visible proposal; integrator visual gate pending",
+  "sourceCheckpoint": "86e4b67e4609183ccd0d7c683628fcc91f6f052a",
+  "sourceModel": "retained facial-fit01/attempt02, exact pinned native and GLB",
+  "nativeSHA256": "db3a0badccb2643e6eab938165fc298e9ed9f796159f26be4b24bdb0f32e6daa",
+  "glbSHA256": "0065a42cef2c2c2fd4b73250f6e0f1fcd124eb0c25a603445d331e3e303ec20e",
+  "scope": "33 source breast tiles removed;22 new shields under unchanged breastplate owner; no surviving mesh geometry or object transform changes",
+  "stockSummary": {
+    "solids": 22,
+    "nonManifoldEdges": 0,
+    "nonPositiveVolumes": 0
+  },
+  "preservationChecks": "Builder asserted exact surviving native mesh geometry/material slots and object local transforms. Runtime source material definitions copied exactly by material name. Independent export check remains integrator responsibility.",
+  "qualifications": [
+    "Finite root section endpoints are authored samples only; the root centreline follows actual liner ray hits, but full root face seating is not proved.",
+    "3.8mm paired stock/closed boundary and positive volume are not self-intersection, support, lap clearance or articulation evidence.",
+    "Face geometry uses independent transverse camber/roll and stepped free edges; supporting meridians derive from retained actual liner, which is unchanged.",
+    "Visible angular transitions and exposed liner gaps remain unresolved pending visual gate.",
+    "Nominal maximum local relief is25.8mm; torso backing/envelope/frame geometry is exact, but armor exterior silhouette can change locally.",
+    "Hydrated source binaries and Master03 are SHA-identical to committed LFS objects; historical model files were not regenerated."
+  ],
+  "notRun": [
+    "self/intersection screen",
+    "finite support/receiver common stock",
+    "motion/inspection clearance",
+    "app/build/runtime tests",
+    "owner likeness acceptance"
+  ],
+  "recipes": {
+    "builder": "scripts/build-v38-hanging-breast01.py",
+    "region": "scripts/regions/v38-hanging-breast01.py",
+    "frozenBuilderSHA256": "d7e594c633c2e9105859a12295442d35aaecae2f8a5ce892a6f9613da4e9f9d9",
+    "frozenRegionSHA256": "db5d2cba6e072d4dfcaaa35d12604ea7fb950a1fd0a87afbaf4dbe7358aedcca"
+  },
+  "preSaveRepair": "Initial flank root missed finite liner at angle1.055; source-preserving repair seated that authored flank centreline at angle.94 before the first native save."
+}

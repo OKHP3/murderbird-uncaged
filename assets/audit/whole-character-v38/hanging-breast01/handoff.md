@@ -1,0 +1,7 @@
+# Hanging breast01 — two frozen proposals
+
+Exact retained facial-fit01/attempt02 source at checkpoint86e4b67e4609183ccd0d7c683628fcc91f6f052a. Each proposal replaces33 source breast tiles with22 independently formed rigid shields on the unchanged breastplate inspection owner. First whole-bird visual gate found useful hanging-edge gain; finalmode strengthens diagonal sweep and staggered taper with smooth broadfaces/hardfiniteedges. Final rootgate retains visible development gain over the grid; fit HOLD and whole-character/owner approval pending. Broad upperplate scale/angular roots remain.
+
+First and attempt02 native/GLB, executed recipes, scope, contracts, receipts and six matched source/candidate PNGs per attempt are frozen. See attempt02/qualified-receipt.json for finalgeometry versus generic frozenmetadata qualifications, exact hashes and limits. No other meshgeometry/transforms/materials/era eligibility changed by builder assertions. Root independently verifies runtime export boundary.
+
+All22 solids in both attempts have closed edges and positive signedvolume. Full finite attachment area, self/neighbor overlaps, inspection and movement have not been tested. Rootcentrelines derive from actual liner rayhits; this is not full rootseat proof. Visible angular upperroot transitions and liner gaps remain. No third geometry, app/build, commit/push or production promotion. Regeneratefirst withoutflag and finalwith --attempt02 from canonical scripts; generators refuse existing native/GLB outputs.

@@ -11,6 +11,8 @@ import { applyEraFinishes } from './era-finish.js';
 // Development studies are served from the source tree without emitting them
 // into the production build. Production continues to use the selected V37.
 const reviewModels = import.meta.env.DEV ? {
+  'hanging-breast02': '/assets/models/whole-character-v38/hanging-breast01/attempt02/murderbird-v38-hanging-breast01-attempt02-rigid.glb',
+  'hanging-breast01': '/assets/models/whole-character-v38/hanging-breast01/murderbird-v38-hanging-breast01-rigid.glb',
   'facial-fit02': '/assets/models/whole-character-v38/facial-fit01/attempt02/murderbird-v38-facial-fit01-attempt02-rigid.glb',
   'bill-vault02': '/assets/models/whole-character-v38/bill-vault01/attempt02/murderbird-v38-bill-vault01-attempt02-rigid.glb',
   'optic-awake02': '/assets/models/whole-character-v38/optic-awake01/attempt02/murderbird-v38-optic-awake01-attempt02-rigid.glb',
@@ -182,9 +184,20 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   controls.maxDistance = 12;
   controls.minPolarAngle = .25;
   controls.maxPolarAngle = Math.PI / 2 - .03;
-  controls.target.set(0, 1.0, 0);
-  camera.position.set(-4.0, 2.85, 6.2);
-  controls.update();
+  const homeCameraTarget = new THREE.Vector3(0, 1.0, 0);
+  const homeCameraOffset = new THREE.Vector3(-4.0, 1.85, 6.2).multiplyScalar(.8);
+  const homeOrigin = new THREE.Vector3();
+  const homeRigPosition = new THREE.Vector3();
+  const homeTranslation = new THREE.Vector3();
+  let homeFollowing = true;
+  controls.addEventListener('start', () => { homeFollowing = false; });
+  function frameHomeCamera() {
+    homeFollowing = true;
+    controls.target.copy(homeCameraTarget).add(homeOrigin);
+    camera.position.copy(controls.target).add(homeCameraOffset);
+    controls.update();
+  }
+  frameHomeCamera();
   const pmrem = new THREE.PMREMGenerator(renderer);
   const room = new RoomEnvironment();
   const environment = pmrem.fromScene(room, .04);
@@ -270,6 +283,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
   }
   clearTimeout(timeout);
   const model = gltf.scene; scene.add(model);
+  const cameraRigRoot = model.getObjectByName('murderbird') || model;
   const names = ['body','neck','head','jaw','breastplate','cranial-cover','winding-drive','power-core','processing','industrial-repairs','builder-optics','left-mantle','right-mantle','left-wing-shield','right-wing-shield'];
   for (const name of ['cervical-mid-a', 'cervical-mid-b', 'cervical-upper']) {
     if (model.getObjectByName(name)) names.push(name);
@@ -364,6 +378,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     nodes['industrial-repairs'].visible=value!=='maker';
   }
   function reviewCamera(name) {
+    homeFollowing = false;
     const views={
       wholeBirdTight:{target:[0,1,0],offset:[-1.792,.80,2.752]},
       threeQuarter:{target:[0,1,0],offset:[-2.8,1.25,4.3]},
@@ -428,9 +443,10 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     const width=container.clientWidth,height=container.clientHeight;
     if(!width||!height||width===lastWidth&&height===lastHeight)return;
     lastWidth=width;lastHeight=height;renderer.setSize(width,height);camera.aspect=width/height;
-    camera.fov=THREE.MathUtils.radToDeg(2*Math.atan(Math.tan(THREE.MathUtils.degToRad(36/2))*Math.max(1,1.53/camera.aspect)));camera.updateProjectionMatrix();
+    const aspectFov=THREE.MathUtils.radToDeg(2*Math.atan(Math.tan(THREE.MathUtils.degToRad(36/2))*Math.max(1,1.53/camera.aspect)));
+    camera.fov=Math.min(48,aspectFov);camera.updateProjectionMatrix();
   }
-  function reset(){controls.minDistance=3.0;controls.maxDistance=12;controls.target.set(0,1.0,0);camera.position.set(-4.0,2.85,6.2);controls.update();}
+  function reset(){controls.minDistance=3.0;controls.maxDistance=12;cameraRigRoot.getWorldPosition(homeOrigin);homeOrigin.y=0;frameHomeCamera();}
   function percentile(values,quantile) {
     if(!values.length)return null;
     const sorted=[...values].sort((a,b)=>a-b);
@@ -441,7 +457,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     return {
       kind:'webgl',modelUrl,era,open,separation,frameCount,meanFps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),
       performance:{renderer:rendererName,softwareRenderer:Boolean(softwareRenderer),viewport:{width:lastWidth,height:lastHeight,bufferWidth:canvas.width,bufferHeight:canvas.height,pixelRatio:renderer.getPixelRatio()},frameMsP50:frameP50===null?null:frameP50*1000,frameMsP95:frameP95===null?null:frameP95*1000,fpsP50:frameP50>0?1/frameP50:null,fpsP05:frameP95>0?1/frameP95:null,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,geometries:renderer.info.memory.geometries,gpuTextures:renderer.info.memory.textures},
-      exterior:exteriorMetrics(),finishes:finishReport,review:{lighting:lightingMode,camera:camera.position.toArray(),target:controls.target.toArray()},
+      exterior:exteriorMetrics(),finishes:finishReport,review:{lighting:lightingMode,camera:camera.position.toArray(),target:controls.target.toArray(),homeFollowing},
       tip:worldTip.toArray(),headFront:contactBounds.setFromObject(nodes.head,true).max.z,
       wingAngles:{leftShoulder:nodes['left-mantle'].rotation.x,leftElbow:nodes['left-wing-shield'].rotation.x,rightShoulder:nodes['right-mantle'].rotation.x,rightElbow:nodes['right-wing-shield'].rotation.x},
       wingBounds:{left:new THREE.Box3().setFromObject(nodes['left-mantle'],true),right:new THREE.Box3().setFromObject(nodes['right-mantle'],true)},contactPlane:FRONT,
@@ -450,6 +466,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     };
   }
   function nudge(action){
+    homeFollowing = false;
     const offset=camera.position.clone().sub(controls.target);const s=new THREE.Spherical().setFromVector3(offset);
     if(action==='left')s.theta-=.23;if(action==='right')s.theta+=.23;
     if(action==='up')s.phi-=.14;if(action==='down')s.phi+=.14;
@@ -482,6 +499,14 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     }
     applyInspectionPose(nodes,rest,open,separation);
     model.updateMatrixWorld(true);
+    if(homeFollowing){
+      // Follow floor-plane travel only. Jump height and body articulation stay
+      // visible; orbiting, focusing or a review preset releases this camera.
+      cameraRigRoot.getWorldPosition(homeRigPosition);homeRigPosition.y=0;
+      homeTranslation.copy(homeRigPosition).sub(homeOrigin);
+      camera.position.add(homeTranslation);controls.target.add(homeTranslation);
+      homeOrigin.copy(homeRigPosition);controls.update();
+    }
     mechanisms.tick(dt,snapshot,motion.driveMetrics(),{open,separation});
     billTip.getWorldPosition(worldTip);
     const state=snapshot.state;
@@ -527,7 +552,7 @@ export async function createExhibit(container, updateMarker, { onReach, onContex
     setSeparation(value){targetSeparation=targetOpen?clamp(Number(value)||0,0,1):0;},
     setArmed(value){armed=value;controls.enabled=!value;canvas.style.cursor=value?'crosshair':'grab';pointer=null;},
     isAssembled(){return open===0&&separation===0;},
-    focus(id){const point=['drive','power','mind'].includes(id)?mechanisms.getAnchor(id):anchors[id]?.getWorldPosition(new THREE.Vector3());if(!point)return;vector.copy(point);const delta=vector.clone().sub(controls.target),radius=camera.position.distanceTo(controls.target);controls.target.copy(vector);if(['drive','power'].includes(id)&&era!=='maker'){const view=new THREE.Vector3(-6,1.8,2).normalize().applyAxisAngle(new THREE.Vector3(0,1,0),model.rotation.y);camera.position.copy(vector).addScaledVector(view,radius);}else camera.position.add(delta);controls.update();},
+    focus(id){const point=['drive','power','mind'].includes(id)?mechanisms.getAnchor(id):anchors[id]?.getWorldPosition(new THREE.Vector3());if(!point)return;homeFollowing=false;vector.copy(point);const delta=vector.clone().sub(controls.target),radius=camera.position.distanceTo(controls.target);controls.target.copy(vector);if(['drive','power'].includes(id)&&era!=='maker'){const view=new THREE.Vector3(-6,1.8,2).normalize().applyAxisAngle(new THREE.Vector3(0,1,0),model.rotation.y);camera.position.copy(vector).addScaledVector(view,radius);}else camera.position.add(delta);controls.update();},
     metrics,
     reviewCamera,
     reviewLighting,
