@@ -1,5 +1,7 @@
 # MurderBird: Uncaged
 
+**Current shared goal:** read the root-level [goal.md](goal.md) before assigning, reviewing or starting work. Its YAML front matter records `last_updated`; use GitHub `main` for the latest shared revision. Cross-system review and commentary: [GitHub issue #14](https://github.com/OKHP3/murderbird-uncaged/issues/14).
+
 **One inherited body. Three eras. An interactive mechanical-creature exhibit.**
 
 ![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)

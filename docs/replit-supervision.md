@@ -4,7 +4,7 @@ Owner direction, October 1, 2026: reuse Message Agent to uncover hidden question
 
 ## Current goal priority
 
-The [cinematic visual-first mandate](cinematic-visual-first-goal.md) governs new assignments. Prioritize source-matched full-bird color, texture and screen appearance. Do not resume old mechanical fit or head-support tasks merely because their historical receipts contain a next action. No active assignment means remain idle; a goal update alone is not a Replit work order. Free mode only remains mandatory.
+The [cinematic visual-first mandate](../goal.md) governs new assignments. Prioritize source-matched full-bird color, texture and screen appearance. Do not resume old mechanical fit or head-support tasks merely because their historical receipts contain a next action. No active assignment means remain idle; a goal update alone is not a Replit work order. Free mode only remains mandatory.
 
 ## Reusable check-in message
 

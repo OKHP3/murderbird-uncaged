@@ -1,6 +1,6 @@
 # Cinematic CG milestone plan
 
-Owner authorized Milestone 1 only on October 2, 2026. Remaining milestones are proposals, not approved work orders. Controlling mandate: [cinematic visual-first goal](cinematic-visual-first-goal.md).
+Owner authorized Milestone 1 only on October 2, 2026. Remaining milestones are proposals, not approved work orders. Controlling mandate: [root goal](../goal.md).
 
 | Milestone | Deliverables and visual pass criteria | Ceiling |
 |---|---|---|
