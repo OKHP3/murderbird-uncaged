@@ -1,5 +1,7 @@
 # MurderBird: Uncaged Agent Guidance
 
+**Current shared goal:** read [goal.md](goal.md) and the [cinematic mandate](docs/cinematic-visual-first-goal.md) before starting work. Cross-system review and commentary: [issue #14](https://github.com/OKHP3/murderbird-uncaged/issues/14).
+
 These instructions govern work in this repository only. They do not replace or modify OverKill Hill P³ universal governance. Read [the repository boundaries](docs/repository-boundaries.md), [the asset guide](assets/README.md), and [NOTICE.md](NOTICE.md) before migrating or publishing MurderBird material.
 
 ## Repository roles

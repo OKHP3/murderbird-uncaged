@@ -1,5 +1,7 @@
 # MurderBird: Uncaged
 
+**Current shared goal:** read [goal.md](goal.md) and the [cinematic mandate](docs/cinematic-visual-first-goal.md) before starting work. Cross-system review and commentary: [issue #14](https://github.com/OKHP3/murderbird-uncaged/issues/14).
+
 **One inherited body. Three eras. An interactive mechanical-creature exhibit.**
 
 ![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)
