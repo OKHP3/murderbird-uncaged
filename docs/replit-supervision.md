@@ -22,3 +22,24 @@ Each task names its target URL/revision, one visible outcome, owned paths or rea
 Use Replit Free for preview recovery, bounded application work and interface review; Codex/Claude/OpenClaw/Open WebUI for isolated implementation or independent critique when available; GitHub for exchange and review; Notion for an existing authorized coordination destination; Copilot/Gemini/Perplexity for bounded second opinions; Firefly/Muse for explicitly scoped visual studies without replacing approved source authority; Mermaid for explanatory diagrams when useful. Installed or named is not proof of access, capability, free entitlement or completed work. Do not activate every tool merely to create activity. No new purchases, paid upgrades or publication permissions are implied.
 
 Current project conversation: https://replit.com/t/overkill-hill/repls/murderbird-uncaged/task/5305906f-522a-4436-816f-aa42072c4155 . Verify the live Free mode label before sending. A stale browser-control tab may need reconnecting; a control timeout is not evidence that Replit's job stopped.
+
+## Owner-requested routes to retain
+
+Notion, Siri, Gemini and Muse remain in the delegation mix. Notion's existing
+Librarian completed a bounded lookup on October 1; its returned CRT handoff is
+historical context, not the current V38 model authority. CryptKeeper is a
+candidate for an authorized documentation handoff.
+
+After Mac interface access returned, Gemini completed a supplied-facts-only
+breast-fit recommendation: address the finite receiving boundary before further
+trimming. This is a proposal, not a visual inspection or proof of causation.
+Muse completed a read-only handoff audit and reported fetching revision
+`9cc1b3c2da8cb064f343ab5915b32d0ab53236b1`. Its review confirms the documented
+limits, not artistic acceptance. The handoff's earlier Replit status is historical;
+Replit subsequently acknowledged that exact checkpoint in the supervision receipt.
+Siri selection timed out and no Siri app appeared in the enabled inventory.
+Its capability remains unverified; no task, microphone permission or setting
+change was submitted. Keep receipts and pending capability checks in the private
+routing record.
+Use existing included allowances; do not infer that a subscription covers a new
+metered call or upgrade. Dispatch only a bounded task with a useful return.
