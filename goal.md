@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-02T11:03:09-05:00"
+last_updated: "2026-10-02T11:49:36-05:00"
 timezone: "America/Chicago"
-status: "milestone-1-authorized-reference-pending"
+status: "milestone-1-authorized"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -31,15 +31,15 @@ Every visual judgment in this track is made against these artifacts and no other
 
 | Reference | Controls | Location and SHA-256 in checkout |
 |---|---|---|
-| Locked Sept 22 composite | Full-bird canon | **UNRESOLVED: owner must supply exact artifact.** No image attachment was accessible with Milestone 1 authorization. |
-| Candidate 03 | Prior common body/compact shield-wing direction; relationship to Sept 22 composite unconfirmed | `assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png` — `538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633` |
+| Locked Sept 22 composite | Full-bird canon | `assets/img/library/murderbird-locked-sept22-composite-2026-09-22.png` — `fb070d5eb86d682015091bad11cceba23ec2c1f6de2c3f17c7ddbf2d4d6b83ef` |
+| Candidate 03 | Prior common body/compact shield-wing direction; distinct files; owner-locked composite controls full-bird canon; candidate03 remains prior body direction | `assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png` — `538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633` |
 | July selection | Head identity only; deep long hooked bill, swept crown, recessed circular optic, cheek opening | `context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png` — `47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9` |
 | Maker era image | Maker finish; newly made state | `assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png` — `93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9` |
 | Mechanic era image | Mechanic finish | `assets/img/library/murderbird-unified-mechanic-candidate-2026-09-06.png` — `0bd7c79510be9eeef024f8861a7576b777a7f5de5710523e8d2ab039d03c65f9` |
 | Advanced era image | Advanced finish | `assets/img/library/murderbird-unified-heart-candidate-2026-09-06.png` — `9430f91e3cd3fc8223297720a0f57ec1c46e9c8245cfba91495e9c362029fea9` |
 | First Choice video | Surface continuity and screen presence; exact frame times to be recorded | `assets/video/murderbird-first-choice-635f0e15.mp4` — `635f0e1552bac61699c03c8406157207f6230ea817bb1ecaeb3adbb3a7bf8613` |
 
-These are verified existing binaries, not new artistic approvals. Candidate 03 and the Sept 22 composite are not assumed identical. Reference inventory is Milestone 1’s first activity; camera locking and comparison renders begin only after unresolved identities and scopes are settled. The July body and long hanging wings remain excluded. Selected video is eight seconds; new extracted frame hashes must be recorded separately.
+These are verified existing binaries, not new artistic approvals. Hash comparison: distinct files; owner-locked composite controls full-bird canon; candidate03 remains prior body direction. Reference inventory is Milestone 1’s first activity; camera locking and comparison renders begin only after unresolved identities and scopes are settled. The July body and long hanging wings remain excluded. Selected video is eight seconds; new extracted frame hashes must be recorded separately.
 
 **No-substitution rule.** If a pinned reference cannot be located in the checkout, stop and ask the owner. Never substitute another image, frame, or render. A checkpoint judged against an unpinned reference is invalid.
 
@@ -97,6 +97,6 @@ Keep bounded parallel work, cheap targeted checks, coherent commits and frequent
 
 The previous operational goal is preserved locally in the Git-ignored supervision archive. Prior repository directives remain in Git history and the creative-authority record; their reference, rights and preservation rules still apply.
 
-## Current authorization and blocker
+## Current authorization
 
-Milestone 1 only is authorized. Branch separation and base-prop verification are complete. Exact Sept 22 reference remains unavailable; cameras are not locked and baseline comparisons are not rendered. Stop for the reference; do not begin Milestone 2 or restart historical engineering tasks. Goal changes themselves do not grant implementation or publication approval.
+Milestone 1 only authorized. Exact composite supplied and pinned; baseline review pending. No Milestone 2 authority.
