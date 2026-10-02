@@ -1,0 +1,93 @@
+{
+  "status": "bounded read-only export diagnostic complete",
+  "question": "Whether the 18 native-only V33 tapered throat cheek plate meshes are intended historical/helper objects or accidentally omitted current cheek construction.",
+  "conclusion": {
+    "classification": "deliberately hidden historical geometry; omission from the current GLB is expected, not an export loss of current cheek construction",
+    "confidence": "high for export eligibility and render visibility; this does not assess artistic likeness",
+    "reason": "All 18 Blender mesh objects are parented to head and tagged silhouetteStudyHistoricalHidden=true. In the inspected hanging-breast01 native file each also has hide_render=true, hide_viewport=true, and hide_get=true. The regional-metal native-only list names exactly these objects, while the source GLB already omits them. Current visible cheek construction is represented by separate exported meshes."
+  },
+  "authority": {
+    "document": "docs/creative-authority.md",
+    "scope": "July owner-selected image controls head identity only: deep hooked bill, open cheek/mandible silhouette, circular optic, swept crown; its body, wings, and hanging train are excluded.",
+    "constructionContract": "docs/structural-construction-contract.md specifies the July reference as head-only and says the cheek opening must remain open through jaw travel."
+  },
+  "source": {
+    "branch": "codex/v38-breast-seat-01",
+    "head": "a35670c09fd0dcd6d3cc2ef50b53d756bec447a2",
+    "nativePath": "assets/models/whole-character-v38/hanging-breast01/attempt02/murderbird-v38-hanging-breast01-attempt02.blend",
+    "nativeSha256": "d32f187f98e34827f31828035d81324ee3af9f28a2aeb21e9d869e16d8d5192d",
+    "glbPath": "assets/models/whole-character-v38/hanging-breast01/attempt02/murderbird-v38-hanging-breast01-attempt02-rigid.glb",
+    "glbSha256": "051477ffcf62a4e08a3f1968d6cec7fd7f8b0677661cd72dde6ad7bbd5514650"
+  },
+  "regionalMetalReceipt": {
+    "path": "assets/audit/whole-character-v38/regional-metal01/receipt.json (regional-metal worktree)",
+    "sourceGlbSha256": "051477ffcf62a4e08a3f1968d6cec7fd7f8b0677661cd72dde6ad7bbd5514650",
+    "sourceGlbMatchesHangingBreastGlb": true,
+    "nativeOnlyCount": 18,
+    "preservation": {
+      "nativeGeometryTransformsTagsVisibilityExact": true,
+      "glbBinaryChunkByteIdentical": true,
+      "glbNodesMeshReferencesAccessorsAndEligibilityExact": true,
+      "breastMaterialsUnchanged": true,
+      "opticMaterialUnchanged": true
+    },
+    "nativeOnlyObjectNames": [
+      "V33 tapered throat cheek plate -1 0 0",
+      "V33 tapered throat cheek plate -1 0 1",
+      "V33 tapered throat cheek plate -1 0 2",
+      "V33 tapered throat cheek plate -1 1 0",
+      "V33 tapered throat cheek plate -1 1 1",
+      "V33 tapered throat cheek plate -1 1 2",
+      "V33 tapered throat cheek plate 0 0 0",
+      "V33 tapered throat cheek plate 0 0 1",
+      "V33 tapered throat cheek plate 0 0 2",
+      "V33 tapered throat cheek plate 0 1 0",
+      "V33 tapered throat cheek plate 0 1 1",
+      "V33 tapered throat cheek plate 0 1 2",
+      "V33 tapered throat cheek plate 1 0 0",
+      "V33 tapered throat cheek plate 1 0 1",
+      "V33 tapered throat cheek plate 1 0 2",
+      "V33 tapered throat cheek plate 1 1 0",
+      "V33 tapered throat cheek plate 1 1 1",
+      "V33 tapered throat cheek plate 1 1 2"
+    ]
+  },
+  "nativeInspection": {
+    "tool": "Blender 5.2.1 LTS, background open/read of hanging-breast01 attempt02 .blend",
+    "objectsFound": 18,
+    "allMeshObjects": true,
+    "allParentedTo": "head",
+    "allHistoricalHiddenTag": true,
+    "allHideRender": true,
+    "allHideViewportAndHideGet": true,
+    "sharedProps": {
+      "region": "head",
+      "surfaceRole": "receiving-plate",
+      "constructionClass": "inherited-passive",
+      "constructionOwner": "head",
+      "exteriorEras": "maker,mechanic,builder"
+    },
+    "authoringGuideTagPresent": false,
+    "exportInheritance": "attempt02 builder starts from existing source-GLB node names, removes/adds the scoped nodes, then exports that set; native-only historical objects are not silently re-added."
+  },
+  "currentVisibleCheekConstructionInSourceGlb": [
+    "V38 facial-shell cheek bridge 1",
+    "V38 facial-shell cheek bridge -1",
+    "V33 formed lower cheek receiver 1 0",
+    "V33 formed lower cheek receiver 1 1",
+    "V33 formed lower cheek receiver -1 0",
+    "V33 formed lower cheek receiver -1 1",
+    "V32 formed mandibular bowl"
+  ],
+  "nativeSourceRender": {
+    "path": "assets/audit/whole-character-v38/regional-metal01/authoring/source-maker-neutral-head-wing-close.png (regional-metal worktree)",
+    "sha256": "92a746ba116d378194ee7717c313cc9df2d417b08afbd0163a463eb80d7dcb5c",
+    "observation": "Inspected image shows the head with the separate cheek bridge/receiver and jaw assembly visible. The 18 historical-hidden V33 tapered throat cheek plate meshes do not appear; the visual cheek opening and active assembly come from other exported objects."
+  },
+  "nextScopedTask": "Make a read-only July-reference review of the active exported cheek assembly only: compare the visible cheek bridge, lower cheek receivers, mandibular bowl, optic surround, and bill opening against the July head reference from matched side and three-quarter views. Record specific shape gaps and preserve July head-only authority; exclude body/wings and make no model or export edits during review. This determines whether a later geometry increment is warranted.",
+  "limits": [
+    "No models, app code, or existing worker artifacts were edited.",
+    "The prior owner likeness gate remains unresolved; this diagnostic is not likeness acceptance.",
+    "Source breast capture in this checkout is an unmaterialized Git LFS pointer; visual render evidence used the materialized regional-metal source head capture."
+  ]
+}
