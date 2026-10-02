@@ -31,3 +31,7 @@ This is the current operating mandate for Codex, Claude, and Replit. It replaces
 At each checkpoint, report the visible result, changed paths, commit SHA, checks performed, GitHub branch/SHA, confirmations from systems that fetched it, and any open visual or sync blocker. This makes the next increment start from known evidence rather than an assumed state.
 
 Use GitHub as the exchange point. Publish a concise handoff alongside each checkpoint: controlling reference, bounded assignment, owned paths, current branch/SHA, preview or comparison, checks already completed, and next action. Other systems fetch and acknowledge that exact revision before editing. Confirm Replit directly after an integrated `main` update; do not treat a pushed branch as proof that Replit, Claude, or another host has received it.
+
+## Active supervision
+
+Use the reusable [Replit check-in and routing contract](replit-supervision.md) for stale assignments and hidden response cards. The integrator must inspect concrete artifacts and process state at each checkpoint; a worker marked running without a deliverable is not itself progress. Keep external reviewers scoped and adjudicate their suggestions against creative authority before implementation.
