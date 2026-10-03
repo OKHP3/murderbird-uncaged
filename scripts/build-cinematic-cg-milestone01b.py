@@ -5,7 +5,7 @@ from mathutils import Vector
 R=Path(__file__).resolve().parents[1]
 P=R/'assets/models/whole-character-v38/hanging-breast01/attempt02/murderbird-v38-hanging-breast01-attempt02-rigid.glb'
 O=R/'assets/audit/cinematic-cg-milestone01b'; A=R/'assets/models/cinematic-cg-milestone01b'
-parser=argparse.ArgumentParser(); parser.add_argument('--final',action='store_true'); parser.add_argument('--attempt',default='attempt01');parser.add_argument('--era',default='builder');parser.add_argument('--baseline',action='store_true');parser.add_argument('--resolution',type=int,default=768)
+parser=argparse.ArgumentParser(); parser.add_argument('--final',action='store_true'); parser.add_argument('--attempt',default='owner-proportions01');parser.add_argument('--era',default='builder');parser.add_argument('--baseline',action='store_true');parser.add_argument('--resolution',type=int,default=768)
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 T=O/args.attempt;T.mkdir(parents=True,exist_ok=True);A.mkdir(parents=True,exist_ok=True)
 assert hashlib.sha256(P.read_bytes()).hexdigest()=='051477ffcf62a4e08a3f1968d6cec7fd7f8b0677661cd72dde6ad7bbd5514650'
@@ -27,6 +27,26 @@ if not args.baseline:
   if o.type=='CURVE' and o.get('cg1bRegion'):
    bpy.ops.object.select_all(action='DESELECT');o.hide_viewport=False;o.select_set(True);bpy.context.view_layer.objects.active=o
    bpy.ops.object.convert(target='MESH')
+ # Owner proportion correction: body cross-section -10%, vertical length +12%;
+ # neck height -15%, transverse thickness +20%. Work in world space.
+ counts={'body':0,'neck':0,'head':0}
+ for o in list(s.objects):
+  if o.type!='MESH' or o.hide_render:continue
+  region=o.get('cg1bRegion') or o.get('region','')
+  group=('head' if region in ('head','head-reconstruction') else 'neck' if region=='neck' else 'body' if region in ('body','wing','breast','shoulder','torso','mantle','torso-pelvis') else None)
+  if group is None:continue
+  o.data=o.data.copy();w=o.matrix_world.copy();inv=w.inverted()
+  for v in o.data.vertices:
+   p=w@v.co
+   if group=='body':
+    p.x*=.90;p.y=-.094+(p.y+.094)*.90;p.z=.945+(p.z-.945)*1.12
+   elif group=='neck':
+    center_y=-.235-(p.z-1.18)*(.19/.33)
+    p.x*=1.20;p.y=center_y+(p.y-center_y)*1.20;p.z=1.18+(p.z-1.18)*.85
+   else:p.z-=.0495
+   v.co=inv@p
+  counts[group]+=1
+ receipt['changes']['ownerProportions']={'bodyHorizontalScale':.90,'bodyVerticalScale':1.12,'neckHeightScale':.85,'neckThicknessScale':1.20,'headFollowZ':-.0495,'interpretation':'Lengthen torso vertically; narrow both horizontal axes. Head follows shorter neck. Camera unchanged.'}
  receipt['changes']['surface']=module('surface').apply(s,A,args.era)
 s.render.engine='CYCLES';s.cycles.samples=32 if args.final else 12;s.cycles.use_denoising=True
 s.render.resolution_x=args.resolution;s.render.resolution_y=round(args.resolution*4/3);s.render.resolution_percentage=100

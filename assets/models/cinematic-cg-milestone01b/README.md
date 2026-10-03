@@ -9,9 +9,11 @@ Preserved input: `../whole-character-v38/hanging-breast01/attempt02/murderbird-v
 Reproduce with Blender:
 
 ```sh
-blender -b -t 8 --python scripts/build-cinematic-cg-milestone01b.py -- --final --attempt attempt02 --resolution 768
+blender -b -t 8 --python scripts/build-cinematic-cg-milestone01b.py -- --final --attempt owner-proportions01 --resolution 768
 ```
 
 [Fixed-camera comparisons and interactive local preview](../../audit/cinematic-cg-milestone01b/review.html). Run a loopback HTTP server at repository root for the interactive preview; its Three.js imports use the existing installed dependencies. Opening as a local file may block the viewer. Comparison PNGs remain available independently.
 
 Known failures: overly regular armor, rounded shield contour, angular head, muted worn-metal edges and crude joins. Final likeness requires owner artistic review. Original engineering archive and deployed V37 remain unchanged by this study.
+
+Owner-reviewed proportion direction incorporated: torso cross-section -10%, vertical length +12%; neck length -15%, thickness +20%; head follows neck. Review remains pending. Earlier study assets are preserved in Git commit `ba72bc9012c5cccd61d420591203eb08200a2341`.
