@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-02T11:49:36-05:00"
+last_updated: "2026-10-03T06:18:19-05:00"
 timezone: "America/Chicago"
 status: "milestone-1-authorized"
 canonical_path: "goal.md"
@@ -31,7 +31,7 @@ Every visual judgment in this track is made against these artifacts and no other
 
 | Reference | Controls | Location and SHA-256 in checkout |
 |---|---|---|
-| Locked Sept 22 composite | Full-bird canon | `assets/img/library/murderbird-locked-sept22-composite-2026-09-22.png` — `fb070d5eb86d682015091bad11cceba23ec2c1f6de2c3f17c7ddbf2d4d6b83ef` |
+| Locked Sept 22 composite | Full-bird canon | `assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg` — `645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114` |
 | Candidate 03 | Prior common body/compact shield-wing direction; distinct files; owner-locked composite controls full-bird canon; candidate03 remains prior body direction | `assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png` — `538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633` |
 | July selection | Head identity only; deep long hooked bill, swept crown, recessed circular optic, cheek opening | `context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png` — `47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9` |
 | Maker era image | Maker finish; newly made state | `assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png` — `93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9` |
@@ -92,11 +92,25 @@ Keep bounded parallel work, cheap targeted checks, coherent commits and frequent
 |---|---|---|---|---|
 | The owner changed the goal to cinematic appearance first. | Confirmed | Direct instructions in this chat, October 1, 2026. | Workers could continue the rejected mechanics-first loop. | Read this mandate before assigning the next visual pass. |
 | These edits change instructions, not the current model or deployed exhibit. | Confirmed | Documentation-only scope of this checkpoint. | Instruction delivery could be mistaken for visible improvement. | Review actual candidate images at the next implementation checkpoint. |
-| A complete visual match has been achieved. | Unknown; not claimed | Owner review remains outstanding. | Premature acceptance or release. | Matched full-bird reference/candidate views and owner review. |
+| A complete visual match has been achieved. | Not achieved for the reviewed baseline | Owner review in this chat: the target aesthetic is missing and the model remains a long way off. | Premature acceptance or release. | Matched full-bird reference/candidate views and owner review. |
 | Engineering/CG track separation is in place. | Confirmed | Both branch refs verified on GitHub, 2026-10-02; branch pins above. | New CG work contaminates the frozen engineering line. | Preserve archive ref; keep all new CG work on the separate branch. |
 
 The previous operational goal is preserved locally in the Git-ignored supervision archive. Prior repository directives remain in Git history and the creative-authority record; their reference, rights and preservation rules still apply.
 
 ## Current authorization
 
-Milestone 1 only authorized. Exact composite supplied and pinned; baseline review pending. No Milestone 2 authority.
+Milestone 1 only was authorized. Exact composite supplied and pinned; the baseline has received owner feedback rejecting its visual likeness. Camera framing has not been explicitly approved. No Milestone 2 authority.
+
+## Owner review of Milestone 1
+
+The owner reviewed the baseline delivered at CG commit `e554edf6768f9a4b002586d3bbdb0b7550244706` and said it is missing the target aesthetic: it resembles a metal flightless bird with green tone and orange eyes, but remains "a long way off." Source: direct owner feedback in this chat following the baseline comparison. This records a rejected visual match, not acceptance of the current modeling direction or camera framing.
+
+Baseline evidence remains on the separate [CG track](https://github.com/OKHP3/murderbird-uncaged/tree/e554edf6768f9a4b002586d3bbdb0b7550244706/assets/audit/cinematic-cg-milestone01). The diagnostic renders establish a starting point; they do not demonstrate an exterior improvement.
+
+The proposed next step is the bounded silhouette milestone in the plan. The owner must approve camera framing or request corrections and explicitly authorize that milestone before modeling resumes. This review record authorizes no modeling, engineering, publication or new Replit assignment.
+
+## Milestone 1a — target-aligned baseline
+
+The owner reissued the workshop full-bird image and requested an alternative Milestone 1a. The newly supplied JPEG controls this comparison. It is byte-distinct from candidate 03 and from the earlier supplied PNG, which remains preserved at `assets/img/library/murderbird-locked-sept22-composite-2026-09-22.png` (SHA-256 `fb070d5eb86d682015091bad11cceba23ec2c1f6de2c3f17c7ddbf2d4d6b83ef`). Different hashes do not establish a different composition or independent artwork. Both candidate 03 and the full-bird canon retain their separate scopes.
+
+Milestone 1a: verify pins, lock an estimated target-angle camera with comparable bird height, then show the unchanged prop beside the canon under neutral and workshop-style diagnostic lighting. Preserve the original reference; any comparison crop is display-only. Ceiling: 15 minutes / 3,000 tokens total. Pass concerns truthful framing and visible discrepancy evidence, not artistic likeness acceptance. No silhouette remodeling, engineering or Milestone 2 is authorized. Stop at the comparison for owner review.
