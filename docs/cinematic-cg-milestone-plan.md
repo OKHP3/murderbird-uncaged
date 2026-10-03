@@ -1,6 +1,6 @@
 # Cinematic CG milestone plan
 
-Owner has authorized Milestones 1, 1a, 1b, 1c and 2. Milestones 3–4 remain proposals, not approved work orders. Controlling mandate: [root goal](../goal.md).
+Owner has authorized Milestones 1, 1a, 1b, 1c, 2 and 3. Milestone 4 remains a proposal. Controlling mandate: [root goal](../goal.md).
 
 | Milestone | Deliverables and visual pass criteria | Ceiling |
 |---|---|---|
@@ -31,19 +31,22 @@ Owner authorized **30,000 tokens total / three hours / at most three workers** f
 
 ### Milestone 1c disposition
 
-Two integrated attempts delivered on `codex/cinematic-vfx-milestone01c`, exact
-checkpoint `a927c4f6d48f67b44e365e20d90fd655d1ddc51a`.
-[Handoff and evidence](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/README.md).
-Owner artistic review pending; execution has stopped. No later milestone begins
-automatically. This documentation update does not merge or deploy the CG assets.
+Two integrated attempts delivered on `codex/cinematic-vfx-milestone01c`.
+[Review and exact evidence](../assets/audit/cinematic-cg-milestone01c/README.md).
+Owner artistic review pending; no later milestone begins automatically.
 
-## Milestone 2 authorization and checkpoint
+## Authorized Milestone 2
 
-Owner accepted 1C as sufficient to proceed. One focused creature-silhouette pass
-rounds folded shoulder caps and torso transitions while preserving accepted
-proportions, stance and materials. Plan ceiling: 45 minutes / 12,000 aggregate
-tokens, including workers and integration. Owner silhouette review pending;
-no Milestone 3 or 4 begins automatically. Exact checkpoint: `42a7e7c3980f55a413ab64edfb34d4fe384e6a77`.
-[Handoff and matched views](https://github.com/OKHP3/murderbird-uncaged/blob/42a7e7c3980f55a413ab64edfb34d4fe384e6a77/assets/audit/cinematic-cg-milestone02/README.md).
-Implementation stays on `codex/cinematic-vfx-milestone02`; this documentation
-update does not merge or deploy the CG assets.
+Owner accepted 1C as sufficient to proceed. Start from exact checkpoint
+`a927c4f6d48f67b44e365e20d90fd655d1ddc51a`. Creature silhouette pass,
+45 minutes / 12,000 aggregate tokens: preserve accepted proportions and stance,
+refine faceted contours and folded shoulder/wing continuity, deliver common-camera
+before/after and eight views. Stop for owner review; no Milestone 3 or 4 implied.
+
+Milestone 2 disposition: one focused contour pass delivered; owner review pending.
+[Matched views and handoff](../assets/audit/cinematic-cg-milestone02/README.md).
+No Milestone 3 or 4 work begins automatically.
+
+## Authorized Milestone 3
+
+Owner approved the pose revision `8d6a113e3c7f2d9653830f272daf33cec74fb395` and directed proceeding. Cinematic appearance: 40 minutes / 10,000 aggregate tokens; start 2026-10-03T15:18:39Z, deadline15:58:39Z. Preserve approved pose and large forms; improve metal, recessed optic and armor layering. Deliver three-era native/browser assets, exhibit-lit eight-view turntable, two hero views and head/breast close-ups with matched before/after. Root integrates three isolated existing workers up to1,500 tokens each and retains5,500. At most two integrated attempts; stop for owner artistic review. No animation, runtime replacement, release or engineering work.
