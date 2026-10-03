@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T06:18:19-05:00"
+last_updated: "2026-10-03T06:40:06-05:00"
 timezone: "America/Chicago"
-status: "milestone-1-authorized"
+status: "milestone-1b-authorized"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -56,7 +56,7 @@ The owner’s October 2 restatement explicitly confirms dark, non-awakened optic
 
 ## Track completion
 
-The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Only Milestone 1 is authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
+The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a and the bounded visual attempt 1b are authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
 
 ## Visual construction rules
 
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Milestone 1 only was authorized. Exact composite supplied and pinned; the baseline has received owner feedback rejecting its visual likeness. Camera framing has not been explicitly approved. No Milestone 2 authority.
+Milestone 1b is now authorized as the bounded visual attempt below. Baseline likeness remains rejected; the existing camera is used consistently for comparison, without claiming owner framing approval. No Milestone 2 authority.
 
 ## Owner review of Milestone 1
 
@@ -114,3 +114,11 @@ The proposed next step is the bounded silhouette milestone in the plan. The owne
 The owner reissued the workshop full-bird image and requested an alternative Milestone 1a. The newly supplied JPEG controls this comparison. It is byte-distinct from candidate 03 and from the earlier supplied PNG, which remains preserved at `assets/img/library/murderbird-locked-sept22-composite-2026-09-22.png` (SHA-256 `fb070d5eb86d682015091bad11cceba23ec2c1f6de2c3f17c7ddbf2d4d6b83ef`). Different hashes do not establish a different composition or independent artwork. Both candidate 03 and the full-bird canon retain their separate scopes.
 
 Milestone 1a: verify pins, lock an estimated target-angle camera with comparable bird height, then show the unchanged prop beside the canon under neutral and workshop-style diagnostic lighting. Preserve the original reference; any comparison crop is display-only. Ceiling: 15 minutes / 3,000 tokens total. Pass concerns truthful framing and visible discrepancy evidence, not artistic likeness acceptance. No silhouette remodeling, engineering or Milestone 2 is authorized. Stop at the comparison for owner review.
+
+## Milestone 1b — bounded cinematic likeness attempt
+
+The owner authorized an attempt at Milestone 1b with a ceiling of **30,000 tokens total, three hours elapsed, and at most three workers**. This supersedes the prior no-model-edit boundary for this milestone only. Start from the preserved attempt02 rigid GLB; create a separate CG study, preserving the source. Improve visible proportions, coherent overlapping shield-wing/breast coverage and full-bird regional materials toward the locked Sept 22 canon and July head identity. No engineering tasks, animation, runtime promotion or subsequent milestone is authorized.
+
+Use the Milestone 1a camera and neutral/workshop lighting for before/after comparisons; do not conceal changes by changing camera or exposure. Deliver an editable Blender study, browser-readable GLB with baked PBR maps where needed, eight-angle views and hero/close-up evidence. Attempt at most two integrated visual iterations; stop if two iterations show no visible gain, or at budget exhaustion. Passing the implementation checkpoint means a visibly improved study is delivered for owner review, not final likeness acceptance.
+
+Budget allocation: head/neck worker 5,000 tokens, body/wing worker 5,000, surface worker 5,000; root integration/render/review/sharing 15,000. Workers own disjoint module files in isolated checkouts; no further delegation. Root alone integrates, saves the complete asset, pushes coherent checkpoints and reports remaining likeness failures. Stop after Milestone 1b for owner review.
