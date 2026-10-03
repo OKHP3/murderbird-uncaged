@@ -1,0 +1,619 @@
+{
+  "status": "Owner review pending; proposed CG character",
+  "mode": "candidate",
+  "attempt": "attempt01",
+  "era": "builder",
+  "geometry_input": "assets/models/cinematic-cg-milestone02/murderbird-cg-2-builder.blend",
+  "input_sha256": "ae5cccfd0d55b10206d2201742737b991155a9529f6da1af9530de373bf7207e",
+  "previous_detailed_sha256": "ae5cccfd0d55b10206d2201742737b991155a9529f6da1af9530de373bf7207e",
+  "changes": {
+    "head": {
+      "module": "cinematic-cg-2-head-pose",
+      "headMeshes": 207,
+      "neckMeshes": 101,
+      "neckRotationXDegrees": -14,
+      "headAdditionalXDegrees": 8,
+      "headNetXDegrees": -6,
+      "shoulderPivot": [
+        0.0,
+        -0.09000000357627869,
+        1.3700000047683716
+      ],
+      "originalHeadJunction": [
+        0.0,
+        -0.1599999964237213,
+        1.5499999523162842
+      ],
+      "posedHeadJunction": [
+        0.0,
+        -0.11437474191188812,
+        1.5615876913070679
+      ],
+      "headJunctionDelta": [
+        0.0,
+        0.04562525451183319,
+        0.011587738990783691
+      ],
+      "lowerNeckPinnedBelowZ": 1.38,
+      "neckBlendFullAtZ": 1.485,
+      "scaleChange": 0,
+      "scope": "pure posture correction; body/legs and head geometry/materials retained"
+    },
+    "body": {
+      "module": "cg2-owner-leg-pose",
+      "objectsChanged": 354,
+      "segmentLengths": {
+        "left": {
+          "upper": {
+            "oldLength": 0.36850240157541975,
+            "newLength": 0.2909536342407475
+          },
+          "shank": {
+            "oldLength": 0.3912978236984693,
+            "newLength": 0.31195189494997017
+          },
+          "tarsus": {
+            "oldLength": 0.20126847757626487,
+            "newLength": 0.1945481965260279
+          }
+        },
+        "right": {
+          "upper": {
+            "oldLength": 0.36850240157541975,
+            "newLength": 0.2909536342407475
+          },
+          "shank": {
+            "oldLength": 0.3912978236984693,
+            "newLength": 0.31195189494997017
+          },
+          "tarsus": {
+            "oldLength": 0.20126847757626487,
+            "newLength": 0.1945481965260279
+          }
+        }
+      },
+      "footShiftOutward": 0.03,
+      "feetVerticalShift": 0,
+      "targetAnchors": {
+        "hip": [
+          0.165,
+          0.105,
+          0.865
+        ],
+        "knee": [
+          0.167,
+          0.01,
+          0.59
+        ],
+        "hock": [
+          0.175,
+          0.075,
+          0.285
+        ]
+      },
+      "limits": "Visual stance deformation with rigid hinge translations; segment lengths intentionally change, no IK or mechanical validation. Source study hips remain fixed at .165; target angles/positions are integrator proposals from the locked image."
+    }
+  },
+  "materials": "Unchanged packed 1C regional materials; no surface pass",
+  "cameras": {
+    "canon-neutral": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "neutral"
+    },
+    "canon-workshop": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "workshop"
+    },
+    "legacy-neutral": {
+      "location": [
+        -6.0,
+        -3.5,
+        2.75
+      ],
+      "rotation_euler": [
+        1.3050193786621094,
+        7.730646700565558e-08,
+        -1.0527278184890747
+      ],
+      "ortho_scale": 2.25,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "legacy-workshop": {
+      "location": [
+        -6.0,
+        -3.5,
+        2.75
+      ],
+      "rotation_euler": [
+        1.3050193786621094,
+        7.730646700565558e-08,
+        -1.0527278184890747
+      ],
+      "ortho_scale": 2.25,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "angle-000": {
+      "location": [
+        0.0,
+        -6.039999961853027,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -0.0,
+        0.0
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-045": {
+      "location": [
+        4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        1.7199390356381627e-08,
+        0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-090": {
+      "location": [
+        6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -2.217801764459182e-08,
+        1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-135": {
+      "location": [
+        4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.4383206803358917e-07,
+        2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-180": {
+      "location": [
+        7.347880586115415e-16,
+        5.960000038146973,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.488601100163578e-07,
+        3.141592502593994
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-225": {
+      "location": [
+        -4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        -1.4383206803358917e-07,
+        -2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-270": {
+      "location": [
+        -6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        2.217801764459182e-08,
+        -1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-315": {
+      "location": [
+        -4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        -1.7199390356381627e-08,
+        -0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "head-closeup": {
+      "location": [
+        -6.0,
+        -2.140000104904175,
+        2.1500000953674316
+      ],
+      "rotation_euler": [
+        1.4803043603897095,
+        -1.1085612072747608e-07,
+        -1.270190715789795
+      ],
+      "ortho_scale": 0.7699999809265137,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "body-closeup": {
+      "location": [
+        -6.0,
+        -2.140000104904175,
+        1.5499999523162842
+      ],
+      "rotation_euler": [
+        1.4816019535064697,
+        -2.5958488691912862e-08,
+        -1.2267169952392578
+      ],
+      "ortho_scale": 1.2200000286102295,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "side-profile": {
+      "location": [
+        -6.0,
+        0.0,
+        0.9399999976158142
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -0.0,
+        -1.5707963705062866
+      ],
+      "ortho_scale": 2.0799999237060547,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-000": {
+      "location": [
+        0.0,
+        -6.039999961853027,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -0.0,
+        0.0
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-045": {
+      "location": [
+        4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        1.7199390356381627e-08,
+        0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-090": {
+      "location": [
+        6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -2.217801764459182e-08,
+        1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-135": {
+      "location": [
+        4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.4383206803358917e-07,
+        2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-180": {
+      "location": [
+        7.347880586115415e-16,
+        5.960000038146973,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.488601100163578e-07,
+        3.141592502593994
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-225": {
+      "location": [
+        -4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        -1.4383206803358917e-07,
+        -2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-270": {
+      "location": [
+        -6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        2.217801764459182e-08,
+        -1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-315": {
+      "location": [
+        -4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        -1.7199390356381627e-08,
+        -0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    }
+  },
+  "visible_meshes": 1924,
+  "visible_geometry_bounds": {
+    "x": [
+      -0.3481154441833496,
+      0.3480946123600006
+    ],
+    "y": [
+      -0.5626112222671509,
+      0.42359936237335205
+    ],
+    "z": [
+      0.013269884511828423,
+      1.8640803098678589
+    ]
+  },
+  "optic_emission": {
+    "CG1c recessed optic -1": 0.6000000238418579,
+    "CG1c recessed optic 1": 0.6000000238418579
+  },
+  "browser_export": {
+    "mesh_groups": 5,
+    "material_groups": [
+      "CG1c / machinery / builder",
+      "CG1c / steel / builder",
+      "CG1c / bronze / builder",
+      "CG1c / patina / builder",
+      "CG1c / optic / builder"
+    ],
+    "texture_resolution": 1024,
+    "native_texture_resolution": 2048,
+    "method": "Evaluated temporary geometry joined by material; normalized UV names; native parts unchanged"
+  },
+  "source_preserved": true,
+  "created_utc": "2026-10-03T15:02:40.245301+00:00",
+  "image_hashes": {
+    "angle-225.png": "07ce9057319856a411948a0aab71110e984275e6fdb10393bcdc4e9aee2c5859",
+    "silhouette-180.png": "e8562ed921dc42adfae9f9767062ce6190b96160435c13e7c100bb2dba898607",
+    "legacy-workshop.png": "4d09d080a97b47e9f22442356e5b61d87b96a9d1663927a9f10b71c4b58bd0e9",
+    "silhouette-225.png": "267cd9789d2eb2aae90f8cb87c8d3eb773ae46075ab58bd494ca7f16b454c752",
+    "angle-180.png": "608a19c012d2eb390e69d9ea76e7cdc02e7d97ab2fc15e1880318a0574e8dc25",
+    "angle-045.png": "29c942a820308a74813cf9296679ac044359cae87a4879b7ed46bd03923da98d",
+    "angle-090.png": "02c9dcfe4b1b9acd53b8558c84fa6618afb89e8e9258d07c7a3af9933209c068",
+    "silhouette-135.png": "50e7279e3377906942c43d3c7d2b6bd4dca8002dbf4d1310ef12dde221b7481d",
+    "silhouette-045.png": "56c65fe838b0089fec2428f6568ac7d6e507ba3e5fd483a70c9c38a40503d777",
+    "silhouette-090.png": "0b3e472929b7a8ff913093cba725f8d5c5b44cfefc957f22ed26af4f384783e1",
+    "angle-135.png": "d2349c7fbc1189ece5b7533c6a5336eff7e199edb16f89074dd207adf3bfcaf9",
+    "body-closeup.png": "d3efa7523fe75c41a93281ea9089902a3b466bc2975d01f98f14b4bb60260658",
+    "silhouette-315.png": "42d024eca994c53f76a99121c775783cff9c667af3766593b9cc0938e58e1f4c",
+    "angle-270.png": "7775cb10cedafbffbc93c78983050e9feb3d42e8bf5623d4ef021c961b17ece9",
+    "head-closeup.png": "afff19f7b56ac3ed01c7943320a06c6a3b756c16e1d14024327bdd1e1d7494c2",
+    "angle-315.png": "af6931c389c9ef70b1e994cab4b8e1ffe7ebb80b684213c1726c3d9bc4326cf2",
+    "silhouette-270.png": "8b8ba351e9717104cfd17862f631e7a96f75f0fcffe7ca6bc8eb95f8f8535bbc",
+    "legacy-neutral.png": "9c4b0dc9d86cd6bc4b47c1af703924cc259f04e2cf4e5b0b2b1f80100b266c89",
+    "canon-workshop.png": "1505b798021569ad83b3e39d5b08555a455c2fc9ed13df253a3dfdb19902ea9d",
+    "side-profile.png": "0a697c3daa72fdd6649914ed209bb4ab36aa669d569f0cca6fe5b88221decefb",
+    "canon-neutral.png": "4ef47f18ac6a9d4fe7bcdcc549ca586b58296a1b15e0a26f6e0d3b119f760019",
+    "silhouette-000.png": "e71b9381af757089d2f28f2eb1f3aca0b097d1b12b2addacdd5cdf19f38f9798",
+    "angle-000.png": "f61e4c42b04c9f7771fc46713f20b65df9ae836a05c24c987c5909c59d062a6a"
+  }
+}

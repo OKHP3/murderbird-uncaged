@@ -1,0 +1,199 @@
+{
+  "status": "Owner review pending; proposed CG character",
+  "mode": "candidate",
+  "attempt": "attempt01",
+  "era": "mechanic",
+  "geometry_input": "assets/models/cinematic-cg-milestone02/murderbird-cg-2-mechanic.blend",
+  "input_sha256": "936fce15a5bdbb1fbe84d0c69664fe87046d4234dbfffad9384fe6b431fc7d55",
+  "previous_detailed_sha256": "936fce15a5bdbb1fbe84d0c69664fe87046d4234dbfffad9384fe6b431fc7d55",
+  "changes": {
+    "head": {
+      "module": "cinematic-cg-2-head-pose",
+      "headMeshes": 207,
+      "neckMeshes": 101,
+      "neckRotationXDegrees": -14,
+      "headAdditionalXDegrees": 8,
+      "headNetXDegrees": -6,
+      "shoulderPivot": [
+        0.0,
+        -0.09000000357627869,
+        1.3700000047683716
+      ],
+      "originalHeadJunction": [
+        0.0,
+        -0.1599999964237213,
+        1.5499999523162842
+      ],
+      "posedHeadJunction": [
+        0.0,
+        -0.11437474191188812,
+        1.5615876913070679
+      ],
+      "headJunctionDelta": [
+        0.0,
+        0.04562525451183319,
+        0.011587738990783691
+      ],
+      "lowerNeckPinnedBelowZ": 1.38,
+      "neckBlendFullAtZ": 1.485,
+      "scaleChange": 0,
+      "scope": "pure posture correction; body/legs and head geometry/materials retained"
+    },
+    "body": {
+      "module": "cg2-owner-leg-pose",
+      "objectsChanged": 354,
+      "segmentLengths": {
+        "left": {
+          "upper": {
+            "oldLength": 0.36850240157541975,
+            "newLength": 0.2909536342407475
+          },
+          "shank": {
+            "oldLength": 0.3912978236984693,
+            "newLength": 0.31195189494997017
+          },
+          "tarsus": {
+            "oldLength": 0.20126847757626487,
+            "newLength": 0.1945481965260279
+          }
+        },
+        "right": {
+          "upper": {
+            "oldLength": 0.36850240157541975,
+            "newLength": 0.2909536342407475
+          },
+          "shank": {
+            "oldLength": 0.3912978236984693,
+            "newLength": 0.31195189494997017
+          },
+          "tarsus": {
+            "oldLength": 0.20126847757626487,
+            "newLength": 0.1945481965260279
+          }
+        }
+      },
+      "footShiftOutward": 0.03,
+      "feetVerticalShift": 0,
+      "targetAnchors": {
+        "hip": [
+          0.165,
+          0.105,
+          0.865
+        ],
+        "knee": [
+          0.167,
+          0.01,
+          0.59
+        ],
+        "hock": [
+          0.175,
+          0.075,
+          0.285
+        ]
+      },
+      "limits": "Visual stance deformation with rigid hinge translations; segment lengths intentionally change, no IK or mechanical validation. Source study hips remain fixed at .165; target angles/positions are integrator proposals from the locked image."
+    }
+  },
+  "materials": "Unchanged packed 1C regional materials; no surface pass",
+  "cameras": {
+    "canon-neutral": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "neutral"
+    },
+    "canon-workshop": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "workshop"
+    },
+    "legacy-neutral": {
+      "location": [
+        -6.0,
+        -3.5,
+        2.75
+      ],
+      "rotation_euler": [
+        1.3050193786621094,
+        7.730646700565558e-08,
+        -1.0527278184890747
+      ],
+      "ortho_scale": 2.25,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    }
+  },
+  "visible_meshes": 1924,
+  "visible_geometry_bounds": {
+    "x": [
+      -0.3481154441833496,
+      0.3480946123600006
+    ],
+    "y": [
+      -0.5626112222671509,
+      0.42359936237335205
+    ],
+    "z": [
+      0.013269884511828423,
+      1.8640803098678589
+    ]
+  },
+  "optic_emission": {
+    "CG1c recessed optic -1": 0.0,
+    "CG1c recessed optic 1": 0.0
+  },
+  "browser_export": {
+    "mesh_groups": 5,
+    "material_groups": [
+      "CG1c / machinery / mechanic",
+      "CG1c / steel / mechanic",
+      "CG1c / bronze / mechanic",
+      "CG1c / patina / mechanic",
+      "CG1c / optic / mechanic"
+    ],
+    "texture_resolution": 1024,
+    "native_texture_resolution": 2048,
+    "method": "Evaluated temporary geometry joined by material; normalized UV names; native parts unchanged"
+  },
+  "source_preserved": true,
+  "created_utc": "2026-10-03T15:04:38.723517+00:00",
+  "image_hashes": {
+    "legacy-neutral.png": "f9516b32d5e213e0a88dd259c404014a39c2d728bbf7d59ce977fafa30430bce",
+    "canon-workshop.png": "3283444abb7b8ae67adc955381a01c82c3b082a2fdc0fe06db237b4f87c6ee10",
+    "canon-neutral.png": "f1ca9083a94199a04a279cff73b68b49aec9367ce10b748f87f5ebdbe9880f50"
+  }
+}

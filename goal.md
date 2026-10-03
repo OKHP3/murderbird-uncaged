@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T09:44:49-05:00"
+last_updated: "2026-10-03T10:09:00-05:00"
 timezone: "America/Chicago"
-status: "milestone-2-owner-review-pending"
+status: "milestone-2-posture-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Milestone 1C was accepted as sufficient to proceed. Milestone 2 is authorized and its single-pass checkpoint is ready for owner review under the 45-minute / 12,000-token plan ceiling. Execution has stopped for review; Milestones 3–4, engineering and publication remain unauthorized.
+Milestone 1C was accepted as sufficient to proceed. Milestone 2 is authorized and its owner-requested posture correction is ready for owner review under the 45-minute / 12,000-token plan ceiling. Execution has stopped for review; Milestones 3–4, engineering and publication remain unauthorized.
 
 ## Owner review of Milestone 1
 
@@ -178,3 +178,16 @@ Gain is modest: rounded folded shoulder caps and smoother torso transitions;
 accepted proportions, stance, leg/foot geometry and materials remain preserved.
 Stop for owner silhouette review before Milestone 3. Final likeness, surface
 polish, motion and release acceptance remain outstanding.
+
+## Owner posture correction within Milestone 2
+
+The owner directs adjusting leg and head/neck posture and stance to better mimic
+the locked baseline image. This authorizes one focused pose revision from
+`42a7e7c3980f55a413ab64edfb34d4fe384e6a77`, preserving the body proportions and
+all source assets. Bring the leg zigzag closer to the reference's straighter
+stance, keep feet planted and hips embedded, and make the neck more upright with
+a less downward head/bill attitude. Named angle/position values are proposed
+visual adjustments, not owner-approved measurements or engineering balance.
+Same fixed comparison cameras and lighting; stop for review. No Milestone 3.
+
+The requested posture checkpoint is now ready in `assets/audit/cinematic-cg-milestone02/posture01/review.html`. Three-era native and browser assets are under `assets/models/cinematic-cg-milestone02/posture01/`. Artistic acceptance remains pending; execution stops for owner review.
