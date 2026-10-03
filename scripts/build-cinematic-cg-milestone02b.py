@@ -66,17 +66,26 @@ s.view_settings.view_transform='AgX';s.view_settings.look='AgX - Medium High Con
 s.world=bpy.data.worlds.new('2b comparison world');s.world.use_nodes=True
 bg=s.world.node_tree.nodes['Background'];bg.inputs[0].default_value=(.08,.08,.08,1)
 neutral=[((-3,-4,5),700,4),((4,-1,3),250,4),((0,4,4),500,3)]
-lights=[]
+lighting_module=module('lighting') if (ROOT/'scripts/cinematic-cg-2b-lighting.py').exists() else None
+profiles=lighting_module.profiles() if lighting_module else None
+camera_profile=lighting_module.camera_profile() if lighting_module else {}
+receipt['lighting_profiles']=profiles
+lights=[];light_objects=[]
 for i,(pos,power,size) in enumerate(neutral):
     data=bpy.data.lights.new('2b comparison '+str(i),'AREA');data.energy=power;data.size=size
     obj=bpy.data.objects.new(data.name,data);s.collection.objects.link(obj);obj.location=pos
-    obj.rotation_euler=(Vector((0,0,1))-obj.location).to_track_quat('-Z','Y').to_euler();lights.append(data)
+    obj.rotation_euler=(Vector((0,0,1))-obj.location).to_track_quat('-Z','Y').to_euler();lights.append(data);light_objects.append(obj)
 data=bpy.data.cameras.new('2b camera');data.type='ORTHO'
 cam=bpy.data.objects.new('2b camera',data);s.collection.objects.link(cam);s.camera=cam
 reg=json.loads((ROOT/'assets/audit/basic-shape-reference-overlay01/registration.json').read_text())
 canon=reg['sources'][0]['camera']
 def lighting(name):
-    if name=='cinematic':
+    if profiles:
+        profile=profiles[name];bg.inputs[0].default_value=(*profile['world_color'][:3],1);bg.inputs[1].default_value=profile['world_strength']
+        for obj,area in zip(light_objects,profile['areas']):
+            obj.location=area['position'];obj.rotation_euler=(Vector(area['target'])-obj.location).to_track_quat('-Z','Y').to_euler()
+            obj.data.energy=area['power'];obj.data.color=area['color'];obj.data.size=area['size']
+    elif name=='cinematic':
         bg.inputs[1].default_value=.045
         for d,power,c,size in zip(lights,[520,125,550],[(1,.83,.65),(.52,.65,.85),(1,.73,.47)],[2.0,3.0,1.6]):d.energy=power;d.color=c;d.size=size
     elif name=='neutral':
@@ -91,7 +100,7 @@ def render(name,size,position=None,target=None,scale=None,registration=None,ligh
     data.shift_x=data.shift_y=0
     if registration:
         cam.location=registration['location'];cam.rotation_euler=registration['rotation_euler']
-        data.ortho_scale=registration['ortho_scale'];data.shift_x=registration['shift_x'];data.shift_y=registration['shift_y']
+        data.ortho_scale=registration['ortho_scale']*camera_profile.get('canon_scale_multiplier',1);data.shift_x=registration['shift_x'];data.shift_y=registration['shift_y']
     else:
         cam.location=position;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler();
         if scale is not None:data.ortho_scale=scale
@@ -110,16 +119,19 @@ if not args.stage_only:render('legacy-neutral',portrait,legacy,target,2.25)
 # Separate cinematic rig: actual grounded shadows, same setup for before/candidate.
 # Stage geometry is explicitly excluded from character GLB exports.
 min_z=character_bounds()[2][0]
-bpy.ops.mesh.primitive_plane_add(size=14,location=(0,0,min_z))
-stage=bpy.context.object;stage.name='2b cinematic ground proposal';stage['authoringGuide']=True
-floor=bpy.data.materials.new('2b matte workshop floor proposal');floor.use_nodes=True
-nt=floor.node_tree;bs=nt.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.043,.036,.029,1);bs.inputs['Roughness'].default_value=.93
-noise=nt.nodes.new('ShaderNodeTexNoise');noise.inputs['Scale'].default_value=48;noise.inputs['Detail'].default_value=3
-bump=nt.nodes.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.16;bump.inputs['Distance'].default_value=.004
-nt.links.new(noise.outputs['Fac'],bump.inputs['Height']);nt.links.new(bump.outputs['Normal'],bs.inputs['Normal']);stage.data.materials.append(floor)
+if lighting_module:stage=lighting_module.stage(s,min_z)
+else:
+    bpy.ops.mesh.primitive_plane_add(size=14,location=(0,0,min_z))
+    stage=bpy.context.object;stage.name='2b cinematic ground proposal';stage['authoringGuide']=True
+    floor=bpy.data.materials.new('2b matte workshop floor proposal');floor.use_nodes=True
+    nt=floor.node_tree;bs=nt.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.043,.036,.029,1);bs.inputs['Roughness'].default_value=.93
+    noise=nt.nodes.new('ShaderNodeTexNoise');noise.inputs['Scale'].default_value=48;noise.inputs['Detail'].default_value=3
+    bump=nt.nodes.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.16;bump.inputs['Distance'].default_value=.004
+    nt.links.new(noise.outputs['Fac'],bump.inputs['Height']);nt.links.new(bump.outputs['Normal'],bs.inputs['Normal']);stage.data.materials.append(floor)
 data.type='PERSP';data.lens=65
-render('cinematic-hero',portrait,(-3.0,-3.9,1.32),(0,-.04,.93),light='cinematic')
-render('cinematic-profile',portrait,(-4.35,-1.875,1.31),(0,-.01,.95),light='cinematic')
+for name,pos,tgt in [('hero',(-3.0,-3.9,1.32),(0,-.04,.93)),('profile',(-4.35,-1.875,1.31),(0,-.01,.95))]:
+    profile=camera_profile.get(name,{});data.lens=profile.get('lens',65)
+    render('cinematic-'+name,portrait,profile.get('position',pos),profile.get('target',tgt),light='cinematic')
 stage.hide_render=True;data.type='ORTHO'
 receipt['cinematic_stage']={'ground_height':min_z,'ground_source':'Original procedural stage proposal; no reference pixels','lens_mm':65,'projection':'perspective','stage_in_character_glb':False,'lighting_comparison':'same rig for previous and candidate'}
 
@@ -162,44 +174,47 @@ if args.mode=='candidate' and not args.stage_only:
     receipt['visible_meshes']=len(visible)
     receipt['visible_geometry_bounds']={a:[min((o.matrix_world@Vector(v))[i] for o in visible for v in o.bound_box),max((o.matrix_world@Vector(v))[i] for o in visible for v in o.bound_box)] for i,a in enumerate(('x','y','z'))}
     receipt['optic_emission']={o.name:o.data.materials[0].node_tree.nodes.get('Principled BSDF').inputs['Emission Strength'].default_value for o in visible if o.get('surfaceRole')=='optic'}
-    # Editable native parts remain separate. Export temporary evaluated meshes
-    # joined by material to avoid thousands of browser draw calls.
-    bpy.ops.object.select_all(action='DESELECT')
-    export_collection=bpy.data.collections.new('Temporary optimized export')
-    s.collection.children.link(export_collection)
-    groups={};export_materials={};export_images={}
-    dg=bpy.context.evaluated_depsgraph_get()
-    for o in visible:
-        source_mat=o.data.materials[0]
-        if source_mat.name not in export_materials:
-            mat=source_mat.copy();mat.name='GLB1024 '+source_mat.name
-            for n in mat.node_tree.nodes:
-                if n.type=='TEX_IMAGE' and n.image:
-                    if n.image.name not in export_images:
-                        im=n.image.copy();im.name='GLB1024 '+n.image.name
-                        im.scale(1024,1024);im.pack();export_images[n.image.name]=im
-                    n.image=export_images[n.image.name]
-            export_materials[source_mat.name]=mat
-        mesh=bpy.data.meshes.new_from_object(o.evaluated_get(dg),depsgraph=dg)
-        if mesh.uv_layers:mesh.uv_layers.active.name='cg1c-uv'
-        mesh.materials.clear();mesh.materials.append(export_materials[source_mat.name])
-        for p in mesh.polygons:p.material_index=0
-        dup=bpy.data.objects.new('Export '+o.name,mesh);export_collection.objects.link(dup)
-        dup.matrix_world=o.matrix_world.copy();groups.setdefault(source_mat.name,[]).append(dup)
-    merged=[]
-    for name,objects in groups.items():
+    if (ROOT/'scripts/cinematic-cg-2b-export.py').exists():
+        receipt['browser_export']=module('export').export(s,ASSET/f'murderbird-cg-2b-{args.era}.glb')
+    else:
+        # Editable native parts remain separate. Export temporary evaluated meshes
+        # joined by material to avoid thousands of browser draw calls.
         bpy.ops.object.select_all(action='DESELECT')
-        for o in objects:o.select_set(True)
-        bpy.context.view_layer.objects.active=objects[0]
-        bpy.ops.object.join();o=bpy.context.object;o.name='1c '+name;merged.append(o)
-    bpy.ops.object.select_all(action='DESELECT')
-    for o in merged:o.select_set(True)
-    bpy.ops.export_scene.gltf(filepath=str(ASSET/f'murderbird-cg-2b-{args.era}.glb'),export_format='GLB',use_selection=True,export_extras=False,export_apply=True,export_materials='EXPORT')
-    receipt['browser_export']=dict(mesh_groups=len(merged),material_groups=list(groups),texture_resolution=1024,native_texture_resolution=2048,method='Evaluated temporary geometry joined by material; normalized UV names; native parts unchanged')
-    for o in merged:bpy.data.objects.remove(o,do_unlink=True)
-    bpy.data.collections.remove(export_collection)
-    for m in export_materials.values():bpy.data.materials.remove(m)
-    for im in export_images.values():bpy.data.images.remove(im)
+        export_collection=bpy.data.collections.new('Temporary optimized export')
+        s.collection.children.link(export_collection)
+        groups={};export_materials={};export_images={}
+        dg=bpy.context.evaluated_depsgraph_get()
+        for o in visible:
+            source_mat=o.data.materials[0]
+            if source_mat.name not in export_materials:
+                mat=source_mat.copy();mat.name='GLB1024 '+source_mat.name
+                for n in mat.node_tree.nodes:
+                    if n.type=='TEX_IMAGE' and n.image:
+                        if n.image.name not in export_images:
+                            im=n.image.copy();im.name='GLB1024 '+n.image.name
+                            im.scale(1024,1024);im.pack();export_images[n.image.name]=im
+                        n.image=export_images[n.image.name]
+                export_materials[source_mat.name]=mat
+            mesh=bpy.data.meshes.new_from_object(o.evaluated_get(dg),depsgraph=dg)
+            if mesh.uv_layers:mesh.uv_layers.active.name='cg1c-uv'
+            mesh.materials.clear();mesh.materials.append(export_materials[source_mat.name])
+            for p in mesh.polygons:p.material_index=0
+            dup=bpy.data.objects.new('Export '+o.name,mesh);export_collection.objects.link(dup)
+            dup.matrix_world=o.matrix_world.copy();groups.setdefault(source_mat.name,[]).append(dup)
+        merged=[]
+        for name,objects in groups.items():
+            bpy.ops.object.select_all(action='DESELECT')
+            for o in objects:o.select_set(True)
+            bpy.context.view_layer.objects.active=objects[0]
+            bpy.ops.object.join();o=bpy.context.object;o.name='1c '+name;merged.append(o)
+        bpy.ops.object.select_all(action='DESELECT')
+        for o in merged:o.select_set(True)
+        bpy.ops.export_scene.gltf(filepath=str(ASSET/f'murderbird-cg-2b-{args.era}.glb'),export_format='GLB',use_selection=True,export_extras=False,export_apply=True,export_materials='EXPORT')
+        receipt['browser_export']=dict(mesh_groups=len(merged),material_groups=list(groups),texture_resolution=1024,native_texture_resolution=2048,method='Evaluated temporary geometry joined by material; normalized UV names; native parts unchanged')
+        for o in merged:bpy.data.objects.remove(o,do_unlink=True)
+        bpy.data.collections.remove(export_collection)
+        for m in export_materials.values():bpy.data.materials.remove(m)
+        for im in export_images.values():bpy.data.images.remove(im)
     for img in bpy.data.images:
         if img.source=='FILE':
             try:img.pack()
