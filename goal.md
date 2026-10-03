@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T19:47:31.463450+00:00"
+last_updated: "2026-10-03T20:05:44.745817+00:00"
 timezone: "America/Chicago"
-status: "milestone-2a-owner-review-pending"
+status: "milestone-2a-avian-identity-rejected"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -222,3 +222,12 @@ Two integrated visual attempts delivered: thinner overlapping metal sheets, orig
 The improvement is limited. The locked canon remains substantially more threatening and mechanically intricate. Regular armor shells, rounded crown, sparse exposed machinery and simple legs still read as stylized. The browser optic also appears paler/flatter than the fixed renderer; parity remains unresolved. Owner artistic acceptance is not claimed. Further likeness work should target construction and shape rather than adding more texture or darker lighting.
 
 This is a review checkpoint, not full CG-track completion. No animation, release, engineering, paid services or next milestone begins automatically. This shared documentation update promotes no model or runtime asset. Frozen engineering archive stays `9cc1b3c2da8cb064f343ab5915b32d0ab53236b1`.
+
+
+## Owner review — avian identity failure
+
+Owner feedback on Milestone 2a: “Is beginning to look like a giant anteater and not a bird.” Record this as a failed bird-identity reading, not acceptance of the current exterior or an invitation to add more surface polish. The locked composite and July head selection remain the controlling references; no substitution is authorized.
+
+Visual diagnosis (integrator inference from the matched comparison): the narrow continuous forehead-to-bill taper reads as a drooping snout, while the small rounded skull and broad regular torso shell reinforce a mammalian impression. A proposed correction should restore distinct avian forehead/cheek and beak-root landmarks, a deep hooked upper bill with an explicit lower-jaw opening, a swept crown, and readable folded shield-wing/breast layering. Match these shapes to the pinned images; do not invent percentage changes or resume mechanical fitment.
+
+Before another finish pass, review a simple bird-identity silhouette and matched head/body outline against the pinned sources. Prior stance approval remains recorded; this feedback does not certify the current exterior or erase preserved checkpoints. New geometry and a new milestone require a bounded owner-authorized scope. No model, runtime or reference file changes accompany this review record.
