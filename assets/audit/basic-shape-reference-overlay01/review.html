@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MurderBird — source and revised shape overlays</title>
+<style>
+body{margin:26px auto;padding:0 22px;max-width:1280px;background:#f4f6f7;color:#23303a;font:17px/1.5 system-ui}h1,h2{line-height:1.2}section{margin:32px 0}svg{display:block;width:100%;background:#18212a;border-radius:6px}button{font:inherit;padding:8px 14px;background:white;border:1px solid #71818b;border-radius:6px;cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #1369b3;outline-offset:3px}label{display:flex;align-items:center;gap:12px}input{width:240px;max-width:40vw}.controls{position:sticky;top:0;background:#f4f6f7;z-index:2;padding:12px 0;display:flex;flex-wrap:wrap;gap:12px;align-items:center;border-bottom:1px solid #a8b6bf}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}a{color:#15587b}small{color:#526572}.legend span{display:inline-block;margin-right:15px}.head{color:#865425}.neck{color:#837038}.torso{color:#30776f}.wing{color:#517342}.legs{color:#3e618e}textarea{box-sizing:border-box;width:100%;min-height:140px;font:inherit;padding:12px}footer{margin:32px 0}output{min-width:3em}
+</style>
+<h1>MurderBird: source over revised shapes</h1>
+<p>The locked full-bird image and July head are layered with <b>shape study 05</b>, including the 25% larger folded wings. The model is unchanged. Only the estimated viewing angle, uniform scale and image placement are adjusted.</p>
+<div class="controls">
+<label for="blend">Shape visibility <input id="blend" type="range" min="0" max="100" value="40"><output id="amount" for="blend">40%</output></label>
+<button id="source">Source only</button><button id="shape">Shapes only</button><button id="overlay">Overlay</button><button id="order" aria-pressed="false">Put source over shapes</button>
+</div>
+<p class="legend"><span class="head">Brown: head</span><span class="neck">Ochre: neck</span><span class="torso">Teal: torso</span><span class="wing">Green: folded wings</span><span class="legs">Blue: legs</span></p>
+<section><h2>Locked September 22 full-bird canon</h2>
+<svg id="canon" viewBox="0 0 1280 853" role="img" aria-label="Full-bird canon and revised shape overlay">
+<image class="source" href="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" width="1280" height="853"/>
+<image class="model" href="canon-model.png" width="1280" height="853" opacity=".4"/>
+</svg><p><small>Registration uses crown-to-sole height and silhouette-centre placement. Camera direction is estimated. The shoulder, hip, breast and feet were not individually forced to fit.</small></p></section>
+<section><h2>Closer comparisons — same registration</h2><div class="grid">
+<div><h3>Head and neck</h3><svg viewBox="685 18 355 290" role="img" aria-label="Canon head and neck overlay"><image class="source" href="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" width="1280" height="853"/><image class="model" href="canon-model.png" width="1280" height="853" opacity=".4"/></svg></div>
+<div><h3>Breast, wing and hip</h3><svg viewBox="540 215 435 375" role="img" aria-label="Canon torso and wing overlay"><image class="source" href="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" width="1280" height="853"/><image class="model" href="canon-model.png" width="1280" height="853" opacity=".4"/></svg></div>
+<div><h3>Legs and feet</h3><svg viewBox="545 420 475 425" role="img" aria-label="Canon legs and feet overlay"><image class="source" href="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" width="1280" height="853"/><image class="model" href="canon-model.png" width="1280" height="853" opacity=".4"/></svg></div>
+</div></section>
+<section><h2>July selection — head identity only</h2><svg viewBox="480 25 544 455" role="img" aria-label="July head only with revised head overlay" style="max-width:760px">
+<image class="source" href="../../../context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png" width="1024" height="1536"/>
+<image class="model" href="july-head-model.png" width="1024" height="1536" opacity=".4"/>
+</svg><p><small>Independent head-only registration by crown-to-bill-tip height. July's body, large wings and stance do not control this comparison; only the head does. This head panel does not establish the correct head-to-body proportion.</small></p></section>
+<section><h2>What the overlays expose</h2><p>The canon comparison still shows substantial differences in the neck-to-breast transition, the folded wing's lower extent, leg spread and foot size. The head close-up helps separate skull mass from feather-like armour and bill depth. Pose and camera differences remain a source of uncertainty.</p><p>These are comparisons for your next shape notes, not proof of likeness. The detailed model, source artwork, materials and deployed exhibit are unchanged.</p></section>
+<section><h2>Your next adjustments</h2><p>Use “head”, “neck”, “breast/wing”, or “legs/feet”, and describe the contour or connection that should move. Your notes stay in this browser until copied into the chat.</p><textarea id="notes" aria-label="Your next shape adjustments"></textarea></section>
+<footer><a href="murderbird-reference-overlay.blend">Editable overlay scene</a> · <a href="registration.json">Source hashes and alignment</a> · <a href="../basic-shape-study05/review.html">Four-view study 05</a><p><small>Camera estimates and simplified shapes are proposals. No hidden views or detailed surface textures are inferred from these images.</small></p></footer>
+<script>
+const blend=document.getElementById('blend'),amount=document.getElementById('amount');let front=false,mode='overlay';
+function update(){const a=Number(blend.value)/100;amount.value=blend.value+'%';document.querySelectorAll('svg').forEach(svg=>{const source=svg.querySelector('.source'),model=svg.querySelector('.model');if(front)svg.appendChild(source);else svg.appendChild(model);source.setAttribute('opacity',mode==='shape'?0:front&&mode==='overlay'?1-a:1);model.setAttribute('opacity',mode==='source'?0:mode==='shape'?1:front?1:a);});}
+blend.addEventListener('input',()=>{mode='overlay';update()});
+document.getElementById('source').onclick=()=>{mode='source';update()};document.getElementById('shape').onclick=()=>{mode='shape';update()};document.getElementById('overlay').onclick=()=>{mode='overlay';blend.value=40;update()};document.getElementById('order').onclick=e=>{front=!front;e.currentTarget.textContent=front?'Put shapes over source':'Put source over shapes';e.currentTarget.setAttribute('aria-pressed',front);update()};
+const notes=document.getElementById('notes');try{notes.value=localStorage.getItem(location.pathname+'-notes')||'';notes.oninput=()=>localStorage.setItem(location.pathname+'-notes',notes.value)}catch{}update();
+</script></html>
