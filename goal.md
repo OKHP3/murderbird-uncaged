@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T15:21:19+00:00"
+last_updated: "2026-10-03T15:30:30+00:00"
 timezone: "America/Chicago"
-status: "milestone-3-authorized"
+status: "milestone-3-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Owner approved the Milestone 2 posture checkpoint and authorized Milestone 3. Cinematic appearance pass: 40 minutes / 10,000 aggregate tokens including workers and integration, start 2026-10-03T15:18:39Z, deadline 15:58:39Z. Preserve approved geometry and pose; refine visible armor overlap, metal response and recessed optics across all three eras. At most two focused visual attempts; stop for owner review. Milestone 4, engineering and publication remain unauthorized.
+Owner approved the Milestone 2 posture checkpoint and authorized Milestone 3. Cinematic appearance pass: 40 minutes / 10,000 aggregate tokens including workers and integration, start 2026-10-03T15:18:39Z, deadline 15:58:39Z. Preserve approved geometry and pose; refine visible armor overlap, metal response and recessed optics across all three eras. Two focused visual attempts are delivered; execution has stopped for owner review. Milestone 4, engineering and publication remain unauthorized.
 
 ## Owner review of Milestone 1
 
@@ -197,3 +197,12 @@ All three era models and fixed before/after comparisons are available. Native pr
 ## Milestone 2 accepted; Milestone 3 authorized
 
 Owner: “Approved proceed to milestone 3.” Exact accepted pose base: `8d6a113e3c7f2d9653830f272daf33cec74fb395`. This approves continuation, not a final visual twin or release. Historical holds above are superseded for continuation. New working branch: `codex/cinematic-vfx-milestone03`. Root integrates three existing isolated workers (at most 1,500 tokens each; root 5,500). No further delegation. Preserve head/neck/leg posture and body dimensions; cinematic surface detail is the active scope.
+
+## Milestone 3 checkpoint delivered
+
+Two integrated attempts delivered on `codex/cinematic-vfx-milestone03`, exact remotely verified revision `e42be2d0fb1019aef6d16a8d05b6bb57a813f496`.
+[Review](https://github.com/OKHP3/murderbird-uncaged/blob/e42be2d0fb1019aef6d16a8d05b6bb57a813f496/assets/audit/cinematic-cg-milestone03/review.html) · [Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/e42be2d0fb1019aef6d16a8d05b6bb57a813f496/assets/audit/cinematic-cg-milestone03/README.md).
+
+The second reduces the first attempt's padded plate relief and retains original material graphs/maps. Local armor depth, stepped smaller optic seats and regional material response change; approved posture, plate borders/backing, original UVs and packed texture pixels remain verified intact. Three-era editable and browser assets, matched hero views, eight neutral/exhibit views and close-ups are supplied. Local preservation, build, texture-hash, image-resolution and three-era browser checks passed.
+
+Visible gain is modest; fine hardware density, feather sharpness, cheek construction and optic realism remain short of the pinned source. Owner artistic acceptance is pending. Stop before Milestone 4. No model/runtime promotion or publication accompanies this goal update.

@@ -50,3 +50,5 @@ No Milestone 3 or 4 work begins automatically.
 ## Authorized Milestone 3
 
 Owner approved the pose revision `8d6a113e3c7f2d9653830f272daf33cec74fb395` and directed proceeding. Cinematic appearance: 40 minutes / 10,000 aggregate tokens; start 2026-10-03T15:18:39Z, deadline15:58:39Z. Preserve approved pose and large forms; improve metal, recessed optic and armor layering. Deliver three-era native/browser assets, exhibit-lit eight-view turntable, two hero views and head/breast close-ups with matched before/after. Root integrates three isolated existing workers up to1,500 tokens each and retains5,500. At most two integrated attempts; stop for owner artistic review. No animation, runtime replacement, release or engineering work.
+
+Milestone 3 disposition: two attempts delivered; modest armor-relief and optic-seat refinement. Approved pose and original maps preserved. [Exact checkpoint handoff](https://github.com/OKHP3/murderbird-uncaged/blob/e42be2d0fb1019aef6d16a8d05b6bb57a813f496/assets/audit/cinematic-cg-milestone03/README.md). Artistic acceptance remains pending; no Milestone 4.
