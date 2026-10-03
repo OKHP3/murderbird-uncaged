@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T07:02:58-05:00"
+last_updated: "2026-10-03T07:08:23-05:00"
 timezone: "America/Chicago"
 status: "milestone-1b-review-pending"
 canonical_path: "goal.md"
@@ -124,3 +124,7 @@ Use the Milestone 1a camera and neutral/workshop lighting for before/after compa
 Budget allocation: head/neck worker 5,000 tokens, body/wing worker 5,000, surface worker 5,000; root integration/render/review/sharing 15,000. Workers own disjoint module files in isolated checkouts; no further delegation. Root alone integrates, saves the complete asset, pushes coherent checkpoints and reports remaining likeness failures. Stop after Milestone 1b for owner review.
 
 Owner proportion correction within Milestone 1b: narrow torso cross-section by 10% and lengthen vertically by 12%; shorten neck by 15% and thicken by 20%. Head follows the shortened neck. This specifically authorizes a revised comparison after the initial two integrated attempts; no subsequent milestone is implied.
+
+Owner avian stance correction within Milestone 1b: legs attach into the lower third of the torso, rather than beneath its bottom. The lower rear torso forms a compact tail/counterweight to the head. Preserve flightless avian anatomy and planted feet; no engineering analysis is requested.
+
+Latest Milestone 1b rendered evidence lives on the [CG checkpoint branch](https://github.com/OKHP3/murderbird-uncaged/tree/codex/cinematic-vfx-milestone01b/assets/audit/cinematic-cg-milestone01b). Owner artistic acceptance remains pending; stop after the revised avian stance comparison.
