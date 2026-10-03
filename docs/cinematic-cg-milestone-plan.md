@@ -16,3 +16,5 @@ Milestone 1 baseline ready for owner review: reference inventory and extracted f
 Optic rule confirmed by the owner’s October 2 mandate: Maker and Mechanic retain dark, non-awakened optics; Advanced retains restrained awakened orange optics. The prior optics-scope question is resolved. No authority beyond Milestone 1 is implied.
 
 Owner baseline review: target aesthetic is missing; visual likeness not accepted. Camera framing approval and explicit Milestone 2 authorization remain outstanding. See root goal for the recorded feedback.
+
+Milestone 1a is the owner-requested alternative baseline: exact reissued canon, verified inventory, fixed comparable framing, neutral and workshop lighting diagnostics, eight-angle views. 15 minutes / 3,000 tokens; no model/material edits and no Milestone 2. Evidence: `assets/audit/cinematic-cg-milestone01a/review.html`. Camera framing remains estimated and requires owner review.
