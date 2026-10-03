@@ -18,3 +18,7 @@ Optic rule confirmed by the owner’s October 2 mandate: Maker and Mechanic reta
 Owner baseline review: target aesthetic is missing; visual likeness not accepted. Camera framing approval and explicit Milestone 2 authorization remain outstanding. See root goal for the recorded feedback.
 
 Milestone 1a is the owner-requested alternative baseline: exact reissued canon, verified inventory, fixed comparable framing, neutral and workshop lighting diagnostics, eight-angle views. 15 minutes / 3,000 tokens; no model/material edits and no Milestone 2. Evidence: `assets/audit/cinematic-cg-milestone01a/review.html`. Camera framing remains estimated and requires owner review.
+
+## Authorized Milestone 1b
+
+Owner authorized a visual likeness attempt: **30,000 total tokens / three hours / up to three workers**. Improve head/neck presence, compact overlapping wing and breast layering, and regionally varied aged metal/verdigris/optic response in a separate editable CG asset. Preserve the exact base and all references. Compare against Milestone 1a at identical cameras and lighting; supply eight-angle views, hero and close-up evidence, native source and textured GLB. Root integrates three disjoint worker modules (5,000 tokens each; root 15,000). At most two integrated attempts. Stop for owner artistic review; no further milestone or public runtime replacement.
