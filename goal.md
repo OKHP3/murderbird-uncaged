@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T22:37:27.576276+00:00"
+last_updated: "2026-10-03T23:12:19.114339+00:00"
 timezone: "America/Chicago"
-status: "milestone-2b-authorized"
+status: "milestone-2b-budget-limited"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -241,3 +241,7 @@ Owner feedback on Milestone 2a: “Is beginning to look like a giant anteater an
 Visual diagnosis (integrator inference from the matched comparison): the narrow continuous forehead-to-bill taper reads as a drooping snout, while the small rounded skull and broad regular torso shell reinforce a mammalian impression. A proposed correction should restore distinct avian forehead/cheek and beak-root landmarks, a deep hooked upper bill with an explicit lower-jaw opening, a swept crown, and readable folded shield-wing/breast layering. Match these shapes to the pinned images; do not invent percentage changes or resume mechanical fitment.
 
 Before another finish pass, review a simple bird-identity silhouette and matched head/body outline against the pinned sources. Prior stance approval remains recorded; this feedback does not certify the current exterior or erase preserved checkpoints. New geometry and a new milestone require a bounded owner-authorized scope. No model, runtime or reference file changes accompany this review record.
+
+## Milestone 2b budget stop
+
+The ten-worker attempt reached its aggregate token ceiling after about34minutes. Execution stopped. Eight workers finished; browser/export integration and final critique remained incomplete. The latest partial construction checkpoint is on `codex/cinematic-vfx-milestone02b`, under `assets/audit/cinematic-cg-milestone02b/`. Surface maps and lighting work are preserved, but final three-era application, corrected browser export and WebGL checks are unfinished. Clearer avian identity does not establish the source likeness or owner artistic acceptance. Review the handoff before any further work. A new focused head/neck and compact shoulder reconstruction requires a newly bounded owner direction; no continued modeling is authorized by the unused time allowance.
