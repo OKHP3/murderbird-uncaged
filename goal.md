@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T09:16:17-05:00"
+last_updated: "2026-10-03T09:46:22-05:00"
 timezone: "America/Chicago"
-status: "milestone-1c-owner-review-pending"
+status: "milestone-2-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -56,7 +56,7 @@ The owner’s October 2 restatement explicitly confirms dark, non-awakened optic
 
 ## Track completion
 
-The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b and the bounded geometry-led visual attempt 1c are authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
+The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b, 1c and 2 are authorized; Milestones 3–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
 
 ## Visual construction rules
 
@@ -99,7 +99,10 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Milestone 1c is authorized by the owner in this chat: up to three workers, 30,000 tokens total and three hours elapsed. Use the revised low-resolution geometry and the bird mass-distribution paper. Baseline likeness remains unaccepted. Stop after the 1c visual checkpoint; no Milestone 2, animation, engineering or publication authority is implied.
+Owner accepted Milestone 1C as sufficient to proceed. Milestone 2 is authorized
+and its single-pass checkpoint is ready for owner review under the plan's
+45-minute / 12,000-token ceiling. Execution has stopped for review; Milestones
+3–4, engineering and publication remain unauthorized.
 
 ## Owner review of Milestone 1
 
@@ -152,3 +155,35 @@ Likeness remains unaccepted: broad shallow body/shield plating, crude shoulders
 and flat optics remain visible gaps. No system may treat this checkpoint or the
 remaining time budget as authorization to continue automatically. No later
 milestone, animation, engineering acceptance or production replacement is implied.
+
+## Milestone 1C owner review and Milestone 2 authorization
+
+Owner: “That is so so much more effective and the results are good enough to
+proceed to Milestone 2.” This accepts checkpoint
+`a927c4f6d48f67b44e365e20d90fd655d1ddc51a` as the basis for the next milestone; it
+does not establish a final visual twin or a release. Prior review holds above
+are historical and superseded for continuation by this explicit authorization.
+
+Milestone 2 is the plan's bounded creature-silhouette pass: 45 minutes / 12,000
+aggregate tokens, including integration. Clock starts 2026-10-03T14:33:05Z,
+deadline 15:18:05Z. Preserve the accepted study05 proportions and avian joint
+anchors while refining faceting and folded shoulder/wing and head contours.
+Compare the 1C base and new candidate at identical cameras and lighting; supply
+eight views, editable native sources and browser models. Root integrates three
+isolated existing workers, up to 1,500 tokens each, and retains 7,500 for setup,
+integration and checks. No further delegation. At most two focused attempts;
+stop for owner review. Materials carry forward; surface polish is Milestone 3.
+No animation, engineering certification, runtime replacement or publication is
+authorized. Working branch: `codex/cinematic-vfx-milestone02`.
+
+## Milestone 2 checkpoint delivered
+
+One focused contour pass is ready on `codex/cinematic-vfx-milestone02`.
+[Review](https://github.com/OKHP3/murderbird-uncaged/blob/42a7e7c3980f55a413ab64edfb34d4fe384e6a77/assets/audit/cinematic-cg-milestone02/review.html) ·
+[Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/42a7e7c3980f55a413ab64edfb34d4fe384e6a77/assets/audit/cinematic-cg-milestone02/README.md).
+Gain is modest: rounded folded shoulder caps and smoother torso transitions;
+accepted proportions, stance, leg/foot geometry and materials remain preserved.
+Stop for owner silhouette review before Milestone 3. Final likeness, surface
+polish, motion and release acceptance remain outstanding.
+
+Exact remotely verified CG checkpoint: `42a7e7c3980f55a413ab64edfb34d4fe384e6a77`. This goal update contains no model or runtime promotion.

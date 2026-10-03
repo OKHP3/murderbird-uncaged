@@ -1,6 +1,6 @@
 # Cinematic CG milestone plan
 
-Owner authorized Milestone 1 only on October 2, 2026. Remaining milestones are proposals, not approved work orders. Controlling mandate: [root goal](../goal.md).
+Owner has authorized Milestones 1, 1a, 1b, 1c and 2. Milestones 3–4 remain proposals, not approved work orders. Controlling mandate: [root goal](../goal.md).
 
 | Milestone | Deliverables and visual pass criteria | Ceiling |
 |---|---|---|
@@ -36,3 +36,14 @@ checkpoint `a927c4f6d48f67b44e365e20d90fd655d1ddc51a`.
 [Handoff and evidence](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/README.md).
 Owner artistic review pending; execution has stopped. No later milestone begins
 automatically. This documentation update does not merge or deploy the CG assets.
+
+## Milestone 2 authorization and checkpoint
+
+Owner accepted 1C as sufficient to proceed. One focused creature-silhouette pass
+rounds folded shoulder caps and torso transitions while preserving accepted
+proportions, stance and materials. Plan ceiling: 45 minutes / 12,000 aggregate
+tokens, including workers and integration. Owner silhouette review pending;
+no Milestone 3 or 4 begins automatically. Exact checkpoint: `42a7e7c3980f55a413ab64edfb34d4fe384e6a77`.
+[Handoff and matched views](https://github.com/OKHP3/murderbird-uncaged/blob/42a7e7c3980f55a413ab64edfb34d4fe384e6a77/assets/audit/cinematic-cg-milestone02/README.md).
+Implementation stays on `codex/cinematic-vfx-milestone02`; this documentation
+update does not merge or deploy the CG assets.
