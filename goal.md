@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T19:14:14+00:00"
+last_updated: "2026-10-03T19:43:15.099006+00:00"
 timezone: "America/Chicago"
-status: "milestone-2a-authorized"
+status: "milestone-2a-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -203,3 +203,8 @@ Two integrated attempts are available at `assets/audit/cinematic-cg-milestone03/
 ## Milestone 2a owner authorization
 
 Owner: “Let’s try for milestone 2a with the same 3 agents, 3 hour, 30k tokens to get it closer to photo realistic.” Owner clarification: “The source image is something of a terror movie or nightmare where the current models appear laughable.” This is a new bounded appearance attempt, not retrospective approval of Milestone3 or automatic Milestone4 authority. Separate working branch: `codex/cinematic-vfx-milestone02a`. Preserve all prior sources and exact frozen engineering archive.
+
+
+## Milestone 2a checkpoint disposition
+
+Two integrated visual attempts delivered on `codex/cinematic-vfx-milestone02a`. [Review](assets/audit/cinematic-cg-milestone02a/review.html) and [handoff](assets/audit/cinematic-cg-milestone02a/README.md). Sharper metal sheets, original regional wear and recessed optic/cheek details improve rendering; nightmare likeness remains unfinished. Approved posture and all historical sources are preserved. Browser optic parity remains limited; fixed renders are primary evidence. Owner review pending; no automatic animation, release or engineering.

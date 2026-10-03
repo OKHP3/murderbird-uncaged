@@ -56,3 +56,8 @@ Milestone 3 disposition: two attempts delivered. Modest armor-relief and optic-s
 ## Authorized Milestone 2a — photorealism and menace
 
 New owner-authorized appearance attempt from `e42be2d0fb1019aef6d16a8d05b6bb57a813f496`. Three hours /30,000 aggregate tokens; same three existing workers (5,000each), root15,000; no further delegation. Start2026-10-03T19:10:17Z; deadline22:10:17Z. Preserve approved proportions/posture, sharpen thin overlapping metal feathers, deepen optic/cheek hardware, produce original regional imagePBR maps and deliberate cinematic lighting. The visual aim is the locked canon's threatening mechanical presence, not a toy with extra detail. First same-camera review within30minutes; at most2integrated attempts. Deliver editable three-era natives, browser models, reference/before/candidate comparisons, eight views, close-ups and source/proposal receipts. Stop for owner review; no animation, release or engineering.
+
+
+## Milestone 2a checkpoint disposition
+
+Two integrated visual attempts delivered: thin overlapping sheets, regional original PBR wear, glass/iris/coils and recessed cheek hardware. [Matched reference/before/candidate review](../assets/audit/cinematic-cg-milestone02a/review.html) and [handoff](../assets/audit/cinematic-cg-milestone02a/README.md). Preserved posture and historical source checks passed. The source remains substantially more threatening and mechanically intricate; rounded crown, regular armor shell, sparse exposed mechanisms and simple legs remain visible gaps. Browser optic parity is limited; fixed renders remain primary review evidence. Owner artistic acceptance is pending. No animation, release or engineering work is authorized automatically.
