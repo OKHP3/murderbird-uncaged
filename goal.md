@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T09:46:22-05:00"
+last_updated: "2026-10-03T15:12:12+00:00"
 timezone: "America/Chicago"
-status: "milestone-2-owner-review-pending"
+status: "milestone-2-posture-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -187,3 +187,12 @@ Stop for owner silhouette review before Milestone 3. Final likeness, surface
 polish, motion and release acceptance remain outstanding.
 
 Exact remotely verified CG checkpoint: `42a7e7c3980f55a413ab64edfb34d4fe384e6a77`. This goal update contains no model or runtime promotion.
+
+## Owner-requested Milestone 2 posture correction
+
+The owner requests leg and head/neck posture and stance closer to the locked baseline. One focused correction is ready on `codex/cinematic-vfx-milestone02`, revision `8d6a113e3c7f2d9653830f272daf33cec74fb395`.
+[Review](https://github.com/OKHP3/murderbird-uncaged/blob/8d6a113e3c7f2d9653830f272daf33cec74fb395/assets/audit/cinematic-cg-milestone02/posture01/review.html) · [Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/8d6a113e3c7f2d9653830f272daf33cec74fb395/assets/audit/cinematic-cg-milestone02/posture01/README.md).
+
+Neck posture is 14 degrees more upright with the lower join anchored; net head attitude lifts 6 degrees. Knees and hocks reduce the deep leg zigzag. Hip centers remain fixed and feet move outward .030 study units each (about 16% wider center spacing), retaining ground height. Body and shield geometry, head dimensions and regional finishes remain unchanged. Values are integrator proposals inferred from the image, not owner-approved measurements. Leg segments change length axially for this visual stance; no IK, physical balance or engineering validation is claimed.
+
+All three era models and fixed before/after comparisons are available. Native preservation, browser loading, asset resolution and local build checks passed; existing chunk-size warning remains. Artistic acceptance is pending. The requested correction uses the existing bounded Milestone 2 scope and stops for review; Milestone 3, runtime replacement and publication remain unauthorized. This shared goal update promotes no model or runtime asset.
