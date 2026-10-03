@@ -14,3 +14,5 @@ Budgets include workers and integration. Stop at each milestone and report rende
 Milestone 1 baseline ready for owner review: reference inventory and extracted frame hashes in `assets/audit/cinematic-cg-milestone01/references.json`; camera lock in `cameras.json`; eight-angle baseline and two hero views in `review.html`. Reference-angle camera is approximate; unseen views are reconstruction. No Milestone 2 work started.
 
 Optic rule confirmed by the owner’s October 2 mandate: Maker and Mechanic retain dark, non-awakened optics; Advanced retains restrained awakened orange optics. The prior optics-scope question is resolved. No authority beyond Milestone 1 is implied.
+
+Owner baseline review: target aesthetic is missing; visual likeness not accepted. Camera framing approval and explicit Milestone 2 authorization remain outstanding. See root goal for the recorded feedback.

@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-02T11:49:36-05:00"
+last_updated: "2026-10-03T06:14:33-05:00"
 timezone: "America/Chicago"
-status: "milestone-1-authorized"
+status: "milestone-1-reviewed-next-authorization-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -92,11 +92,19 @@ Keep bounded parallel work, cheap targeted checks, coherent commits and frequent
 |---|---|---|---|---|
 | The owner changed the goal to cinematic appearance first. | Confirmed | Direct instructions in this chat, October 1, 2026. | Workers could continue the rejected mechanics-first loop. | Read this mandate before assigning the next visual pass. |
 | These edits change instructions, not the current model or deployed exhibit. | Confirmed | Documentation-only scope of this checkpoint. | Instruction delivery could be mistaken for visible improvement. | Review actual candidate images at the next implementation checkpoint. |
-| A complete visual match has been achieved. | Unknown; not claimed | Owner review remains outstanding. | Premature acceptance or release. | Matched full-bird reference/candidate views and owner review. |
+| A complete visual match has been achieved. | Not achieved for the reviewed baseline | Owner review in this chat: the target aesthetic is missing and the model remains a long way off. | Premature acceptance or release. | Matched full-bird reference/candidate views and owner review. |
 | Engineering/CG track separation is in place. | Confirmed | Both branch refs verified on GitHub, 2026-10-02; branch pins above. | New CG work contaminates the frozen engineering line. | Preserve archive ref; keep all new CG work on the separate branch. |
 
 The previous operational goal is preserved locally in the Git-ignored supervision archive. Prior repository directives remain in Git history and the creative-authority record; their reference, rights and preservation rules still apply.
 
 ## Current authorization
 
-Milestone 1 only authorized. Exact composite supplied and pinned; baseline review pending. No Milestone 2 authority.
+Milestone 1 only was authorized. Exact composite supplied and pinned; the baseline has received owner feedback rejecting its visual likeness. Camera framing has not been explicitly approved. No Milestone 2 authority.
+
+## Owner review of Milestone 1
+
+The owner reviewed the baseline delivered at CG commit `e554edf6768f9a4b002586d3bbdb0b7550244706` and said it is missing the target aesthetic: it resembles a metal flightless bird with green tone and orange eyes, but remains "a long way off." Source: direct owner feedback in this chat following the baseline comparison. This records a rejected visual match, not acceptance of the current modeling direction or camera framing.
+
+Baseline evidence remains on the separate [CG track](https://github.com/OKHP3/murderbird-uncaged/tree/e554edf6768f9a4b002586d3bbdb0b7550244706/assets/audit/cinematic-cg-milestone01). The diagnostic renders establish a starting point; they do not demonstrate an exterior improvement.
+
+The proposed next step is the bounded silhouette milestone in the plan. The owner must approve camera framing or request corrections and explicitly authorize that milestone before modeling resumes. This review record authorizes no modeling, engineering, publication or new Replit assignment.
