@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T07:08:23-05:00"
+last_updated: "2026-10-03T09:13:37-05:00"
 timezone: "America/Chicago"
-status: "milestone-1b-review-pending"
+status: "milestone-1c-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -56,7 +56,7 @@ The owner’s October 2 restatement explicitly confirms dark, non-awakened optic
 
 ## Track completion
 
-The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a and the bounded visual attempt 1b are authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
+The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b and the bounded geometry-led visual attempt 1c are authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
 
 ## Visual construction rules
 
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Milestone 1b is now authorized as the bounded visual attempt below. Baseline likeness remains rejected; the existing camera is used consistently for comparison, without claiming owner framing approval. No Milestone 2 authority.
+Milestone 1c is authorized by the owner in this chat: up to three workers, 30,000 tokens total and three hours elapsed. Use the revised low-resolution geometry and the bird mass-distribution paper. Baseline likeness remains unaccepted. Stop after the 1c visual checkpoint; no Milestone 2, animation, engineering or publication authority is implied.
 
 ## Owner review of Milestone 1
 
@@ -128,3 +128,23 @@ Owner proportion correction within Milestone 1b: narrow torso cross-section by 1
 Owner avian stance correction within Milestone 1b: legs attach into the lower third of the torso, rather than beneath its bottom. The lower rear torso forms a compact tail/counterweight to the head. Preserve flightless avian anatomy and planted feet; no engineering analysis is requested.
 
 Latest Milestone 1b rendered evidence lives on the [CG checkpoint branch](https://github.com/OKHP3/murderbird-uncaged/tree/codex/cinematic-vfx-milestone01b/assets/audit/cinematic-cg-milestone01b). Owner artistic acceptance remains pending; stop after the revised avian stance comparison.
+
+## Milestone 1c — revised geometry into cinematic character
+
+Owner authorization, October 3, 2026: begin Milestone 1C using the new low-resolution model geometry and the flightless bird biomechanics paper, with the same ceiling of **30,000 total tokens, three hours elapsed and at most three workers**. The clock begins with the first 1c action, 2026-10-03T13:41:51Z. Root integrates three isolated modules; no further delegation. Worker ceilings: head/neck 4,000 tokens, body/wing/legs 4,000, materials 2,500; root retains the remaining budget, including setup and validation.
+
+Geometric input: `assets/audit/basic-shape-study05/murderbird-basic-shapes.blend`, SHA-256 `8160533136d60061ae8486f0e309803e2da4b3d50d20982816b03f2f9ee376f7`, at CG checkpoint `5eeacc07ebce2d46ca7784c477e6dba454d00135`. The associated `study.json` records the softened skull, pointed rear torso, embedded avian hips, breast shoulder roots and 25% larger folded wings. Source overlays are in `assets/audit/basic-shape-reference-overlay01/`; they expose remaining differences, not an approved visual match. Use these shapes as the construction scaffold instead of returning to the earlier spherical torso. Add regional mechanical surfaces and detail while keeping the revised envelope and attachment positions recognizable. Any substantial envelope deviation must be stated in the handoff.
+
+Research: Macaulay et al., *Decoupling body shape and mass distribution in birds and their dinosaurian ancestors*, Nature Communications 14, 1575 (2023), doi:10.1038/s41467-023-37317-y. Terrestrial-versus-flying mass-distribution findings guide visual posture; they do not supply a universal lower-third hip rule or validate fictional mechanical balance. The owner's low/posterior power or transmission counterweight remains a design proposal. Preserve flexed avian hips, forward knees, posterior hocks and planted feet; no hominid leg attachment, lift surfaces or engineering certification.
+
+Deliver a new editable Blender character, browser-readable textured GLB, eight-angle views, neutral/workshop hero views and head/body close-ups. Use study05's source-overlay camera consistently for low-res-versus-detailed comparisons; also supply the earlier 1b comparison camera to distinguish geometry from framing. Preserve all source images, low-resolution studies, earlier detailed models and the frozen engineering archive. Attempt no more than two integrated visual iterations; stop for owner artistic review, at the budget ceiling, or after two iterations without visible gain. The separate working branch is `codex/cinematic-vfx-milestone01c`. No runtime replacement, animation, engineering work or later milestone is authorized.
+
+## Milestone 1c checkpoint delivered
+
+The two-attempt study is available on `codex/cinematic-vfx-milestone01c` at
+[the local review](assets/audit/cinematic-cg-milestone01c/review.html) and
+[the checkpoint handoff](assets/audit/cinematic-cg-milestone01c/README.md).
+Study05 proportions are carried into editable three-era detailed geometry.
+Likeness remains unaccepted: broad shallow body/shield plating, crude shoulders
+and flat optics remain visible gaps. Execution stops for owner review. No later
+milestone, animation, engineering acceptance or production replacement is implied.
