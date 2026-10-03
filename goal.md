@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T06:40:06-05:00"
+last_updated: "2026-10-03T07:02:58-05:00"
 timezone: "America/Chicago"
-status: "milestone-1b-authorized"
+status: "milestone-1b-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -122,3 +122,5 @@ The owner authorized an attempt at Milestone 1b with a ceiling of **30,000 token
 Use the Milestone 1a camera and neutral/workshop lighting for before/after comparisons; do not conceal changes by changing camera or exposure. Deliver an editable Blender study, browser-readable GLB with baked PBR maps where needed, eight-angle views and hero/close-up evidence. Attempt at most two integrated visual iterations; stop if two iterations show no visible gain, or at budget exhaustion. Passing the implementation checkpoint means a visibly improved study is delivered for owner review, not final likeness acceptance.
 
 Budget allocation: head/neck worker 5,000 tokens, body/wing worker 5,000, surface worker 5,000; root integration/render/review/sharing 15,000. Workers own disjoint module files in isolated checkouts; no further delegation. Root alone integrates, saves the complete asset, pushes coherent checkpoints and reports remaining likeness failures. Stop after Milestone 1b for owner review.
+
+Owner proportion correction within Milestone 1b: narrow torso cross-section by 10% and lengthen vertically by 12%; shorten neck by 15% and thicken by 20%. Head follows the shortened neck. This specifically authorizes a revised comparison after the initial two integrated attempts; no subsequent milestone is implied.

@@ -22,3 +22,5 @@ Milestone 1a is the owner-requested alternative baseline: exact reissued canon, 
 ## Authorized Milestone 1b
 
 Owner authorized a visual likeness attempt: **30,000 total tokens / three hours / up to three workers**. Improve head/neck presence, compact overlapping wing and breast layering, and regionally varied aged metal/verdigris/optic response in a separate editable CG asset. Preserve the exact base and all references. Compare against Milestone 1a at identical cameras and lighting; supply eight-angle views, hero and close-up evidence, native source and textured GLB. Root integrates three disjoint worker modules (5,000 tokens each; root 15,000). At most two integrated attempts. Stop for owner artistic review; no further milestone or public runtime replacement.
+
+Milestone 1b rendered study delivered; owner-requested torso/neck proportion correction incorporated. Evidence: `assets/audit/cinematic-cg-milestone01b/review.html`; source and GLB: `assets/models/cinematic-cg-milestone01b/`. Advanced study only; likeness, other-era continuity and motion remain unaccepted. Stop for owner review.
