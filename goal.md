@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T19:14:14+00:00"
+last_updated: "2026-10-03T19:47:31.463450+00:00"
 timezone: "America/Chicago"
-status: "milestone-2a-authorized"
+status: "milestone-2a-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -210,3 +210,15 @@ Visible gain is modest; fine hardware density, feather sharpness, cheek construc
 ## Milestone 2a owner authorization
 
 Owner: “Let’s try for milestone 2a with the same 3 agents, 3 hour, 30k tokens to get it closer to photo realistic.” Owner clarification: “The source image is something of a terror movie or nightmare where the current models appear laughable.” This is a new bounded appearance attempt, not retrospective approval of Milestone3 or automatic Milestone4 authority. Separate working branch: `codex/cinematic-vfx-milestone02a`. Preserve all prior sources and exact frozen engineering archive.
+
+
+## Milestone 2a checkpoint delivered — owner review pending
+
+Exact CG checkpoint: `3df3cb18ebdcdc522eb6a388a170df912b299d89`, separate branch `codex/cinematic-vfx-milestone02a`.
+[Matched reference/before/candidate review](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/review.html) · [Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/README.md) · [Preservation checks](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/validation.json).
+
+Two integrated visual attempts delivered: thinner overlapping metal sheets, original regional PBR wear, recessed cheek hardware and glass/iris/amber coils. The first valid comparison was rendered within30minutes and a GitHub checkpoint pushed within30minutes. Three era natives and browser models are retained. Source transforms and leg/foot geometry/UVs are preserved; Maker/Mechanic optics stay dark. Local build passes; no CG2a/private source material enters production output. V37 remains the runtime baseline; no deployment performed.
+
+The improvement is limited. The locked canon remains substantially more threatening and mechanically intricate. Regular armor shells, rounded crown, sparse exposed machinery and simple legs still read as stylized. The browser optic also appears paler/flatter than the fixed renderer; parity remains unresolved. Owner artistic acceptance is not claimed. Further likeness work should target construction and shape rather than adding more texture or darker lighting.
+
+This is a review checkpoint, not full CG-track completion. No animation, release, engineering, paid services or next milestone begins automatically. This shared documentation update promotes no model or runtime asset. Frozen engineering archive stays `9cc1b3c2da8cb064f343ab5915b32d0ab53236b1`.
