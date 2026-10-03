@@ -7,7 +7,7 @@ import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
-parser.add_argument('--revision',choices=['01','02'],default='02')
+parser.add_argument('--revision',choices=['01','02','03'],default='03')
 args=parser.parse_args()
 OUT=ROOT/('assets/audit/basic-shape-study'+args.revision)
 FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
@@ -33,13 +33,14 @@ def row(group,code,title):
 
 full=row('assembled','A','Assembly — same scale in all four views')
 comparison_html=''
-if args.revision=='02':
+if args.revision in ('02','03'):
     comp=Image.new('RGB',(768,442),'#f8fafb');dc=ImageDraw.Draw(comp)
-    for i,(name,path) in enumerate([('Before: study 01',ROOT/'assets/audit/basic-shape-study01/assembled-side.png'),('After: study 02',OUT/'assembled-side.png')]):
+    prior='01' if args.revision=='02' else '02'
+    for i,(name,path) in enumerate([(f'Before: study {prior}',ROOT/f'assets/audit/basic-shape-study{prior}/assembled-side.png'),(f'After: study {args.revision}',OUT/'assembled-side.png')]):
         dc.text((i*384+15,14),name,font=large,fill='#1b2730')
         with Image.open(path) as img:comp.paste(img.convert('RGB'),(i*384,58))
     comp.save(OUT/'side-comparison.png')
-    comparison_html='<section><h2>Your changes — same-camera side comparison</h2><img src="side-comparison.png" alt="Before and after head and elongated pointed torso" style="max-width:900px"></section>'
+    comparison_html='<section><h2>Your changes — same-camera side comparison</h2><img src="side-comparison.png" alt="Before and after owner-requested shape adjustments" style="max-width:900px"></section>'
 sheet=Image.new('RGB',(1536,4*442+72),'#f8fafb')
 for i,(group,code,title) in enumerate(parts):
     sheet.paste(row(group,code,title),(0,i*442))

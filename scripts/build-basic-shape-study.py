@@ -13,7 +13,7 @@ from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
-parser.add_argument('--revision',choices=['01','02'],default='02')
+parser.add_argument('--revision',choices=['01','02','03'],default='03')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 OUT = ROOT / ('assets/audit/basic-shape-study'+args.revision)
 OUT.mkdir(parents=True, exist_ok=True)
@@ -80,7 +80,7 @@ profile=[(.59,.11,.025,.04),(.65,.12,.13,.20),(.74,.11,.205,.29),
          (.84,.065,.25,.335),(.96,.015,.275,.345),
          (1.08,-.025,.26,.325),(1.20,-.06,.22,.275),
          (1.31,-.085,.145,.19),(1.39,-.09,.025,.035)]
-if args.revision=='02':
+if args.revision in ('02','03'):
     # Owner's drawn lower-rear contour: a longer diagonal egg/keel, ending
     # in a narrow rounded point behind the embedded hips, not a second ball.
     profile=[(.505,.355,.006,.012),(.555,.32,.045,.065),
@@ -88,6 +88,14 @@ if args.revision=='02':
              (.84,.09,.23,.285),(.96,.025,.275,.335),
              (1.08,-.025,.26,.325),(1.20,-.06,.22,.275),
              (1.31,-.085,.145,.19),(1.39,-.09,.025,.035)]
+if args.revision=='03':
+    # Orange owner trace: fuller continuous rear flank and low belly,
+    # retaining the rear tip rather than collapsing to a thin triangle.
+    profile=[(.515,.355,.008,.015),(.575,.255,.080,.13),
+             (.65,.165,.15,.245),(.735,.11,.205,.30),
+             (.84,.06,.245,.355),(.96,.04,.275,.355),
+             (1.08,-.02,.26,.335),(1.20,-.065,.22,.285),
+             (1.31,-.075,.15,.205),(1.39,-.09,.025,.035)]
 tv=[]
 for z,y,rx,ry in profile:
     for i in range(16):
@@ -145,13 +153,37 @@ capsule('N01 shoulder neck', 'neck', (0,-.105,1.30),(0,-.15,1.425),.115)
 capsule('N02 head neck', 'neck', (0,-.15,1.425),(0,-.23,1.495),.11)
 for sign, side in [(-1,'left'),(1,'right')]:
     hip=(sign*.165,.105,.865)
-    knee=(sign*.177,-.09,.61)
+    knee=(sign*.177,-.14,.59) if args.revision=='03' else (sign*.177,-.09,.61)
     hock=(sign*.185,.105,.285)
     ankle=(sign*.188,.015,.105)
-    capsule('L '+side+' upper thigh','legs',hip,knee,.075)
-    capsule('L '+side+' shank','legs',knee,hock,.051)
+    if args.revision=='03':
+        # Purple owner trace: a rounded proximal thigh tapering into a
+        # forward knee; keep the lower ankle, planted feet and hip anchors.
+        a,b=Vector(hip),Vector(knee);axis=(b-a).normalized()
+        u=Vector((1,0,0));v=axis.cross(u).normalized()
+        thigh_sections=[(-.16,.018),(0,.085),(.24,.108),(.5,.104),
+                        (.76,.092),(1,.072),(1.14,.018)]
+        lv=[]
+        for t,r in thigh_sections:
+            center=a+(b-a)*t
+            for i in range(16):
+                ang=i*math.tau/16
+                lv.append(tuple(center+r*(math.cos(ang)*u+math.sin(ang)*v)))
+        lf=[tuple(reversed(range(16)))]
+        for j in range(len(thigh_sections)-1):
+            for i in range(16):
+                lf.append((j*16+i,j*16+(i+1)%16,(j+1)*16+(i+1)%16,(j+1)*16+i))
+        lf.append(tuple(range((len(thigh_sections)-1)*16,len(thigh_sections)*16)))
+        ld=bpy.data.meshes.new(side+' rounded taper thigh cage');ld.from_pydata(lv,[],lf);ld.update()
+        lo=bpy.data.objects.new('L '+side+' rounded upper thigh',ld);s.collection.objects.link(lo)
+        tag(lo,'legs',dict(type='rounded-taper-thigh',start=hip,end=knee,sections=thigh_sections))
+        capsule('L '+side+' shank','legs',knee,hock,.061)
+    else:
+        capsule('L '+side+' upper thigh','legs',hip,knee,.075)
+        capsule('L '+side+' shank','legs',knee,hock,.051)
     capsule('L '+side+' lower segment','legs',hock,ankle,.04)
-    for name,point,r in [('hip',hip,.081),('knee',knee,.060),('hock',hock,.051)]:
+    for name,point,r in [('hip',hip,.092 if args.revision=='03' else .081),
+                         ('knee',knee,.073 if args.revision=='03' else .060),('hock',hock,.051)]:
         ellipsoid('L '+side+' '+name,'legs',point,(r,r,r))
     ellipsoid('L '+side+' foot pad','legs',(sign*.188,-.045,.065),(.072,.12,.04))
     for i,dx in enumerate([-.066,0,.066]):
@@ -169,7 +201,7 @@ VIEWS={'front':(0,-6,0),'top':(0,0,6),'side':(-6,0,0),'rear':(0,6,0)}
 GROUPS={'assembled':((0,-.04,.92),2.08),
         'head':((0,-.28,1.60),.86),'neck':((0,-.155,1.40),.49),
         'torso':((0,.04,1.00),.94),'legs':((0,-.02,.48),1.13)}
-if args.revision=='02':
+if args.revision in ('02','03'):
     GROUPS['torso']=((0,.09,.96),1.06)
 receipt={'status':'new proposed blockout, not extracted from or applied to detailed model',
          'revision':args.revision,
@@ -186,6 +218,10 @@ receipt={'status':'new proposed blockout, not extracted from or applied to detai
                        'No shield wings, plates, materials or machinery in this scope.',
                        'Part rows magnified independently; compare sizes in assembled row.',
                        'Overlay and detailed-model edits wait for owner notes.']}
+if args.revision=='03':
+    receipt['owner_adjustment']='Orange: fuller rear torso and lower belly taper. Purple: rounder upper thigh, forward knee and fuller shank.'
+    receipt['comparison']='Assembly and isolated part cameras unchanged from study02; head/neck, hip/hock/ankle anchors and feet preserved.'
+    receipt['assumption']='The colored traces specify contours, not exact numeric proportions; subtle knee repositioning and hidden-view widths are visual estimates.'
 objects=[o for o in s.objects if o.type=='MESH']
 for group,(center,scale) in GROUPS.items():
     for o in objects:
