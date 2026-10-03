@@ -28,3 +28,11 @@ Milestone 1b rendered study delivered; owner-requested torso/neck proportion cor
 ## Authorized Milestone 1c
 
 Owner authorized **30,000 tokens total / three hours / at most three workers** for the next visual attempt, using rounded shape study05 and Macaulay et al. (2023) as posture guidance. Transfer the revised continuous torso, softened head, compact neck, embedded hips and enlarged folded wing geometry into a detailed cinematic character. Preserve existing assets. Supply editable native source, textured GLB, same-camera low-res/detail and 1b/detail comparisons, eight views and regional close-ups. Paper evidence informs visual mass placement only; no validated balance or universal hip-position rule is claimed. Working track: `codex/cinematic-vfx-milestone01c`. At most two integrated attempts; stop for owner review. No animation, runtime promotion, engineering or Milestone 2 authority.
+
+### Milestone 1c disposition
+
+Two integrated attempts delivered on `codex/cinematic-vfx-milestone01c`, exact
+checkpoint `a927c4f6d48f67b44e365e20d90fd655d1ddc51a`.
+[Handoff and evidence](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/README.md).
+Owner artistic review pending; execution has stopped. No later milestone begins
+automatically. This documentation update does not merge or deploy the CG assets.
