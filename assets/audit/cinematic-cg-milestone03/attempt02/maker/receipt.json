@@ -1,0 +1,190 @@
+{
+  "status": "Owner review pending; proposed CG character",
+  "mode": "candidate",
+  "attempt": "attempt02",
+  "era": "maker",
+  "geometry_input": "assets/models/cinematic-cg-milestone02/posture01/murderbird-cg-2-maker.blend",
+  "input_sha256": "d378587f66cd2a032bf59042cb6f7938c4d82a00354cca2f5d0aba9ae6a0d440",
+  "previous_detailed_sha256": "d378587f66cd2a032bf59042cb6f7938c4d82a00354cca2f5d0aba9ae6a0d440",
+  "changes": {
+    "head": {
+      "module": "cinematic-cg-3-head",
+      "era": "maker",
+      "refinedLenses": [
+        "CG1c recessed optic -1",
+        "CG1c recessed optic 1"
+      ],
+      "addedMeshes": 24,
+      "headPoseDelta": [
+        0,
+        0,
+        0
+      ],
+      "headEnvelopeTransform": 1,
+      "opticDiameterMultiplier": 0.74,
+      "limits": [
+        "Lens curvature/specular seat is a CG glass cue; no new transmission shader",
+        "Existing era materials retain dark Maker/Mechanic optics",
+        "Cheek polish confined to existing machinery seats"
+      ]
+    },
+    "body": {
+      "module": "cg3-body-crown",
+      "platesChanged": 535,
+      "verticesChanged": 5350,
+      "maximumDisplacement": 0.003,
+      "skippedUnexpectedTopology": [],
+      "change": "Lift existing curved crown rings and centres outward along current posed face normals; preserve boundaries, backing, rolled edges, fasteners, UVs and materials",
+      "limits": "Local relief only; no new shells or global silhouette/pose change. Integrated lighting review required to establish stronger layering."
+    },
+    "surface": {
+      "era": "maker",
+      "familyCounts": {
+        "patina": 660,
+        "steel": 122,
+        "bronze": 1016,
+        "machinery": 172,
+        "optic": 2
+      },
+      "materials": [
+        "CG3 / patina / maker",
+        "CG3 / steel / maker",
+        "CG3 / bronze / maker",
+        "CG3 / machinery / maker",
+        "CG3 / optic / maker"
+      ],
+      "imageNames": [
+        "bronze-maker-color.png",
+        "bronze-maker-orm.png",
+        "bronze-normal.png",
+        "machinery-maker-color.png",
+        "machinery-maker-orm.png",
+        "machinery-normal.png",
+        "patina-maker-color.png",
+        "patina-maker-orm.png",
+        "patina-normal.png",
+        "steel-maker-color.png",
+        "steel-maker-orm.png",
+        "steel-normal.png"
+      ],
+      "normalStrength": {
+        "patina": 0.72,
+        "steel": 0.38,
+        "bronze": 0.24,
+        "machinery": 0.46
+      },
+      "roughnessMetallic": "Retained original ORM G/B maps, no scalar replacement",
+      "optic": {
+        "emission": 0,
+        "coat": 0.45,
+        "roughness": 0.16
+      },
+      "limits": [
+        "Source PBR maps reused unchanged; sparse exposed edges depend on geometry roles.",
+        "Geometry, pose, UV, cameras and lighting unchanged.",
+        "Owner likeness acceptance remains separate."
+      ]
+    }
+  },
+  "cameras": {
+    "canon-neutral": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "neutral"
+    },
+    "canon-workshop": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "workshop"
+    },
+    "legacy-neutral": {
+      "location": [
+        -6.0,
+        -3.5,
+        2.75
+      ],
+      "rotation_euler": [
+        1.3050193786621094,
+        7.730646700565558e-08,
+        -1.0527278184890747
+      ],
+      "ortho_scale": 2.25,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    }
+  },
+  "visible_meshes": 1948,
+  "visible_geometry_bounds": {
+    "x": [
+      -0.34977400302886963,
+      0.34980273246765137
+    ],
+    "y": [
+      -0.5626112222671509,
+      0.4250079393386841
+    ],
+    "z": [
+      0.013269884511828423,
+      1.8640803098678589
+    ]
+  },
+  "optic_emission": {
+    "CG1c recessed optic -1": 0.0,
+    "CG1c recessed optic 1": 0.0
+  },
+  "browser_export": {
+    "mesh_groups": 5,
+    "material_groups": [
+      "CG3 / machinery / maker",
+      "CG3 / steel / maker",
+      "CG3 / bronze / maker",
+      "CG3 / patina / maker",
+      "CG3 / optic / maker"
+    ],
+    "texture_resolution": 1024,
+    "native_texture_resolution": 2048,
+    "method": "Evaluated temporary geometry joined by material; normalized UV names; native parts unchanged"
+  },
+  "source_preserved": true,
+  "created_utc": "2026-10-03T15:24:56.561029+00:00",
+  "image_hashes": {
+    "legacy-neutral.png": "026e0e7b25b253612b9931177ac456224aed21dc110ab51bfa3a9a47e2231e70",
+    "canon-workshop.png": "bba04175a06f65437699209116240d26ee9bc109ab1d5a92b5fe7b462370cd58",
+    "canon-neutral.png": "d1728e56ea2b1117f5fe6f6e7faf90bfd78c69c16e794bd52be0a44ed2c0ec2e"
+  }
+}

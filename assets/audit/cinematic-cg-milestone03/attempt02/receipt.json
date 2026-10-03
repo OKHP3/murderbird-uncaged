@@ -1,0 +1,778 @@
+{
+  "status": "Owner review pending; proposed CG character",
+  "mode": "candidate",
+  "attempt": "attempt02",
+  "era": "builder",
+  "geometry_input": "assets/models/cinematic-cg-milestone02/posture01/murderbird-cg-2-builder.blend",
+  "input_sha256": "28139c0ea616be8287806767b07728e20e87d6edcc245af2a97459032411a2a7",
+  "previous_detailed_sha256": "28139c0ea616be8287806767b07728e20e87d6edcc245af2a97459032411a2a7",
+  "changes": {
+    "head": {
+      "module": "cinematic-cg-3-head",
+      "era": "builder",
+      "refinedLenses": [
+        "CG1c recessed optic -1",
+        "CG1c recessed optic 1"
+      ],
+      "addedMeshes": 24,
+      "headPoseDelta": [
+        0,
+        0,
+        0
+      ],
+      "headEnvelopeTransform": 1,
+      "opticDiameterMultiplier": 0.74,
+      "limits": [
+        "Lens curvature/specular seat is a CG glass cue; no new transmission shader",
+        "Existing era materials retain dark Maker/Mechanic optics",
+        "Cheek polish confined to existing machinery seats"
+      ]
+    },
+    "body": {
+      "module": "cg3-body-crown",
+      "platesChanged": 535,
+      "verticesChanged": 5350,
+      "maximumDisplacement": 0.003,
+      "skippedUnexpectedTopology": [],
+      "change": "Lift existing curved crown rings and centres outward along current posed face normals; preserve boundaries, backing, rolled edges, fasteners, UVs and materials",
+      "limits": "Local relief only; no new shells or global silhouette/pose change. Integrated lighting review required to establish stronger layering."
+    },
+    "surface": {
+      "era": "builder",
+      "familyCounts": {
+        "patina": 660,
+        "steel": 122,
+        "bronze": 1016,
+        "machinery": 172,
+        "optic": 2
+      },
+      "materials": [
+        "CG3 / patina / builder",
+        "CG3 / steel / builder",
+        "CG3 / bronze / builder",
+        "CG3 / machinery / builder",
+        "CG3 / optic / builder"
+      ],
+      "imageNames": [
+        "bronze-builder-color.png",
+        "bronze-builder-orm.png",
+        "bronze-normal.png",
+        "machinery-builder-color.png",
+        "machinery-builder-orm.png",
+        "machinery-normal.png",
+        "patina-builder-color.png",
+        "patina-builder-orm.png",
+        "patina-normal.png",
+        "steel-builder-color.png",
+        "steel-builder-orm.png",
+        "steel-normal.png"
+      ],
+      "normalStrength": {
+        "patina": 0.72,
+        "steel": 0.38,
+        "bronze": 0.24,
+        "machinery": 0.46
+      },
+      "roughnessMetallic": "Retained original ORM G/B maps, no scalar replacement",
+      "optic": {
+        "emission": 0.48,
+        "coat": 0.45,
+        "roughness": 0.16
+      },
+      "limits": [
+        "Source PBR maps reused unchanged; sparse exposed edges depend on geometry roles.",
+        "Geometry, pose, UV, cameras and lighting unchanged.",
+        "Owner likeness acceptance remains separate."
+      ]
+    }
+  },
+  "cameras": {
+    "canon-neutral": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "neutral"
+    },
+    "canon-workshop": {
+      "location": [
+        -6.0,
+        -2.1399998664855957,
+        1.9700000286102295
+      ],
+      "rotation_euler": [
+        1.4070991277694702,
+        -8.636930459715586e-08,
+        -1.2341214418411255
+      ],
+      "ortho_scale": 2.904942035675049,
+      "shift_x": -0.10180506110191345,
+      "shift_y": -0.009439428336918354,
+      "resolution": [
+        960,
+        640
+      ],
+      "lighting": "workshop"
+    },
+    "legacy-neutral": {
+      "location": [
+        -6.0,
+        -3.5,
+        2.75
+      ],
+      "rotation_euler": [
+        1.3050193786621094,
+        7.730646700565558e-08,
+        -1.0527278184890747
+      ],
+      "ortho_scale": 2.25,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "legacy-workshop": {
+      "location": [
+        -6.0,
+        -3.5,
+        2.75
+      ],
+      "rotation_euler": [
+        1.3050193786621094,
+        7.730646700565558e-08,
+        -1.0527278184890747
+      ],
+      "ortho_scale": 2.25,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "angle-000": {
+      "location": [
+        0.0,
+        -6.039999961853027,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -0.0,
+        0.0
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-045": {
+      "location": [
+        4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        1.7199390356381627e-08,
+        0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-090": {
+      "location": [
+        6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -2.217801764459182e-08,
+        1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-135": {
+      "location": [
+        4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.4383206803358917e-07,
+        2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-180": {
+      "location": [
+        7.347880586115415e-16,
+        5.960000038146973,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.488601100163578e-07,
+        3.141592502593994
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-225": {
+      "location": [
+        -4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        -1.4383206803358917e-07,
+        -2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-270": {
+      "location": [
+        -6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        2.217801764459182e-08,
+        -1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "angle-315": {
+      "location": [
+        -4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        -1.7199390356381627e-08,
+        -0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "exhibit-000": {
+      "location": [
+        0.0,
+        -6.039999961853027,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -0.0,
+        0.0
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-045": {
+      "location": [
+        4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        1.7199390356381627e-08,
+        0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-090": {
+      "location": [
+        6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -2.217801764459182e-08,
+        1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-135": {
+      "location": [
+        4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.4383206803358917e-07,
+        2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-180": {
+      "location": [
+        7.347880586115415e-16,
+        5.960000038146973,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.488601100163578e-07,
+        3.141592502593994
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-225": {
+      "location": [
+        -4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        -1.4383206803358917e-07,
+        -2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-270": {
+      "location": [
+        -6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        2.217801764459182e-08,
+        -1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "exhibit-315": {
+      "location": [
+        -4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        -1.7199390356381627e-08,
+        -0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "head-closeup": {
+      "location": [
+        -6.0,
+        -2.140000104904175,
+        2.1500000953674316
+      ],
+      "rotation_euler": [
+        1.4803043603897095,
+        -1.1085612072747608e-07,
+        -1.270190715789795
+      ],
+      "ortho_scale": 0.7699999809265137,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "body-closeup": {
+      "location": [
+        -6.0,
+        -2.140000104904175,
+        1.5499999523162842
+      ],
+      "rotation_euler": [
+        1.4816019535064697,
+        -2.5958488691912862e-08,
+        -1.2267169952392578
+      ],
+      "ortho_scale": 1.2200000286102295,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "workshop"
+    },
+    "side-profile": {
+      "location": [
+        -6.0,
+        0.0,
+        0.9399999976158142
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -0.0,
+        -1.5707963705062866
+      ],
+      "ortho_scale": 2.0799999237060547,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-000": {
+      "location": [
+        0.0,
+        -6.039999961853027,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -0.0,
+        0.0
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-045": {
+      "location": [
+        4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        1.7199390356381627e-08,
+        0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-090": {
+      "location": [
+        6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        -2.217801764459182e-08,
+        1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-135": {
+      "location": [
+        4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.4383206803358917e-07,
+        2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-180": {
+      "location": [
+        7.347880586115415e-16,
+        5.960000038146973,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        1.488601100163578e-07,
+        3.141592502593994
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-225": {
+      "location": [
+        -4.242640495300293,
+        4.202640533447266,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.402406096458435,
+        -1.4383206803358917e-07,
+        -2.356194496154785
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-270": {
+      "location": [
+        -6.0,
+        -0.03999999910593033,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024062156677246,
+        2.217801764459182e-08,
+        -1.5707964897155762
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    },
+    "silhouette-315": {
+      "location": [
+        -4.242640495300293,
+        -4.28264045715332,
+        1.940000057220459
+      ],
+      "rotation_euler": [
+        1.4024063348770142,
+        -1.7199390356381627e-08,
+        -0.7853984236717224
+      ],
+      "ortho_scale": 2.0999999046325684,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "resolution": [
+        720,
+        960
+      ],
+      "lighting": "neutral"
+    }
+  },
+  "visible_meshes": 1948,
+  "visible_geometry_bounds": {
+    "x": [
+      -0.34977400302886963,
+      0.34980273246765137
+    ],
+    "y": [
+      -0.5626112222671509,
+      0.4250079393386841
+    ],
+    "z": [
+      0.013269884511828423,
+      1.8640803098678589
+    ]
+  },
+  "optic_emission": {
+    "CG1c recessed optic -1": 0.47999998927116394,
+    "CG1c recessed optic 1": 0.47999998927116394
+  },
+  "browser_export": {
+    "mesh_groups": 5,
+    "material_groups": [
+      "CG3 / machinery / builder",
+      "CG3 / steel / builder",
+      "CG3 / bronze / builder",
+      "CG3 / patina / builder",
+      "CG3 / optic / builder"
+    ],
+    "texture_resolution": 1024,
+    "native_texture_resolution": 2048,
+    "method": "Evaluated temporary geometry joined by material; normalized UV names; native parts unchanged"
+  },
+  "source_preserved": true,
+  "created_utc": "2026-10-03T15:25:29.625345+00:00",
+  "image_hashes": {
+    "angle-225.png": "e0d139b38367eb08fba6aa04629f0b34c5343b7f71b055346446677453f01cee",
+    "exhibit-180.png": "673e9c7860bb20fa961c668ecccef9429122e76e1ea76bae699715b2437c35d3",
+    "silhouette-180.png": "577b300f36df3737b5841f4903f488ed26ef4510ff4c521915625cab1255fb7b",
+    "legacy-workshop.png": "8716a468942e0f454f3141f1fe3914fabfe9b2843e0e07381b2214a7cd86d005",
+    "silhouette-225.png": "9e2c53801629344c23e36b2f0daf0ee67f67bacff29b16bed46c3001690f70e3",
+    "exhibit-225.png": "9a1dd8abc361cf6c743b3e4c7825afd03df4b4228f09a4e89d65e336c16ea356",
+    "angle-180.png": "719a7dc7717f290545048260c76a6a8cbabe6ee04dc0e4e7492342e83a4d4eb2",
+    "angle-045.png": "1af4f532117c65c100e3fac75d37adea2a7988390ba547554635417a8a02310e",
+    "exhibit-135.png": "e02fd2a6f2a8de3f845736160cc3422dc47197b9e0f5aad8e2aac96b51a8c856",
+    "angle-090.png": "d6abb4da39d0e97c7ba70bb524cac29ca8851b8e42f42d6c3ea17c651f86e363",
+    "silhouette-135.png": "880be2497f5604a8c931a857db0284f6e8033ba3525528b2cf26b8656b59c4dd",
+    "exhibit-090.png": "b181a4f734513594be6f1827eae0f9fb72fe49d852ced7bca0deb595e5fb6be6",
+    "silhouette-045.png": "03e8e76ca6fd2cdfb2c679b8e7a69695c97b31ed1e4eabdd07ced1fe04881e09",
+    "exhibit-045.png": "c4892e64b3c16ea49f405fa3faeb8b3ab73740daaf5d2580fad6082b991e8ea3",
+    "silhouette-090.png": "7af2b22d38729f660465a082120299ccdead403e701b18a9396844721e226d0f",
+    "angle-135.png": "4c96bbc5b900c1301c4a8d607ae0abe40f05d9412f116ec91b77f74f2a674645",
+    "body-closeup.png": "1cbf8516a7714f339cb69c847dce9a02332f55c0111985139496dbdbe10cea7f",
+    "silhouette-315.png": "1bb114dab37ec3e0b5ad9f95b1b6f038b4d0ebbfb69278ea2478fecf06a14380",
+    "exhibit-315.png": "b7e5272207162c7c378e9d93e36e855137357f6deab4f53aa0c7fecb0b2e1ca4",
+    "angle-270.png": "0089f9557146331f0798315d8126754f5ab555131fd9e40c6da816a4b72f6c93",
+    "exhibit-270.png": "d0a60d424ae313f068222a81b511026e5a3fe20899724e7c4cb6b441e08e93d8",
+    "head-closeup.png": "11e5332354bb1a763064f3226e75730278f3d20d9aae8fa6d4ecba642b07e972",
+    "angle-315.png": "f4e199fd06bb1fc5a41db20071248044c42acab24b1a758313445ab6ae6937cb",
+    "silhouette-270.png": "0fdd3c92c877b484b5836d0fd10f484a64fac1c9cace5931a742277f2a02232b",
+    "legacy-neutral.png": "2b47024871edac4e1a8ed4757e107eb32d7468300e7709c79beceb0fea688752",
+    "canon-workshop.png": "2e4b6402522b0e15c40adb1aa703c611abc9a79c30f07f0cd36c310bf514b45f",
+    "side-profile.png": "307bf27bcb20b32550f0664e72b0ff0927a032180460a770e8223ca04923f156",
+    "canon-neutral.png": "ca0b02f801c4112672e86af3f72ac98c36c7aa35bd8e500fd60fd1b6e230d724",
+    "silhouette-000.png": "2da3e7a479c5228434286a7d9c9c75574a9f766b8c24bc608d7617173afa0c26",
+    "exhibit-000.png": "da28f8b096a70869150f3b2b14ee9f30675fbd7a3b705effae93ccfcdf2fed52",
+    "angle-000.png": "87eac115096a8b597b64a4ff4650387a65c5e18b89f209ca4bdb1206666a2d3c"
+  }
+}

@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T10:09:00-05:00"
+last_updated: "2026-10-03T15:28:26+00:00"
 timezone: "America/Chicago"
-status: "milestone-2-posture-owner-review-pending"
+status: "milestone-3-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -56,7 +56,7 @@ The owner’s October 2 restatement explicitly confirms dark, non-awakened optic
 
 ## Track completion
 
-The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b, 1c and 2 are authorized; Milestones 3–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
+The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b, 1c, 2 and 3 are authorized; Milestone 4 remains a proposal. Completing Milestone 1 does not authorize another milestone.
 
 ## Visual construction rules
 
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Milestone 1C was accepted as sufficient to proceed. Milestone 2 is authorized and its owner-requested posture correction is ready for owner review under the 45-minute / 12,000-token plan ceiling. Execution has stopped for review; Milestones 3–4, engineering and publication remain unauthorized.
+Owner approved the Milestone 2 posture checkpoint and authorized Milestone 3. Cinematic appearance pass: 40 minutes / 10,000 aggregate tokens including workers and integration, start 2026-10-03T15:18:39Z, deadline 15:58:39Z. Preserve approved geometry and pose; refine visible armor overlap, metal response and recessed optics across all three eras. Two focused visual attempts are delivered; execution has stopped for owner review. Milestone 4, engineering and publication remain unauthorized.
 
 ## Owner review of Milestone 1
 
@@ -191,3 +191,11 @@ visual adjustments, not owner-approved measurements or engineering balance.
 Same fixed comparison cameras and lighting; stop for review. No Milestone 3.
 
 The requested posture checkpoint is now ready in `assets/audit/cinematic-cg-milestone02/posture01/review.html`. Three-era native and browser assets are under `assets/models/cinematic-cg-milestone02/posture01/`. Artistic acceptance remains pending; execution stops for owner review.
+
+## Milestone 2 accepted; Milestone 3 authorized
+
+Owner: “Approved proceed to milestone 3.” Exact accepted pose base: `8d6a113e3c7f2d9653830f272daf33cec74fb395`. This approves continuation, not a final visual twin or release. Historical holds above are superseded for continuation. New working branch: `codex/cinematic-vfx-milestone03`. Root integrates three existing isolated workers (at most 1,500 tokens each; root 5,500). No further delegation. Preserve head/neck/leg posture and body dimensions; cinematic surface detail is the active scope.
+
+## Milestone 3 checkpoint delivered
+
+Two integrated attempts are available at `assets/audit/cinematic-cg-milestone03/review.html`. The second reduces padded armor relief and retains original material graphs/maps. Editable three-era native and browser assets are in `assets/models/cinematic-cg-milestone03/`. Local preservation, build, source-map and browser checks pass. Visible gain is modest: local armor depth and stepped smaller optic seats. Fine hardware density, feather sharpness and optic realism remain short of the pinned source. Owner artistic acceptance is pending; execution stops before Milestone 4.
