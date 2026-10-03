@@ -7,7 +7,7 @@ import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
-parser.add_argument('--revision',choices=['01','02','03'],default='03')
+parser.add_argument('--revision',choices=['01','02','03','04'],default='04')
 args=parser.parse_args()
 OUT=ROOT/('assets/audit/basic-shape-study'+args.revision)
 FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
@@ -17,6 +17,8 @@ small=ImageFont.truetype(FONT,16)
 views=['front','top','side','rear']
 parts=[('head','H','Head + bill'),('neck','N','Neck'),
        ('torso','T','Torso + compact rear'),('legs','L','Legs + feet')]
+if args.revision=='04':
+    parts.insert(3,('shoulder-wing','S','Shoulders + short folded wing stubs'))
 
 def row(group,code,title):
     sheet=Image.new('RGB',(1536,442),'#f8fafb')
@@ -33,20 +35,34 @@ def row(group,code,title):
 
 full=row('assembled','A','Assembly — same scale in all four views')
 comparison_html=''
-if args.revision in ('02','03'):
+if args.revision in ('02','03','04'):
     comp=Image.new('RGB',(768,442),'#f8fafb');dc=ImageDraw.Draw(comp)
-    prior='01' if args.revision=='02' else '02'
+    prior=f'{int(args.revision)-1:02d}'
     for i,(name,path) in enumerate([(f'Before: study {prior}',ROOT/f'assets/audit/basic-shape-study{prior}/assembled-side.png'),(f'After: study {args.revision}',OUT/'assembled-side.png')]):
         dc.text((i*384+15,14),name,font=large,fill='#1b2730')
         with Image.open(path) as img:comp.paste(img.convert('RGB'),(i*384,58))
     comp.save(OUT/'side-comparison.png')
     comparison_html='<section><h2>Your changes — same-camera side comparison</h2><img src="side-comparison.png" alt="Before and after owner-requested shape adjustments" style="max-width:900px"></section>'
-sheet=Image.new('RGB',(1536,4*442+72),'#f8fafb')
+    if args.revision=='04':
+        fc=Image.new('RGB',(1536,442),'#f8fafb');fd=ImageDraw.Draw(fc)
+        entries=[('03 front',ROOT/'assets/audit/basic-shape-study03/assembled-front.png'),
+                 ('04 front',OUT/'assembled-front.png'),
+                 ('03 rear',ROOT/'assets/audit/basic-shape-study03/assembled-rear.png'),
+                 ('04 rear',OUT/'assembled-rear.png')]
+        for i,(name,path) in enumerate(entries):
+            fd.text((i*384+15,14),name,font=large,fill='#1b2730')
+            with Image.open(path) as img:fc.paste(img.convert('RGB'),(i*384,58))
+        fc.save(OUT/'shoulder-comparison.png')
+        comparison_html='<section><h2>Shoulder changes — matched front and rear</h2><img src="shoulder-comparison.png" alt="Study03 and study04 shoulder comparison"></section>'+comparison_html
+rows=len(parts)
+sheet=Image.new('RGB',(1536,rows*442+72),'#f8fafb')
 for i,(group,code,title) in enumerate(parts):
     sheet.paste(row(group,code,title),(0,i*442))
 draw=ImageDraw.Draw(sheet)
-draw.text((15,4*442+14),'Part rows enlarged separately. Use assembly for relative sizes. Top views: beak/forward at image top.',font=small,fill='#344653')
-draw.text((15,4*442+40),'Draft rounded forms for owner notes — hidden surfaces inferred; no materials, armor or wings.',font=small,fill='#344653')
+draw.text((15,rows*442+14),'Part rows enlarged separately. Use assembly for relative sizes. Top views: beak/forward at image top.',font=small,fill='#344653')
+footer='Draft rounded forms for owner notes — hidden surfaces inferred; no materials, armor or wings.'
+if args.revision=='04':footer='Draft rounded forms with short folded wing stubs — hidden surfaces inferred; no materials or armor.'
+draw.text((15,rows*442+40),footer,font=small,fill='#344653')
 sheet.save(OUT/'parts-sheet.png')
 sections='\n'.join(f'<section><h2>{title}</h2><img src="{group}-sheet.png" alt="{title}: front top side rear"></section>' for group,code,title in parts)
 (OUT/'review.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -63,6 +79,6 @@ files=[p for p in OUT.iterdir() if p.suffix in ('.png','.jpg','.blend','.html')]
     'status':'owner review pending',
     'generator':'Blender Workbench orthographic renders; Pillow labels and layout; no AI image generation',
     'images':[{'path':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(files)],
-    'validation':{'rendered_views':20,'view_resolution':[384,384],
+    'validation':{'rendered_views':(len(parts)+1)*4,'view_resolution':[384,384],
                   'source_model_modified':False,'reference_images_modified':False},
 },indent=2)+'\n')
