@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T19:43:15.099006+00:00"
+last_updated: "2026-10-03T22:37:27.576276+00:00"
 timezone: "America/Chicago"
-status: "milestone-2a-owner-review-pending"
+status: "milestone-2b-authorized"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -97,7 +97,17 @@ Keep bounded parallel work, cheap targeted checks, coherent commits and frequent
 
 The previous operational goal is preserved locally in the Git-ignored supervision archive. Prior repository directives remain in Git history and the creative-authority record; their reference, rights and preservation rules still apply.
 
-## Current authorization
+## Current authorization — Milestone 2b avian identity and cinematic construction
+
+Owner directs: “Let’s push it and try 10 agents for up to 5 hours and no more than 1million tokens to see if we can push through the jamb with brute force.” New attempt from exact preserved CG revision `3df3cb18ebdcdc522eb6a388a170df912b299d89`; working branch `codex/cinematic-vfx-milestone02b`. Start 2026-10-03T22:34:59Z; deadline 2026-10-04T03:34:59Z. Aggregate token ceiling 1,000,000 including workers and integration; this is a ceiling, not a spending target.
+
+Ten worker assignments run in waves because the runtime permits three active workers plus the root integrator. Roles: head silhouette, torso construction, folded shield-wings, facial hardware/optic, exposed torso machinery, leg/claw detail, regional surfaces, lighting/stage, browser material parity, and independent visual critique. Root owns integration, shared revisions and final renders; workers use isolated paths/checkouts and never delegate further.
+
+Restore unmistakable flightless mechanical bird identity and the locked source's nightmare presence. New head/beak/torso/wing exterior geometry is authorized where needed for resemblance; the rejected anteater-like shell is not a frozen shape constraint. Preserve prior native assets, approved hip/knee/hock/foot stance anchors and frozen engineering archive. Newly inferred construction remains a CG proposal. No engineering fitment or certification is requested.
+
+Show a same-camera visible checkpoint within 30 minutes. Use at most two focused design attempts per increment before presenting evidence; independently useful corrections may continue inside this authorized attempt. If two consecutive corrections show no visible gain, stop or narrow the approach rather than accumulating detail. Deliver matched canon/before/candidate views, three-era editable/native and browser assets, fixed lighting/close-ups/eight views, source/proposal receipts and honest remaining gaps. Stop by the time/token ceiling or when the review packet is ready; artistic completion still requires owner review. No animation, purchases, paid Replit mode, runtime replacement or publication authorization is added.
+
+## Prior Milestone 2a authorization
 
 Owner authorizes a new **Milestone 2a photorealism and threatening screen-presence pass**, with the same three agents, three hours and 30,000 aggregate tokens including integration. Start2026-10-03T19:10:17Z; deadline22:10:17Z. The latest source comparison is Milestone3 revision `e42be2d0fb1019aef6d16a8d05b6bb57a813f496`; its final likeness remains unaccepted. Preserve approved large forms and stance while replacing the soft, tidy prop appearance with sharp metal feather layering, recessed optics and cheek hardware, worn regional PBR materials and purposeful cinematic lighting. Source canon feels like a terror movie/nightmare; detail count alone does not satisfy that direction. Same-camera comparisons remain mandatory. Root integrates three existing isolated workers (5,000 tokens each; root15,000); no further delegation. First visible checkpoint within30minutes, at most two integrated visual attempts. Stop for owner review. No animation, runtime replacement, publication, paid services or engineering certification.
 
@@ -141,12 +151,16 @@ Deliver a new editable Blender character, browser-readable textured GLB, eight-a
 
 ## Milestone 1c checkpoint delivered
 
-The two-attempt study is available on `codex/cinematic-vfx-milestone01c` at
-[the local review](assets/audit/cinematic-cg-milestone01c/review.html) and
-[the checkpoint handoff](assets/audit/cinematic-cg-milestone01c/README.md).
+Two integrated attempts delivered; execution has stopped for owner artistic
+review. The implementation stays on `codex/cinematic-vfx-milestone01c` at
+`a927c4f6d48f67b44e365e20d90fd655d1ddc51a`.
+[Review artifact](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/review.html) ·
+[Checkpoint handoff and limits](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/README.md).
+
 Study05 proportions are carried into editable three-era detailed geometry.
 Likeness remains unaccepted: broad shallow body/shield plating, crude shoulders
-and flat optics remain visible gaps. Execution stops for owner review. No later
+and flat optics remain visible gaps. No system may treat this checkpoint or the
+remaining time budget as authorization to continue automatically. No later
 milestone, animation, engineering acceptance or production replacement is implied.
 
 ## Milestone 1C owner review and Milestone 2 authorization
@@ -172,25 +186,23 @@ authorized. Working branch: `codex/cinematic-vfx-milestone02`.
 ## Milestone 2 checkpoint delivered
 
 One focused contour pass is ready on `codex/cinematic-vfx-milestone02`.
-[Review](assets/audit/cinematic-cg-milestone02/review.html) ·
-[Handoff](assets/audit/cinematic-cg-milestone02/README.md).
+[Review](https://github.com/OKHP3/murderbird-uncaged/blob/42a7e7c3980f55a413ab64edfb34d4fe384e6a77/assets/audit/cinematic-cg-milestone02/review.html) ·
+[Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/42a7e7c3980f55a413ab64edfb34d4fe384e6a77/assets/audit/cinematic-cg-milestone02/README.md).
 Gain is modest: rounded folded shoulder caps and smoother torso transitions;
 accepted proportions, stance, leg/foot geometry and materials remain preserved.
 Stop for owner silhouette review before Milestone 3. Final likeness, surface
 polish, motion and release acceptance remain outstanding.
 
-## Owner posture correction within Milestone 2
+Exact remotely verified CG checkpoint: `42a7e7c3980f55a413ab64edfb34d4fe384e6a77`. This goal update contains no model or runtime promotion.
 
-The owner directs adjusting leg and head/neck posture and stance to better mimic
-the locked baseline image. This authorizes one focused pose revision from
-`42a7e7c3980f55a413ab64edfb34d4fe384e6a77`, preserving the body proportions and
-all source assets. Bring the leg zigzag closer to the reference's straighter
-stance, keep feet planted and hips embedded, and make the neck more upright with
-a less downward head/bill attitude. Named angle/position values are proposed
-visual adjustments, not owner-approved measurements or engineering balance.
-Same fixed comparison cameras and lighting; stop for review. No Milestone 3.
+## Owner-requested Milestone 2 posture correction
 
-The requested posture checkpoint is now ready in `assets/audit/cinematic-cg-milestone02/posture01/review.html`. Three-era native and browser assets are under `assets/models/cinematic-cg-milestone02/posture01/`. Artistic acceptance remains pending; execution stops for owner review.
+The owner requests leg and head/neck posture and stance closer to the locked baseline. One focused correction is ready on `codex/cinematic-vfx-milestone02`, revision `8d6a113e3c7f2d9653830f272daf33cec74fb395`.
+[Review](https://github.com/OKHP3/murderbird-uncaged/blob/8d6a113e3c7f2d9653830f272daf33cec74fb395/assets/audit/cinematic-cg-milestone02/posture01/review.html) · [Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/8d6a113e3c7f2d9653830f272daf33cec74fb395/assets/audit/cinematic-cg-milestone02/posture01/README.md).
+
+Neck posture is 14 degrees more upright with the lower join anchored; net head attitude lifts 6 degrees. Knees and hocks reduce the deep leg zigzag. Hip centers remain fixed and feet move outward .030 study units each (about 16% wider center spacing), retaining ground height. Body and shield geometry, head dimensions and regional finishes remain unchanged. Values are integrator proposals inferred from the image, not owner-approved measurements. Leg segments change length axially for this visual stance; no IK, physical balance or engineering validation is claimed.
+
+All three era models and fixed before/after comparisons are available. Native preservation, browser loading, asset resolution and local build checks passed; existing chunk-size warning remains. Artistic acceptance is pending. The requested correction uses the existing bounded Milestone 2 scope and stops for review; Milestone 3, runtime replacement and publication remain unauthorized. This shared goal update promotes no model or runtime asset.
 
 ## Milestone 2 accepted; Milestone 3 authorized
 
@@ -198,13 +210,34 @@ Owner: “Approved proceed to milestone 3.” Exact accepted pose base: `8d6a113
 
 ## Milestone 3 checkpoint delivered
 
-Two integrated attempts are available at `assets/audit/cinematic-cg-milestone03/review.html`. The second reduces padded armor relief and retains original material graphs/maps. Editable three-era native and browser assets are in `assets/models/cinematic-cg-milestone03/`. Local preservation, build, source-map and browser checks pass. Visible gain is modest: local armor depth and stepped smaller optic seats. Fine hardware density, feather sharpness and optic realism remain short of the pinned source. Owner artistic acceptance is pending; execution stops before Milestone 4.
+Two integrated attempts delivered on `codex/cinematic-vfx-milestone03`, exact remotely verified revision `e42be2d0fb1019aef6d16a8d05b6bb57a813f496`.
+[Review](https://github.com/OKHP3/murderbird-uncaged/blob/e42be2d0fb1019aef6d16a8d05b6bb57a813f496/assets/audit/cinematic-cg-milestone03/review.html) · [Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/e42be2d0fb1019aef6d16a8d05b6bb57a813f496/assets/audit/cinematic-cg-milestone03/README.md).
+
+The second reduces the first attempt's padded plate relief and retains original material graphs/maps. Local armor depth, stepped smaller optic seats and regional material response change; approved posture, plate borders/backing, original UVs and packed texture pixels remain verified intact. Three-era editable and browser assets, matched hero views, eight neutral/exhibit views and close-ups are supplied. Local preservation, build, texture-hash, image-resolution and three-era browser checks passed.
+
+Visible gain is modest; fine hardware density, feather sharpness, cheek construction and optic realism remain short of the pinned source. Owner artistic acceptance is pending. Stop before Milestone 4. No model/runtime promotion or publication accompanies this goal update.
 
 ## Milestone 2a owner authorization
 
 Owner: “Let’s try for milestone 2a with the same 3 agents, 3 hour, 30k tokens to get it closer to photo realistic.” Owner clarification: “The source image is something of a terror movie or nightmare where the current models appear laughable.” This is a new bounded appearance attempt, not retrospective approval of Milestone3 or automatic Milestone4 authority. Separate working branch: `codex/cinematic-vfx-milestone02a`. Preserve all prior sources and exact frozen engineering archive.
 
 
-## Milestone 2a checkpoint disposition
+## Milestone 2a checkpoint delivered — owner review pending
 
-Two integrated visual attempts delivered on `codex/cinematic-vfx-milestone02a`. [Review](assets/audit/cinematic-cg-milestone02a/review.html) and [handoff](assets/audit/cinematic-cg-milestone02a/README.md). Sharper metal sheets, original regional wear and recessed optic/cheek details improve rendering; nightmare likeness remains unfinished. Approved posture and all historical sources are preserved. Browser optic parity remains limited; fixed renders are primary evidence. Owner review pending; no automatic animation, release or engineering.
+Exact CG checkpoint: `3df3cb18ebdcdc522eb6a388a170df912b299d89`, separate branch `codex/cinematic-vfx-milestone02a`.
+[Matched reference/before/candidate review](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/review.html) · [Handoff](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/README.md) · [Preservation checks](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/validation.json).
+
+Two integrated visual attempts delivered: thinner overlapping metal sheets, original regional PBR wear, recessed cheek hardware and glass/iris/amber coils. The first valid comparison was rendered within30minutes and a GitHub checkpoint pushed within30minutes. Three era natives and browser models are retained. Source transforms and leg/foot geometry/UVs are preserved; Maker/Mechanic optics stay dark. Local build passes; no CG2a/private source material enters production output. V37 remains the runtime baseline; no deployment performed.
+
+The improvement is limited. The locked canon remains substantially more threatening and mechanically intricate. Regular armor shells, rounded crown, sparse exposed machinery and simple legs still read as stylized. The browser optic also appears paler/flatter than the fixed renderer; parity remains unresolved. Owner artistic acceptance is not claimed. Further likeness work should target construction and shape rather than adding more texture or darker lighting.
+
+This is a review checkpoint, not full CG-track completion. No animation, release, engineering, paid services or next milestone begins automatically. This shared documentation update promotes no model or runtime asset. Frozen engineering archive stays `9cc1b3c2da8cb064f343ab5915b32d0ab53236b1`.
+
+
+## Owner review — avian identity failure
+
+Owner feedback on Milestone 2a: “Is beginning to look like a giant anteater and not a bird.” Record this as a failed bird-identity reading, not acceptance of the current exterior or an invitation to add more surface polish. The locked composite and July head selection remain the controlling references; no substitution is authorized.
+
+Visual diagnosis (integrator inference from the matched comparison): the narrow continuous forehead-to-bill taper reads as a drooping snout, while the small rounded skull and broad regular torso shell reinforce a mammalian impression. A proposed correction should restore distinct avian forehead/cheek and beak-root landmarks, a deep hooked upper bill with an explicit lower-jaw opening, a swept crown, and readable folded shield-wing/breast layering. Match these shapes to the pinned images; do not invent percentage changes or resume mechanical fitment.
+
+Before another finish pass, review a simple bird-identity silhouette and matched head/body outline against the pinned sources. Prior stance approval remains recorded; this feedback does not certify the current exterior or erase preserved checkpoints. New geometry and a new milestone require a bounded owner-authorized scope. No model, runtime or reference file changes accompany this review record.
