@@ -59,3 +59,14 @@ New owner-authorized appearance attempt from `e42be2d0fb1019aef6d16a8d05b6bb57a8
 
 
 Milestone2a disposition: two attempts delivered at `3df3cb18ebdcdc522eb6a388a170df912b299d89`. Sharper metal and recessed detail improve rendering, but nightmare likeness remains substantially short; browser optic parity is limited. [Review](https://github.com/OKHP3/murderbird-uncaged/blob/3df3cb18ebdcdc522eb6a388a170df912b299d89/assets/audit/cinematic-cg-milestone02a/review.html). Preserved source/pose checks and local build pass. Owner review pending; no next milestone or release authorization.
+
+
+## Current authorization — Milestone 2b avian identity and cinematic construction
+
+Owner directs: “Let’s push it and try 10 agents for up to 5 hours and no more than 1million tokens to see if we can push through the jamb with brute force.” New attempt from exact preserved CG revision `3df3cb18ebdcdc522eb6a388a170df912b299d89`; working branch `codex/cinematic-vfx-milestone02b`. Start 2026-10-03T22:34:59Z; deadline 2026-10-04T03:34:59Z. Aggregate token ceiling 1,000,000 including workers and integration; this is a ceiling, not a spending target.
+
+Ten worker assignments run in waves because the runtime permits three active workers plus the root integrator. Roles: head silhouette, torso construction, folded shield-wings, facial hardware/optic, exposed torso machinery, leg/claw detail, regional surfaces, lighting/stage, browser material parity, and independent visual critique. Root owns integration, shared revisions and final renders; workers use isolated paths/checkouts and never delegate further.
+
+Restore unmistakable flightless mechanical bird identity and the locked source's nightmare presence. New head/beak/torso/wing exterior geometry is authorized where needed for resemblance; the rejected anteater-like shell is not a frozen shape constraint. Preserve prior native assets, approved hip/knee/hock/foot stance anchors and frozen engineering archive. Newly inferred construction remains a CG proposal. No engineering fitment or certification is requested.
+
+Show a same-camera visible checkpoint within 30 minutes. Use at most two focused design attempts per increment before presenting evidence; independently useful corrections may continue inside this authorized attempt. If two consecutive corrections show no visible gain, stop or narrow the approach rather than accumulating detail. Deliver matched canon/before/candidate views, three-era editable/native and browser assets, fixed lighting/close-ups/eight views, source/proposal receipts and honest remaining gaps. Stop by the time/token ceiling or when the review packet is ready; artistic completion still requires owner review. No animation, purchases, paid Replit mode, runtime replacement or publication authorization is added.

@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T20:05:44.745817+00:00"
+last_updated: "2026-10-03T22:37:27.576276+00:00"
 timezone: "America/Chicago"
-status: "milestone-2a-avian-identity-rejected"
+status: "milestone-2b-authorized"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -97,7 +97,17 @@ Keep bounded parallel work, cheap targeted checks, coherent commits and frequent
 
 The previous operational goal is preserved locally in the Git-ignored supervision archive. Prior repository directives remain in Git history and the creative-authority record; their reference, rights and preservation rules still apply.
 
-## Current authorization
+## Current authorization — Milestone 2b avian identity and cinematic construction
+
+Owner directs: “Let’s push it and try 10 agents for up to 5 hours and no more than 1million tokens to see if we can push through the jamb with brute force.” New attempt from exact preserved CG revision `3df3cb18ebdcdc522eb6a388a170df912b299d89`; working branch `codex/cinematic-vfx-milestone02b`. Start 2026-10-03T22:34:59Z; deadline 2026-10-04T03:34:59Z. Aggregate token ceiling 1,000,000 including workers and integration; this is a ceiling, not a spending target.
+
+Ten worker assignments run in waves because the runtime permits three active workers plus the root integrator. Roles: head silhouette, torso construction, folded shield-wings, facial hardware/optic, exposed torso machinery, leg/claw detail, regional surfaces, lighting/stage, browser material parity, and independent visual critique. Root owns integration, shared revisions and final renders; workers use isolated paths/checkouts and never delegate further.
+
+Restore unmistakable flightless mechanical bird identity and the locked source's nightmare presence. New head/beak/torso/wing exterior geometry is authorized where needed for resemblance; the rejected anteater-like shell is not a frozen shape constraint. Preserve prior native assets, approved hip/knee/hock/foot stance anchors and frozen engineering archive. Newly inferred construction remains a CG proposal. No engineering fitment or certification is requested.
+
+Show a same-camera visible checkpoint within 30 minutes. Use at most two focused design attempts per increment before presenting evidence; independently useful corrections may continue inside this authorized attempt. If two consecutive corrections show no visible gain, stop or narrow the approach rather than accumulating detail. Deliver matched canon/before/candidate views, three-era editable/native and browser assets, fixed lighting/close-ups/eight views, source/proposal receipts and honest remaining gaps. Stop by the time/token ceiling or when the review packet is ready; artistic completion still requires owner review. No animation, purchases, paid Replit mode, runtime replacement or publication authorization is added.
+
+## Prior Milestone 2a authorization
 
 Owner authorizes a new **Milestone 2a photorealism and threatening screen-presence pass**, with the same three agents, three hours and 30,000 aggregate tokens including integration. Start2026-10-03T19:10:17Z; deadline22:10:17Z. The latest source comparison is Milestone3 revision `e42be2d0fb1019aef6d16a8d05b6bb57a813f496`; its final likeness remains unaccepted. Preserve approved large forms and stance while replacing the soft, tidy prop appearance with sharp metal feather layering, recessed optics and cheek hardware, worn regional PBR materials and purposeful cinematic lighting. Source canon feels like a terror movie/nightmare; detail count alone does not satisfy that direction. Same-camera comparisons remain mandatory. Root integrates three existing isolated workers (5,000 tokens each; root15,000); no further delegation. First visible checkpoint within30minutes, at most two integrated visual attempts. Stop for owner review. No animation, runtime replacement, publication, paid services or engineering certification.
 
