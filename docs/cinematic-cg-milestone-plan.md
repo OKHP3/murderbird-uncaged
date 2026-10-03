@@ -42,3 +42,7 @@ Owner accepted 1C as sufficient to proceed. Start from exact checkpoint
 45 minutes / 12,000 aggregate tokens: preserve accepted proportions and stance,
 refine faceted contours and folded shoulder/wing continuity, deliver common-camera
 before/after and eight views. Stop for owner review; no Milestone 3 or 4 implied.
+
+Milestone 2 disposition: one focused contour pass delivered; owner review pending.
+[Matched views and handoff](../assets/audit/cinematic-cg-milestone02/README.md).
+No Milestone 3 or 4 work begins automatically.

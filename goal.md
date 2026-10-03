@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T09:34:17-05:00"
+last_updated: "2026-10-03T09:44:49-05:00"
 timezone: "America/Chicago"
-status: "milestone-2-authorized"
+status: "milestone-2-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -168,3 +168,13 @@ integration and checks. No further delegation. At most two focused attempts;
 stop for owner review. Materials carry forward; surface polish is Milestone 3.
 No animation, engineering certification, runtime replacement or publication is
 authorized. Working branch: `codex/cinematic-vfx-milestone02`.
+
+## Milestone 2 checkpoint delivered
+
+One focused contour pass is ready on `codex/cinematic-vfx-milestone02`.
+[Review](assets/audit/cinematic-cg-milestone02/review.html) ·
+[Handoff](assets/audit/cinematic-cg-milestone02/README.md).
+Gain is modest: rounded folded shoulder caps and smoother torso transitions;
+accepted proportions, stance, leg/foot geometry and materials remain preserved.
+Stop for owner silhouette review before Milestone 3. Final likeness, surface
+polish, motion and release acceptance remain outstanding.
