@@ -1,6 +1,6 @@
 # Cinematic CG milestone plan
 
-Owner authorized Milestone 1 only on October 2, 2026. Remaining milestones are proposals, not approved work orders. Controlling mandate: [root goal](../goal.md).
+Owner has authorized Milestones 1, 1a, 1b, 1c and 2. Milestones 3–4 remain proposals, not approved work orders. Controlling mandate: [root goal](../goal.md).
 
 | Milestone | Deliverables and visual pass criteria | Ceiling |
 |---|---|---|
@@ -34,3 +34,11 @@ Owner authorized **30,000 tokens total / three hours / at most three workers** f
 Two integrated attempts delivered on `codex/cinematic-vfx-milestone01c`.
 [Review and exact evidence](../assets/audit/cinematic-cg-milestone01c/README.md).
 Owner artistic review pending; no later milestone begins automatically.
+
+## Authorized Milestone 2
+
+Owner accepted 1C as sufficient to proceed. Start from exact checkpoint
+`a927c4f6d48f67b44e365e20d90fd655d1ddc51a`. Creature silhouette pass,
+45 minutes / 12,000 aggregate tokens: preserve accepted proportions and stance,
+refine faceted contours and folded shoulder/wing continuity, deliver common-camera
+before/after and eight views. Stop for owner review; no Milestone 3 or 4 implied.

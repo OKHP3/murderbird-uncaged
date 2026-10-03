@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T09:13:37-05:00"
+last_updated: "2026-10-03T09:34:17-05:00"
 timezone: "America/Chicago"
-status: "milestone-1c-owner-review-pending"
+status: "milestone-2-authorized"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -148,3 +148,23 @@ Study05 proportions are carried into editable three-era detailed geometry.
 Likeness remains unaccepted: broad shallow body/shield plating, crude shoulders
 and flat optics remain visible gaps. Execution stops for owner review. No later
 milestone, animation, engineering acceptance or production replacement is implied.
+
+## Milestone 1C owner review and Milestone 2 authorization
+
+Owner: “That is so so much more effective and the results are good enough to
+proceed to Milestone 2.” This accepts checkpoint
+`a927c4f6d48f67b44e365e20d90fd655d1ddc51a` as the basis for the next milestone; it
+does not establish a final visual twin or a release. Prior review holds above
+are historical and superseded for continuation by this explicit authorization.
+
+Milestone 2 is the plan's bounded creature-silhouette pass: 45 minutes / 12,000
+aggregate tokens, including integration. Clock starts 2026-10-03T14:33:05Z,
+deadline 15:18:05Z. Preserve the accepted study05 proportions and avian joint
+anchors while refining faceting and folded shoulder/wing and head contours.
+Compare the 1C base and new candidate at identical cameras and lighting; supply
+eight views, editable native sources and browser models. Root integrates three
+isolated existing workers, up to 1,500 tokens each, and retains 7,500 for setup,
+integration and checks. No further delegation. At most two focused attempts;
+stop for owner review. Materials carry forward; surface polish is Milestone 3.
+No animation, engineering certification, runtime replacement or publication is
+authorized. Working branch: `codex/cinematic-vfx-milestone02`.
