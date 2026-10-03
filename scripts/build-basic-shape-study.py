@@ -6,11 +6,16 @@ All coordinates and cameras are saved for later owner corrections and overlays.
 import bpy
 import math
 import json
+import sys
+import argparse
 from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'assets/audit/basic-shape-study01'
+parser=argparse.ArgumentParser()
+parser.add_argument('--revision',choices=['01','02'],default='02')
+args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+OUT = ROOT / ('assets/audit/basic-shape-study'+args.revision)
 OUT.mkdir(parents=True, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
 s = bpy.context.scene
@@ -75,6 +80,14 @@ profile=[(.59,.11,.025,.04),(.65,.12,.13,.20),(.74,.11,.205,.29),
          (.84,.065,.25,.335),(.96,.015,.275,.345),
          (1.08,-.025,.26,.325),(1.20,-.06,.22,.275),
          (1.31,-.085,.145,.19),(1.39,-.09,.025,.035)]
+if args.revision=='02':
+    # Owner's drawn lower-rear contour: a longer diagonal egg/keel, ending
+    # in a narrow rounded point behind the embedded hips, not a second ball.
+    profile=[(.505,.355,.006,.012),(.555,.32,.045,.065),
+             (.64,.255,.105,.14),(.735,.175,.175,.22),
+             (.84,.09,.23,.285),(.96,.025,.275,.335),
+             (1.08,-.025,.26,.325),(1.20,-.06,.22,.275),
+             (1.31,-.085,.145,.19),(1.39,-.09,.025,.035)]
 tv=[]
 for z,y,rx,ry in profile:
     for i in range(16):
@@ -87,7 +100,26 @@ tf.append(tuple(range((len(profile)-1)*16,len(profile)*16)))
 td=bpy.data.meshes.new('Continuous pear torso cage');td.from_pydata(tv,[],tf);td.update()
 to=bpy.data.objects.new('T01 continuous torso and compact rear',td);s.collection.objects.link(to)
 tag(to,'torso',dict(type='continuous-rounded-torso',sections=profile))
-ellipsoid('H01 head and swept crown mass', 'head', (0,-.21,1.615), (.185,.25,.195))
+if args.revision=='01':
+    ellipsoid('H01 head and swept crown mass', 'head', (0,-.21,1.615), (.185,.25,.195))
+else:
+    # Blend the posterior skull into the nape/crown, with no round rear node.
+    hp=[(.055,1.585,.012,.024),(.02,1.605,.075,.09),
+        (-.055,1.64,.137,.14),(-.16,1.65,.176,.17),
+        (-.275,1.63,.18,.18),(-.375,1.61,.143,.145),
+        (-.455,1.59,.075,.10),(-.485,1.575,.012,.035)]
+    hv=[]
+    for y,z,rx,rz in hp:
+        for i in range(16):
+            a=i*math.tau/16;hv.append((rx*math.cos(a),y,z+rz*math.sin(a)))
+    hf=[tuple(reversed(range(16)))]
+    for j in range(len(hp)-1):
+        for i in range(16):
+            hf.append((j*16+i,j*16+(i+1)%16,(j+1)*16+(i+1)%16,(j+1)*16+i))
+    hf.append(tuple(range((len(hp)-1)*16,len(hp)*16)))
+    hd=bpy.data.meshes.new('Soft continuous rear crown cage');hd.from_pydata(hv,[],hf);hd.update()
+    ho=bpy.data.objects.new('H01 soft rear head and continuous crown',hd);s.collection.objects.link(ho)
+    tag(ho,'head',dict(type='continuous-rounded-head',sections=hp))
 
 # One continuous hooked bill mesh; intentionally no plating, eye or machinery.
 sections=[(-.39,1.635,.105,.105),(-.49,1.59,.083,.102),
@@ -137,7 +169,12 @@ VIEWS={'front':(0,-6,0),'top':(0,0,6),'side':(-6,0,0),'rear':(0,6,0)}
 GROUPS={'assembled':((0,-.04,.92),2.08),
         'head':((0,-.28,1.60),.86),'neck':((0,-.155,1.40),.49),
         'torso':((0,.04,1.00),.94),'legs':((0,-.02,.48),1.13)}
+if args.revision=='02':
+    GROUPS['torso']=((0,.09,.96),1.06)
 receipt={'status':'new proposed blockout, not extracted from or applied to detailed model',
+         'revision':args.revision,
+         'owner_adjustment':'Soften posterior head node; elongate torso toward drawn lower-rear point' if args.revision=='02' else None,
+         'comparison':'Assembly cameras and scale unchanged; isolated torso framing expanded to avoid clipping.' if args.revision=='02' else None,
          'authority':'locked Sept22 composite, owner shape review pending',
          'reference':'assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg',
          'reference_sha256':'645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114',

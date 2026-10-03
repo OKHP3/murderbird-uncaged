@@ -3,9 +3,13 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import json
 import hashlib
+import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'assets/audit/basic-shape-study01'
+parser=argparse.ArgumentParser()
+parser.add_argument('--revision',choices=['01','02'],default='02')
+args=parser.parse_args()
+OUT=ROOT/('assets/audit/basic-shape-study'+args.revision)
 FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
 font=ImageFont.truetype(FONT,19)
 large=ImageFont.truetype(FONT,25)
@@ -28,6 +32,14 @@ def row(group,code,title):
     return sheet
 
 full=row('assembled','A','Assembly — same scale in all four views')
+comparison_html=''
+if args.revision=='02':
+    comp=Image.new('RGB',(768,442),'#f8fafb');dc=ImageDraw.Draw(comp)
+    for i,(name,path) in enumerate([('Before: study 01',ROOT/'assets/audit/basic-shape-study01/assembled-side.png'),('After: study 02',OUT/'assembled-side.png')]):
+        dc.text((i*384+15,14),name,font=large,fill='#1b2730')
+        with Image.open(path) as img:comp.paste(img.convert('RGB'),(i*384,58))
+    comp.save(OUT/'side-comparison.png')
+    comparison_html='<section><h2>Your changes — same-camera side comparison</h2><img src="side-comparison.png" alt="Before and after head and elongated pointed torso" style="max-width:900px"></section>'
 sheet=Image.new('RGB',(1536,4*442+72),'#f8fafb')
 for i,(group,code,title) in enumerate(parts):
     sheet.paste(row(group,code,title),(0,i*442))
@@ -41,11 +53,11 @@ sections='\n'.join(f'<section><h2>{title}</h2><img src="{group}-sheet.png" alt="
 <h1>MurderBird: basic shape study</h1><p>One proposed rounded-form bird, viewed from four directions. This is an editable shape proposal for your notes, not the detailed model or an approved likeness.</p>
 <p><b>Front / top / side / rear.</b> Top views point forward toward the top of the image; side views face right. Individual part rows are enlarged independently. The assembly shows their relative sizes.</p>
 <section><h2>Whole bird</h2><img src="assembled-sheet.png" alt="Assembly in front top side rear views"></section>
-'''+sections+'''<h2>Your adjustment notes</h2><p>Use a view ID such as H3 (head side), T2 (torso top), or L1 (legs front). Describe width, height, length, tilt or connection position. Notes below stay in this browser until you copy them into the chat.</p>
+'''+comparison_html+sections+'''<h2>Your adjustment notes</h2><p>Use a view ID such as H3 (head side), T2 (torso top), or L1 (legs front). Describe width, height, length, tilt or connection position. Notes below stay in this browser until you copy them into the chat.</p>
 <textarea id="notes" aria-label="Your adjustment notes" placeholder="H3: ...&#10;N3: ...&#10;T2: ...&#10;L1: ..."></textarea><p><small>Next: revise these shapes from your notes, then overlay them on the original reference images. Detailed model changes follow that review.</small></p>
 <p><a href="parts-sheet.png">Download all part views</a> · <a href="assembled-sheet.png">Download assembly</a> · <a href="murderbird-basic-shapes.blend">Editable shape study</a></p>
-<script>const n=document.getElementById('notes');try{n.value=localStorage.getItem('murderbird-basic-shape-study01-notes')||'';n.addEventListener('input',()=>localStorage.setItem('murderbird-basic-shape-study01-notes',n.value));}catch{}</script></html>''')
-files=[p for p in OUT.iterdir() if p.suffix in ('.png','.blend','.html')]
+<script>const n=document.getElementById('notes');const k=location.pathname+'-notes';try{n.value=localStorage.getItem(k)||'';n.addEventListener('input',()=>localStorage.setItem(k,n.value));}catch{}</script></html>''')
+files=[p for p in OUT.iterdir() if p.suffix in ('.png','.jpg','.blend','.html')]
 (OUT/'manifest.json').write_text(json.dumps({
     'status':'owner review pending',
     'generator':'Blender Workbench orthographic renders; Pillow labels and layout; no AI image generation',

@@ -31,8 +31,8 @@ CG model, and original images are preserved.
 `study.json` records its primitive parameters, axes, framing and assumptions.
 `manifest.json` records output hashes.
 
-Run Blender with `--background --python scripts/build-basic-shape-study.py`,
-then run `scripts/layout-basic-shape-study.py` using Python with Pillow.
+Run Blender with `--background --python scripts/build-basic-shape-study.py -- --revision 01`,
+then run `scripts/layout-basic-shape-study.py --revision 01` using Python with Pillow.
 The source generators live at the repository root's `scripts/` directory.
 
 ## Next step
