@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T15:30:30+00:00"
+last_updated: "2026-10-03T19:14:14+00:00"
 timezone: "America/Chicago"
-status: "milestone-3-owner-review-pending"
+status: "milestone-2a-authorized"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Owner approved the Milestone 2 posture checkpoint and authorized Milestone 3. Cinematic appearance pass: 40 minutes / 10,000 aggregate tokens including workers and integration, start 2026-10-03T15:18:39Z, deadline 15:58:39Z. Preserve approved geometry and pose; refine visible armor overlap, metal response and recessed optics across all three eras. Two focused visual attempts are delivered; execution has stopped for owner review. Milestone 4, engineering and publication remain unauthorized.
+Owner authorizes a new **Milestone 2a photorealism and threatening screen-presence pass**, with the same three agents, three hours and 30,000 aggregate tokens including integration. Start2026-10-03T19:10:17Z; deadline22:10:17Z. The latest source comparison is Milestone3 revision `e42be2d0fb1019aef6d16a8d05b6bb57a813f496`; its final likeness remains unaccepted. Preserve approved large forms and stance while replacing the soft, tidy prop appearance with sharp metal feather layering, recessed optics and cheek hardware, worn regional PBR materials and purposeful cinematic lighting. Source canon feels like a terror movie/nightmare; detail count alone does not satisfy that direction. Same-camera comparisons remain mandatory. Root integrates three existing isolated workers (5,000 tokens each; root15,000); no further delegation. First visible checkpoint within30minutes, at most two integrated visual attempts. Stop for owner review. No animation, runtime replacement, publication, paid services or engineering certification.
 
 ## Owner review of Milestone 1
 
@@ -206,3 +206,7 @@ Two integrated attempts delivered on `codex/cinematic-vfx-milestone03`, exact re
 The second reduces the first attempt's padded plate relief and retains original material graphs/maps. Local armor depth, stepped smaller optic seats and regional material response change; approved posture, plate borders/backing, original UVs and packed texture pixels remain verified intact. Three-era editable and browser assets, matched hero views, eight neutral/exhibit views and close-ups are supplied. Local preservation, build, texture-hash, image-resolution and three-era browser checks passed.
 
 Visible gain is modest; fine hardware density, feather sharpness, cheek construction and optic realism remain short of the pinned source. Owner artistic acceptance is pending. Stop before Milestone 4. No model/runtime promotion or publication accompanies this goal update.
+
+## Milestone 2a owner authorization
+
+Owner: “Let’s try for milestone 2a with the same 3 agents, 3 hour, 30k tokens to get it closer to photo realistic.” Owner clarification: “The source image is something of a terror movie or nightmare where the current models appear laughable.” This is a new bounded appearance attempt, not retrospective approval of Milestone3 or automatic Milestone4 authority. Separate working branch: `codex/cinematic-vfx-milestone02a`. Preserve all prior sources and exact frozen engineering archive.
