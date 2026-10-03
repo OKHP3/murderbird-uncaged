@@ -56,7 +56,7 @@ The owner’s October 2 restatement explicitly confirms dark, non-awakened optic
 
 ## Track completion
 
-The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b and the bounded geometry-led visual attempt 1c are authorized; Milestones 2–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
+The CG track is complete when the approved milestone plan's final milestone passes owner artistic review. Until then, checkpoints continue on visible gains; no worker, review, or automated check may declare the track complete. Plan: [cinematic CG milestone plan](docs/cinematic-cg-milestone-plan.md). Milestones 1, 1a, 1b, 1c and 2 are authorized; Milestones 3–4 remain proposals. Completing Milestone 1 does not authorize another milestone.
 
 ## Visual construction rules
 
@@ -99,7 +99,7 @@ The previous operational goal is preserved locally in the Git-ignored supervisio
 
 ## Current authorization
 
-Milestone 1c is authorized by the owner in this chat: up to three workers, 30,000 tokens total and three hours elapsed. Use the revised low-resolution geometry and the bird mass-distribution paper. Baseline likeness remains unaccepted. Stop after the 1c visual checkpoint; no Milestone 2, animation, engineering or publication authority is implied.
+Milestone 1C was accepted as sufficient to proceed. Milestone 2 is authorized and its single-pass checkpoint is ready for owner review under the 45-minute / 12,000-token plan ceiling. Execution has stopped for review; Milestones 3–4, engineering and publication remain unauthorized.
 
 ## Owner review of Milestone 1
 
