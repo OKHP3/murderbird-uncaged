@@ -7,7 +7,7 @@ import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
-parser.add_argument('--revision',choices=['01','02','03','04'],default='04')
+parser.add_argument('--revision',choices=['01','02','03','04','05'],default='05')
 args=parser.parse_args()
 OUT=ROOT/('assets/audit/basic-shape-study'+args.revision)
 FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
@@ -17,7 +17,7 @@ small=ImageFont.truetype(FONT,16)
 views=['front','top','side','rear']
 parts=[('head','H','Head + bill'),('neck','N','Neck'),
        ('torso','T','Torso + compact rear'),('legs','L','Legs + feet')]
-if args.revision=='04':
+if args.revision in ('04','05'):
     parts.insert(3,('shoulder-wing','S','Shoulders + short folded wing stubs'))
 
 def row(group,code,title):
@@ -35,7 +35,7 @@ def row(group,code,title):
 
 full=row('assembled','A','Assembly — same scale in all four views')
 comparison_html=''
-if args.revision in ('02','03','04'):
+if args.revision in ('02','03','04','05'):
     comp=Image.new('RGB',(768,442),'#f8fafb');dc=ImageDraw.Draw(comp)
     prior=f'{int(args.revision)-1:02d}'
     for i,(name,path) in enumerate([(f'Before: study {prior}',ROOT/f'assets/audit/basic-shape-study{prior}/assembled-side.png'),(f'After: study {args.revision}',OUT/'assembled-side.png')]):
@@ -43,17 +43,17 @@ if args.revision in ('02','03','04'):
         with Image.open(path) as img:comp.paste(img.convert('RGB'),(i*384,58))
     comp.save(OUT/'side-comparison.png')
     comparison_html='<section><h2>Your changes — same-camera side comparison</h2><img src="side-comparison.png" alt="Before and after owner-requested shape adjustments" style="max-width:900px"></section>'
-    if args.revision=='04':
+    if args.revision in ('04','05'):
         fc=Image.new('RGB',(1536,442),'#f8fafb');fd=ImageDraw.Draw(fc)
-        entries=[('03 front',ROOT/'assets/audit/basic-shape-study03/assembled-front.png'),
-                 ('04 front',OUT/'assembled-front.png'),
-                 ('03 rear',ROOT/'assets/audit/basic-shape-study03/assembled-rear.png'),
-                 ('04 rear',OUT/'assembled-rear.png')]
+        entries=[(prior+' front',ROOT/f'assets/audit/basic-shape-study{prior}/assembled-front.png'),
+                 (args.revision+' front',OUT/'assembled-front.png'),
+                 (prior+' rear',ROOT/f'assets/audit/basic-shape-study{prior}/assembled-rear.png'),
+                 (args.revision+' rear',OUT/'assembled-rear.png')]
         for i,(name,path) in enumerate(entries):
             fd.text((i*384+15,14),name,font=large,fill='#1b2730')
             with Image.open(path) as img:fc.paste(img.convert('RGB'),(i*384,58))
         fc.save(OUT/'shoulder-comparison.png')
-        comparison_html='<section><h2>Shoulder changes — matched front and rear</h2><img src="shoulder-comparison.png" alt="Study03 and study04 shoulder comparison"></section>'+comparison_html
+        comparison_html='<section><h2>Shoulder changes — matched front and rear</h2><img src="shoulder-comparison.png" alt="Prior and current study shoulder comparison"></section>'+comparison_html
 rows=len(parts)
 sheet=Image.new('RGB',(1536,rows*442+72),'#f8fafb')
 for i,(group,code,title) in enumerate(parts):
@@ -61,7 +61,7 @@ for i,(group,code,title) in enumerate(parts):
 draw=ImageDraw.Draw(sheet)
 draw.text((15,rows*442+14),'Part rows enlarged separately. Use assembly for relative sizes. Top views: beak/forward at image top.',font=small,fill='#344653')
 footer='Draft rounded forms for owner notes — hidden surfaces inferred; no materials, armor or wings.'
-if args.revision=='04':footer='Draft rounded forms with short folded wing stubs — hidden surfaces inferred; no materials or armor.'
+if args.revision in ('04','05'):footer='Draft rounded forms with short folded wing stubs — hidden surfaces inferred; no materials or armor.'
 draw.text((15,rows*442+40),footer,font=small,fill='#344653')
 sheet.save(OUT/'parts-sheet.png')
 sections='\n'.join(f'<section><h2>{title}</h2><img src="{group}-sheet.png" alt="{title}: front top side rear"></section>' for group,code,title in parts)
