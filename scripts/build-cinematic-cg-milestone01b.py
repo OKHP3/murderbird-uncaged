@@ -85,6 +85,7 @@ if args.final:
    if img.source=='FILE':
     try:img.pack()
     except RuntimeError:pass
+  bpy.context.preferences.filepaths.save_version=0
   bpy.ops.wm.save_as_mainfile(filepath=str(A/f'murderbird-cg-1b-{args.era}.blend'))
 receipt['renderHashes']={p.name:hashlib.sha256(p.read_bytes()).hexdigest()for p in T.glob('*.png')}
 receipt['createdUTC']=datetime.datetime.now(datetime.timezone.utc).isoformat()
