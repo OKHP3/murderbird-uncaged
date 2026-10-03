@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T08:48:42-05:00"
+last_updated: "2026-10-03T09:16:17-05:00"
 timezone: "America/Chicago"
-status: "milestone-1c-authorized"
+status: "milestone-1c-owner-review-pending"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -138,3 +138,17 @@ Geometric input: `assets/audit/basic-shape-study05/murderbird-basic-shapes.blend
 Research: Macaulay et al., *Decoupling body shape and mass distribution in birds and their dinosaurian ancestors*, Nature Communications 14, 1575 (2023), doi:10.1038/s41467-023-37317-y. Terrestrial-versus-flying mass-distribution findings guide visual posture; they do not supply a universal lower-third hip rule or validate fictional mechanical balance. The owner's low/posterior power or transmission counterweight remains a design proposal. Preserve flexed avian hips, forward knees, posterior hocks and planted feet; no hominid leg attachment, lift surfaces or engineering certification.
 
 Deliver a new editable Blender character, browser-readable textured GLB, eight-angle views, neutral/workshop hero views and head/body close-ups. Use study05's source-overlay camera consistently for low-res-versus-detailed comparisons; also supply the earlier 1b comparison camera to distinguish geometry from framing. Preserve all source images, low-resolution studies, earlier detailed models and the frozen engineering archive. Attempt no more than two integrated visual iterations; stop for owner artistic review, at the budget ceiling, or after two iterations without visible gain. The separate working branch is `codex/cinematic-vfx-milestone01c`. No runtime replacement, animation, engineering work or later milestone is authorized.
+
+## Milestone 1c checkpoint delivered
+
+Two integrated attempts delivered; execution has stopped for owner artistic
+review. The implementation stays on `codex/cinematic-vfx-milestone01c` at
+`a927c4f6d48f67b44e365e20d90fd655d1ddc51a`.
+[Review artifact](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/review.html) ·
+[Checkpoint handoff and limits](https://github.com/OKHP3/murderbird-uncaged/blob/a927c4f6d48f67b44e365e20d90fd655d1ddc51a/assets/audit/cinematic-cg-milestone01c/README.md).
+
+Study05 proportions are carried into editable three-era detailed geometry.
+Likeness remains unaccepted: broad shallow body/shield plating, crude shoulders
+and flat optics remain visible gaps. No system may treat this checkpoint or the
+remaining time budget as authorization to continue automatically. No later
+milestone, animation, engineering acceptance or production replacement is implied.
