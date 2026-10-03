@@ -5,7 +5,7 @@ from mathutils import Vector
 R=Path(__file__).resolve().parents[1]
 P=R/'assets/models/whole-character-v38/hanging-breast01/attempt02/murderbird-v38-hanging-breast01-attempt02-rigid.glb'
 O=R/'assets/audit/cinematic-cg-milestone01b'; A=R/'assets/models/cinematic-cg-milestone01b'
-parser=argparse.ArgumentParser(); parser.add_argument('--final',action='store_true'); parser.add_argument('--attempt',default='owner-proportions01');parser.add_argument('--era',default='builder');parser.add_argument('--baseline',action='store_true');parser.add_argument('--resolution',type=int,default=768)
+parser=argparse.ArgumentParser(); parser.add_argument('--final',action='store_true'); parser.add_argument('--attempt',default='avian-stance01');parser.add_argument('--era',default='builder');parser.add_argument('--baseline',action='store_true');parser.add_argument('--resolution',type=int,default=768)
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 T=O/args.attempt;T.mkdir(parents=True,exist_ok=True);A.mkdir(parents=True,exist_ok=True)
 assert hashlib.sha256(P.read_bytes()).hexdigest()=='051477ffcf62a4e08a3f1968d6cec7fd7f8b0677661cd72dde6ad7bbd5514650'
@@ -47,6 +47,26 @@ if not args.baseline:
    v.co=inv@p
   counts[group]+=1
  receipt['changes']['ownerProportions']={'bodyHorizontalScale':.90,'bodyVerticalScale':1.12,'neckHeightScale':.85,'neckThicknessScale':1.20,'headFollowZ':-.0495,'interpretation':'Lengthen torso vertically; narrow both horizontal axes. Head follows shorter neck. Camera unchanged.'}
+ # Owner avian stance correction: upper thigh/hip connects into the lower third,
+ # feet and low shanks stay planted. Lower rear torso carries compact tail mass.
+ for o in list(s.objects):
+  if o.type!='MESH' or o.hide_render:continue
+  region=o.get('cg1bRegion') or o.get('region','')
+  body=region in ('body','wing','breast','shoulder','torso','mantle','torso-pelvis')
+  leg=region in ('leg-structure','lower-body-mass','leg')
+  if not(body or leg):continue
+  w=o.matrix_world.copy();inv=w.inverted();o.data=o.data.copy()
+  for v in o.data.vertices:
+   q=w@v.co
+   if body:
+    rear=max(0,min(1,(q.y+.015)/.20));rear=rear*rear*(3-2*rear)
+    lower=math.exp(-((q.z-.735)/.18)**2)
+    q.y+=.115*rear*lower
+   else:
+    t=max(0,min(1,(q.z-.38)/.345));t=t*t*(3-2*t)
+    q.z+=.110*t
+   v.co=inv@q
+ receipt['changes']['avianStance']={'upperHipLift':.110,'plantedLowerLegAnchorZ':.38,'tailRearExtensionMax':.115,'tailMassCenterZ':.735,'scope':'Visual avian lower-third hip and posterior lower-torso counterweight; no biomechanics claim'}
  receipt['changes']['surface']=module('surface').apply(s,A,args.era)
 s.render.engine='CYCLES';s.cycles.samples=32 if args.final else 12;s.cycles.use_denoising=True
 s.render.resolution_x=args.resolution;s.render.resolution_y=round(args.resolution*4/3);s.render.resolution_percentage=100
