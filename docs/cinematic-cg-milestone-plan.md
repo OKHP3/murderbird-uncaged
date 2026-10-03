@@ -11,6 +11,8 @@ Owner authorized Milestone 1 only on October 2, 2026. Remaining milestones are p
 
 Budgets include workers and integration. Stop at each milestone and report rendered evidence before further authorization. After two consecutive iterations without visible improvement, stop. Separately estimate extended final sequence rendering from a sample frame before committing to it.
 
-Milestone 1 status: separate branches pushed and base GLB verified; Sept 22 composite identity unresolved. No cameras locked, no baseline render delivered, no Milestone 2 modeling started. Existing July/era/video binaries are located and hashed in the mandate. No substitution is authorized.
+Milestone 1 baseline ready for owner review: reference inventory and extracted frame hashes in `assets/audit/cinematic-cg-milestone01/references.json`; camera lock in `cameras.json`; eight-angle baseline and two hero views in `review.html`. Reference-angle camera is approximate; unseen views are reconstruction. No Milestone 2 work started.
 
 Optic rule confirmed by the owner’s October 2 mandate: Maker and Mechanic retain dark, non-awakened optics; Advanced retains restrained awakened orange optics. The prior optics-scope question is resolved. No authority beyond Milestone 1 is implied.
+
+Owner baseline review: target aesthetic is missing; visual likeness not accepted. Camera framing approval and explicit Milestone 2 authorization remain outstanding. See root goal for the recorded feedback.
