@@ -1,0 +1,19 @@
+# HEAD14 frozen partial study
+
+**PARTIAL / FAILED SOURCE ROOF.** Two designs stopped. Integrator inspected the second profile and grazing views and identified the remaining overhanging brim and smooth brow. Fresh independent QC determines whether any exterior is useful; do not integrate it by numerical success.
+
+The first actual wholebird/profile pair completed by09:25:32UTC, within six minutes of the09:20UTC assignment. No third design or secondary detailing followed. `attempt01/` and `attempt02/` preserve both designs. `matched-five-view-clay.jpg` and `matched-five-view-pbr.jpg` show receiving06, conditional guide13 and candidate14 at identical cameras. Candidate02 includes five wire diagnostics and eight wholebird angles in clay/PBR; supplemental turntable cameras do not establish source camera parameters.
+
+`formed-head14.blend` preserves the immutable06 history. HEAD13 is applied deterministically and all four new guides are explicitly hidden as authoring guides. Nine thin formed sheets reuse original receiving material families and dark inward sidewalls. No05vault fit or06leafarray is used to generate the new surfaces. The resulting roof removes the full-depth posterior fin, but still misses source cranial organization. Existing bill, opening, optics, headframe and stance stay protected.
+
+`receipt.json` records early save/reopen preservation before full rendering:7424originalobjectpayloads,56originalmaterialgraphs and160packedFILEimageIDs retained with identical bytes/metadata. The unpersisted empty `Render Result` VIEWER is explicitly recorded, not counted as a FILE loss. `native-check.json` is the final reopened-native readback with matching native hash. New evaluated UV values are finite and within0..1 plus1.19e-7float rounding.
+
+The curved-lens test samples913actual evaluated lens vertices/triangle centers per lens in five cameras and compares first hits with receiving06. It finds zero new14blocks and zero changed receiving lens first hits inside the baseline visible windows. The front has zero baseline glass targets and proves no front clearance; finite sampling is not continuous proof.
+
+The scaffold's July control residual remains:1.903Dposterior versus soft1.6Dmaximum, and.872Dheight versus.9Dminimum. Final physical candidate crest is1.8584Dposterior/.8161Dheight in profile; all-head evaluated highest is1.8605Dposterior/.8295Dheight. Wholebird physical/all-head top coincide at.9571Dposterior/1.3011Dheight. Other views distinguish the named nearest physical crest from the highest evaluated visible vertex. Seat normalization is inherited from unchanged13seat geometry and its receipt. The solve reaches the-30mmlateral bound and-.19084cross slope; the far brow is lower/inset. Front/asymmetry stays a visible gap, not a symmetry claim.
+
+A technical hypothesis to reopen: source-like crest placement may not be representable by a centered HEAD13 crown under the arbitrary30mmlateral bound. Whether the highest source crown point is a near-side blade within existing head width remains untested. This is a hypothesis, not established source depth. New guide controls are proposals, not immutable owner-approved geometry. Original headframe and optic centers remain protected.
+
+`apply(scene,root_path=None,era='builder',attempt=2)` is deterministic from immutable06 using the frozen HEAD13 solve; builder was evaluated here. Maker/mechanic replay, browser exports/parity, WebGL/fallback, app build, deployment, publication and owner likeness acceptance were not run or established. No runtime file or reference changed. This is a local scoped commit with no push.
+
+Source pins, rights/scopes, final native hash, checks, residuals, camera receipts and preserved baseline comparison provenance are in `handoff.json`. Creative material remains all rights reserved under the repository NOTICE; native files stay outside public.
