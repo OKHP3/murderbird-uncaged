@@ -1,4 +1,4 @@
-"""Color-transfer correction of frozen finish04, using retained authored CG2b maps, never artwork pixels.
+"""Color-transfer correction of frozen finish02, using retained authored CG2b maps, never artwork pixels.
 API: apply(scene, output_dir, era='builder', reference_root=None).
 Preserves every slot index, polygon assignment, UV and mesh/pose; protected optics untouched.
 """
@@ -71,11 +71,26 @@ def apply(scene,output_dir,era='builder',reference_root=None):
  targets=[o for o in scene.objects if o.type=='MESH' and not o.get('authoringGuide')]
  before={o.name:digest(o) for o in targets}; cache={}; records=[];slots=0;preserved=[]
  for o in targets:
+  families=o.get('cgSurfaceFamilies')
+  if isinstance(families,str):
+   try:families=json.loads(families)
+   except (ValueError,TypeError) as exc:raise ValueError(f'{o.name}: invalid cgSurfaceFamilies JSON') from exc
+  if families is not None and (not isinstance(families,(list,tuple)) or len(families)!=len(o.data.materials)):
+   raise ValueError(f'{o.name}: ordered cgSurfaceFamilies count differs from material slots')
   for idx,old in enumerate(o.data.materials):
-   family=old.get('cg2bFamily') if old else None
-   if not family or old.get('cg2aPreserveMaterial'):
+   family=families[idx] if families is not None else (old.get('cg2bFamily') if old else None)
+   if family in ('protected-optic','protected-glass') or (old and old.get('cg2aPreserveMaterial')) or (families is None and not family):
     preserved.append((o.name,idx,old.name if old else None));continue
-   if old.name not in cache:
+   if not isinstance(family,str) or family not in PALETTES:
+    raise ValueError(f'{o.name}: slot {idx}: unknown finish family {family!r}')
+   if not old or not old.use_nodes or not old.node_tree:
+    raise ValueError(f'{o.name}: slot {idx}: unprotected {family!r} material requires color/orm texture graph')
+   source_tex={n.label:n for n in old.node_tree.nodes if n.type=='TEX_IMAGE'}
+   missing=[label for label in ('color','orm') if label not in source_tex or not source_tex[label].image or min(source_tex[label].image.size)<1]
+   if missing:
+    raise ValueError(f'{o.name}: slot {idx}: malformed unprotected {family!r} material {old.name!r}; missing valid texture nodes: {missing}')
+   key=(old.name,family)
+   if key not in cache:
     mat=old.copy();mat.name='CG supervised finish04 / '+family+' / '+era
     nodes=mat.node_tree.nodes
     tex={n.label:n for n in nodes if n.type=='TEX_IMAGE'}
@@ -110,11 +125,11 @@ def apply(scene,output_dir,era='builder',reference_root=None):
     assert all(n.image==normal_images[n.label] for n in nodes if n.type=='TEX_IMAGE' and n.label in normal_images),'Retained normal image changed'
     mat['cgFinish04Family']=family;mat['cgFinish04Era']=era
     mat['surfaceStatus']='Regional proposal; owner artistic acceptance pending'
-    cache[old.name]=mat
+    cache[key]=mat
     records.append({'family':family,'source_color':source_color.name,'source_orm':source_orm.name,'color_path':str((out/f'{family}-finish04-color.png').resolve()),'orm_path':str((out/f'{family}-finish04-orm.png').resolve()),'intended_linear_mean':rgb.mean(axis=(0,1)).tolist(),'encoded_png_mean':(np.floor(linear_to_srgb(rgb)*255+.5)/255).mean(axis=(0,1)).tolist(),'decoded_linear_mean':srgb_to_linear(np.floor(linear_to_srgb(rgb)*255+.5)/255).mean(axis=(0,1)).tolist(),'orm_mean':orm.mean(axis=(0,1)).tolist(),'normal':'Original retained unchanged','retained_images':[{'label':label,'name':im.name,'colorspace':im.colorspace_settings.name,'packed_sha256':hashlib.sha256(bytes(im.packed_file.data)).hexdigest() if im and im.packed_file else None} for label,im in normal_images.items() if im]})
-   o.data.materials[idx]=cache[old.name];slots+=1
+   o.data.materials[idx]=cache[key];slots+=1
  after={o.name:digest(o) for o in targets}
  assert before==after,'Geometry/pose/UV/polygon-index/slot-count preservation failed'
- receipt={'encoding':'Color RGB8 PNG: explicit linear to sRGB transfer; FILE reload sRGB and pack. ORM RGB8 PNG: numeric values, FILE reload Non-Color and pack.','era':era,'assigned_slots':slots,'materials':records,'preserved_other_slots':preserved,'preservation':'PASS: all meshes, transforms, parents, UVs, polygon material indices, visibility and slot counts unchanged','texture_hashes':{str(p.resolve()):hashlib.sha256(p.read_bytes()).hexdigest() for p in out.glob('*.png')},'authorship':'Color and ORM derived from existing original CG2b maps; no reference pixels reused; normals retained','mesh_digests_before':before,'mesh_digests_after':after,'limits':['RGB8 quantization remains; no palette or lighting change','Regional finish artistic proposal, not owner likeness acceptance','Existing UV layout and geometry constrain wear placement','Optical slots remain untouched; integrator head-neck.apply must set Maker/Mechanic dark optics before finish.apply']}
+ receipt={'encoding':'Color RGB8 PNG: explicit linear to sRGB transfer; FILE reload sRGB and pack. ORM RGB8 PNG: numeric values, FILE reload Non-Color and pack.','era':era,'assigned_slots':slots,'materials':records,'preserved_other_slots':{'count':len(preserved),'sha256':hashlib.sha256(json.dumps(preserved,separators=(',',':'),ensure_ascii=False).encode()).hexdigest(),'first20names':preserved[:20],'digest_format':'UTF-8 JSON ordered [object, slot index, material] rows; compact separators; ensure_ascii=False'},'preservation':'PASS: all meshes, transforms, parents, UVs, polygon material indices, visibility and slot counts unchanged','texture_hashes':{str(p.resolve()):hashlib.sha256(p.read_bytes()).hexdigest() for p in out.glob('*.png')},'authorship':'Color and ORM derived from existing original CG2b maps; no reference pixels reused; normals retained','mesh_digests_before':before,'mesh_digests_after':after,'limits':['RGB8 quantization remains; no palette or lighting change','Regional finish artistic proposal, not owner likeness acceptance','Existing UV layout and geometry constrain wear placement','Optical slots remain untouched; integrator head-neck.apply must set Maker/Mechanic dark optics before finish.apply']}
  (Path(output_dir)/f'finish04-{era}-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
  return receipt
