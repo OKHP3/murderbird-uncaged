@@ -30,3 +30,14 @@ Body07 and selective source-mask body08 each stopped after two failed design att
 Independent optic07 QC retains the recessed cavity with a correction: Advanced's core must read awakened at whole-bird scale in native and actual browser evidence. Maker/Mechanic remain dark. The next bounded work targets those dominant visible construction problems. A transient agent-runner capacity limit cleared before new worker/QC tasks began.
 
 Actual browser checks are being extended across the completed eras and illustrated fallback. Source comparisons now select each era's pinned image. The historical candidate03 and required V38 reference binaries have been explicitly hydrated and hash-verified; this resolves the corresponding earlier availability limitation without changing the prior QA records.
+
+
+## 08:14 UTC bounded construction checkpoint
+
+Completed07 supplies all three packed natives and embedded static GLBs, twelve matched native pairs and 57 neutral/exhibit turntable/detail images. Actual desktop Chrome WebGL, lighting/reset and illustrated views passed in all eras without console warnings/errors. It adds optic03 to06 only; full source likeness review is pending. The brighter03 core improved over02 locally, but at whole scale the new center remains smaller than06 and source. Technical transfer does not resolve this visual gap.
+
+Independent QC rejected HEAD07, HEAD08 and HEAD10 whole replacements: old roof conformance, leaf arrays and profile-only posterior wedges produced helmets/visors, floating joins or optic obstruction. HEAD10's highest-screen-point metric tracked changing brow vertices rather than physical crest. BODY07, BODY08 and BODY09 also failed whole-character construction/overlap, not just finish. Their native/PNG studies and QC are preserved without integration.
+
+BODY11 second smooth cage is retained as a panel guide only: it removes the anterior collar and improves gradual oblique throat-to-breast flow with exposed lateral machinery. Its maximum breast envelope is approximately preserved, with12.43mm extra left extent. It is not an accepted smooth exterior. The next bounded worker constructs source-sized longitudinal formed panels; another independently constructs a sparse cranial guide in simultaneous whole/profile projections with actual curved-optic ray exclusion. Both have25minute caps, max two attempts and first whole comparisons within10minutes.
+
+Root started first cage QC before camera/receipt regeneration had finished; QC caught stale hashes. The final version02 handoff is frozen and its native/all38images now verified. This historical process error remains in the first review record. Source camera/head/stance uncertainty persists; no new pose is authorized while the owner question is pending. V37 and production output remain unchanged.
