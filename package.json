@@ -8,8 +8,8 @@
     "node": ">=24 <27"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && node scripts/write-release-manifest.mjs",
+    "dev": "node scripts/prepare-cg-release.mjs && vite",
+    "build": "node scripts/prepare-cg-release.mjs && vite build && node scripts/write-release-manifest.mjs",
     "preview": "vite preview",
     "technology:report": "node scripts/check-technology-versions.mjs",
     "technology:check": "node scripts/check-technology-versions.mjs --check"

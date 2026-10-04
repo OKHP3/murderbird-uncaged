@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {assertPublicationBoundary} from './publication-boundary.mjs';
+import {readCGManifest,verifyCGAsset} from './prepare-cg-release.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const manifestPath = 'assets/review/production-v37.json';
@@ -27,7 +28,7 @@ async function files(dir,prefix='') {
 }
 
 const output=await files('dist');
-const allowed=new Set(['index.html','folio.html','release.json']);
+const allowed=new Set(['index.html','folio.html','cg.html','release.json']);
 const release=JSON.parse(await readFile('dist/release.json','utf8'));
 assert.match(release.revision,/^[a-f0-9]{40}$/);
 if(process.env.GITHUB_SHA){
@@ -100,12 +101,21 @@ for(const source of sources){
   proof.push({...source,emitted:matches[0][0]});
 }
 
+const cgManifest=await readCGManifest();
+const cgPaths=cgManifest.assets.map(asset=>asset.publicPath).sort();
+assert.deepEqual(output.filter(path=>path.startsWith('cg/')).sort(),cgPaths,'CG output must exactly match its explicit publication allowlist');
+for(const asset of cgManifest.assets){
+  await verifyCGAsset(asset);
+  await verifyCGAsset(asset,'dist/'+asset.publicPath);
+  allowed.add(asset.publicPath);
+}
+assert(output.reduce((sum,path)=>sum+(release.files.find(file=>file.path===path)?.bytes||0),0)<1_000_000_000,'Pages output must remain below 1 GB');
 assertPublicationBoundary(output,allowed);
 await mkdir('.local/publication',{recursive:true});
 const report={
   generatedAt:new Date().toISOString(),status:'passed',
   revision:process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
-  modelSha256:sourceByPath.get(modelPath).sha256,media:proof,files:output,
+  modelSha256:sourceByPath.get(modelPath).sha256,cgAssets:cgManifest.assets,cgSourceRevision:cgManifest.sourceRevision,media:proof,files:output,
 };
 await writeFile('.local/publication/build-validation.json',JSON.stringify(report,null,2)+'\n');
-console.log(`Local build boundary verified: ${output.length} files; ${proof.length} exact V37 model/fallback/story-media assets. This does not verify deployment.`);
+console.log(`Local build boundary verified: ${output.length} files; ${proof.length} exact V37 model/fallback/story-media assets. ${cgPaths.length} explicitly selected CG assessment assets. This does not verify deployment.`);

@@ -1,0 +1,565 @@
+{
+  "schema_version": 1,
+  "scope": "Independent saved-native binding test only; source likeness unknown",
+  "goal_commit_read": "251f2f0243181e97140179c2aff6eb057e165438",
+  "no_scene_writes_or_producer_imports": true,
+  "disabled_autoexec_requested": true,
+  "blender_version": "5.2.1 LTS",
+  "started_utc": "2026-10-04T20:30:49.048860+00:00",
+  "eras": [
+    {
+      "era": "builder",
+      "status": "PASS",
+      "native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-finish04-crown/attempt03/builder/murderbird-recursive-builder.blend",
+      "native_sha256": "dbe2f039513f142fcddbac3cbb71b9cc22edf3b2377cf0f7d13747679591608a",
+      "source_native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/murderbird-recursive-builder.blend",
+      "source_native_sha256": "86fee36a8df80f8bcaa3bba7e1c0ecc1dfc56fde178a708323949c2d23ba6288",
+      "evaluated_faces": 1912,
+      "evaluated_face_material_indices": [
+        2
+      ],
+      "material_identity": {
+        "expected_original_pointer": 509722384672,
+        "evaluated_original_pointer": 509722384672,
+        "pointer_scope": "Same saved-native Blender session only"
+      },
+      "source_cage_sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "original_material_graph_count": 62,
+      "original_packed_image_count": 161,
+      "graph": {
+        "links": [
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Base Color"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeSeparateColor",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Green",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Roughness"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Blue",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Metallic"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeNormalMap",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeNormalMap",
+            "from_socket": "Normal",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Normal"
+          },
+          {
+            "from_node_type": "ShaderNodeBsdfPrincipled",
+            "from_socket": "BSDF",
+            "to_node_type": "ShaderNodeOutputMaterial",
+            "to_socket": "Surface"
+          }
+        ],
+        "bindings": {
+          "basecolor": {
+            "expected_image": "CGRS04 builder uv-method02-visual01 basecolor",
+            "evaluated_image_original": "CGRS04 builder uv-method02-visual01 basecolor",
+            "packed_sha256": "b9f5be88818375b4b900c26da2dc549f7c322325e165223fe538c50d6e9cfc87",
+            "recorded_sha256": "b9f5be88818375b4b900c26da2dc549f7c322325e165223fe538c50d6e9cfc87",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509722665760,
+            "evaluated_original_pointer": 509722665760
+          },
+          "orm": {
+            "expected_image": "CGRS04 builder uv-method02-visual01 orm",
+            "evaluated_image_original": "CGRS04 builder uv-method02-visual01 orm",
+            "packed_sha256": "02390b49c8e52e8e6e001b16dbffd225614480ae06722c7fa1392cb6e0eaa037",
+            "recorded_sha256": "02390b49c8e52e8e6e001b16dbffd225614480ae06722c7fa1392cb6e0eaa037",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509722669344,
+            "evaluated_original_pointer": 509722669344
+          },
+          "normal": {
+            "expected_image": "CGRS04 builder uv-method02-visual01 normal",
+            "evaluated_image_original": "CGRS04 builder uv-method02-visual01 normal",
+            "packed_sha256": "81772d3815e4b32ba302e7aff20a8f120988915818d50566a0cfa1a5e03dbd38",
+            "recorded_sha256": "81772d3815e4b32ba302e7aff20a8f120988915818d50566a0cfa1a5e03dbd38",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509722667552,
+            "evaluated_original_pointer": 509722667552
+          }
+        }
+      },
+      "predicates": {
+        "native_matches_frozen_manifest": true,
+        "source_native_matches_record": true,
+        "successor_is_mesh": true,
+        "successor_visible": true,
+        "original_crown_retired": true,
+        "source_crown_cage_held": true,
+        "successor_cage_equals_retired_source": true,
+        "active_uv_selected": true,
+        "object_slot2_DATA": true,
+        "data_slot2_original_material_identity": true,
+        "original_material_graphs_held": true,
+        "original_packed_image_bytes_held": true,
+        "one_active_material_output": true,
+        "active_output_uses_principled_BSDF": true,
+        "basecolor_direct_color_link": true,
+        "orm_rgb_separate": true,
+        "roughness_from_orm_green": true,
+        "metallic_from_same_orm_blue": true,
+        "orm_color_image_link": true,
+        "normal_map_color_link": true,
+        "normal_map_to_bsdf": true,
+        "normal_tangent_selected_uv": true,
+        "basecolor_evaluated_original_image_identity": true,
+        "basecolor_actual_packed_bytes_match_record": true,
+        "basecolor_expected_colorspace": true,
+        "basecolor_explicit_UV_vector_link": true,
+        "orm_evaluated_original_image_identity": true,
+        "orm_actual_packed_bytes_match_record": true,
+        "orm_expected_colorspace": true,
+        "orm_explicit_UV_vector_link": true,
+        "normal_evaluated_original_image_identity": true,
+        "normal_actual_packed_bytes_match_record": true,
+        "normal_expected_colorspace": true,
+        "normal_explicit_UV_vector_link": true,
+        "evaluated_faces_1912": true,
+        "evaluated_all_faces_slot2": true,
+        "evaluated_slot2_DATA": true,
+        "evaluated_slot2_original_material_identity": true,
+        "evaluated_active_uv_selected": true,
+        "basecolor_actual_external_map_bytes_match_record": true,
+        "basecolor_external_map_bytes_held": true,
+        "orm_actual_external_map_bytes_match_record": true,
+        "orm_external_map_bytes_held": true,
+        "normal_actual_external_map_bytes_match_record": true,
+        "normal_external_map_bytes_held": true,
+        "candidate_native_bytes_held": true,
+        "source_native_bytes_held": true
+      }
+    },
+    {
+      "era": "maker",
+      "status": "PASS",
+      "native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-finish04-crown/attempt03/maker/murderbird-recursive-maker.blend",
+      "native_sha256": "61c3fca6faf4262e408e5df2587c45be53c76e6798d79cb77627d1cd709f1218",
+      "source_native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/maker/murderbird-recursive-maker.blend",
+      "source_native_sha256": "77dc572493455d1b5dea33447ccf1d3461bee07c94f65af2e3d523b9f687b774",
+      "evaluated_faces": 1912,
+      "evaluated_face_material_indices": [
+        2
+      ],
+      "material_identity": {
+        "expected_original_pointer": 509718394656,
+        "evaluated_original_pointer": 509718394656,
+        "pointer_scope": "Same saved-native Blender session only"
+      },
+      "source_cage_sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "original_material_graph_count": 62,
+      "original_packed_image_count": 160,
+      "graph": {
+        "links": [
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Base Color"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeSeparateColor",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Green",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Roughness"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Blue",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Metallic"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeNormalMap",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeNormalMap",
+            "from_socket": "Normal",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Normal"
+          },
+          {
+            "from_node_type": "ShaderNodeBsdfPrincipled",
+            "from_socket": "BSDF",
+            "to_node_type": "ShaderNodeOutputMaterial",
+            "to_socket": "Surface"
+          }
+        ],
+        "bindings": {
+          "basecolor": {
+            "expected_image": "CGRS04 maker uv-method02-visual01 basecolor",
+            "evaluated_image_original": "CGRS04 maker uv-method02-visual01 basecolor",
+            "packed_sha256": "d1c1bb7f419948a64afe5ecf84b3d0cc527a24b01c1cab6e9664ef35e54e80ee",
+            "recorded_sha256": "d1c1bb7f419948a64afe5ecf84b3d0cc527a24b01c1cab6e9664ef35e54e80ee",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509721122080,
+            "evaluated_original_pointer": 509721122080
+          },
+          "orm": {
+            "expected_image": "CGRS04 maker uv-method02-visual01 orm",
+            "evaluated_image_original": "CGRS04 maker uv-method02-visual01 orm",
+            "packed_sha256": "4839098336886d8c8c878ee214029c5419b779ae3dd25a5a0ad4e6fa280e6d63",
+            "recorded_sha256": "4839098336886d8c8c878ee214029c5419b779ae3dd25a5a0ad4e6fa280e6d63",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509721125664,
+            "evaluated_original_pointer": 509721125664
+          },
+          "normal": {
+            "expected_image": "CGRS04 maker uv-method02-visual01 normal",
+            "evaluated_image_original": "CGRS04 maker uv-method02-visual01 normal",
+            "packed_sha256": "b8e33b78f011db264fa5ddd6bee9209cb0e767122896a927f0713a8b3d730426",
+            "recorded_sha256": "b8e33b78f011db264fa5ddd6bee9209cb0e767122896a927f0713a8b3d730426",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509721123872,
+            "evaluated_original_pointer": 509721123872
+          }
+        }
+      },
+      "predicates": {
+        "native_matches_frozen_manifest": true,
+        "source_native_matches_record": true,
+        "successor_is_mesh": true,
+        "successor_visible": true,
+        "original_crown_retired": true,
+        "source_crown_cage_held": true,
+        "successor_cage_equals_retired_source": true,
+        "active_uv_selected": true,
+        "object_slot2_DATA": true,
+        "data_slot2_original_material_identity": true,
+        "original_material_graphs_held": true,
+        "original_packed_image_bytes_held": true,
+        "one_active_material_output": true,
+        "active_output_uses_principled_BSDF": true,
+        "basecolor_direct_color_link": true,
+        "orm_rgb_separate": true,
+        "roughness_from_orm_green": true,
+        "metallic_from_same_orm_blue": true,
+        "orm_color_image_link": true,
+        "normal_map_color_link": true,
+        "normal_map_to_bsdf": true,
+        "normal_tangent_selected_uv": true,
+        "basecolor_evaluated_original_image_identity": true,
+        "basecolor_actual_packed_bytes_match_record": true,
+        "basecolor_expected_colorspace": true,
+        "basecolor_explicit_UV_vector_link": true,
+        "orm_evaluated_original_image_identity": true,
+        "orm_actual_packed_bytes_match_record": true,
+        "orm_expected_colorspace": true,
+        "orm_explicit_UV_vector_link": true,
+        "normal_evaluated_original_image_identity": true,
+        "normal_actual_packed_bytes_match_record": true,
+        "normal_expected_colorspace": true,
+        "normal_explicit_UV_vector_link": true,
+        "evaluated_faces_1912": true,
+        "evaluated_all_faces_slot2": true,
+        "evaluated_slot2_DATA": true,
+        "evaluated_slot2_original_material_identity": true,
+        "evaluated_active_uv_selected": true,
+        "basecolor_actual_external_map_bytes_match_record": true,
+        "basecolor_external_map_bytes_held": true,
+        "orm_actual_external_map_bytes_match_record": true,
+        "orm_external_map_bytes_held": true,
+        "normal_actual_external_map_bytes_match_record": true,
+        "normal_external_map_bytes_held": true,
+        "candidate_native_bytes_held": true,
+        "source_native_bytes_held": true
+      }
+    },
+    {
+      "era": "mechanic",
+      "status": "PASS",
+      "native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-finish04-crown/attempt03/mechanic/murderbird-recursive-mechanic.blend",
+      "native_sha256": "766cd51319723400ce0371e254f14a134dd728761f515d261ba375fdc71d966b",
+      "source_native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/mechanic/murderbird-recursive-mechanic.blend",
+      "source_native_sha256": "8e6718a54f0abd3a51606b3fe472ae53ba8efa352a486f145315eee6d7e8d547",
+      "evaluated_faces": 1912,
+      "evaluated_face_material_indices": [
+        2
+      ],
+      "material_identity": {
+        "expected_original_pointer": 509722136992,
+        "evaluated_original_pointer": 509722136992,
+        "pointer_scope": "Same saved-native Blender session only"
+      },
+      "source_cage_sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "original_material_graph_count": 62,
+      "original_packed_image_count": 160,
+      "graph": {
+        "links": [
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Base Color"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeSeparateColor",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Green",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Roughness"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Blue",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Metallic"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeNormalMap",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeNormalMap",
+            "from_socket": "Normal",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Normal"
+          },
+          {
+            "from_node_type": "ShaderNodeBsdfPrincipled",
+            "from_socket": "BSDF",
+            "to_node_type": "ShaderNodeOutputMaterial",
+            "to_socket": "Surface"
+          }
+        ],
+        "bindings": {
+          "basecolor": {
+            "expected_image": "CGRS04 mechanic uv-method02-visual01 basecolor",
+            "evaluated_image_original": "CGRS04 mechanic uv-method02-visual01 basecolor",
+            "packed_sha256": "feb45fe5a48109a013c921613149a9a745b750ecd1ff9e25d9f56e85e524f052",
+            "recorded_sha256": "feb45fe5a48109a013c921613149a9a745b750ecd1ff9e25d9f56e85e524f052",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509718992160,
+            "evaluated_original_pointer": 509718992160
+          },
+          "orm": {
+            "expected_image": "CGRS04 mechanic uv-method02-visual01 orm",
+            "evaluated_image_original": "CGRS04 mechanic uv-method02-visual01 orm",
+            "packed_sha256": "87ba7e44f975b433c9efae24ef034bd628cfefdc0e7a147b57c69d5df258cd42",
+            "recorded_sha256": "87ba7e44f975b433c9efae24ef034bd628cfefdc0e7a147b57c69d5df258cd42",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509718995744,
+            "evaluated_original_pointer": 509718995744
+          },
+          "normal": {
+            "expected_image": "CGRS04 mechanic uv-method02-visual01 normal",
+            "evaluated_image_original": "CGRS04 mechanic uv-method02-visual01 normal",
+            "packed_sha256": "123015c09ab50d04b9474eaa4de35603ee5c4e01b8650187d1274da47afbc3ca",
+            "recorded_sha256": "123015c09ab50d04b9474eaa4de35603ee5c4e01b8650187d1274da47afbc3ca",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 509718993952,
+            "evaluated_original_pointer": 509718993952
+          }
+        }
+      },
+      "predicates": {
+        "native_matches_frozen_manifest": true,
+        "source_native_matches_record": true,
+        "successor_is_mesh": true,
+        "successor_visible": true,
+        "original_crown_retired": true,
+        "source_crown_cage_held": true,
+        "successor_cage_equals_retired_source": true,
+        "active_uv_selected": true,
+        "object_slot2_DATA": true,
+        "data_slot2_original_material_identity": true,
+        "original_material_graphs_held": true,
+        "original_packed_image_bytes_held": true,
+        "one_active_material_output": true,
+        "active_output_uses_principled_BSDF": true,
+        "basecolor_direct_color_link": true,
+        "orm_rgb_separate": true,
+        "roughness_from_orm_green": true,
+        "metallic_from_same_orm_blue": true,
+        "orm_color_image_link": true,
+        "normal_map_color_link": true,
+        "normal_map_to_bsdf": true,
+        "normal_tangent_selected_uv": true,
+        "basecolor_evaluated_original_image_identity": true,
+        "basecolor_actual_packed_bytes_match_record": true,
+        "basecolor_expected_colorspace": true,
+        "basecolor_explicit_UV_vector_link": true,
+        "orm_evaluated_original_image_identity": true,
+        "orm_actual_packed_bytes_match_record": true,
+        "orm_expected_colorspace": true,
+        "orm_explicit_UV_vector_link": true,
+        "normal_evaluated_original_image_identity": true,
+        "normal_actual_packed_bytes_match_record": true,
+        "normal_expected_colorspace": true,
+        "normal_explicit_UV_vector_link": true,
+        "evaluated_faces_1912": true,
+        "evaluated_all_faces_slot2": true,
+        "evaluated_slot2_DATA": true,
+        "evaluated_slot2_original_material_identity": true,
+        "evaluated_active_uv_selected": true,
+        "basecolor_actual_external_map_bytes_match_record": true,
+        "basecolor_external_map_bytes_held": true,
+        "orm_actual_external_map_bytes_match_record": true,
+        "orm_external_map_bytes_held": true,
+        "normal_actual_external_map_bytes_match_record": true,
+        "normal_external_map_bytes_held": true,
+        "candidate_native_bytes_held": true,
+        "source_native_bytes_held": true
+      }
+    }
+  ],
+  "status": "PASS",
+  "finished_utc": "2026-10-04T20:31:26.659873+00:00",
+  "checker_path": "/tmp/cg-finish04-saved-binding-check.py",
+  "checker_sha256": "138f7638bfaafe4f6e28a258b331c93ed20bfc22a00c1853c4075189eb79de30",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--python",
+    "/tmp/cg-finish04-saved-binding-check.py"
+  ],
+  "observed_task_counter_readback": {
+    "conservative_start_utc": "2026-10-04T20:27:00Z",
+    "baseline_counter_at": "2026-10-04T15:47:10.751Z",
+    "latest_counter_at": "2026-10-04T20:31:40.545Z",
+    "observed_provider_tokens_including_cached_input": 1018386,
+    "authorized_cap": 3000000,
+    "within_observed_cap": true,
+    "limitation": "Current response and delayed counters are not yet represented; not billing or platform goal accounting."
+  },
+  "executed_checker_path": "/tmp/cg-finish04-saved-binding-check.py",
+  "checker_archived_exact_path": "/tmp/cg-finish04-saved-binding-check-visual01.py"
+}

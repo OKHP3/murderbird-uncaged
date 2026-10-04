@@ -1,0 +1,25 @@
+# Bill cross-section development checkpoint
+
+Branch `codex/v38-bill-vault-integration-01`; parent `85ff3c0dc0524563f62ce986759769d96867f2c4`. The commit containing this handoff is the checkpoint identity. V37 remains production.
+
+Retain bill-vault01/attempt02 as a regional proposal. Root and independent review see a less slab-like three-quarter bill with clearer vault and side planes. Whole-bird gain is subtle; July's layered brow/optic bridge remains unresolved. This is not head, whole-character, or owner acceptance. The first version was held for a smooth tube/pinched root; both sources are preserved. Two attempts, no third refinement.
+
+July owner selection controls head only; Master03 controls whole-body continuity. No excluded body/long wings were imported. Native/runtime files are under `assets/models/whole-character-v38/bill-vault01/`; canonical scripts are `scripts/build-v38-bill-vault01.py` and `scripts/regions/v38-bill-vault01.py`. They preserve prior outputs. Final changes only three rigid upper-bill courses plus bill-contact translated 23.2mm toward center (native X .0232 to0; Y/Z exact). Root rows0–4, jaw, owner transforms, neck, body and all materials including latest optic remain exact. These are authored dimensions, not image metrology.
+
+Review `/assets/audit/whole-character-v38/bill-vault-integration01/review.html` defaults to final with source switch and matched head/profile/whole-bird geometry views. Export checker independently confirms 700 nodes, three changed meshes, one marker translation, all other697 node geometry and materials exact. Three changed solids closed, positive volume, zero detected strict self crossings. Two static samples (rest and Maker jaw+.32) retain five inherited crossing identities with no new or increased counts. Those inherited contacts remain unresolved. Qualified receipt corrects stale reporting keys in the frozen construction contract.
+
+Actual browser: Advanced contact then recover, sampled cervical base/skull translation errors0; Maker jaw opened near+.32 then returned0; inspection open1/separation1 then reassembled0/0. The existing Maker head-profile preset crops too closely, so whole-body was used for jaw viewing. Fallback loads existing V37 captures and does not represent candidate appearance. npm ci and build ran once; all52 production paths and four model/fallback hashes unchanged. No full jump/thrust, continuous collision, performance, or engineering certification.
+
+Replit Free ONLY, always decline Power/Max. Fast-forward only clean detached preview at parent; hydrate only this checkpoint's asset-routes.json through public GitHub media. Preserve92 previously hydrated media, workspace main, briefs, servers and dependencies. First/native sources remain pointers unless separately needed. Run verify-preview.py once with exact SHA,parent,port5000, refresh only listed stale metadata if necessary, report exact SHA/clean/routes and stop. No archive scan, credential retry, install, build, restart, push, main edits or publication. Restate hidden blockers in ordinary chat. Pending narrower-versus-fuller neck choice remains unanswered.
+
+Next: address the head's missing constructed brow/optic integration rather than another bill-hook outline change. Likeness and full motion remain incomplete.
+
+## Replit recovery after checkpoint push
+
+The initially targeted detached preview directory disappeared during a Replit workspace restart. Its old Git registration remains preserved. The clean replacement is `/home/runner/workspace/review-previews/bill-vault-ded8e7f`, initially restored at model checkpoint `ded8e7fafcacee562987c8b7e26c3e3eaa97e18a`. Use this replacement for subsequent fast-forwards; do not recreate or prune the old missing path. A local-only `/review-previews/` exclusion was appended to `.git/info/exclude`, with tracked main files and prior entries preserved.
+
+Replit confirmed 102 recovered files against committed LFS hashes/sizes: 94 unique paths from the eleven checkpoint manifests, four selected references, and four V37 GLB/fallback assets. This does not establish recovery of all 106 previously counted cache files. Native sources remain pointers. Main, briefs and installed dependencies were preserved.
+
+Do not put a served worktree beneath `.local`: Vite deliberately denies that private path. A Python static server is not a valid replacement for Vite source transformation. The temporary static server was stopped; fs.deny and `.replit` were unchanged. Vite 8.3.1 PID1486 serves port5000 at the recovery observation; revalidate the process on future work.
+
+Root independently opened the remote review and confirmed actual WebGL loaded the final bill GLB, with 12 applicable material profiles and zero invalid/ineligible profiles in Advanced neutral light. This is remote delivery evidence, not deployment or owner acceptance. The checkpoint verifier ran once before relocation; asset checks passed and status metadata was refreshed. Replit then reported clean status and verified transformed JavaScript, review and GLB routes under Vite. No repeated whole-cache hash pass was required. Free mode only throughout.

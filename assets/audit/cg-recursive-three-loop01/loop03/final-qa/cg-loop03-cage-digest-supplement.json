@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "state": "COMPLETED bounded technical supplement",
+  "completed_utc": "2026-10-04T21:35:09.471911+00:00",
+  "decision": "Cage predicate proof remains valid within its explicit snapshot fields; no diagnostic or predicate correction required.",
+  "exposure": "Initiated after source-first and completed phase2 reports, in response to root question about source_cage_sha256. This is technical reconciliation, not a blind source-first visual judgment.",
+  "finding": "The suspected empty-list digest is a mistaken identity: 4f53a185\u2026 is the actual nonempty canonical crown dictionary digest; literal [] hashes 4f53cda1\u2026. Exact pinned checker and fresh replay agree.",
+  "hash_controls": {
+    "literal_UTF8_empty_list_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "actual_canonical_nonempty_cage_sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77"
+  },
+  "fresh_test": {
+    "method": "Extracted only exact cage_snapshot, uv_snapshot, digest_json and sha_bytes definitions from pinned checker AST; independently serialized and hashed source dictionary before candidate reopen; persisted full serialization before reopen; compared retained Python dictionary and actual retired-source/successor snapshots after reopen. No checker main or producer helper imports. External Python and shasum independently verify actual saved snapshot hashes.",
+    "checker_sha256": "ed43dc885c76868d40616b3fa5abfcd1a2b89ee1631c6e8cc06d11423de3f169",
+    "eras": [
+      {
+        "era": "builder",
+        "actual_serialized_snapshots_equal": true,
+        "all_nonempty_dictionaries": true,
+        "serialized_bytes": [
+          20049,
+          20049,
+          20049
+        ],
+        "sha256": [
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77"
+        ],
+        "counts": {
+          "vertices": 72,
+          "edges": 127,
+          "polygons": 56,
+          "loops": 224,
+          "UV_layers": 1
+        }
+      },
+      {
+        "era": "maker",
+        "actual_serialized_snapshots_equal": true,
+        "all_nonempty_dictionaries": true,
+        "serialized_bytes": [
+          20049,
+          20049,
+          20049
+        ],
+        "sha256": [
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77"
+        ],
+        "counts": {
+          "vertices": 72,
+          "edges": 127,
+          "polygons": 56,
+          "loops": 224,
+          "UV_layers": 1
+        }
+      },
+      {
+        "era": "mechanic",
+        "actual_serialized_snapshots_equal": true,
+        "all_nonempty_dictionaries": true,
+        "serialized_bytes": [
+          20049,
+          20049,
+          20049
+        ],
+        "sha256": [
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+          "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77"
+        ],
+        "counts": {
+          "vertices": 72,
+          "edges": 127,
+          "polygons": 56,
+          "loops": 224,
+          "UV_layers": 1
+        }
+      }
+    ],
+    "before_reopen_snapshots_nonempty": true,
+    "retained_Python_snapshots_survive_reopen": true,
+    "all_original_checker_cage_predicates_pass": true
+  },
+  "reconciliation_with_prior_report": "Fresh native receiving proof independently preserves retired crown topology, UVs, attributes, slots/face indices/transforms/parent/control fields. This supplement directly validates exact source/retired/successor snapshot equality; the 52-binding replay cage predicates are not vacuous.",
+  "limits": "Cage snapshot includes vertex positions, edges, polygons/material indices/smooth flags, loop indices, UV layers/active flags, matrix_world and parent. It is not exhaustive RNA/modifier/custom-data equivalence by itself. No change to strict normal FAIL, shader/lighting limits, source alignment or owner acceptance.",
+  "immutable_prior_reports": [
+    {
+      "path": "/tmp/cg-loop03-final-evidence-firstlook.json",
+      "sha256": "ccdfbe8be35528ded30c1ba3bc326012120ec6ea8d40bbf8a437609e900d65b2"
+    },
+    {
+      "path": "/tmp/cg-loop03-final-evidence.json",
+      "sha256": "a13189581a968b27f639d9088961deb67daeacd2ab896edc390defdb150fa78c"
+    }
+  ],
+  "proofs": [
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/builder-before.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/builder-retired.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/builder-successor.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/maker-before.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/maker-retired.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/maker-successor.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/mechanic-before.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/mechanic-retired.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/mechanic-successor.json",
+      "sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "bytes": 20049
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/probe.log",
+      "sha256": "36f4b3f35d5e44689ecd7314f447bebe5a4a9f08b7903415358423030e40e52d",
+      "bytes": 7291
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/probe.py",
+      "sha256": "885d6ed6ff17af146d6dc008b08d494c5afac7a929295dfb45f6bccec77295eb",
+      "bytes": 3117
+    },
+    {
+      "path": "/tmp/cg-loop03-cage-supplement-2134/raw.json",
+      "sha256": "108074d1f8d68fd6719eb81ad049aaf3a8876ab52683c46220d1f67df6377ccc",
+      "bytes": 8370
+    }
+  ],
+  "scope": "Read-only six native opens; only unique /tmp scripts/snapshots/report/log writes. No scene or native save/edit, render, export, threshold change, Git mutation, children or other current QA report reads."
+}

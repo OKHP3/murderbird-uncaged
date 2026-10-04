@@ -7,12 +7,18 @@
 1. Read `release.json` from the public site and record its full `revision`.
 2. Verify the Pages deployment run succeeded for that exact revision, not merely for a preceding commit.
 3. Compare the served files with the manifest's byte counts and SHA-256 hashes. It covers every emitted file except the manifest itself.
-4. Check the WebGL exhibit, illustrated fallback, folio, and review gallery in the browser. Hash parity alone does not establish usable interactions.
+4. Check the WebGL exhibit, illustrated fallback, folio, review gallery and `cg.html` assessment viewer in the browser. Verify its requested static 3D model and labeled native-render fallback separately. Hash parity alone does not establish usable interactions.
 5. Keep technical publication status separate from artistic acceptance.
 
 Local builds record whether tracked or untracked changes existed at build time. CI release builds must be clean. The manifest contains only public output paths and hashes, never local filesystem paths or archive inventories.
 
 For local boundary checks, `scripts/verify-publication.mjs` reads the emitted manifest's current path inventory, verifies each listed file's byte count and hash, and checks the active exhibit model and three era previews against the current model inventory's recorded hashes. Historical review media is checked by its separate pinned inventory. The retired exterior-v1 validator's former fixed checkpoint count is not a current release requirement.
+
+## October 4 retained CG assessment delivery
+
+The owner authorized publication of the retained three-loop CG improvements. `assets/review/cg-publication.json` pins the exact selected source files, public paths, byte counts and hashes. `scripts/prepare-cg-release.mjs` verifies the full selection before emitting the ignored `public/cg/` derivatives; development and build commands prepare them from preserved source files. The publication validator requires the emitted `cg/` inventory to match that allowlist exactly. Editable native sources, audit records and provenance stay outside the build.
+
+`cg.html` presents the three static retained04 models, neutral/exhibit native views, pinned references and cumulative comparisons. GLB loading is requested by the visitor, and era changes release the previous viewer. V37 retains the existing animated interaction rig and illustrated fallback. One release manifest covers both routes, but their capabilities and model identities remain distinct. Source likeness and owner artistic acceptance remain pending; neither technical delivery nor synchronization closes that gate.
 
 ## September 27 reconciliation
 
