@@ -1,0 +1,18 @@
+import bpy,numpy as np,pathlib,json,hashlib
+from mathutils import Matrix
+D=pathlib.Path('/tmp/cg-recursive-loop02-evidence-1933');x=json.load(open(D/'checker-results.json'));r=x['results'][0];c=max(r['material_checks'],key=lambda a:a.get('normal_vector_max_L2',0));target=np.array(c['worst_normal_joint_triangle']['native_corners'],np.float32);name=c['worst_normal_native_object'];root=pathlib.Path('/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged');base=root/'assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/murderbird-recursive-builder.blend';bpy.ops.wm.open_mainfile(filepath=str(base),load_ui=False,use_scripts=False);oldpresent=name in bpy.data.objects;bpy.ops.wm.open_mainfile(filepath=r['native_path'],load_ui=False,use_scripts=False);o=bpy.data.objects[name];dg=bpy.context.evaluated_depsgraph_get();e=o.evaluated_get(dg);m=e.to_mesh(preserve_all_data_layers=True,depsgraph=dg);m.calc_loop_triangles();SW=Matrix(((1,0,0),(0,0,1),(0,-1,0)));w=e.matrix_world;nm=w.to_3x3().inverted().transposed();uv=next((u for u in m.uv_layers if u.active_render),m.uv_layers.active);matches=[]
+try:
+ for t in m.loop_triangles:
+  loops=list(t.loops)
+  if w.determinant()<0:loops.reverse()
+  rows=[]
+  for li in loops:
+   p=SW@(w@m.vertices[m.loops[li].vertex_index].co);n=SW@((nm@m.corner_normals[li].vector).normalized());v=uv.data[li].uv;rows.append((*p,float(v[0]),float(np.float32(1)-np.float32(v[1])),*n))
+  a=np.array(rows,np.float32)
+  for rot in range(3):
+   aa=np.roll(a,rot,axis=0)
+   if np.array_equal(aa,target):
+    p=aa[:,:3].astype(np.float64);edges=[float(np.linalg.norm(p[(i+1)%3]-p[i]))for i in range(3)];area=float(np.linalg.norm(np.cross(p[1]-p[0],p[2]-p[0]))/2);matches.append({'polygon_index':t.polygon_index,'loop_indices':loops,'joint_corners':aa.tolist(),'material':m.materials[t.material_index].name,'UV_name':uv.name,'world_edge_lengths':edges,'world_triangle_area':area,'shortest_edge':min(edges),'longest_to_shortest_edge_ratio':max(edges)/min(edges) if min(edges)>0 else None})
+finally:e.to_mesh_clear()
+native=json.load(open(D/'native.json'));isadded=name in native['results'][0]['new_mesh_names'];g=np.array(c['worst_normal_joint_triangle']['GLB_corners'],np.float64);n=target[:,-3:].astype(np.float64);rounded=np.round(n,4);rounded/=np.linalg.norm(rounded,axis=1)[:,None];onlyround_delta=np.linalg.norm(rounded-g[:,-3:],axis=1)
+out={'scope':'Bounded trace only of maximum new normal-delta triangle; no mesh recreation or export.','native_object':name,'present_in_Loop01_retained02':oldpresent,'present_in_independent_added_mesh_list':isadded,'actual_evaluated_triangle_matches':matches,'strict_normal_threshold_L2':2e-5,'normal_max_L2':c['normal_vector_max_L2'],'normal_max_angle_degrees':c['normal_angle_max_degrees'],'native_and_GLB_joint_example':c['worst_normal_joint_triangle'],'same_maximum_on_all3_eras':all(max(z['material_checks'],key=lambda a:a.get('normal_vector_max_L2',0))['worst_normal_native_object']==name and max(z['material_checks'],key=lambda a:a.get('normal_vector_max_L2',0))['normal_vector_max_L2']==c['normal_vector_max_L2']for z in x['results']),'native_normal_rounded4_then_renormalized_residual_vs_GLB':onlyround_delta.tolist(),'cause_status':'UNKNOWN precise maximum-delta cause. Pinned exporter custom-normal assignment and current glTF4decimal rounding/normalization are known pipeline operations; rounding alone does not explain this maximum. Skinny finite triangle is observed, not accepted as proven cause. No threshold changes.','not_run':'Recreated mesh, export, new render or unlimited normal-detail chase.'};(D/'maximum.json').write_text(json.dumps(out,indent=2)+'\n');print('MAXTRACE',isadded,oldpresent,len(matches),out['normal_max_angle_degrees'])
