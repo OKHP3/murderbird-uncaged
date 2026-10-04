@@ -10,8 +10,8 @@
 <body><main>
 <h1>MurderBird · recursive loop02 review</h1>
 <p class="notice"><strong>Source likeness and owner artistic acceptance remain pending.</strong> This local review compares Retained Loop 01 with the selected Loop 02 candidate. It does not promote the model to the exhibit or establish publication.</p>
-<p class="small">This candidate composes retained BODY03 local gap returns and FEET02 design02. Head04 remains plan only and is not represented as accepted or included.</p>
-<p id="packet-status">Planned Loop 02 candidate retained03 / Retained Loop 01 baseline retained02. Delivery availability is unverified; individual images and the selected browser model report their own loading state.</p>
+<p class="small">This candidate composes retained BODY03 local gap returns and FEET02 design02. HEAD04 trials are excluded; the retained original head remains a source-alignment gap.</p>
+<p id="packet-status">Loop 02 development candidate retained03 / Retained Loop 01 baseline retained02. Individual images and the selected browser model report their own loading state.</p>
 <div class="controls" aria-label="Review controls">
 <label for="era">Era</label><select id="era"><option value="builder">Advanced</option><option value="maker">Maker</option><option value="mechanic">Mechanic</option></select>
 <fieldset class="lighting"><legend>Lighting</legend><button type="button" id="neutral" aria-pressed="true">Neutral</button><button type="button" id="exhibit" aria-pressed="false">Exhibit</button></fieldset>
@@ -75,7 +75,7 @@ fallback.addEventListener('error',()=>{display();if(usingPNG())status.textConten
 fallback.addEventListener('load',()=>{display();if(usingPNG()&&!loading)describe();});
 function updateFiles(){
  const item=selected(),profile=mode==='exhibit'?'workshop':'neutral',source=`/assets/img/library/${item.file}`;
- $('packet-status').textContent=`Loop 02 candidate ${checkpoint} / Retained Loop 01 baseline ${baseline}. Delivery availability is unverified; individual images and the selected browser model report their own loading state.`;
+ $('packet-status').textContent=`Loop 02 candidate ${checkpoint} / Retained Loop 01 baseline ${baseline}. Individual images and the selected browser model report their own loading state.`;
  $('source-caption').textContent=`Pinned ${item.label} · era finish source`;
  $('before-caption').textContent=`Retained Loop 01 · ${baseline}`;$('candidate-caption').textContent=`Loop 02 · ${checkpoint}`;
  setImage('source',source,`Pinned ${item.label} era finish reference`);
