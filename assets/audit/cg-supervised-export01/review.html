@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Local export parity review</title><style>html,body{margin:0;background:#222;color:white;font:16px sans-serif}#view{height:90vh}canvas{display:block;width:100%;height:100%}button{margin:8px;padding:8px}</style><button id="neutral">Neutral</button><button id="exhibit">Exhibit</button><span id="status">Loading static GLB review…</span><div id="view"></div><script type="module">
+import {createSupervisedReview} from '/scripts/cg-supervised-browser.js';
+try { const review=await createSupervisedReview(document.querySelector('#view'),'./builder.glb'); window.review=review;for(const mode of ['neutral','exhibit']) document.querySelector('#'+mode).onclick=()=>review.setLighting(mode);document.querySelector('#status').textContent='Static review · native browser material export · owner acceptance pending'; } catch(error){document.querySelector('#status').textContent=error.message;throw error;}
+</script></html>
