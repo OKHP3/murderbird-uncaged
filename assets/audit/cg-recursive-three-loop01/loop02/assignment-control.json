@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "dispatched_at_utc": "2026-10-04T16:57:41.362385+00:00",
+  "loop": 2,
+  "receiving_manifest": "loop02-preparation/receiving-manifest-loop02.json",
+  "receiving_manifest_sha256": "47ed3ee74f0a06a9c470a427f8151dd032b0b48e1c68083f50d092cd1ec3308f",
+  "input_preflight": "loop02/preflight/readback.json all3 PASS",
+  "maximum_active_workers": 3,
+  "first_whole_gate": "Visible source gain before detail or final delivery; reject/regressions return to held baseline",
+  "assignments": [
+    {
+      "agent": "/root/recursive_head",
+      "scope": "head",
+      "status": "construction dispatched",
+      "first_whole_target_utc": "2026-10-04T17:15:00Z",
+      "hard_stop_utc": "2026-10-04T18:00:00Z",
+      "focused_design_cap": 2,
+      "assignment_observed_token_ceiling": 20000000,
+      "counter_baseline": 4090858,
+      "baseline_read_at_utc": "2026-10-04T16:45:10.521518+00:00",
+      "counter_limit": "Root manual metadata readback; late prior/in-flight events can conservatively overcount. No automatic token termination.",
+      "worker_children": false
+    },
+    {
+      "agent": "/root/recursive_body",
+      "scope": "body",
+      "status": "construction dispatched",
+      "first_whole_target_utc": "2026-10-04T17:15:00Z",
+      "hard_stop_utc": "2026-10-04T17:45:00Z",
+      "focused_design_cap": 2,
+      "assignment_observed_token_ceiling": 20000000,
+      "counter_baseline": 5472616,
+      "baseline_read_at_utc": "2026-10-04T16:45:10.521518+00:00",
+      "counter_limit": "Root manual metadata readback; late prior/in-flight events can conservatively overcount. No automatic token termination.",
+      "worker_children": false
+    },
+    {
+      "agent": "/root/deadline22_coupled_construction",
+      "scope": "feet",
+      "status": "construction dispatched",
+      "first_whole_target_utc": "2026-10-04T17:15:00Z",
+      "hard_stop_utc": "2026-10-04T17:50:00Z",
+      "focused_design_cap": 2,
+      "assignment_observed_token_ceiling": 20000000,
+      "counter_baseline": 2292903,
+      "baseline_read_at_utc": "2026-10-04T16:45:10.521518+00:00",
+      "counter_limit": "Root manual metadata readback; late prior/in-flight events can conservatively overcount. No automatic token termination.",
+      "worker_children": false
+    }
+  ],
+  "successor_dispatches": [
+    {
+      "agent": "pipeline_assessment",
+      "task": "HEAD03 actual-camera source contour fitted enclosure",
+      "dispatched_utc": "2026-10-04T17:41:09.993439+00:00",
+      "hard_stop_utc": "2026-10-04T19:00:00Z",
+      "observed_token_ceiling_including_cached_input": 20000000,
+      "first_whole_latest_utc": "2026-10-04T18:15:00Z",
+      "maximum_designs": 2,
+      "pause_between_designs": true
+    },
+    {
+      "agent": "deadline22_coupled_construction",
+      "task": "FEET02 exact frozen design02 three-era final custody and continuity",
+      "hard_stop_utc": "2026-10-04T18:05:00Z",
+      "third_design_authorized": false
+    }
+  ]
+}
