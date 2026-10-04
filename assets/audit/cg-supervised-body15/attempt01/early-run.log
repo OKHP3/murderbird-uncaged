@@ -1,0 +1,17 @@
+00:01.871  blend            | Read blend: "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/models/cg-supervised01/attempt06/murderbird-supervised-builder.blend"
+00:16.987  blend            | Read blend: "/Users/okh/.codex/worktrees/cg-supervised-oblique-breast15/murderbird-uncaged/assets/audit/cg-supervised-body15/attempt01/murderbird-body15.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/cg-supervised-oblique-breast15/murderbird-uncaged/scripts/cg-supervised-body15.py", line 107, in <module>
+    if __name__=='__main__':run()
+                            ~~~^^
+  File "/Users/okh/.codex/worktrees/cg-supervised-oblique-breast15/murderbird-uncaged/scripts/cg-supervised-body15.py", line 64, in run
+    result['savedReopenedChecks']=verify();receipt_path.write_text(json.dumps(result,indent=2));print('BODY15_EARLY_SAVE_REOPEN_PASS',flush=True)
+                                  ~~~~~~^^
+  File "/Users/okh/.codex/worktrees/cg-supervised-oblique-breast15/murderbird-uncaged/scripts/cg-supervised-body15.py", line 62, in verify
+    bb=dict(min=[min(v[i] for v in bounds) for i in range(3)],max=[max(v[i] for v in bounds) for i in range(3)]);assert bb['min'][0]>=-.23201 and bb['max'][0]<=.23201 and bb['min'][1]>=-.41958,bb
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'min': [-0.23199999332427979, -0.4191305339336395, 0.7592217922210693], 'max': [0.23330000042915344, -0.08839956670999527, 1.560947060585022]}
+Info: Saved as "murderbird-body15.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
