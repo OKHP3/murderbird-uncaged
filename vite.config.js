@@ -67,6 +67,7 @@ export default defineConfig(({ command, isPreview }) => {
         input: {
           exhibit: fileURLToPath(new URL('./index.html', import.meta.url)),
           folio: fileURLToPath(new URL('./folio.html', import.meta.url)),
+          cg: fileURLToPath(new URL('./cg.html', import.meta.url)),
         },
       },
     },

@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "scope": "Independent saved-native binding test only; source likeness unknown",
+  "goal_commit_read": "251f2f0243181e97140179c2aff6eb057e165438",
+  "no_scene_writes_or_producer_imports": true,
+  "disabled_autoexec_requested": true,
+  "blender_version": "5.2.1 LTS",
+  "started_utc": "2026-10-04T20:34:01.616640+00:00",
+  "eras": [
+    {
+      "era": "builder",
+      "status": "PASS",
+      "native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-finish04-crown/attempt04/builder/murderbird-recursive-builder.blend",
+      "native_sha256": "fde2fb1cef4d030fbd798de940ca1c8c2f9c82b115ad336781859cdc6e306fa4",
+      "source_native": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/murderbird-recursive-builder.blend",
+      "source_native_sha256": "86fee36a8df80f8bcaa3bba7e1c0ecc1dfc56fde178a708323949c2d23ba6288",
+      "evaluated_faces": 1912,
+      "evaluated_face_material_indices": [
+        2
+      ],
+      "material_identity": {
+        "expected_original_pointer": 500052607008,
+        "evaluated_original_pointer": 500052607008,
+        "pointer_scope": "Same saved-native Blender session only"
+      },
+      "source_cage_sha256": "4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77",
+      "original_material_graph_count": 62,
+      "original_packed_image_count": 161,
+      "graph": {
+        "links": [
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeUVMap",
+            "from_socket": "UV",
+            "to_node_type": "ShaderNodeTexImage",
+            "to_socket": "Vector"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Base Color"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeSeparateColor",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Green",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Roughness"
+          },
+          {
+            "from_node_type": "ShaderNodeSeparateColor",
+            "from_socket": "Blue",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Metallic"
+          },
+          {
+            "from_node_type": "ShaderNodeTexImage",
+            "from_socket": "Color",
+            "to_node_type": "ShaderNodeNormalMap",
+            "to_socket": "Color"
+          },
+          {
+            "from_node_type": "ShaderNodeNormalMap",
+            "from_socket": "Normal",
+            "to_node_type": "ShaderNodeBsdfPrincipled",
+            "to_socket": "Normal"
+          },
+          {
+            "from_node_type": "ShaderNodeBsdfPrincipled",
+            "from_socket": "BSDF",
+            "to_node_type": "ShaderNodeOutputMaterial",
+            "to_socket": "Surface"
+          }
+        ],
+        "bindings": {
+          "basecolor": {
+            "expected_image": "CGRS04 builder uv-method02-visual02-heldnormal basecolor",
+            "evaluated_image_original": "CGRS04 builder uv-method02-visual02-heldnormal basecolor",
+            "packed_sha256": "b9f5be88818375b4b900c26da2dc549f7c322325e165223fe538c50d6e9cfc87",
+            "recorded_sha256": "b9f5be88818375b4b900c26da2dc549f7c322325e165223fe538c50d6e9cfc87",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 501323999776,
+            "evaluated_original_pointer": 501323999776
+          },
+          "orm": {
+            "expected_image": "CGRS04 builder uv-method02-visual02-heldnormal orm",
+            "evaluated_image_original": "CGRS04 builder uv-method02-visual02-heldnormal orm",
+            "packed_sha256": "02390b49c8e52e8e6e001b16dbffd225614480ae06722c7fa1392cb6e0eaa037",
+            "recorded_sha256": "02390b49c8e52e8e6e001b16dbffd225614480ae06722c7fa1392cb6e0eaa037",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 501324003360,
+            "evaluated_original_pointer": 501324003360
+          },
+          "normal": {
+            "expected_image": "CGRS04 builder uv-method02-visual02-heldnormal normal",
+            "evaluated_image_original": "CGRS04 builder uv-method02-visual02-heldnormal normal",
+            "packed_sha256": "db77723bd096536c83729bd1ed180748ea65f9ece3dda9a6a9e314b2cd74c821",
+            "recorded_sha256": "db77723bd096536c83729bd1ed180748ea65f9ece3dda9a6a9e314b2cd74c821",
+            "uv_source_type": "ShaderNodeUVMap",
+            "uv_source_layer": "head17-normalized-local",
+            "path": [
+              "ShaderNodeUVMap.UV",
+              "ShaderNodeTexImage.Vector"
+            ],
+            "expected_original_pointer": 501324001568,
+            "evaluated_original_pointer": 501324001568
+          }
+        },
+        "original_source_normal_graph_images": [
+          {
+            "name": "worn-bronze-2b-normal.png.002",
+            "original_pointer": 501433352224,
+            "packed_sha256": "db77723bd096536c83729bd1ed180748ea65f9ece3dda9a6a9e314b2cd74c821"
+          }
+        ]
+      },
+      "predicates": {
+        "native_matches_frozen_manifest": true,
+        "source_native_matches_record": true,
+        "successor_is_mesh": true,
+        "successor_visible": true,
+        "original_crown_retired": true,
+        "source_crown_cage_held": true,
+        "successor_cage_equals_retired_source": true,
+        "active_uv_selected": true,
+        "object_slot2_DATA": true,
+        "data_slot2_original_material_identity": true,
+        "original_material_graphs_held": true,
+        "original_packed_image_bytes_held": true,
+        "one_active_material_output": true,
+        "active_output_uses_principled_BSDF": true,
+        "basecolor_direct_color_link": true,
+        "orm_rgb_separate": true,
+        "roughness_from_orm_green": true,
+        "metallic_from_same_orm_blue": true,
+        "orm_color_image_link": true,
+        "normal_map_color_link": true,
+        "normal_map_to_bsdf": true,
+        "normal_tangent_selected_uv": true,
+        "basecolor_evaluated_original_image_identity": true,
+        "basecolor_actual_packed_bytes_match_record": true,
+        "basecolor_expected_colorspace": true,
+        "basecolor_explicit_UV_vector_link": true,
+        "orm_evaluated_original_image_identity": true,
+        "orm_actual_packed_bytes_match_record": true,
+        "orm_expected_colorspace": true,
+        "orm_explicit_UV_vector_link": true,
+        "normal_evaluated_original_image_identity": true,
+        "normal_actual_packed_bytes_match_record": true,
+        "normal_expected_colorspace": true,
+        "normal_explicit_UV_vector_link": true,
+        "evaluated_faces_1912": true,
+        "evaluated_all_faces_slot2": true,
+        "evaluated_slot2_DATA": true,
+        "evaluated_slot2_original_material_identity": true,
+        "evaluated_active_uv_selected": true,
+        "basecolor_separate_FILE_image_datablock": true,
+        "orm_separate_FILE_image_datablock": true,
+        "normal_separate_FILE_image_datablock": true,
+        "normal_copy_has_original_source_graph_packed_bytes": true,
+        "normal_copy_is_distinct_original_ID_from_source_graph_images": true,
+        "basecolor_actual_external_map_bytes_match_record": true,
+        "basecolor_external_map_bytes_held": true,
+        "orm_actual_external_map_bytes_match_record": true,
+        "orm_external_map_bytes_held": true,
+        "normal_actual_external_map_bytes_match_record": true,
+        "normal_external_map_bytes_held": true,
+        "candidate_native_bytes_held": true,
+        "source_native_bytes_held": true
+      }
+    }
+  ],
+  "status": "PASS",
+  "finished_utc": "2026-10-04T20:34:14.341661+00:00",
+  "checker_path": "/tmp/cg-finish04-saved-binding-check.py",
+  "checker_sha256": "ed43dc885c76868d40616b3fa5abfcd1a2b89ee1631c6e8cc06d11423de3f169",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--python",
+    "/tmp/cg-finish04-saved-binding-check.py",
+    "--",
+    "--packet",
+    "assets/audit/cg-recursive-finish04-crown/attempt04",
+    "--manifest",
+    "assets/audit/cg-recursive-finish04-crown/attempt04-frozen-manifest.json",
+    "--eras",
+    "builder",
+    "--output",
+    "/tmp/cg-finish04-saved-binding-check-attempt04.json"
+  ],
+  "observed_task_counter_readback": {
+    "conservative_start_utc": "2026-10-04T20:27:00Z",
+    "baseline_counter_at": "2026-10-04T15:47:10.751Z",
+    "latest_counter_at": "2026-10-04T20:34:21.205Z",
+    "observed_provider_tokens_including_cached_input": 2312358,
+    "authorized_cap": 3000000,
+    "within_observed_cap": true,
+    "limitation": "Current response and delayed counters are not yet represented; not billing or platform goal accounting."
+  }
+}

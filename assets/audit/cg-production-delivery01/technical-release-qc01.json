@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-04T23:17:58.012577+00:00",
+  "review_type": "Independent technical release QA; separate from formal five-pass unfinished-work review",
+  "status": "PASS_WITH_LIMITS",
+  "release_scope": "Owner-authorized publication of exact retained04 static CG candidate for assessment; existing V37 interactive exhibit retained",
+  "source_goal": "UNMET",
+  "owner_artistic_acceptance": "PENDING",
+  "source_revision": "e305989bff863aab827a0bdc4ee3395de32e0d61",
+  "reviewed_github_main_goal_revision": "251f2f0243181e97140179c2aff6eb057e165438",
+  "local_head_observed": "219e891e522cd17dc0280f99e0c5353e38353b4a",
+  "built_revision": "219e891e522cd17dc0280f99e0c5353e38353b4a",
+  "built_working_tree_dirty": true,
+  "runtime_url": "http://127.0.0.1:4187/cg.html",
+  "mechanical_floor": "Project build/publication/import validators identified; npm ci/build and existing 79 tests reported PASS by runtime worker/integrator, publication verifier and targeted import checker independently run by this reviewer.",
+  "frozen_source_hashes": {
+    "cg.html": "6a7d982bafd31107c7a61e30f5b9c66a014d8adb1f62a61f5b7c5b33a6dc46f9",
+    "src/cg-main.js": "5b9c9ee738dcfdbf38f990e60f91586fe31fea343ff8d7efe6e7f14bfd5c38a5",
+    "src/cg.css": "9636b84fbfbf6febc7af16ba1fbee907fe7793ee2579afe18af4721abd99c343",
+    "src/scene/cg-viewer.js": "60107dd6c0665090b86084671419d11ccef74167ad8eee1a374d3794931c8a98",
+    "scripts/prepare-cg-release.mjs": "411f07ca385db2d520bb37ed534f53af57bc9d819e07a17b408f6e0931fc3bc6",
+    "scripts/verify-publication.mjs": "a15b058dfef561f3eb2ef6fd4d68142748e15ac7fe5015d2e0e6514d63f9e185",
+    "package.json": "685354abccd028fc600fd8840aa62596fd066f787f0ef5787dcd29feaeaacb6e",
+    "vite.config.js": "ff0a0aa0012742f0f5b4da46be319d3febe3af623fb58bbf3bb6d1bdad146384",
+    "assets/review/cg-publication.json": "fa4cbc5690f605a913e626b828d3f3b78dda3789891a638537a47f891a38fdac",
+    "provenance/cg-production-import-2026-10-04.json": "8380984221612a52f60039b49c4ce185d5468763ebf882b5840b9fd96386a76c"
+  },
+  "checks": [
+    {
+      "name": "Imported source preservation",
+      "status": "PASS",
+      "reviewer_execution": "independent",
+      "evidence": {
+        "first_verified_files": 326,
+        "first_verified_bytes": 1886309839,
+        "added_proof_files": 38,
+        "added_proof_bytes": 1430988,
+        "total_files": 364,
+        "total_bytes": 1887740827,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "Corrected import ledger schema and text attributes",
+      "status": "PASS",
+      "reviewer_execution": "independent targeted official validator plus added proof check",
+      "evidence": {
+        "initial_targeted_validator": {
+          "verified_entries": 326,
+          "total_entries": 326,
+          "manifests": [
+            "provenance/cg-production-import-2026-10-04.json"
+          ],
+          "errors": []
+        },
+        "new38_schema_attributes_errors": [],
+        "root_reported_all_manifests_result": "768/768; source-reported by integrator, not independently rerun fleet-wide"
+      }
+    },
+    {
+      "name": "CG allowlist sources and generated copies",
+      "status": "PASS",
+      "reviewer_execution": "independent",
+      "evidence": {
+        "files": 96,
+        "revision": "e305989bff863aab827a0bdc4ee3395de32e0d61",
+        "mismatch": [],
+        "models": [
+          {
+            "era": "maker",
+            "bytes": 63979404,
+            "sha256": "cbfeffc9bf47fb5b2fc3717288bc42f22ece85567052a39f41e02d86ebad497a",
+            "skins": 0,
+            "animations": 0,
+            "external_uris": 0,
+            "nodes": 25,
+            "meshes": 25,
+            "materials": 25
+          },
+          {
+            "era": "mechanic",
+            "bytes": 76271784,
+            "sha256": "19d02b9db3415f2c979c90b5c9e541ecb53e870856a0ba94c436a5bdfc2a819a",
+            "skins": 0,
+            "animations": 0,
+            "external_uris": 0,
+            "nodes": 25,
+            "meshes": 25,
+            "materials": 25
+          },
+          {
+            "era": "builder",
+            "bytes": 74983972,
+            "sha256": "a9787f79605a3712562c4f8d113d3acf1d9f8534b5069fa0844ac6bcedbbf402",
+            "skins": 0,
+            "animations": 0,
+            "external_uris": 0,
+            "nodes": 25,
+            "meshes": 25,
+            "materials": 25
+          }
+        ]
+      }
+    },
+    {
+      "name": "Exact public release boundary",
+      "status": "PASS",
+      "reviewer_execution": "node scripts/verify-publication.mjs independently executed against final local build",
+      "evidence": {
+        "total_dist_files": 155,
+        "selected_cg_files": 96,
+        "payload_bytes_excluding_release_manifest": 407609776,
+        "private_provenance_native_archive_or_audit_paths": []
+      }
+    },
+    {
+      "name": "Unexpected CG output rejection",
+      "status": "PASS",
+      "reviewer_execution": "independent isolated copied dist; truthful extra release-manifest entry; source/public paths symlinked read-only",
+      "evidence": {
+        "fixture_kind": "isolated copied dist with truthful updated release inventory and additional cg path",
+        "unwanted_path": "cg/unauthorized-review-notes.txt",
+        "exit_code": 1,
+        "rejection": true,
+        "stderr_excerpt": "node:internal/modules/run_main:111\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: CG output must exactly match its explicit publication allowlist\n+ actual - expected\n... Skipped lines\n\n  [\n    'cg/checkpoint09/builder/canon-neutral.png',\n    'cg/checkpoint09/builder/canon-workshop.png',\n    'cg/checkpoint09/maker/canon-neutral.png',\n    'cg/checkpoint09/maker/canon-workshop.png',\n...\n    'cg/retained04/mechanic/workshop-315.png',\n+   'cg/unauthorized-review-notes.txt'\n  ]\n\n    at file:///Users/okh/.codex/worktrees/cg-production-delivery01/murderbird-uncaged/scripts/verify-publication.mjs:106:8 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    'cg/checkpoint09/builder/canon-neutral.png',\n    'cg/checkpoint09/builder/canon-workshop.png',\n    'cg/checkpoint09/maker/canon-neutral.png',\n    'cg/checkpoint09/maker/canon-workshop.png',\n    'cg/checkpoint09/mechanic/canon-neutral.png',\n    'cg/checkpoint09/mechanic/canon-workshop.png',\n    'cg/loop01/builder/canon-neutral.png',\n    'cg/loop01/builder/canon-workshop.png',\n    'cg/loop01/maker/canon-neutral.png',\n    'cg/loop01/maker/canon-workshop.png',\n    'cg/loop01/mechanic/canon-neutral.png',\n    'cg/loop01/mechanic/canon-workshop.png',\n    'cg/loop02/builder/canon-neutral.png',\n    'cg/loop02/builder/canon-workshop.png',\n    'cg/loop02/maker/canon-neutral.png',\n    'cg/loop02/maker/canon-workshop.png',\n    'cg/loop02/mechanic/canon-neutral.png',\n    'cg/loop02/mechanic/canon-workshop.png',\n    'cg/references/builder.png',\n    'cg/references/candidate03.png',\n    'cg/references/july-head.png',\n    'cg/references/locked-canon.jpg',\n    'cg/references/maker.png',\n    'cg/references/mechanic.png',\n    'cg/retained04/builder/body-detail.png',\n    'cg/retained04/builder/canon-neutral.png'",
+        "actual_release_fixture_present": false
+      },
+      "cleanup": "Temporary copied fixture removed. Actual release output never contained injected file."
+    },
+    {
+      "name": "V37 source and selected fallback preservation",
+      "status": "PASS",
+      "reviewer_execution": "independent diff against baseline and runtime smoke",
+      "evidence": {
+        "base": "251f2f0243181e97140179c2aff6eb057e165438",
+        "changed_paths": ""
+      }
+    },
+    {
+      "name": "CG browser keyboard, touch taps, failure recovery, no-JS and V37 route smoke",
+      "status": "PASS",
+      "reviewer_execution": "independent Chromium ANGLE/SwiftShader Playwright",
+      "evidence": {
+        "startedAt": "2026-10-04T23:13:50.808Z",
+        "url": "http://127.0.0.1:4187/",
+        "environment": "bundled Playwright; Browser plugin/skill absent; Chromium with ANGLE/SwiftShader",
+        "checks": [
+          {
+            "name": "CG initial native screen and no automatic GLB download",
+            "status": "PASS",
+            "evidence": {
+              "title": "MurderBird: Uncaged | CG assessment",
+              "glbRequests": 0
+            }
+          },
+          {
+            "name": "CG keyboard orbit, zoom and reset",
+            "status": "PASS",
+            "evidence": {
+              "initial": {
+                "lighting": "neutral",
+                "camera": [
+                  -4.2744397873802535,
+                  2.426645472213285,
+                  3.034078509751699
+                ],
+                "target": [
+                  -0.0003663897514343261,
+                  0.9304992645047604,
+                  0.04133962094783783
+                ],
+                "zoom": 1,
+                "triangles": 639746
+              },
+              "zoomed": {
+                "lighting": "neutral",
+                "camera": [
+                  -4.2744397873802535,
+                  2.426645472213285,
+                  3.034078509751699
+                ],
+                "target": [
+                  -0.0003663897514343261,
+                  0.9304992645047604,
+                  0.04133962094783783
+                ],
+                "zoom": 1.15,
+                "triangles": 639746
+              },
+              "rotated": {
+                "lighting": "neutral",
+                "camera": [
+                  -3.7611941566937594,
+                  2.4098453650477545,
+                  3.664922455893567
+                ],
+                "target": [
+                  -0.0003663897514343261,
+                  0.9304992645047604,
+                  0.04133962094783783
+                ],
+                "zoom": 1.15,
+                "triangles": 639746
+              },
+              "reset": {
+                "lighting": "neutral",
+                "camera": [
+                  -4.2744397873802535,
+                  2.426645472213285,
+                  3.034078509751699
+                ],
+                "target": [
+                  -0.0003663897514343261,
+                  0.9304992645047604,
+                  0.04133962094783783
+                ],
+                "zoom": 1,
+                "triangles": 639746
+              }
+            }
+          },
+          {
+            "name": "Touch tap changes CG lighting and pressed state",
+            "status": "PASS",
+            "evidence": {
+              "lighting": "exhibit"
+            }
+          },
+          {
+            "name": "320px CG viewport fits without horizontal overflow",
+            "status": "PASS",
+            "evidence": {
+              "viewport": 320,
+              "scrollWidth": 320,
+              "controls": [
+                {
+                  "id": "cg-era",
+                  "rect": {
+                    "left": 16,
+                    "right": 145,
+                    "width": 129,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "neutral",
+                  "rect": {
+                    "left": 155,
+                    "right": 226.359375,
+                    "width": 71.359375,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "exhibit",
+                  "rect": {
+                    "left": 232.359375,
+                    "right": 300.53125,
+                    "width": 68.171875,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-load",
+                  "rect": {
+                    "left": 16,
+                    "right": 304,
+                    "width": 288,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-native",
+                  "rect": {
+                    "left": 16,
+                    "right": 122.40625,
+                    "width": 106.40625,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-left",
+                  "rect": {
+                    "left": 16,
+                    "right": 106.359375,
+                    "width": 90.359375,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-right",
+                  "rect": {
+                    "left": 113.359375,
+                    "right": 211.40625,
+                    "width": 98.046875,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-in",
+                  "rect": {
+                    "left": 218.40625,
+                    "right": 304,
+                    "width": 85.59375,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-out",
+                  "rect": {
+                    "left": 16,
+                    "right": 153.09375,
+                    "width": 137.09375,
+                    "height": 44
+                  }
+                },
+                {
+                  "id": "cg-reset",
+                  "rect": {
+                    "left": 160.09375,
+                    "right": 304,
+                    "width": 143.90625,
+                    "height": 44
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "Touch tap returns to exact native render and disables 3D camera controls",
+            "status": "PASS",
+            "evidence": {
+              "native": "./cg/retained04/builder/canon-workshop.png"
+            }
+          },
+          {
+            "name": "CG WebGL context loss leaves usable native fallback",
+            "status": "PASS",
+            "evidence": {
+              "status": "3D graphics context was lost. The exact native render remains available; retry to reload 3D."
+            }
+          },
+          {
+            "name": "CG HTTP model failure restores native and retry",
+            "status": "PASS",
+            "evidence": {
+              "status": "3D is unavailable: Model request failed (404). The exact native render and source comparisons remain available. Use Retry to try again."
+            }
+          },
+          {
+            "name": "CG no-WebGL path remains usable",
+            "status": "PASS",
+            "evidence": {
+              "status": "3D is unavailable: THREE.WebGLRenderer: Error creating WebGL context.. The exact native render and source comparisons remain available. Use Retry to try again."
+            }
+          },
+          {
+            "name": "CG JavaScript-disabled access exposes four delivered native/reference links",
+            "status": "PASS",
+            "evidence": {
+              "links": 4
+            }
+          },
+          {
+            "name": "V37 WebGL initial route and era control remain usable",
+            "status": "PASS",
+            "evidence": {
+              "renderLabel": "3D / MECHANICAL EXHIBIT"
+            }
+          },
+          {
+            "name": "V37 illustrated fallback resolves all three unchanged era previews",
+            "status": "PASS",
+            "evidence": {
+              "renderLabel": "ILLUSTRATED / FIXED VIEW"
+            }
+          }
+        ],
+        "errors": [],
+        "screenshots": [
+          "/tmp/cg-production-qc-browser01/mobile320.png"
+        ],
+        "limitations": [
+          "Software WebGL only; physical-device touch, hardware GPU performance, Safari and screen-reader testing not run.",
+          "Owner artistic acceptance and likeness remain pending."
+        ],
+        "browser": "154.0.8037.95",
+        "status": "PASS",
+        "completedAt": "2026-10-04T23:14:08.363Z"
+      }
+    },
+    {
+      "name": "Final narrow-screen layout and download labels",
+      "status": "PASS",
+      "reviewer_execution": "independent final-build spot check plus screenshot inspection",
+      "evidence": {
+        "status": "PASS",
+        "labels": {
+          "maker": "Load interactive 3D \u00b7 64 MB",
+          "mechanic": "Load interactive 3D \u00b7 77 MB",
+          "builder": "Load interactive 3D \u00b7 75 MB"
+        },
+        "layout": {
+          "width": 320,
+          "scroll": 320,
+          "tagTop": 552.75,
+          "imageBottom": 552.75
+        },
+        "logs": [],
+        "screenshot": "/tmp/cg-production-qc-browser01/mobile320-final-native.png"
+      }
+    },
+    {
+      "name": "All three eras, two light states, detail and turntable images, served model/reference bytes",
+      "status": "PASS",
+      "reviewer_execution": "worker executed; reviewer inspected saved receipt, not represented as independent rerun",
+      "evidence": {
+        "receipt": ".local/publication/cg-browser/receipt.json",
+        "receipt_sha256": "e63ca56d22d0209ecf28ce979a7edc640bf11a11eeec0720728b0729694eca59",
+        "status": "PASS",
+        "checks": [
+          "Homepage link opens meaningful CG assessment with native image and no automatic GLB download",
+          "No framework error overlay",
+          "Original references and all default comparison/progress images visibly load on scroll",
+          "builder: both native light rigs, requested GLB, orbit, zoom, reset, exhibit lighting and return to native",
+          "maker: both native light rigs, requested GLB, orbit, zoom, reset, exhibit lighting and return to native",
+          "mechanic: both native light rigs, requested GLB, orbit, zoom, reset, exhibit lighting and return to native",
+          "Five exact native detail/hero views load",
+          "Eight native turntable angles load",
+          "390px mobile controls and comparisons have no horizontal clipping",
+          "Mobile requested 3D, zoom, reset and responsive framing",
+          "HTTP model failure leaves readable exact native fallback and Retry",
+          "WebGL-unavailable path retains exact native fallback and controls",
+          "Served static models and pinned originals match byte counts and SHA-256 allowlist",
+          "No unexpected app errors in the console"
+        ],
+        "errors": [],
+        "console_messages": [
+          {
+            "level": "warning",
+            "text": "[.WebGL-0x12c000cd200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+          },
+          {
+            "level": "warning",
+            "text": "[.WebGL-0x12c000cd200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+          },
+          {
+            "level": "warning",
+            "text": "[.WebGL-0x12c000cd200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+          },
+          {
+            "level": "warning",
+            "text": "[.WebGL-0x12c000cd200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Repository scope hygiene",
+      "status": "PASS",
+      "reviewer_execution": "independent git diff --check and git check-ignore",
+      "evidence": {
+        "private_local_receipts_ignored": true,
+        "generated_public_cg_ignored": true,
+        "dependencies_changed": false,
+        "scene_implementation_preserved": [
+          "src/scene/presence-exhibit.js",
+          "src/scene/fallback.js"
+        ],
+        "reviewer_changed_files": [
+          "assets/audit/cg-production-delivery01/technical-release-qc01.json"
+        ]
+      }
+    },
+    {
+      "name": "Local LFS hydration and static containers",
+      "status": "PASS",
+      "reviewer_execution": "independent byte/signature checks",
+      "evidence": {
+        "selected_glbs": [
+          {
+            "era": "maker",
+            "bytes": 63979404,
+            "sha256": "cbfeffc9bf47fb5b2fc3717288bc42f22ece85567052a39f41e02d86ebad497a",
+            "skins": 0,
+            "animations": 0,
+            "external_uris": 0,
+            "nodes": 25,
+            "meshes": 25,
+            "materials": 25
+          },
+          {
+            "era": "mechanic",
+            "bytes": 76271784,
+            "sha256": "19d02b9db3415f2c979c90b5c9e541ecb53e870856a0ba94c436a5bdfc2a819a",
+            "skins": 0,
+            "animations": 0,
+            "external_uris": 0,
+            "nodes": 25,
+            "meshes": 25,
+            "materials": 25
+          },
+          {
+            "era": "builder",
+            "bytes": 74983972,
+            "sha256": "a9787f79605a3712562c4f8d113d3acf1d9f8534b5069fa0844ac6bcedbbf402",
+            "skins": 0,
+            "animations": 0,
+            "external_uris": 0,
+            "nodes": 25,
+            "meshes": 25,
+            "materials": 25
+          }
+        ],
+        "all_import_hashes": "364 exact files",
+        "modeling_remote_ref": "e305989bff863aab827a0bdc4ee3395de32e0d61 refs/heads/codex/cg-superintendent-20261004, observed via git ls-remote"
+      }
+    },
+    {
+      "name": "Native/GLB strict normal parity",
+      "status": "WARN",
+      "reviewer_execution": "preserved source report read; native parity checker not rerun",
+      "evidence": {
+        "source": "assets/audit/cg-recursive-three-loop01/loop03/export-proof01/summary.json",
+        "original_result": "FAIL",
+        "unchanged_normalized_vector_L2_limit": 2e-05,
+        "maximum_vector_L2": 0.008557185882560697,
+        "maximum_degrees": 0.49029213149792866,
+        "cause": "unknown",
+        "scope": "Byte-identical publication does not establish full native/GLB shader, normal or pixel equivalence."
+      }
+    },
+    {
+      "name": "Software browser warning",
+      "status": "WARN",
+      "evidence": "Worker final receipt contains four SwiftShader GPU stall due to ReadPixels warnings and no app errors. No hardware performance claim."
+    },
+    {
+      "name": "Clean remote LFS retrieval, exact-head CI and Pages/live delivery",
+      "status": "NOT RUN",
+      "scope": "Local-only technical QA; integrator must verify clean GitHub Actions hydration and exact candidate SHA, deployment run and public bytes."
+    },
+    {
+      "name": "Physical mobile/touch pinch, Safari, hardware GPU, screen reader and complete legacy acting",
+      "status": "NOT RUN",
+      "scope": "320px/390px emulation, synthetic browser touch taps and brief V37 route/fallback checks do not establish physical-device acceptance or full acting regression coverage."
+    },
+    {
+      "name": "Native Blender editing/reopen and fresh complete export parity replay",
+      "status": "NOT RUN",
+      "scope": "Native files and proof sources were preserved and hashed; this reviewer did not reopen Blender, regenerate models or rerun the native checkers."
+    },
+    {
+      "name": "G1 source likeness and owner artistic acceptance",
+      "status": "NOT RUN",
+      "evidence": {
+        "source_goal": "UNMET",
+        "owner_artistic_acceptance": "PENDING"
+      },
+      "scope": "This technical release QA cannot pass G1 or complete the CG track; no artistic acceptance is asserted."
+    }
+  ],
+  "implementation_blockers": [],
+  "technical_judgment": "No local implementation blocker observed for this scoped static assessment delivery. Normal parity FAIL remains explicit and device/artistic gates remain open. Local QA does not verify production publication.",
+  "next_action": "Integrator commits the reviewed candidate, verifies clean exact-head CI/LFS hydration, records successful exact-SHA Pages deployment and served bytes, then verifies authorized Replit/Notion handoffs before the separately scoped formal review."
+}

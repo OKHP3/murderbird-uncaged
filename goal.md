@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T23:12:19.114339+00:00"
+last_updated: "2026-10-04T23:07:13.244534+00:00"
 timezone: "America/Chicago"
-status: "milestone-2b-budget-limited"
+status: "retained-cg-production-assessment-delivery"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -16,6 +16,16 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## October 4 owner authorization — retained CG production delivery
+
+The owner directed this architect thread to commit the retained improvements to GitHub production, synchronize the Replit development preview and Notion continuation record, then conduct five successive Equilibrium Review passes against the prior session handoff and evaluation PRD to identify unfinished work and the next goals. This explicit release direction supersedes earlier checkpoint-specific no-publication and no-runtime-promotion limits for this delivery. It does not establish full likeness or owner artistic acceptance, authorize paid Replit mode, or authorize new engineering work.
+
+Three recursive development loops are complete on the preserved modeling branch `codex/cg-superintendent-20261004` at `e305989bff863aab827a0bdc4ee3395de32e0d61`. The retained result combines shorter breast courses, local underlaps, articulated toe detail, and a restrained crown material adjustment across Maker, Mechanic and Advanced. The source goal remains **UNMET** and owner artistic acceptance remains **PENDING**. The largest next visual gap is the connected head construction: swept crown contour and layering, recessed optic and brow, cheek opening, and hooked bill relationship. Breast character, broader shorter claws, regional hardware and distinct era finishes also remain incomplete.
+
+Import exact retained native sources, exports and supporting evidence without altering historical binaries. The release presents the static retained CG candidate through a dedicated assessment viewer; the existing V37 interactive exhibit retains its movement, inspection, sound and illustrated fallback. The retained GLBs have no skins or animations, so their publication cannot establish animated integration. Preserve the three original era identities, pinned reference scopes and all rights reserved status.
+
+The integration record is [CG production release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md). The original completed-run assessment and limits remain in [architect assessment](assets/audit/cg-recursive-three-loop01/architect-assessment-final.md) and [Loop03 handoff](assets/audit/cg-recursive-three-loop01/loop03/handoff.json). Actual GitHub merge, Pages deployment, live asset delivery, Replit checkout and Notion receipt must each be verified separately. Earlier status snapshots below are preserved history.
 
 ## Operative mandate
 

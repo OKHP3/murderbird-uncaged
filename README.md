@@ -6,11 +6,13 @@
 
 ![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)
 
-**[Enter the exhibit](https://okhp3.github.io/murderbird-uncaged/)** · **[Read the origin story](https://overkillhill.com/writings/murderbird/)**
+**[Assess the latest CG character](https://okhp3.github.io/murderbird-uncaged/cg.html)** · **[Enter the interactive exhibit](https://okhp3.github.io/murderbird-uncaged/)** · **[Read the origin story](https://overkillhill.com/writings/murderbird/)**
 
 Meet a flightless mechanical creature whose construction changes across centuries. Orbit its enclosure, operate the Maker's external controls, engage the Mechanic's limited walking routine, and encounter the Advanced bird's attention, strikes, jump, and shield thrust. Open its assemblies to explore the machinery beneath the armor.
 
-**Version 37 is the current production package.** It presents the latest assembled mechanical bird with three era-specific movement systems, reversible inspection, and matching fixed-view fallbacks. The banner is reference artwork, not a screenshot. Further likeness refinement remains possible; publication is not a claim of validated engineering.
+**The retained Loop03 CG character is published for assessment across all three eras.** Its dedicated viewer presents static browser models, exact native renders, original scoped references and checkpoint09-to-current comparisons. It retains shorter breast courses, local underlaps, articulated toe detail and a restrained crown finish change. Full source likeness remains unmet and owner artistic acceptance remains pending. [Release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md) · [Selected publication assets](assets/review/cg-publication.json).
+
+**Version 37 remains the interactive movement exhibit.** It supplies three era-specific movement systems, reversible inspection, sound and matching illustrated fallbacks. The new CG exports have no skins or animations and are presented separately. The banner is reference artwork, not a screenshot. Publication does not establish artistic acceptance or validated engineering.
 
 ## Three eras, three ways to move
 
