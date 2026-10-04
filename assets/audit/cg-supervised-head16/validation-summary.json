@@ -1,0 +1,54 @@
+{
+  "status": "FAILED_VISUAL_TRIAL_RETAINED_WITH_PRESERVATION_PASS",
+  "checks": {
+    "python_parser": "PASS",
+    "exact_two_matched_actual_renders": "PASS",
+    "error_atomicity_api": "PASS",
+    "only_two_slot0_routes": "PASS",
+    "all56_material_graphs_unchanged": "PASS",
+    "file_images_unchanged": "PASS",
+    "all88_frozen_source_hashes_unchanged": "PASS",
+    "restoration": "PASS",
+    "contact_sheet_actual_image_readout": "PASS",
+    "whole_character_visible_gain": "FAIL_TO_SHOW_GAIN",
+    "era_wide_browser_parity": "NOT RUN",
+    "app_build_webgl_fallback": "NOT RUN: isolated audit/module; no app/reference change",
+    "remote_sync_ci_deployment": "NOT RUN",
+    "source_owner_artistic_acceptance": "NOT CLAIMED"
+  },
+  "render_budget": 2,
+  "render_used": 2,
+  "new_native_or_export_assets": 0,
+  "api_checks": {
+    "unknown-era": {
+      "status": "PASS",
+      "error": "Unknown existing material era: unknown"
+    },
+    "mismatched-existing-era": {
+      "status": "PASS",
+      "error": "Invalid same-era material routing: CGH15 localized orbital brow and root return near / head-armor"
+    },
+    "missing-far-atomic-no-near-mutation": {
+      "status": "PASS",
+      "error": "Missing or invalid new head15 object: CGH15 localized orbital brow and root return far"
+    },
+    "invalid-object-marker": {
+      "status": "PASS",
+      "error": "Missing or invalid new head15 object: CGH15 localized orbital brow and root return far"
+    },
+    "second-apply-rejected": {
+      "status": "PASS",
+      "error": "Invalid same-era material routing: CGH15 localized orbital brow and root return near / head-armor"
+    },
+    "restored-slot-bindings": {
+      "status": "PASS"
+    }
+  },
+  "checked_utc": "2026-10-04T10:04:41.097511+00:00",
+  "warnings": [
+    "00:16.106  bpy.rna          | WARNING current value '-1' matches no enum in 'ColorManagedInputColorspaceSettings', '(null)', 'name'",
+    "00:25.913  bpy.rna          | WARNING current value '-1' matches no enum in 'ColorManagedInputColorspaceSettings', '(null)', 'name'",
+    "00:40.145  bpy.rna          | WARNING current value '-1' matches no enum in 'ColorManagedInputColorspaceSettings', '(null)', 'name'"
+  ],
+  "next_action": "Root review; do not integrate failed material route. Separate head15 retention/full09 QC remains root-owned."
+}
