@@ -27,7 +27,7 @@ def apply(scene,root_path=None,era='builder'):
  if not old:raise RuntimeError('Frozen attempt01 shoulder geometry required')
  armor=next(o.data.materials[0] for o in old if o.get('surfaceRole')=='armor')
  def mat(role):return next((o.data.materials[0] for o in scene.objects if o.type=='MESH' and o.data.materials and o.get('surfaceRole')==role),armor)
- mats={'wing-armor':armor,'black-iron':mat('inner'),'worn-bronze':mat('rivet'),'steel':mat('shaft')}
+ mats={'wing-armor':armor,'black-iron':mat('inner'),'worn-bronze':mat('rivet'),'machined-steel':mat('shaft')}
  coll=bpy.data.collections.new('CG shield03 hard sheets and lateral mechanism');scene.collection.children.link(coll)
  made=[];hidden=[]
  for o in old:
@@ -116,7 +116,7 @@ def apply(scene,root_path=None,era='builder'):
   # anterior shield edge; below/front of wing but outside central breast work.
   root=Vector((side*.275,-.200,1.247))
   ring(f'CG shield03 {side} root recessed race',side,root,.072,.019,.010,'black-iron')
-  ring(f'CG shield03 {side} root metal lip',side,root+Vector((side*.011,0,0)),.067,.005,.006,'steel')
+  ring(f'CG shield03 {side} root metal lip',side,root+Vector((side*.011,0,0)),.067,.005,.006,'machined-steel')
   for j in range(8):
    a=j*math.pi/4+.05
    ring(f'CG shield03 {side} radial saddle {j}',side,root+Vector((side*.005,0,0)),.093,.021,.009,'worn-bronze',a,a+.55)
@@ -127,19 +127,19 @@ def apply(scene,root_path=None,era='builder'):
    a=root+Vector((side*.017,-.015+j*.038,-.068+j*.004))
    b=hip+Vector((side*.004,-.045+j*.032,.035))
    axis=b-a
-   cyl(f'CG shield03 {side} flank barrel {j}',a,a+axis*.57,.014,'steel')
-   cyl(f'CG shield03 {side} flank piston {j}',a+axis*.44,b,.007,'steel')
+   cyl(f'CG shield03 {side} flank barrel {j}',a,a+axis*.57,.014,'machined-steel')
+   cyl(f'CG shield03 {side} flank piston {j}',a+axis*.44,b,.007,'machined-steel')
    for k,t in enumerate((.08,.48,.58)):
     c=a+axis*t;half=axis.normalized()*.006
-    cyl(f'CG shield03 {side} ram collar {j}-{k}',c-half,c+half,.017,'worn-bronze' if k==1 else 'steel')
+    cyl(f'CG shield03 {side} ram collar {j}-{k}',c-half,c+half,.017,'worn-bronze' if k==1 else 'machined-steel')
    for k,c in enumerate((a,b)):
-    ring(f'CG shield03 {side} ram eye {j}-{k}',side,c,.022,.007,.013,'steel')
+    ring(f'CG shield03 {side} ram eye {j}-{k}',side,c,.022,.007,.013,'machined-steel')
     cyl(f'CG shield03 {side} ram pin {j}-{k}',c-Vector((side*.010,0,0)),c+Vector((side*.021,0,0)),.008,'worn-bronze')
    cable=[]
    for k in range(17):
     t=k/16;p=a.lerp(b,t)+Vector((-side*.014,.020*math.sin(math.pi*t),0));cable.append(tuple(p))
    tube(f'CG shield03 {side} inset connected return hose {j}',cable,.005,'black-iron')
-  cyl(f'CG shield03 {side} hip tied cross collar',hip-Vector((0,.034,0)),hip+Vector((0,.044,0)),.010,'steel')
+  cyl(f'CG shield03 {side} hip tied cross collar',hip-Vector((0,.034,0)),hip+Vector((0,.044,0)),.010,'machined-steel')
  return {'module':'cg-supervised-shield03','era':era,'newMeshes':len(made),'retainedHidden':hidden,'sheetThickness':.0022,'distalLift':.010,'sourceScope':'Pinned reissued full-bird only; July body excluded','changes':['Thin hard feather sheets with raised free ends and separate dark undersides','Staggered small coverts to medium diagonal lower leaves','Segmented radial root saddle and paired shoulder-to-hip cylinders and cables'],'limits':['Added hardware is visual CG inference only','Original compact backing retained','No front neck, breast, central mechanism, leg or anchor changes','Owner likeness acceptance pending']}
 
 def digest(o):
