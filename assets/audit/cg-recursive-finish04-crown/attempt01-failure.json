@@ -1,0 +1,39 @@
+{
+  "status": "FAILED_CHART_FEASIBILITY_PAUSED",
+  "at_utc": "2026-10-04T19:59:54.879727+00:00",
+  "design": "design01",
+  "module_sha256": "17f5cabf63e8ba9bba8f56359955458d6d173734708675b8324621a52c3f8f5a",
+  "failure": "Actual Builder application rejected ambiguous held y/z UV chart before writing maps/native/render",
+  "actual_diagnostic": {
+    "non_mirror_equivalent_position_overlap_texels": 46820,
+    "projected_tangent_conflicting_overlap_texels": 97658,
+    "total_overlap_and_degenerate_counts": "Not emitted before strict failure; unknown. Do not infer from exception counts."
+  },
+  "original_native_hash_checks": {
+    "builder": {
+      "path": "assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/murderbird-recursive-builder.blend",
+      "expected_sha256": "86fee36a8df80f8bcaa3bba7e1c0ecc1dfc56fde178a708323949c2d23ba6288",
+      "actual_sha256": "86fee36a8df80f8bcaa3bba7e1c0ecc1dfc56fde178a708323949c2d23ba6288"
+    },
+    "maker": {
+      "path": "assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/maker/murderbird-recursive-maker.blend",
+      "expected_sha256": "77dc572493455d1b5dea33447ccf1d3461bee07c94f65af2e3d523b9f687b774",
+      "actual_sha256": "77dc572493455d1b5dea33447ccf1d3461bee07c94f65af2e3d523b9f687b774"
+    },
+    "mechanic": {
+      "path": "assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/mechanic/murderbird-recursive-mechanic.blend",
+      "expected_sha256": "8e6718a54f0abd3a51606b3fe472ae53ba8efa352a486f145315eee6d7e8d547",
+      "actual_sha256": "8e6718a54f0abd3a51606b3fe472ae53ba8efa352a486f145315eee6d7e8d547"
+    }
+  },
+  "outputs_created": {
+    "new_map_files": 0,
+    "candidate_natives": 0,
+    "candidate_renders": 0,
+    "GLB": 0
+  },
+  "mutation_custody": "Runner opened Builder and created transient successor/graph in memory before chart rejection; no save occurred. All three receiving files remain byte-identical. No saved custody/gain claim. Original arrays/graphs/images were not targeted by module writes.",
+  "remaining_gate": "No all-three neutral/workshop gain evidence exists; no source-like worked-metal claim",
+  "pause": "No rerun or design02 without explicit root gate",
+  "scope_limit": "Changing original UVs or geometry is prohibited. Current triangle-local appearance strategy cannot faithfully deliver requested variation under ambiguity checks."
+}

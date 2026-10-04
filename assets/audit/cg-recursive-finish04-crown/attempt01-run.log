@@ -1,0 +1,22 @@
+00:05.068  blend            | Read blend: "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/murderbird-recursive-builder.blend"
+Traceback (most recent call last):
+  File "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/cg-recursive-delivery02.py", line 468, in <module>
+    main()
+    ~~~~^^
+  File "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/cg-recursive-delivery02.py", line 463, in main
+    run(args)
+    ~~~^^^^^^
+  File "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/cg-recursive-delivery02.py", line 412, in run
+    report['module_results'][str(path)] = module.apply(scene, resolve(root, item.get('root_path', str(root))), era)
+                                          ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/cg-supervised-finish04/murderbird-uncaged/scripts/cg-recursive-finish04-crown.py", line 239, in apply
+    maps, chart_receipt = _maps(successor.data, era)
+                          ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/okh/.codex/worktrees/cg-supervised-finish04/murderbird-uncaged/scripts/cg-recursive-finish04-crown.py", line 131, in _maps
+    p, t, b, covered, distance, receipt = _atlas(mesh)
+                                          ~~~~~~^^^^^^
+  File "/Users/okh/.codex/worktrees/cg-supervised-finish04/murderbird-uncaged/scripts/cg-recursive-finish04-crown.py", line 107, in _atlas
+    raise RuntimeError('Ambiguous non-mirror chart/tangent mapping: ' + str({'position': conflicts, 'tangent': tangent_conflicts}))
+RuntimeError: Ambiguous non-mirror chart/tangent mapping: {'position': 46820, 'tangent': 97658}
+CG_RECURSIVE_DELIVERY02_FAILED
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
