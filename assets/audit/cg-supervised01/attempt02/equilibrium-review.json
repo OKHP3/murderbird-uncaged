@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "five-way",
+  "evaluation_status": "executed-initial-three-way-and-negotiator",
+  "artifact": {
+    "path": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+    "sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+    "version": "supervised-cycle02-attempt02"
+  },
+  "decision_question": "Which cycle02 changes should be retained for source likeness?",
+  "acceptance_criteria": [
+    "Visible full-character source-specific identity and connected construction",
+    "Source and native preservation with attributable views",
+    "Honest portability and release boundaries"
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Fresh reviewer contexts but shared local source packet and related OpenAI model family",
+      "Pinned development references; no protected holdout",
+      "Owner artistic acceptance is independent"
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "outcome",
+      "decision": "revise-and-retest",
+      "protocol_decision": "reject",
+      "artifact": {
+        "manifest": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+        "sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+        "files_checked": 23,
+        "mismatches": 0
+      },
+      "goal": {
+        "main_commit": "251f2f0243181e97140179c2aff6eb057e165438",
+        "working_last_updated": "2026-10-04T04:26:19.270994+00:00",
+        "working_sha256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+        "authority": "Read both goals; working eight-hour/200000000-token authority supersedes historical budget stop. Budget is a ceiling."
+      },
+      "evidence_paths": {
+        "canon": "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+        "july": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+        "A": "assets/audit/cg-supervised01/attempt01/builder/",
+        "B": "assets/audit/cg-supervised01/attempt02/builder/",
+        "C": "assets/audit/cg-supervised01/surface02/builder/",
+        "F": "assets/audit/cg-supervised-finish02/attempt02/"
+      },
+      "criteria": "Recognizable source-specific complete mechanical bird; coherent face/jaw, throat, crown and compact folded shield; attributable finish gain. July controls head only.",
+      "findings": [
+        {
+          "region": "face/mandible",
+          "decision": "reject complete assembly; retain jaw-direction improvement",
+          "evidence": [
+            "A/head-neck.png",
+            "B/head-neck.png",
+            "july/head"
+          ],
+          "judgment": "The curved descending mandible replaces the earlier horizontal tongue and gives a clearer avian opening. However, the oversized U-shaped cheek strap crosses around the optic as an isolated bracket; the smooth narrow bill and floating-looking jaw lack the source\u2019s deep plated bill-root, nested orbital seat and connected cheek mechanisms. The optic is readable but its large black cushion rim remains unlike the source."
+        },
+        {
+          "region": "throat",
+          "decision": "reject",
+          "evidence": [
+            "B/head-neck.png",
+            "B/side-profile.png",
+            "C/canon-neutral.png",
+            "canon/neck"
+          ],
+          "judgment": "Regression: a long inflated-looking ribbed bib projects over the breast and terminates abruptly. Source throat plates follow the curved neck, overlap individually and frame machinery. Added bulk is visible at full-bird scale and breaks that transition."
+        },
+        {
+          "region": "crown",
+          "decision": "reject likeness; preserve existing study",
+          "evidence": [
+            "A/head-neck.png",
+            "B/head-neck.png",
+            "july/crown"
+          ],
+          "judgment": "No convincing new crown gain: broad nearly horizontal strips form a smooth helmet. Source has narrower swept feather plates, varied exposed ends and interleaved circular mechanisms behind the optic."
+        },
+        {
+          "region": "shield construction",
+          "decision": "reject final construction; retain smoother cap only provisionally",
+          "evidence": [
+            "A/side-profile.png",
+            "B/side-profile.png",
+            "C/canon-workshop.png",
+            "canon/shoulder"
+          ],
+          "judgment": "The cap becomes less jagged, an improvement, but loses readable plate separations and resembles a rounded embossed shell. Source compact shield has distinct feather laps, layered borders and a shoulder-root assembly connected to the torso. Candidate exposed flank remains sparse lattice rather than source cylindrical machinery."
+        },
+        {
+          "region": "finish",
+          "decision": "accept with limits",
+          "evidence": [
+            "F/before-neutral.png",
+            "F/candidate-neutral.png",
+            "C/canon-neutral.png",
+            "C/canon-workshop.png"
+          ],
+          "judgment": "Isolated neutral pair supports reduced pale sheen and useful bronze hardware separation. Combined image is more readable, but lighting also changed. Broad grey mottling and black regions remain flatter and less regionally articulated than canon; no three-era finish acceptance follows."
+        },
+        {
+          "region": "overall",
+          "decision": "reject whole-target completion",
+          "evidence": [
+            "B/canon-neutral.png",
+            "C/canon-neutral.png",
+            "canon/full-bird"
+          ],
+          "judgment": "Visible local gain exists, yet the complete bird retains a helmet head, projecting bib, bulbous shield, narrow body reading and small delicate feet relative to canon\u2019s heavy coherent character. Construction identity remains the dominant gap."
+        }
+      ],
+      "largest_next_gaps": [
+        "Rebuild coherent head landmarks: deep plated bill/root, nested optic, curved jaw/cheek connection and swept crown as one source-specific assembly.",
+        "Replace projecting bib with overlapping neck plates integrated into the breast curve and visible connected mechanisms.",
+        "Restore compact feather shield layering and whole-body mass reading, with a credible shoulder-to-flank connection; judge silhouette before scratches."
+      ],
+      "limits": "Reference camera registration is estimated. Head close-ups crop bill tip; side views crop head and feet. Canon views show complete bird but do not resolve every connection. Unseen construction is inferred; owner artistic acceptance is unknown.",
+      "experiments": {
+        "live": "Read-only SHA256 freeze verification: all 23 pass. Actual image pixels inspected with view_image.",
+        "analytical": "Source/before/candidate visual judgments; isolated finish attribution uses neutral pair.",
+        "not_run": "Native reopening, fresh renders, browser/WebGL parity, motion, three-era tests, fabrication fit and owner review."
+      },
+      "independence": "Fresh outcome role; no worker conclusions or other QA read. Shared parent/source/model context limits independence. Attempt01 side-profile inspected as supplemental, outside 23-file freeze. No repo edits.",
+      "followup": "Retest corrected source-specific construction in uncropped matched full-bird/head/profile views. Preservation or build success cannot establish likeness."
+    },
+    {
+      "review_id": "cg-qa02-evidence",
+      "role": "independent evidence reviewer",
+      "review_mode": "read-only; local analytical inspection and direct file-hash verification",
+      "artifact": {
+        "name": "supervised-cycle02-attempt02",
+        "frozen_manifest": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+        "frozen_manifest_sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+        "manifest_file_count": 23,
+        "manifest_files_verified": 23,
+        "mismatches": [],
+        "working_tree": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged",
+        "canonical_goal_commit": "251f2f0243181e97140179c2aff6eb057e165438",
+        "receipt_goal_pins_match": true
+      },
+      "question": "Do the frozen source-alignment and separate surface-study receipts support their bounded claims without implying likeness acceptance, three-era/browser delivery, or release?",
+      "acceptance_criteria": [
+        "Frozen manifest and reference/source pins verify against local bytes.",
+        "Before/candidate camera and render comparability is stated at the level actually recorded.",
+        "Geometry/stance/UV preservation assertions distinguish receipt/script checks from independent verification.",
+        "Optic, texture, native, browser, three-era, and release claims remain within evidence.",
+        "No automated result substitutes for owner artistic acceptance."
+      ],
+      "source_limitations": [
+        "Only the evidence role was performed; no outcome, safety-portability, disruptor, or negotiator review is represented here.",
+        "Current checkout artifacts and recorded receipts were inspected; no Blender rerender, browser/WebGL run, build, or owner review was performed.",
+        "No other QA conclusions were read."
+      ],
+      "claims": [
+        {
+          "claim_id": "EV-01",
+          "claim": "The attempt02 frozen package is byte-consistent with its 23-entry manifest and is tied to the pinned source and shared-goal revision.",
+          "status": "supported",
+          "evidence": [
+            "All 23 paths in attempt02/frozen-artifact.json exist and match SHA-256.",
+            "Manifest SHA-256 is e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d.",
+            "attempt01, attempt02, and surface02 receipts pin source assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend to 9ba7fc471a86e5f1f9b8db881900725f8abf56546c69fecb125a236ec5b4a64c; direct local hash matches.",
+            "All three receipts name goal commit 251f2f0243181e97140179c2aff6eb057e165438."
+          ],
+          "confidence": "high"
+        },
+        {
+          "claim_id": "EV-02",
+          "claim": "Attempt01 and attempt02 use the same saved canon camera transforms, orthographic projection/scale, shift, resolution, and lens; full render-condition comparability is not established by both receipts.",
+          "status": "partially_supported",
+          "evidence": [
+            "Saved camera fields match across both receipts for the named views.",
+            "Attempt01 receipt does not record global engine, samples, denoising, view transform/look, exposure/gamma, world, or area-light parameters; attempt02 does record them.",
+            "The neutral candidate images visibly differ in forms while retaining matching framing; pixels do not prove equal light, exposure, sampling, or tone mapping."
+          ],
+          "confidence": "medium"
+        },
+        {
+          "claim_id": "EV-03",
+          "claim": "Stance and material-preservation claims are recorded checks, not independent geometry verification by this reviewer.",
+          "status": "partially_supported",
+          "evidence": [
+            "Attempt01/02 receipts report stance_preservation mesh_count 886 and changed [], and module flags bodyAndStanceChanged false.",
+            "The separate surface02 receipt reports preservation PASS over 2246 visible meshes, no missing UVs, and unchanged material slot counts.",
+            "The inspected scripts implement before/after mesh digests for coordinates, polygon vertices/material indices, UVs, transforms, parent, slot count and visibility; this explains the receipt method but is author-side evidence, not an independent rerun against the native file."
+          ],
+          "confidence": "medium"
+        },
+        {
+          "claim_id": "EV-04",
+          "claim": "The surface02 receipt texture hashes match files at their exact declared output paths.",
+          "status": "supported by exact-path retest; initial broad-search conflict retracted",
+          "evidence": [
+            "Corrected retest resolves each receipt basename within the receipt output tree rather than selecting the first same-named file anywhere under assets/ or public/.",
+            "All 49 regional_surface textureHashes match byte-for-byte at assets/models/cg-supervised01/surface02/textures/{basename}.",
+            "All 14 source_regional_finish02 texture_hashes match byte-for-byte at assets/models/cg-supervised01/surface02/textures/builder/{basename}.",
+            "The initial 49/49 mismatch report came from broad recursive basename resolution across historical outputs; those matches were not the receipt-declared output files and do not establish a receipt conflict."
+          ],
+          "confidence": "high"
+        },
+        {
+          "claim_id": "EV-05",
+          "claim": "Optic evidence maps Builder to Advanced in repository era naming, but the receipt does not establish browser parity or a complete three-era final delivery.",
+          "status": "partially_supported",
+          "evidence": [
+            "Repository src/scene/fallback.js defines eraNames with builder mapped to Advanced (line 15); the orange Builder optic is consistent with the Advanced awakened-optic rule.",
+            "surface02 receipt records retained optical/glass slots and existing awakened optics; the saved render visibly shows an orange optic.",
+            "The receipt and attempt02 frozen manifest explicitly disclaim browser parity and three-era delivery; no WebGL/export test was run."
+          ],
+          "confidence": "high"
+        },
+        {
+          "claim_id": "EV-06",
+          "claim": "The frozen study proves final likeness, owner acceptance, three-era delivery, browser parity, or release readiness.",
+          "status": "unsupported_and_explicitly_not_claimed",
+          "evidence": [
+            "Frozen manifest explicitly lists final likeness, three-era delivery, browser parity, and release under not_claimed.",
+            "Receipts say artistic acceptance not claimed / pending; no owner review was performed."
+          ],
+          "confidence": "high"
+        }
+      ],
+      "experiments": {
+        "live": [
+          "SHA-256 verification of all 23 frozen-manifest entries.",
+          "SHA-256 verification of the pinned 2b source blend.",
+          "SHA-256 checks of all 49 surface02 receipt texture names against current files.",
+          "Exact-path retest of all 49 surface02 regional texture hashes and all 14 Builder finish texture hashes; all 63 match."
+        ],
+        "analytical": [
+          "Compared saved camera/render fields in attempt01, attempt02, and surface02 receipts.",
+          "Inspected relevant receipt generation and preservation-digest code to distinguish saved results from method claims.",
+          "Visually inspected attempt01 and attempt02 neutral candidate renders; this is not owner artistic acceptance."
+        ],
+        "not_run": [
+          "Blender regeneration or independent native-geometry/stance digest rerun.",
+          "Fresh texture receipt regeneration/currentness reconciliation.",
+          "Three-era optic mapping audit across final production natives.",
+          "Browser/WebGL parity, application build, release, deployment, and owner acceptance."
+        ]
+      },
+      "material_evidence_gaps": [
+        {
+          "gap": "Attempt01 lacks saved global render and lighting parameters, so equal camera framing is supported but equal effective lighting/exposure/sampling/view transform is not fully evidenced.",
+          "smallest_decisive_test": "Record the complete attempt01 scene/render/light state from its preserved native or rerender both candidates with a shared frozen setup."
+        },
+        {
+          "gap": "Attempt01 lacks saved global render/light parameters, so matching camera transforms and projection are verified but full effective render comparability is not.",
+          "smallest_decisive_test": "Recover the exact attempt01 scene/render/light settings from its preserved native or rerender both candidates under one frozen setup."
+        }
+      ],
+      "decision": "approve-with-limits",
+      "decision_rationale": "The frozen 23-file attempt02 package, source/goal pins, and exact-path texture receipts verify. The earlier texture mismatch was a false positive caused by broad basename search across historical outputs and is retracted with the failed experiment preserved below. Approve this bounded development evidence with limits: attempt01 effective render-state equivalence remains incompletely recorded; the study does not establish final likeness, owner acceptance, browser parity, complete three-era delivery, release, deployment, or engineering validity.",
+      "release_limits": [
+        "May be cited as a source-pinned development geometry and surface checkpoint; all 63 texture hashes match at the exact receipt output paths.",
+        "Camera transforms/projection match, but complete attempt01 lighting, exposure, samples, and view-transform equivalence remains unverified from saved receipts.",
+        "Do not claim final likeness, owner acceptance, full three-era completion, browser parity, release, deployment, or engineering validity."
+      ],
+      "review_expiry": "Recheck against any regenerated texture receipt, changed native assets, newly produced three-era assets, or fresh browser/build evidence.",
+      "retest": {
+        "date": "2026-10-04",
+        "trigger": "Root identified exact receipt output directories after the original reviewer used broad basename resolution.",
+        "original_test_preserved": {
+          "result": "49/49 apparent mismatches",
+          "method": "Recursive search under assets/ and public/ followed by hashing basename matches.",
+          "reassessment": "Invalid path resolution: multiple same-named textures exist across historical attempt trees. This experiment is retained for audit history but its conflict conclusion is withdrawn."
+        },
+        "exact_path_results": [
+          {
+            "receipt_field": "module_changes.regional_surface.textureHashes",
+            "directory": "assets/models/cg-supervised01/surface02/textures/",
+            "expected": 49,
+            "matched": 49,
+            "mismatches": 0,
+            "missing": 0
+          },
+          {
+            "receipt_field": "module_changes.source_regional_finish02.texture_hashes",
+            "directory": "assets/models/cg-supervised01/surface02/textures/builder/",
+            "expected": 14,
+            "matched": 14,
+            "mismatches": 0,
+            "missing": 0
+          }
+        ],
+        "era_mapping_check": {
+          "status": "supported",
+          "evidence": "src/scene/fallback.js line 15 maps builder to Advanced in eraNames.",
+          "effect": "The saved orange Builder optic aligns with the Advanced optic rule; it does not establish browser parity or three-era completion."
+        },
+        "remaining_receipt_ambiguity": "The receipt contains two hash sets for distinct exact output locations (49 regional source maps at the surface02 textures root and 14 finish maps in the builder subdirectory). Both byte-verify. This resolves file identity; no independent extraction comparison between packed native image pixels and those files was performed.",
+        "reviewer": "Independent evidence reviewer",
+        "scope": "Read-only exact-path file hashing and source naming lookup; no native extraction, Blender rerender, build, or WebGL test."
+      }
+    },
+    {
+      "review_id": "cg-qa02-safety",
+      "role": "safety_portability",
+      "artifact": {
+        "worktree": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged",
+        "head": "be2ee153e1367085b30080e9280338ba92cfaff0",
+        "frozen_manifest": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+        "manifest_sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+        "manifest_files": 23,
+        "manifest_hash_check": "all 23 files matched their manifest hashes",
+        "question": "Is the frozen cycle02 candidate safe and portable for its stated development-review scope?",
+        "criteria": [
+          "Preserve source and pinned reference bytes; keep creative rights/status accurate.",
+          "Keep audit/native/private material outside public runtime paths absent explicit approval.",
+          "Make review links resolve and ensure render-only stage geometry is excluded by the eventual exporter.",
+          "Do not claim browser portability, release, runtime replacement, fabrication, or owner artistic acceptance without direct evidence."
+        ]
+      },
+      "context": {
+        "canonical_goal": "origin/main:goal.md at 251f2f0243181e97140179c2aff6eb057e165438",
+        "working_goal": "read from the candidate worktree; includes the 8-hour / 200,000,000-token authorization",
+        "sources": [
+          "candidate worktree files",
+          "repository-boundaries.md",
+          "assets/README.md",
+          "NOTICE.md",
+          "okhp3-equilibrium-review protocol"
+        ],
+        "tools": [
+          "filesystem/hash inspection",
+          "source review",
+          "relative-link target resolution"
+        ],
+        "permission_scope": "read-only candidate review; raw report only written to /tmp",
+        "evidence_tier": "live for filesystem bytes/refs and resolved links; analytical for code-path behavior; not-run for Blender reopen/export/browser rendering",
+        "independence_limits": "single fresh-context reviewer; no worker or other QA conclusions used"
+      },
+      "claims": [
+        {
+          "claim_id": "SAFE-01",
+          "claim": "The frozen candidate and referenced source binaries are intact and traceable.",
+          "status": "supported",
+          "evidence": "All 23 manifest file SHA-256 values matched. The source builder blend, locked canon composite, and July head reference matched their recorded SHA-256 values. Candidate receipts identify the shared goal revision and mark registration as estimated and artistic acceptance as not claimed.",
+          "consequence": "Hash mismatch or source substitution would invalidate this review packet.",
+          "next_test": "Recheck manifest hashes after any revision."
+        },
+        {
+          "claim_id": "SAFE-02",
+          "claim": "The new candidate remains outside the public/runtime path and respects the creative-content boundary.",
+          "status": "supported",
+          "evidence": "New files are under assets/audit/ and assets/models/; no cycle02 paths were found in src/ or public/. NOTICE.md and asset guidance state MurderBird creative content is all rights reserved and MIT covers code only. V37/runtime and release claims are not supported by this candidate.",
+          "consequence": "Moving or wiring these assets into public delivery without separate review could expose creative material and imply a release.",
+          "next_test": "If runtime integration is later proposed, inspect the exact build output and release authorization."
+        },
+        {
+          "claim_id": "SAFE-03",
+          "claim": "The contact ground is excluded from the eventual exporter by the authoringGuide filter.",
+          "status": "supported_analytically",
+          "evidence": "cg-supervised-lighting02.stage marks the plane authoringGuide=true; build-cg-supervised02 hides guides for rendering, while cg-supervised-export excludes authoringGuide meshes in both exporter paths. The surface02 receipt reports export_excluded=true.",
+          "consequence": "A future exporter path that omits this filter could include the review floor.",
+          "next_test": "Exercise the current scene through Blender export and verify the GLB has no stage object."
+        },
+        {
+          "claim_id": "SAFE-04",
+          "claim": "The native candidate's textures are portable and the HTML review page renders correctly.",
+          "status": "missing_evidence",
+          "evidence": "Authoring code packs FILE images before saving and finish generation packs new images; the review page's relative image/link targets all resolve on disk. Blender is unavailable here, so packed-image persistence/reopen and exporter embedding were not tested. review.html appends the cycle02 section after an explicit closing html tag; browser error recovery and visibility were not tested.",
+          "consequence": "A moved/reopened native file or browser review could lose texture/render visibility despite successful source-side receipts.",
+          "next_test": "Open the frozen .blend files in Blender in a clean checkout, verify packed images, run/export GLB and inspect embedded textures plus ground exclusion; render review.html in a browser and confirm the appended section is visible."
+        }
+      ],
+      "material_findings": [
+        "Relative review-page image and link targets all resolve to existing files.",
+        "Review-page cycle02 markup follows an explicit </html> end tag; normalize markup and perform browser visibility check before relying on the page as a review interface.",
+        "No new cycle02 app/runtime wiring or browser-parity proof is present."
+      ],
+      "decision": "approve-with-limits",
+      "limits": [
+        "Approve only as a local development/review candidate and matched-render evidence packet.",
+        "Do not claim portable native textures, browser parity, three-era delivery, deployment, final likeness, engineering validation, or owner acceptance from this review.",
+        "Canonical deployed/runtime baseline remains V37; no publication/runtime replacement authorization is established."
+      ],
+      "strongest_objection": "Texture packing and eventual GLB embedding/exclusion are supported by source code and receipts but have not been exercised on reopen/export; review-page browser visibility is also unverified.",
+      "next_gaps": [
+        "Blender reopen check for packed textures, followed by GLB export inspection for embedded image data and ground exclusion.",
+        "Browser render check of review.html, including its post-</html> cycle02 section.",
+        "If runtime/browser delivery is later proposed, add explicit wiring and test the actual build output; current candidate has no cycle02 runtime wiring."
+      ]
+    }
+  ],
+  "concordance": "disagreement: outcome revise-and-retest; evidence/safety approve-with-limits for development only",
+  "disruptor": {
+    "triggered": false,
+    "authority": "none",
+    "reason": "Initial reviewers disagree; protocol routes directly to negotiator",
+    "falsification_hypotheses": [],
+    "test_results": []
+  },
+  "negotiator": {
+    "triggered": true,
+    "role": "root architect",
+    "decision": "revise-and-retest",
+    "decisive_evidence": [
+      "Actual pinned/before/candidate pixels show projecting throat and smooth helmet/shield regressions",
+      "Neutral isolated finish is darker with better hardware separation",
+      "Independent exact-path retest passes49 legacy and14 finish texture hashes; broad basename search false positive retained/retracted in raw report",
+      "All23 freeze files verify; source native unchanged"
+    ],
+    "retain": [
+      "Curved neck and compact body envelope from cycle01",
+      "Darker regional finish02 and readable workshop light as limited proposals",
+      "Foot03 volume increment pending combined QA"
+    ],
+    "reject_for_active_candidate": [
+      "face02 construction including projecting throat and isolated U-shaped cheek strap",
+      "shield02 embossed smooth cap"
+    ],
+    "unresolved_items": [
+      "Coherent source head/neck/breast/shield and connected machinery",
+      "Three-era and browser delivery",
+      "Explicit complete render conditions in new matched before/candidate",
+      "Owner likeness acceptance"
+    ]
+  },
+  "release_decision": "defer-for-evidence",
+  "limitations": [
+    "Development-only studies; no runtime promotion, deployment or owner artistic acceptance",
+    "Safety reviewer said Blender unavailable from PATH; root confirms installed absolute Blender path by live renders; reviewer native readback remains not-run",
+    "Review.html closing tag repaired after safety noted cycle02 section appended outside html"
+  ],
+  "follow_up": [
+    "Cycle03 source-specific coherent head, neck/breast, shield/flank workers, each bounded to two design attempts",
+    "Root integrate feet and explicit per-slot material routing; independent QA retest uncropped views"
+  ]
+}

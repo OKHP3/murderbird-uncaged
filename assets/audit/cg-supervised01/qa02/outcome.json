@@ -1,0 +1,104 @@
+{
+  "role": "outcome",
+  "decision": "revise-and-retest",
+  "protocol_decision": "reject",
+  "artifact": {
+    "manifest": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+    "sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+    "files_checked": 23,
+    "mismatches": 0
+  },
+  "goal": {
+    "main_commit": "251f2f0243181e97140179c2aff6eb057e165438",
+    "working_last_updated": "2026-10-04T04:26:19.270994+00:00",
+    "working_sha256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+    "authority": "Read both goals; working eight-hour/200000000-token authority supersedes historical budget stop. Budget is a ceiling."
+  },
+  "evidence_paths": {
+    "canon": "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+    "july": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+    "A": "assets/audit/cg-supervised01/attempt01/builder/",
+    "B": "assets/audit/cg-supervised01/attempt02/builder/",
+    "C": "assets/audit/cg-supervised01/surface02/builder/",
+    "F": "assets/audit/cg-supervised-finish02/attempt02/"
+  },
+  "criteria": "Recognizable source-specific complete mechanical bird; coherent face/jaw, throat, crown and compact folded shield; attributable finish gain. July controls head only.",
+  "findings": [
+    {
+      "region": "face/mandible",
+      "decision": "reject complete assembly; retain jaw-direction improvement",
+      "evidence": [
+        "A/head-neck.png",
+        "B/head-neck.png",
+        "july/head"
+      ],
+      "judgment": "The curved descending mandible replaces the earlier horizontal tongue and gives a clearer avian opening. However, the oversized U-shaped cheek strap crosses around the optic as an isolated bracket; the smooth narrow bill and floating-looking jaw lack the source\u2019s deep plated bill-root, nested orbital seat and connected cheek mechanisms. The optic is readable but its large black cushion rim remains unlike the source."
+    },
+    {
+      "region": "throat",
+      "decision": "reject",
+      "evidence": [
+        "B/head-neck.png",
+        "B/side-profile.png",
+        "C/canon-neutral.png",
+        "canon/neck"
+      ],
+      "judgment": "Regression: a long inflated-looking ribbed bib projects over the breast and terminates abruptly. Source throat plates follow the curved neck, overlap individually and frame machinery. Added bulk is visible at full-bird scale and breaks that transition."
+    },
+    {
+      "region": "crown",
+      "decision": "reject likeness; preserve existing study",
+      "evidence": [
+        "A/head-neck.png",
+        "B/head-neck.png",
+        "july/crown"
+      ],
+      "judgment": "No convincing new crown gain: broad nearly horizontal strips form a smooth helmet. Source has narrower swept feather plates, varied exposed ends and interleaved circular mechanisms behind the optic."
+    },
+    {
+      "region": "shield construction",
+      "decision": "reject final construction; retain smoother cap only provisionally",
+      "evidence": [
+        "A/side-profile.png",
+        "B/side-profile.png",
+        "C/canon-workshop.png",
+        "canon/shoulder"
+      ],
+      "judgment": "The cap becomes less jagged, an improvement, but loses readable plate separations and resembles a rounded embossed shell. Source compact shield has distinct feather laps, layered borders and a shoulder-root assembly connected to the torso. Candidate exposed flank remains sparse lattice rather than source cylindrical machinery."
+    },
+    {
+      "region": "finish",
+      "decision": "accept with limits",
+      "evidence": [
+        "F/before-neutral.png",
+        "F/candidate-neutral.png",
+        "C/canon-neutral.png",
+        "C/canon-workshop.png"
+      ],
+      "judgment": "Isolated neutral pair supports reduced pale sheen and useful bronze hardware separation. Combined image is more readable, but lighting also changed. Broad grey mottling and black regions remain flatter and less regionally articulated than canon; no three-era finish acceptance follows."
+    },
+    {
+      "region": "overall",
+      "decision": "reject whole-target completion",
+      "evidence": [
+        "B/canon-neutral.png",
+        "C/canon-neutral.png",
+        "canon/full-bird"
+      ],
+      "judgment": "Visible local gain exists, yet the complete bird retains a helmet head, projecting bib, bulbous shield, narrow body reading and small delicate feet relative to canon\u2019s heavy coherent character. Construction identity remains the dominant gap."
+    }
+  ],
+  "largest_next_gaps": [
+    "Rebuild coherent head landmarks: deep plated bill/root, nested optic, curved jaw/cheek connection and swept crown as one source-specific assembly.",
+    "Replace projecting bib with overlapping neck plates integrated into the breast curve and visible connected mechanisms.",
+    "Restore compact feather shield layering and whole-body mass reading, with a credible shoulder-to-flank connection; judge silhouette before scratches."
+  ],
+  "limits": "Reference camera registration is estimated. Head close-ups crop bill tip; side views crop head and feet. Canon views show complete bird but do not resolve every connection. Unseen construction is inferred; owner artistic acceptance is unknown.",
+  "experiments": {
+    "live": "Read-only SHA256 freeze verification: all 23 pass. Actual image pixels inspected with view_image.",
+    "analytical": "Source/before/candidate visual judgments; isolated finish attribution uses neutral pair.",
+    "not_run": "Native reopening, fresh renders, browser/WebGL parity, motion, three-era tests, fabrication fit and owner review."
+  },
+  "independence": "Fresh outcome role; no worker conclusions or other QA read. Shared parent/source/model context limits independence. Attempt01 side-profile inspected as supplemental, outside 23-file freeze. No repo edits.",
+  "followup": "Retest corrected source-specific construction in uncropped matched full-bird/head/profile views. Preservation or build success cannot establish likeness."
+}

@@ -1,0 +1,170 @@
+{
+  "review_id": "cg-qa02-evidence",
+  "role": "independent evidence reviewer",
+  "review_mode": "read-only; local analytical inspection and direct file-hash verification",
+  "artifact": {
+    "name": "supervised-cycle02-attempt02",
+    "frozen_manifest": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+    "frozen_manifest_sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+    "manifest_file_count": 23,
+    "manifest_files_verified": 23,
+    "mismatches": [],
+    "working_tree": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged",
+    "canonical_goal_commit": "251f2f0243181e97140179c2aff6eb057e165438",
+    "receipt_goal_pins_match": true
+  },
+  "question": "Do the frozen source-alignment and separate surface-study receipts support their bounded claims without implying likeness acceptance, three-era/browser delivery, or release?",
+  "acceptance_criteria": [
+    "Frozen manifest and reference/source pins verify against local bytes.",
+    "Before/candidate camera and render comparability is stated at the level actually recorded.",
+    "Geometry/stance/UV preservation assertions distinguish receipt/script checks from independent verification.",
+    "Optic, texture, native, browser, three-era, and release claims remain within evidence.",
+    "No automated result substitutes for owner artistic acceptance."
+  ],
+  "source_limitations": [
+    "Only the evidence role was performed; no outcome, safety-portability, disruptor, or negotiator review is represented here.",
+    "Current checkout artifacts and recorded receipts were inspected; no Blender rerender, browser/WebGL run, build, or owner review was performed.",
+    "No other QA conclusions were read."
+  ],
+  "claims": [
+    {
+      "claim_id": "EV-01",
+      "claim": "The attempt02 frozen package is byte-consistent with its 23-entry manifest and is tied to the pinned source and shared-goal revision.",
+      "status": "supported",
+      "evidence": [
+        "All 23 paths in attempt02/frozen-artifact.json exist and match SHA-256.",
+        "Manifest SHA-256 is e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d.",
+        "attempt01, attempt02, and surface02 receipts pin source assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend to 9ba7fc471a86e5f1f9b8db881900725f8abf56546c69fecb125a236ec5b4a64c; direct local hash matches.",
+        "All three receipts name goal commit 251f2f0243181e97140179c2aff6eb057e165438."
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "EV-02",
+      "claim": "Attempt01 and attempt02 use the same saved canon camera transforms, orthographic projection/scale, shift, resolution, and lens; full render-condition comparability is not established by both receipts.",
+      "status": "partially_supported",
+      "evidence": [
+        "Saved camera fields match across both receipts for the named views.",
+        "Attempt01 receipt does not record global engine, samples, denoising, view transform/look, exposure/gamma, world, or area-light parameters; attempt02 does record them.",
+        "The neutral candidate images visibly differ in forms while retaining matching framing; pixels do not prove equal light, exposure, sampling, or tone mapping."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "EV-03",
+      "claim": "Stance and material-preservation claims are recorded checks, not independent geometry verification by this reviewer.",
+      "status": "partially_supported",
+      "evidence": [
+        "Attempt01/02 receipts report stance_preservation mesh_count 886 and changed [], and module flags bodyAndStanceChanged false.",
+        "The separate surface02 receipt reports preservation PASS over 2246 visible meshes, no missing UVs, and unchanged material slot counts.",
+        "The inspected scripts implement before/after mesh digests for coordinates, polygon vertices/material indices, UVs, transforms, parent, slot count and visibility; this explains the receipt method but is author-side evidence, not an independent rerun against the native file."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "EV-04",
+      "claim": "The surface02 receipt texture hashes match files at their exact declared output paths.",
+      "status": "supported by exact-path retest; initial broad-search conflict retracted",
+      "evidence": [
+        "Corrected retest resolves each receipt basename within the receipt output tree rather than selecting the first same-named file anywhere under assets/ or public/.",
+        "All 49 regional_surface textureHashes match byte-for-byte at assets/models/cg-supervised01/surface02/textures/{basename}.",
+        "All 14 source_regional_finish02 texture_hashes match byte-for-byte at assets/models/cg-supervised01/surface02/textures/builder/{basename}.",
+        "The initial 49/49 mismatch report came from broad recursive basename resolution across historical outputs; those matches were not the receipt-declared output files and do not establish a receipt conflict."
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "EV-05",
+      "claim": "Optic evidence maps Builder to Advanced in repository era naming, but the receipt does not establish browser parity or a complete three-era final delivery.",
+      "status": "partially_supported",
+      "evidence": [
+        "Repository src/scene/fallback.js defines eraNames with builder mapped to Advanced (line 15); the orange Builder optic is consistent with the Advanced awakened-optic rule.",
+        "surface02 receipt records retained optical/glass slots and existing awakened optics; the saved render visibly shows an orange optic.",
+        "The receipt and attempt02 frozen manifest explicitly disclaim browser parity and three-era delivery; no WebGL/export test was run."
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "EV-06",
+      "claim": "The frozen study proves final likeness, owner acceptance, three-era delivery, browser parity, or release readiness.",
+      "status": "unsupported_and_explicitly_not_claimed",
+      "evidence": [
+        "Frozen manifest explicitly lists final likeness, three-era delivery, browser parity, and release under not_claimed.",
+        "Receipts say artistic acceptance not claimed / pending; no owner review was performed."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "experiments": {
+    "live": [
+      "SHA-256 verification of all 23 frozen-manifest entries.",
+      "SHA-256 verification of the pinned 2b source blend.",
+      "SHA-256 checks of all 49 surface02 receipt texture names against current files.",
+      "Exact-path retest of all 49 surface02 regional texture hashes and all 14 Builder finish texture hashes; all 63 match."
+    ],
+    "analytical": [
+      "Compared saved camera/render fields in attempt01, attempt02, and surface02 receipts.",
+      "Inspected relevant receipt generation and preservation-digest code to distinguish saved results from method claims.",
+      "Visually inspected attempt01 and attempt02 neutral candidate renders; this is not owner artistic acceptance."
+    ],
+    "not_run": [
+      "Blender regeneration or independent native-geometry/stance digest rerun.",
+      "Fresh texture receipt regeneration/currentness reconciliation.",
+      "Three-era optic mapping audit across final production natives.",
+      "Browser/WebGL parity, application build, release, deployment, and owner acceptance."
+    ]
+  },
+  "material_evidence_gaps": [
+    {
+      "gap": "Attempt01 lacks saved global render and lighting parameters, so equal camera framing is supported but equal effective lighting/exposure/sampling/view transform is not fully evidenced.",
+      "smallest_decisive_test": "Record the complete attempt01 scene/render/light state from its preserved native or rerender both candidates with a shared frozen setup."
+    },
+    {
+      "gap": "Attempt01 lacks saved global render/light parameters, so matching camera transforms and projection are verified but full effective render comparability is not.",
+      "smallest_decisive_test": "Recover the exact attempt01 scene/render/light settings from its preserved native or rerender both candidates under one frozen setup."
+    }
+  ],
+  "decision": "approve-with-limits",
+  "decision_rationale": "The frozen 23-file attempt02 package, source/goal pins, and exact-path texture receipts verify. The earlier texture mismatch was a false positive caused by broad basename search across historical outputs and is retracted with the failed experiment preserved below. Approve this bounded development evidence with limits: attempt01 effective render-state equivalence remains incompletely recorded; the study does not establish final likeness, owner acceptance, browser parity, complete three-era delivery, release, deployment, or engineering validity.",
+  "release_limits": [
+    "May be cited as a source-pinned development geometry and surface checkpoint; all 63 texture hashes match at the exact receipt output paths.",
+    "Camera transforms/projection match, but complete attempt01 lighting, exposure, samples, and view-transform equivalence remains unverified from saved receipts.",
+    "Do not claim final likeness, owner acceptance, full three-era completion, browser parity, release, deployment, or engineering validity."
+  ],
+  "review_expiry": "Recheck against any regenerated texture receipt, changed native assets, newly produced three-era assets, or fresh browser/build evidence.",
+  "retest": {
+    "date": "2026-10-04",
+    "trigger": "Root identified exact receipt output directories after the original reviewer used broad basename resolution.",
+    "original_test_preserved": {
+      "result": "49/49 apparent mismatches",
+      "method": "Recursive search under assets/ and public/ followed by hashing basename matches.",
+      "reassessment": "Invalid path resolution: multiple same-named textures exist across historical attempt trees. This experiment is retained for audit history but its conflict conclusion is withdrawn."
+    },
+    "exact_path_results": [
+      {
+        "receipt_field": "module_changes.regional_surface.textureHashes",
+        "directory": "assets/models/cg-supervised01/surface02/textures/",
+        "expected": 49,
+        "matched": 49,
+        "mismatches": 0,
+        "missing": 0
+      },
+      {
+        "receipt_field": "module_changes.source_regional_finish02.texture_hashes",
+        "directory": "assets/models/cg-supervised01/surface02/textures/builder/",
+        "expected": 14,
+        "matched": 14,
+        "mismatches": 0,
+        "missing": 0
+      }
+    ],
+    "era_mapping_check": {
+      "status": "supported",
+      "evidence": "src/scene/fallback.js line 15 maps builder to Advanced in eraNames.",
+      "effect": "The saved orange Builder optic aligns with the Advanced optic rule; it does not establish browser parity or three-era completion."
+    },
+    "remaining_receipt_ambiguity": "The receipt contains two hash sets for distinct exact output locations (49 regional source maps at the surface02 textures root and 14 finish maps in the builder subdirectory). Both byte-verify. This resolves file identity; no independent extraction comparison between packed native image pixels and those files was performed.",
+    "reviewer": "Independent evidence reviewer",
+    "scope": "Read-only exact-path file hashing and source naming lookup; no native extraction, Blender rerender, build, or WebGL test."
+  }
+}

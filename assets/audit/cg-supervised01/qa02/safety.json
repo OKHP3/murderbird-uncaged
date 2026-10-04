@@ -1,0 +1,79 @@
+{
+  "review_id": "cg-qa02-safety",
+  "role": "safety_portability",
+  "artifact": {
+    "worktree": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged",
+    "head": "be2ee153e1367085b30080e9280338ba92cfaff0",
+    "frozen_manifest": "assets/audit/cg-supervised01/attempt02/frozen-artifact.json",
+    "manifest_sha256": "e55f8a87fb532566fb828019e71c93fede7ab706330a7a6792042fe7f497027d",
+    "manifest_files": 23,
+    "manifest_hash_check": "all 23 files matched their manifest hashes",
+    "question": "Is the frozen cycle02 candidate safe and portable for its stated development-review scope?",
+    "criteria": [
+      "Preserve source and pinned reference bytes; keep creative rights/status accurate.",
+      "Keep audit/native/private material outside public runtime paths absent explicit approval.",
+      "Make review links resolve and ensure render-only stage geometry is excluded by the eventual exporter.",
+      "Do not claim browser portability, release, runtime replacement, fabrication, or owner artistic acceptance without direct evidence."
+    ]
+  },
+  "context": {
+    "canonical_goal": "origin/main:goal.md at 251f2f0243181e97140179c2aff6eb057e165438",
+    "working_goal": "read from the candidate worktree; includes the 8-hour / 200,000,000-token authorization",
+    "sources": ["candidate worktree files", "repository-boundaries.md", "assets/README.md", "NOTICE.md", "okhp3-equilibrium-review protocol"],
+    "tools": ["filesystem/hash inspection", "source review", "relative-link target resolution"],
+    "permission_scope": "read-only candidate review; raw report only written to /tmp",
+    "evidence_tier": "live for filesystem bytes/refs and resolved links; analytical for code-path behavior; not-run for Blender reopen/export/browser rendering",
+    "independence_limits": "single fresh-context reviewer; no worker or other QA conclusions used"
+  },
+  "claims": [
+    {
+      "claim_id": "SAFE-01",
+      "claim": "The frozen candidate and referenced source binaries are intact and traceable.",
+      "status": "supported",
+      "evidence": "All 23 manifest file SHA-256 values matched. The source builder blend, locked canon composite, and July head reference matched their recorded SHA-256 values. Candidate receipts identify the shared goal revision and mark registration as estimated and artistic acceptance as not claimed.",
+      "consequence": "Hash mismatch or source substitution would invalidate this review packet.",
+      "next_test": "Recheck manifest hashes after any revision."
+    },
+    {
+      "claim_id": "SAFE-02",
+      "claim": "The new candidate remains outside the public/runtime path and respects the creative-content boundary.",
+      "status": "supported",
+      "evidence": "New files are under assets/audit/ and assets/models/; no cycle02 paths were found in src/ or public/. NOTICE.md and asset guidance state MurderBird creative content is all rights reserved and MIT covers code only. V37/runtime and release claims are not supported by this candidate.",
+      "consequence": "Moving or wiring these assets into public delivery without separate review could expose creative material and imply a release.",
+      "next_test": "If runtime integration is later proposed, inspect the exact build output and release authorization."
+    },
+    {
+      "claim_id": "SAFE-03",
+      "claim": "The contact ground is excluded from the eventual exporter by the authoringGuide filter.",
+      "status": "supported_analytically",
+      "evidence": "cg-supervised-lighting02.stage marks the plane authoringGuide=true; build-cg-supervised02 hides guides for rendering, while cg-supervised-export excludes authoringGuide meshes in both exporter paths. The surface02 receipt reports export_excluded=true.",
+      "consequence": "A future exporter path that omits this filter could include the review floor.",
+      "next_test": "Exercise the current scene through Blender export and verify the GLB has no stage object."
+    },
+    {
+      "claim_id": "SAFE-04",
+      "claim": "The native candidate's textures are portable and the HTML review page renders correctly.",
+      "status": "missing_evidence",
+      "evidence": "Authoring code packs FILE images before saving and finish generation packs new images; the review page's relative image/link targets all resolve on disk. Blender is unavailable here, so packed-image persistence/reopen and exporter embedding were not tested. review.html appends the cycle02 section after an explicit closing html tag; browser error recovery and visibility were not tested.",
+      "consequence": "A moved/reopened native file or browser review could lose texture/render visibility despite successful source-side receipts.",
+      "next_test": "Open the frozen .blend files in Blender in a clean checkout, verify packed images, run/export GLB and inspect embedded textures plus ground exclusion; render review.html in a browser and confirm the appended section is visible."
+    }
+  ],
+  "material_findings": [
+    "Relative review-page image and link targets all resolve to existing files.",
+    "Review-page cycle02 markup follows an explicit </html> end tag; normalize markup and perform browser visibility check before relying on the page as a review interface.",
+    "No new cycle02 app/runtime wiring or browser-parity proof is present."
+  ],
+  "decision": "approve-with-limits",
+  "limits": [
+    "Approve only as a local development/review candidate and matched-render evidence packet.",
+    "Do not claim portable native textures, browser parity, three-era delivery, deployment, final likeness, engineering validation, or owner acceptance from this review.",
+    "Canonical deployed/runtime baseline remains V37; no publication/runtime replacement authorization is established."
+  ],
+  "strongest_objection": "Texture packing and eventual GLB embedding/exclusion are supported by source code and receipts but have not been exercised on reopen/export; review-page browser visibility is also unverified.",
+  "next_gaps": [
+    "Blender reopen check for packed textures, followed by GLB export inspection for embedded image data and ground exclusion.",
+    "Browser render check of review.html, including its post-</html> cycle02 section.",
+    "If runtime/browser delivery is later proposed, add explicit wiring and test the actual build output; current candidate has no cycle02 runtime wiring."
+  ]
+}
