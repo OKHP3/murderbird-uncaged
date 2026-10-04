@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Optic07 matched browser review</title><style>html,body{margin:0;background:#252525;color:#ddd;font:13px sans-serif}#view{width:1280px;height:853px}button{margin:6px}#status{display:inline}</style></head><body><button id="whole">Whole bird</button><button id="head">Head</button><button id="before">Before</button><button id="after">After</button><span id="status">Loading actual GLB</span><div id="view"></div><script type="module">
+import {createOptic07Review} from '/scripts/cg-supervised-browser07.js';
+const cam=await fetch('/assets/audit/cg-supervised01/attempt06/browser-camera.json').then(r=>r.json());
+let review; const root='/assets/audit/cg-supervised-optic07/attempt02/';
+async function load(file){ review?.dispose();review=await createOptic07Review(document.querySelector('#view'),root+file,{nativeCamera:cam});window.review=review;document.querySelector('#status').textContent=file+' — actual WebGL, estimated camera04 global35';}
+await load('murderbird-optic07.glb');
+document.querySelector('#whole').onclick=()=>{review.resetView();review.resize();};
+document.querySelector('#head').onclick=async()=>{const rec=await fetch(root+'receipt.json').then(r=>r.json());const h=rec.cameras['after-head'];const c=v=>[v[0],v[2],-v[1]];const whole=rec.cameras['after-whole'];const pos=c(h.location),dir=cam.target.map((x,i)=>x-cam.position[i]);const scale=h.scale;review.camera.left=-scale/2;review.camera.right=scale/2;review.camera.top=scale*853/1280/2;review.camera.bottom=-scale*853/1280/2;review.setView(pos,pos.map((x,i)=>x+dir[i]));review.camera.updateProjectionMatrix();};
+document.querySelector('#before').onclick=()=>load('murderbird-before.glb');document.querySelector('#after').onclick=()=>load('murderbird-optic07.glb');
+</script></body></html>
