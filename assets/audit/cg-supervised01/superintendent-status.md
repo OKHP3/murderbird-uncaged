@@ -1,0 +1,13 @@
+# Superintendent checkpoint
+
+The source-aligned photoreal target remains unaccepted. Cycle05 improves head volume, cheek/jaw connections, thin layered body armor and foot presence. Fresh outcome QA still rejects final likeness because armor reads soft/matte, facial construction remains simplified, and exposed neck/leg/foot machinery lacks the source character.
+
+The earlier attempt ended at its one-million-token ceiling after about34minutes. It did not run for three days. Eight of ten workers delivered; final material, three-era and browser integration remained incomplete. Earlier engineering-first scope, generic construction operators, and technical validation being mistaken for visual acceptance contributed to the unfinished result.
+
+Live findings in this run: old export flattened material slots; source-camera alignment was estimated; head cards and body envelope leaves produced flat or padded forms. Cycle04 rigid plates introduced thick stepped tiles, so independent QC rejected them. Corrected cycle05 replaces those with thinner curved sheets. Finish02 wrote intended linear RGB directly into sRGB PNG bytes; finish04 now explicitly encodes and reloads FILE images. A generated glass pole/bevel produced nonfinite UVs in04a; strict export refused it, and head05 unique poles passed that same check. Failed artifacts remain labeled separately.
+
+The camera-only study improves comparison but cannot reconcile the source head and stance together. Body-only alignment still leaves large joint spacing residuals. Approved anchors remain preserved while the owner decides whether a separate source-matching pose should be created.
+
+Owner ceiling: eight hours from2026-10-04T04:21:47Z to12:21:47Z, 200000000 aggregate tokens. The ceiling is not a spending target. Each worker has one narrow ownership area, isolated checkout, first visible checkpoint within15–25minutes, no more than two design attempts and a short hard stop. Strong model runs end at their scoped handoff. Independent evidence, outcome and safety reviewers precede conditional disruption and root negotiation. Three concordant reviews trigger a disruptor; disagreements go directly to negotiation.
+
+Remaining: source-specific construction and aged regional material character, complete three-era native/static-browser evidence, fixed neutral/exhibit eight-angle sheets and source video frames, actual browser appearance checks, and owner artistic review. Local npm ci/build passed; dist contains52 intended runtime files and no supervised CG/private/source archives. V37 remains the production model. No deployment, engineering certification, animation or owner acceptance is claimed.

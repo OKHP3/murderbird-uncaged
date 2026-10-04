@@ -1,0 +1,56 @@
+{
+  "role": "supplemental-independent-geometry-qc",
+  "question": "Does head04/body04 improve source-like construction or introduce coarse angular regressions?",
+  "status": "completed",
+  "evidence_status": "analytical",
+  "decision": "approve-with-limits",
+  "main_full_target": false,
+  "identity": {
+    "working_head": "887da78d6ffa2a0327f8d20a1696ddd2ad099519",
+    "verified_github_main_goal": "251f2f0243181e97140179c2aff6eb057e165438",
+    "local_goal_last_updated": "2026-10-04T04:26:19.270994+00:00",
+    "source_full_sha256": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+    "source_head_sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+    "images": {
+      "assets/audit/cg-supervised01/integration04/builder/head-neck.png": "52ef82f131f3133b3260ee0079612f656d96e5967b42b83a14ab10c94f788608",
+      "assets/audit/cg-supervised01/integration04/builder/canon-workshop.png": "e7050d5248f5ad3b5ab345a6fd18dcf0be968a0428fb49f8da81d53f0203a539",
+      "assets/audit/cg-supervised01/integration04/builder/side-profile.png": "bc488a9d269174e2ae4fb23e2e4635febfc608c0f7188e79c1cca5d86f88f624",
+      "assets/audit/cg-supervised01/integration04/builder/canon-neutral.png": "061cdcf0b93d411e460e5b370bfbf6143a170a1e1d6aaa430d2c79a888180e42"
+    }
+  },
+  "independence": {
+    "model": "GPT-6",
+    "sources": "Pinned full-bird/July head; integration04 four builder renders; attempt03 before; head04/body04 attempt02 clay/material-ID diagnostics. Scripts inspected after visual judgment.",
+    "excluded": "Worker handoffs and other QA conclusions unread. No children or repository edits.",
+    "limits": "Shared model/context; supplemental role, not completed three-role equilibrium review. No owner acceptance."
+  },
+  "regional_decisions": [
+    {
+      "region": "Cranial and upper-bill volume",
+      "decision": "retain-provisionally",
+      "finding": "New clay front/45/profile proves actual depth and removes the before render\u2019s thin parallel bill cards. A distinct deep hook improves avian identity. Preserve this volumetric approach, not every current contour."
+    },
+    {
+      "region": "Roof/optic/cheek connectedness",
+      "decision": "reject-current-finish-of-form",
+      "finding": "Broad segmented dome and large projecting circular housing replace source\u2019s swept brow integrated into cheek bands. Beneath the optic, a straight skull cutoff over a very large aperture and thin bowed jaw rails read detached. Source has a substantial curving cheek frame and nested lower jaw, not an empty hanging loop. Faceting persists in clay."
+    },
+    {
+      "region": "Neck/breast/shield plate construction",
+      "decision": "reject-current-plate-shapes",
+      "finding": "Local formation trades the before\u2019s smooth scales for heavy angular stepped tiles. Clay grazing/front show broad flat faces, raised rectangular roots, sparse breast coverage and stand-off gaps. The source has thinner curved, denser, contour-following feather plates. Neck laminae remain sparse around exposed rails. Compact shield envelope is useful; new coarse tile language is a regression."
+    },
+    {
+      "region": "Whole mass",
+      "decision": "provisional",
+      "finding": "Compact rear, mechanical legs and flightless identity survive. Complete bird still reads narrow/upright and simply plated relative to canon. Estimated near-side camera can distort mass comparisons; no calibrated proportion claim."
+    }
+  ],
+  "top_three_geometry_fixes": [
+    "Keep body envelope but replace broad hard two-face tiles with thinner curved, tapered source-shaped plates; tighten overlap across shield, breast and neck while reducing raised roots and gaps.",
+    "Join orbital rim, cheek band and beak root into a coherent layered facial frame; reduce projecting eye housing and rebuild substantial lower-jaw curvature around the opening.",
+    "Sweep roof plates into the forehead/bill saddle with continuous convex sections and controlled seams; eliminate exposed coarse crown facets and blocky transverse ridges."
+  ],
+  "confounds": "Camera03/04 are estimated and too side-biased for definitive canon mass comparison. Finish/color encoding is under separate review; body plate regression and cheek discontinuity survive clay isolation. July controls head only; its body excluded.",
+  "acceptance": "Not a full-target match; no release, browser, deployment or human acceptance claim."
+}

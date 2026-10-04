@@ -1,0 +1,19 @@
+{
+  "status": "build-incomplete",
+  "failed_step": "Static material batch export preflight",
+  "reason": "Evaluated head04 glass bevel produces nonfinite UV corners from duplicate zero-radius pole rings",
+  "evidence": "/tmp/cg04-export-probe.log",
+  "source_native_sha256": "5809c13d35c9a9ec52db098ebbdc543a335bcaa32d50baeb3e1a9f4a03bed254",
+  "retained": [
+    "Four corrected-finish native render images",
+    "Generated color-encoded textures",
+    "Matched baseline renders"
+  ],
+  "not_claimed": [
+    "Completed native04a",
+    "GLB04a",
+    "Browser04a",
+    "Likeness acceptance"
+  ],
+  "corrective_action": "Head05 worker makes unique pole triangle fans, verifies evaluated attributes finite; original exporter UV check retained"
+}

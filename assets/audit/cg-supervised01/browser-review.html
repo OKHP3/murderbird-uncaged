@@ -27,21 +27,29 @@ import {createSupervisedReview} from '/scripts/cg-supervised-browser03.js';
 const status=document.querySelector('#status'),host=document.querySelector('#view'),fallback=document.querySelector('#fallback');
 const params=new URLSearchParams(location.search), attempt=params.get('attempt')||'attempt03';
 if(!/^[a-z0-9-]+$/.test(attempt))throw new Error('Invalid candidate identifier');
-let review, mode='neutral', illustrated=false;
+let review, mode='neutral', illustrated=false, generation=0;
+function updateImages(){
+ const profile=mode==='exhibit'?'workshop':'neutral';
+ const image=`${attempt}/${era.value}/canon-${profile}.png`;
+ fallback.src=image;document.querySelector('#candidate').src=image;
+ document.querySelector('#candidate').alt=`Candidate ${profile} render`;
+ document.querySelector('#before').src=`${attempt}-baseline/${era.value}/canon-${profile}.png`;
+}
 const era=document.querySelector('#era');
 async function load(){
+  const request=++generation, selectedEra=era.value;
   review?.dispose();review=null;status.textContent='Loading '+era.selectedOptions[0].textContent+' candidate…';
-  const image=`${attempt}/${era.value}/canon-neutral.png`;
-  fallback.src=image;document.querySelector('#candidate').src=image;
-  document.querySelector('#before').src=`${attempt}-baseline/${era.value}/canon-neutral.png`;
+  updateImages();
   try{
-    review=await createSupervisedReview(host,`../../models/cg-supervised01/${attempt}/murderbird-supervised-${era.value}.glb`,{lighting:mode});
+    const loaded=await createSupervisedReview(host,`../../models/cg-supervised01/${attempt}/murderbird-supervised-${selectedEra}.glb`,{lighting:mode});
+    if(request!==generation){loaded.dispose();return;}
+    review=loaded;review.setLighting(mode);
     if(illustrated)review.renderer.domElement.hidden=true;
     status.textContent=`${era.selectedOptions[0].textContent} · ${illustrated?'Illustrated':'WebGL'} · ${mode} light · source likeness pending`;
-  }catch(error){fallback.hidden=false;illustrated=true;document.querySelector('#illustrated').setAttribute('aria-pressed','true');status.textContent='Illustrated review · 3D unavailable: '+error.message;console.error(error);}
+  }catch(error){if(request!==generation)return;fallback.hidden=false;illustrated=true;document.querySelector('#illustrated').setAttribute('aria-pressed','true');status.textContent='Illustrated review · 3D unavailable: '+error.message;console.error(error);}
 }
 for(const light of ['neutral','exhibit'])document.querySelector('#'+light).onclick=()=>{
-  mode=light;review?.setLighting(light);
+  mode=light;review?.setLighting(light);updateImages();
   for(const name of ['neutral','exhibit'])document.querySelector('#'+name).setAttribute('aria-pressed',String(name===mode));
   status.textContent=`${era.selectedOptions[0].textContent} · ${illustrated?'Illustrated':'WebGL'} · ${mode} light · source likeness pending`;
 };
