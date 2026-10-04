@@ -1,0 +1,58 @@
+{
+  "reviewer": "independent evidence reviewer",
+  "decision": "approve-with-limits",
+  "scope": "Advanced/builder attempt05 checkpoint only",
+  "checks": {
+    "frozen_manifest_sha256": "3bd503eb8dbcffd16a8cfc86cdbf7248b71d59aa9456cbbd8b1b23b4555e6f72",
+    "manifest_files": 21,
+    "manifest_files_all_match": true,
+    "input_pin_matches": true,
+    "builder_source_hash_matches": true,
+    "reference_manifest_pins": {
+      "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg": true,
+      "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png": true
+    },
+    "camera_match_all": true,
+    "render_settings_match": true,
+    "camera_count": 4,
+    "camera_registration": "estimated, not calibrated",
+    "map_entries": 63,
+    "map_hashes_all_match": true,
+    "map_paths_unique": true,
+    "attempt05-baseline_texture_count": 63,
+    "attempt05_texture_count": 63,
+    "glb": {
+      "v2_container": true,
+      "mesh_count": 13,
+      "materials": 13,
+      "embedded_images": 21,
+      "textures": 21,
+      "primitive_count": 13,
+      "all_uv0": true,
+      "all_normals": true,
+      "pbr_materials": 13,
+      "receipt_face_material_parity": true,
+      "receipt_uv_corner_readback": true,
+      "pixel_or_render_parity_tested": false
+    },
+    "optical_surface_script": {
+      "protected_glass_transmission": true,
+      "IOR": 1.46,
+      "roughness": 0.065,
+      "source": "scripts/cg-supervised-head05.py:29-49",
+      "retained_hooked_bill": "CGH04 nine section convex hooked upper bill",
+      "body_below_junction_changes": false
+    },
+    "pose_steering_status": "Owner preference requested; approvedstancepreservedwhilepending",
+    "artistic_acceptance": "not claimed",
+    "camera_note": "All explicit locations, rotations, projection, ortho scale, shift, resolution, lighting rigs and render settings match baseline; computed full-character bounds differ where the model silhouette changes."
+  },
+  "limits": [
+    "Source camera 35 registration is estimated, not calibrated.",
+    "Native and GLB completion verified for Advanced/builder only; no other-era completion implied.",
+    "Static GLB structure, material slot coverage, UV and normals are not browser/render pixel parity.",
+    "Visual likeness, optic realism and owner acceptance remain human/owner judgments and are pending.",
+    "04a failed export is a separate prior epoch and is not evidence against or for attempt05.",
+    "No CI, deployment, animation, or engineering validation was performed."
+  ]
+}
