@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>MurderBird · loop03 review</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#f0f0ec;background:#171b1a;line-height:1.5}*{box-sizing:border-box}body{margin:0}main{max-width:1600px;margin:auto;padding:24px}h1{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2;margin:0 0 12px}h2{font-size:1.2rem;margin:0 0 8px}p{margin:8px 0 16px}a{color:#edc489;text-underline-offset:3px}button,select{font:inherit;color:inherit;background:#303a35;border:1px solid #89948c;border-radius:5px;padding:8px 12px;min-height:44px}button{cursor:pointer}button[aria-pressed=true]{background:#73582e;border-color:#dbbd83}button:disabled{cursor:default;opacity:.65}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #ffc675;outline-offset:3px}.notice{padding:12px 16px;background:#2b3028;border-left:4px solid #d9b573}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:20px 0 12px}.lighting{display:flex;gap:8px;align-items:center;border:0;padding:0;margin:0}.lighting legend{float:left;margin-right:8px}.compare{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}figure{margin:0;background:#222825;border:1px solid #444f47;border-radius:6px;overflow:hidden}figcaption{padding:12px 14px;font-weight:650}.image-wrap{aspect-ratio:1280/853;background:#414440}.image-wrap img{display:block;width:100%;height:100%;object-fit:contain}.image-status{margin:0;padding:8px 14px;min-height:40px;color:#d4d9d0;font-size:.9rem}.image-note{padding:0 14px 12px;margin:0;font-size:.88rem;color:#c7ccc4;overflow-wrap:anywhere}.viewer{margin-top:24px;padding:16px;border:1px solid #58645b;border-radius:6px;background:#202723}#view{position:relative;width:100%;aspect-ratio:1280/853;min-height:300px;max-height:70vh;background:#424940}#webgl-host,#native-fallback{position:absolute;inset:0;width:100%;height:100%}#native-fallback{object-fit:contain;display:block}#webgl-host canvas{display:block;width:100%;height:100%}#status{display:block;min-height:48px;padding:10px 0;color:#e7d8b6}#fallback-note{color:#dfcfac;margin:8px 0}.links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:14px 0}details{margin:20px 0;color:#c7ccc4}summary{cursor:pointer}code{font-size:.85rem;overflow-wrap:anywhere}.small{font-size:.9rem;color:#c7ccc4}[hidden]{display:none!important}@media(max-width:1150px){.compare{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.compare{grid-template-columns:1fr}main{padding:16px}.image-wrap{max-height:75vh}#view{min-height:240px}.lighting{flex-wrap:wrap}}
+</style>
+</head>
+<body><main>
+<h1>MurderBird · recursive loop03 review · development candidate</h1>
+<p class="notice"><strong>Source likeness and owner artistic acceptance remain pending.</strong> This local review compares Retained Loop 02 with the selected Loop 03 candidate. It does not promote the model to the exhibit or establish publication.</p>
+<p class="small">This candidate retains BODY03 and FEET02 and adds the visual02 crown colour/roughness response with a copy of the original normal texture. Head geometry and enclosure gaps remain; source likeness is not complete.</p>
+<p id="packet-status">Loop 03 development candidate retained04 / Retained Loop 02 baseline retained03. Individual images and the selected browser model report their own loading state.</p>
+<div class="controls" aria-label="Review controls">
+<label for="era">Era</label><select id="era"><option value="builder">Advanced</option><option value="maker">Maker</option><option value="mechanic">Mechanic</option></select>
+<fieldset class="lighting"><legend>Lighting</legend><button type="button" id="neutral" aria-pressed="true">Neutral</button><button type="button" id="exhibit" aria-pressed="false">Exhibit</button></fieldset>
+<button type="button" id="reset">Reset 3D view</button><button type="button" id="fallback-toggle" aria-pressed="false">Native PNG fallback</button><button type="button" id="retry">Retry 3D load</button>
+</div>
+<div class="compare">
+<figure><figcaption>Locked Sept22 · full-bird canon</figcaption><div class="image-wrap"><img id="canon-source" src="/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" alt="Owner-locked September22 composite controlling the common full-bird canon"></div><p id="canon-source-status" class="image-status" aria-live="polite">Canonical source awaiting load.</p><p class="image-note">Controls the inherited character and full-bird likeness across all eras.</p></figure>
+<figure><figcaption id="source-caption">Pinned Advanced · era finish source</figcaption><div class="image-wrap"><img id="source" src="/assets/img/library/murderbird-unified-heart-candidate-2026-09-06.png" alt="Pinned Advanced era finish reference"></div><p id="source-status" class="image-status" aria-live="polite">Era source awaiting load.</p><p class="image-note">Controls the selected era finish; complements the locked full-bird canon.</p></figure>
+<figure><figcaption id="before-caption">Retained Loop 02 · before</figcaption><div class="image-wrap"><img id="before" src="/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/canon-neutral.png" alt="Advanced Retained Loop 02 before, fixed neutral native render"></div><p id="before-status" class="image-status" aria-live="polite">Retained Loop 02 PNG awaiting load.</p><p class="image-note">Retained Loop 02 at the fixed checkpoint09 camera and light rig used for the Loop 03 candidate.</p></figure>
+<figure><figcaption id="candidate-caption">Loop 03 · candidate</figcaption><div class="image-wrap"><img id="candidate" src="/assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/canon-neutral.png" alt="Advanced Loop 03 candidate, fixed neutral native render"></div><p id="candidate-status" class="image-status" aria-live="polite">Candidate PNG awaiting load.</p><p class="image-note">Fixed native render; a PNG is not an interactive browser model.</p></figure>
+</div>
+<section class="viewer" aria-labelledby="viewer-title">
+<h2 id="viewer-title">Selected candidate · browser inspection</h2>
+<p class="small">Drag to orbit and scroll to zoom. Reset restores the estimated checkpoint09 browser camera. Use the native PNG fallback for the fixed renderer view.</p>
+<output id="status" aria-live="polite" aria-atomic="true">3D loading has not completed. No three-era browser load is claimed.</output>
+<div id="view" aria-busy="true"><div id="webgl-host"></div><img id="native-fallback" hidden src="/assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/canon-neutral.png" alt="Advanced candidate fixed native PNG fallback"></div>
+<p id="fallback-note" hidden><strong>Native PNG fallback.</strong> This is a fixed Blender image, not WebGL or an illustrated substitute.</p>
+<p class="small">Browser lighting uses the unchanged checkpoint09 review helper. Native exhibit PNGs use the saved workshop rig. The browser camera is estimated, not calibrated; browser/native pixel equivalence remains unresolved.</p>
+<nav class="links" aria-label="Selected era review files">
+<a href="/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg">Locked full-bird canon</a><a id="source-link" href="/assets/img/library/murderbird-unified-heart-candidate-2026-09-06.png">Pinned era source</a>
+<a id="native-link" href="/assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/murderbird-recursive-builder.blend">Candidate editable native</a><a id="glb-link" href="/assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/murderbird-recursive-builder.glb">Candidate static GLB</a><a id="receipt-link" href="/assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/receipt.json">Candidate receipt</a><a id="before-receipt-link" href="/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/receipt.json">Retained Loop 02 receipt</a>
+</nav>
+<p class="small">Files may still be completing when this page is opened. A missing image or failed 3D load is reported as unavailable. Links and renders do not establish owner acceptance.</p>
+</section>
+<details><summary>Reference and review-helper pins</summary>
+<p class="small">Reference and helper hashes are inherited from the Loop 02 review page; current disk pins were checked for this preparation. SHA-256 pins identify source artifacts, not artistic approval.</p>
+<p>Locked full-bird canon:<br><code>645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114</code></p><p id="source-pin"><code>Advanced: 9430f91e3cd3fc8223297720a0f57ec1c46e9c8245cfba91495e9c362029fea9</code></p>
+<p><a href="/scripts/cg-supervised-browser05.js">Immutable browser05 helper</a><br><code>21473a71999135f7d0d1ddf6eb9ad1ec1ff545020c443189199b9becc5379a5a</code></p>
+<p><a href="/assets/audit/cg-supervised01/attempt09/browser-camera.json">Immutable checkpoint09 browser camera</a><br><code>1efd236a411a35b367427ffc0b197b96409ff48064885f00a06bff275c6d7136</code></p>
+<p><a href="/assets/audit/cg-supervised01/attempt09/frozen-manifest.json">Frozen checkpoint09 manifest</a> · <a href="/assets/audit/cg-recursive-three-loop01/owner-authorization.json">Current owner authorization</a></p>
+</details>
+<noscript><p class="notice">JavaScript is disabled. The two pinned sources and planned fixed neutral PNG comparisons remain available; era selection and interactive 3D require JavaScript.</p></noscript>
+<p class="small">Creative content © Jamie Hill / OverKill Hill P³. All rights reserved. Local production review only.</p>
+</main>
+<script type="module">
+const BASE='/assets/audit/cg-recursive-three-loop01/loop03/delivery';
+const BEFORE_BASE='/assets/audit/cg-recursive-three-loop01/loop02/delivery';
+const CAMERA='/assets/audit/cg-supervised01/attempt09/browser-camera.json';
+const params=new URLSearchParams(location.search),checkpoint=params.get('checkpoint')||'retained04',baseline=params.get('baseline')||'retained03';
+const valid=value=>/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(value)&&value.length<=64;
+const SOURCES={
+ builder:{label:'Advanced',file:'murderbird-unified-heart-candidate-2026-09-06.png',sha256:'9430f91e3cd3fc8223297720a0f57ec1c46e9c8245cfba91495e9c362029fea9'},
+ maker:{label:'Maker',file:'murderbird-unified-maker-clean-candidate-2026-09-06.png',sha256:'93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9'},
+ mechanic:{label:'Mechanic',file:'murderbird-unified-mechanic-candidate-2026-09-06.png',sha256:'0bd7c79510be9eeef024f8861a7576b777a7f5de5710523e8d2ab039d03c65f9'}
+};
+const $=id=>document.getElementById(id),era=$('era'),status=$('status'),host=$('webgl-host'),fallback=$('native-fallback');
+let review=null,mode='neutral',preferPNG=false,automaticPNG=false,generation=0,loading=false,loaderPromise;
+function selected(){return SOURCES[era.value];}
+function usingPNG(){return preferPNG||automaticPNG;}
+function imageURL(){return `${BASE}/${checkpoint}/${era.value}/canon-${mode==='exhibit'?'workshop':'neutral'}.png`;}
+function setImage(id,url,alt){
+ const img=$(id);img.alt=alt;if(img.getAttribute('src')!==url)img.src=url;
+ const message=$(id+'-status');if(message)message.textContent=img.complete?(img.naturalWidth?'Image available.':'Image unavailable at this path; production may still be completing.'):'Image awaiting load.';
+}
+for(const id of ['canon-source','source','before','candidate']){
+ const img=$(id);img.addEventListener('load',()=>{$(id+'-status').textContent='Image available.';});
+ img.addEventListener('error',()=>{$(id+'-status').textContent='Image unavailable at this path; production may still be completing.';});
+ if(img.complete)$(id+'-status').textContent=img.naturalWidth?'Image available.':'Image unavailable at this path; production may still be completing.';
+}
+fallback.addEventListener('error',()=>{display();if(usingPNG())status.textContent=`${selected().label}: native PNG unavailable; candidate may still be completing. 3D acceptance is not established.`;});
+fallback.addEventListener('load',()=>{display();if(usingPNG()&&!loading)describe();});
+function updateFiles(){
+ const item=selected(),profile=mode==='exhibit'?'workshop':'neutral',source=`/assets/img/library/${item.file}`;
+ $('packet-status').textContent=`Loop 03 candidate ${checkpoint} / Retained Loop 02 baseline ${baseline}. Individual images and the selected browser model report their own loading state.`;
+ $('source-caption').textContent=`Pinned ${item.label} · era finish source`;
+ $('before-caption').textContent=`Retained Loop 02 · ${baseline}`;$('candidate-caption').textContent=`Loop 03 · ${checkpoint}`;
+ setImage('source',source,`Pinned ${item.label} era finish reference`);
+ setImage('before',`${BEFORE_BASE}/${baseline}/${era.value}/canon-${profile}.png`,`${item.label} Retained Loop 02 before, fixed ${profile} native render`);
+ setImage('candidate',imageURL(),`${item.label} ${checkpoint} candidate, fixed ${profile} native render`);
+ fallback.src=imageURL();fallback.alt=`${item.label} ${checkpoint} candidate fixed ${profile} native PNG fallback`;
+ $('source-pin').textContent=`${item.label} SHA-256: ${item.sha256}`;$('source-link').href=source;
+ $('native-link').href=`${BASE}/${checkpoint}/${era.value}/murderbird-recursive-${era.value}.blend`;
+ $('glb-link').href=`${BASE}/${checkpoint}/${era.value}/murderbird-recursive-${era.value}.glb`;
+ $('receipt-link').href=`${BASE}/${checkpoint}/${era.value}/receipt.json`;
+ $('before-receipt-link').href=`${BEFORE_BASE}/${baseline}/${era.value}/receipt.json`;
+}
+function display(){
+ fallback.hidden=!usingPNG();host.hidden=usingPNG();$('fallback-note').hidden=!usingPNG();
+ $('fallback-note').textContent=fallback.complete&&!fallback.naturalWidth?'Native PNG fallback unavailable for this era/checkpoint; production may still be completing.':'Native PNG fallback: a fixed Blender image, not WebGL or an illustrated substitute.';
+ $('fallback-toggle').setAttribute('aria-pressed',String(usingPNG()));$('reset').disabled=!review||usingPNG();
+ $('view').setAttribute('aria-busy',String(loading));
+}
+function describe(){
+ const kind=usingPNG()?(fallback.complete?(fallback.naturalWidth?'Fixed native PNG fallback':'Native PNG fallback unavailable'):'Native PNG fallback loading'):review?'WebGL loaded for selected era':'3D unavailable';
+ status.textContent=`${selected().label} · ${kind} · ${mode} lighting · source likeness and owner acceptance pending.`;
+}
+async function dependencies(){
+ if(!loaderPromise)loaderPromise=Promise.all([
+  import('/scripts/cg-supervised-browser05.js'),
+  fetch(CAMERA).then(r=>{if(!r.ok)throw new Error('Checkpoint09 camera metadata unavailable');return r.json();})
+ ]).catch(error=>{loaderPromise=null;throw error;});
+ return loaderPromise;
+}
+async function load(){
+ const request=++generation,picked=era.value;
+ review?.dispose();review=null;host.replaceChildren();loading=true;automaticPNG=false;
+ updateFiles();display();status.textContent=`Loading ${selected().label} browser model… Fixed PNG comparison paths are shown above.`;
+ try{
+  const [module,camera]=await dependencies();if(request!==generation)return;
+  const loaded=await module.createSupervisedReview(host,`${BASE}/${checkpoint}/${picked}/murderbird-recursive-${picked}.glb`,{lighting:mode,nativeCamera:camera});
+  if(request!==generation){loaded.dispose();return;}
+  review=loaded;review.setLighting(mode);host.dataset.review=JSON.stringify(review.snapshot());loading=false;automaticPNG=false;display();describe();
+ }catch(error){
+  if(request!==generation)return;
+  loading=false;automaticPNG=true;display();const png=fallback.complete?(fallback.naturalWidth?'native PNG fallback':'native PNG unavailable'):'native PNG loading';status.textContent=`${selected().label} · ${png} · 3D load unavailable: ${error.message}. Owner acceptance pending.`;
+  console.error('Loop02 review load failed',error);
+ }
+}
+era.addEventListener('change',()=>{preferPNG=false;load();});
+for(const name of ['neutral','exhibit'])$(name).addEventListener('click',()=>{
+ mode=name;review?.setLighting(mode);updateFiles();
+ for(const light of ['neutral','exhibit'])$(light).setAttribute('aria-pressed',String(light===mode));
+ if(review)host.dataset.review=JSON.stringify(review.snapshot());display();if(!loading)describe();
+});
+$('reset').addEventListener('click',()=>{if(!review)return;review.resetView();host.dataset.review=JSON.stringify(review.snapshot());status.textContent=`${selected().label} · estimated checkpoint09 browser camera reset · owner acceptance pending.`;});
+$('fallback-toggle').addEventListener('click',()=>{
+ if(automaticPNG&&!review){preferPNG=false;load();return;}
+ preferPNG=!preferPNG;display();if(!loading)describe();
+});
+$('retry').addEventListener('click',()=>{preferPNG=false;load();});
+window.addEventListener('pagehide',()=>{generation++;review?.dispose();});
+if(!valid(checkpoint)||!valid(baseline)){
+ status.textContent='Invalid checkpoint or baseline identifier. Use a lowercase kebab identifier of at most 64 characters. No candidate load attempted.';
+ $('packet-status').textContent='Review identifier rejected; no alternate source or candidate was substituted.';
+ for(const id of ['era','neutral','exhibit','reset','fallback-toggle','retry'])$(id).disabled=true;
+ $('view').setAttribute('aria-busy','false');
+}else{updateFiles();await load();}
+</script>
+</body></html>

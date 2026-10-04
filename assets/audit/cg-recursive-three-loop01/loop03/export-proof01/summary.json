@@ -1,0 +1,90 @@
+{
+  "at": "2026-10-04T21:14:37.529043+00:00",
+  "evidence_status": "live",
+  "source": "Actualretained04 read-only Blender evaluation and GLB decode; no producerhelper imports",
+  "UV_absolute_tolerance": 2e-06,
+  "normalized_normal_vector_L2_tolerance": 2e-05,
+  "eras": [
+    {
+      "era": "builder",
+      "overall_strict_status": "FAIL",
+      "position_material_status": "PASS",
+      "UV_joint_corner_status": "PASS",
+      "position_max_abs": 0.0,
+      "UV_max_abs": 1.1920928955078125e-07,
+      "strict_normal_status": "FAIL",
+      "normal_max_L2": 0.008557185882560697,
+      "normal_max_degrees": 0.49029213149792866,
+      "normal_bad_triangles": 564699,
+      "images": 49,
+      "maps_exact": true,
+      "candidate_crown_normal": [
+        {
+          "material": "CGRS04 builder uv-method02-visual02-heldnormal formed crown",
+          "normal_vector_max_L2": 0.0005350984722657378,
+          "normal_bad_triangles": 3823,
+          "normal_angle_max_degrees": 0.03065888445049866
+        }
+      ],
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "era": "maker",
+      "overall_strict_status": "FAIL",
+      "position_material_status": "PASS",
+      "UV_joint_corner_status": "PASS",
+      "position_max_abs": 0.0,
+      "UV_max_abs": 1.1920928955078125e-07,
+      "strict_normal_status": "FAIL",
+      "normal_max_L2": 0.008557185882560697,
+      "normal_max_degrees": 0.49029213149792866,
+      "normal_bad_triangles": 564699,
+      "images": 48,
+      "maps_exact": true,
+      "candidate_crown_normal": [
+        {
+          "material": "CGRS04 maker uv-method02-visual02-heldnormal formed crown",
+          "normal_vector_max_L2": 0.0005350984722657378,
+          "normal_bad_triangles": 3823,
+          "normal_angle_max_degrees": 0.03065888445049866
+        }
+      ],
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "era": "mechanic",
+      "overall_strict_status": "FAIL",
+      "position_material_status": "PASS",
+      "UV_joint_corner_status": "PASS",
+      "position_max_abs": 0.0,
+      "UV_max_abs": 1.1920928955078125e-07,
+      "strict_normal_status": "FAIL",
+      "normal_max_L2": 0.008557185882560697,
+      "normal_max_degrees": 0.49029213149792866,
+      "normal_bad_triangles": 564699,
+      "images": 48,
+      "maps_exact": true,
+      "candidate_crown_normal": [
+        {
+          "material": "CGRS04 mechanic uv-method02-visual02-heldnormal formed crown",
+          "normal_vector_max_L2": 0.0005350984722657378,
+          "normal_bad_triangles": 3823,
+          "normal_angle_max_degrees": 0.03065888445049866
+        }
+      ],
+      "animations": 0,
+      "skins": 0
+    }
+  ],
+  "limits": [
+    "No producer helper imports; read-only native evaluation and GLB decode, outputs only configured temp directory.",
+    "Default GLB scene node transforms supported; sparse accessors or shared/cyclic scene node rejected.",
+    "UV0 is native active render UV, additional named shader UV maps native layer order; duplicate/multiple layouts reported, not assumed hidden.",
+    "Oriented cyclic triangle canonicalization retains per-corner position, all emitted UV channels, normal and material association. Duplicate identical geometry is sorted by associated attributes; ambiguity count disclosed.",
+    "Predeclared strict normal tolerance may fail Blender custom split-normal encoding; failures are evidence, not tuned away.",
+    "No full shader, texture color-management, lighting, rendered-pixel or owner acceptance proof.",
+    "Strictnormal failures remain failures. Same toe-joint maximum as Loop02; crown currentdifference is reported separately, no sourceacceptance or complete shader/pixel parity."
+  ]
+}

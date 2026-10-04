@@ -1,0 +1,48 @@
+{
+  "schema": "cg-loop03-outcome-cage-correction/v1",
+  "created_at_utc": "2026-10-04T21:36:48.847021+00:00",
+  "scope": "Correction of this reviewer's false empty-array checksum interpretation only. Original raw final report and firstlook remain unchanged.",
+  "original_final_report": {
+    "path": "/tmp/cg-loop03-final-outcome.json",
+    "sha256": "cacabacfb9d960ec9c4e16164250b0ccd040723cc3ce4a2b325481d4ad7fc613"
+  },
+  "original_firstlook": {
+    "path": "/tmp/cg-loop03-final-outcome-firstlook.json",
+    "sha256": "cceca091803120e4b8dda15d681ee8dbc0b2c2656eb5ae43d5acc22de600a255"
+  },
+  "own_literal_hash_selfcheck": {
+    "input_bytes_UTF8": "[]",
+    "bytes": 2,
+    "SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "equals_reported_crown_digest": false,
+    "status": "PASS"
+  },
+  "mistake": "I incorrectly stated that the recorded crown digest 4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77 was SHA256 of []. That statement was false, and the inconsistency inferred from it is withdrawn.",
+  "withdrawn_final_report_concern": {
+    "field": "technical_evidence.native_cage_digest_anomaly",
+    "concern": "Unresolved empty-array cage-digest inconsistency",
+    "withdrawn": true
+  },
+  "withdrawn_dependent_requirements": [
+    "The cage-digest inconsistency qualification in L03-F02",
+    "The request to reconcile the cage digest or supply a fresh correctly hashed snapshot",
+    "The cage-digest qualifier in the verdict's technical custody and necessary evidence statements"
+  ],
+  "explicitly_exposed_supplied_root_facts": {
+    "source": "Parent root correction dispatch; supplied facts, not my own native/API replay or independent inspection of another QA report.",
+    "nonempty_snapshot": "Actual 20,049-byte nonempty seven-key crown dictionary serializes to the recorded digest 4f53a185e36ec85a0745868ace80b9dfe1e56afe30be21639237454d6b15ed77.",
+    "comparison": "Root reports serialized source, retired and successor crown snapshots match in all three eras.",
+    "status": "Supplied fresh snapshot proof resolves the false empty-hash concern; this role performed only the literal-hash selfcheck."
+  },
+  "remaining_native_scope": "Native preservation and binding remain supported by supplied API/count/snapshot proof, not my own native/API replay. The stated selected graph-fingerprint scope remains limited.",
+  "unchanged_verdict": {
+    "development_retention": "approve-with-limits",
+    "visual_phase1": "unchanged",
+    "source_likeness_completion": "not met",
+    "owner_acceptance": "pending",
+    "strict_normals": "FAIL, threshold unchanged",
+    "full_native_GLB_browser_shader_or_pixel_parity": "not established"
+  },
+  "no_additional_QA": "No scene, code, native, asset or original-report changes; no new QA exploration or other current QA report read. No children.",
+  "stop": "Correction complete."
+}

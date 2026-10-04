@@ -1,0 +1,7 @@
+import bpy,json,hashlib,pathlib,datetime
+R=pathlib.Path('/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged');P=R/'assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04';rows=[]
+for era in ('builder','maker','mechanic'):
+ p=P/era/f'murderbird-recursive-{era}.blend';h=hashlib.sha256(p.read_bytes()).hexdigest();bpy.ops.wm.open_mainfile(filepath=str(p),load_ui=False,use_scripts=False)
+ counts={'payloads':sum(o.type in ('MESH','EMPTY') for o in bpy.data.objects),'meshes':sum(o.type=='MESH' for o in bpy.data.objects),'empties':sum(o.type=='EMPTY' for o in bpy.data.objects),'materials':len(bpy.data.materials),'file_images':sum(i.source=='FILE' for i in bpy.data.images),'packed_FILE_images':sum(i.source=='FILE' and i.packed_file is not None for i in bpy.data.images)}
+ expected={'payloads':7690,'meshes':7681,'empties':9,'materials':63,'file_images':164 if era=='builder' else 163,'packed_FILE_images':164 if era=='builder' else 163};assert counts==expected,(era,counts,expected);assert hashlib.sha256(p.read_bytes()).hexdigest()==h;rows.append({'era':era,'native_sha256':h,'counts':counts,'status':'PASS'})
+pathlib.Path('/tmp/cg-loop03-final-counts.json').write_text(json.dumps({'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'status':'PASS','scope':'Read-only actualsavednative counts only, Blender autoexecdisabled; no producerimports or scene/filewrites','eras':rows},indent=2)+'\n');print(rows)

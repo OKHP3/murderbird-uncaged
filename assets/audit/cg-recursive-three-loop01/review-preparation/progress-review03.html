@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MurderBird · progress comparison</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#eee;background:#171c19;line-height:1.5}*{box-sizing:border-box}body{margin:0}main{max-width:1900px;margin:auto;padding:24px}h1{font-size:1.8rem;line-height:1.2;margin:0 0 12px}p{margin:8px 0 16px}.notice{padding:12px 16px;border-left:4px solid #d7b27b;background:#2b3029}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:20px 0}select{font:inherit;color:inherit;background:#303a35;border:1px solid #8c968d;border-radius:4px;padding:8px;min-height:44px}a{color:#e7c18b;text-underline-offset:3px}a:focus-visible,select:focus-visible{outline:3px solid #ffc675;outline-offset:3px}.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:start}article{background:#242b26;border:1px solid #566057;border-radius:6px;overflow:hidden}h2{font-size:1.05rem;margin:0;padding:12px 14px}.frame{aspect-ratio:1280/853;background:#3c443d;display:flex;align-items:center;justify-content:center;position:relative;text-align:center}.frame img{width:100%;height:100%;object-fit:contain;display:block}.frame a{position:absolute;inset:0}.frame p{padding:20px;margin:0}.note,.status,.links{padding:0 14px}.note{font-size:.9rem}.status{font-size:.85rem;color:#d8dfd3;margin:10px 0}.links{display:flex;flex-wrap:wrap;gap:8px 14px;margin:12px 0 16px}.small{font-size:.88rem;color:#c7cfc4}.pending{color:#ece2c7}.frame [hidden],[hidden]{display:none!important}@media(max-width:1300px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){main{padding:16px}.cards{grid-template-columns:1fr}}
+</style></head><body><main>
+<h1>MurderBird · recursive progress comparison</h1>
+<p class="notice"><strong>Source likeness and owner artistic acceptance remain pending.</strong> This is a local evidence view of fixed native PNGs. Stage availability does not imply artistic acceptance, publication or exhibit replacement.</p>
+<div class="controls"><label for="era">Era</label><select id="era"><option value="builder">Advanced</option><option value="maker">Maker</option><option value="mechanic">Mechanic</option></select><label for="light">Native lighting</label><select id="light"><option value="neutral">Neutral</option><option value="workshop">Workshop</option></select></div>
+<div class="cards" id="cards"><article><h2>Locked Sept22 · full-bird canon</h2><div class="frame"><a href="/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" aria-label="Open pinned full-bird source"><img id="source" src="/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" alt="Owner-locked full-bird canon composite"></a><p id="source-failed" hidden>Pinned source unavailable at this local path.</p></div><p class="note">Controls common full-bird likeness across all three eras. Source pixels remain unchanged.</p><p class="small note">SHA-256: <span style="overflow-wrap:anywhere">645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114</span></p></article></div>
+<p class="small">All stage PNGs use the fixed checkpoint09 native camera. Neutral and workshop use their saved light rigs. Click a loaded image to inspect its original resolution. Checkpoint09 images/native are the matched Loop 01 packet; its separately labeled GLB is the original frozen09 export, not a fresh matched02 export. Browser/native pixel parity is unresolved.</p>
+<p class="small">All four development stages now have complete local comparison packets. The three loops retain shorter breast courses, local join and toe refinements, then a small crown-tone improvement. Artistic source likeness and owner acceptance remain pending.</p>
+<noscript><p class="notice">JavaScript is required for the stage cards and era/lighting controls. The pinned source remains available above.</p></noscript><p class="small">Creative content © Jamie Hill / OverKill Hill P³. All rights reserved. Local production review only.</p>
+</main><script type="module">
+const BASE='/assets/audit/cg-recursive-three-loop01';
+// Root activation gate: change available only after verifying exact final era PNG/native/GLB packets.
+const STAGES=[
+ {id:'checkpoint09',label:'Checkpoint09',path:'loop01/delivery/matched02',available:true,review:'loop01/browser-review.html?checkpoint=retained02&baseline=matched02',reviewAvailable:true,glbPath:'/assets/models/cg-supervised01/attempt09/murderbird-supervised-{era}.glb',note:'Historical receiving baseline with compact shoulder, exposed flank machinery and approved stance anchors. No final likeness acceptance.'},
+ {id:'loop01',label:'Retained Loop 01',path:'loop01/delivery/retained02',available:true,review:'loop01/browser-review.html',reviewAvailable:true,note:'Retained shorter breast courses. Original checkpoint09 head and finish held; rejected head and finish trials excluded. Useful progress retained with limits.'},
+ {id:'loop02',label:'Loop 02',path:'loop02/delivery/retained03',available:true,review:'loop02/browser-review.html',reviewAvailable:true,note:'Retained three breast underlaps and articulated toe/joint successors. Original checkpoint09 head and finish held. Independent review supports modest progress with limits; strict exported-normal comparison remains failed.'},
+ {id:'loop03',label:'Loop 03 candidate',path:'loop03/delivery/retained04',available:true,review:'loop03/browser-review.html',reviewAvailable:true,note:'Cooler crown finish with the original normal texture. Earlier breast and toe gains preserved. The broad crown and simplified head construction remain unresolved; owner acceptance pending.'}
+];
+const LABELS={builder:'Advanced',maker:'Maker',mechanic:'Mechanic'},era=document.getElementById('era'),light=document.getElementById('light'),cards=document.getElementById('cards');
+let generation=0;
+function link(nav,url,text){const a=document.createElement('a');a.href=url;a.textContent=text;nav.append(a);}
+function update(){
+ const request=++generation,picked=era.value,lighting=light.value;
+ for(const prior of cards.querySelectorAll('[data-stage]'))prior.remove();
+ for(const stage of STAGES){
+  const card=document.createElement('article');card.dataset.stage=stage.id;
+  const h=document.createElement('h2');h.textContent=stage.label;card.append(h);
+  const frame=document.createElement('div');frame.className='frame';card.append(frame);
+  const status=document.createElement('p');status.className='status';status.setAttribute('aria-live','polite');card.append(status);
+  const note=document.createElement('p');note.className='note';note.textContent=stage.note;card.append(note);cards.append(card);
+  if(!stage.available){const pending=document.createElement('p');pending.className='pending';pending.textContent='Pending delivery';frame.append(pending);status.textContent='Not activated · no image or model requested.';continue;}
+  const folder=`${BASE}/${stage.path}/${picked}`,url=`${folder}/canon-${lighting}.png`;
+  const message=document.createElement('p');message.textContent='Loading fixed PNG…';frame.append(message);
+  const a=document.createElement('a');a.href=url;a.hidden=true;a.setAttribute('aria-label',`Open ${LABELS[picked]} ${stage.label} original ${lighting} PNG`);
+  const img=document.createElement('img');img.alt=`${LABELS[picked]} ${stage.label}, fixed ${lighting} native render`;a.append(img);frame.append(a);
+  img.addEventListener('load',()=>{if(request!==generation)return;a.hidden=false;message.hidden=true;status.textContent=`${LABELS[picked]} · ${lighting} PNG available · acceptance pending.`;});
+  img.addEventListener('error',()=>{if(request!==generation)return;a.hidden=true;message.hidden=false;message.textContent='Fixed PNG unavailable';status.textContent='Exact image unavailable; no substitute shown.';});
+  img.src=url;
+  const nav=document.createElement('nav');nav.className='links';nav.setAttribute('aria-label',stage.label+' local evidence files');card.append(nav);
+  link(nav,`${folder}/murderbird-recursive-${picked}.blend`,'Editable native');
+  link(nav,stage.glbPath?stage.glbPath.replace('{era}',picked):`${folder}/murderbird-recursive-${picked}.glb`,stage.glbPath?'Original frozen09 export':'Static GLB');
+  link(nav,`${folder}/receipt.json`,'Receipt');if(stage.reviewAvailable)link(nav,`${BASE}/${stage.review}`,'Loop review');
+ }
+}
+const source=document.getElementById('source');function sourceError(){source.parentElement.hidden=true;document.getElementById('source-failed').hidden=false;}source.addEventListener('error',sourceError);if(source.complete&&!source.naturalWidth)sourceError();
+era.addEventListener('change',update);light.addEventListener('change',update);update();
+</script></body></html>
