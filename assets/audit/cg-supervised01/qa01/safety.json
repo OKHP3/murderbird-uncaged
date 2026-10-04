@@ -1,0 +1,52 @@
+{
+  "review": "qa01-safety-portability",
+  "disposition": "approve-with-limits",
+  "scope": "Read-only safety and portability review of frozen attempt01 builder geometry checkpoint. Continuation evidence only; no release, three-era, or owner-acceptance decision.",
+  "goal_revision": "251f2f0243181e97140179c2aff6eb057e165438",
+  "claims": [
+    {
+      "claim_id": "safety-01",
+      "claim_type": "preservation",
+      "evidence": ["assets/audit/cg-supervised01/attempt01/builder/receipt.json", "assets/audit/cg-supervised01/attempt01/frozen-artifact.json", "assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend"],
+      "status": "live",
+      "finding": "Candidate receipt input SHA-256 matches the retained milestone02b builder source on disk. Git status shows no tracked historical source edits; only goal.md is modified among tracked files.",
+      "consequence": "No source-overwrite or historical-preservation blocker found for this checkpoint.",
+      "next_test": "Keep the source hash and candidate receipt attached through integration; recheck the source before any later write or promotion."
+    },
+    {
+      "claim_id": "safety-02",
+      "claim_type": "privacy-boundary",
+      "evidence": ["git status --short", "scripts/build-cg-supervised01.py", "scripts/cg-supervised-head-neck.py", "assets/audit/cg-supervised01/attempt01/frozen-artifact.json"],
+      "status": "live",
+      "finding": "New candidate model, scripts, and audit evidence are under assets/ and scripts/. No new candidate file is under public/, and candidate build scripts contain no public/ output reference. The frozen manifest identifies only a builder artifact and render evidence.",
+      "consequence": "No accidental website-publication path is evident in the inspected candidate scope.",
+      "next_test": "Before any release, perform the repository-mandated build and inspect dist/; this review did not run either."
+    },
+    {
+      "claim_id": "portability-01",
+      "claim_type": "rendered-evidence-portability",
+      "evidence": ["assets/audit/cg-supervised01/review.html", "assets/audit/cg-supervised01/attempt01/builder/receipt.json", "assets/audit/cg-supervised01/attempt01/frozen-artifact.json"],
+      "status": "analytical",
+      "finding": "The checkpoint HTML uses relative image links and candidate render files exist. The frozen artifact explicitly withholds browser parity and three-era delivery. A separate export-worker proof is not integrated and was not used as evidence here.",
+      "consequence": "Evidence is reviewable as local builder renders, but browser/runtime portability is unproven.",
+      "next_test": "Integrate the export proof, resolve all emitted references from the final review location, and load the three-era exports in the browser before claiming portability."
+    },
+    {
+      "claim_id": "scope-01",
+      "claim_type": "acceptance-status",
+      "evidence": ["assets/audit/cg-supervised01/attempt01/frozen-artifact.json", "goal.md at revision 251f2f0243181e97140179c2aff6eb057e165438"],
+      "status": "live",
+      "finding": "Manifest labels geometry checkpoint only and explicitly excludes final likeness, completed materials, three-era delivery, browser parity, and release. No final browser or three-era check was run in this review.",
+      "consequence": "Approval is limited to safe continuation and evidence handling; owner artistic acceptance and release remain pending.",
+      "next_test": "Keep these exclusions attached to any handoff until the required integrated evidence and owner review exist."
+    }
+  ],
+  "tests": {
+    "browser": "not-run",
+    "three-era": "not-run",
+    "production-build": "not-run",
+    "release-inspection": "not-run"
+  },
+  "blockers": [],
+  "limitations": ["No browser/runtime portability claim", "No three-era claim", "No final likeness or owner acceptance claim", "No release claim"]
+}

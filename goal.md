@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-03T23:12:19.114339+00:00"
+last_updated: "2026-10-04T04:26:19.270994+00:00"
 timezone: "America/Chicago"
-status: "milestone-2b-budget-limited"
+status: "architect-supervised-production-active"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -245,3 +245,11 @@ Before another finish pass, review a simple bird-identity silhouette and matched
 ## Milestone 2b budget stop
 
 The ten-worker attempt reached its aggregate token ceiling after about34minutes. Execution stopped. Eight workers finished; browser/export integration and final critique remained incomplete. The latest partial construction checkpoint is on `codex/cinematic-vfx-milestone02b`, under `assets/audit/cinematic-cg-milestone02b/`. Surface maps and lighting work are preserved, but final three-era application, corrected browser export and WebGL checks are unfinished. Clearer avian identity does not establish the source likeness or owner artistic acceptance. Review the handoff before any further work. A new focused head/neck and compact shoulder reconstruction requires a newly bounded owner direction; no continued modeling is authorized by the unused time allowance.
+
+## Architect-supervised source-alignment production — October 4, 2026 UTC
+
+The owner designates this thread chief architect and project superintendent, authorizing eight hours and an aggregate ceiling of 200,000,000 tokens including workers, QA and integration. Start 2026-10-04T04:21:47Z; deadline 2026-10-04T12:21:47Z. This ceiling is not a spending target. The architect allocates succinct bounded tasks, uses fresh worker contexts, independently reviews frozen rendered evidence through okhp3-equilibrium-review, adjudicates findings and dispatches the next largest blocking correction. No per-agent allocation is requested from the owner.
+
+This new direction authorizes continued CG modeling from preserved d4798d079c467892d4a5703caef77a1ed120d10e and supersedes the previous budget-stop boundary for this run. Initial scope is coupled head/neck and compact shield-shoulder construction, plus faithful material/browser transfer. Preserve prior native sources and approved stance anchors. Continue only on visible full-character gains; after two attempts without gain, stop or change that approach. Three independent initial QA roles precede conditional disruption and evidence-based negotiation; worker agreement is not likeness acceptance. Native/browser three-era assets and matched source/before/candidate review evidence are required. Final owner artistic acceptance remains distinct. No animation, engineering certification, purchases, paid Replit or publication is authorized.
+
+Working branch: codex/cg-superintendent-20261004. Progress, allocations and review decisions: assets/audit/cg-supervised01/. This branch records implementation authority but does not claim main or external-system synchronization.

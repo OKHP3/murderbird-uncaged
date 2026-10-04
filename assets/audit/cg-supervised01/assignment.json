@@ -1,0 +1,45 @@
+{
+  "started_utc": "2026-10-04T04:21:47Z",
+  "deadline_utc": "2026-10-04T12:21:47Z",
+  "aggregate_token_ceiling": 200000000,
+  "ceiling_is_not_spending_target": true,
+  "shared_goal_revision": "251f2f0243181e97140179c2aff6eb057e165438",
+  "cg_base_revision": "d4798d079c467892d4a5703caef77a1ed120d10e",
+  "working_branch": "codex/cg-superintendent-20261004",
+  "status": "cycle01-workers-running",
+  "assignments": [
+    {
+      "id": "C01-H",
+      "worker": "cycle01_head_neck",
+      "scope": "source-specific coupled head/neck reconstruction",
+      "output": "scripts/cg-supervised-head-neck.py",
+      "model": "gpt-6.1-sol",
+      "first_checkpoint_minutes": 20,
+      "stop_minutes": 30
+    },
+    {
+      "id": "C01-S",
+      "worker": "cycle01_shoulder_body",
+      "scope": "compact shoulder/shield and breast transition",
+      "output": "scripts/cg-supervised-shoulder-body.py",
+      "model": "gpt-6.1-sol",
+      "first_checkpoint_minutes": 20,
+      "stop_minutes": 30
+    },
+    {
+      "id": "C01-E",
+      "worker": "cycle01_export_parity",
+      "scope": "material-faithful export and local browser proof",
+      "output": "scripts/cg-supervised-export.py",
+      "model": "gpt-6.1-sol",
+      "stop_minutes": 20
+    }
+  ],
+  "qa": "Three separate read-only initial roles; conditional disruptor; architect negotiator; structured claim/evidence records.",
+  "stopping_rules": [
+    "deadline",
+    "aggregate budget",
+    "review-ready target achieved",
+    "two attempts with no material gain => stop that approach and redirect to largest blocking finding"
+  ]
+}

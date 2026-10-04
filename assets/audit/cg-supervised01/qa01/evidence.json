@@ -1,0 +1,68 @@
+{
+  "review_id": "qa01-evidence",
+  "decision": "approve-with-limits",
+  "continuation_scope": "Continue the newly authorized bounded architect run for source-alignment work, treating this artifact as a review checkpoint only.",
+  "final_target_status": "unknown",
+  "checks": [
+    {
+      "claim_id": "E1",
+      "claim": "Frozen artifact files match the declared hashes.",
+      "claim_type": "integrity",
+      "evidence_ids": ["/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/frozen-artifact.json", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/models/cg-supervised01/attempt01/murderbird-supervised-builder.blend", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/cg-supervised-head-neck.py", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/cg-supervised-shoulder-body.py", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/build-cg-supervised01.py", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/canon-neutral.png", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/head-neck.png", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/canon-workshop.png", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/baseline/builder/canon-neutral.png"],
+      "status": "confirmed",
+      "evidence_status": "live",
+      "consequence": "The reviewed artifact is the frozen attempt01 package.",
+      "next_test": "Recompute hashes for every artifact included in any later integration or handoff."
+    },
+    {
+      "claim_id": "E2",
+      "claim": "Baseline and candidate use the same source binary, canon camera, projection, framing, and neutral light profile; render script sets the same AgX transform/look.",
+      "claim_type": "comparison-control",
+      "evidence_ids": ["/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/baseline/builder/receipt.json", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/receipt.json", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/build-cg-supervised01.py", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/frozen-artifact.json"],
+      "status": "confirmed-with-limit",
+      "evidence_status": "analytical",
+      "consequence": "Visual comparison is useful; receipts do not explicitly store exposure or render sample count, so equality of those values is script-derived rather than independently read back from both native files.",
+      "next_test": "Record render exposure, samples, and color-management settings in both receipts or inspect both native scene settings before the next comparison."
+    },
+    {
+      "claim_id": "E3",
+      "claim": "The input CG2b builder binary and both pinned source references remain intact at their declared hashes.",
+      "claim_type": "provenance",
+      "evidence_ids": ["/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/receipt.json", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"],
+      "status": "confirmed",
+      "evidence_status": "live",
+      "consequence": "The visual checkpoint is rooted in the intended prior model and locked canon references.",
+      "next_test": "Keep these exact inputs pinned for the next source-alignment review."
+    },
+    {
+      "claim_id": "E4",
+      "claim": "The described stance preservation check supports unchanged geometry, topology, UVs, and transforms for 886 tagged leg/foot meshes; it does not establish preservation of all visible source geometry.",
+      "claim_type": "preservation-scope",
+      "evidence_ids": ["/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/receipt.json", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/build-cg-supervised01.py"],
+      "status": "confirmed-with-limit",
+      "evidence_status": "analytical",
+      "consequence": "The lower-body stance claim is appropriately bounded; broad 'source preserved' wording in the head module can overstate visible-geometry preservation.",
+      "next_test": "Describe preservation as unchanged input binary and retained source objects, while explicitly listing source meshes hidden or replaced; hash-check all protected regions if claiming them unchanged."
+    },
+    {
+      "claim_id": "E5",
+      "claim": "The checkpoint shows a material avian-identity and compact shoulder/body construction gain, while full source likeness remains substantially short due to material response, micro-detail density, optic/cheek construction, and leg/stance proportions.",
+      "claim_type": "visual-alignment",
+      "evidence_ids": ["/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/baseline/builder/canon-neutral.png", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/canon-neutral.png", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/head-neck.png", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"],
+      "status": "analytical-gain-with-major-gaps",
+      "evidence_status": "analytical",
+      "consequence": "Continuation is justified as bounded source-alignment work, but the artifact is not a likeness acceptance checkpoint.",
+      "next_test": "Compare matched head, shoulder, and full-body views against the same pinned references after the next focused iteration."
+    },
+    {
+      "claim_id": "E6",
+      "claim": "Three-era delivery, browser parity, owner acceptance, and release are not claimed by the frozen manifest; their actual target status is unknown in this review.",
+      "claim_type": "scope-and-acceptance",
+      "evidence_ids": ["/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/frozen-artifact.json", "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/attempt01/builder/receipt.json"],
+      "status": "not-claimed",
+      "evidence_status": "not-run",
+      "consequence": "Do not infer those deliverables or acceptance from the builder checkpoint.",
+      "next_test": "Review only if they enter a later requested scope."
+    }
+  ]
+}

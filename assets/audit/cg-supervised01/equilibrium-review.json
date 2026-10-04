@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "live",
+  "artifact": {
+    "path": "assets/audit/cg-supervised01/attempt01/frozen-artifact.json",
+    "sha256": "c7a4e166637026e5b554d76c8d219e13bd2d150e7b3bbcb609f946561acf462b",
+    "version": "supervised-cycle01-attempt01"
+  },
+  "decision_question": "Is this integrated geometry a material source-alignment gain, and which largest gaps prevent full photoreal likeness?",
+  "acceptance_criteria": [
+    "Distinct source-aligned avian crown/brow/optic/cheek/bill-root identity",
+    "Curved layered head-neck-breast continuity",
+    "Compact rounded folded shield-shoulder, visible flank/hip and compact rear contour",
+    "Source-directed regional construction/finish readable in neutral and exhibit lighting",
+    "Preserved stance anchors and era optic canon",
+    "Three-era editable sources and browser parity with verified material assignments",
+    "No source substitution/private publication/engineering or final-owner-acceptance claim"
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "All reviewers use the same pinned source canon; model family independence is limited.",
+      "Workers and reviewers use fresh contexts; reviewers do not edit judged artifacts."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "model": "gpt-6-luna",
+      "record": "assets/audit/cg-supervised01/qa01/evidence.json",
+      "context": "fresh; no worker conclusions or other initial reviews supplied",
+      "execution_status": "completed"
+    },
+    {
+      "role": "outcome",
+      "model": "gpt-6.1-sol",
+      "record": "assets/audit/cg-supervised01/qa01/outcome.json",
+      "context": "fresh; no worker conclusions or other initial reviews supplied",
+      "execution_status": "completed"
+    },
+    {
+      "role": "safety-portability",
+      "model": "gpt-6-luna",
+      "record": "assets/audit/cg-supervised01/qa01/safety.json",
+      "context": "fresh; no worker conclusions or other initial reviews supplied",
+      "execution_status": "completed"
+    }
+  ],
+  "concordance": "All three initial roles approve-with-limits for continuation. Outcome explicitly rejects full-target completion; other roles do not certify it.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "conditional falsification of limited continuation conclusion",
+    "falsification_hypotheses": [
+      "Apparent curved-neck/compact-shield gain could conceal a whole-bird proportion or construction regression requiring abandonment."
+    ],
+    "test_results": []
+  },
+  "negotiator": {
+    "triggered": false,
+    "decision": null,
+    "decisive_evidence": [],
+    "unresolved_items": [
+      "Conditional disruptor pending",
+      "Specific face/jaw identity",
+      "Throat-to-breast continuity",
+      "Shoulder plate construction",
+      "Final regional finish and browser/three-era verification"
+    ]
+  },
+  "release_decision": "defer-for-evidence",
+  "limitations": [
+    "Geometry-only continuation review, not final likeness or owner acceptance.",
+    "No release or protected unseen holdout.",
+    "Outcome raw record contains a 200k budget wording typo; authoritative owner/controller ceiling is200,000,000, not200k."
+  ],
+  "follow_up": [
+    {
+      "owner": "architect",
+      "test": "Freeze candidate hashes and matched renders, then run three independent initial reviews.",
+      "expiry_trigger": "Any change to judged geometry, materials, lighting, export or reference pins."
+    }
+  ],
+  "development_set": [
+    "Pinned full-bird owner-reissued JPEG",
+    "Pinned July head-only reference",
+    "Pinned era images",
+    "Pinned First Choice video"
+  ],
+  "protected_holdout": {
+    "status": "none",
+    "reason": "No release requested; all pinned views are development references and no unseen-source claim is made."
+  }
+}
