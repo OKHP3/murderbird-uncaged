@@ -1,0 +1,27 @@
+{
+  "review_id": "cg-qa03-safety",
+  "role": "safety_portability",
+  "review_status": "live",
+  "evidence_tier": "confirmed for inspected bytes and native reopen; analytical for boundary interpretation",
+  "artifact": {
+    "path": "assets/audit/cg-supervised01/attempt03/frozen-artifact.json",
+    "sha256": "128baa37a6c49a6947c45b985364a62b48c445a4d883dae932f6f59a53436989",
+    "manifest_files": 23,
+    "all_manifest_hashes_verified": true
+  },
+  "decision_question": "Are attempt03 inputs preserved and provenance/status bounded, is native editability distinct from static export, and are private/runtime publication boundaries respected?",
+  "criteria": ["preserve and hash-pin inputs", "distinguish editable native source from static browser export", "do not imply approval, open rights, browser parity, or release", "keep private/archive material outside public runtime"],
+  "findings": [
+    {"claim_id":"S-01","claim":"Attempt03 identifies and preserves its source input.","status":"supported","evidence":"Receipt names assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend, gives SHA-256 9ba7fc471a86e5f1f9b8db881900725f8abf56546c69fecb125a236ec5b4a64c; current source hash matches; receipt says input_preserved=true."},
+    {"claim_id":"S-02","claim":"The native artifact is independently editable; GLB is a separate static export.","status":"supported-with-limits","evidence":"Blender 5.2.1 opened the frozen .blend: 6,624 objects, 6,611 meshes, one scene, 47 packed images; only Render Result is unpacked. Receipt describes GLB as static review only and disclaims animation/hierarchy parity. This verifies reopenability, not a manual edit/save round trip or browser parity."},
+    {"claim_id":"S-03","claim":"Attempt03 is not owner-approved or release-ready by implication.","status":"supported","evidence":"Frozen manifest excludes final likeness, three-era delivery, browser parity, release. Receipt says artistic_acceptance=not claimed. NOTICE reserves MurderBird creative content; MIT covers code only."},
+    {"claim_id":"S-04","claim":"No attempt03 artifact is in the public runtime inputs inspected.","status":"supported-with-limits","evidence":"Manifest paths place source, exports, audit renders, scripts, and receipt under assets/ and scripts/; public/ listing has no attempt03 path; rg found no src/public references. No build or dist inspection was run; this does not certify a future build or deployment."}
+  ],
+  "limits": ["Rights remain all-reserved for creative content; no new license or publication authorization inferred.", "No private archive was accessed; none is part of the frozen manifest.", "npm/build intentionally not run because production code was untouched; no build failure is alleged.", "Owner artistic acceptance remains separate and pending."],
+  "decision": "approve-with-limits",
+  "rationale": "Inspected preservation, provenance pins, Blender native reopenability, static-export scope, and current path boundaries are adequately evidenced for this safety review. Approval is limited to those claims and does not accept likeness, browser behavior, build output, deployment, or release.",
+  "follow_up": "Before any release, perform the repository-required build and inspect complete dist output and referenced URLs; require separate owner artistic review and explicit release authorization.",
+  "owner_acceptance": "not assessed; not claimed",
+  "sources_read": ["goal.md", "AGENTS.md", "NOTICE.md", "docs/repository-boundaries.md", ".agents/skills/okhp3-equilibrium-review/SKILL.md", ".agents/skills/okhp3-equilibrium-review/references/review-protocol.md", "frozen-artifact.json", "attempt03/builder/receipt.json"],
+  "outputs": {"review_record": "/tmp/cg-qa03-safety.json", "repository_modified": false}
+}

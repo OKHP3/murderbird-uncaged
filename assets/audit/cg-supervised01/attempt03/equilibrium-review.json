@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "five-way",
+  "evaluation_status": "executed-initial-three-way-and-negotiator",
+  "artifact": {
+    "path": "assets/audit/cg-supervised01/attempt03/frozen-artifact.json",
+    "sha256": "128baa37a6c49a6947c45b985364a62b48c445a4d883dae932f6f59a53436989",
+    "version": "supervised-cycle03-attempt03"
+  },
+  "decision_question": "Does integrated cycle03 achieve coherent source likeness, and which changes justify the next bounded correction?",
+  "acceptance_criteria": [
+    "Source-specific complete mechanical bird under pinned full-bird and July head references",
+    "Matched explicit before/candidate evidence with preserved editable sources",
+    "Honest three-era/browser/portability/owner acceptance boundaries"
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Related OpenAI model family; shared pinned development sources",
+      "No protected source holdout; owner artistic acceptance is independent"
+    ]
+  },
+  "initial_reviews": [
+    {
+      "review_id": "cg-qa03-evidence",
+      "reviewer_role": "evidence reviewer",
+      "reviewer_identity": "GPT-6 Codex subagent; independent read-only pass",
+      "artifact": {
+        "path": "assets/audit/cg-supervised01/attempt03/frozen-artifact.json",
+        "sha256": "128baa37a6c49a6947c45b985364a62b48c445a4d883dae932f6f59a53436989",
+        "manifest_file_count": 23,
+        "manifest_hash_check": "live: all 23 listed paths exist and match",
+        "native_path": "assets/models/cg-supervised01/attempt03/murderbird-supervised-builder.blend",
+        "native_sha256": "01103e35bcf16f03fc4a7b7d157bbe89d7267b8d0ca5ca8cd3f6167a6fcb8fce",
+        "source_path": "assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend",
+        "source_sha256": "9ba7fc471a86e5f1f9b8db881900725f8abf56546c69fecb125a236ec5b4a64c"
+      },
+      "decision_question": "Which source-specific construction gains can be retained; do current operators still block coherent photoreal likeness?",
+      "acceptance_criteria": [
+        "Artifact and native/source preservation are independently hash-verifiable.",
+        "Before/candidate renders are comparable by camera, lighting, settings and source aspect ratio.",
+        "Texture paths and hashes resolve without basename ambiguity; static export carries texture, normal and UV data.",
+        "Claims remain limited to the Advanced development build; this review cannot establish final likeness, three-era delivery, release or owner acceptance."
+      ],
+      "evidence_status": {
+        "manifest_and_receipt_checks": "live",
+        "native_blend_inspection": "live (Blender 5.2.1 LTS CLI)",
+        "image_comparison": "analytical (direct visual inspection of pinned source, baseline and candidate PNGs)",
+        "three_era_runtime_or_release": "not-run",
+        "owner_acceptance": "not-run"
+      },
+      "claims": [
+        {
+          "claim_id": "CLM-01",
+          "claim": "The frozen candidate, its listed sources, and native cycle03 file match their recorded identities; the 2b input source is preserved separately.",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "frozen-artifact.json",
+            "candidate receipt.json",
+            "attempt03 native .blend",
+            "2b input .blend"
+          ],
+          "status": "supported",
+          "consequence": "Wrong provenance could invalidate retention decisions.",
+          "next_test": "None for these exact file identities."
+        },
+        {
+          "claim_id": "CLM-02",
+          "claim": "Attempt03 and attempt03-baseline use the same input SHA, camera/light definitions, render settings, and 1100x732 output aspect; output aspect 1.5027 closely matches the locked composite aspect 1.5006.",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "both builder receipt.json files",
+            "four canon PNG dimensions",
+            "locked composite dimensions"
+          ],
+          "status": "supported",
+          "consequence": "A false match would weaken visual before/after comparison.",
+          "next_test": "For future source matching, calibrate/crop source framing; receipts explicitly say reference registration is estimated, not calibrated."
+        },
+        {
+          "claim_id": "CLM-03",
+          "claim": "The texture receipts support 63 checked map hashes; the exported static GLB contains normal and TEXCOORD_0 attributes on all nine primitives.",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "surface-provenance.json",
+            "finish02-builder-receipt.json",
+            "GLB embedded image chunks and primitive attributes",
+            "Blender material slot and UV inspection"
+          ],
+          "status": "supported",
+          "consequence": "Missing maps or attributes could break downstream appearance/detail.",
+          "next_test": "Browser renderer parity remains untested."
+        },
+        {
+          "claim_id": "CLM-04",
+          "claim": "The candidate shows retainable localized head/neck, shell and body construction changes, but does not yet form a coherent photoreal likeness to the pinned full-bird and head references.",
+          "claim_type": "interpretation",
+          "evidence_ids": [
+            "paired canon-neutral/workshop/head-neck renders",
+            "locked Sept 22 composite",
+            "July head reference"
+          ],
+          "status": "provisional",
+          "consequence": "Overstating likeness could promote a visibly unfinished study.",
+          "next_test": "Correct source-aligned head identity, surface richness/warmth and full-bird framing, then compare the same registered views."
+        }
+      ],
+      "results": {
+        "hashes": "All 23 manifest entries verified. The attempt03 receipt records source input SHA 9ba7fc...a64c; that 2b source file still hashes to that value. The attempt03 native Blender file hashes to 01103e...b8fce, distinct from the separately preserved attempt02 file.",
+        "render_controls": "Baseline and candidate receipts match exactly for cameras, lighting and render settings. Both record estimated, not calibrated, reference registration. Locked composite 1280x853 (aspect 1.500586); comparison renders 1100x732 (1.502732); source aspect is therefore close, though the source framing is not calibrated.",
+        "texture_and_export": "49 surface texturePaths exist and match their named hashes. The finish02 receipt's 14 hashes match same-named embedded GLB image payloads. Total checked = 63/63. GLB has 23 embedded images (the remaining two are inherited machinery maps); all nine exported primitives have POSITION, NORMAL and TEXCOORD_0. Blender inspection found UV layers on 6611/6611 meshes and visible slot family distribution including worn-bronze 844, black-iron 570, machined-steel 532, breast-armor 312, forged-steel 136, head-armor 116 and wing-armor 92 objects. This supports material family routing and data coverage, not rendered pixel parity.",
+        "visual_evidence": "Candidate changes are legible in the same-camera pairs and preserve a recognizable mechanical bird silhouette. Against the locked full-bird reference, the candidate remains substantially simpler, flatter/darker and less richly layered; the reference's detailed compact feather-like armor, warm patinated metal and densely integrated avian head are not yet coherently reproduced. The July head reference remains a separate head-identity control."
+      },
+      "material_gaps": [
+        "The head still lacks convincing source-specific facial integration and detailed layered surface character in matched views.",
+        "Full-bird render remains materially short of the pinned source's rich warm surface response and dense armor layering.",
+        "Registration is estimated and no browser render comparison has been run; GLB data presence does not prove browser pixel parity."
+      ],
+      "roles": {
+        "evidence_reviewer": {
+          "status": "completed",
+          "independence_limit": "Single reviewer; conclusions do not substitute for outcome, safety, disruptor, negotiator or owner review."
+        },
+        "outcome_reviewer": {
+          "status": "not-run"
+        },
+        "safety_portability_reviewer": {
+          "status": "not-run"
+        },
+        "disruptor": {
+          "status": "not-run"
+        },
+        "negotiator": {
+          "status": "not-run"
+        }
+      },
+      "decision": "approve-with-limits",
+      "rationale": "Retain source-specific changes for continued Advanced development only: frozen identities, matched before/candidate controls, texture hashes, material slot assignment and static GLB normal/UV coverage are supported. Current visual evidence does not support coherent photoreal likeness or any full-goal, three-era, browser-parity, release or owner-acceptance claim.",
+      "follow_up": "Use the largest blocking visual gap for the next bounded correction; preserve current native and source hashes. Re-evaluate with registered same-camera images and separately inspect browser rendering before making runtime-parity claims.",
+      "output_path": "/tmp/cg-qa03-evidence.json"
+    },
+    {
+      "schema_version": "1.0",
+      "review_protocol": "equilibrium-v1",
+      "role": "outcome-reviewer",
+      "artifact": {
+        "path": "assets/audit/cg-supervised01/attempt03/frozen-artifact.json",
+        "sha256": "128baa37a6c49a6947c45b985364a62b48c445a4d883dae932f6f59a53436989",
+        "version": "supervised-cycle03"
+      },
+      "goal": {
+        "path": "goal.md",
+        "sha256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+        "last_updated": "2026-10-04T04:26:19.270994+00:00",
+        "goal_last_commit": "04d0e1b49f700d277e15de5481fcf7b859dda4d0",
+        "checkout_head": "fa4be1088637f047823c75c6e9ce5afe78d45f50",
+        "authority": "Current working-branch owner continuation supersedes older budget stops; cached origin/main is older."
+      },
+      "decision_question": "Which visible construction gains merit retention, and does attempt03 achieve the full source likeness target?",
+      "acceptance_criteria": [
+        "Full-bird and July-head scoped likeness",
+        "Coherent head-neck-body silhouette and compact folded shield",
+        "Dense readable metal construction and regional worn finish across full bird",
+        "Visible gain at fixed before/candidate views"
+      ],
+      "decision": "revise-and-retest",
+      "protocol_decision": "reject",
+      "full_target": false,
+      "evidence_status": "analytical",
+      "sources": {
+        "N": "assets/audit/cg-supervised01/attempt03/builder/canon-neutral.png",
+        "W": "assets/audit/cg-supervised01/attempt03/builder/canon-workshop.png",
+        "H": "assets/audit/cg-supervised01/attempt03/builder/head-neck.png",
+        "S": "assets/audit/cg-supervised01/attempt03/builder/side-profile.png",
+        "BN": "assets/audit/cg-supervised01/attempt03-baseline/builder/canon-neutral.png",
+        "BW": "assets/audit/cg-supervised01/attempt03-baseline/builder/canon-workshop.png",
+        "BH": "assets/audit/cg-supervised01/attempt03-baseline/builder/head-neck.png",
+        "BS": "assets/audit/cg-supervised01/attempt03-baseline/builder/side-profile.png",
+        "F": "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+        "J": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"
+      },
+      "all_ten_image_hashes_verified": true,
+      "retained_gains": [
+        {
+          "claim": "The recessed circular optic and opened mechanical cheek are closer to July head identity; keep their direction while correcting surrounding forms.",
+          "evidence_ids": [
+            "BH",
+            "H",
+            "J"
+          ]
+        },
+        {
+          "claim": "Shoulder layering is more readable, exposed neck/chest hardware increases, and larger curved claws improve foot presence. Gains remain partial.",
+          "evidence_ids": [
+            "BN",
+            "N",
+            "BW",
+            "W",
+            "BS",
+            "S",
+            "F"
+          ]
+        }
+      ],
+      "top3_actionable_gaps": [
+        {
+          "claim_id": "OUT-01",
+          "claim_type": "interpretation",
+          "status": "supported",
+          "claim": "Head volume reads as a flat segmented helmet and broad side panel; the crown is pale and slablike, the bill lacks the source\u2019s long forward hooked mass, and rear feathers look like thin cutouts.",
+          "evidence_ids": [
+            "H",
+            "S",
+            "J",
+            "F"
+          ],
+          "consequence": "Head identity and threatening presence remain materially short of canon.",
+          "next_test": "Rebuild a volumetric hooked bill and swept layered crown around retained optic/cheek landmarks; compare July-head and full-bird views under both fixed lights."
+        },
+        {
+          "claim_id": "OUT-02",
+          "claim_type": "interpretation",
+          "status": "supported",
+          "claim": "Neck-to-breast continuity remains a narrow exposed ribbon entering a broad smooth plated chest; large collar rings look appended. The source has nested armor and machinery that merge head, throat, shoulder and breast into one character.",
+          "evidence_ids": [
+            "H",
+            "N",
+            "S",
+            "F"
+          ],
+          "consequence": "More components do not create coherent source construction.",
+          "next_test": "Integrate throat plates and machinery into the chest envelope, replace isolated ring accents with layered junctions, and retest the full silhouette plus neck close-up."
+        },
+        {
+          "claim_id": "OUT-03",
+          "claim_type": "interpretation",
+          "status": "supported",
+          "claim": "The full bird still reads as dark simplified armor: shield plates have rounded scalloped edges, machinery is sparse, leg bars remain plain, and enlarged feet read as smooth tubes. Worn metal variation is weaker than canon; workshop light does not resolve it.",
+          "evidence_ids": [
+            "N",
+            "W",
+            "S",
+            "F"
+          ],
+          "consequence": "Photoreal mechanical density and finish remain absent at character scale.",
+          "next_test": "Sharpen and vary compact shield overlaps; add source-directed exposed leg/foot layered construction and regional metal wear, retaining stance and improved claw envelope. Retest neutral and workshop full-body images."
+        }
+      ],
+      "independence": {
+        "reviewer": "Codex GPT-6 family; exact model unavailable",
+        "other_qa_read": false,
+        "method_audit_read": false,
+        "repository_edits": false,
+        "children_spawned": false,
+        "source_limit": "Shared frozen source set; memory used only for evidence-boundary guidance, superseded sequencing checked against current goal."
+      },
+      "limitations": [
+        "One Advanced static build only; three-era delivery, browser parity, eight-angle coverage and animation were not assessed.",
+        "Before/candidate views are comparable; source camera calibration is not claimed.",
+        "No count/hash result establishes likeness. Owner artistic acceptance remains separate."
+      ],
+      "follow_up_owner": "chief architect/integrator",
+      "review_expiry_trigger": "Any source, geometry, material, camera or lighting change requires new frozen images."
+    },
+    {
+      "review_id": "cg-qa03-safety",
+      "role": "safety_portability",
+      "review_status": "live",
+      "evidence_tier": "confirmed for inspected bytes and native reopen; analytical for boundary interpretation",
+      "artifact": {
+        "path": "assets/audit/cg-supervised01/attempt03/frozen-artifact.json",
+        "sha256": "128baa37a6c49a6947c45b985364a62b48c445a4d883dae932f6f59a53436989",
+        "manifest_files": 23,
+        "all_manifest_hashes_verified": true
+      },
+      "decision_question": "Are attempt03 inputs preserved and provenance/status bounded, is native editability distinct from static export, and are private/runtime publication boundaries respected?",
+      "criteria": [
+        "preserve and hash-pin inputs",
+        "distinguish editable native source from static browser export",
+        "do not imply approval, open rights, browser parity, or release",
+        "keep private/archive material outside public runtime"
+      ],
+      "findings": [
+        {
+          "claim_id": "S-01",
+          "claim": "Attempt03 identifies and preserves its source input.",
+          "status": "supported",
+          "evidence": "Receipt names assets/models/cinematic-cg-milestone02b/murderbird-cg-2b-builder.blend, gives SHA-256 9ba7fc471a86e5f1f9b8db881900725f8abf56546c69fecb125a236ec5b4a64c; current source hash matches; receipt says input_preserved=true."
+        },
+        {
+          "claim_id": "S-02",
+          "claim": "The native artifact is independently editable; GLB is a separate static export.",
+          "status": "supported-with-limits",
+          "evidence": "Blender 5.2.1 opened the frozen .blend: 6,624 objects, 6,611 meshes, one scene, 47 packed images; only Render Result is unpacked. Receipt describes GLB as static review only and disclaims animation/hierarchy parity. This verifies reopenability, not a manual edit/save round trip or browser parity."
+        },
+        {
+          "claim_id": "S-03",
+          "claim": "Attempt03 is not owner-approved or release-ready by implication.",
+          "status": "supported",
+          "evidence": "Frozen manifest excludes final likeness, three-era delivery, browser parity, release. Receipt says artistic_acceptance=not claimed. NOTICE reserves MurderBird creative content; MIT covers code only."
+        },
+        {
+          "claim_id": "S-04",
+          "claim": "No attempt03 artifact is in the public runtime inputs inspected.",
+          "status": "supported-with-limits",
+          "evidence": "Manifest paths place source, exports, audit renders, scripts, and receipt under assets/ and scripts/; public/ listing has no attempt03 path; rg found no src/public references. No build or dist inspection was run; this does not certify a future build or deployment."
+        }
+      ],
+      "limits": [
+        "Rights remain all-reserved for creative content; no new license or publication authorization inferred.",
+        "No private archive was accessed; none is part of the frozen manifest.",
+        "npm/build intentionally not run because production code was untouched; no build failure is alleged.",
+        "Owner artistic acceptance remains separate and pending."
+      ],
+      "decision": "approve-with-limits",
+      "rationale": "Inspected preservation, provenance pins, Blender native reopenability, static-export scope, and current path boundaries are adequately evidenced for this safety review. Approval is limited to those claims and does not accept likeness, browser behavior, build output, deployment, or release.",
+      "follow_up": "Before any release, perform the repository-required build and inspect complete dist output and referenced URLs; require separate owner artistic review and explicit release authorization.",
+      "owner_acceptance": "not assessed; not claimed",
+      "sources_read": [
+        "goal.md",
+        "AGENTS.md",
+        "NOTICE.md",
+        "docs/repository-boundaries.md",
+        ".agents/skills/okhp3-equilibrium-review/SKILL.md",
+        ".agents/skills/okhp3-equilibrium-review/references/review-protocol.md",
+        "frozen-artifact.json",
+        "attempt03/builder/receipt.json"
+      ],
+      "outputs": {
+        "review_record": "/tmp/cg-qa03-safety.json",
+        "repository_modified": false
+      }
+    }
+  ],
+  "concordance": "disagreement: outcome revise-and-retest; evidence and safety approve-with-limits for development",
+  "disruptor": {
+    "triggered": false,
+    "reason": "Initial reviewers disagree, so protocol routes directly to negotiator",
+    "authority": "none",
+    "test_results": []
+  },
+  "negotiator": {
+    "triggered": true,
+    "role": "root architect",
+    "decision": "revise-and-retest",
+    "decisive_evidence": [
+      "All23 freeze hashes and63 texture hashes pass at exact paths",
+      "Independent outcome pixels reject flat crown, disconnected collar/breast, sparse mechanical density",
+      "Absolute-path Blender native reopened with stable render; source preservation is distinct from artistic success"
+    ],
+    "retain": [
+      "Editable source-registered bill/jaw contours as landmark guides",
+      "Curved neck, compact shield envelope, foot03 volume",
+      "Explicit per-slot family routing and material-faithful static batch export as technical infrastructure"
+    ],
+    "revise": [
+      "Head cross-section volume and real recessed optic",
+      "Body locally formed plates and buried shoulder connection",
+      "Finish color encoding and actual native/browser appearance"
+    ],
+    "unresolved_items": [
+      "Full source likeness",
+      "Complete three-era delivery",
+      "Matched browser/native appearance and fallback",
+      "Owner acceptance"
+    ]
+  },
+  "release_decision": "defer-for-evidence",
+  "limitations": [
+    "Advanced development checkpoint only",
+    "No runtime promotion, deployment, fabrication or owner acceptance",
+    "Actual Chrome WebGL03 loaded without console warnings/errors; neutral appearance darker than native under different rigs, so pixel parity not claimed"
+  ],
+  "follow_up": [
+    "Cycle04 replaces planar/card head and common smooth body leaf operators with independently bounded workers",
+    "Encoding worker checks raw-linear PNG writing separately from geometry",
+    "New matched whole-character render before further detailed correction"
+  ]
+}

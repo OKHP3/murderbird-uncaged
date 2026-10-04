@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "role": "outcome-reviewer",
+  "artifact": {
+    "path": "assets/audit/cg-supervised01/attempt03/frozen-artifact.json",
+    "sha256": "128baa37a6c49a6947c45b985364a62b48c445a4d883dae932f6f59a53436989",
+    "version": "supervised-cycle03"
+  },
+  "goal": {
+    "path": "goal.md",
+    "sha256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+    "last_updated": "2026-10-04T04:26:19.270994+00:00",
+    "goal_last_commit": "04d0e1b49f700d277e15de5481fcf7b859dda4d0",
+    "checkout_head": "fa4be1088637f047823c75c6e9ce5afe78d45f50",
+    "authority": "Current working-branch owner continuation supersedes older budget stops; cached origin/main is older."
+  },
+  "decision_question": "Which visible construction gains merit retention, and does attempt03 achieve the full source likeness target?",
+  "acceptance_criteria": [
+    "Full-bird and July-head scoped likeness",
+    "Coherent head-neck-body silhouette and compact folded shield",
+    "Dense readable metal construction and regional worn finish across full bird",
+    "Visible gain at fixed before/candidate views"
+  ],
+  "decision": "revise-and-retest",
+  "protocol_decision": "reject",
+  "full_target": false,
+  "evidence_status": "analytical",
+  "sources": {
+    "N": "assets/audit/cg-supervised01/attempt03/builder/canon-neutral.png",
+    "W": "assets/audit/cg-supervised01/attempt03/builder/canon-workshop.png",
+    "H": "assets/audit/cg-supervised01/attempt03/builder/head-neck.png",
+    "S": "assets/audit/cg-supervised01/attempt03/builder/side-profile.png",
+    "BN": "assets/audit/cg-supervised01/attempt03-baseline/builder/canon-neutral.png",
+    "BW": "assets/audit/cg-supervised01/attempt03-baseline/builder/canon-workshop.png",
+    "BH": "assets/audit/cg-supervised01/attempt03-baseline/builder/head-neck.png",
+    "BS": "assets/audit/cg-supervised01/attempt03-baseline/builder/side-profile.png",
+    "F": "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+    "J": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png"
+  },
+  "all_ten_image_hashes_verified": true,
+  "retained_gains": [
+    {
+      "claim": "The recessed circular optic and opened mechanical cheek are closer to July head identity; keep their direction while correcting surrounding forms.",
+      "evidence_ids": [
+        "BH",
+        "H",
+        "J"
+      ]
+    },
+    {
+      "claim": "Shoulder layering is more readable, exposed neck/chest hardware increases, and larger curved claws improve foot presence. Gains remain partial.",
+      "evidence_ids": [
+        "BN",
+        "N",
+        "BW",
+        "W",
+        "BS",
+        "S",
+        "F"
+      ]
+    }
+  ],
+  "top3_actionable_gaps": [
+    {
+      "claim_id": "OUT-01",
+      "claim_type": "interpretation",
+      "status": "supported",
+      "claim": "Head volume reads as a flat segmented helmet and broad side panel; the crown is pale and slablike, the bill lacks the source\u2019s long forward hooked mass, and rear feathers look like thin cutouts.",
+      "evidence_ids": [
+        "H",
+        "S",
+        "J",
+        "F"
+      ],
+      "consequence": "Head identity and threatening presence remain materially short of canon.",
+      "next_test": "Rebuild a volumetric hooked bill and swept layered crown around retained optic/cheek landmarks; compare July-head and full-bird views under both fixed lights."
+    },
+    {
+      "claim_id": "OUT-02",
+      "claim_type": "interpretation",
+      "status": "supported",
+      "claim": "Neck-to-breast continuity remains a narrow exposed ribbon entering a broad smooth plated chest; large collar rings look appended. The source has nested armor and machinery that merge head, throat, shoulder and breast into one character.",
+      "evidence_ids": [
+        "H",
+        "N",
+        "S",
+        "F"
+      ],
+      "consequence": "More components do not create coherent source construction.",
+      "next_test": "Integrate throat plates and machinery into the chest envelope, replace isolated ring accents with layered junctions, and retest the full silhouette plus neck close-up."
+    },
+    {
+      "claim_id": "OUT-03",
+      "claim_type": "interpretation",
+      "status": "supported",
+      "claim": "The full bird still reads as dark simplified armor: shield plates have rounded scalloped edges, machinery is sparse, leg bars remain plain, and enlarged feet read as smooth tubes. Worn metal variation is weaker than canon; workshop light does not resolve it.",
+      "evidence_ids": [
+        "N",
+        "W",
+        "S",
+        "F"
+      ],
+      "consequence": "Photoreal mechanical density and finish remain absent at character scale.",
+      "next_test": "Sharpen and vary compact shield overlaps; add source-directed exposed leg/foot layered construction and regional metal wear, retaining stance and improved claw envelope. Retest neutral and workshop full-body images."
+    }
+  ],
+  "independence": {
+    "reviewer": "Codex GPT-6 family; exact model unavailable",
+    "other_qa_read": false,
+    "method_audit_read": false,
+    "repository_edits": false,
+    "children_spawned": false,
+    "source_limit": "Shared frozen source set; memory used only for evidence-boundary guidance, superseded sequencing checked against current goal."
+  },
+  "limitations": [
+    "One Advanced static build only; three-era delivery, browser parity, eight-angle coverage and animation were not assessed.",
+    "Before/candidate views are comparable; source camera calibration is not claimed.",
+    "No count/hash result establishes likeness. Owner artistic acceptance remains separate."
+  ],
+  "follow_up_owner": "chief architect/integrator",
+  "review_expiry_trigger": "Any source, geometry, material, camera or lighting change requires new frozen images."
+}
