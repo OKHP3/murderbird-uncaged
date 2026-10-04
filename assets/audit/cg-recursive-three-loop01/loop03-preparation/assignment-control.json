@@ -20,5 +20,39 @@
     "root_adjudication_sha256": "fe14f004acfd0a076874d6d6c0882d05c3bb54ce7d38991031033b9a0720c718",
     "receiving_sha256": "646b247181160aef105c8e0a43424707b8d317a11c80b48999ae38a3b3c47950",
     "mandatory_pause_after_firstactual": true
-  }
+  },
+  "later_assignments": [
+    {
+      "at": "2026-10-04T20:13Z",
+      "type": "verifier-only correction",
+      "record": "finish04-corrected/verifier-correction03.json"
+    },
+    {
+      "at": "2026-10-04T20:16Z",
+      "type": "explicit firstcheckpointwindow correction, original19:58start",
+      "record": "finish04-corrected/checkpoint-window-correction.json"
+    },
+    {
+      "at": "2026-10-04T20:25Z",
+      "type": "visual02 normal-only controlledcorrection",
+      "cap": 10000000,
+      "first_builder_hard_stop": "20:45Z",
+      "complete": "20:28Z",
+      "root_gate": "../loop03/early-trial02/root-builder-gate.json"
+    },
+    {
+      "at": "2026-10-04T20:34Z",
+      "type": "remaining28views and3nativecopies ONLY, no designchange",
+      "deadline": "2026-10-04T21:00:00Z",
+      "cap": 12000000,
+      "agent": "recursive_finish"
+    },
+    {
+      "at": "2026-10-04T20:27Z",
+      "type": "independent saved-binding technicalread-only test, not artisticQA",
+      "agent": "process_assessment",
+      "deadline": "20:40Z",
+      "cap": 3000000
+    }
+  ]
 }
