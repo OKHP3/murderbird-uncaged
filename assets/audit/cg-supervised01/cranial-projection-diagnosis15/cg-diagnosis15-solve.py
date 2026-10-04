@@ -1,0 +1,32 @@
+import json,numpy as np,sys,hashlib
+from pathlib import Path
+sys.path.insert(0,'/tmp/cg-head13-scipy')
+from scipy.optimize import linprog,minimize
+R=Path('/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged');V=json.loads(Path('/tmp/cg-diagnosis15-actual-envelope.json').read_text());rows=json.loads((R/'assets/audit/cg-supervised-head12/projection-feasibility.json').read_text())['affine_projection_rows'];old=json.loads((R/'assets/audit/cg-supervised-head12/attempt02/curved-optic-landmark-receipt.json').read_text())['cameras'];names=['after-clay-source-full-bird','after-clay-head-profile']; A=np.vstack([np.array(rows[n]['A_pixel_per_head_local_m']) for n in names]);b=np.concatenate([rows[n]['b_pixels'] for n in names]);E=np.concatenate([old[n]['actual_optic_center_px'] for n in names]);D=np.repeat([old[n]['evaluated_seat_major_diameter_px'] for n in names],2);M=-A/D[:,None];c=(E-b)/D
+lo=np.array([1.,1.12,.8,.9]);hi=np.array([1.5,1.45,1.6,1.5]);G=np.vstack([M,-M]);h=np.r_[hi-c,c-lo];bounds=[(-.159,.159),(-.16,.3),(-.05,.22)]
+res=linprog([0,0,0],A_ub=G,b_ub=h,bounds=bounds,method='highs'); print('FEAS',res.success,res.message)
+# Find least lateral departure compatible with modest target bands.
+ranges=[]
+for i in range(3):
+ z=np.zeros(3);z[i]=1;mn=linprog(z,A_ub=G,b_ub=h,bounds=bounds,method='highs');mx=linprog(-z,A_ub=G,b_ub=h,bounds=bounds,method='highs');ranges.append([mn.fun if mn.success else None,-mx.fun if mx.success else None])
+target=np.array([1.14,1.33,1.38,1.18]); fit=minimize(lambda p:float(np.sum(((M@p+c)-target)**2)+.003*(p[0]/.159)**2),[-.12,.16,.18],constraints=[{'type':'ineq','fun':lambda p:h-G@p}],bounds=bounds,method='SLSQP',options={'ftol':1e-12,'maxiter':100});p=fit.x
+for x in [-.03,-.075,-.1,-.125,-.159,0.]:
+ s=linprog([0,0,0],A_ub=G,b_ub=h,bounds=[(x,x),bounds[1],bounds[2]],method='highs');print('fixed x',x,s.success,s.x if s.success else '')
+print('point',p,'ratios',M@p+c,'ranges',ranges)
+visible={n:np.array(v) for n,v in V['visible_head_vertices'].items()}; baseline={}
+for j,n in enumerate(names):
+ a=A[j*2:j*2+2];bb=b[j*2:j*2+2];top=[]
+ for owner,v in visible.items():
+  if owner.startswith('CGH13'):continue
+  px=v@a.T+bb;i=np.argmin(px[:,1]);top.append({'owner':owner,'px':px[i].tolist(),'local':v[i].tolist(),'ratios':((E[j*2:j*2+2]-px[i])/D[j*2:j*2+2]).tolist()})
+ baseline[n]=sorted(top,key=lambda q:q['px'][1])[:5]
+# One sparse conceptual point organization. All proposed points obey two projected affine ceilings.
+# Central roof should be lower and more anterior, and near blade physically owns apex.
+points={'near_crest_apex':p.tolist(),'near_crest_rear_support':(p+np.array([.012,-.022,-.017])).tolist(),'near_crest_front_join':[-.10,.08,.105],'central_roof_posterior':[0,.11,.13],'central_roof_anterior':[0,-.02,.083],'far_crest_apex':[.105,.105,.12],'near_brow':[-.141,.0146,.0836],'far_brow':[.141,.0146,.0728],'bill_root':[-.084,-.0838,.0368]}
+projections={n:{k:{'px':(A[j*2:j*2+2]@np.array(q)+b[j*2:j*2+2]).tolist(),'ratios':(M[j*2:j*2+2]@np.array(q)+c[j*2:j*2+2]).tolist()} for k,q in points.items()} for j,n in enumerate(names)}
+# Sloped envelope prior from HEAD13, declared whole crest band controls full height.
+ceiling={}
+for n,ps in projections.items():
+ ceiling[n]=min(ps,key=lambda k:ps[k]['px'][1])
+result={'status':'PLAUSIBLE_ANALYTIC_POINT_ORGANIZATION_NOT_FINISHED_SURFACE','reviewed_main_sha':'251f2f0243181e97140179c2aff6eb057e165438','frame_and_optic_immutable':True,'source_hashes':{n:hashlib.sha256((R/n).read_bytes()).hexdigest() for n in ['assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg','context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png']},'matrix':A.tolist(),'offset':b.tolist(),'actual_optic_centers_px':E.reshape(2,2).tolist(),'actual_seat_major_diameters_px':D[::2].tolist(),'bands_whole_posterior_height_profile_posterior_height':[lo.tolist(),hi.tolist()],'feasible':bool(res.success),'chosen_apex_head_local_m':p.tolist(),'chosen_apex_ratios':(M@p+c).tolist(),'feasible_xyz_ranges_m':ranges,'actual_near_optic_glass_local_bbox':V['optics']['CGH05 recessed optical glass L'],'lateral_bound_basis':'actual near/far current CGH05 evaluated glass envelope ±.159m; retained visible original head x range −.1699166 to+.1716648m; lower/upper head slice not an assumed central30mm cap','frozen_original_retained_top5':baseline,'hypothetical_points':points,'hypothetical_projections':projections,'hypothetical_highest_point_owner':ceiling,'proposed_mesh_ceiling':'ALL future roof/crest/brow evaluated vertices must satisfy pixel_y>=near_apex_pixel_y in BOTH frozen projections; localized blade apex must win full visible head including retained originals. Points/straight edges obey affine halfspaces; subdivided surface not tested.','source_landmark_identity':'INFERRED: source highest pixel likely a localized near-facing swept blade, not proven centerline anatomical roof. Roof symmetry and opposite blade inferred; source cameras unknown. July target bands soft.','nonfinite_hidden_meshes':'Extraction found hidden older CGH04 evaluated glass NaNs; excluded from render-visible math. No baseline edits.','checks_not_run':['No hypothetical Blender render','No continuous visibility or hypothetical lens ray exclusion','No finished surface regularity or owner likeness acceptance'],'frozen_hashes_before':V['sha_before'],'frozen_hashes_after':{n:hashlib.sha256(Path(n).read_bytes()).hexdigest() for n in V['sha_before']},'smallest_head15_brief':['Retain receiving06 head frame, optic centers/seats, bill, pose and fixed cameras unchanged. New guide points may be revised.','Replace inherited continuous long roof/brim with compact central roof below two localized swept crest blades. Start near apex at solved point as proposal.','Near blade should own whole/profile upper envelope; opposite blade and brow kept beneath near apex in all evaluated vertices, then independently inspect far/profile/front/grazing.','Avoid deforming entire posterior crown to carry one landmark; adjust local blade y/z/x independently within actual envelope and use sparse smooth supports.','Render clay and wire at actual frozen whole/profile cameras before PBR; dense curved-lens baseline first-hit and full original retained upper-envelope checks gate further work.']}
+Path('/tmp/cg-cranial-projection-diagnosis15.json').write_text(json.dumps(result,indent=2));print('DONE')
