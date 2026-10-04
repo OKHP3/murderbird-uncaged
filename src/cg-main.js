@@ -102,6 +102,7 @@ async function load() {
       onContextLost: () => { unload(); failed = true; preferNative = true; host.style.visibility = ''; display(); status.textContent = '3D graphics context was lost. The exact native render remains available; retry to reload 3D.'; },
     });
     if (current !== generation) { loaded.dispose(); return; }
+    loaded.setLighting(lighting);
     viewer = loaded; host.style.visibility = ''; loading = false; preferNative = false; display(); showStatus();
   } catch (error) {
     if (current !== generation) return;
