@@ -28,6 +28,20 @@ try {
   }
   await page.evaluate(() => scrollTo(0, 0)); await screenshot('desktop-native');
   check('Original references and all default comparison/progress images visibly load on scroll');
+  // A large model download can outlive several lighting selections.
+  let releaseDownload, markRequested;
+  const heldDownload = new Promise(resolve => { releaseDownload = resolve; });
+  const modelRequested = new Promise(resolve => { markRequested = resolve; });
+  const delayedModel = '**/cg/retained04/builder/murderbird-recursive-builder.glb';
+  await page.route(delayedModel, async route => { markRequested(); await heldDownload; await route.continue(); });
+  await page.locator('#cg-load').click(); await modelRequested;
+  await page.locator('[data-light="exhibit"]').click();
+  assert.equal(await page.locator('[data-light="exhibit"]').getAttribute('aria-pressed'), 'true');
+  releaseDownload();
+  await page.waitForFunction(() => document.querySelector('#cg-webgl').dataset.cg && !document.querySelector('#cg-webgl').hidden, null, { timeout: 90000 });
+  assert.equal(JSON.parse(await page.locator('#cg-webgl').getAttribute('data-cg')).lighting, 'exhibit', 'Completed model must use the latest lighting selected during download');
+  await page.unroute(delayedModel);
+  check('Delayed model completion applies the lighting selected during its download');
   for (const selected of ['builder', 'maker', 'mechanic']) {
     await page.locator('#cg-era').selectOption(selected); await nativeReady(selected);
     assert.equal(await page.locator('#cg-webgl canvas').count(), 0, 'Previous model must be disposed when era changes');
