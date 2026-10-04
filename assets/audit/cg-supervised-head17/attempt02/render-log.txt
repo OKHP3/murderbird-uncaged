@@ -1,0 +1,35 @@
+00:01.791  blend            | Read blend: "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/models/cg-supervised01/attempt06/murderbird-supervised-builder.blend"
+00:12.320  bpy.rna          | WARNING current value '-1' matches no enum in 'ColorManagedInputColorspaceSettings', '(null)', 'name'
+/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/scripts/cg-supervised-head17.py:91: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  return {'objects':{o.name:digest(o) for o in s.objects if o.type in ['MESH','EMPTY']},'images':{i.name:{'file':i.filepath,'size':list(i.size),'source':i.source,'colorspace':i.colorspace_settings.name,'props':properties(i),'fake_user':i.use_fake_user,'packed':hashlib.sha256(bytes(i.packed_file.data)).hexdigest() if i.packed_file else None} for i in bpy.data.images},'materials':{m.name:hashlib.sha256(repr([properties(m),m.diffuse_color[:],m.use_nodes,[(n.name,n.type,[(i.name,val(i.default_value)) for i in n.inputs if hasattr(i,'default_value')],n.image.name if n.type=='TEX_IMAGE' and n.image else None,properties(n)) for n in m.node_tree.nodes] if m.use_nodes else [],[(l.from_node.name,l.from_socket.name,l.to_node.name,l.to_socket.name) for l in m.node_tree.links] if m.use_nodes else []]).encode()).hexdigest() for m in bpy.data.materials},'visibility':{o.name:[o.hide_render,o.hide_get()] for o in s.objects if o.type in ['MESH','EMPTY']}}
+00:15.301  blend            | Read blend: "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/layered-head17.blend"
+Info: Saved as "layered-head17.blend"
+HEAD17_EARLY_PRESERVATION {'objects': 7424, 'materials': 56, 'image_ids': 161, 'packed': {'receiving_images': 160, 'missing': [], 'changed': []}, 'payload_changes': [], 'material_changes': [], 'image_changes': [], 'file_image_ids': 160, 'transient_viewer_ids': ['Render Result']}
+/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/scripts/cg-supervised-head17.py:106: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  clay=bpy.data.materials.new('CGH17 diagnostic clay');clay.use_nodes=True;bs=clay.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.42,.42,.42,1);bs.inputs['Roughness'].default_value=.75
+00:32.207  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-clay-source-full-bird.png'
+HEAD17_RENDERED after-clay-source-full-bird
+00:36.131  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-pbr-source-full-bird.png'
+HEAD17_RENDERED after-pbr-source-full-bird
+00:37.954  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-clay-head-profile.png'
+HEAD17_RENDERED after-clay-head-profile
+00:40.023  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-pbr-head-profile.png'
+HEAD17_RENDERED after-pbr-head-profile
+HEAD17_FIRST_PAIR_COMPLETE
+00:42.647  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-clay-head-grazing.png'
+HEAD17_RENDERED after-clay-head-grazing
+00:45.633  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-pbr-head-grazing.png'
+HEAD17_RENDERED after-pbr-head-grazing
+00:47.454  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-clay-head-far-profile.png'
+HEAD17_RENDERED after-clay-head-far-profile
+00:49.503  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-pbr-head-far-profile.png'
+HEAD17_RENDERED after-pbr-head-far-profile
+00:51.929  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-clay-head-front.png'
+HEAD17_RENDERED after-clay-head-front
+00:54.652  render           | Saved: '/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-head17/attempt02/after-pbr-head-front.png'
+HEAD17_RENDERED after-pbr-head-front
+Info: Saved as "layered-head17.blend"
+HEAD17_COMPLETE
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
