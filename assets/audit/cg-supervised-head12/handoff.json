@@ -1,0 +1,61 @@
+{
+  "status": "STOPPED AFTER2; failed exterior proposal, diagnostic guide only",
+  "owned_paths": [
+    "scripts/cg-supervised-head12.py",
+    "assets/audit/cg-supervised-head12/"
+  ],
+  "main_goal_sha": "251f2f0243181e97140179c2aff6eb057e165438",
+  "first_actual_whole_profile_clay_inspected_utc": "2026-10-04T08:14:42Z",
+  "final_native_paths": {
+    "attempt01": "/Users/okh/.codex/worktrees/cg-supervised-cranial-cage12/murderbird-uncaged/assets/audit/cg-supervised-head12/attempt01/formed-head12.blend",
+    "attempt02": "/Users/okh/.codex/worktrees/cg-supervised-cranial-cage12/murderbird-uncaged/assets/audit/cg-supervised-head12/attempt02/formed-head12.blend"
+  },
+  "final_native_sha256": {
+    "attempt01": "5c4f3c862d0660dbbd51d78c54d4122c1f7b39f1e242ba896e893f274e7284c2",
+    "attempt02": "3f39277d1f74a2a6f833875dd0baabc920641ffcaf6872e6019412196e1c755b"
+  },
+  "claims": [
+    {
+      "claim": "Receiving7424 mesh/anchor payloads, original material graphs and image maps preserved in both saved copies",
+      "tier": "Confirmed",
+      "evidence": "preservation-readback.json; original hashes and final native reload",
+      "consequence_if_false": "Unsafe integration of guide; loss of source payload",
+      "next_check": "Independent frozen-native QC"
+    },
+    {
+      "claim": "No new roof/brow optical-window interception on the finite actual curved-surface samples",
+      "tier": "Confirmed",
+      "evidence": "attempt02/curved-optic-landmark-receipt.json",
+      "consequence_if_false": "Occluded optics",
+      "next_check": "Independent same-camera ray/pixel QC; front has0 baseline-window samples"
+    },
+    {
+      "claim": "A source-likeness gain is established in all cameras",
+      "tier": "Unknown",
+      "evidence": "Actual before/candidate pixels show a different guide, but whole/grazing posterior crest offsets miss proposed hierarchy; no independent acceptance",
+      "consequence_if_false": "Premature head integration",
+      "next_check": "Root independent frozen-pixel QC; no reuse as final exterior"
+    },
+    {
+      "claim": "Pose is sole blocker",
+      "tier": "Unknown",
+      "evidence": "Control geometry was manually proposed then measured; no constrained simultaneous solve or calibrated source camera",
+      "consequence_if_false": "False blame on fixed pose",
+      "next_check": "Projection feasibility/constraint residuals before further geometry proposal"
+    }
+  ],
+  "mathematical_fit": "Manually proposed then measured, NOT solved. Exact fixed-camera affine rows and control locations in projection-feasibility.json. No pose-only blocker claim.",
+  "checks_not_run": [
+    "browser/export",
+    "three-era integration",
+    "WebGL/fallback",
+    "app build",
+    "CI/deployment",
+    "animation",
+    "engineering",
+    "owner artistic acceptance"
+  ],
+  "no_push": true,
+  "no_more_modeling": true,
+  "native_save_limit": "Library-style .blend startup warning; original data/scene and sparse wire renders verified after load"
+}

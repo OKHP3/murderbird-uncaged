@@ -1,0 +1,9 @@
+{
+  "status": "Confirmed repaired by final original-image map readback in both copies",
+  "issue": "Normal native saving pruned original unused historical image IDs. They were loaded back from the immutable receiving native and explicitly serialized along with all original data. No fake-user changes were requested.",
+  "automatic_path_remap_claim_correction": "Initial hypothesis of remapped path strings was not supported by the completed restoration check: all existing path strings already matched; path edit count0 in both copies. Actual defect was missing unused image IDs.",
+  "save_method": "bpy.data.libraries.write explicit all-ID set, path_remap NONE, fake_user False",
+  "limits": "Initial all-ID write logged failure to serialize WindowManager; native file is a library-style .blend and emits startup warning. Its scene camera and all original7424 mesh/anchor payloads, original material graphs and original image IDs/path/size/colorspace/packed bytes are independently reloaded and checked. Both sparse-wire readback renders completed.",
+  "receiving_bytes_unchanged": true,
+  "final_readback": "preservation-readback.json"
+}

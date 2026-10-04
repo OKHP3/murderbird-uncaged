@@ -1,0 +1,236 @@
+{
+  "status": "NO simultaneous numerical solve ran. All controls manually proposed, then evaluated/measured at simultaneous fixed cameras. Two attempts stop; this does not isolate pose as sole blocker.",
+  "affine_projection_rows": {
+    "after-clay-source-full-bird": {
+      "A_pixel_per_head_local_m": [
+        [
+          248.95919799804688,
+          -353.6029052734375,
+          -37.16522216796875
+        ],
+        [
+          -98.00303357839584,
+          -24.633775770664215,
+          -422.1204044818878
+        ]
+      ],
+      "b_pixels": [
+        857.4288940429688,
+        112.77860116958618
+      ],
+      "form": "pixels=A*head_local_xyz+b",
+      "camera": {
+        "matrix": [
+          [
+            0.5735763907432556,
+            0.22578883171081543,
+            -0.7874195575714111,
+            -5.039484977722168
+          ],
+          [
+            -0.8191520571708679,
+            0.15809905529022217,
+            -0.5513570308685303,
+            -3.5286850929260254
+          ],
+          [
+            2.2356267947998276e-08,
+            0.9612616896629333,
+            0.27563726902008057,
+            2.734079122543335
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "scale": 2.9489879608154297,
+        "shift": [
+          -0.10094311088323593,
+          -0.02820330485701561
+        ],
+        "resolution": [
+          1280,
+          853
+        ]
+      }
+    },
+    "after-clay-head-profile": {
+      "A_pixel_per_head_local_m": [
+        [
+          0.0,
+          -947.1636295318604,
+          -99.55101013183594
+        ],
+        [
+          0.0,
+          99.55098628997803,
+          -947.163724899292
+        ]
+      ],
+      "b_pixels": [
+        402.2467613220215,
+        375.82335472106934
+      ],
+      "form": "pixels=A*head_local_xyz+b",
+      "camera": {
+        "matrix": [
+          [
+            -4.371138828673793e-08,
+            -4.371138828673793e-08,
+            -1.0,
+            -6.0
+          ],
+          [
+            -1.0,
+            1.910685676922942e-15,
+            4.371138828673793e-08,
+            -0.24576818943023682
+          ],
+          [
+            0.0,
+            1.0,
+            -4.371138828673793e-08,
+            1.6508108377456665
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "scale": 0.8399999737739563,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "resolution": [
+          800,
+          800
+        ]
+      }
+    },
+    "after-clay-head-grazing": {
+      "A_pixel_per_head_local_m": [
+        [
+          594.9476718902588,
+          -739.6106243133545,
+          -77.73633003234863
+        ],
+        [
+          -158.84900093078613,
+          -29.129409790039062,
+          -938.5883331298828
+        ]
+      ],
+      "b_pixels": [
+        401.75414085388184,
+        376.6818046569824
+      ],
+      "form": "pixels=A*head_local_xyz+b",
+      "camera": {
+        "matrix": [
+          [
+            0.6246949434280396,
+            0.16679143905639648,
+            -0.7628478407859802,
+            -5.0
+          ],
+          [
+            -0.7808688879013062,
+            0.13343308866024017,
+            -0.6102781295776367,
+            -4.245768070220947
+          ],
+          [
+            -1.7380902050945224e-08,
+            0.976921796798706,
+            0.21359722316265106,
+            3.0508108139038086
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "scale": 0.8399999737739563,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "resolution": [
+          800,
+          800
+        ]
+      }
+    }
+  },
+  "control_locations": {
+    "posterior_crest": {
+      "source_coordinate_label": [
+        635,
+        72,
+        0
+      ],
+      "head_local_m": [
+        0,
+        0.1886,
+        0.1592
+      ],
+      "cage_rings": "ring3 (8 controls), central top control3*8; evaluated named landmark snaps only within posterior crest mesh"
+    },
+    "near_brow": {
+      "source_coordinate_label": [
+        780,
+        135,
+        -0.141
+      ],
+      "head_local_m": [
+        -0.141,
+        0.0146,
+        0.0836
+      ],
+      "cage_control": "near strip station3 (6 controls)"
+    },
+    "far_brow": {
+      "source_coordinate_label": [
+        780,
+        144,
+        0.141
+      ],
+      "head_local_m": [
+        0.141,
+        0.0146,
+        0.0728
+      ],
+      "cage_control": "far strip station3 (6 controls)"
+    },
+    "foredeck_root": {
+      "source_coordinate_label": [
+        862,
+        174,
+        -0.084
+      ],
+      "head_local_m": [
+        -0.084,
+        -0.0838,
+        0.0368
+      ],
+      "cage_control": "foredeck station1 (5 controls)"
+    }
+  },
+  "subsequent_fit_proposal": "Stack whole A35 x/y and profile A0 x/y into4x3 matrix for each homologous named physical control. Solve regularized weighted least squares against source-derived approximate target intervals registered by unchanged optic E and measured seat D. July perspective is head identity and uncertainty, not exact ortho coordinates. Fixed Catmull-Clark evaluated vertices are linear weighted combinations of cage controls for fixed topology; apply envelope inequalities to ALL evaluated head vertices, not a crest maximum over new meshes.",
+  "constraints_proposal": [
+    "Whole crown physical landmark posterior roughly0.9\u20131.5D and height1.1\u20131.5D; root0.6\u20131.0D anterior and within0.25D optic height, all inferred from source pixels.",
+    "Keep near/far brow separate and bounded in local depth/width; far brow may not become projected highest point or cross near aperture silhouette. Whole and grazing full evaluated head silhouette bound must preserve posterior crest dominance.",
+    "Use proposed width regularization and neighbor smoothness, then dense actual curved-lens baseline first-hit exclusion from ALL review cameras. Ray visibility and joins are nonlinear constraints and require evaluated/pixel readback after solving.",
+    "When fixed-camera targets/width/silhouette constraints conflict, report infeasibility and residuals; do not silently rotate pose or attribute failure solely to pose."
+  ],
+  "exact_source_camera": "UNKNOWN; camera04 inferred matched comparison only",
+  "completion": "HEAD12_PROJECTION_ROWS_COMPLETE"
+}
