@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "state": "prepared-awaiting-missing-owner-allowance",
-  "production_started": false,
+  "state": "active-owner-authorized",
+  "production_started": true,
   "loops_authorized": 3,
   "loops_completed": 0,
   "authority": {
@@ -9,17 +9,43 @@
     "owner_progress_assessment": "Checkpoint09 did not complete its mission, but provided more than incremental improvement and was efficient progress.",
     "continuation": "Repeat a supervised self-improving loop three times.",
     "message_cutoff": "allowing up to",
-    "missing": ["time allowance", "aggregate token ceiling", "shared across three loops or per loop"],
+    "missing": [],
     "clarification_requested": true,
-    "original_allowance": "Eight hours ended at 2026-10-04T12:21:47Z; unused original tokens do not extend that deadline."
+    "original_allowance": "Eight hours ended at 2026-10-04T12:21:47Z; unused original tokens do not extend that deadline.",
+    "new_allowance_quote": "10 agents 10 hours 1billion tokens",
+    "allowance_scope": "Architect interpretation: shared across all three loops; owner did not state per-loop allowances.",
+    "current_authorization_record": "owner-authorization.json"
   },
   "budget": {
-    "time_limit_seconds": null,
-    "token_ceiling": null,
-    "scope": null,
+    "time_limit_seconds": 36000,
+    "token_ceiling": 1000000000,
+    "scope": "shared-across-three-loops",
     "per_agent_allocation_owner": "root architect",
     "ceiling_is_spending_target": false,
-    "accounting_limit": "Goal token accounting is not evidence of API billed tokens or currency cost."
+    "accounting_limit": "Goal token accounting is not evidence of API billed tokens or currency cost.",
+    "start_utc": "2026-10-04T14:20:42Z",
+    "deadline_utc": "2026-10-05T00:20:42Z",
+    "agent_count": 10,
+    "planned_loop_shares": [
+      {
+        "loop": 1,
+        "token_reserve": 300000000,
+        "target_latest_review_utc": "2026-10-04T17:20:42Z"
+      },
+      {
+        "loop": 2,
+        "token_reserve": 300000000,
+        "target_latest_review_utc": "2026-10-04T20:20:42Z"
+      },
+      {
+        "loop": 3,
+        "token_reserve": 300000000,
+        "target_latest_review_utc": "2026-10-04T23:20:42Z"
+      }
+    ],
+    "architect_and_closeout_reserve": 100000000,
+    "closeout_time_reserve_seconds": 3600,
+    "platform_goal_tracker": "Still holds expired unfinished eight-hour run; registration of new goal rejected. Old source target was not falsely marked complete. Architect checks current observed usage and stop flags before dispatch; local reports do not automatically enforce stops."
   },
   "baseline": {
     "branch": "codex/cg-superintendent-20261004",
@@ -28,7 +54,10 @@
     "advanced_identifier": "builder",
     "frozen_manifest": "assets/audit/cg-supervised01/attempt09/frozen-manifest.json",
     "manifest_sha256": "378a01fb9430ade08c9de4c5bcc2026f9130bda95d8d57d237390bf12e748c36",
-    "preparation_readback": {"resources_checked": 216, "mismatches": 0},
+    "preparation_readback": {
+      "resources_checked": 216,
+      "mismatches": 0
+    },
     "latest_shared_goal_commit_read": "251f2f0243181e97140179c2aff6eb057e165438",
     "target_completion": "unmet",
     "owner_assessment_scope": "Useful progress and continuation approval; final artistic likeness acceptance remains outstanding.",
@@ -38,26 +67,66 @@
   "operating_contract": {
     "maximum_active_workers": 3,
     "worker_children": false,
-    "first_whole_character_checkpoint_minutes": [15, 30],
+    "first_whole_character_checkpoint_minutes": [
+      15,
+      30
+    ],
     "focused_design_attempts_per_approach": 2,
     "after_two_no_gain_attempts": "Stop that approach; change the source-specific construction strategy within the authorized allowance or report the limit.",
     "new_outputs": "Use versioned successor paths and preserve attempt09 resources. Never rerun its default builder into frozen paths.",
     "model_selection": "Use the lightest capable model for each bounded assignment; reserve heavier reasoning for a documented unresolved decision.",
-    "stop_conditions": ["all three loops delivered", "owner allowance reached", "owner stops work"],
-    "progress_measure": "Visible resemblance of the complete character against the pinned source set, with regional and rear-view regressions assessed."
+    "stop_conditions": [
+      "all three loops delivered",
+      "owner allowance reached",
+      "owner stops work"
+    ],
+    "progress_measure": "Visible resemblance of the complete character against the pinned source set, with regional and rear-view regressions assessed.",
+    "maximum_distinct_delegated_agents": 10,
+    "assignment_control": "Bound each task with a concrete result, early whole-image checkpoint and hard time stop. Reuse the ten-agent team across the three loops; do not create an endless replacement-agent tree."
   },
   "loop_template": [
-    {"stage": "diagnose", "result": "Rank the largest remaining source-likeness gaps from the exact retained baseline and independent QA; choose one coherent correction scope."},
-    {"stage": "construct", "result": "Give bounded workers concrete visible results and disjoint outputs. Architect integrates a whole-character checkpoint early."},
-    {"stage": "visual_gate", "result": "Compare pinned source, exact baseline and candidate at fixed cameras in neutral and exhibit lighting; evaluate whole presence, relevant close-ups and rear continuity."},
-    {"stage": "review", "result": "Freeze the review packet and criteria. Independent evidence, outcome and safety/portability roles apply okhp3-equilibrium-review, with conditional falsifiable disruption and architect adjudication."},
-    {"stage": "retain_and_deliver", "result": "Keep demonstrated coherent gains, preserve rollback, deliver three-era editable natives and material-faithful GLBs with matched review evidence and a verified working-branch checkpoint."},
-    {"stage": "recurse", "result": "Carry the retained whole-character candidate and prioritized unresolved QA findings into the next loop. A rejected candidate does not silently replace the baseline."}
+    {
+      "stage": "diagnose",
+      "result": "Rank the largest remaining source-likeness gaps from the exact retained baseline and independent QA; choose one coherent correction scope."
+    },
+    {
+      "stage": "construct",
+      "result": "Give bounded workers concrete visible results and disjoint outputs. Architect integrates a whole-character checkpoint early."
+    },
+    {
+      "stage": "visual_gate",
+      "result": "Compare pinned source, exact baseline and candidate at fixed cameras in neutral and exhibit lighting; evaluate whole presence, relevant close-ups and rear continuity."
+    },
+    {
+      "stage": "review",
+      "result": "Freeze the review packet and criteria. Independent evidence, outcome and safety/portability roles apply okhp3-equilibrium-review, with conditional falsifiable disruption and architect adjudication."
+    },
+    {
+      "stage": "retain_and_deliver",
+      "result": "Keep demonstrated coherent gains, preserve rollback, deliver three-era editable natives and material-faithful GLBs with matched review evidence and a verified working-branch checkpoint."
+    },
+    {
+      "stage": "recurse",
+      "result": "Carry the retained whole-character candidate and prioritized unresolved QA findings into the next loop. A rejected candidate does not silently replace the baseline."
+    }
   ],
   "planned_loops": [
-    {"loop": 1, "input": "checkpoint09", "scope": "Coupled brow/optic seat, bill root and recessed cheek construction, connected to shorter and differently directed throat-to-breast plated courses. Add source-scale local construction only when the whole image improves.", "preparation_review": "preparation-review.json"},
-    {"loop": 2, "input": "loop01 retained checkpoint, or unchanged baseline if no candidate survives", "scope": "Selected from fresh loop01 QA, not fixed in advance."},
-    {"loop": 3, "input": "loop02 retained checkpoint, or latest retained baseline", "scope": "Selected from fresh loop02 QA, with delivery and owner comparison reserved inside the allowance."}
+    {
+      "loop": 1,
+      "input": "checkpoint09",
+      "scope": "Coupled brow/optic seat, bill root and recessed cheek construction, connected to shorter and differently directed throat-to-breast plated courses. Add source-scale local construction only when the whole image improves.",
+      "preparation_review": "preparation-review.json"
+    },
+    {
+      "loop": 2,
+      "input": "loop01 retained checkpoint, or unchanged baseline if no candidate survives",
+      "scope": "Selected from fresh loop01 QA, not fixed in advance."
+    },
+    {
+      "loop": 3,
+      "input": "loop02 retained checkpoint, or latest retained baseline",
+      "scope": "Selected from fresh loop02 QA, with delivery and owner comparison reserved inside the allowance."
+    }
   ],
   "boundaries": [
     "Pinned reference hierarchy and actual binaries remain authoritative.",

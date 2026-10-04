@@ -1,0 +1,81 @@
+{
+  "algorithm": "Independent RNA/raw mesh hashes; no producer digest helper used",
+  "limitations": [
+    "Not exhaustive every Blender node RNA field; not evaluated native/browser equivalence; no renderer/authoring/export invoked"
+  ],
+  "sources": {
+    "maker": {
+      "counts": {
+        "mesh_empty": 7608,
+        "materials": 62,
+        "packed": 160
+      }
+    },
+    "mechanic": {
+      "counts": {
+        "mesh_empty": 7608,
+        "materials": 62,
+        "packed": 160
+      }
+    },
+    "builder": {
+      "counts": {
+        "mesh_empty": 7608,
+        "materials": 62,
+        "packed": 161
+      }
+    }
+  },
+  "comparisons": {
+    "baseline01": {
+      "counts": {
+        "mesh_empty": 7608,
+        "materials": 62,
+        "packed": 161
+      },
+      "receiving_changes": {
+        "objects": [],
+        "materials": [],
+        "images": []
+      },
+      "declared_hides": 0,
+      "actual_hides": 0,
+      "hide_errors": {},
+      "added_meshes": 0,
+      "added_material_role_errors": [],
+      "all_original_payloads_unchanged": true
+    },
+    "study01": {
+      "counts": {
+        "mesh_empty": 7666,
+        "materials": 62,
+        "packed": 161
+      },
+      "receiving_changes": {
+        "objects": [],
+        "materials": [],
+        "images": []
+      },
+      "declared_hides": 69,
+      "actual_hides": 69,
+      "hide_errors": {},
+      "added_meshes": 58,
+      "added_material_role_errors": [],
+      "all_original_payloads_unchanged": true
+    }
+  },
+  "import_safety": {
+    "cg-recursive-head01.py": {
+      "no_scene_additions_on_import": true,
+      "apply_callable": true
+    },
+    "cg-recursive-body01.py": {
+      "no_scene_additions_on_import": true,
+      "apply_callable": true
+    },
+    "cg-recursive-delivery01.py": {
+      "no_scene_additions_on_import": true,
+      "apply_callable": null
+    }
+  }
+}

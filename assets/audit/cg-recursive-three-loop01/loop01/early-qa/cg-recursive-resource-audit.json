@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-04T15:10:16.402929+00:00",
+  "scope": "Read-only resource/process audit of the new shared three-loop allowance; metadata, turn model labels and token counters only. No prompts, tool outputs, encrypted bodies or production content copied.",
+  "reviewed_repo_revision": "84a12f0eab6276efda5b0631123f65be48e259e4",
+  "evidence": {
+    "loop_control": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop-control.json",
+    "counter_script": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/scripts/cg-recursive-budget-readback.py",
+    "fresh_counter_readback": "/tmp/cg-recursive-budget-audit-readback.json"
+  },
+  "confirmed": [
+    {
+      "claim": "The local ledger and script share one ten-hour allowance across three loops, starting 2026-10-04T14:20:42Z and ending 2026-10-05T00:20:42Z, with a 1000000000-token ceiling.",
+      "evidence": "loop-control.json budget; script defaults"
+    },
+    {
+      "claim": "The counter sums total_token_usage deltas including cached input; it does not subtract cached_input_tokens or add reasoning_output_tokens again. Root and exactly ten named delegated roles are eligible.",
+      "evidence": "counter script lines 11-20, 35-38, 60-72"
+    },
+    {
+      "claim": "For reused eligible sessions, the last observed counter before start is subtracted; unrelated and historical direct-child roles are excluded. New sessions start from zero only when no prior counter exists.",
+      "evidence": "counter script lines 35-38, 60-66; independent counter-only check"
+    },
+    {
+      "claim": "Independent metadata/counter-only inspection found eight named delegated roles with post-start counters, zero unplanned direct-child activity, zero child-of-roster activity, zero duplicate active role sessions and zero post-start counter decreases.",
+      "evidence": "independent audit at 2026-10-04T15:08-15:10Z"
+    },
+    {
+      "claim": "Observed refreshed counters total 24787006 tokens at 2026-10-04T15:08:20.619144Z, or 2.4787006 percent of the ceiling, with 975212994 observed remaining. Deadline, ceiling and 90-percent launch-reserve flags are false.",
+      "evidence": "fresh_counter_readback"
+    },
+    {
+      "claim": "The ledger distinguishes useful checkpoint09 progress/continuation authority from final likeness acceptance and says inherited stance is preserved; a different pose is not selected by this continuation.",
+      "evidence": "loop-control.json baseline.owner_assessment_scope and boundaries"
+    },
+    {
+      "claim": "The stored in-repository counter snapshot was at 14:37:30Z and had 7878130 observed tokens; it was approximately thirty-one minutes stale when independently refreshed.",
+      "evidence": "budget-readback.json read_at_utc compared with fresh readback"
+    }
+  ],
+  "inferred": [
+    {
+      "claim": "Current eligible observed usage is within the authorized local allowance. This does not establish exact consumed usage because in-flight and delayed counters can lag.",
+      "consequence": "Use observed rather than exact labels."
+    },
+    {
+      "claim": "The default timing and local roster implementation are consistent with root interpretation of shared rather than per-loop allowances.",
+      "consequence": "Continue under the narrower shared total; do not multiply ceilings by three."
+    }
+  ],
+  "unknown": [
+    "In-flight responses, delayed/missing counter events, and exact boundary-straddling usage are not measurable from these snapshots.",
+    "This audit did not independently query the platform goal tracker or copy its outputs. Expired unfinished goal/new registration rejection is source-reported by the ledger and root.",
+    "The latest model/effort label per session is not a per-model usage breakdown. No model switch was observed in post-start turn_context labels for the checked workers, but the root had no post-start turn_context in this metadata pass.",
+    "This resource audit does not establish visible quality, matched-camera delivery completion, original pose acceptance or final owner artistic acceptance."
+  ],
+  "actual_errors_or_needed_cheap_corrections": [
+    {
+      "priority": "medium",
+      "issue": "Local goal.md still ends with the expired eight-hour/200-million authority and does not point to the new ten-hour/one-billion three-loop ledger. Its active front matter therefore leaves current authority ambiguous to a reader.",
+      "correction": "Add a concise latest-authorization section pointing to loop-control.json; preserve the older run as historical. No need to mark the old goal complete."
+    },
+    {
+      "priority": "medium",
+      "issue": "The script returns guard booleans but does not prevent dispatch or production. The phrase enforced by this ledger is true only if the architect reads and obeys fresh flags.",
+      "correction": "Refresh before a new dispatch or substantive increment and act on deadline, ceiling and 90-percent launch-reserve flags; retain one hour for final delivery. This is orchestration behavior, not an automatic kill switch."
+    },
+    {
+      "priority": "low",
+      "issue": "observed_agent_count_excluding_root counts eligible rolepaths with counter events, not all allocated agents. Unnamed workers and children are filtered out, so the script alone cannot detect an accidental roster/cap breach. No breach was found independently.",
+      "correction": "Label this field as observed roster roles with counters; check live assignments/metadata before new assignments and reuse the fixed roster."
+    },
+    {
+      "priority": "low",
+      "issue": "Per-field max(0,latest-baseline) would hide a counter reset; model/effort fields describe only the latest seen turn labels. No reset was observed.",
+      "correction": "If a negative delta is encountered, report it as counter discontinuity rather than zero; label model/effort as latest observed settings, not full-run model accounting."
+    }
+  ],
+  "changes_made": [
+    "Wrote this temporary audit JSON and a fresh temporary metadata/counter readback. No repository edits, production changes, new workers, platform-goal changes or messages to external systems."
+  ],
+  "decision": "Resource observation is usable with its stated lag and scope limits. No current budget or roster breach found; correct stale authority/snapshot labels and keep enforcement claims tied to actual architect checks."
+}
