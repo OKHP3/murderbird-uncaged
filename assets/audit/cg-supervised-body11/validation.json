@@ -1,0 +1,79 @@
+{
+  "createdUTC": "2026-10-04T08:05:55.334314+00:00",
+  "status": "PASS mechanical checks; WARN artistic decision pending root independentQC",
+  "attempts": [
+    {
+      "attempt": "attempt01",
+      "nativeSHA256": "b05756736c79224d4bda518bdae09da67a60127c7b7ec4b9d615a62666a6fb84",
+      "receiptSHA256": "b6869bd935377e3c8a5cf95734d476c1eb82f5de03f2328adac6a7d6051bd347",
+      "imageHashesMatched": true,
+      "imageCount": 38,
+      "originalMeshAndAnchorReadbackCount": 7424,
+      "originalMeshesChanged": [],
+      "originalMaterialGraphCount": 56,
+      "packedImagesPreservedCount": 160,
+      "exactHideCount": 149,
+      "finiteEvaluatedUVAndGeometry": [
+        {
+          "name": "CGB11 continuous anterior throat keel cage",
+          "vertices": 1914,
+          "evaluatedFinite": true,
+          "normalizedUV": true
+        }
+      ]
+    },
+    {
+      "attempt": "attempt02",
+      "nativeSHA256": "678799a9643c02e9f8cbd9a297d4ddf39f1a6c55fce2d76e8675a2cf15cb0453",
+      "receiptSHA256": "f37037f453a8e4289f92ef3b17e5d2ae4603b619062ba64fa653dd5514e5ec12",
+      "imageHashesMatched": true,
+      "imageCount": 38,
+      "originalMeshAndAnchorReadbackCount": 7424,
+      "originalMeshesChanged": [],
+      "originalMaterialGraphCount": 56,
+      "packedImagesPreservedCount": 160,
+      "exactHideCount": 149,
+      "finiteEvaluatedUVAndGeometry": [
+        {
+          "name": "CGB11 continuous anterior throat keel cage",
+          "vertices": 1914,
+          "evaluatedFinite": true,
+          "normalizedUV": true
+        }
+      ]
+    }
+  ],
+  "extraPreservation": "extra-preservation-and-extents.json:7428 original object matrices/modifiers/constraints/group names/attribute definitions unchanged in both saved natives",
+  "sourceNativeSHA256": "72e7e53daf40b7128cdf9b173006c639bcf123952547a2576fb2de29130f06d4",
+  "sourceLockedSHA256": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+  "candidate03SHA256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+  "sourceScopes": "Locked Sept22 fullbird and candidate03 priorbody only; July body excluded",
+  "sharedGoalMainRevision": "251f2f0243181e97140179c2aff6eb057e165438",
+  "ownerAppendixSHA256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+  "authoringScriptSHA256": "1f2891214e958f7f2fec669e79dc65aadc95bbd5271fb432d1dd9949790d4767",
+  "notRun": [
+    "three-era export/browser",
+    "npm build (no app or runtime asset reference changes)",
+    "CI",
+    "deployment",
+    "engineering",
+    "owner acceptance"
+  ],
+  "remainingClaims": [
+    {
+      "claim": "Attempt01 removed collar but had vertical throat and pouch; rejected guide.",
+      "tier": "CONFIRMED reviewer finding / INFERRED visual judgment",
+      "evidence": "review-input-qc01.json; frozen original images inattempt01 supersede stale integrity portion"
+    },
+    {
+      "claim": "Attempt02 has a more gradual oblique transition and preserves breast maximum extent.",
+      "tier": "INFERRED visual judgment; CONFIRMED evaluated dimensions",
+      "evidence": "attempt02 images; extra-preservation-and-extents.json"
+    },
+    {
+      "claim": "Final exterior/source likeness established.",
+      "tier": "UNKNOWN / not claimed",
+      "evidence": "Smooth cage diagnosis only; root QC and owner acceptance pending"
+    }
+  ]
+}
