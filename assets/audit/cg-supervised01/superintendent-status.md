@@ -84,3 +84,7 @@ HEAD17 retained provisionally after independent QC; posterior-only omission fail
 The source target remains unmet in inspected regional images. The root authorizes one final CHEEK19 macro trial, hard stop11:10Z, because fresh bill QC identifies the large clean cheek aperture as a consequential source-construction gap. First whole PBR/clay must show obvious gain; max two designs and no minor-detail work. If rejected, frozen09 is the final review candidate; if retained, preserve09 and build a separately identified successor. This is the last new modeling task for this eight-hour run. Final independent Equilibrium and truthful handoff remain required by12:21:47Z.
 
 Final npm ci/build passes locally (52 emitted files; one V37 runtime GLB; noCG review/private/provenance/archive files). NoCI/deployment/owner acceptance or production replacement. Remote branch readback0f35bc8d474408edeeea4c55f7c9d770002a7488; main251f2f0243181e97140179c2aff6eb057e165438 at10:49Z.
+
+## Final deadline continuation
+
+One additional coupled crown/cheek/throat trial was run inside the original allowance, then independently rejected. Whole PBR/clay show layered crown gain but hollow roof and hanging bib regressions. No polish retry, pose change or integration over09. [Adjudication](deadline-continuation/architect-adjudication.json) and [independent QC](deadline-continuation/cg-deadline23-outcome.json) preserve actual evidence. The original12:21:47 UTC deadline and full source-aligned three-era objective remain unchanged.

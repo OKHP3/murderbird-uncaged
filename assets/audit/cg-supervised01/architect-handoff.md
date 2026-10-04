@@ -35,3 +35,5 @@ The final local `npm ci` and build passed on a modified development tree. All 52
 The isolated branch is `codex/cg-superintendent-20261004`. GitHub main was independently read as `251f2f0243181e97140179c2aff6eb057e165438`; it still ends at the older 2b budget stop. The branch's owner-authorized eight-hour appendix does not imply main synchronization. A final checkpoint verification receipt records the exact saved remote branch SHA after closeout.
 
 Any model, source, camera, material, criterion or browser change expires the attempt09 review. Final human artistic acceptance remains the owner’s gate.
+
+Final deadline continuation: one additional coupled construction trial was independently rejected after a visible crown gain was defeated by roof/cheek/throat regressions. [Evidence and adjudication](deadline-continuation/README.md) preserve the result. Attempt09 and its review remain unchanged; source completion is still rejected. The earlier closeout-QC pins cover the pre-continuation text, and the appended facts are backed by the fresh outcome report.

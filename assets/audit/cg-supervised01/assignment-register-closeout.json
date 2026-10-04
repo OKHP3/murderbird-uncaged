@@ -947,15 +947,45 @@
       "fork_turns": "none",
       "budget_phase": "within-eight-hour-run",
       "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T12:08:08.932Z",
+      "task_name": "deadline22_coupled_construction",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost.",
+      "confirmed_execution_status": "completed isolated failed construction trial"
+    },
+    {
+      "requested_utc": "2026-10-04T12:08:58.334Z",
+      "task_name": "deadline23_independent_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost.",
+      "confirmed_execution_status": "completed independent rejection"
+    },
+    {
+      "requested_utc": "2026-10-04T12:10:03.848Z",
+      "task_name": "deadline24_custody_qc",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost.",
+      "confirmed_execution_status": "rejected by agent thread limit; no worker execution"
     }
   ],
   "counts": {
-    "all_observed_spawn_requests": 105,
-    "within_budget_spawn_requests": 100,
+    "all_observed_spawn_requests": 108,
+    "within_budget_spawn_requests": 103,
     "pre_run_requests": 5,
     "within_budget_requested_model_mix": {
-      "gpt-6.1-sol": 81,
-      "gpt-6-luna": 9,
+      "gpt-6.1-sol": 83,
+      "gpt-6-luna": 10,
       "gpt-6-astra": 10
     }
   },
@@ -964,5 +994,6 @@
     "This register records requested model/reasoning settings, not an account billing audit.",
     "The original assignment.json, per-attempt briefs, superintendent chronology, regional handoffs and raw QA reports preserve available task caps and outcomes.",
     "All within-run requests use fresh contexts; max three active workers plus architect, distinct output ownership, no children and max two design attempts were the operating rules."
-  ]
+  ],
+  "updated_utc": "2026-10-04T12:19:09.199108+00:00"
 }
