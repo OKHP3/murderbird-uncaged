@@ -10,13 +10,13 @@ for o in s.objects:
  if o.get('cgBody09Rails'):
   assert all(math.isfinite(c) for v in vs for c in v)
   uv=m.uv_layers.get('body05-local-curved-uv');assert uv
-  uvv=[[] for v in vs]
+  uvv=[[] for v in vs];uvrange=[]
   for loop in m.loops:
-   q=uv.data[loop.index].uv;assert all(math.isfinite(c) and -.00001<=c<=1.00001 for c in q);uvv[loop.vertex_index].append(q.y)
-  meshes[o.name]=(vs,[tuple(e.vertices) for e in m.edges],[sum(q)/len(q) if q else None for q in uvv])
+   q=uv.data[loop.index].uv;assert all(math.isfinite(c) for c in q);uvrange.extend(q);uvv[loop.vertex_index].append(max(0,min(1,q.y)))
+  meshes[o.name]=(vs,[tuple(e.vertices) for e in m.edges],[sum(q)/len(q) if q else None for q in uvv],(min(uvrange),max(uvrange)))
  ev.to_mesh_clear()
 records=[]
-for name,(vs,edges,params) in meshes.items():
+for name,(vs,edges,params,uvrange) in meshes.items():
  samples=[(Vector(p),v,'vertex') for p,v in zip(vs,params)]
  samples += [((Vector(vs[a])+Vector(vs[b]))/2,(params[a]+params[b])/2 if params[a] is not None and params[b] is not None else None,'edge') for a,b in edges]
  hits=free=covered=mid=0;worst=None
@@ -35,6 +35,6 @@ for name,(vs,edges,params) in meshes.items():
   elif clearance<-.0008:
    if v<=.45:covered+=1
    else:mid+=1
- records.append(dict(object=name,evaluatedVertices=len(vs),evaluatedEdges=len(edges),allVerticesAndEdgeMidpointsSampled=len(samples),adjacentSheetAndSupportHits=hits,coveredRootBurialSamples=covered,nonRootBurialSamples=mid,freeEndBurialSamples=free,worstFreeEndClearance=worst,evaluatedGeometryFinite=True,evaluatedUVFiniteNormalized=True))
+ records.append(dict(object=name,evaluatedVertices=len(vs),evaluatedEdges=len(edges),allVerticesAndEdgeMidpointsSampled=len(samples),adjacentSheetAndSupportHits=hits,coveredRootBurialSamples=covered,nonRootBurialSamples=mid,freeEndBurialSamples=free,worstFreeEndClearance=worst,evaluatedGeometryFinite=True,evaluatedUVFinite=True,evaluatedUVRange=uvrange,evaluatedUVNormalized=(uvrange[0]>=-.00001 and uvrange[1]<=1.00001)))
 r=dict(status='FAIL overlap; read-only diagnostic, no new design attempt',nativeSHA256=hashlib.sha256(native.read_bytes()).hexdigest(),method='Every evaluated SOLIDIFY/BEVEL vertex and every evaluated edge midpoint cast in outward -X against all other evaluated cassette sheets and root supports; v from evaluated local UVs distinguishes covered roots <=.45 and free ends >=.75. Includes back stock as well as front surface, not projected visible area; retained source meshes excluded.',sheets=records)
 (folder/'evaluated-depth-receipt.json').write_text(json.dumps(r,indent=2)+'\n');print('EVALUATED_DEPTH',json.dumps(records))

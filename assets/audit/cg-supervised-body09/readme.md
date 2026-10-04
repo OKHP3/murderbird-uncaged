@@ -16,12 +16,16 @@ Attempt01 shows overlarge leaves relative to surrounding coverts. Attempt02 shor
 
 The depth diagnostic tests all 325 cage vertices and 612 grid-edge midpoints on each of eight sheets against every evaluated adjacent new sheet and root rib. Two upper sheets each have 253 free-tip samples behind adjacent sheets, worst clearances -8.65 and -11.44 mm. Remaining six new sheets have zero such free-tip burial samples; this does not establish visible likeness. Covered roots and internal laps are separately counted. Test is local depth, not projected pixel coverage; retained original surrounding sheets are assessed visually rather than included in this BVH statistic.
 
+A final read-only [evaluated depth supplement](attempt02/evaluated-depth-receipt.json) tests every one of 8874 evaluated SOLIDIFY/BEVEL vertices and 17716 evaluated edge midpoints across all eight sheets against every new adjacent sheet/root support. It finds 2469 buried free-end samples, primarily the first pair; these samples include back stock and are not projected-visible area. This is verification of the saved candidate, no third design attempt.
+
+Evaluated geometry and UVs are finite, but BEVEL extrapolates some UV corners outside the normalized control-cage range (overall -0.704 to 1.524). The initial normalized-UV receipt applies only to authored cage UVs. **WARN/FAIL for export readiness:** evaluated UV normalization is not established; no material/browser transfer should use this rejected study. No geometry or UV repair follows the two-attempt stop.
+
 ## Checks and restored native
 
 - PASS — actual receiving source binary matches locked SHA and remains untouched.
 - PASS — 7424 source mesh/empty payload digests match before/after and saved-native readback (geometry, UV layers, vertex-color attributes, material slots/indices, transforms, parent/collection memberships, custom properties).
 - PASS — original metal05 material node/input/link graph digests unchanged before/after and after reopen.
-- PASS — every new evaluated mesh finite and every new UV finite / normalized; source anchors preserved.
+- PASS — every new evaluated mesh finite and every authored cage UV finite / normalized; evaluated UVs finite but extrapolated by bevel as recorded above; source anchors preserved.
 - PASS — only exact thirteen declared original render visibility changes in candidate.
 - PASS — rollback native restores all 7428 original object render, viewport and hide-set states with zero discrepancies after reopen; all sixteen cassette meshes hidden. Mesh/empty payload and metal05 graph readback match source.
 - FAIL — intentional overlap, free ends and visible source-facing whole-bird improvement.
