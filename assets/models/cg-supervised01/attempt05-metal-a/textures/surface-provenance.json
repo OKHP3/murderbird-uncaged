@@ -1,0 +1,5217 @@
+{
+  "module": "cg2b-surface",
+  "era": "builder",
+  "seed": 202610037,
+  "size": [
+    1024,
+    1024
+  ],
+  "authorship": "Original deterministic CG2b maps derived from CG2a algorithm; no artwork pixels or prior map pixels reused",
+  "algorithmSource": "scripts/cinematic-cg-2a-surface.py",
+  "mapIngredients": [],
+  "textureHashes": {
+    "black-iron-2b-normal.png": "307af18a54fcd58d538538aac19dcb756d0b0e794c21a6559076ae2e73d4995b",
+    "black-iron-builder-2b-color.png": "410e4c8d1b0160b5e8898d5615e75a0c5d050686ab77a7d14b9f83c424352b76",
+    "black-iron-builder-2b-orm.png": "402502e081a0fa1b23c479b2d07d70552444ad3a70b9f15eb5735ce23e011ebf",
+    "black-iron-maker-2b-color.png": "a512fc980172f1fbeb0941c702ac38e396117a1e20a54b099b3a8cbfcd6b1be9",
+    "black-iron-maker-2b-orm.png": "39a58a8c02b9d7d7c1c806231b4351201c1c18a3535fe20de5f1c8e35b53f3e9",
+    "black-iron-mechanic-2b-color.png": "6a0f2056ce506aae406ed829f2027c2e90e2c639d6400a489398684f03ddd676",
+    "black-iron-mechanic-2b-orm.png": "8941f74eb8ac728850e62d7f0835dbb992349b692e329dfeeb8dd6115cd29563",
+    "breast-armor-2b-normal.png": "ccf648a825196f6a9f66822b4ac013a12aaeedd011bbfc36989ebacc141bb09b",
+    "breast-armor-builder-2b-color.png": "4afebbea0fa0004ea90418ac891d65c601b52bcc6a7089374e81ee7ce4667668",
+    "breast-armor-builder-2b-orm.png": "23f1d5a82a340fad72d99ffa2715625341b6da7e74a38dcb96e30c7513b1b23e",
+    "breast-armor-maker-2b-color.png": "57c2f8bf43a25783ce597ce07e95ab8e6d89f6f8ce159aaefa5b6512aa307d0b",
+    "breast-armor-maker-2b-orm.png": "d18335ccb2e7954145ab2b516d1ba837bffbb3538578e8d97cbba12a3fe6b551",
+    "breast-armor-mechanic-2b-color.png": "752c2bb5896c1711efe6d7c096513b789f6461da1df5fcf544894894a38e4105",
+    "breast-armor-mechanic-2b-orm.png": "30f931da46c76d98eaa369b106f8a15294852252115d5dbb6e2f539ef6021ef2",
+    "forged-steel-2b-normal.png": "d73e74879a9461ec98fe91ad8272bf424f47c7b395a699443b650ed281b39d1c",
+    "forged-steel-builder-2b-color.png": "5708caa9d3d154385132ff7cd219becd40fd8808c5935f07be12a83bc53e4231",
+    "forged-steel-builder-2b-orm.png": "3311e0a838c26ce656291ddd2668b92e6d4f0314f0d7f28af334d1adffaa6dc2",
+    "forged-steel-maker-2b-color.png": "bd83d05cd204a3acb3bef973a48b9d27c3a69b5aa2daa14adc32dbbb6516f0a2",
+    "forged-steel-maker-2b-orm.png": "afbd293c0dc501e3b4b9437ca24d07f23694decd751e62f10e6a376ff2675721",
+    "forged-steel-mechanic-2b-color.png": "e3a5eebf0499d9379859bf97e6c60339af43f196dcde640ec52c497826508995",
+    "forged-steel-mechanic-2b-orm.png": "b26b9342201718d413360aae877ccd00c0a9212b91436c834139721cbef82f26",
+    "head-armor-2b-normal.png": "9573039cddd25a98785725f261945cda5781621b2e79acaee41943143c990c53",
+    "head-armor-builder-2b-color.png": "11d4f729faa21f3a60fc1a9a34abb17206c4a072ad31ddb57f832f7734a6dd07",
+    "head-armor-builder-2b-orm.png": "6a3603563f6b0bb37fa642894d3deb762eec055a84e982da160f2b2faf5a0e92",
+    "head-armor-maker-2b-color.png": "d512ca06b28f8112c03d844654fd4214942c6e2b38f60c9421d8549b32d8de18",
+    "head-armor-maker-2b-orm.png": "a45e9d96f6ece366d23d82ed37988c50c5c276bc48def5c4f4ab4bec9a79d38d",
+    "head-armor-mechanic-2b-color.png": "a638596c45b41dcd1d6de64733130dd40b10d2399ba59ee1f91eb7508c09ff8e",
+    "head-armor-mechanic-2b-orm.png": "591eed98a5f93c076c36586a8991c6733ce0610310b94de6c9ec63aae6e2e138",
+    "machined-steel-2b-normal.png": "bcb394de423c49992002143c8c89c39de4f33b522b3128585d73475822559803",
+    "machined-steel-builder-2b-color.png": "69196b26fdf0332bf6a60e3257930e015f3038cd86411f09f79e8bffae786d87",
+    "machined-steel-builder-2b-orm.png": "9b5dda7e3b2ecf7b12f47f6f947a15632629fc7cd8e6909b644afd845e2340fe",
+    "machined-steel-maker-2b-color.png": "e576d0e5f62d36ca1b66afc12cac5c5d5c641a628045ebb1a90a94bd9f06f9e8",
+    "machined-steel-maker-2b-orm.png": "93be277ac3ab837666194cbaf61f137752dbf49b6816f2b6e634cabf140019ba",
+    "machined-steel-mechanic-2b-color.png": "15169da562d6cf89ce1ecb28855911e21b4d996c3954869cb942653f3e178908",
+    "machined-steel-mechanic-2b-orm.png": "2e19d4237ab4ab7a9281e10550a1e8ab84e5209d93f585abccb843c6b2367129",
+    "wing-armor-2b-normal.png": "895ed1a9d8f381fea58de901421a87790ecfe359744459a5dbc36784b1f67583",
+    "wing-armor-builder-2b-color.png": "acf4bf5f903da7d5c61e97f7a78c59cddbd2e95cac2fceb4311bf6d96122d02d",
+    "wing-armor-builder-2b-orm.png": "0410f43d71052fa4d59418ad7662bbeccbc8f13f460a6b3bca81505136fe8233",
+    "wing-armor-maker-2b-color.png": "9ad8a89d688564abcb6208671c3902f86342094389043bd3a0173f5a070e2a9a",
+    "wing-armor-maker-2b-orm.png": "a7f67152dbadea2938e8dcb1bbaf8cc8e12ed0ae82180e94678306749afb865a",
+    "wing-armor-mechanic-2b-color.png": "0ec89a9ad5ccf89b545893efcfa6582352821b7719f87301d712044d8cac443f",
+    "wing-armor-mechanic-2b-orm.png": "4fc8b58e9e746092432209d05d1d9c578200682b62ee0d45c79ada1a4c3880a4",
+    "worn-bronze-2b-normal.png": "db77723bd096536c83729bd1ed180748ea65f9ece3dda9a6a9e314b2cd74c821",
+    "worn-bronze-builder-2b-color.png": "da778fbda848a9d0bc6d68a0dfa6a5c533c485f0aa388163aa2b0c585b2110b9",
+    "worn-bronze-builder-2b-orm.png": "04707b3a219acedb9e9f878eba7c872a3db931026fb020802cff614f094e08a1",
+    "worn-bronze-maker-2b-color.png": "13a8610f82a3d2ac10b3fb70458d0281b1d19a7199a1362ec678cf91c092f812",
+    "worn-bronze-maker-2b-orm.png": "14f312736fb1a91977e5072ade5ff899b09c19d1303b3e9c77b649033c5792b3",
+    "worn-bronze-mechanic-2b-color.png": "e8797f9b24611d0c74cdd9b2be38336d2722d6f40a062195543254b11dc49f96",
+    "worn-bronze-mechanic-2b-orm.png": "e098c773ea36b9703cb09b55907a34b24e222305f66477e6ac0ad6f5ce8d2912"
+  },
+  "referenceHashes": {
+    "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+    "assets/img/library/murderbird-unified-maker-clean-candidate-2026-09-06.png": "93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9",
+    "assets/img/library/murderbird-unified-mechanic-candidate-2026-09-06.png": "0bd7c79510be9eeef024f8861a7576b777a7f5de5710523e8d2ab039d03c65f9",
+    "assets/img/library/murderbird-unified-heart-candidate-2026-09-06.png": "9430f91e3cd3fc8223297720a0f57ec1c46e9c8245cfba91495e9c362029fea9"
+  },
+  "familyCounts": {
+    "head-armor": 67,
+    "breast-armor": 340,
+    "wing-armor": 118,
+    "forged-steel": 136,
+    "machined-steel": 518,
+    "worn-bronze": 617,
+    "black-iron": 688
+  },
+  "assignedSlots": 2633,
+  "glassPreserved": [
+    {
+      "object": "CGH05 dark optical backplate L",
+      "slot": 0,
+      "material": "CGH05 protected optic builder"
+    },
+    {
+      "object": "CGH05 broad restrained awakened iris L",
+      "slot": 0,
+      "material": "CGH05 protected iris builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L0",
+      "slot": 0,
+      "material": "CGH05 protected ring-hot builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L1",
+      "slot": 0,
+      "material": "CGH05 protected ring-warm builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L2",
+      "slot": 0,
+      "material": "CGH05 protected ring-hot builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L3",
+      "slot": 0,
+      "material": "CGH05 protected ring-warm builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L4",
+      "slot": 0,
+      "material": "CGH05 protected ring-warm builder"
+    },
+    {
+      "object": "CGH05 restrained pupil L",
+      "slot": 0,
+      "material": "CGH05 protected core builder"
+    },
+    {
+      "object": "CGH05 recessed optical glass L",
+      "slot": 0,
+      "material": "CGH05 protected glass builder"
+    },
+    {
+      "object": "CGH05 dark optical backplate R",
+      "slot": 0,
+      "material": "CGH05 protected optic builder"
+    },
+    {
+      "object": "CGH05 broad restrained awakened iris R",
+      "slot": 0,
+      "material": "CGH05 protected iris builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R0",
+      "slot": 0,
+      "material": "CGH05 protected ring-hot builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R1",
+      "slot": 0,
+      "material": "CGH05 protected ring-warm builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R2",
+      "slot": 0,
+      "material": "CGH05 protected ring-hot builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R3",
+      "slot": 0,
+      "material": "CGH05 protected ring-warm builder"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R4",
+      "slot": 0,
+      "material": "CGH05 protected ring-warm builder"
+    },
+    {
+      "object": "CGH05 restrained pupil R",
+      "slot": 0,
+      "material": "CGH05 protected core builder"
+    },
+    {
+      "object": "CGH05 recessed optical glass R",
+      "slot": 0,
+      "material": "CGH05 protected glass builder"
+    }
+  ],
+  "missingUVs": [],
+  "repairObjects": [],
+  "materials": [
+    "CG2b / head-armor / builder",
+    "CG2b / breast-armor / builder",
+    "CG2b / wing-armor / builder",
+    "CG2b / forged-steel / builder",
+    "CG2b / machined-steel / builder",
+    "CG2b / worn-bronze / builder",
+    "CG2b / black-iron / builder"
+  ],
+  "preservation": {
+    "geometryPoseUVAndPolygonMaterialIndices": "PASS",
+    "checkedVisibleMeshes": 1987,
+    "slotCountsPreserved": true
+  },
+  "eraRules": {
+    "maker": "Clean fabrication, dark optical shaders preserved",
+    "mechanic": "Aged metal and named selective repair accents; dark optics preserved",
+    "builder": "Inherited aged metal; only existing authored awakened optics preserved"
+  },
+  "limits": [
+    "Regional color and optical finish are CG proposals awaiting owner review.",
+    "Wear follows retained UVs; sheet perimeter meshes carry selected bronze edges.",
+    "No pose, geometry, engineering, runtime or publication change."
+  ],
+  "texturePaths": {
+    "black-iron-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-2b-normal.png",
+    "black-iron-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-builder-2b-color.png",
+    "black-iron-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-builder-2b-orm.png",
+    "black-iron-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-maker-2b-color.png",
+    "black-iron-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-maker-2b-orm.png",
+    "black-iron-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-mechanic-2b-color.png",
+    "black-iron-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/black-iron-mechanic-2b-orm.png",
+    "breast-armor-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-2b-normal.png",
+    "breast-armor-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-builder-2b-color.png",
+    "breast-armor-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-builder-2b-orm.png",
+    "breast-armor-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-maker-2b-color.png",
+    "breast-armor-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-maker-2b-orm.png",
+    "breast-armor-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-mechanic-2b-color.png",
+    "breast-armor-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/breast-armor-mechanic-2b-orm.png",
+    "forged-steel-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-2b-normal.png",
+    "forged-steel-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-builder-2b-color.png",
+    "forged-steel-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-builder-2b-orm.png",
+    "forged-steel-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-maker-2b-color.png",
+    "forged-steel-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-maker-2b-orm.png",
+    "forged-steel-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-mechanic-2b-color.png",
+    "forged-steel-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/forged-steel-mechanic-2b-orm.png",
+    "head-armor-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-2b-normal.png",
+    "head-armor-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-builder-2b-color.png",
+    "head-armor-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-builder-2b-orm.png",
+    "head-armor-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-maker-2b-color.png",
+    "head-armor-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-maker-2b-orm.png",
+    "head-armor-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-mechanic-2b-color.png",
+    "head-armor-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/head-armor-mechanic-2b-orm.png",
+    "machined-steel-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-2b-normal.png",
+    "machined-steel-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-builder-2b-color.png",
+    "machined-steel-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-builder-2b-orm.png",
+    "machined-steel-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-maker-2b-color.png",
+    "machined-steel-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-maker-2b-orm.png",
+    "machined-steel-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-mechanic-2b-color.png",
+    "machined-steel-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/machined-steel-mechanic-2b-orm.png",
+    "wing-armor-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-2b-normal.png",
+    "wing-armor-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-builder-2b-color.png",
+    "wing-armor-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-builder-2b-orm.png",
+    "wing-armor-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-maker-2b-color.png",
+    "wing-armor-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-maker-2b-orm.png",
+    "wing-armor-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-mechanic-2b-color.png",
+    "wing-armor-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/wing-armor-mechanic-2b-orm.png",
+    "worn-bronze-2b-normal.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-2b-normal.png",
+    "worn-bronze-builder-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-builder-2b-color.png",
+    "worn-bronze-builder-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-builder-2b-orm.png",
+    "worn-bronze-maker-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-maker-2b-color.png",
+    "worn-bronze-maker-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-maker-2b-orm.png",
+    "worn-bronze-mechanic-2b-color.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-mechanic-2b-color.png",
+    "worn-bronze-mechanic-2b-orm.png": "assets/models/cg-supervised01/attempt05-metal-a/textures/worn-bronze-mechanic-2b-orm.png"
+  },
+  "explicitSlotRouting": [
+    {
+      "object": "CGH04 nine section convex hooked upper bill",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH04 nine section convex hooked upper bill",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH04 nine section convex hooked upper bill",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 curved recessed vault above cheek opening",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 curved recessed vault above cheek opening",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 curved recessed vault above cheek opening",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 substantial curved cheek frame L",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 substantial curved cheek frame L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 substantial curved cheek frame L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested cheek lower return L",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested cheek lower return L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested cheek lower return L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 formed lower mandible with deep root L",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 formed lower mandible with deep root L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 formed lower mandible with deep root L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested mandible upper fold L",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested mandible upper fold L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested mandible upper fold L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L0",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L0",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L1",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L1",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L2",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L2",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L3",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L3",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L4",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate L4",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 integrated optical seat L",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 integrated optical seat L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 integrated optical seat L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 thin inset retaining lip L",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 thin inset retaining lip L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 thin inset retaining lip L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 dark optical backplate L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 dark optical backplate L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 broad restrained awakened iris L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 broad restrained awakened iris L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L0",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L1",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L2",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L3",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring L4",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 restrained pupil L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 restrained pupil L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 recessed optical glass L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 recessed optical glass L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 continuous swept diagonal brow L",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 continuous swept diagonal brow L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 continuous swept diagonal brow L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 curved bill root side return L",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 curved bill root side return L",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 curved bill root side return L",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 00",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 00",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 00",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 01",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 01",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 01",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 02",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 02",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 02",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 03",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 03",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 03",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 04",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 04",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 04",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 05",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 05",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 05",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 06",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 06",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 06",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 07",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 07",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 07",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 08",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 08",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 08",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 09",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 09",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 09",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 10",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 10",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 10",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 11",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 11",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 11",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 12",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 12",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 12",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 13",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 13",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 13",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 14",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 14",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 14",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 15",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 15",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 15",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 16",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 16",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 16",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 17",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 17",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown L 17",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L0",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L1",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L2",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested posterior pivot L2",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 substantial curved cheek frame R",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 substantial curved cheek frame R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 substantial curved cheek frame R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested cheek lower return R",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested cheek lower return R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested cheek lower return R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 formed lower mandible with deep root R",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 formed lower mandible with deep root R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 formed lower mandible with deep root R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested mandible upper fold R",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested mandible upper fold R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested mandible upper fold R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R0",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R0",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R1",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R1",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R2",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R2",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R3",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R3",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R4",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved orbital cheek plate R4",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 integrated optical seat R",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 integrated optical seat R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 integrated optical seat R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 thin inset retaining lip R",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 thin inset retaining lip R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 thin inset retaining lip R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 dark optical backplate R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 dark optical backplate R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 broad restrained awakened iris R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 broad restrained awakened iris R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R0",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R1",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R2",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R3",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested warm optic ring R4",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 restrained pupil R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 restrained pupil R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 recessed optical glass R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 recessed optical glass R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 continuous swept diagonal brow R",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 continuous swept diagonal brow R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 continuous swept diagonal brow R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 curved bill root side return R",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 curved bill root side return R",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 curved bill root side return R",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 00",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 00",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 00",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 01",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 01",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 01",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 02",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 02",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 02",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 03",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 03",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 03",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 04",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 04",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 04",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 05",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 05",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 05",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 06",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 06",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 06",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 07",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 07",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 07",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 08",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 08",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 08",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 09",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 09",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 09",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 10",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 10",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 10",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 11",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 11",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 11",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 12",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 12",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 12",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 13",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 13",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 13",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 14",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 14",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 14",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 15",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 15",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 15",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 16",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 16",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 16",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 17",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 17",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 swept overlapping crown R 17",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R0",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R1",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R2",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 nested posterior pivot R2",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 00",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 00",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 00",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 01",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 01",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 01",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 02",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 02",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 02",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 03",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 03",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 03",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 04",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 04",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 04",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 05",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 05",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 05",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 06",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 06",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 06",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 07",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 07",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 07",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 08",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 08",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 08",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 09",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 09",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 09",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 10",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 10",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 10",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 11",
+      "slot": 0,
+      "family": "head-armor"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 11",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGH05 interleaved longitudinal roof feather 11",
+      "slot": 2,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 recessed anterior mechanism backing -1.17",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 recessed anterior mechanism backing -0.47",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 recessed anterior mechanism backing 0.34",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 curved front transmission link 0",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 curved front transmission link 1",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 curved front transmission link 2",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 recessed transmission receiver 0",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 receiver dark inner race 0",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 receiver connected crank 0",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 recessed transmission receiver 1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 receiver dark inner race 1",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 receiver connected crank 1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 recessed transmission receiver 2",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 receiver dark inner race 2",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 receiver connected crank 2",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 recessed transmission receiver 3",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 receiver dark inner race 3",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 receiver connected crank 3",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 recessed transmission receiver 4",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CGN03 receiver dark inner race 4",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGN03 receiver connected crank 4",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 flank barrel 0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 flank piston 0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram collar 0-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram collar 0-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 ram collar 0-2",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram eye 0-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram pin 0-0",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 ram eye 0-1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram pin 0-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 inset connected return hose 0",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CG shield03 -1 flank barrel 1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 flank piston 1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram collar 1-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram collar 1-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 ram collar 1-2",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram eye 1-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram pin 1-0",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 ram eye 1-1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 -1 ram pin 1-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 -1 inset connected return hose 1",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CG shield03 -1 hip tied cross collar",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 flank barrel 0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 flank piston 0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram collar 0-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram collar 0-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 1 ram collar 0-2",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram eye 0-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram pin 0-0",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 1 ram eye 0-1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram pin 0-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 1 inset connected return hose 0",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CG shield03 1 flank barrel 1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 flank piston 1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram collar 1-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram collar 1-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 1 ram collar 1-2",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram eye 1-0",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram pin 1-0",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 1 ram eye 1-1",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CG shield03 1 ram pin 1-1",
+      "slot": 0,
+      "family": "worn-bronze"
+    },
+    {
+      "object": "CG shield03 1 inset connected return hose 1",
+      "slot": 0,
+      "family": "black-iron"
+    },
+    {
+      "object": "CG shield03 1 hip tied cross collar",
+      "slot": 0,
+      "family": "machined-steel"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 00-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 01-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 02-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 03-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 04-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 05-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 06-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 07-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 08-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 09-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 10-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 breast curved feather 11-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 00-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 01-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 02-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 03-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 04-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 05-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 06-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 07-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 08-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-0",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-1",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-2",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-3",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-4",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-5",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-6",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-7",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-7",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-8",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-8",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-9",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 cervical curved lamina 09-9",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 00",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 00",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 01",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 01",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 02",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 02",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 03",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 03",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 04",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 04",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 05",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 05",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 06",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 06",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 07",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 07",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 08",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 08",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 09",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 09",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 10",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 -1 channel edge curved lamina 10",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 00",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 00",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 01",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 01",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 02",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 02",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 03",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 03",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 04",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 04",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 05",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 05",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 06",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 06",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 07",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 07",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 08",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 08",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 09",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 09",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 10",
+      "slot": 0,
+      "family": "breast-armor"
+    },
+    {
+      "object": "CGB05 1 channel edge curved lamina 10",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 00-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 00-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 00-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 00-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 00-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 00-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 01-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-6",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 02-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-6",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 03-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-6",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 04-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 05-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 06-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 07-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 08-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 09-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 09-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 09-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 09-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 09-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 09-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 10-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 10-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 10-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 shield curved feather 10-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 -1 small shoulder covert 3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 00-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 00-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 00-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 00-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 00-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 00-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 01-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-6",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 02-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-6",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 03-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-6",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 04-6",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 05-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-5",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 06-5",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-4",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 07-4",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 08-3",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 09-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 09-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 09-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 09-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 09-2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 09-2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 10-0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 10-0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 10-1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 shield curved feather 10-1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 0",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 0",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 1",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 1",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 2",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 2",
+      "slot": 1,
+      "family": "black-iron"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 3",
+      "slot": 0,
+      "family": "wing-armor"
+    },
+    {
+      "object": "CGB05 1 small shoulder covert 3",
+      "slot": 1,
+      "family": "black-iron"
+    }
+  ],
+  "eraDisplayName": "Advanced",
+  "adapter": "scripts/cg-supervised-surface03.py"
+}
