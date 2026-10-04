@@ -1,10 +1,10 @@
 # Camera04: camera accounts for only part of the alignment gap
 
-[Review](review.html) · [Source landmarks](source-landmarks.png) · [Best overlay](best-overlay.png) · [Eight hypotheses](hypothesis-sheet.png) · [Exact receipts](receipt.json)
+[Review](review.html) · [Body-only diagnostic](body-only.md) · [Source landmarks](source-landmarks.png) · [Best overlay](best-overlay.png) · [Eight hypotheses](hypothesis-sheet.png) · [Exact receipts](receipt.json)
 
 Frozen integration04 is unchanged. The declared-landmark compromise is **orthographic 35° from side, 16° elevation**. Weighted RMS falls from **80.40 to 72.22 pixels** (10.2%). This is a comparison proposal, not recovery of the source's physical camera or owner artistic acceptance. Elevation reaches the tested grid boundary; pose and camera remain entangled.
 
-Thirteen manually declared source points cover crown, visible optic, bill hook, shoulder, breast, knees, hocks, ankles and plantar housing centers. Lower weights mark ambiguous breast and partly occluded far-side landmarks. Pixel coordinates, exact existing mesh/world correspondences, projected coordinates and every residual are in the receipt. July is excluded entirely; its body has no authority here. Hidden hips, far optic and overlapping toe tips are excluded from fitting; the complete foot silhouette remains in the crop gate.
+Thirteen source points cover head, shoulder, breast, knees, hocks, ankles and plantar housings. Lower weights mark ambiguous breast and partly occluded far-side landmarks. Correspondences and residuals are in the receipt. July is excluded entirely; its body has no authority here. Hidden hips, far optic and overlapping toe tips are excluded from fitting; the complete foot silhouette remains in the crop gate.
 
 | Hypothesis | Weighted RMS px | Knee separation px | Ankle separation px |
 |---|---:|---:|---:|
@@ -17,7 +17,7 @@ Thirteen manually declared source points cover crown, visible optic, bill hook, 
 
 The frontal hypothesis separates feet but loses the source's right-offset head and recognizable side profile. Perspective provides no score improvement. The proposed raster silhouette is 372px wide versus the approximately 476px source envelope; its height is 822px versus approximately 802px. Increasing scale cannot resolve this width deficit while preserving the complete bird.
 
-**Inferred remaining geometry gaps:** the head optic and hooked bill remain left of the source positions; the bill reads vertically narrow, the lower head/cheek opening differs, the shield/body envelope remains too narrow, and the leg/foot centers remain substantially too close together. These observations do not authorize stance or geometry changes.
+**Inferred remaining geometry gaps:** the head optic and hooked bill remain left of the source positions; the bill reads vertically narrow, the lower head/cheek opening differs, the shield/body envelope remains too narrow, and the leg/foot centers remain substantially too close together. No stance change is authorized.
 
 Use `camera(root_path)` from `scripts/cg-supervised-camera04.py` identically for before/candidate. It returns Blender location, Euler rotation, projection, orthographic scale, shifts, 65mm lens and exact 1280×853 resolution. The hypothesis sheet alone uses an identical display crop; full renders and overlay retain source aspect and entire bird.
 

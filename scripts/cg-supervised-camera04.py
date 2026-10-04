@@ -23,11 +23,13 @@ def camera(root_path=None, hypothesis='best'):
     """Use identically on before/candidate; all values are Blender coordinates."""
     root = Path(root_path or ROOT)
     receipt = json.loads((root / 'assets/audit/cg-supervised-camera04/receipt.json').read_text())
+    if hypothesis == 'body-only':
+        return receipt['body_only_diagnostic']['camera'].copy()
     name = receipt['proposed_hypothesis'] if hypothesis == 'best' else hypothesis
     return receipt['hypotheses'][name]['camera'].copy()
 
 
-def run():
+def run(body_only=False):
     import bpy
     import numpy as np
     from mathutils import Vector
@@ -156,6 +158,23 @@ def run():
     ortho_best=min((n for n in hypotheses if n!='canonical'),key=lambda n:hypotheses[n]['weighted_rms_px'])
     yaw=int(ortho_best[-2:]);hypotheses['persp-65mm']=min([fit(yaw,p,'PERSP') for p in (0,4,8,12,16)],key=lambda r:r['weighted_rms_px'])
     best=ortho_best
+    if body_only:
+        full_weights=weights.copy();weights[:3]=0
+        coarse=[(y,p,fit(y,p)) for y in range(0,91,10) for p in range(0,21,4)]
+        y,p,h=min(coarse,key=lambda item:item[2]['weighted_rms_px'])
+        fine=[(yy,pp,fit(yy,pp)) for yy in range(max(0,y-6),min(90,y+6)+1,2) for pp in range(max(0,p-4),min(24,p+4)+1,2)]
+        y,p,h=min(fine,key=lambda item:item[2]['weighted_rms_px'])
+        h['azimuth_degrees_from_side']=y;h['elevation_degrees']=p
+        h['excluded_from_objective']=['crown','near-optic','bill-hook']
+        h['full_landmark_rms_px']=float(np.sqrt(np.average([l['distance_px']**2 for l in h['landmarks']],weights=full_weights)))
+        h['foot_housing_separation_px']=abs(h['landmarks'][11]['projected_px'][0]-h['landmarks'][12]['projected_px'][0])
+        base=hypotheses['canonical']['landmarks']
+        h['canonical_body_rms_px']=float(np.sqrt(np.average([l['distance_px']**2 for l in base[3:]],weights=full_weights[3:])))
+        h['grid_note']='Body-only coarse yaw0..90 step10/pitch0..20 step4; local refinement ±6yaw/±4pitch step2, maximum24pitch. Entire bird remains crop-constrained.'
+        weights=full_weights
+        prior=json.loads((AUDIT/'receipt.json').read_text())
+        prior['body_only_diagnostic']=h
+        hypotheses={'body-only':h}
     receipt={'input_path':NATIVE_REL,'input_resolved_path':str(native),'input_sha256':NATIVE_SHA,'source_path':SOURCE_REL,'source_resolved_path':str(source),'source_sha256':SOURCE_SHA,'source_resolution':[W,H],
        'shared_goal_revision':'251f2f0243181e97140179c2aff6eb057e165438','source_approximate_bird_bounds_px':[550,25,1026,827],
        'source_knee_separation_px':230,'source_ankle_separation_px':217,'hypotheses':hypotheses,'proposed_hypothesis':best,
@@ -164,6 +183,7 @@ def run():
        'search_grid':{'azimuth_degrees_from_side':[0,20,35,50,65,80],'elevation_degrees':[0,4,8,12,16],'note':'Several fits hit maximum elevation; camera/pose identifiability remains unresolved'},
        'excluded':['July reference body is excluded; no July image used','Far optic not visible and not scored','Hidden source hip joints not scored','Feet toe tips vary by overlap and are excluded from fitting; entire foot silhouette remains in crop gate','Body center has lower weight due to uncertain anatomical homology','Source scene perspective and stylized/asymmetric construction remain unknown'],
        'lighting':{'profile':'neutral','source_rig':'scripts/cg-supervised-lighting02.py neutral values','samples':8,'view_transform':'AgX','look':'AgX - Medium High Contrast','transparent_world':True},'image_hashes':{}}
+    if body_only:receipt=prior
     for name,r in hypotheses.items():
         setcam(r['camera'])
         for mode in ('clay','pbr'):
@@ -203,6 +223,16 @@ def review():
         d.line((x,y,u,v),fill=(255,80,180,210),width=2);d.ellipse((u-4,v-4,u+4,v+4),fill=(255,80,180));d.text((x+9,y-9),str(i+1),font=font,fill=color,stroke_width=1,stroke_fill='black')
     d.rectangle((0,0,540,23),fill=(0,0,0,235));d.text((5,2),'Amber: source points | Cyan: model outline | Pink: residual',font=font,fill='white')
     overlay.save(AUDIT/'best-overlay.png');labeled.save(AUDIT/'source-landmarks.png')
+    if 'body_only_diagnostic' in r:
+        body=Image.open(AUDIT/'body-only-clay.png').convert('RGBA');alpha=body.getchannel('A')
+        edge=PIL.ImageChops.subtract(alpha.filter(ImageFilter.MaxFilter(5)),alpha.filter(ImageFilter.MinFilter(5)))
+        outline=Image.new('RGBA',(W,H),(0,230,255,0));outline.putalpha(edge)
+        body_overlay=Image.alpha_composite(source,outline);bd=ImageDraw.Draw(body_overlay)
+        for i,l in enumerate(r['body_only_diagnostic']['landmarks']):
+            x,y=l['source_px'];u,v=l['projected_px'];color=(255,184,45) if i>=3 else (200,200,200)
+            bd.line((x-6,y,x+6,y),fill=color,width=2);bd.line((x,y-6,x,y+6),fill=color,width=2);bd.line((x,y,u,v),fill=(255,80,180,210),width=2);bd.ellipse((u-4,v-4,u+4,v+4),fill=(255,80,180));bd.text((x+9,y-9),str(i+1),font=font,fill=color,stroke_width=1,stroke_fill='black')
+        bd.rectangle((0,0,720,23),fill=(0,0,0,235));bd.text((5,2),'Body-only fit: cyan model | amber scored body | gray excluded head | pink residual',font=font,fill='white')
+        body_overlay.save(AUDIT/'body-only-overlay.png')
     sheet=Image.new('RGB',(2560,960),(29,31,33));sd=ImageDraw.Draw(sheet)
     for i,(n,h) in enumerate(r['hypotheses'].items()):
         x=(i%4)*640;y=(i//4)*480
@@ -216,11 +246,14 @@ def review():
     for n,h in r['hypotheses'].items():
         for mode in ('clay','pbr'):
             im=Image.open(AUDIT/(n+'-'+mode+'.png'));h.setdefault('render_alpha_bounds_px',{})[mode]=list(im.getchannel('A').getbbox())
+    if 'body_only_diagnostic' in r:
+        r['body_only_diagnostic']['render_alpha_bounds_px']={m:list(Image.open(AUDIT/('body-only-'+m+'.png')).getchannel('A').getbbox()) for m in ('clay','pbr')}
     r['derived_review_images']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [AUDIT/'best-overlay.png',AUDIT/'source-landmarks.png',AUDIT/'hypothesis-sheet.png']}
+    if (AUDIT/'body-only-overlay.png').exists():r['derived_review_images']['body-only-overlay.png']=hashlib.sha256((AUDIT/'body-only-overlay.png').read_bytes()).hexdigest()
     (AUDIT/'receipt.json').write_text(json.dumps(r,indent=2)+'\n')
     (AUDIT/'review.html').write_text('<!doctype html><meta charset="utf-8"><title>Camera04 diagnostic</title><style>body{background:#181b1d;color:#eee;font:17px system-ui;margin:24px}img{max-width:100%;height:auto}a{color:#6df}section{margin:40px 0}h1{font-size:25px}</style><h1>Frozen integration04: camera-only diagnostic</h1><p>Declared image landmarks, not recovered physical camera. No geometry/material/pose changes. Entire bird retained. July body excluded. Source creative content all rights reserved; internal review only.</p><p><a href="README.md">Handoff</a> · <a href="receipt.json">Exact cameras and residuals</a></p><section><h2>Source points and proposed '+best+'</h2><img src="source-landmarks.png"><img src="best-overlay.png"></section><section><h2>Eight hypotheses, each clay / neutral PBR</h2><img src="hypothesis-sheet.png"></section>'+''.join('<section><h2>'+n+'</h2><p>Weighted RMS '+str(round(h['weighted_rms_px'],1))+' px</p><img src="'+n+'-clay.png"><img src="'+n+'-pbr.png"></section>' for n,h in r['hypotheses'].items()))
 
 
 if __name__ == '__main__':
-    if '--run' in sys.argv:run()
+    if '--run' in sys.argv:run('--body-only' in sys.argv)
     if '--review' in sys.argv:review()

@@ -2865,7 +2865,9 @@
     "ortho-80-clay.png": "009e21799e72e60d35974e6dd4d3320fb57678739370fba33ec4ccdf95ab72ee",
     "ortho-80-pbr.png": "830412d9f8bd1de74317adaf283d6c8d5b0ed99ac1508631e7a4840be2d3a277",
     "persp-65mm-clay.png": "399782a9207c4ae0add1c7a917272a49afbbd2c414af3240123b2d65e38d4d62",
-    "persp-65mm-pbr.png": "09d1c1e3207666375e07ec2208b719569235d069795b1503faf15ba84c6c8f2c"
+    "persp-65mm-pbr.png": "09d1c1e3207666375e07ec2208b719569235d069795b1503faf15ba84c6c8f2c",
+    "body-only-clay.png": "4732ecfcaa747f93ef29195ee0438622907f7aa15d4e8c27208fa565ad46a8d4",
+    "body-only-pbr.png": "06dffef3a334d1bebd8db52065565e881767b8722fba5a92069c115c542775f1"
   },
   "preservation": {
     "original_object_count": 6861,
@@ -2880,7 +2882,378 @@
   "derived_review_images": {
     "best-overlay.png": "6986fd11f513cc9834125ac264d04cc43972a11a0216aa74d5fdff840c825569",
     "source-landmarks.png": "ce32ac2da239558b64ded4f3d5d115cdec613fe8171ce632a614774228691c54",
-    "hypothesis-sheet.png": "462bcf10251f0bc8df291cc9332c61a58ffb6e0da5236f208a0352a189ff7adb"
+    "hypothesis-sheet.png": "462bcf10251f0bc8df291cc9332c61a58ffb6e0da5236f208a0352a189ff7adb",
+    "body-only-overlay.png": "bd813a85b34f8c438d662bfa456ed47c9c603ae99068b4e034297a7c1996d5b0"
   },
-  "script_sha256": "e44cf8b2b219be7028d8980c1689218e3e55abcb28f1be1589655db0784dbf8a"
+  "script_sha256": "5c12b0f01d9b83777d67e966bd9eae47535146e757855f4daa63cec1f6a528c2",
+  "body_only_diagnostic": {
+    "camera": {
+      "location": [
+        -2.6012842655181885,
+        -5.333423137664795,
+        3.3674821853637695
+      ],
+      "rotation_euler": [
+        1.1868239641189575,
+        -4.975622402980662e-08,
+        -0.45378559827804565
+      ],
+      "projection": "ORTHO",
+      "ortho_scale": 2.8762603808716056,
+      "shift": [
+        -0.08696375802581029,
+        -0.03732330006939992
+      ],
+      "lens_mm": 65,
+      "resolution": [
+        1280,
+        853
+      ]
+    },
+    "weighted_rms_px": 50.988752358670055,
+    "landmarks": [
+      {
+        "name": "crown",
+        "source_px": [
+          834,
+          28
+        ],
+        "world": [
+          1.873709671220417e-17,
+          -0.1728743612766266,
+          1.8392235040664673
+        ],
+        "weight": 1,
+        "assumption": "cranial-vault highest vertex; source crest includes separate plates",
+        "projected_px": [
+          785.0388336181641,
+          45.972432136535645
+        ],
+        "residual_px": [
+          -48.96116638183594,
+          17.972432136535645
+        ],
+        "distance_px": 52.15557621551315
+      },
+      {
+        "name": "near-optic",
+        "source_px": [
+          916,
+          113
+        ],
+        "world": [
+          -0.17099979519844055,
+          -0.24106465280056,
+          1.6955618858337402
+        ],
+        "weight": 1,
+        "assumption": "visible circular optic center",
+        "projected_px": [
+          729.9446105957031,
+          127.96375805139542
+        ],
+        "residual_px": [
+          -186.05538940429688,
+          14.963758051395416
+        ],
+        "distance_px": 186.65615977353988
+      },
+      {
+        "name": "bill-hook",
+        "source_px": [
+          989,
+          257
+        ],
+        "world": [
+          1.469576184845098e-19,
+          -0.3899901211261749,
+          1.383019208908081
+        ],
+        "weight": 1,
+        "assumption": "lowest upper-bill vertex; contour interpretation",
+        "projected_px": [
+          827.3947906494141,
+          266.7421274781227
+        ],
+        "residual_px": [
+          -161.60520935058594,
+          9.742127478122711
+        ],
+        "distance_px": 161.89858781671538
+      },
+      {
+        "name": "near-shoulder",
+        "source_px": [
+          719,
+          272
+        ],
+        "world": [
+          -0.24053069949150085,
+          0.001828070729970932,
+          1.3556286096572876
+        ],
+        "weight": 0.7,
+        "assumption": "upper shield-root center, broad ambiguous region",
+        "projected_px": [
+          654.7486877441406,
+          236.91333997249603
+        ],
+        "residual_px": [
+          -64.25131225585938,
+          -35.08666002750397
+        ],
+        "distance_px": 73.20727312559586
+      },
+      {
+        "name": "breast-center",
+        "source_px": [
+          898,
+          402
+        ],
+        "world": [
+          0.0007341483724303544,
+          -0.3680374026298523,
+          0.9685370326042175
+        ],
+        "weight": 0.5,
+        "assumption": "frontal breast plate-course center, uncertain homologous surface",
+        "projected_px": [
+          823.4058380126953,
+          434.42175990343094
+        ],
+        "residual_px": [
+          -74.59416198730469,
+          32.42175990343094
+        ],
+        "distance_px": 81.33547514967853
+      },
+      {
+        "name": "near-knee",
+        "source_px": [
+          610,
+          550
+        ],
+        "world": [
+          -0.16700004041194916,
+          0.010000004433095455,
+          0.5900000333786011
+        ],
+        "weight": 1,
+        "assumption": "source visible upper circular leg hinge",
+        "projected_px": [
+          682.5655364990234,
+          546.2270272374153
+        ],
+        "residual_px": [
+          72.56553649902344,
+          -3.7729727625846863
+        ],
+        "distance_px": 72.66355627725846
+      },
+      {
+        "name": "far-knee",
+        "source_px": [
+          840,
+          552
+        ],
+        "world": [
+          0.16700001060962677,
+          0.010000004433095455,
+          0.5900000333786011
+        ],
+        "weight": 1,
+        "assumption": "source far upper hinge partly occluded",
+        "projected_px": [
+          816.1599731445312,
+          521.8182561099529
+        ],
+        "residual_px": [
+          -23.84002685546875,
+          -30.181743890047073
+        ],
+        "distance_px": 38.461468311985506
+      },
+      {
+        "name": "near-hock",
+        "source_px": [
+          610,
+          644
+        ],
+        "world": [
+          -0.17499998211860657,
+          0.07500001043081284,
+          0.2849999964237213
+        ],
+        "weight": 1,
+        "assumption": "source intermediate circular hinge",
+        "projected_px": [
+          666.6851043701172,
+          662.9206354767084
+        ],
+        "residual_px": [
+          56.68510437011719,
+          18.920635476708412
+        ],
+        "distance_px": 59.759446987849174
+      },
+      {
+        "name": "far-hock",
+        "source_px": [
+          830,
+          643
+        ],
+        "world": [
+          0.17499995231628418,
+          0.07500001043081284,
+          0.2849999964237213
+        ],
+        "weight": 0.7,
+        "assumption": "far hinge partly occluded",
+        "projected_px": [
+          806.6793060302734,
+          637.3426206409931
+        ],
+        "residual_px": [
+          -23.320693969726562,
+          -5.657379359006882
+        ],
+        "distance_px": 23.997097917068178
+      },
+      {
+        "name": "near-ankle",
+        "source_px": [
+          639,
+          731
+        ],
+        "world": [
+          -0.21800009906291962,
+          0.014999999664723873,
+          0.10500001162290573
+        ],
+        "weight": 1,
+        "assumption": "source instep/ankle hinge center",
+        "projected_px": [
+          661.1908721923828,
+          749.3244013339281
+        ],
+        "residual_px": [
+          22.190872192382812,
+          18.324401333928108
+        ],
+        "distance_px": 28.778785466129992
+      },
+      {
+        "name": "far-ankle",
+        "source_px": [
+          856,
+          728
+        ],
+        "world": [
+          0.21800005435943604,
+          0.014999999664723873,
+          0.10500001162290573
+        ],
+        "weight": 0.7,
+        "assumption": "source instep/ankle hinge center partly occluded",
+        "projected_px": [
+          835.5837249755859,
+          717.4614838957787
+        ],
+        "residual_px": [
+          -20.416275024414062,
+          -10.538516104221344
+        ],
+        "distance_px": 22.975739543079914
+      },
+      {
+        "name": "near-foot",
+        "source_px": [
+          665,
+          768
+        ],
+        "world": [
+          -0.21799996495246887,
+          -0.046000003814697266,
+          0.06499999761581421
+        ],
+        "weight": 0.5,
+        "assumption": "source proximal plantar housing, partly covered by instep",
+        "projected_px": [
+          673.0911254882812,
+          774.969128228724
+        ],
+        "residual_px": [
+          8.09112548828125,
+          6.969128228724003
+        ],
+        "distance_px": 10.678719957724908
+      },
+      {
+        "name": "far-foot",
+        "source_px": [
+          885,
+          747
+        ],
+        "world": [
+          0.21799996495246887,
+          -0.046000003814697266,
+          0.06499999761581421
+        ],
+        "weight": 0.5,
+        "assumption": "source proximal plantar housing, partly covered by instep",
+        "projected_px": [
+          847.4838256835938,
+          743.1062171459198
+        ],
+        "residual_px": [
+          -37.51617431640625,
+          -3.8937828540802
+        ],
+        "distance_px": 37.717699827186024
+      }
+    ],
+    "conservative_full_bird_bounds_px": [
+      560.5078125,
+      12.000061213970184,
+      938.4488677978516,
+      841.0000166390091
+    ],
+    "knee_separation_px": 133.5944366455078,
+    "ankle_separation_px": 174.39285278320312,
+    "azimuth_degrees_from_side": 64,
+    "elevation_degrees": 22,
+    "excluded_from_objective": [
+      "crown",
+      "near-optic",
+      "bill-hook"
+    ],
+    "full_landmark_rms_px": 88.77083100668085,
+    "grid_note": "Body-only coarse yaw0..90 step10/pitch0..20 step4; local refinement \u00b16yaw/\u00b14pitch step2, maximum24pitch. Entire bird remains crop-constrained.",
+    "render_alpha_bounds_px": {
+      "clay": [
+        561,
+        22,
+        938,
+        841
+      ],
+      "pbr": [
+        561,
+        22,
+        938,
+        841
+      ]
+    },
+    "foot_housing_separation_px": 174.3927001953125,
+    "canonical_body_rms_px": 82.12486521283061,
+    "input_preservation_verified": {
+      "original_object_count": 6861,
+      "changed_object_payloads": [],
+      "changed_material_graphs": [],
+      "input_bytes_unchanged": true,
+      "source_bytes_unchanged": true,
+      "native_saved": false,
+      "object_payload_sha256_before": "b80dff58ad83ec201133bd16066474d179c5c752541ad1d1c07d2f33cfb57e40",
+      "object_payload_sha256_after": "b80dff58ad83ec201133bd16066474d179c5c752541ad1d1c07d2f33cfb57e40"
+    }
+  }
 }
