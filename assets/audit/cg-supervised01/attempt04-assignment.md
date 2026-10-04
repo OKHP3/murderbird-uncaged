@@ -2,7 +2,7 @@
 
 Owner ceiling: eight hours, 200,000,000 aggregate tokens; deadline 2026-10-04T12:21:47Z. These are limits, not a spending target. Root integrates and adjudicates; workers do not delegate.
 
-Read `origin/main:goal.md` at 251f2f0243181e97140179c2aff6eb057e165438, then working `goal.md` and `docs/incremental-delivery.md`. Create managed worktrees from d5debb9. The frozen receiving native is `assets/models/cg-supervised01/attempt03/murderbird-supervised-builder.blend`, SHA-256 01103e35bcf16f03fc4a7b7d157bbe89d7267b8d0ca5ca8cd3f6167a6fcb8fce. Root has materialized bytes at `/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged` if LFS checkout is needed.
+Read `origin/main:goal.md` at 251f2f0243181e97140179c2aff6eb057e165438, then working `goal.md` and `docs/incremental-delivery.md`. Create managed worktrees from the commit in the dispatch; receiving artifacts were frozen at d5debb9. The frozen receiving native is `assets/models/cg-supervised01/attempt03/murderbird-supervised-builder.blend`, SHA-256 01103e35bcf16f03fc4a7b7d157bbe89d7267b8d0ca5ca8cd3f6167a6fcb8fce. Root has materialized bytes at `/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged` if LFS checkout is needed.
 
 Controlling full-bird reference: `assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg`, SHA-256 645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114. Head-only July: `context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png`, SHA-256 47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9. July body/wings/stance are excluded. See the independent operator diagnosis at `attempt03/geometry-method-audit.json`.
 
