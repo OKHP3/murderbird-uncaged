@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MurderBird source alignment review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#181b1b;color:#eee;font:16px system-ui}main{max-width:1200px;margin:auto;padding:20px}h1{font-size:24px;margin:0 0 8px}p{line-height:1.5}.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}button,select{font:inherit;border:1px solid #79796e;border-radius:5px;padding:8px 12px;background:#303735;color:#fff}button[aria-pressed=true]{background:#70562d}button:focus-visible,select:focus-visible{outline:3px solid #efc377}#status{display:block;padding:12px 0;color:#dbcea7}#view{height:min(65vh,700px);min-height:320px;background:#4b4b4b}canvas{display:block;width:100%;height:100%}#fallback{width:100%;height:100%;object-fit:contain}.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}figure{margin:0}figcaption{padding:8px 0}figure img{width:100%;display:block}a{color:#e5bb7f}@media(max-width:750px){main{padding:12px}.compare{grid-template-columns:1fr}h1{font-size:21px}}
+[hidden]{display:none!important}
+</style></head>
+<body><main>
+<h1>MurderBird source alignment review</h1>
+<p>Development candidate. Source likeness remains under review; owner acceptance is pending. Drag to orbit and scroll to zoom.</p>
+<div class="controls">
+<label for="era">Era</label><select id="era"><option value="builder">Advanced</option></select>
+<button id="neutral" aria-pressed="true">Neutral light</button><button id="exhibit" aria-pressed="false">Exhibit light</button>
+<button id="reset">Reset view</button><button id="illustrated" aria-pressed="false">Illustrated view</button>
+</div><output id="status" aria-live="polite">Loading candidate…</output>
+<div id="view"><img id="fallback" hidden alt="Candidate illustrated review"></div>
+<div class="compare">
+<figure><figcaption>Pinned full-bird source</figcaption><img src="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" alt="Pinned source"></figure>
+<figure><figcaption>Before: same lighting and camera</figcaption><img id="before" src="attempt03-baseline/builder/canon-neutral.png" alt="Matched before"></figure>
+<figure><figcaption>Candidate native render</figcaption><img id="candidate" src="attempt03/builder/canon-neutral.png" alt="Candidate neutral render"></figure>
+</div>
+<p>The source camera is estimated. Browser and native renderers use different lighting and tone mapping; matching material data does not establish pixel equivalence.</p>
+<p><a href="review.html">Source and construction checkpoints</a> · <a href="equilibrium-review.json">Review record</a></p>
+</main><script type="module">
+import {createSupervisedReview} from '/scripts/cg-supervised-browser03.js';
+const status=document.querySelector('#status'),host=document.querySelector('#view'),fallback=document.querySelector('#fallback');
+const params=new URLSearchParams(location.search), attempt=params.get('attempt')||'attempt03';
+if(!/^[a-z0-9-]+$/.test(attempt))throw new Error('Invalid candidate identifier');
+let review, mode='neutral', illustrated=false;
+const era=document.querySelector('#era');
+async function load(){
+  review?.dispose();review=null;status.textContent='Loading '+era.selectedOptions[0].textContent+' candidate…';
+  const image=`${attempt}/${era.value}/canon-neutral.png`;
+  fallback.src=image;document.querySelector('#candidate').src=image;
+  document.querySelector('#before').src=`${attempt}-baseline/${era.value}/canon-neutral.png`;
+  try{
+    review=await createSupervisedReview(host,`../../models/cg-supervised01/${attempt}/murderbird-supervised-${era.value}.glb`,{lighting:mode});
+    if(illustrated)review.renderer.domElement.hidden=true;
+    status.textContent=`${era.selectedOptions[0].textContent} · ${illustrated?'Illustrated':'WebGL'} · ${mode} light · source likeness pending`;
+  }catch(error){fallback.hidden=false;illustrated=true;document.querySelector('#illustrated').setAttribute('aria-pressed','true');status.textContent='Illustrated review · 3D unavailable: '+error.message;console.error(error);}
+}
+for(const light of ['neutral','exhibit'])document.querySelector('#'+light).onclick=()=>{
+  mode=light;review?.setLighting(light);
+  for(const name of ['neutral','exhibit'])document.querySelector('#'+name).setAttribute('aria-pressed',String(name===mode));
+  status.textContent=`${era.selectedOptions[0].textContent} · ${illustrated?'Illustrated':'WebGL'} · ${mode} light · source likeness pending`;
+};
+document.querySelector('#reset').onclick=()=>review?.resetView();
+document.querySelector('#illustrated').onclick=()=>{
+  illustrated=!illustrated;fallback.hidden=!illustrated;if(review)review.renderer.domElement.hidden=illustrated;
+  document.querySelector('#illustrated').setAttribute('aria-pressed',String(illustrated));
+  status.textContent=`${era.selectedOptions[0].textContent} · ${illustrated?'Illustrated':'WebGL'} · ${mode} light · source likeness pending`;
+};
+era.onchange=load;await load();
+</script></body></html>

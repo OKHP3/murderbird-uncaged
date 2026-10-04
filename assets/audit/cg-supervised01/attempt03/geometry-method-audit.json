@@ -1,0 +1,122 @@
+{
+  "role": "Independent read-only geometry-method audit",
+  "goal_revision": "251f2f0243181e97140179c2aff6eb057e165438",
+  "working_goal_status": "Current cwd goal is an older milestone-1-only mirror; supplied shared revision governs this audit.",
+  "verdict": "Architectural change in construction operators is required: registered 3D section forms and source-specific regional hard plates, not another density/texture patch.",
+  "claims": [
+    {
+      "claim": "Both controlling references match the shared goal pins.",
+      "tier": "CONFIRMED",
+      "evidence": [
+        "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg SHA256 645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+        "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png SHA256 47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9"
+      ],
+      "consequence_if_false": "Likeness judgment uses unauthorized source.",
+      "next_check": "Keep exact source binaries locked."
+    },
+    {
+      "claim": "Head03 improves forehead, cheek and hooked-jaw landmarks, but broad surfaces visibly read as thin slabs with an oversized smooth transverse roof.",
+      "tier": "CONFIRMED",
+      "evidence": [
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/assets/audit/cg-supervised-head03/after-head-neck.png",
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/assets/audit/cg-supervised-head03/before-head-neck.png"
+      ],
+      "consequence_if_false": "Discarding useful landmarks or misdirecting the next reconstruction.",
+      "next_check": "Matched clay render with a grazing light and front/three-quarter views."
+    },
+    {
+      "claim": "The card reading follows from constant/affine transverse-depth polygons, 0.003-0.004 solidify, and only 10-pixel/6-pixel midline bow across broad transverse spans. An edge return joins the bill but does not make its side faces convex.",
+      "tier": "INFERRED",
+      "evidence": [
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/scripts/cg-supervised-head03.py:45-73,90-101,125-148,158-173"
+      ],
+      "consequence_if_false": "Changing thickness alone repeats the failure.",
+      "next_check": "Replace side-polygon operator with section-loft construction and compare."
+    },
+    {
+      "claim": "Neck03 and shield03 route plates through a common smooth surface field and repeated leaf templates; smoothing suppresses separate hard planes. This explains regular inflated shingle masses despite thin edges.",
+      "tier": "INFERRED",
+      "evidence": [
+        "/Users/okh/.codex/worktrees/cg-supervised-neck03/murderbird-uncaged/scripts/cg-supervised-neck03.py:28-77,91-125",
+        "/Users/okh/.codex/worktrees/cg-supervised-source-shield03/murderbird-uncaged/scripts/cg-supervised-shield03.py:45-75",
+        "/Users/okh/.codex/worktrees/cg-supervised-neck03/murderbird-uncaged/assets/audit/cg-supervised-neck03/after-neck-body.png",
+        "/Users/okh/.codex/worktrees/cg-supervised-source-shield03/murderbird-uncaged/assets/audit/cg-supervised-shield03/attempt02/after-shield-flank.png"
+      ],
+      "consequence_if_false": "More leaves merely densify a mistaken surface architecture.",
+      "next_check": "Render discrete locally formed plates with split normals in clay."
+    },
+    {
+      "claim": "Source registration is unproven: July pixels are affinely mapped to a side plane; render receipts document inherited orthographic cameras, not a July solve. Head full-bird aspect changed from receipt 1000x666 to 1100x900.",
+      "tier": "CONFIRMED",
+      "evidence": [
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/scripts/cg-supervised-head03.py:42-43",
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/assets/audit/cg-supervised-head03/render-check.py",
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/assets/audit/cg-supervised-head03/receipt.json"
+      ],
+      "consequence_if_false": "Workers compensate camera mismatch by deforming geometry.",
+      "next_check": "Fit separate July-head and full-bird cameras, record landmark residuals, preserve source aspect."
+    },
+    {
+      "claim": "Inherited material graphs on newly generated UVs can confound geometry judgments; bright roofing and black plate faces cannot be attributed exclusively to shape. Exact receiving graph/UV correspondence was not tested.",
+      "tier": "INFERRED",
+      "evidence": [
+        "/Users/okh/.codex/worktrees/cg-supervised-source-head03/murderbird-uncaged/scripts/cg-supervised-head03.py:15-36,55-70",
+        "/Users/okh/.codex/worktrees/cg-supervised-neck03/murderbird-uncaged/scripts/cg-supervised-neck03.py:14-18,34-41",
+        "/Users/okh/.codex/worktrees/cg-supervised-source-shield03/murderbird-uncaged/scripts/cg-supervised-shield03.py:26-29,43-48"
+      ],
+      "consequence_if_false": "Material remapping is mistaken for geometric improvement.",
+      "next_check": "Separate clay, face-normal and regional-ID passes from inherited-PBR render."
+    }
+  ],
+  "next_worker_tasks": [
+    {
+      "task": "Camera-registered volumetric head reconstruction",
+      "tier": "PROPOSAL",
+      "scope": "Retain July landmark outlines, open cheek/jaw, swept crown and source-specific optic placement. Replace planar brow/bill/cheek operators; retain original native. No engineering gate.",
+      "operators_parameters": [
+        "Fit July head camera from optic center/radius, brow root/heel, bill root/tip, mandible tip and skull silhouette; fit full-bird camera separately. Proposed target: median landmark residual <=8px at 1024px, with source aspect preserved.",
+        "Loft 7-9 transverse sections with 12-16 perimeter vertices through bill and cranial/cheek volumes; use convex/chamfered cross-sections, support loops and Sub-D level 1 only where needed. Cross-section widths are explicit editable inferred parameters, not source measurements.",
+        "Replace giant crown bridge with 3-5 narrow formed overlapping panels; side returns 0.006-0.012 study units, sheet thickness 0.0025-0.004, bevel 0.0005-0.001. Optic cup has real sidewalls and lens center 0.010-0.018 behind retaining lip.",
+        "Keep genuine cheek aperture and deep inner occlusion; intersections hidden behind panels are allowed."
+      ],
+      "render_tests": [
+        "Same-camera July overlay plus locked-canon full bird, 1024px clay and PBR.",
+        "Front, profile and 45-degree view under grazing light; no paired bill cards, roof slab, unbounded open seams or eye disk sitting in front of its rim.",
+        "Eight-angle low-resolution turntable and final full-bird comparison; reject any local gain that worsens avian identity."
+      ]
+    },
+    {
+      "task": "Rebuild coherent neck/breast/shield plate architecture on the source body envelope",
+      "tier": "PROPOSAL",
+      "scope": "Keep accepted anchors/stance and compact flightless shield extent. Carry neck03 fuller breast transition and shield03 separated undersides/cable route only where matched full-bird image benefits. Do not retain oversized exposed shoulder rings simply for mesh density.",
+      "operators_parameters": [
+        "Use explicit regional section guides and source projected borders; stop sampling every visible face from one smooth ellipsoid. Form each plate in its own local frame: 2-3 planar/chamfered faces, sharp crease normals, locally curved root, tapered edge return.",
+        "Use 0.002-0.0035 thickness, 0.0004-0.0008 bevel, 20-35% overlap, 0.003-0.008 free-end gap, and 4-10 degree local dihedral as starting proposals; form the surface by placement/rotation rather than a shared pillow field.",
+        "Match large framing plates versus small coverts by region; do not uniformly tessellate the breast. Cut visual channels between neck receiver framing, breast and shoulder; recess dark backing 0.015-0.025 and bury ring sectors behind source framing.",
+        "Full-bird projected shoulder width, breast bulge, head/body ratio and claw spread are acceptance landmarks. Preserve stance but correct visible limb/claw mass where it prevents matching the source."
+      ],
+      "render_tests": [
+        "Full bird at locked 1280x853 aspect with shoulder/breast/feet silhouette overlay, plus side and front clay.",
+        "Grazing key reveals hard-face changes, real overlap shadows and recessed machinery without isolated giant ring silhouettes.",
+        "Regional material-ID pass then PBR at identical camera/light; eight-angle low-resolution view checks coherent construction."
+      ]
+    }
+  ],
+  "checks_run": [
+    "Read shared and current working goals",
+    "Read three worker geometry scripts and render camera setup",
+    "Viewed pinned full bird and July head, all three requested after studies and matching before studies",
+    "Recomputed controlling reference SHA256 hashes"
+  ],
+  "unknowns": [
+    "No new Blender geometry or render execution",
+    "No integrated cycle03 geometry review",
+    "No GLB/browser material/normal parity verification",
+    "Unseen source depth remains inference",
+    "Owner artistic acceptance remains outstanding"
+  ],
+  "files_changed": [
+    "/tmp/cg-geometry-method-audit.json"
+  ],
+  "budget_behavior": "No subagents, no repo edits, no new dependencies, no browsing."
+}
