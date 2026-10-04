@@ -1,0 +1,205 @@
+{
+  "role": "evidence-reviewer",
+  "execution_status": "complete",
+  "created_utc": "2026-10-04T06:52:46.218266+00:00",
+  "artifact": {
+    "name": "Frozen Advanced06 initial review",
+    "manifest_path": "assets/audit/cg-supervised01/attempt06/frozen-manifest.json",
+    "manifest_sha256": "552a43a7228fe5e8459dc5795cf05c502060361efefd5f2d91b41c6aab75ec97",
+    "files": 237,
+    "native_sha256": "72e7e53daf40b7128cdf9b173006c639bcf123952547a2576fb2de29130f06d4",
+    "glb_sha256": "dc617145b31958fc87d999091dc5962edeecdd3a936e56f4b0f442308dc497e3",
+    "scope": "Advanced only; four before/candidate view pairs; head06/machinery06/body05/metal05"
+  },
+  "question": "Is Advanced06 a defensible source-aligned gain, and what blocks the complete target?",
+  "decision": "approve-with-limits",
+  "decision_scope": "Evidence integrity and technical reviewability of the restored initial Advanced freeze. Does not approve source likeness, three-era completion, browser visual parity, owner acceptance or release.",
+  "complete_target_decision": "defer-for-evidence",
+  "rationale": "Matched comparison controls, exact scoped texture bytes, preserved receiving payloads and actual static GLB geometry/UV/material coverage support reviewing visible gain. Those technical gates cannot establish the gain itself or final likeness. Frozen-custody violation was observed and byte-exactly repaired; it must remain in the chain of custody.",
+  "authority": {
+    "local_goal_sha256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+    "local_goal_last_updated": "2026-10-04T04:26:19.270994+00:00",
+    "github_main_live_commit": "251f2f0243181e97140179c2aff6eb057e165438",
+    "github_main_goal_blob": "66e687d92b81c6920d4c8e898ea4cd84b0ec6c91",
+    "limit": "Live GitHub main goal still ends at Milestone2b budget stop; architect-supervised continuation is recorded in local goal and direct owner-thread authority, not yet published main. No shared-main synchronization claimed."
+  },
+  "independence": {
+    "prior_review_conclusions_read": false,
+    "source_family": "Same pinned images, scripts, receipts and native assets as implementation; no external holdout.",
+    "model_family": "Inherited parent model; initial roles share model/source family. Agreement is correlated and cannot establish acceptance.",
+    "permissions": "Read-only repository inspection, writes confined to requested /tmp review outputs; no installs, children, cloud asset transmission, publication or source edits.",
+    "holdout": "None; all pinned sources are development references visible to optimizer."
+  },
+  "claim_ledger": [
+    {
+      "claim_id": "EV06-01",
+      "claim": "All237 frozen files match sizes and hashes at initial and final live checks; one intermediate provenance receipt was displaced and restored.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [
+        "assets/audit/cg-supervised01/attempt06/frozen-manifest.json",
+        "/tmp/cg-qa06-evidence-checks.json"
+      ],
+      "consequence": "Freeze drift could invalidate review identity.",
+      "next_test": "Keep frozen paths write-protected by workflow; future eras use distinct output roots and new scoped manifests."
+    },
+    {
+      "claim_id": "EV06-02",
+      "claim": "Surface03, finish04 and metal05 exact module texture paths/hash sets pass49,14,40 checks respectively; corresponding before/candidate map hashes are identical.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [
+        "assets/models/cg-supervised01/attempt06/textures/surface-provenance.json",
+        "assets/models/cg-supervised01/attempt06/finish04-builder-receipt.json",
+        "assets/models/cg-supervised01/attempt06/metal05/metal05-builder-receipt.json"
+      ],
+      "consequence": "Basename-only matching could falsely diagnose or hide texture substitution.",
+      "next_test": "Retain module-root-qualified paths; do not overwrite global surface-provenance during era supplements."
+    },
+    {
+      "claim_id": "EV06-03",
+      "claim": "Four before/candidate camera/light/render control dictionaries are identical except measured character bounds; actual PNG dimensions match.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [
+        "assets/audit/cg-supervised01/attempt06/builder/receipt.json",
+        "assets/audit/cg-supervised01/attempt06-baseline/builder/receipt.json",
+        "scripts/build-cg-supervised06.py"
+      ],
+      "consequence": "Changed framing/exposure could manufacture apparent gain.",
+      "next_test": "Use these controls for visual judgment; record calibration separately if source camera estimation changes."
+    },
+    {
+      "claim_id": "EV06-04",
+      "claim": "Every7281 receiving MESH/EMPTY payload preserves raw geometry, UVs, polygon material indices, slot counts, transform and parent;9anchors preserved. Excluding5guides agrees with receipt7276.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [
+        "/tmp/cg-qa06-preservation.json",
+        "assets/models/cg-supervised01/attempt05/murderbird-supervised-builder.blend",
+        "assets/models/cg-supervised01/attempt06/murderbird-supervised-builder.blend"
+      ],
+      "consequence": "Historical source loss or stance change would invalidate continuity.",
+      "next_test": "Continue protecting anchors; stage guide hide and declared head supersession are separate from geometry preservation."
+    },
+    {
+      "claim_id": "EV06-05",
+      "claim": "Actual GLB has25materials/meshes,770528triangles,45embedded PNGs,0animations,one embedded buffer and valid bufferView bounds; triangle material coverage matches receipt and all images match frozen PNG bytes.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [
+        "/tmp/cg-qa06-evidence-checks.json",
+        "assets/models/cg-supervised01/attempt06/murderbird-supervised-builder.glb"
+      ],
+      "consequence": "Receipt-only counts could conceal external dependencies or wrong imagery.",
+      "next_test": "Check runtime performance and render support for KHR_materials_transmission/KHR_materials_ior separately; neither extension is required."
+    },
+    {
+      "claim_id": "EV06-06",
+      "claim": "All25 material groups preserve evaluated native position/UV corner tuples in exported GLB within1.1921e-7 after glTF axis/V conversion; material coverage and all25 TEXCOORD_0 channels are present.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [
+        "/tmp/cg-qa06-native-evidence.json",
+        "/tmp/cg-qa06-native-evidence.py"
+      ],
+      "consequence": "Native UV readback before export alone would not prove exported UV fidelity.",
+      "next_test": "Keep actual GLB readback; two groups reorder corners, so compare position/UV tuples without requiring identical corner ordering. Normals and full shader response need separate validation."
+    },
+    {
+      "claim_id": "EV06-07",
+      "claim": "The initial freeze proves a source-aligned artistic gain or complete three-era target.",
+      "claim_type": "interpretation",
+      "status": "unknown",
+      "evidence_ids": [
+        "Pinned full-bird/July images",
+        "assets/audit/cg-supervised01/attempt06/builder/receipt.json"
+      ],
+      "consequence": "Technical validity could be mistaken for likeness or acceptance.",
+      "next_test": "Direct source/before/candidate image judgment, three-era/eight-view supplement freeze, actual WebGL comparison and owner artistic review."
+    },
+    {
+      "claim_id": "EV06-08",
+      "claim": "Camera04 is a calibrated physical recovery or metrology alignment.",
+      "claim_type": "hypothesis",
+      "status": "disputed",
+      "evidence_ids": [
+        "scripts/cg-supervised-camera04.py",
+        "assets/audit/cg-supervised01/attempt06/builder/receipt.json"
+      ],
+      "consequence": "Image residuals could be used to justify exact source proportions without calibration.",
+      "next_test": "Retain estimated/not-calibrated label; use source-aligned visual comparisons and separately review any camera revision."
+    }
+  ],
+  "custody_incident": {
+    "affected_path": "assets/models/cg-supervised01/attempt06/textures/surface-provenance.json",
+    "initial": "All237 passed.",
+    "intermediate": "Advanced provenance3998d6281c1dc92e53996eaeda2c7b93e43ab79e5f63cd830bf668c13c9d8566 was overwritten by Mechanic provenance437f50ae5894bfbafa1321be44b23c57203900b94da97c7d7830d892cdfb8039; changed era/glassPreserved/materials/eraDisplayName fields.",
+    "recovery": "Original Advanced receipt is embedded in frozen builder receipt.module_changes.regional_surface; its indent2+newline serialization reproduced frozen hash. Root restored it; final independent237-file check passes.",
+    "binary_scope": "Native, GLB and texture hashes remained pinned in intermediate checks.",
+    "required_change": "Per-era module output root or era-specific surface-provenance filename; never write supplement outputs into an existing freeze."
+  },
+  "checks_run": [
+    {
+      "evidence_status": "live",
+      "check": "Three complete manifest size/SHA passes surrounding an observed intermediate failure and restoration."
+    },
+    {
+      "evidence_status": "live",
+      "check": "103 root-qualified module texture hashes; before/candidate map-hash equivalence; all8 PNG headers against receipt dimensions."
+    },
+    {
+      "evidence_status": "live",
+      "check": "GLB2 header/chunks/buffer bounds/material triangle counts/embedded image bytes and texture routes."
+    },
+    {
+      "evidence_status": "live",
+      "check": "Blender5.2.1 absolute executable native reopen; receiving payload preservation and evaluated native/GLB position/UV comparison."
+    },
+    {
+      "evidence_status": "analytical",
+      "check": "Frozen builder/exporter source review of render setup, UV conversion, material grouping, source preservation and scoped export limits."
+    },
+    {
+      "evidence_status": "live",
+      "check": "GitHub main commit and goal blob fetched read-only; local goal and receipt pins distinguished."
+    }
+  ],
+  "limitations": [
+    "No image-based likeness grading performed by this evidence role; outcome review owns visible gains.",
+    "No protected holdout; shared model/source family limits independence.",
+    "Three-era and eight-view supplements are outside this237-file initial freeze and incomplete for this decision.",
+    "No independent normal-corner or modifier parity comparison; receiving raw geometry/UV/indices/slots/anchors checked.",
+    "Material-slot triangle coverage and actual UV mapping verified; full Blender-to-WebGL shader/tone-mapping/transmission appearance not verified.",
+    "No browser screenshot/console/performance test, build rerun, CI, deployment, human acceptance, animation or hierarchy parity in this role.",
+    "PNG hashes, dimensions and recorded setup establish documented matching; rendering was not rerun to independently reproduce those images."
+  ],
+  "followups": [
+    {
+      "owner": "root integrator",
+      "action": "Preserve custody incident and require per-era output roots before future supplements.",
+      "priority": "required"
+    },
+    {
+      "owner": "outcome reviewer/root",
+      "action": "Decide source-aligned visible gain from pinned complete-bird/close-up images under both lights; retain/reject geometry operators on image evidence.",
+      "priority": "required for gain"
+    },
+    {
+      "owner": "root/browser reviewer",
+      "action": "Freeze three-era editable/native/GLB and eight-angle/hero supplement, then verify era optic canon and WebGL material response on actual exports.",
+      "priority": "required for complete target"
+    },
+    {
+      "owner": "root",
+      "action": "Record local/direct owner authority versus live GitHub main goal; synchronize shared goal only through authorized integration.",
+      "priority": "provenance"
+    },
+    {
+      "owner": "owner",
+      "action": "Final artistic acceptance remains outstanding.",
+      "priority": "final gate"
+    }
+  ],
+  "review_expiry_trigger": "Any frozen file changes; a new artifact/camera/material revision; supplementation presented as part of the initial freeze; stronger runtime or owner evidence."
+}
