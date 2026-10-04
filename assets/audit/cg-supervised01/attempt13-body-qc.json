@@ -1,0 +1,252 @@
+{
+  "review": "QC13 BODY independent regional outcome and evidence review",
+  "createdAtUTC": "2026-10-04T09:13:21.792388+00:00",
+  "decisionQuestion": "Retain BODY13 anterior exterior for next integrated candidate, or revise/reject?",
+  "decision": "approve-with-limits",
+  "retain": true,
+  "reopen": true,
+  "reopenScope": "Source likeness remains open; retain13 incremental geometry for the next integrated candidate, without asserting a finished exterior.",
+  "exactNextSingleCorrection": "Reshape only the mid/lower planform seam trajectories into a visibly oblique sweep around the keel, varying the current near-vertical track widths so the lower breast reads as interlocked formed pieces rather than long smooth bands. Preserve the current global envelope, exact 25 upper panels, open lateral mechanism corridor, head/shields/stance and materials. Judge at whole35/64 plus front/grazing; add no hardware-density or finish pass.",
+  "evidenceStatus": {
+    "pixels": "analytical: existing frozen renders directly inspected",
+    "native": "live: independent local readonly Blender reload/probes",
+    "CI": "not-run",
+    "browser": "not-run",
+    "deployment": "not-run",
+    "ownerAcceptance": "not-established"
+  },
+  "custody": {
+    "workerCommit": "2cbb22a0dd40ae9ebfbf6df7a3578c8282dce0a7",
+    "nativeSHA256": "88903f33a1af045df87e7482d7ff5dd5eaa48cc1ee858c84ea697f0f7efd4566",
+    "manifestFileCount": 60,
+    "manifestHashMismatches": [],
+    "sourceLockedSHA256": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+    "candidate03SHA256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+    "receiving06SHA256": "72e7e53daf40b7128cdf9b173006c639bcf123952547a2576fb2de29130f06d4",
+    "frozen12SHA256": "31635008853aa813bedec4a71623c5cc71faeeafe50967f244489fae865642d9",
+    "goalMainReviewed": "251f2f0243181e97140179c2aff6eb057e165438",
+    "rootWorkingHEAD": "a38f4d6e772a4b9a2c2eb2c14ec2e23831d2707d",
+    "local8hAppendixRead": true,
+    "sourceOrJudgedFilesModified": false
+  },
+  "claimLedger": [
+    {
+      "claim_id": "B13-01",
+      "claim": "Frozen worker commit and all 60 manifest files match; native SHA matches the frozen receipt.",
+      "tier": "CONFIRMED",
+      "claim_type": "fact",
+      "evidence": [
+        "git HEAD 2cbb22a0dd40ae9ebfbf6df7a3578c8282dce0a7",
+        "60-file SHA256 readback",
+        "/tmp/cg-qc13-native-check.json"
+      ],
+      "status": "supported",
+      "consequence_if_false": "Review could judge a different candidate.",
+      "next_check": "Rehash at integration."
+    },
+    {
+      "claim_id": "B13-02",
+      "claim": "The two controlling hydrated source files match goal pins and their actual pixels were inspected. July body was excluded.",
+      "tier": "CONFIRMED",
+      "claim_type": "fact",
+      "evidence": [
+        "ROOT/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+        "ROOT/assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png"
+      ],
+      "status": "supported",
+      "consequence_if_false": "A substituted source invalidates likeness comparison.",
+      "next_check": "Keep the same pins for next comparison."
+    },
+    {
+      "claim_id": "B13-03",
+      "claim": "Native preserves 7424 original mesh/anchor payloads, 56 material graphs, 160 packed IDs/bytes and metadata, all non-whitelist visibility; exactly 149 legacy objects hidden.",
+      "tier": "CONFIRMED",
+      "claim_type": "fact",
+      "evidence": [
+        "/tmp/cg-qc13-native-check.json",
+        "/tmp/cg-qc13-native-check.py"
+      ],
+      "status": "supported",
+      "consequence_if_false": "Unrelated pose/head/shield/appearance work could be lost.",
+      "next_check": "Integration readback of same contracts; modifier-stack audit if edited."
+    },
+    {
+      "claim_id": "B13-04",
+      "claim": "25 BODY12 upper panels are exact, 26 new BODY13 panels replace the listed 28 lower panels; 51 final panels have normalized evaluated UVs and constrained envelope.",
+      "tier": "CONFIRMED",
+      "claim_type": "fact",
+      "evidence": [
+        "/tmp/cg-qc13-native-check.json",
+        "receipt.json removedBody12MidLowerPanels",
+        "scripts/cg-supervised-body13.py"
+      ],
+      "status": "supported",
+      "consequence_if_false": "A broad envelope change could masquerade as planform improvement.",
+      "next_check": "Compare final integrated envelope and guide seam."
+    },
+    {
+      "claim_id": "B13-05",
+      "claim": "Selected native overlap probes reproduce worker counts, including real free-end burial; the claim of no buried tips would be false.",
+      "tier": "CONFIRMED",
+      "claim_type": "fact",
+      "evidence": [
+        "/tmp/cg-qc13-overlap-check.json"
+      ],
+      "status": "supported",
+      "consequence_if_false": "Sparse counts could be mistaken for clean visible layering.",
+      "next_check": "Full-resolution integrated grazing views; targeted side-seam cleanup only if visibly distracting."
+    },
+    {
+      "claim_id": "B13-06",
+      "claim": "BODY13 offers a modest complete-bird regional gain over BODY12: lower scallops become longer narrower blunt forms while neck/breast flow and exposed lateral mechanism corridor persist. This is visible in whole35/64 and clay views.",
+      "tier": "INFERRED",
+      "claim_type": "interpretation",
+      "evidence": [
+        "final13-whole35-clay.png",
+        "final13-whole35-pbr.png",
+        "final13-whole64-pbr.png",
+        "frozen12-whole35-clay.png",
+        "frozen12-whole64-clay.png",
+        "final13-side-clay.png",
+        "contact-sheet-a.png",
+        "contact-sheet-b.png"
+      ],
+      "status": "provisional",
+      "consequence_if_false": "The next candidate could accumulate detail without improving source resemblance.",
+      "next_check": "Adjudicated whole-source comparison after integration."
+    },
+    {
+      "claim_id": "B13-07",
+      "claim": "The source still reads as a denser oblique formed assembly; BODY13 remains smoother and more vertically regular, with tidy upper courses and broad low-detail lower bands. Full-source likeness is unresolved.",
+      "tier": "INFERRED",
+      "claim_type": "interpretation",
+      "evidence": [
+        "both hydrated source images",
+        "source-whole-comparison.png",
+        "final13-front-clay.png",
+        "final13-body-grazing-clay.png",
+        "final13-whole35-pbr.png"
+      ],
+      "status": "provisional",
+      "consequence_if_false": "Regional retain could be wrongly promoted as likeness acceptance.",
+      "next_check": "One oblique planform-flow correction, then same-camera complete-bird comparison."
+    },
+    {
+      "claim_id": "B13-08",
+      "claim": "Study 35/64/front/profile/grazing camera/light records match between receiving06/frozen12/final13; source camera/pose are estimated rather than solved.",
+      "tier": "CONFIRMED",
+      "claim_type": "fact",
+      "evidence": [
+        "receipt.json cameras:50 entries pairwise readback",
+        "source-whole-comparison.png"
+      ],
+      "status": "supported",
+      "consequence_if_false": "Camera differences could bias source/candidate proportions.",
+      "next_check": "Keep study camera fixed; report source-camera uncertainty."
+    },
+    {
+      "claim_id": "B13-09",
+      "claim": "Owner artistic acceptance, browser parity, three-era integrated result, animation behavior and publication are not established by this QC.",
+      "tier": "UNKNOWN",
+      "claim_type": "fact",
+      "evidence": [
+        "not run in this regional read-only review"
+      ],
+      "status": "provisional",
+      "consequence_if_false": "Technical pass could be mistaken for release or human acceptance.",
+      "next_check": "Owner review and separately authorized integration checks."
+    }
+  ],
+  "checksRun": [
+    "Current remote main exact SHA and origin/main goal text read; active ROOT exact-eight-hour appendix read",
+    "60-file frozen manifest and two hydrated source SHA256 checks",
+    "50 actual render pixels via two contact sheets; source montage; both original hydrated source images",
+    "Full-resolution individual before06/frozen12/new13 whole35/64, final front, side, profile, body grazing views; all eight turns in contact sheet",
+    "Read-only Blender 5.2.1 LTS reload original06 and frozen13; mesh/anchor digest, material graph, packed IDs/bytes/metadata, visibility, retained upper, evaluated UV and envelope checks",
+    "Independent selected 4-panel overlap BVH probes against all 51 evaluated neighboring plate meshes; exact reported counts reproduced",
+    "Camera/light receipt pair consistency for all available 06/12/13 matching render keys"
+  ],
+  "checksNotRun": [
+    "No rebuild, apply(), native save, source edit, judged artifact edit or child agent",
+    "Independent full 51-panel overlap recomputation and guide-hit distance replay; worker 26-root-coverage aggregate remains source-reported beyond sampled subset",
+    "Modifier stacks, cameras/lights native-to-original equality beyond mesh/anchor payload contract",
+    "Independent native projection framing replay; whole-frame-audit is source-reported",
+    "Browser/export/build/CI/deployment/animation/physical validation/owner acceptance"
+  ],
+  "independentNative": {
+    "originalCount": 7424,
+    "changed": [],
+    "visibilityChangesOutsideWhitelist": [],
+    "hideWhitelistCount": 149,
+    "allWhitelistHidden": true,
+    "graphsCount": 56,
+    "graphsExact": true,
+    "packedCount": 160,
+    "packedIDsAndBytesExact": true,
+    "metadataExact": true,
+    "retained25Exact": true,
+    "guideHidden": true,
+    "panelCount": 51,
+    "newPanelCount": 26,
+    "evaluatedUVBad": [],
+    "envelope": {
+      "min": [
+        -0.23199999332427979,
+        -0.41664448380470276,
+        0.7592215538024902
+      ],
+      "max": [
+        0.23199999332427979,
+        -0.08819853514432907,
+        1.560947060585022
+      ]
+    },
+    "nativeSHA256": "88903f33a1af045df87e7482d7ff5dd5eaa48cc1ee858c84ea697f0f7efd4566"
+  },
+  "independentTargetedOverlap": {
+    "method": "Independent saved-native read-only selected panel quad-center BVH local-normal probes against 51 evaluated neighboring plates",
+    "panels": [
+      {
+        "object": "CGB13 narrow formed panel 0-0",
+        "rootSamples": 56,
+        "rootCovered": 44,
+        "longitudinalRootSamples": 44,
+        "freeEndSamples": 40,
+        "freeEndBuried": 11
+      },
+      {
+        "object": "CGB13 narrow formed panel 3-0",
+        "rootSamples": 56,
+        "rootCovered": 56,
+        "longitudinalRootSamples": 56,
+        "freeEndSamples": 40,
+        "freeEndBuried": 0
+      },
+      {
+        "object": "CGB13 narrow formed panel 4-1",
+        "rootSamples": 56,
+        "rootCovered": 37,
+        "longitudinalRootSamples": 26,
+        "freeEndSamples": 40,
+        "freeEndBuried": 0
+      },
+      {
+        "object": "CGB13 narrow formed panel 8-2",
+        "rootSamples": 56,
+        "rootCovered": 55,
+        "longitudinalRootSamples": 45,
+        "freeEndSamples": 40,
+        "freeEndBuried": 12
+      }
+    ],
+    "workerProbeCountsMatch": true,
+    "limits": "Sparse static samples; root coverage and side-seam free-end burial are not visible-pixel fractions or animation assurance"
+  },
+  "limits": [
+    "Same underlying model family and same supplied sources; this role is independent context, not a protected unseen source holdout.",
+    "Estimated source camera/pose; frozen same-camera renders support iteration comparison more strongly than exact source reconstruction.",
+    "4-sample denoised 640px stills limit tiny seam/artifact judgments.",
+    "No previous QC or optimizer dialogue consulted; worker handoff/receipt technical sections contained worker image opinion, which was not used as adjudication evidence.",
+    "Local read-only evidence supports regional retention only; source visual equivalence remains a separate owner gate."
+  ]
+}
