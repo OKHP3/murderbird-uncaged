@@ -1,0 +1,57 @@
+{
+  "review_role": "conditional_disruptor",
+  "status": "exploratory_non_authoritative",
+  "decision_question": "Does the anterior triangular breast gap and puffy plate construction negate the useful shorter-course whole-character gain, such that BODY01 should not be retained as the baseline?",
+  "frozen_artifact": {
+    "manifest_path": "assets/audit/cg-recursive-three-loop01/loop01/final-frozen-manifest.json",
+    "manifest_sha256": "041678f58cebd5177c1f30e1f717e4763add9d74557789a184fe96792ec70517",
+    "review_contract_path": "assets/audit/cg-recursive-three-loop01/loop01/final-review-contract.json",
+    "review_contract_sha256": "d2cc65e69c0d2091388aab9c8e8597b91cbaa7496031c37c52768ba5c79ee8da",
+    "review_note": "Root advised that initial reviewers materially differ on F01 overall net gain; this countertest is exploratory and is not authoritative for release. No initial reviewer reports were read."
+  },
+  "first_look": {
+    "path": "/tmp/cg-recursive-loop01-disruptor-first-look.txt",
+    "sha256": "152700c0c588d62c7754795915e2f2cca4d86cf88b303772beadca18024e9841"
+  },
+  "initial_visual_judgment": "The pinned source reads as a heavy, threatening, dense machine-bird. Its broad chest is continuous under the throat, with overlapping small plates and dark mechanical seams; it has no conspicuous triangular empty notch splitting the front chest.",
+  "falsifiable_hypothesis": {
+    "claim": "The retained breast's new dark triangular opening and puffy plate mass are large and persistent enough in ordinary full-bird views to disrupt source-like chest continuity and cancel the shorter-course improvement.",
+    "test_that_would_prove_objection_wrong": "Compare the frozen matched02 and retained02 Builder 1280x853 renders at the same camera pixels, including canon-neutral, canon-workshop, neutral-000, neutral-090, neutral-180, and neutral-225. If the retained chest remains visually continuous at whole-bird scale in the source-matched canon views, the 000/225 angles do not show a conspicuous split, and its shorter overlapping courses read closer to the pinned source than matched02, the objection that the gap negates the gain is falsified. If a clear notch or puffy split recurs in ordinary full-bird views and disrupts the chest read, the objection survives. The 1280x1280 body-detail views locate the feature but cannot by themselves determine whole-bird impact."
+  },
+  "execution": {
+    "method": "Direct pixel-level visual comparison of the actual frozen PNG files at their native dimensions; the matched02 and retained02 Builder turntable/canon renders share 1280x853 dimensions and comparable camera labels. Inspected front, side, rear, and far three-quarter angles, plus body details. No render, resize, edit, or derived image was made.",
+    "outcome": "PARTIAL SURVIVAL. At whole-bird size in neutral-000, retained02 has a clearly visible dark triangular notch between the anterior breast plates; this is not only an enlarged seam concern. The 000 image therefore supports a front-on continuity regression against both the pinned source and matched02. In retained02 canon-neutral and canon-workshop, however, the chest still reads as a connected armored mass at the source-matched three-quarter view. The neutral-090 side view and neutral-225 far three-quarter view do not show the same conspicuous frontal split. Against matched02, retained02's shorter overlapping plate courses make the breast more articulated and closer to the source's layered breast surface, while its plates remain larger and puffier than the source's dense fine scales. This localized front-view defect does not alone demonstrate that the whole-character benefit is negated or justify changing the retained baseline; it warrants a focused successor check. Root must resolve the broader F01 net-gain claim from the complete evidence."
+  },
+  "limits": [
+    "This is a visual judgment on supplied fixed renders, not a calibrated geometric or perceptual measurement.",
+    "The pinned source and CG candidate differ in lighting, scene, pose projection, and render style; source-to-candidate similarity is qualitative.",
+    "A failed or partial counterexample is not proof of perfection, target completion, or owner likeness acceptance.",
+    "This review supplies no engineering, fitment, or fabrication claim."
+  ],
+  "inspected_files": [
+    {"path":"goal.md","sha256":"31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5","kind":"authority"},
+    {"path":"assets/audit/cg-recursive-three-loop01/owner-authorization.json","sha256":"6782891819ecb6a956041aa95da65a0905024d091379da740cbf27fa2428d235","kind":"authority"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop-control.json","sha256":"3d71542cc4ac154e4d8632f85958b7a131364b5616d089386bdbc45933a96126","kind":"authority"},
+    {"path":".agents/skills/okhp3-equilibrium-review/SKILL.md","sha256":"24aad5cce75ca4b41e60b556b7903e4f1d0e384e0f1755ad81e5b7a9014b6ffe","kind":"review-protocol"},
+    {"path":"assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg","sha256":"645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114","kind":"pinned-source"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/canon-neutral.png","sha256":"605fa05a2627f2b7b549e06960d8f6f43b5f5859ec7df768933a316b73d307cc","kind":"matched02-whole-view","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/canon-workshop.png","sha256":"1ae6faa3da9eb0a9d2b91fa54222ed12d837e29ea338a2135638546dfffcd5d0","kind":"matched02-whole-view","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/neutral-000.png","sha256":"672523f9640b8185d07af26f169bf26361a9dc7b6b42446ffc70a355f3d4fc73","kind":"matched02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/neutral-090.png","sha256":"dd9e842a92dc71cb6c0653cf8141a0918d54205b55b54df4df739f2874f8fee2","kind":"matched02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/neutral-180.png","sha256":"fbe8a9bf74dfed7c6dd93181e5930ba757085fc16ebf5c129fdf2b963815e869","kind":"matched02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/neutral-225.png","sha256":"fc67e64448b70f3683e0472d4736545479ec687a8ad6915e747736e03988e0af","kind":"matched02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/matched02/builder/body-detail.png","sha256":"11258853021657f7d178e633e9497416dc70c692ba961b91d83a55e6308d6ce3","kind":"matched02-close-view","dimensions":"1280x1280"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/canon-neutral.png","sha256":"a25a3644bfdefa65ee38fe51e13bec6010e0e21a6ebbbe1b0676ae8820274709","kind":"retained02-whole-view","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/canon-workshop.png","sha256":"b0e14dd967ac36d645539a3121b75c15dfbf5a00b8450893a651052e5eac7bdb","kind":"retained02-whole-view","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/neutral-000.png","sha256":"5e8b09ffe3150594565ba0d15ba9a48a96d237b4f87431a9474f3b1c7b2e37b1","kind":"retained02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/neutral-090.png","sha256":"213b812f709f3daff27da1ef50e929dd9e699e155b4ab89546dcd122a01d5d0b","kind":"retained02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/neutral-180.png","sha256":"a794a2bc370fcda00aff938affb76967f9e84dda66eabf7d7a2a005e6259d8b4","kind":"retained02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/neutral-225.png","sha256":"ab5a9953c52104686de636891bbcdac37922234755c3752b33e12252ba66fdb4","kind":"retained02-turntable","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/body-detail.png","sha256":"8ac420373ed3cba7977c6b323c4792c54940e4c43248c47ff052231c871766b9","kind":"retained02-close-view","dimensions":"1280x1280"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/builder/hero.png","sha256":"c1eb6cd3f8de629d0c30915afb1cb6af4f28c3ae0c6f75ed8383119ecc9bccc7","kind":"retained02-whole-view","dimensions":"960x1280"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/maker/canon-neutral.png","sha256":"3543587e85bbc06e06a5a10c25dcf6575a460261aaa4aef49b8dbf900f9d9680","kind":"retained02-era-whole-view","dimensions":"1280x853"},
+    {"path":"assets/audit/cg-recursive-three-loop01/loop01/delivery/retained02/mechanic/canon-neutral.png","sha256":"d7142c708ca8e7c23d2f396c4d5b1125a9b4af94f4c03cf15a0e3d136b5eea95","kind":"retained02-era-whole-view","dimensions":"1280x853"}
+  ],
+  "disposition": "No release decision. This bounded countertest finds a visible front-on gap worth carrying as a successor QA finding; it neither rejects nor certifies the retained baseline."
+}
+

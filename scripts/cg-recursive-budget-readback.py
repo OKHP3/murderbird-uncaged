@@ -7,6 +7,7 @@ tool output, secrets, or private production content are copied.
 import argparse
 import datetime as dt
 import json
+import shutil
 from pathlib import Path
 
 ROOT_THREAD = '01a1050b-6c87-7c91-9d4f-56003ec98a76'
@@ -102,5 +103,13 @@ if __name__ == '__main__':
     args = p.parse_args()
     result = readback(instant(args.start), instant(args.deadline), args.ceiling, args.session_root)
     args.output.parent.mkdir(parents=True, exist_ok=True)
+    # Report storage headroom alongside token/time guards. The architect must
+    # obey these flags; this reader does not automatically terminate workers.
+    storage = shutil.disk_usage(args.output.parent.resolve())
+    result['storage_path'] = str(args.output.parent.resolve())
+    result['storage_free_bytes'] = storage.free
+    result['minimum_launch_storage_bytes'] = 8 * 1024 ** 3
+    result['stop_for_low_storage'] = storage.free < result['minimum_launch_storage_bytes']
+    result['scope_limits'].append('Guard flags require architect action; no automatic stop enforcement.')
     args.output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps({k: v for k, v in result.items() if k != 'sessions'}, indent=2))
