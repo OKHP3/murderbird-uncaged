@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "scope": "Bounded read-only QA tooling preparation for future frozen Loop02/03; calibrated only on immutable Loop01 retained02 and targeted original09. No next-loop QA or self-acceptance decision.",
+  "prepared_utc": "2026-10-04T18:06:27.435633+00:00",
+  "preparation_status": "COMPLETE with explicit strict-normal FAIL; reusable component evidence, not full export parity",
+  "checker_path": "/tmp/cg-recursive-export-proof02/checker.py",
+  "launcher_path": "/tmp/cg-recursive-export-proof02/run-checker.sh",
+  "usage_path": "/tmp/cg-recursive-export-proof02/README.md",
+  "independence": "Independently authored corner checker, no producer helper imports, no other current QA reports read. Reused EVIDENCE reviewer context and shared Sol/Blender/source environment remain correlated. No delegation.",
+  "method": "Actual modifier-evaluated native loop triangles/material indices, float32 world positions, inverse-transpose normalized world corner normals, active and explicit named UV loops, determinant-aware winding and GLTF coordinate conventions compared to independently decoded actual GLB accessors/default-scene node transforms. Cyclic whole-triangle canonicalization preserves associated position/UV/normal corners; no separate unordered UV/position sets. Embedded PNG bytes decoded fully without resizing or color conversion.",
+  "predeclared_thresholds": {
+    "position_triangle_key_decimal_places": 5,
+    "UV_abs": 2e-06,
+    "normalized_normal_L2": 2e-05,
+    "normal_threshold_widened": false
+  },
+  "calibration": [
+    {
+      "era": "builder",
+      "triangles": 619602,
+      "materials": 24,
+      "position_triangle_material_status": "PASS",
+      "actual_position_max_abs": 0.0,
+      "joint_UV_corner_status": "PASS",
+      "UV_max_abs": 1.1920928955078125e-07,
+      "UV_bad_triangles": 0,
+      "strict_normal_corner_status": "FAIL",
+      "strict_normal_bad_triangles": 546090,
+      "max_normal_L2": 0.0060134575771503985,
+      "max_normal_angle_degrees": 0.34454625859338006,
+      "max_normal_receiving_object": "CGB12 longitudinal formed panel 5-0",
+      "maximum_object_evaluated_data_unchanged_from09": true,
+      "maximum_original09_GLB_triangle_matches_retained02_exactly": true,
+      "duplicate_rounded_geometry_triangle_keys": 112,
+      "packed_exact_embedded_images": 46,
+      "embedded_images": 46
+    },
+    {
+      "era": "maker",
+      "triangles": 619602,
+      "materials": 24,
+      "position_triangle_material_status": "PASS",
+      "actual_position_max_abs": 0.0,
+      "joint_UV_corner_status": "PASS",
+      "UV_max_abs": 1.1920928955078125e-07,
+      "UV_bad_triangles": 0,
+      "strict_normal_corner_status": "FAIL",
+      "strict_normal_bad_triangles": 546090,
+      "max_normal_L2": 0.0060134575771503985,
+      "max_normal_angle_degrees": 0.34454625859338006,
+      "max_normal_receiving_object": "CGB12 longitudinal formed panel 5-0",
+      "maximum_object_evaluated_data_unchanged_from09": true,
+      "maximum_original09_GLB_triangle_matches_retained02_exactly": true,
+      "duplicate_rounded_geometry_triangle_keys": 112,
+      "packed_exact_embedded_images": 45,
+      "embedded_images": 45
+    },
+    {
+      "era": "mechanic",
+      "triangles": 619602,
+      "materials": 24,
+      "position_triangle_material_status": "PASS",
+      "actual_position_max_abs": 0.0,
+      "joint_UV_corner_status": "PASS",
+      "UV_max_abs": 1.1920928955078125e-07,
+      "UV_bad_triangles": 0,
+      "strict_normal_corner_status": "FAIL",
+      "strict_normal_bad_triangles": 546090,
+      "max_normal_L2": 0.0060134575771503985,
+      "max_normal_angle_degrees": 0.34454625859338006,
+      "max_normal_receiving_object": "CGB12 longitudinal formed panel 5-0",
+      "maximum_object_evaluated_data_unchanged_from09": true,
+      "maximum_original09_GLB_triangle_matches_retained02_exactly": true,
+      "duplicate_rounded_geometry_triangle_keys": 112,
+      "packed_exact_embedded_images": 45,
+      "embedded_images": 45
+    }
+  ],
+  "image_decode": {
+    "images": 136,
+    "full_decode_passes": 136,
+    "all_encoded_bytes_match_native_packed": true,
+    "raw_pixel_hashes_and_channel_extrema_path": "/tmp/cg-recursive-export-proof02/decoded-images.json"
+  },
+  "custody": {
+    "manifest_sha256": "041678f58cebd5177c1f30e1f717e4763add9d74557789a184fe96792ec70517",
+    "manifest_expected_match": true,
+    "resources": 199,
+    "mismatches": [],
+    "selected_original09_native_GLB_helper_pins_match": true
+  },
+  "normal_cause_status": {
+    "confirmed": "Maximum0.0060134575771503985 (~0.344546 degrees) is the same in all three eras on original receiving CGB12 longitudinal formed panel5-0. Targeted native evaluated joint position/UV/transformed normal/material payload is unchanged from original09; exact matching original09 GLB corner data already has the same export normal. This establishes inherited export difference rather than a BODY01-specific maximum.",
+    "confirmed_pipeline": "Pinned cg-supervised-export.py assigns transformed normalized evaluated normals through normals_split_custom_set before glTF export. Current installed Blender glTF extraction reads corner_normals, rounds normals to4 decimals and renormalizes. Helper hash matches original216 and final receipt; installed library code is current local source evidence, not historically frozen library identity.",
+    "not_confirmed": "The precise cause of the maximum delta is not isolated. Four-decimal rounding alone does not explain the largest0.0060 vector delta; custom split-normal encoding is a possible contributor, not certified numeric cause. No recreated mesh, re-export or tolerance relaxation attempted.",
+    "raw_examples_path": "/tmp/cg-recursive-export-proof02/maximum-trace.json"
+  },
+  "limits": [
+    "112 duplicate rounded geometry triangle keys per era are ordered by associated attributes; static oriented triangle/corner multiset correspondence is demonstrated, not historical object or vertex identity. Maximum-delta material has no duplicate-key ambiguity.",
+    "Sparse accessors and shared/cyclic scene nodes are rejected. The checker assumes active render UV channel0 plus explicit named shader UV maps in native layer order; alternative future UV policy needs scoped mapping support.",
+    "Strict normals fail all24 material groups; no claim of exact transformed normal preservation. Unit normalization is explicit and stored normal lengths retained in raw primitive evidence.",
+    "Texture reference/channel bounds and actual embedded images are inspected; full native shader sampling, texture transforms, color management, lighting and rendered-pixel parity are not proven.",
+    "Only Loop01 calibration, not Loop02/03 artifact review, full receiving preservation review, browser/runtime tests, owner acceptance or engineering."
+  ],
+  "execution_notes": [
+    "Initial temporary output guard needed Path qualification and macOS /tmp symlink normalization; failed setup logs retained. Final all-era run completed and produced raw results. These were tooling setup failures, not asset failures.",
+    "Reusable launcher uses Blender python-exit-code2 and requires a fresh output directory; process completion still does not imply component proof PASS."
+  ],
+  "not_run": [
+    "Any repository/model/review artifact writes, native save, render, export or Git operations",
+    "Shader/lighting/pixel parity, visual micro-detail correction or candidate acceptance",
+    "New model experiments to isolate normal encoding",
+    "Other current QA reads or delegation"
+  ],
+  "proofs": [
+    {
+      "path": "/tmp/cg-recursive-export-proof02/checker.py",
+      "sha256": "cb0df9c4db410d21ee6b0c27fc10520890a432511e81ed8c8af37663a5604e34"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/run-checker.sh",
+      "sha256": "5712a323e57176409c0195618c1c4ea04417ca9aefef4ef88aa6513ab918d833"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/README.md",
+      "sha256": "96e0f1a99cbed50353eae28cf2e134b4d57d07c4111b26e369a7e2ed129a2b31"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/checker-results.json",
+      "sha256": "1a58a671488649baed405a6d24e0dce3ffb29e08b9c4b007dbafae296c37defe"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/raw-builder.json",
+      "sha256": "1a10cb463954efad51ea40e4ca89a5361234c3132dd7cb8e2006989abb58f83e"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/raw-maker.json",
+      "sha256": "f7b3dded72c14c0404679227f6692d118f1f81028358bfdc811eab30ef9703af"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/raw-mechanic.json",
+      "sha256": "6a25a1307d08e9e5e88b6c7b1498125ffffb79642c8058e1831f39aca1925307"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/raw-builder-initial.json",
+      "sha256": "c8a4bc0998d0a1354671fecc14ddd20de2bffcb432a8b727a427e4a8c24faea4"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/trace-maximum.py",
+      "sha256": "776a8af9adcd0a6170c0ab141639896f267ae178341c174504d9c869f2654862"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/maximum-trace.json",
+      "sha256": "c8382de97bf1659c4b5804a0a65e4e07d0a28be32abe7186fbdca0237865dc4e"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/maximum-trace.log",
+      "sha256": "34ed93815f8f1249d64d1b41e9039044eb92556ffc67607a849ebd09f00ba3a1"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/decode-images.py",
+      "sha256": "2e53c593773a483cd65b0c1e722da4c27de713d60f9f09fa10a1e2b315cfeae5"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/decoded-images.json",
+      "sha256": "638984ed8de7d0d1b6f4008242f98a2f0c378796899a7476fba0e08eec7789c0"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/custody.py",
+      "sha256": "22ca1828fed680a01632e4d134b6ee5d4bbbdd3ef7ccc1f08cb2d09120f1c774"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/custody.json",
+      "sha256": "cb7f081e8ef18b5f8c6f3184c960c02ffa0f9fc34d81910b7a781084dcb10515"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/source-code-evidence.json",
+      "sha256": "4f813f42fd165b08785d6e758713237f2215c8ae89af87f53c590b51d818300a"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/calibration-builder.log",
+      "sha256": "69433c4275fd5432b5d909305df431131bae2cadc8e811f70af7a78f880ec69c"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/calibration-all-eras.log",
+      "sha256": "4a16ae4882d02fcbb3169478e7eef90e6ccbd904ec23f4c3d5f0936d42f15d53"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/calibration-all-eras-v2.log",
+      "sha256": "f8d71a504e9029538e1fb2419b6bfaa4e93f0d20be0d6c8bfee6b811333be572"
+    },
+    {
+      "path": "/tmp/cg-recursive-export-proof02/calibration-all-eras-v3.log",
+      "sha256": "1416d00ce07ad754d5e5dc7b4199df2ff5097ae395de92bad47a4c93429c505c"
+    }
+  ]
+}

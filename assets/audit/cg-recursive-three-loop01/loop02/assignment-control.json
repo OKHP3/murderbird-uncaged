@@ -11,7 +11,7 @@
     {
       "agent": "/root/recursive_head",
       "scope": "head",
-      "status": "construction dispatched",
+      "status": "HEAD02 closed: both designs rejected; successor method separately assigned",
       "first_whole_target_utc": "2026-10-04T17:15:00Z",
       "hard_stop_utc": "2026-10-04T18:00:00Z",
       "focused_design_cap": 2,
@@ -19,12 +19,13 @@
       "counter_baseline": 4090858,
       "baseline_read_at_utc": "2026-10-04T16:45:10.521518+00:00",
       "counter_limit": "Root manual metadata readback; late prior/in-flight events can conservatively overcount. No automatic token termination.",
-      "worker_children": false
+      "worker_children": false,
+      "status_readback_utc": "2026-10-04T18:36:05.144212+00:00"
     },
     {
       "agent": "/root/recursive_body",
       "scope": "body",
-      "status": "construction dispatched",
+      "status": "BODY02 closed: both designs rejected; BODY03 additive gap repair retained with limits",
       "first_whole_target_utc": "2026-10-04T17:15:00Z",
       "hard_stop_utc": "2026-10-04T17:45:00Z",
       "focused_design_cap": 2,
@@ -32,12 +33,13 @@
       "counter_baseline": 5472616,
       "baseline_read_at_utc": "2026-10-04T16:45:10.521518+00:00",
       "counter_limit": "Root manual metadata readback; late prior/in-flight events can conservatively overcount. No automatic token termination.",
-      "worker_children": false
+      "worker_children": false,
+      "status_readback_utc": "2026-10-04T18:36:05.144212+00:00"
     },
     {
       "agent": "/root/deadline22_coupled_construction",
       "scope": "feet",
-      "status": "construction dispatched",
+      "status": "FEET02 design02 retained with limits, all three era custody complete; remote66060e5 integrated and worktree archived",
       "first_whole_target_utc": "2026-10-04T17:15:00Z",
       "hard_stop_utc": "2026-10-04T17:50:00Z",
       "focused_design_cap": 2,
@@ -45,7 +47,8 @@
       "counter_baseline": 2292903,
       "baseline_read_at_utc": "2026-10-04T16:45:10.521518+00:00",
       "counter_limit": "Root manual metadata readback; late prior/in-flight events can conservatively overcount. No automatic token termination.",
-      "worker_children": false
+      "worker_children": false,
+      "status_readback_utc": "2026-10-04T18:36:05.144212+00:00"
     }
   ],
   "successor_dispatches": [
@@ -57,13 +60,26 @@
       "observed_token_ceiling_including_cached_input": 20000000,
       "first_whole_latest_utc": "2026-10-04T18:15:00Z",
       "maximum_designs": 2,
-      "pause_between_designs": true
+      "pause_between_designs": true,
+      "status_readback_utc": "2026-10-04T18:36:05.144212+00:00",
+      "status": "HEAD03 closed: both source-ribbon designs rejected, no third design or era expansion",
+      "preserved_remote_commit": "212dd4fdc8e2e8a7e65918f24840650406ea7df1"
     },
     {
       "agent": "deadline22_coupled_construction",
       "task": "FEET02 exact frozen design02 three-era final custody and continuity",
       "hard_stop_utc": "2026-10-04T18:05:00Z",
-      "third_design_authorized": false
+      "third_design_authorized": false,
+      "status_readback_utc": "2026-10-04T18:36:05.144212+00:00",
+      "status": "Three-era completion delivered and integrated; worktree safely archived"
     }
-  ]
+  ],
+  "current_tasks_readback": {
+    "recorded_utc": "2026-10-04T18:36:05.144212+00:00",
+    "recursive_head": "HEAD04 source-contour volume/cage plan only; due18:42Z; future construction requires root gate; hard stop19:45Z",
+    "recursive_body": "BODY03 complete and integrated at root f527ff9; preparing review page/composition check only due18:55Z",
+    "body03": "Exactly three additive underlaps, original courses and other payloads held, early outcome approve-with-limits",
+    "retained_feet": "Frozen FEET02 design02; no new design",
+    "head04_construction_started": false
+  }
 }
