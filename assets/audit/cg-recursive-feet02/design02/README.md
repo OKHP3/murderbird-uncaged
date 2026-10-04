@@ -1,0 +1,13 @@
+# FEET02 design02 review checkpoint
+
+Second and final design. Three separate forward digits on each foot use three faceted formed-metal sleeves, narrow joint shoulders and a reduced socket before the descending hook. Flat stock faces and clipped section corners replace design01's swollen smooth lobes. The receiving chassis root and distal points and claw centerline remain fixed; the last two claw contact/tip rings remain exact receiving coordinates. Depth is inferred from source imagery.
+
+The sole controlling full-bird source is the locked September22 owner reissue SHA645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114. Input is the exact retained02 EACHERA manifest SHA47ed3ee74f0a06a9c470a427f8151dd032b0b48e1c68083f50d092cd1ec3308f. Builder input SHA7539b8968f9e82cc8c1dfb569203bd60b134ba841871b99bf67124552fd7004d. No source pixels are copied into new model surfaces.
+
+Builder before/after evidence is in `builder/before/` and `builder/after/`: held09 whole PBR and clay, feet-detail, feet-front and feet-profile. Blender5.2.1 LTS, native autoexec disabled, CPU two threads, four Cycles samples, maximum640px, inherited09 camera/neutral area-light specification and color-management settings. Foot-only front/profile framing is recorded in the receipt. Render scenes and review lights/cameras are disposable.
+
+`builder/receipt.json` records exact102 preflighted retirement overrides (`hide_render` and `hide_set`, global `hide_viewport` unchanged), 42 new meshes, all26 protected anchor records, custody and native hashes. Original7644 receiving mesh/empty payloads,62 material graphs and161 Builder packed FILE resources pass before save, save/reopen and final comparison. Receiving camera/light/world state was captured before the first before-render and verified exact before save, after reopen and after render; restoration was a verified no-op because review scenes did not mutate it.
+
+The inert callable is `apply(scene, root_path, era, design)` in `scripts/cg-recursive-feet02.py`, default design2 with explicit receiving root. The executed script is frozen as `cg-recursive-feet02-design02.py`. Design01 artifacts and script are preserved byte-exact at remote5741a0056d99535bc39a08ee7e1be6b827a99b28. No third design is authorized.
+
+Root whole-image gate is pending. Maker/Mechanic expansion is not yet run. This is an unaccepted partial construction study. Receiving claw-root transitions remain rounded; rear toes/talons and ankle/instep bulk are retained. Head, BODY01, shoulder, stance, anchors, contact, rig and original payloads remain preserved. No motion or engineering claim. Full source-aligned three-era likeness and owner acceptance remain outstanding.
