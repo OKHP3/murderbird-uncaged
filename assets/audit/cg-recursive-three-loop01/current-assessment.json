@@ -1,58 +1,27 @@
 {
-  "assessed_utc": "2026-10-04T16:07:29.023586+00:00",
-  "owner_verdict": "Checkpoint09 was useful, more-than-incremental and efficient progress, but it did not complete the visual-twin mission.",
-  "current_acceptance": "Source likeness remains unmet; technical success and completed supervised loops do not substitute for owner artistic acceptance.",
-  "findings": [
-    {
-      "id": "A01",
-      "status": "confirmed from actual sources and matched renders",
-      "cause": "Large source-defining forms remain different: broad pale cranial slab, sparse/disconnected cheek and orbit, long or puffy simplified breast surfaces, flat cover-like toes and smooth claws.",
-      "implication": "More surface detail or preserved mesh counts cannot compensate for these forms.",
-      "evidence": [
-        "loop01/integrated/baseline01/builder/canon-neutral.png",
-        "loop01/integrated/body01/builder/canon-neutral.png",
-        "loop02-preparation/cg-recursive-head02-approach.json",
-        "loop02-preparation/cg-recursive-feet02-approach.json"
-      ]
-    },
-    {
-      "id": "A02",
-      "status": "confirmed by distinct-ID visibility probe",
-      "cause": "HEAD01 targeted nearby brow courses while another visible mesh, CGH17 frontal crown root, creates the dominant slab. The new overlay introduced optic-readability cost.",
-      "implication": "Identify actual visible contributors before constructing a coupled successor; retire exact stored surfaces explicitly."
-    },
-    {
-      "id": "A03",
-      "status": "confirmed for the finish trials; broader implication inferred",
-      "cause": "The first finish trial used OBJECT material bindings that evaluated meshes ignored. The second repaired DATA bindings but changed already-dark palettes modestly while geometry stayed exact.",
-      "implication": "Prove effective bindings, then judge the whole image. Stop polish that does not materially improve source likeness.",
-      "evidence": [
-        "loop01/finish-diagnosis/cg-recursive-finish-pipeline-report01.md",
-        "loop01/finish-diagnosis/cg-recursive-finish-pipeline-metrics01.json"
-      ]
-    },
-    {
-      "id": "A04",
-      "status": "inference supported by prior and current review separation",
-      "cause": "Preservation, successful builds, embedded maps and plentiful meshes establish delivery mechanics; they do not measure likeness. Isolated regional improvements can worsen whole-head readability.",
-      "implication": "Matched whole views, three-role independent review and decisive ablation govern retention. BODY01 alone survives; HEAD01 and FINISH01 do not."
-    },
-    {
-      "id": "A05",
-      "status": "confirmed resource incident",
-      "cause": "Inactive worktree accumulation left the host Data volume effectively full and interrupted final renders.",
-      "implication": "Recoverable archival preserved old work and restored15GiB; check storage alongside time/tokens before dispatch.",
-      "evidence": [
-        "storage-recovery01.json",
-        "storage-inventory01.json"
-      ]
-    },
-    {
-      "id": "A06",
-      "status": "known methodological limit",
-      "cause": "Source depth and camera registration are estimated from optimizer-seen images; there is no protected holdout or physical calibration.",
-      "implication": "Use visible source views as artistic evidence and label inferred hidden construction. Preserve approved stance anchors; do not claim exact 3D reconstruction or engineering validity."
-    }
+  "assessed_utc": "2026-10-04T21:57:49.919514+00:00",
+  "state": "Three authorized loops locally complete with development retention limits; closing working-branch record pending",
+  "loops_completed": 3,
+  "current_candidate": "loop03/delivery/retained04",
+  "current_acceptance": "Full source likeness UNMET; owner artistic acceptance PENDING",
+  "owner_verdict_scope": "Owner acknowledged substantial improvement and authorized continuation; no final likeness acceptance inferred",
+  "retained_progress": [
+    "Loop01 shorter layered breast courses",
+    "Loop02 local breast underlaps and articulated FEET02 design02",
+    "Loop03 small cooler crown appearance change with exact shape and original encoded normal map held"
   ],
-  "next": "Complete frozen loop01 three-era delivery review, then construct source-contoured coupled head and articulated foot successors from the actual retained baseline with two designs maximum per approach."
+  "dominant_remaining_gaps": [
+    "Broad smooth crown instead of fitted layered source head",
+    "Optic/brow/cheek opening and bill relationship",
+    "Soft regular breast surfaces, broad short claws and weak era finishing"
+  ],
+  "technical_limits": [
+    "Strict normal parity FAIL at fixed2e-5L2, max0.008557L2/0.490292degrees; cause unknown",
+    "No complete shader/pixel parity, protected holdout or clean-host portability proof",
+    "Native custody confirmed only within explicitly tested fields"
+  ],
+  "assessment": "architect-assessment-final.md",
+  "adjudication": "loop03/final-adjudication.json",
+  "historical_assessment": "current-assessment-before-final.json",
+  "next": "Stop production at completed three-loop scope; proposed follow-on targets coherent source-head construction, with early whole-image and independent QC gates"
 }
