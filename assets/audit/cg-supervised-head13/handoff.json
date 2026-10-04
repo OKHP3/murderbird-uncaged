@@ -1,0 +1,379 @@
+{
+  "status": "PARTIAL numerical guide; whole envelope target met, profile soft guard and asymmetry unresolved. NOT source exterior or artistic acceptance.",
+  "attempts": 2,
+  "further_solver_design": false,
+  "native": "attempt02/formed-head13.blend",
+  "native_sha256": "7236d63f7b8d5af9ea83bb8b7be7ea418ab270270587d6658cd4d3d1ba4f84c1",
+  "receiving_sha256": "72e7e53daf40b7128cdf9b173006c639bcf123952547a2576fb2de29130f06d4",
+  "solution": {
+    "solver": "scipy SLSQP simultaneous constrained numerical solve",
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "iterations": 6,
+    "objective": 0.451446062067245,
+    "parameters_dx_dy_dz_cross_slope_side_drop": [
+      -0.03,
+      0.04557008123564081,
+      -0.003625355698133013,
+      -0.19083779306056425,
+      0.019980870965303245
+    ],
+    "minimum_constraint_slack": -2.0600474229197987e-12,
+    "named_control_index": 24,
+    "named_control_head_local": [
+      -0.03,
+      0.23417008495497066,
+      0.1555746420845742
+    ],
+    "named_control_ratios_whole_profile": [
+      [
+        0.9999999999999002,
+        1.3591877944403332
+      ],
+      [
+        1.9031917846092516,
+        0.8716759671474134
+      ]
+    ],
+    "profile_soft_intervals": [
+      [
+        0.8,
+        1.6
+      ],
+      [
+        0.9,
+        1.5
+      ]
+    ],
+    "whole_hard_intervals": [
+      [
+        1.0,
+        1.5
+      ],
+      [
+        1.12,
+        1.45
+      ]
+    ],
+    "profile_posterior_excess_over_soft_interval": 0.30319178460925156,
+    "regularization": "Lateral shift bounded30mm; cross-slope32%; width unchanged; longitudinal deformation smoothly fades across neighboring stations, vertically toward lower return.",
+    "source_status": "Approximate independently inspected Sept22 crest (843,27), eye(916,114), seatD~58; July crest(689,48), eye(789,188), seatD~110. Perspective unknown. July profile target is soft, not exact orthographic metrology.",
+    "envelope_constraint": "ALL crown cage vertices satisfy projected sloped ceiling; Catmull Clark convex hull bounds evaluated crown. All original visible head meshes checked separately after native reopen."
+  },
+  "deterministic_api": "scripts/cg-supervised-head13.py apply(scene, root_path=None, era=builder, attempt=2); load receiving06 first. Reads committed solved-fit.json; no SciPy required. Retain packed images with existing preservation helper before saves.",
+  "scope_limit": "Only posterior crest control cage numerically varied. Near/far brows and compact foredeck are fixed HEAD12 boundary controls, not jointly optimized. Four separate sparse guide meshes, existing metal05, no pose/optic/new-detail changes.",
+  "hidden_originals": [
+    "CGH05 curved recessed vault above cheek opening",
+    "CGH06 swept overlapping dorsal brow plate L0",
+    "CGH06 swept overlapping dorsal brow plate L1",
+    "CGH06 swept overlapping dorsal brow plate L2",
+    "CGH06 formed bill saddle side panel L",
+    "CGH06 pointed interleaved crown sheet L 00",
+    "CGH06 pointed interleaved crown sheet L 01",
+    "CGH06 pointed interleaved crown sheet L 02",
+    "CGH06 pointed interleaved crown sheet L 03",
+    "CGH06 pointed interleaved crown sheet L 04",
+    "CGH06 pointed interleaved crown sheet L 05",
+    "CGH06 pointed interleaved crown sheet L 06",
+    "CGH06 pointed interleaved crown sheet L 07",
+    "CGH06 pointed interleaved crown sheet L 08",
+    "CGH06 pointed interleaved crown sheet L 09",
+    "CGH06 pointed interleaved crown sheet L 10",
+    "CGH06 pointed interleaved crown sheet L 11",
+    "CGH06 pointed interleaved crown sheet L 12",
+    "CGH06 pointed interleaved crown sheet L 13",
+    "CGH06 swept overlapping dorsal brow plate R0",
+    "CGH06 swept overlapping dorsal brow plate R1",
+    "CGH06 swept overlapping dorsal brow plate R2",
+    "CGH06 formed bill saddle side panel R",
+    "CGH06 pointed interleaved crown sheet R 00",
+    "CGH06 pointed interleaved crown sheet R 01",
+    "CGH06 pointed interleaved crown sheet R 02",
+    "CGH06 pointed interleaved crown sheet R 03",
+    "CGH06 pointed interleaved crown sheet R 04",
+    "CGH06 pointed interleaved crown sheet R 05",
+    "CGH06 pointed interleaved crown sheet R 06",
+    "CGH06 pointed interleaved crown sheet R 07",
+    "CGH06 pointed interleaved crown sheet R 08",
+    "CGH06 pointed interleaved crown sheet R 09",
+    "CGH06 pointed interleaved crown sheet R 10",
+    "CGH06 pointed interleaved crown sheet R 11",
+    "CGH06 pointed interleaved crown sheet R 12",
+    "CGH06 pointed interleaved crown sheet R 13",
+    "CGH06 pointed overlapping dorsal sheet 00",
+    "CGH06 pointed overlapping dorsal sheet 01",
+    "CGH06 pointed overlapping dorsal sheet 02",
+    "CGH06 pointed overlapping dorsal sheet 03",
+    "CGH06 pointed overlapping dorsal sheet 04",
+    "CGH06 pointed overlapping dorsal sheet 05",
+    "CGH06 pointed overlapping dorsal sheet 06",
+    "CGH06 pointed overlapping dorsal sheet 07",
+    "CGH06 pointed overlapping dorsal sheet 08",
+    "CGH06 pointed overlapping dorsal sheet 09",
+    "CGH06 pointed overlapping dorsal sheet 10",
+    "CGH06 swept overlapping frontal saddle sheet 00",
+    "CGH06 swept overlapping frontal saddle sheet 01",
+    "CGH06 swept overlapping frontal saddle sheet 02",
+    "CGH06 swept overlapping frontal saddle sheet 03",
+    "CGH06 swept overlapping frontal saddle sheet 04"
+  ],
+  "source_hashes": {
+    "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+    "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9"
+  },
+  "shared_main_sha": "251f2f0243181e97140179c2aff6eb057e165438",
+  "authority": "Latestmain goal read; October4 architect8h appendix read locally; appendix not claimed on main.",
+  "whole_evaluated": {
+    "curved_lens_first_hit_checks": {
+      "CGH05 recessed optical glass L": {
+        "actual_curved_surface_samples": 5186,
+        "baseline_window_samples": 4263,
+        "new_roof_brow_interceptions": 0,
+        "interceptions": []
+      },
+      "CGH05 recessed optical glass R": {
+        "actual_curved_surface_samples": 5186,
+        "baseline_window_samples": 0,
+        "new_roof_brow_interceptions": 0,
+        "interceptions": []
+      }
+    },
+    "named_physical_landmarks": {
+      "posterior_crest": {
+        "owner": "CGH13 physical posterior crest cage",
+        "declared_control_world": [
+          -0.029999999329447746,
+          0.0010216664522886276,
+          1.8064414262771606
+        ],
+        "nearest_evaluated_surface_world": [
+          -0.029000001028180122,
+          -0.004547698423266411,
+          1.796684980392456
+        ],
+        "projected_px": [
+          763.6036682128906,
+          48.63491505384445
+        ]
+      },
+      "near_brow": {
+        "owner": "CGH13 physical near localized diagonal brow",
+        "declared_control_world": [
+          -0.14100000262260437,
+          -0.22486896812915802,
+          1.7578125
+        ],
+        "nearest_evaluated_surface_world": [
+          -0.1393333375453949,
+          -0.22529029846191406,
+          1.7576305866241455
+        ],
+        "projected_px": [
+          814.620361328125,
+          90.89058876037598
+        ]
+      },
+      "far_brow": {
+        "owner": "CGH13 physical far localized diagonal brow",
+        "declared_control_world": [
+          0.14100000262260437,
+          -0.22599788010120392,
+          1.747071623802185
+        ],
+        "nearest_evaluated_surface_world": [
+          0.1393333375453949,
+          -0.22641921043395996,
+          1.7468897104263306
+        ],
+        "projected_px": [
+          884.3984222412109,
+          68.1392662525177
+        ]
+      },
+      "foredeck_bill_root": {
+        "owner": "CGH13 physical compact foredeck bill root",
+        "declared_control_world": [
+          -0.08399999886751175,
+          -0.32762184739112854,
+          1.7215545177459717
+        ],
+        "nearest_evaluated_surface_world": [
+          -0.08201468735933304,
+          -0.32718777656555176,
+          1.713710904121399
+        ],
+        "projected_px": [
+          865.1200866699219,
+          110.5902778506279
+        ]
+      }
+    },
+    "whole_evaluated_new_envelope_px": [
+      743.8734436035156,
+      48.63491505384445,
+      934.1857147216797,
+      151.68510961532593
+    ],
+    "highest_envelope_owner": "CGH13 physical posterior crest cage",
+    "highest_envelope_px": [
+      763.6036682128906,
+      48.63491505384445
+    ],
+    "all_render_visible_evaluated_head_highest_owner": "CGH13 physical posterior crest cage",
+    "all_render_visible_evaluated_head_highest_px": [
+      763.6036682128906,
+      48.63491505384445
+    ],
+    "actual_optic_center_px": [
+      816.5748596191406,
+      119.3075236082077
+    ],
+    "evaluated_seat_major_diameter_px": 55.20031149082609,
+    "named_crest_posterior_in_D": 0.9596176176479266,
+    "whole_head_highest_posterior_in_D": 0.9596176176479266,
+    "named_crest_above_eye_in_D": 1.2802936549752721,
+    "foredeck_root_anterior_in_D": 0.8794375564139549,
+    "ratio_warning": "Image+x diagnostic only; front/far views do not share anterior direction, and source landmarks are approximate",
+    "named_crest_is_not_max_all_vertices": true
+  },
+  "profile_evaluated": {
+    "curved_lens_first_hit_checks": {
+      "CGH05 recessed optical glass L": {
+        "actual_curved_surface_samples": 5186,
+        "baseline_window_samples": 4733,
+        "new_roof_brow_interceptions": 0,
+        "interceptions": []
+      },
+      "CGH05 recessed optical glass R": {
+        "actual_curved_surface_samples": 5186,
+        "baseline_window_samples": 0,
+        "new_roof_brow_interceptions": 0,
+        "interceptions": []
+      }
+    },
+    "named_physical_landmarks": {
+      "posterior_crest": {
+        "owner": "CGH13 physical posterior crest cage",
+        "declared_control_world": [
+          -0.029999999329447746,
+          0.0010216664522886276,
+          1.8064414262771606
+        ],
+        "nearest_evaluated_surface_world": [
+          -0.029000001028180122,
+          -0.004547698423266411,
+          1.796684980392456
+        ],
+        "projected_px": [
+          170.26593685150146,
+          261.0724449157715
+        ]
+      },
+      "near_brow": {
+        "owner": "CGH13 physical near localized diagonal brow",
+        "declared_control_world": [
+          -0.14100000262260437,
+          -0.22486896812915802,
+          1.7578125
+        ],
+        "nearest_evaluated_surface_world": [
+          -0.1393333375453949,
+          -0.22529029846191406,
+          1.7576305866241455
+        ],
+        "projected_px": [
+          380.49700260162354,
+          298.267126083374
+        ]
+      },
+      "far_brow": {
+        "owner": "CGH13 physical far localized diagonal brow",
+        "declared_control_world": [
+          0.14100000262260437,
+          -0.22599788010120392,
+          1.747071623802185
+        ],
+        "nearest_evaluated_surface_world": [
+          0.1393333375453949,
+          -0.22641921043395996,
+          1.7468897104263306
+        ],
+        "projected_px": [
+          381.57215118408203,
+          308.4965229034424
+        ]
+      },
+      "foredeck_bill_root": {
+        "owner": "CGH13 physical compact foredeck bill root",
+        "declared_control_world": [
+          -0.08399999886751175,
+          -0.32762184739112854,
+          1.7215545177459717
+        ],
+        "nearest_evaluated_surface_world": [
+          -0.08201468735933304,
+          -0.32718777656555176,
+          1.713710904121399
+        ],
+        "projected_px": [
+          477.54220962524414,
+          340.0953769683838
+        ]
+      }
+    },
+    "whole_evaluated_new_envelope_px": [
+      124.76733922958374,
+      259.39717292785645,
+      555.0565719604492,
+      463.8888120651245
+    ],
+    "highest_envelope_owner": "CGH13 physical posterior crest cage",
+    "highest_envelope_px": [
+      170.08981704711914,
+      259.39717292785645
+    ],
+    "all_render_visible_evaluated_head_highest_owner": "CGH13 physical posterior crest cage",
+    "all_render_visible_evaluated_head_highest_px": [
+      170.08981704711914,
+      259.39717292785645
+    ],
+    "actual_optic_center_px": [
+      395.51992416381836,
+      357.3779106140137
+    ],
+    "evaluated_seat_major_diameter_px": 121.14289535633192,
+    "named_crest_posterior_in_D": 1.8594073276006051,
+    "whole_head_highest_posterior_in_D": 1.8608611462819589,
+    "named_crest_above_eye_in_D": 0.7949741123073503,
+    "foredeck_root_anterior_in_D": 0.6770705390536023,
+    "ratio_warning": "Image+x diagnostic only; front/far views do not share anterior direction, and source landmarks are approximate",
+    "named_crest_is_not_max_all_vertices": true
+  },
+  "checks": {
+    "original7424_payloads": "PASS",
+    "original_graphs": "PASS",
+    "all160_packed_maps_metadata_early_final_reopen": "PASS",
+    "exact_hide_allowlist": "PASS",
+    "dense_actual_curved_lens_first_hits": "PASS zero new guide blockers: whole4260/profile4733/grazing4242/far4733. Front0 remains UNPROVEN.",
+    "apply_from06_equals_final_geometry_uvs_slots_matrices": "PASS",
+    "saved_native_camera_exact_readback": "PASS",
+    "final_png_hashes": "PASS",
+    "all_visible_upper_scene_highest_owner": "PASS named posterior crest; includes original meshes, not only new CGH meshes",
+    "browser_era_build_ci_deployment": "NOT RUN; no runtime/app references changed",
+    "owner_acceptance": "NOT ESTABLISHED"
+  },
+  "actual_evaluated_residuals": {
+    "whole_posterior_D": 0.9596176176479266,
+    "whole_named_height_D": 1.2802936549752721,
+    "profile_named_posterior_D": 1.8594073276006051,
+    "profile_named_height_D": 0.7949741123073503,
+    "profile_posterior_excess_D": 0.25940732760060503,
+    "profile_height_shortfall_D": 0.10502588769264976
+  },
+  "tradeoffs": "Lateral\u221230mm reaches bound; cross-slope\u22120.191 and side rounding20mm. Front asymmetry, large smooth posterior triangular fin and thin swept brow strips remain. Whole numerical-envelope gain does not establish source exterior; no plate construction accepted. Does not isolate pose as cause.",
+  "full_envelope_constraint": "Every crown cage vertex tested against capped sloped projected ceiling. CatmullClark convex-hull bound retains it. Separate evaluated all-render-visible upper-scene highest point confirms no opposite corner/old object takeover. This is a finite whole35 envelope check, not every-camera global silhouette likeness.",
+  "first_attempt": "SLSQP failed: original uncapped sloped ceiling overconstrained fixed anterior stations. Preserved diagnostic01. Second/final solve capped ceiling and added side-rounding basis; success6 iterations, minimum constraint slack approximately\u22122e\u221212 (numeric tolerance).",
+  "visual_review": "Actual pinned source images and whole/profile/front/grazing clay,PBR,sparse-wire pixels inspected. Root independently sees triangular fin/thin strip and withholds exterior acceptance.",
+  "rights": "Creative sources and derivatives all rights reserved per NOTICE.md. Source overlays embed unchanged original pinned bytes; display-only head crops with approximate manual upper-crown/bill polylines, not exact segmentation. July HEAD ONLY.",
+  "created_utc": "2026-10-04T09:09:56.460988+00:00"
+}
