@@ -20,3 +20,13 @@ Source likeness remains unmet. Independent regional QC retained head06 and machi
 The largest construction gaps remain a floating crown/brow saddle, an unsegmented bill, a proud simplified optic, repetitive armor and sparse flank machinery. Maker/Mechanic files and the full turntable supplement are in progress. No runtime promotion, owner acceptance or publication is claimed.
 
 QA identified one transient custody violation: starting the era supplement overwrote the shared surface provenance filename. No frozen native, GLB or texture byte changed. The displaced receipt is preserved; the original was restored byte-exactly from the frozen builder receipt and all237 hashes rechecked. Future integration will isolate module output directories per era. The initial failure remains in the evidence record.
+
+## 07:25 UTC construction and delivery checkpoint
+
+Completed06 now has all three editable packed natives, static embedded-material GLBs and neutral/exhibit eight-angle evidence. The separate technical supplement records exact source/export hashes and zero Maker/Mechanic optic emission. Advanced06's initial independent evidence, outcome and safety reviews allowed limited construction gains; the conditional disruptor identified an exposed broad forehead cap and disconnected brow. Root adjudication retains technical/material transfer and small construction gains while requiring further macro-form correction. This is not source likeness or owner acceptance.
+
+Body07 and selective source-mask body08 each stopped after two failed design attempts. The failures show that inferred outlines alone do not determine plate overlap and depth. In body08, retained left/right compact shield recess meshes remained visible and dominated the new shield root. Head07 also stopped after two failed attempts; its source-partitioned sheets retained the broad historical cranial vault. These failed studies remain separate from the receiving completed06.
+
+Independent optic07 QC retains the recessed cavity with a correction: Advanced's core must read awakened at whole-bird scale in native and actual browser evidence. Maker/Mechanic remain dark. The next bounded work targets those dominant visible construction problems. A transient agent-runner capacity limit cleared before new worker/QC tasks began.
+
+Actual browser checks are being extended across the completed eras and illustrated fallback. Source comparisons now select each era's pinned image. The historical candidate03 and required V38 reference binaries have been explicitly hydrated and hash-verified; this resolves the corresponding earlier availability limitation without changing the prior QA records.

@@ -10,13 +10,13 @@
 <h1>MurderBird source alignment review</h1>
 <p>Development candidate. Source likeness remains under review; owner acceptance is pending. Drag to orbit and scroll to zoom.</p>
 <div class="controls">
-<label for="era">Era</label><select id="era"><option value="builder">Advanced</option></select>
+<label for="era">Era</label><select id="era"><option value="builder">Advanced</option><option value="maker">Maker</option><option value="mechanic">Mechanic</option></select>
 <button id="neutral" aria-pressed="true">Neutral light</button><button id="exhibit" aria-pressed="false">Exhibit light</button>
 <button id="reset">Reset view</button><button id="illustrated" aria-pressed="false">Illustrated view</button>
 </div><output id="status" aria-live="polite">Loading candidate…</output>
 <div id="view"><img id="fallback" hidden alt="Candidate illustrated review"></div>
 <div class="compare">
-<figure><figcaption>Pinned full-bird source</figcaption><img src="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" alt="Pinned source"></figure>
+<figure><figcaption id="source-caption">Pinned full-bird source</figcaption><img id="pinned-source" src="../../img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg" alt="Pinned source"></figure>
 <figure><figcaption>Before: same lighting and camera</figcaption><img id="before" src="attempt03-baseline/builder/canon-neutral.png" alt="Matched before"></figure>
 <figure><figcaption>Candidate native render</figcaption><img id="candidate" src="attempt03/builder/canon-neutral.png" alt="Candidate neutral render"></figure>
 </div>
@@ -27,10 +27,15 @@ import {createSupervisedReview} from '/scripts/cg-supervised-browser05.js';
 const status=document.querySelector('#status'),host=document.querySelector('#view'),fallback=document.querySelector('#fallback');
 const params=new URLSearchParams(location.search), attempt=params.get('attempt')||'attempt06';
 if(!/^[a-z0-9-]+$/.test(attempt))throw new Error('Invalid candidate identifier');
-document.querySelector('#review-record').href=`${attempt}/${attempt==='attempt06'?'integration-decision':'equilibrium-review'}.json`;
+document.querySelector('#review-record').href=`${attempt}/equilibrium-review.json`;
+if(attempt!=='attempt06')document.querySelectorAll('#era option:not([value="builder"])').forEach(option=>option.remove());
 const nativeCamera=await fetch(`${attempt}/browser-camera.json`).then(r=>{if(!r.ok)throw new Error('Camera metadata unavailable');return r.json()});
 let review, mode='neutral', illustrated=false, generation=0;
 function updateImages(){
+ const sources={builder:'murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg',maker:'murderbird-unified-maker-clean-candidate-2026-09-06.png',mechanic:'murderbird-unified-mechanic-candidate-2026-09-06.png'};
+ document.querySelector('#pinned-source').src=`../../img/library/${sources[era.value]}`;
+ document.querySelector('#pinned-source').alt=`Pinned ${era.selectedOptions[0].textContent} source`;
+ document.querySelector('#source-caption').textContent=`Pinned ${era.selectedOptions[0].textContent} source`;
  const profile=mode==='exhibit'?'workshop':'neutral';
  const image=`${attempt}/${era.value}/canon-${profile}.png`;
  fallback.src=image;document.querySelector('#candidate').src=image;
