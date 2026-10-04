@@ -1,0 +1,291 @@
+{
+  "status": "camera hypotheses, not recovered physical calibration",
+  "method": "bounded yaw/elevation grid with least squares uniform scale and image translation; hand annotated source correspondences",
+  "uncertainty": "Source head anchors/occlusion uncertain; inferred width. July identity is source-traced, so low residual is partly by construction, not independent validation. Full-bird head-only fit can reveal body disagreement.",
+  "july-head": {
+    "resolution": [
+      1024,
+      1536
+    ],
+    "pixels": [
+      [
+        788,
+        188
+      ],
+      [
+        675,
+        53
+      ],
+      [
+        847,
+        171
+      ],
+      [
+        916,
+        220
+      ],
+      [
+        885,
+        460
+      ],
+      [
+        876,
+        423
+      ],
+      [
+        568,
+        191
+      ]
+    ],
+    "scope": "head-only; July body excluded",
+    "source": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+    "yaw_from_profile_degrees": 0,
+    "elevation_degrees": 0,
+    "scale_pixels_per_unit": 833.33343267442,
+    "median_residual_px": 0.0,
+    "rms_residual_px": 6.171036924818161e-14,
+    "camera": {
+      "location": [
+        -5.0,
+        0.015569277107715607,
+        0.9687574505805969
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -0.1047198623418808,
+        -1.5707963705062866
+      ],
+      "ortho_scale": 1.8431997299194336,
+      "projection": "ORTHO"
+    },
+    "landmarks": [
+      {
+        "name": "optic center",
+        "source_pixel": [
+          788,
+          188
+        ],
+        "predicted_pixel": [
+          788.0,
+          188.0
+        ],
+        "residual_px": 0.0
+      },
+      {
+        "name": "brow root",
+        "source_pixel": [
+          675,
+          53
+        ],
+        "predicted_pixel": [
+          674.9999999999999,
+          53.0
+        ],
+        "residual_px": 1.1368683772161603e-13
+      },
+      {
+        "name": "brow heel",
+        "source_pixel": [
+          847,
+          171
+        ],
+        "predicted_pixel": [
+          847.0,
+          171.0
+        ],
+        "residual_px": 0.0
+      },
+      {
+        "name": "beak root",
+        "source_pixel": [
+          916,
+          220
+        ],
+        "predicted_pixel": [
+          916.0,
+          220.00000000000003
+        ],
+        "residual_px": 2.842170943040401e-14
+      },
+      {
+        "name": "upper bill tip",
+        "source_pixel": [
+          885,
+          460
+        ],
+        "predicted_pixel": [
+          885.0,
+          460.0
+        ],
+        "residual_px": 0.0
+      },
+      {
+        "name": "mandible tip",
+        "source_pixel": [
+          876,
+          423
+        ],
+        "predicted_pixel": [
+          876.0,
+          423.0
+        ],
+        "residual_px": 0.0
+      },
+      {
+        "name": "posterior skull",
+        "source_pixel": [
+          568,
+          191
+        ],
+        "predicted_pixel": [
+          567.9999999999999,
+          191.0
+        ],
+        "residual_px": 1.1368683772161603e-13
+      }
+    ]
+  },
+  "locked-full-bird": {
+    "resolution": [
+      1280,
+      853
+    ],
+    "pixels": [
+      [
+        916,
+        111
+      ],
+      [
+        833,
+        27
+      ],
+      [
+        963,
+        108
+      ],
+      [
+        981,
+        132
+      ],
+      [
+        977,
+        261
+      ],
+      [
+        976,
+        225
+      ],
+      [
+        743,
+        115
+      ]
+    ],
+    "scope": "head anchors fit camera; body shown unchanged, not independently body-fitted",
+    "source": "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+    "yaw_from_profile_degrees": 0,
+    "elevation_degrees": 15,
+    "scale_pixels_per_unit": 534.094542708397,
+    "median_residual_px": 14.273133330066829,
+    "rms_residual_px": 17.250766004266318,
+    "camera": {
+      "location": [
+        -4.984401702880859,
+        0.33290135860443115,
+        2.3355493545532227
+      ],
+      "rotation_euler": [
+        1.3089971542358398,
+        -0.1047198474407196,
+        -1.5707966089248657
+      ],
+      "ortho_scale": 2.3965795040130615,
+      "projection": "ORTHO"
+    },
+    "landmarks": [
+      {
+        "name": "optic center",
+        "source_pixel": [
+          916,
+          111
+        ],
+        "predicted_pixel": [
+          909.1434836691136,
+          120.98625758229078
+        ],
+        "residual_px": 12.113511328082035
+      },
+      {
+        "name": "brow root",
+        "source_pixel": [
+          833,
+          27
+        ],
+        "predicted_pixel": [
+          836.7202529496233,
+          13.220230297690605
+        ],
+        "residual_px": 14.273133330066829
+      },
+      {
+        "name": "brow heel",
+        "source_pixel": [
+          963,
+          108
+        ],
+        "predicted_pixel": [
+          946.9573763887679,
+          109.35611197688351
+        ],
+        "residual_px": 16.099838881973593
+      },
+      {
+        "name": "beak root",
+        "source_pixel": [
+          981,
+          132
+        ],
+        "predicted_pixel": [
+          991.1804039774695,
+          129.18500264402275
+        ],
+        "residual_px": 10.56242563328309
+      },
+      {
+        "name": "upper bill tip",
+        "source_pixel": [
+          977,
+          261
+        ],
+        "predicted_pixel": [
+          971.3120932601166,
+          265.18368471245674
+        ],
+        "residual_px": 7.060842786442348
+      },
+      {
+        "name": "mandible tip",
+        "source_pixel": [
+          976,
+          225
+        ],
+        "predicted_pixel": [
+          965.543870817248,
+          242.41614961439882
+        ],
+        "residual_px": 20.313859920692607
+      },
+      {
+        "name": "posterior skull",
+        "source_pixel": [
+          743,
+          115
+        ],
+        "predicted_pixel": [
+          768.142518937661,
+          98.65256317225673
+        ],
+        "residual_px": 29.989747404199598
+      }
+    ]
+  }
+}
