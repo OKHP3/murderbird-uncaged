@@ -10,12 +10,46 @@ import importlib.util
 import json
 import math
 import sys
+import struct
+import zlib
 from pathlib import Path
 import bpy
 import bmesh
+import numpy as np
 from mathutils import Vector
 
 SOURCE_SHA = '72e7e53daf40b7128cdf9b173006c639bcf123952547a2576fb2de29130f06d4'
+
+
+def core_gradient():
+    """Authored radial amber gradient, explicit linear->sRGB PNG, packed FILE.
+
+    The existing planar UV puts radius6.7 at UV radius .00804/.102.
+    No source/reference pixels are used. No geometry or browser shader rewrite.
+    """
+    path = Path(__file__).resolve().parents[1]/'assets/audit/cg-supervised-optic07/attempt03/core-amber-gradient.png'
+    path.parent.mkdir(parents=True, exist_ok=True)
+    n = 512
+    axis = (np.arange(n, dtype=np.float32)+.5)/n-.5
+    x, y = np.meshgrid(axis, axis)
+    t = np.clip(np.sqrt(x*x+y*y)/(.00804/.102), 0, 1)
+    f = (1-t)**1.45
+    center = np.array((1., .34, .040), dtype=np.float32)
+    edge = np.array((.065, .004, .0001), dtype=np.float32)
+    linear = edge+(center-edge)*f[:,:,None]
+    encoded = np.where(linear <= .0031308, linear*12.92, 1.055*np.power(linear, 1/2.4)-.055)
+    pixels = np.floor(np.clip(encoded, 0, 1)*255+.5).astype(np.uint8)
+    def chunk(tag, data):
+        return struct.pack('>I', len(data))+tag+data+struct.pack('>I', zlib.crc32(tag+data)&0xffffffff)
+    raw = b''.join(b'\x00'+row.tobytes() for row in pixels[::-1])
+    png = b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR', struct.pack('>IIBBBBB', n,n,8,2,0,0,0))+chunk(b'sRGB', b'\x00')+chunk(b'IDAT', zlib.compress(raw,6))+chunk(b'IEND', b'')
+    if not path.exists() or path.read_bytes() != png:
+        path.write_bytes(png)
+    image = bpy.data.images.load(str(path), check_existing=False)
+    image.name = 'CGO07 attempt03 radial amber linear-encoded'
+    image.colorspace_settings.name = 'sRGB'
+    image.pack()
+    return image
 
 
 def apply(scene, root_path=None, era='builder'):
@@ -53,8 +87,15 @@ def apply(scene, root_path=None, era='builder'):
             bs.inputs['Coat Roughness'].default_value = .09
             bs.inputs['IOR'].default_value = 1.46
         if role == 'core' and awakened:
-            bs.inputs['Emission Color'].default_value = (.8, .16, .007, 1)
-            bs.inputs['Emission Strength'].default_value = .42
+            bs.inputs['Metallic'].default_value = 0
+            bs.inputs['Emission Strength'].default_value = 5
+            tex = m.node_tree.nodes.new('ShaderNodeTexImage')
+            tex.image = core_gradient()
+            uv = m.node_tree.nodes.new('ShaderNodeUVMap')
+            uv.uv_map = 'optic07-local-planar'
+            m.node_tree.links.new(uv.outputs['UV'], tex.inputs['Vector'])
+            m.node_tree.links.new(tex.outputs['Color'], bs.inputs['Base Color'])
+            m.node_tree.links.new(tex.outputs['Color'], bs.inputs['Emission Color'])
         m['cg2aPreserveMaterial'] = True
         m['opticEra'] = era
         m['cgOptic07Role'] = role
@@ -130,7 +171,12 @@ def apply(scene, root_path=None, era='builder'):
             'maximum_new_radius_source_px': 42, 'outer_seat_center_frame_preserved': True,
             'glass_coating_recess_from_outer_lip_m': .0137,
             'glass_shader': 'Opaque dark dielectric with clearcoat; transmission intentionally zero for browser reliability',
-            'core_radius_source_px': 6.7, 'core_emission_strength': .42 if awakened else 0,
+            'core_radius_source_px': 6.7, 'core_radius_m': .00804,
+            'core_diameter_m': .01608, 'core_area_fraction_of_seat': (6.7/42)**2,
+            'core_emission_strength': 5 if awakened else 0,
+            'core_gradient_center_linear_rgb': [1, .34, .040] if awakened else None,
+            'core_gradient_edge_linear_rgb': [.065, .004, .0001] if awakened else None,
+            'core_gradient_exponent': 1.45 if awakened else None,
             'metal_ring_emission': 0, 'pose_changes': False, 'artistic_acceptance': 'pending'}
 
 
@@ -145,7 +191,7 @@ def digest(o):
 
 
 def diagnostic():
-    p = argparse.ArgumentParser(); p.add_argument('--input-root', required=True); p.add_argument('--attempt', default='attempt01')
+    p = argparse.ArgumentParser(); p.add_argument('--input-root', required=True); p.add_argument('--attempt', default='attempt03')
     args = p.parse_args(sys.argv[sys.argv.index('--')+1:])
     root = Path(__file__).resolve().parents[1]; inp = Path(args.input_root)
     out = root/'assets/audit/cg-supervised-optic07'/args.attempt; out.mkdir(parents=True, exist_ok=True)
