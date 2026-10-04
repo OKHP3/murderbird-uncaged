@@ -1,0 +1,47 @@
+{
+  "builder": {
+    "pid": 87713,
+    "log": "/tmp/cg-delivery09-early-builder.log",
+    "command": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--threads",
+      "2",
+      "--python",
+      "/tmp/cg-delivery09-native-check.py",
+      "--",
+      "--early",
+      "builder"
+    ]
+  },
+  "maker": {
+    "pid": 87714,
+    "log": "/tmp/cg-delivery09-early-maker.log",
+    "command": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--threads",
+      "2",
+      "--python",
+      "/tmp/cg-delivery09-native-check.py",
+      "--",
+      "--early",
+      "maker"
+    ]
+  },
+  "mechanic": {
+    "pid": 87715,
+    "log": "/tmp/cg-delivery09-early-mechanic.log",
+    "command": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--threads",
+      "2",
+      "--python",
+      "/tmp/cg-delivery09-native-check.py",
+      "--",
+      "--early",
+      "mechanic"
+    ]
+  }
+}

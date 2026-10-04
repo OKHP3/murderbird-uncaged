@@ -1,0 +1,303 @@
+{
+  "review_id": "fresh-cheek19-first-attempt-visual-qc",
+  "reviewer_task": "/root/cheek19_fresh_qc",
+  "completed_utc": "2026-10-04T11:07:07.011818+00:00",
+  "hard_stop_utc": "2026-10-04T11:12:00Z",
+  "decision_question": "Retain CHEEK19 attempt01 for final09, or keep frozen BILL18 attempt02 under HEAD17?",
+  "review_scope": "Read-only narrow incremental visual retention decision. Not full09 Equilibrium, owner artistic acceptance, publication approval, or engineering review.",
+  "decision": "reject",
+  "recommendation": "keep-frozen-BILL18-under-HEAD17-for-final09",
+  "retain_cheek19": false,
+  "summary": "CHEEK19 reduces the empty cheek cavity, but its smooth rounded suboptic band and broad gold insert add generic tube/plate construction. The source cheek is layered, articulated metal with small hardware and dark recesses. This attempt does not provide a source-backed whole-image gain.",
+  "criteria": [
+    "Visible gain in the complete bird against locked Sept22, with July used only for head identity.",
+    "Cheek construction densifies the source-specific layered mechanical reading rather than filling the cavity with a generic tube or card.",
+    "No new mouth aperture or optic visibility regression in the inspected matched cameras.",
+    "Clearly identified artifact and actual source/render hashes."
+  ],
+  "independence": {
+    "own_visual_notes_before_other_opinions": true,
+    "root_worker_qc_opinions_read": false,
+    "producer_receipt_read_after_visual_judgment": "Read for technical identity, camera metadata, and source input hash only; descriptive construction claims did not determine judgment.",
+    "children_spawned": false,
+    "protocol": "Lightweight incremental QC using evidence-led record principles; no five-role Equilibrium run."
+  },
+  "goal": {
+    "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/goal.md",
+    "sha256": "31bc42e668e5fed1769a1956c5f97bef726c6d4d8accdb303c63e77ccc5202b5",
+    "yaml_last_updated": "2026-10-04T04:26:19.270994+00:00",
+    "local_goal_last_commit": "04d0e1b49f700d277e15de5481fcf7b859dda4d0",
+    "root_checkout_head_at_review": "0f35bc8d474408edeeea4c55f7c9d770002a7488",
+    "remote_main_freshness": "Not refreshed by this read-only reviewer; supplied ROOT goal used for this assigned trial."
+  },
+  "artifact_identity": {
+    "candidate_native": {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/formed-cheek19.blend",
+      "sha256": "0cfb54d109b1ec0b4635c4f1d34adc782b4b35c370d125f8a84ab13b36418cdc",
+      "role": "Candidate native; hashed, not opened",
+      "visually_inspected": false
+    },
+    "baseline_native": {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/formed-bill18.blend",
+      "sha256": "abc993f59b327db2916960c06e15307963f3a820fc18c39bce1b6a05cc83bf15",
+      "role": "Frozen receiving baseline; hashed, not opened",
+      "visually_inspected": false
+    },
+    "producer_input_hash_matches_actual_baseline": true,
+    "final_manifest": {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/frozen-hashes.json",
+      "sha256": "5203dd912c3b28be4bf6b40f1b0222e8d08937dabc40ceac7807a5caabd1f3c9",
+      "role": "Producer final packaged frozen-hashes manifest",
+      "visually_inspected": false
+    },
+    "final_manifest_entry_count": 23,
+    "manifest_payload_mismatches": [],
+    "all_manifest_payload_hashes_verified": true,
+    "identified_version": "First CHEEK19 attempt01 six PBR/clay render set and formed-cheek19.blend, as present and hash-verified after final packaging."
+  },
+  "sources": [
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+      "sha256": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+      "role": "full-bird canon",
+      "visually_inspected": true,
+      "evidence_id": "locked-sept22",
+      "expected_sha256": "645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114",
+      "pinned_hash_matches": true
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "role": "head identity only; body excluded",
+      "visually_inspected": true,
+      "evidence_id": "july-head-only",
+      "expected_sha256": "47658dba6496f2c8594a40ad412a8bfaa087939e90044d1597329a27ca68d4e9",
+      "pinned_hash_matches": true
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png",
+      "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+      "role": "prior common body and compact shield-wing direction",
+      "visually_inspected": true,
+      "evidence_id": "candidate03",
+      "expected_sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+      "pinned_hash_matches": true
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/source-frames/first-choice-0-5s.png",
+      "sha256": "0ffa51947b41457be092534f863e103a67ce1ba7baa9ab080de4163bb17678d3",
+      "role": "First Choice extracted source frame; surface continuity and screen presence",
+      "visually_inspected": true,
+      "evidence_id": "first-choice-0-5s",
+      "source_time_seconds": 0.5
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/source-frames/first-choice-2s.png",
+      "sha256": "e56a963baf02cd81be40642eba2ec85ff0957c534de1ffdd58e82d08fb1d0833",
+      "role": "First Choice extracted source frame; surface continuity and screen presence",
+      "visually_inspected": true,
+      "evidence_id": "first-choice-2s",
+      "source_time_seconds": 2.0
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/source-frames/first-choice-4s.png",
+      "sha256": "332c12ca391d8bb6785842c1e1236152aa108b806a3532c203583a0f2c12809e",
+      "role": "First Choice extracted source frame; surface continuity and screen presence",
+      "visually_inspected": true,
+      "evidence_id": "first-choice-4s",
+      "source_time_seconds": 4.0
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised01/source-frames/first-choice-6-5s.png",
+      "sha256": "9dbc857a0ce9b9f1e75cfed44f6eb71e08cceef81e47273ac4080e7b47b53fa8",
+      "role": "First Choice extracted source frame; surface continuity and screen presence",
+      "visually_inspected": true,
+      "evidence_id": "first-choice-6-5s",
+      "source_time_seconds": 6.5
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/video/murderbird-first-choice-635f0e15.mp4",
+      "sha256": "635f0e1552bac61699c03c8406157207f6230ea817bb1ecaeb3adbb3a7bf8613",
+      "role": "pinned source video; hashed, not played by this reviewer",
+      "visually_inspected": false,
+      "expected_sha256": "635f0e1552bac61699c03c8406157207f6230ea817bb1ecaeb3adbb3a7bf8613"
+    }
+  ],
+  "inspected_images": [
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/after-pbr-source-full-bird.png",
+      "sha256": "65abdc764d90c70098b06464795f6ca86fb30574f3001be63812734d398cf509",
+      "role": "BILL18-attempt02",
+      "visually_inspected": true,
+      "evidence_id": "BILL18-attempt02-after-pbr-source-full-bird.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/after-clay-source-full-bird.png",
+      "sha256": "c6fa9e2aa358ab57168ac91f167217a07000900ac3787107993ca6c2f100d77e",
+      "role": "BILL18-attempt02",
+      "visually_inspected": true,
+      "evidence_id": "BILL18-attempt02-after-clay-source-full-bird.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/after-pbr-head-profile.png",
+      "sha256": "8dfcc6250e4926ac30d57c852833da8d9be956c4222e8b36226cd9a4f4a0e232",
+      "role": "BILL18-attempt02",
+      "visually_inspected": true,
+      "evidence_id": "BILL18-attempt02-after-pbr-head-profile.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/after-clay-head-profile.png",
+      "sha256": "843a9888abfbfb9b4245872b546c39e995cb5eebbf0800a43c9014d90695a379",
+      "role": "BILL18-attempt02",
+      "visually_inspected": true,
+      "evidence_id": "BILL18-attempt02-after-clay-head-profile.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/after-pbr-head-grazing.png",
+      "sha256": "b06914de18cf9dea0a3097dbe4553c57281e58f8a7922c4833eaad979e97cf4d",
+      "role": "BILL18-attempt02",
+      "visually_inspected": true,
+      "evidence_id": "BILL18-attempt02-after-pbr-head-grazing.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-supervised-bill18/attempt02/after-clay-head-grazing.png",
+      "sha256": "5df6a070f698e3e2493ff36ed940efc345deff9b54ecc9273dda095a72fd8750",
+      "role": "BILL18-attempt02",
+      "visually_inspected": true,
+      "evidence_id": "BILL18-attempt02-after-clay-head-grazing.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/after-pbr-source-full-bird.png",
+      "sha256": "6218626bd94d45175dd2f1c0ad5c9a60baba59f40c820b7d12dc211f8770cd24",
+      "role": "CHEEK19-attempt01",
+      "visually_inspected": true,
+      "evidence_id": "CHEEK19-attempt01-after-pbr-source-full-bird.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/after-clay-source-full-bird.png",
+      "sha256": "7c09fb4d6f2d4dc3d3043e42180cec72b4f39ed2f61cd461df582f3fe6f262a4",
+      "role": "CHEEK19-attempt01",
+      "visually_inspected": true,
+      "evidence_id": "CHEEK19-attempt01-after-clay-source-full-bird.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/after-pbr-head-profile.png",
+      "sha256": "1c92cc4916b17275ffcb971bad0ba28c1ab4193ee3228e114119a2fb42181284",
+      "role": "CHEEK19-attempt01",
+      "visually_inspected": true,
+      "evidence_id": "CHEEK19-attempt01-after-pbr-head-profile.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/after-clay-head-profile.png",
+      "sha256": "2bd5d676b14eeb877b26d79b6edcee0dcff7098ca2695fadaeed21931715e7d5",
+      "role": "CHEEK19-attempt01",
+      "visually_inspected": true,
+      "evidence_id": "CHEEK19-attempt01-after-clay-head-profile.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/after-pbr-head-grazing.png",
+      "sha256": "7b144759f122410d469b1dda2a1bee55967be61a11c91d8b88af81476b7b33eb",
+      "role": "CHEEK19-attempt01",
+      "visually_inspected": true,
+      "evidence_id": "CHEEK19-attempt01-after-pbr-head-grazing.png"
+    },
+    {
+      "path": "/Users/okh/.codex/worktrees/cg-supervised-layered-crown17/murderbird-uncaged/assets/audit/cg-supervised-cheek19/attempt01/after-clay-head-grazing.png",
+      "sha256": "fae38c82d98eba75c7af19aa296781a15e421eb8a0a928b285ce021fbb552761",
+      "role": "CHEEK19-attempt01",
+      "visually_inspected": true,
+      "evidence_id": "CHEEK19-attempt01-after-clay-head-grazing.png"
+    }
+  ],
+  "camera_evidence": {
+    "status": "Receipt metadata compared after independent image notes",
+    "all_six_match": true,
+    "matches": {
+      "after-pbr-source-full-bird": true,
+      "after-clay-source-full-bird": true,
+      "after-pbr-head-profile": true,
+      "after-clay-head-profile": true,
+      "after-pbr-head-grazing": true,
+      "after-clay-head-grazing": true
+    },
+    "limit": "No independent native camera/lighting inspection or new render."
+  },
+  "claim_ledger": [
+    {
+      "claim_id": "QC19-01",
+      "claim_type": "visual interpretation",
+      "claim": "CHEEK19 adds visible occupied area below the optic but does not add source-specific construction density.",
+      "status": "supported",
+      "evidence_ids": [
+        "locked-sept22",
+        "july-head-only",
+        "CHEEK19-attempt01-after-pbr-head-profile.png",
+        "CHEEK19-attempt01-after-clay-head-profile.png"
+      ],
+      "observation": "A continuous rounded dark sweep spans rear pivot to bill root; the broad fan-shaped gold sheet below it is an uninterrupted bright mass. Clay confirms the broad smooth shape rather than an effect caused only by metal shading. Source cheek uses irregular narrow plate courses, fasteners, smaller exposed mechanisms and deep layered recesses.",
+      "consequence": "Counting coverage as likeness gain would preserve a generic construction correction.",
+      "next_test": "No additional iteration requested by this QC; keep frozen BILL18 for final09."
+    },
+    {
+      "claim_id": "QC19-02",
+      "claim_type": "visual interpretation",
+      "claim": "There is no convincing whole-bird source likeness gain from CHEEK19.",
+      "status": "supported",
+      "evidence_ids": [
+        "locked-sept22",
+        "candidate03",
+        "first-choice-0-5s",
+        "first-choice-2s",
+        "first-choice-4s",
+        "first-choice-6-5s",
+        "BILL18-attempt02-after-pbr-source-full-bird.png",
+        "CHEEK19-attempt01-after-pbr-source-full-bird.png"
+      ],
+      "observation": "Whole render is nearly the same outside the cheek. The new bright gold wedge becomes a distinct accent under the optic and broadens the rounded facial band; it does not reproduce the source fine dark cheek machinery. Existing large smooth cranial/bill forms and lower mechanical density remain.",
+      "consequence": "A local fill could be promoted despite failing the complete-image criterion.",
+      "next_test": "Review retained baseline in final09 without treating this rejected trial as full09 acceptance."
+    },
+    {
+      "claim_id": "QC19-03",
+      "claim_type": "visual observation",
+      "claim": "Anterior bill opening and lower-jaw hook remain readable, but the rear cheek opening is substantially occluded.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "BILL18-attempt02-after-pbr-head-profile.png",
+        "CHEEK19-attempt01-after-pbr-head-profile.png",
+        "CHEEK19-attempt01-after-pbr-head-grazing.png"
+      ],
+      "observation": "Front gap between upper hook and mandible remains dark and open. New insert replaces much of the rear negative space. Filling that region with a smooth bright panel weakens the source layered dark mouth/cheek reading rather than adding mechanical articulation.",
+      "consequence": "A technically open front mouth could conceal a visual cheek/mouth regression.",
+      "next_test": "No motion or unprovided-angle claim."
+    },
+    {
+      "claim_id": "QC19-04",
+      "claim_type": "visual observation",
+      "claim": "No new optic occlusion or obvious circular optic distortion is visible in supplied profile, grazing, or whole views.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "BILL18-attempt02-after-pbr-head-profile.png",
+        "CHEEK19-attempt01-after-pbr-head-profile.png",
+        "CHEEK19-attempt01-after-pbr-head-grazing.png"
+      ],
+      "observation": "Orange concentric face remains fully visible within its circular seat; the new cheek band sits beneath it. Existing flat disc reading relative to source optic depth is not resolved by this trial.",
+      "consequence": "Retaining optic visibility does not establish source realism or browser parity.",
+      "next_test": "Far profile, frontal views, era/browser exports and motion not reviewed in this narrow trial."
+    }
+  ],
+  "evidence_status": "live-local-static-artifact-review",
+  "limits": [
+    "Static PBR/clay visual review; no new renders, native edits, scripts, commits, integration, build, WebGL, export, motion, or deployment checks.",
+    "Candidate supplies only whole-source, near profile and grazing views in one era; no claim for all angles, all three eras, hidden rear topology or browser parity.",
+    "Source and model lighting differ; before/after camera metadata match, but visual construction judgment is qualitative, not measured geometric ground truth.",
+    "Old first-choice frame paths in cinematic-surface01 and milestone01 were LFS pointer text; they were not used as pixel evidence. Actual cg-supervised01/source-frames binaries were located and inspected instead.",
+    "Native and final manifest hashes verified; producer preservation claims were not independently re-executed.",
+    "Retaining BILL18 is a bounded fallback decision. Full source likeness and owner artistic acceptance remain outstanding.",
+    "Any new native or render hash invalidates this exact artifact decision."
+  ],
+  "writes": [
+    "/tmp/cg-qc19-cheek.json"
+  ],
+  "memory_usage": "Historical memory used only to maintain the separation of visual likeness from technical validation; visual findings use current source/render pixels."
+}

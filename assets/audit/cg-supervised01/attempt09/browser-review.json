@@ -1,0 +1,57 @@
+{
+  "checked_utc": "2026-10-04T11:09:10.930898+00:00",
+  "status": "PASS bounded actual desktop Chrome three-era review",
+  "url": "http://127.0.0.1:5188/assets/audit/cg-supervised01/browser09-review.html",
+  "actual_checks": [
+    "All3 eraGLBs load/render",
+    "All3 neutral/exhibit lighting and illustrated fallback",
+    "Advanced actualpointer orbit/wheelzoom/reset",
+    "Source/before/candidate/fallback DOM images complete with naturalWidth>0 eachera"
+  ],
+  "screenshots": {
+    "browser-advanced-exhibit.png": "35c8f9528ae06c4af1b3ea73e7c510c2736324bfa3f47d17da9674e90f79f1b8",
+    "browser-advanced-zoom.png": "3a7fe3877ccc2ee736f2f205b605c6b636e17d9e3ef6ebb58c1ad4f99f73cfb3",
+    "browser-mechanic-exhibit.png": "af494e3cc13c988440af75811c79269ad968552f2546430da2a0b7348dd893ff",
+    "browser-advanced-illustrated.png": "31fccec57c383cb48e89716f3713a6fd5a2e46607b5d43341f637e2508c45e8e",
+    "browser-mechanic-illustrated.png": "db416031b920946ceea626495096522e0d43e48c14e7a20e4f5481b653ae1ded",
+    "browser-maker-exhibit.png": "e77fe1f232ed859ea0ab8c2cd13e82e7cef2d30f132c7eac5618e321c16e7d08",
+    "browser-advanced-neutral.png": "b8a824e4eadcf25387677466d3e515b364f0f4aa54bde018afa5d157cab33071",
+    "browser-maker-illustrated.png": "2aa7e9ab8bd275c2a91c5c1c970f18e8f7ab83921623fda599b9124176867c10",
+    "browser-mechanic-neutral.png": "b7e44c5c522972861617772bc1f29ebcf3d347871e0eb0e93e5289c65fd6a8e5",
+    "browser-advanced-reset.png": "b8a824e4eadcf25387677466d3e515b364f0f4aa54bde018afa5d157cab33071",
+    "browser-maker-neutral.png": "083e2bf126b81421815c1072f0e96567e9aa139ee6ea216a1bbdc160097bdaa3",
+    "browser-advanced-orbit.png": "b41a29864f267633177c0fb70361b147df3f04cb5a51a43e1c0d76f315ba5e26"
+  },
+  "reset_canvas_rgb_mean_difference": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "orbit_zoom_canvas_rgb_mean_difference": {
+    "browser-advanced-orbit.png": [
+      6.061862068965517,
+      5.9799827586206895,
+      6.076647783251231
+    ],
+    "browser-advanced-zoom.png": [
+      7.121135467980295,
+      7.017836206896551,
+      7.147124384236453
+    ]
+  },
+  "console_warning_error_readback": [],
+  "runtime_exception_network_event_readback": {
+    "events": [],
+    "truncated": true,
+    "limit": "Eventwindow incomplete; absence not proof of all network events"
+  },
+  "interaction_incident": "One Neutral-light pointerdispatch timed out while Maker exhibited. Fresh AXstate showed no change; semantic retry succeeded. No app console error observed.",
+  "native_browser_pixel_equivalence": false,
+  "source_registration": "estimated, notcalibrated",
+  "not_run": [
+    "Mobile",
+    "Device/performance/accessibility suite",
+    "Owner artistic acceptance",
+    "RemoteCI/deployment/publication"
+  ]
+}
