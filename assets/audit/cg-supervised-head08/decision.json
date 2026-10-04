@@ -1,0 +1,75 @@
+{
+  "decision": "reject complete HEAD08 integration; retain evidence and actual-backing diagnostic only",
+  "base_commit": "bd35981",
+  "main_goal_fetched": "251f2f0243181e97140179c2aff6eb057e165438",
+  "input_sha256": "72e7e53daf40b7128cdf9b173006c639bcf123952547a2576fb2de29130f06d4",
+  "attempts": 2,
+  "controlled_diagnostic": "diagnostic/ before and after ONLY hiding actual CGH05 backing; confirms dome removed and large uncovered gaps appear",
+  "first_pair": "first authored whole/head matched clay visible by2026-10-04T07:29Z, within10min of assignment; diagnostic preceded authoring",
+  "method": "Start completed06; evaluated visible05 BVH in fixed head local frame, explicit reversible05 hide, new independent swept overlapping plates, actual-side-fitted brow and rounded aperture cheek; retained04 bill. No wholesale07 application.",
+  "claims": [
+    {
+      "claim": "Actual visible05 backing correctly identified and used",
+      "status": "supported",
+      "evidence": "diagnostic receipt and saved-native backing-burial.json"
+    },
+    {
+      "claim": "New crown is no longer buried under original05 surface",
+      "status": "supported for radial hits; misses retained explicitly",
+      "evidence": {
+        "base": {
+          "vertices": 5670,
+          "ray_hits": 5607,
+          "ray_misses": 63,
+          "buried_beyond_0_0002m": 0,
+          "minimum_signed_clearance_m": 0.0024998190929181874,
+          "maximum_penetration_m": 0.0
+        },
+        "evaluated": {
+          "vertices": 21200,
+          "ray_hits": 20678,
+          "ray_misses": 522,
+          "buried_beyond_0_0002m": 0,
+          "minimum_signed_clearance_m": 0.0024841962872415024,
+          "maximum_penetration_m": 0.0
+        }
+      }
+    },
+    {
+      "claim": "Required source-like head hierarchy achieved in whole bird",
+      "status": "rejected",
+      "evidence": "attempt02 after-pbr-source-full-bird plus front/profile/grazing clay"
+    },
+    {
+      "claim": "Underlying smooth05 cap remains exposed",
+      "status": "false;05 backing explicitly hidden",
+      "evidence": "saved native hide_render and hide_get true; new panels themselves still merge into broad cap silhouette"
+    },
+    {
+      "claim": "Original optic geometry/UV/materials and head/stance anchors preserved",
+      "status": "supported preservation only",
+      "evidence": "validation.json, both attempts PASS; visible new tip overlaps are separate composition defect"
+    }
+  ],
+  "residual_failures": [
+    "New fitted panels still form helmet-like broad foreground mass in whole/front view",
+    "Brow relief does not establish a distinct continuous diagonal source landmark",
+    "Several swept tips intrude across optical aperture in profile and grazing",
+    "Rear crown coverage still has gaps; no blanket replacement claimed successful",
+    "Bill root wrap remains generic, with unresolved transition into original smooth bill",
+    "Cheek enclosure reads broad/angular despite rounded contour, jaw remains ribbon-like"
+  ],
+  "material_scope": "Receiving metal05 material graphs unchanged; no new texture sampling or boundary wear. New normalized head08-local-plate-uv and cgSupervisedHead08 tags ready only for independently retained future geometry.",
+  "checks": "Both saved native readbacks PASS originals, parents, graphs, protected optics, normalized finite UV/evaluated geometry, GLB finite positions, identical paired cameras and whole-bird bounds. Zero sampled evaluated crown vertices buried more than0.2mm below actual05 on20678 hits;522 misses.",
+  "not_run": [
+    "optic07 coupling",
+    "new regional boundary wear",
+    "three-era integration",
+    "browser parity",
+    "app build/fallback",
+    "CI/deployment",
+    "owner acceptance",
+    "engineering"
+  ],
+  "review_scope": "Author self-judgment after actual pixel inspection. No independent equilibrium approval or protected holdout claimed."
+}
