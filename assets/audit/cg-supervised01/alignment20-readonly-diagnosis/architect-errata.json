@@ -1,0 +1,26 @@
+{
+  "schema": "cg-alignment20-architect-errata-v1",
+  "updated_utc": "2026-10-04T11:49:47.734593+00:00",
+  "raw_report": "assets/audit/cg-supervised01/alignment20-readonly-diagnosis/diagnosis.json",
+  "raw_report_sha256": "4ecfd8b6ba83c33a96404fc4b83a7f5655c712a68fee55a0cad1a5f49b063f5a",
+  "preserved_byte_exact": true,
+  "corrections": [
+    {
+      "field": "summary.confirmed_numeric[2]",
+      "issue": "The raw worker summary calls Euclidean distances leftward offsets. Its numeric rows distinguish those quantities correctly.",
+      "corrected": "Near-optic distance is103.96 px, comprising103.65 px left and7.97 px down. Bill-hook distance is82.04 px, comprising81.13 px left and12.16 px up.",
+      "authoritative_values": "rows near-optic and bill-hook residual_px and distance_px"
+    },
+    {
+      "field": "projected_separations_px and source_separations_px",
+      "issue": "Separations are horizontal x-coordinate differences, not Euclidean landmark distances.",
+      "corrected": "Horizontal knee separation83.15 px versus230 px source annotation; horizontal ankle separation108.55 px versus217 px."
+    },
+    {
+      "field": "rows crown",
+      "issue": "The crown pick uses the legacy cranial-vault highest vertex; this is not proof of the visible HEAD17 crown or posterior physical crest.",
+      "corrected": "Do not use this legacy point as final visible crown silhouette acceptance."
+    }
+  ],
+  "limits": "Existing manually interpreted source points, estimated orthographic camera and unknown depth prevent treating these projections as calibrated3D measurements or automatic pose-change approval."
+}

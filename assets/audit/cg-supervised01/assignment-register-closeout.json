@@ -1,0 +1,968 @@
+{
+  "schema": "cg-architect-assignment-register-v1",
+  "created_utc": "2026-10-04T11:49:47.734593+00:00",
+  "source": "Only current root task dispatch metadata copied; task prompts and full session history excluded.",
+  "requests": [
+    {
+      "requested_utc": "2026-10-04T03:54:07.667Z",
+      "task_name": "visual_assessment",
+      "requested_model": "inherited",
+      "requested_reasoning_effort": "inherited",
+      "fork_turns": "all",
+      "budget_phase": "pre-run-assessment-or-gate",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T03:54:16.393Z",
+      "task_name": "pipeline_assessment",
+      "requested_model": "inherited",
+      "requested_reasoning_effort": "inherited",
+      "fork_turns": "all",
+      "budget_phase": "pre-run-assessment-or-gate",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T03:54:25.496Z",
+      "task_name": "process_assessment",
+      "requested_model": "inherited",
+      "requested_reasoning_effort": "inherited",
+      "fork_turns": "all",
+      "budget_phase": "pre-run-assessment-or-gate",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:18:36.120Z",
+      "task_name": "supervision_visual_gate",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "low",
+      "fork_turns": "none",
+      "budget_phase": "pre-run-assessment-or-gate",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:18:46.389Z",
+      "task_name": "supervision_resource_gate",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "low",
+      "fork_turns": "none",
+      "budget_phase": "pre-run-assessment-or-gate",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:23:42.224Z",
+      "task_name": "cycle01_head_neck",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:24:00.319Z",
+      "task_name": "cycle01_shoulder_body",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:24:17.552Z",
+      "task_name": "cycle01_export_parity",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:35:27.320Z",
+      "task_name": "qa01_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:35:41.688Z",
+      "task_name": "qa01_evidence",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:38:42.077Z",
+      "task_name": "qa01_safety_portability",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:41:07.897Z",
+      "task_name": "qa01_disruptor",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:44:52.952Z",
+      "task_name": "cycle02_face_throat",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:45:10.776Z",
+      "task_name": "cycle02_shield_layers",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:45:30.762Z",
+      "task_name": "cycle02_regional_finish",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:52:52.684Z",
+      "task_name": "cycle03_heavy_feet",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:56:37.780Z",
+      "task_name": "qa02_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:56:54.083Z",
+      "task_name": "qa02_evidence",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T04:59:34.798Z",
+      "task_name": "qa02_safety",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:03:31.974Z",
+      "task_name": "cycle03_source_head",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:05:56.006Z",
+      "task_name": "cycle03_neck_breast",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:06:20.631Z",
+      "task_name": "cycle03_source_shield",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:17:33.959Z",
+      "task_name": "geometry_method_audit",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:30:26.871Z",
+      "task_name": "cycle04_volumetric_head",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:30:42.836Z",
+      "task_name": "cycle04_formed_body",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:31:02.447Z",
+      "task_name": "qa03_evidence",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:40:31.038Z",
+      "task_name": "qa03_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:41:22.773Z",
+      "task_name": "cycle04_finish_encoding",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:42:50.441Z",
+      "task_name": "qa03_safety",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:47:35.832Z",
+      "task_name": "cycle04_source_camera",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:47:57.548Z",
+      "task_name": "qa04_construction",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:51:30.913Z",
+      "task_name": "cycle05_curved_body",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T05:53:33.163Z",
+      "task_name": "cycle05_connected_head",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:02:44.897Z",
+      "task_name": "qa05_body",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:03:38.346Z",
+      "task_name": "cycle05_regional_metal",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:10:56.262Z",
+      "task_name": "qa05_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:11:12.915Z",
+      "task_name": "qa05_evidence",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:14:57.414Z",
+      "task_name": "qa05_safety",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:22:54.937Z",
+      "task_name": "cycle06_head_plates",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:23:07.179Z",
+      "task_name": "cycle06_body_hierarchy",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:23:21.936Z",
+      "task_name": "cycle06_connected_machinery",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:31:55.633Z",
+      "task_name": "qc06_armor",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:33:15.106Z",
+      "task_name": "qc06_machinery",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:34:28.594Z",
+      "task_name": "qc06_head",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:43:07.245Z",
+      "task_name": "qa06_evidence",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:43:20.458Z",
+      "task_name": "qa06_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:43:32.961Z",
+      "task_name": "qa06_safety",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:54:30.735Z",
+      "task_name": "qa06_disruptor",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:54:46.491Z",
+      "task_name": "cycle07_neighbor_overlap",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T06:56:19.846Z",
+      "task_name": "cycle07_optical_depth",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:01:17.974Z",
+      "task_name": "cycle07_coupled_head",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:03:47.431Z",
+      "task_name": "qc07_armor_failure",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:12:47.783Z",
+      "task_name": "cycle08_hero_body",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:13:00.831Z",
+      "task_name": "qc07_optic",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:13:13.931Z",
+      "task_name": "qc07_head_failure",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:27:50.074Z",
+      "task_name": "qc07_amber_correction",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:30:28.175Z",
+      "task_name": "cycle09_open_shield",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:36:52.960Z",
+      "task_name": "head_macro_diagnosis",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:44:10.539Z",
+      "task_name": "cycle10_cranial_wedge",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:44:53.326Z",
+      "task_name": "body_macro_diagnosis",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:50:58.110Z",
+      "task_name": "cycle11_anterior_cage",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T07:55:12.373Z",
+      "task_name": "qc11_anterior_cage",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:10:53.046Z",
+      "task_name": "cycle12_cranial_cage",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:11:19.795Z",
+      "task_name": "cycle12_anterior_panels",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:17:20.758Z",
+      "task_name": "feet_macro_diagnosis",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:29:52.354Z",
+      "task_name": "qc12_anterior_panels",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:31:43.900Z",
+      "task_name": "qc12_cranial_cage",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:38:43.646Z",
+      "task_name": "qa07_evidence",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:39:05.251Z",
+      "task_name": "qa07_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:39:23.922Z",
+      "task_name": "qa07_safety",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:51:08.528Z",
+      "task_name": "qa07_disruptor",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:57:05.575Z",
+      "task_name": "cycle13_cranial_fit",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T08:57:31.198Z",
+      "task_name": "cycle13_breast_planforms",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:04:48.134Z",
+      "task_name": "cycle13_optic_area",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:08:26.295Z",
+      "task_name": "qc13_breast",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:11:26.280Z",
+      "task_name": "qc13_cranial_guide",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:14:21.279Z",
+      "task_name": "cycle14_foot_cover",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:19:05.034Z",
+      "task_name": "qc13_optic",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:20:06.010Z",
+      "task_name": "cycle14_cranial_exterior",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:30:34.028Z",
+      "task_name": "cranial_projection_diagnosis15",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:33:47.908Z",
+      "task_name": "qc14_cranial_roof",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:35:40.669Z",
+      "task_name": "qc14_feet",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:40:48.828Z",
+      "task_name": "cycle15_localized_crown",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:49:29.524Z",
+      "task_name": "cycle15_oblique_breast",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:53:32.442Z",
+      "task_name": "source_appearance_triage15",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:57:41.652Z",
+      "task_name": "qc15_localized_crown",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T09:58:43.891Z",
+      "task_name": "cycle16_narrow_hood_contrast",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:01:32.871Z",
+      "task_name": "qc15_oblique_breast",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:05:49.931Z",
+      "task_name": "cycle17_layered_crown",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:13:56.036Z",
+      "task_name": "preflight09_regional_coupling",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:16:12.705Z",
+      "task_name": "bill_macro_diagnosis18",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:21:57.387Z",
+      "task_name": "qc17_layered_crown",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:23:01.279Z",
+      "task_name": "cycle18_formed_bill",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:31:00.749Z",
+      "task_name": "adjudication_ablation17",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:39:56.611Z",
+      "task_name": "architect_process_audit_final",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:45:46.102Z",
+      "task_name": "bill18_fresh_qc",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:47:53.193Z",
+      "task_name": "delivery09_executor",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T10:58:38.395Z",
+      "task_name": "cheek19_macro_trial",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:03:28.047Z",
+      "task_name": "cheek19_fresh_qc",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:13:06.657Z",
+      "task_name": "equilibrium09_evidence",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:13:23.511Z",
+      "task_name": "equilibrium09_outcome",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:13:44.951Z",
+      "task_name": "equilibrium09_safety",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:26:33.174Z",
+      "task_name": "equilibrium09_disruptor",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:32:05.500Z",
+      "task_name": "alignment20_readonly_diagnosis",
+      "requested_model": "gpt-6-luna",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    },
+    {
+      "requested_utc": "2026-10-04T11:44:01.495Z",
+      "task_name": "closeout21_record_qc",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "medium",
+      "fork_turns": "none",
+      "budget_phase": "within-eight-hour-run",
+      "evidence_scope": "Dispatch request metadata only; not proof of implementation or per-agent token cost."
+    }
+  ],
+  "counts": {
+    "all_observed_spawn_requests": 105,
+    "within_budget_spawn_requests": 100,
+    "pre_run_requests": 5,
+    "within_budget_requested_model_mix": {
+      "gpt-6.1-sol": 81,
+      "gpt-6-luna": 9,
+      "gpt-6-astra": 10
+    }
+  },
+  "limits": [
+    "Spawn requests are not completed-worker counts. Actual per-agent token usage and monetary cost were not independently reconstructed.",
+    "This register records requested model/reasoning settings, not an account billing audit.",
+    "The original assignment.json, per-attempt briefs, superintendent chronology, regional handoffs and raw QA reports preserve available task caps and outcomes.",
+    "All within-run requests use fresh contexts; max three active workers plus architect, distinct output ownership, no children and max two design attempts were the operating rules."
+  ]
+}

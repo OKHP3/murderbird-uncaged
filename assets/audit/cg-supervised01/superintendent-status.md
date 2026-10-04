@@ -1,5 +1,7 @@
 # Superintendent checkpoint
 
+> Final decision — October 4, 11:55 UTC: attempt09 has all three editable/native and static embedded GLB assets, 69 matched renders and the frozen desktop browser packet. Independent Equilibrium rejects completed source alignment and permits only limited development review. Net whole-character gain and blanket regional retention remain unproved. CHEEK19 was rejected; modeling has stopped. The architect assessment, final handoff, assignment register and budget closeout supersede the pending-delivery statements in the historical chronology below. No runtime promotion or owner artistic acceptance.
+
 The source-aligned photoreal target remains unaccepted. Cycle05 improves head volume, cheek/jaw connections, thin layered body armor and foot presence. Fresh outcome QA still rejects final likeness because armor reads soft/matte, facial construction remains simplified, and exposed neck/leg/foot machinery lacks the source character.
 
 The earlier attempt ended at its one-million-token ceiling after about34minutes. It did not run for three days. Eight of ten workers delivered; final material, three-era and browser integration remained incomplete. Earlier engineering-first scope, generic construction operators, and technical validation being mistaken for visual acceptance contributed to the unfinished result.
