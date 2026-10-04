@@ -1,0 +1,127 @@
+{
+  "at": "2026-10-04T20:07:00.496484+00:00",
+  "native_path": "/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/assets/audit/cg-recursive-three-loop01/loop02/delivery/retained03/builder/murderbird-recursive-builder.blend",
+  "native_sha256": "86fee36a8df80f8bcaa3bba7e1c0ecc1dfc56fde178a708323949c2d23ba6288",
+  "object": "CGH17 frontal crown root",
+  "scope": "Untouched original source only, direct depsgraph evaluation; no producer imports, material/visibility/scene edits, save/render/export.",
+  "faces_source": 56,
+  "faces_evaluated": 1912,
+  "source_face_material_indices": [
+    2
+  ],
+  "evaluated_face_material_indices": [
+    2
+  ],
+  "source_slot2": {
+    "name": "CG metal05 / worn-bronze / builder / retained-uv.001",
+    "pointer": 516363556512,
+    "is_evaluated": false,
+    "original_name": "CG metal05 / worn-bronze / builder / retained-uv.001",
+    "original_pointer": 516363556512
+  },
+  "evaluated_slot2": {
+    "name": "CG metal05 / worn-bronze / builder / retained-uv.001",
+    "pointer": 516149671048,
+    "is_evaluated": true,
+    "original_name": "CG metal05 / worn-bronze / builder / retained-uv.001",
+    "original_pointer": 516363556512
+  },
+  "predicates": {
+    "python_equal": false,
+    "pointer_equal": false,
+    "names_equal": true,
+    "evaluated_original_equal_source": true,
+    "evaluated_original_pointer_equal_source": true,
+    "both_original_pointer_equal": true,
+    "image_node_counts_equal": true,
+    "image_node_packed_hash_pairs_equal": true,
+    "evaluated_faces_equal_1912": true,
+    "evaluated_all_faces_slot2": true
+  },
+  "source_image_nodes": [
+    {
+      "node": "Image Texture",
+      "image": {
+        "name": "worn-bronze-retained-uv-color.png.001",
+        "pointer": 516354382880,
+        "is_evaluated": false,
+        "original_name": "worn-bronze-retained-uv-color.png.001",
+        "original_pointer": 516354382880
+      },
+      "source": "FILE",
+      "packed_bytes": 653953,
+      "packed_sha256": "09f022a90eac41f37eea9f6d8b49b5f24cdf68659c15542a9187bd27e913c4bb"
+    },
+    {
+      "node": "Image Texture.001",
+      "image": {
+        "name": "worn-bronze-retained-uv-orm.png.001",
+        "pointer": 516354388256,
+        "is_evaluated": false,
+        "original_name": "worn-bronze-retained-uv-orm.png.001",
+        "original_pointer": 516354388256
+      },
+      "source": "FILE",
+      "packed_bytes": 1352925,
+      "packed_sha256": "669fd92eb1458da5004118d3975da460828fa804d875e6c9e87884fe44f1db4b"
+    },
+    {
+      "node": "Image Texture.002",
+      "image": {
+        "name": "worn-bronze-2b-normal.png.002",
+        "pointer": 516364941344,
+        "is_evaluated": false,
+        "original_name": "worn-bronze-2b-normal.png.002",
+        "original_pointer": 516364941344
+      },
+      "source": "FILE",
+      "packed_bytes": 830840,
+      "packed_sha256": "db77723bd096536c83729bd1ed180748ea65f9ece3dda9a6a9e314b2cd74c821"
+    }
+  ],
+  "evaluated_image_nodes": [
+    {
+      "node": "Image Texture",
+      "image": {
+        "name": "worn-bronze-retained-uv-color.png.001",
+        "pointer": 516354382880,
+        "is_evaluated": false,
+        "original_name": "worn-bronze-retained-uv-color.png.001",
+        "original_pointer": 516354382880
+      },
+      "source": "FILE",
+      "packed_bytes": 653953,
+      "packed_sha256": "09f022a90eac41f37eea9f6d8b49b5f24cdf68659c15542a9187bd27e913c4bb"
+    },
+    {
+      "node": "Image Texture.001",
+      "image": {
+        "name": "worn-bronze-retained-uv-orm.png.001",
+        "pointer": 516354388256,
+        "is_evaluated": false,
+        "original_name": "worn-bronze-retained-uv-orm.png.001",
+        "original_pointer": 516354388256
+      },
+      "source": "FILE",
+      "packed_bytes": 1352925,
+      "packed_sha256": "669fd92eb1458da5004118d3975da460828fa804d875e6c9e87884fe44f1db4b"
+    },
+    {
+      "node": "Image Texture.002",
+      "image": {
+        "name": "worn-bronze-2b-normal.png.002",
+        "pointer": 516364941344,
+        "is_evaluated": false,
+        "original_name": "worn-bronze-2b-normal.png.002",
+        "original_pointer": 516364941344
+      },
+      "source": "FILE",
+      "packed_bytes": 830840,
+      "packed_sha256": "db77723bd096536c83729bd1ed180748ea65f9ece3dda9a6a9e314b2cd74c821"
+    }
+  ],
+  "limits": "Control establishes evaluated ID alias behavior only. It does not validate any stopped trial material, slot assignment or shading.",
+  "next_test": "If untouched control pointer equality is false but original identity and image bytes match, compare evaluated material.original identity to expected source original with face slots and explicit packed-map hashes. Any trial would require its own separately authorized validation; no failed method rerun authorized.",
+  "native_sha256_after": "86fee36a8df80f8bcaa3bba7e1c0ecc1dfc56fde178a708323949c2d23ba6288",
+  "decision": "CONFIRMED comparator flaw on untouched control: raw evaluated-material ID equality returns false although evaluated material.original identity equals the expected source material and all actual packed-image bytes match. This does not prove stopped trial valid."
+}
