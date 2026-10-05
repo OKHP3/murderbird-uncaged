@@ -1,0 +1,134 @@
+{
+  "role": "outcome",
+  "decision": "approve-with-limits",
+  "confidence": "Moderate for visible gap-to-task alignment; limited image set and inherited PASS01 context.",
+  "evidence_status": "analytical",
+  "artifact_identity": {
+    "production_revision": "109e9e7a405ada1d9a466f1225bde4662a2dc777",
+    "backlog": "assets/audit/cg-production-delivery01/backlog-pass02.json",
+    "backlog_sha256": "6516aa1fea1f8ea40acaef583fd4d473a17c37d0bffb89252408e56a01eca058",
+    "freeze": "assets/audit/cg-production-delivery01/equilibrium/freeze-pass02.json"
+  },
+  "image_first_record": {
+    "sequence": "Six specified local images viewed; initial observations recorded before PASS02 freeze/backlog text. No previous reviewer files read during PASS02.",
+    "image_ids": {
+      "locked-composite": "assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg",
+      "july-head": "context/threads/assets/murderbird-camera-series-2026-09-05/murderbird-owner-preferred-july-reference.png",
+      "builder-canon-neutral": "assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/canon-neutral.png",
+      "builder-head-neck": "assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/head-neck.png",
+      "mechanic-canon-neutral": "assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/canon-neutral.png",
+      "mechanic-head-neck": "assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/head-neck.png"
+    },
+    "initial_observations": [
+      {
+        "id": "IMG01",
+        "status": "observed",
+        "claim": "Both pinned sources present a deep hooked bill, swept layers behind the brow, a circular optic embedded in surrounding plated structure, and a shaped open cheek/mandible relationship. The retained head views instead show a broad pale smooth top shell, a thick projecting optic ring, and sparse disconnected strips around the cheek.",
+        "evidence_ids": [
+          "locked-composite",
+          "july-head",
+          "builder-head-neck",
+          "mechanic-head-neck"
+        ]
+      },
+      {
+        "id": "IMG02",
+        "status": "observed",
+        "claim": "The locked full bird has irregular edged and fastened regional plates and dense visible joint/hardware accents. The retained whole birds read smoother, with repeated rounded overlapping breast/wing plates and simpler rod-like leg presentation. Camera, pose and illumination differ, so this is qualitative appearance comparison rather than metrology.",
+        "evidence_ids": [
+          "locked-composite",
+          "builder-canon-neutral",
+          "mechanic-canon-neutral"
+        ]
+      },
+      {
+        "id": "IMG03",
+        "status": "observed",
+        "claim": "Retained builder and Mechanic views keep the same avian stance, curved neck, compact folded shield-wing and separated toes. Their clearest visible era difference in these supplied pairs is the bright versus dark optic; broader finish distinction is not conspicuous.",
+        "evidence_ids": [
+          "builder-canon-neutral",
+          "mechanic-canon-neutral",
+          "builder-head-neck",
+          "mechanic-head-neck"
+        ]
+      },
+      {
+        "id": "IMG04",
+        "status": "unknown",
+        "claim": "These six images do not establish Maker finish, motion continuity, rear/opposite-side fidelity, native/export preservation, or improvement relative to earlier checkpoints. The July body's wing span and pose are excluded from this comparison because its authorized scope is head identity.",
+        "evidence_ids": [
+          "six supplied images",
+          "inherited pinned-scope instruction"
+        ]
+      },
+      {
+        "id": "IMG05",
+        "status": "inferred",
+        "claim": "A connected head proposal is likely to deliver greater recognizable change than another isolated crown color adjustment; regional plate and era-finish work should remain visible follow-ons rather than disappear behind that head scope.",
+        "evidence_ids": [
+          "IMG01",
+          "IMG02",
+          "IMG03"
+        ]
+      }
+    ]
+  },
+  "material_findings": [
+    {
+      "id": "OUT02-01",
+      "claim": "MB-T001-007 convert the visible connected-head gap into concrete linked deliverables: bill/root, cheek/mandible, crown sweep/layering, recessed optic/brow, whole-head mass and neck join. Isolated tone changes cannot close the observed relationship differences.",
+      "status": "supported",
+      "evidence_ids": [
+        "IMG01",
+        "IMG05",
+        "backlog-pass02.json:MB-T001-007"
+      ],
+      "consequence": "The proposed next phase has a recognizable source-specific target, and its whole-bird checkpoint discourages improvement judged only in a favorable head crop.",
+      "next_test": "Compare the connected successor against July head identity and the locked full bird, using both profiles and matched three-quarter cameras in neutral/exhibit light; label inferred hidden depth and stop after two designs without useful gain."
+    },
+    {
+      "id": "OUT02-02",
+      "claim": "MB-T008-011 and MB-T021-027 keep body/wing/foot forms, edge/fastening rhythm, regional surface response and era history concrete. MB-T015 explicitly protects the retained gains, and MB-T001 now depends on prerequisite execution controls MB-T062.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "IMG02",
+        "IMG03",
+        "backlog-pass02.json:MB-T008-015",
+        "backlog-pass02.json:MB-T021-027",
+        "backlog-pass02.json:MB-T001/dependencies"
+      ],
+      "consequence": "The roadmap can preserve whole-character continuity while focusing the first packet on the head. These images alone cannot verify prior-stage preservation or final per-era finish fidelity.",
+      "next_test": "Use the MB-T015 before/after sequence and actual era-specific pinned references for each changed region. Include Maker and both lights before concluding that the three era finishes match; hashes cannot establish visible gain."
+    },
+    {
+      "id": "OUT02-03",
+      "claim": "MB-T012 is titled 'Pass a whole-character static likeness checkpoint' and maps V09/V10, but its dependencies cover shape/evidence tasks and omit finish tasks MB-T021-027. The later owner-decision path does include finish work through MB-T019/026.",
+      "status": "supported-scope-ambiguity",
+      "evidence_ids": [
+        "backlog-pass02.json:MB-T012",
+        "backlog-pass02.json:MB-T019-020",
+        "backlog-pass02.json:MB-T021-027",
+        "IMG02",
+        "IMG03"
+      ],
+      "consequence": "A structural/head checkpoint could be read as a passed whole-character likeness outcome while regional and era surface work remains open. This is a roadmap labeling/scope issue, not a newly observed runtime failure.",
+      "next_test": "Describe MB-T012 as a provisional whole-character comparison checkpoint with explicit open finish/era items, or add applicable finish prerequisites before any claim that static likeness has passed. Keep partial visible gain distinct from G1 and per-era owner acceptance."
+    }
+  ],
+  "assumptions": [
+    "These are authoring stills, not a newly operated delivered browser scene; no motion, device or export-parity claim was tested.",
+    "Camera, pose, exposure and source illustration differences prevent precise proportion/color measurements. Observations are qualitative.",
+    "Builder is the retained Advanced asset key, not a fourth era. July controls head only; its body and long wings were excluded.",
+    "This reviewer already reviewed PASS01 documentary material in the same context. PASS02 ordering is image-first within this turn, but it is not blind, unseen or independent of prior context."
+  ],
+  "release_conditions": [
+    "Approve the roadmap only as a bounded follow-on proposal; no new implementation or artistic approval follows from this review.",
+    "Clarify MB-T012's provisional scope before presenting its completion as a likeness result.",
+    "Preserve all retained gains and source binaries; require source-matched whole-bird evidence rather than isolated crops or technical counts.",
+    "Full source likeness remains UNMET and owner artistic acceptance PENDING. No protected holdout or generalization claim."
+  ],
+  "notes": [
+    "Owned output only; no peers, UI/remotes, delegation or judged-artifact edits.",
+    "PASS02 freeze/backlog were read after initial image observations; no numerical grading performed."
+  ]
+}

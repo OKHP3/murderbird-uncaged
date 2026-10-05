@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-05T00:32:55.227547+00:00"
+last_updated: "2026-10-04T23:07:13.244534+00:00"
 timezone: "America/Chicago"
-status: "retained-cg-assessment-delivered-review-complete"
+status: "retained-cg-production-assessment-delivery"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -26,16 +26,6 @@ Three recursive development loops are complete on the preserved modeling branch 
 Import exact retained native sources, exports and supporting evidence without altering historical binaries. The release presents the static retained CG candidate through a dedicated assessment viewer; the existing V37 interactive exhibit retains its movement, inspection, sound and illustrated fallback. The retained GLBs have no skins or animations, so their publication cannot establish animated integration. Preserve the three original era identities, pinned reference scopes and all rights reserved status.
 
 The integration record is [CG production release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md). The original completed-run assessment and limits remain in [architect assessment](assets/audit/cg-recursive-three-loop01/architect-assessment-final.md) and [Loop03 handoff](assets/audit/cg-recursive-three-loop01/loop03/handoff.json). Actual GitHub merge, Pages deployment, live asset delivery, Replit checkout and Notion receipt must each be verified separately. Earlier status snapshots below are preserved history.
-
-## Current production and next-goal review
-
-The retained assessment was delivered and directly verified at `109e9e7a405ada1d9a466f1225bde4662a2dc777` on GitHub Pages, the selected private Replit Preview and the Notion continuation page. [PR31](https://github.com/OKHP3/murderbird-uncaged/pull/31) imports the preserved result; [PR32](https://github.com/OKHP3/murderbird-uncaged/pull/32) fixes delayed-load lighting. This delivery supersedes historical pending/no-promotion snapshots for this retained assessment only. Model/source likeness is still **UNMET**, and owner artistic acceptance is **PENDING**.
-
-Five successive analytical Equilibrium Review passes are complete against the prior handoff and evaluation PRD. The [review report](docs/evaluations/cg-production-five-pass-review-2026-10-04.md), [detailed next-goal task list](docs/cg-next-goals.md) and [machine review record](assets/audit/cg-production-delivery01/equilibrium/review-record.json) preserve 52 PRD criteria, F01–F10 and 18 scenario procedures. The list contains 61 remaining, ongoing or conditional items and one closed delivery item. It distinguishes actual defects, missing evidence and later-phase proposals.
-
-The next recommended visual packet is one connected source-specific head successor, preserving approved stance and retained breast/toe gains. Its proposed shared ceiling is 45 minutes / 12,000 aggregate tokens with a 15–30-minute whole-bird checkpoint; this is a proposal, not a new allocation or modeling authorization. Current available V37/access/media evidence can be reviewed independently of future CG rig work. The static CG models have no skins or animations. Mechanics remains a separately authorized phase; the frozen engineering archive remains `9cc1b3c2da8cb064f343ab5915b32d0ab53236b1`.
-
-Replit health is timestamped and route-specific. The process can remain alive while its iframe reverts to the old default port; verify the actual `/cg.html` route, served revision and visible candidate, not its port header alone. Connector reauthentication, human/device/performance evidence, strict normal diagnosis and selective triage of preserved older Replit-only work remain open. No protected visual holdout or owner artistic acceptance is inferred from the review. Documentation-only closeout does not change the retained candidate's model bytes.
 
 ## Operative mandate
 
