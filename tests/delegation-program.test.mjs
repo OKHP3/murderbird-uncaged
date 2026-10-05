@@ -60,3 +60,11 @@ test('completed verified threads may take another packet within their cumulative
   s.threads[0].status='BUDGET_LIMITED_INCOMPLETE';
   assert.throws(()=>followupRequest(program,s,'MB-P23',isolated,'owned-complete',main),/completed independently/);
 });
+
+test('reusing a thread does not redispatch its verified earlier packet',()=>{
+  const s={project_id:'test-project',threads:[{packet_id:'MB-P17',thread_id:'reused',status:'VERIFIED',native_tokens_used:111353}],
+    packet_acceptances:[{packet_id:'MB-P01',status:'VERIFIED_PREP_SLICE'}]};
+  assert.ok(status(program,s).verified.includes('MB-P01'));
+  assert.ok(!status(program,s).ready.includes('MB-P01'));
+  assert.throws(()=>dispatchRequest(program,s,'MB-P01',isolated,main),/already active\/complete/);
+});

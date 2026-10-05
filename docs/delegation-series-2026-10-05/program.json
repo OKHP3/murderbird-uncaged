@@ -4,7 +4,6 @@
   "source_base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
   "authority": {
     "owner": "Direct owner instruction in architect thread, October 5, 2026",
-    "thread_id": "01a10a9d-f5c9-7ac2-833e-3350f038dfb0",
     "max_delegate_threads": 30,
     "max_active_delegates": 3,
     "per_delegate_tokens_ceiling": 2000000,
@@ -18,7 +17,7 @@
     "primary_metric": "native_goal",
     "provider_total_tokens": null,
     "hard_provider_billing_enforcement": false,
-    "limitation": "Native goal counters and caps are observable on each thread. No provider-total or account-billing cap is exposed by this orchestration API. Initial operational caps are smaller than owner ceilings; unused allocation is not automatically spent. Initial 30000/35000 native caps failed during guidance startup; their incompletion is retained. Subsequent native goals use the owner ceiling and bounded work checkpoints. Targets are estimates and may be revised from observed usage; root records retries within the 30-thread maximum. New native goals reserve 500000 tokens below the per-thread owner ceiling; a native cap may be crossed by the final in-flight step, so root uses earlier checkpoints and reports actual usage. This is not a hard billing guarantee.",
+    "limitation": "Native goal counters and caps are observable on each thread. No provider-total or account-billing cap is exposed by this orchestration API. Initial operational caps are smaller than owner ceilings; unused allocation is not automatically spent. Initial 30000/35000 native caps failed during guidance startup; their incompletion is retained. Subsequent native goals use a 1500000 ceiling below the owner maximum and bounded work checkpoints. Targets are estimates and may be revised from observed usage; root records retries within the 30-thread maximum. New native goals reserve 500000 tokens below the per-thread owner ceiling; a native cap may be crossed by the final in-flight step, so root uses earlier checkpoints and reports actual usage. This is not a hard billing guarantee.",
     "initial_operational_delegate_total": 45000000,
     "stop_fraction": 0.8,
     "closure_reserve_fraction": 0.2,
@@ -104,7 +103,7 @@
       "expected_outputs": "reference-ledger.json; head-feature-contract.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p01/",
       "acceptance_boundary": "Existing reference/source identity and criterion coverage; never likeness acceptance.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [],
       "criterion_ids": [
         "V01",
@@ -147,7 +146,7 @@
       "expected_outputs": "retained-gains-contract.json; custody-receipt.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p02/",
       "acceptance_boundary": "Custody preflight now; visible successor preservation remains a postflight gate.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T013"
       ],
@@ -189,7 +188,7 @@
       "expected_outputs": "control-drill.mjs; drill-receipt.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p03/",
       "acceptance_boundary": "Native counter and simulated owned-stop control slice; actual provider billing remains unknown.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T013",
         "MB-T015"
@@ -228,7 +227,7 @@
       "expected_outputs": "normal-diagnosis.json; reproduction.md; bounded-replay.mjs or .py",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p04/",
       "acceptance_boundary": "A reproduced diagnosis or explicit NOT RUN; no threshold relaxation, silent repair or acceptance.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T015",
         "MB-T062"
@@ -269,7 +268,7 @@
       "expected_outputs": "head-assignment.json; feature-diagram.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p05/",
       "acceptance_boundary": "A concrete implementation contract. Modeling remains a separately selected visible checkpoint, with owner acceptance pending.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T013",
         "MB-T015",
@@ -313,7 +312,7 @@
       "expected_outputs": "owned geometry module; editable candidate; same-camera image pairs",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p06/",
       "acceptance_boundary": "Depends on selected visual scope, pinned base and budget monitor. Source dimensions inferred from images remain proposals.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T001",
         "MB-T062"
@@ -356,7 +355,7 @@
       "expected_outputs": "owned head-detail module; candidate close-ups",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p07/",
       "acceptance_boundary": "Coherent-head identity and MB-P06 cheek relationship; no isolated tone variant can close this packet.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T001",
         "MB-T062",
@@ -401,7 +400,7 @@
       "expected_outputs": "owned neck/body module; whole-bird matched views",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p08/",
       "acceptance_boundary": "Head assembly check first; preserve retained gains and source body scope.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T006",
         "MB-T062",
@@ -450,7 +449,7 @@
       "expected_outputs": "shoulder-decision.md; owned wing/rear module; matched views",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p09/",
       "acceptance_boundary": "Owner chronology choice when consequential; wings remain folded and flightless.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T008",
         "MB-T062",
@@ -499,7 +498,7 @@
       "expected_outputs": "owned foot module; source/before/candidate close-ups",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p10/",
       "acceptance_boundary": "Root selects bounded visual increment; no locomotion or engineering claims.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T015",
         "MB-T062"
@@ -540,7 +539,7 @@
       "expected_outputs": "capture-contract.json; comparison-index.json; parity-receipt.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p11/",
       "acceptance_boundary": "Capture contract is ready now. Candidate comparisons require MB-P04, MB-P15 and exact integrated assets; do not use future images as preflight.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T013",
         "MB-T062",
@@ -606,7 +605,7 @@
       "expected_outputs": "whole-bird-review.md; owner-decisions.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p12/",
       "acceptance_boundary": "Agent can prepare/review evidence; only the owner supplies artistic acceptance. No fresh score without the full defined evaluation.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T002",
         "MB-T003",
@@ -679,7 +678,7 @@
       "expected_outputs": "owned Maker material module; matched regional views",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p13/",
       "acceptance_boundary": "Preserve geometry and reference-scoped era identity; no global tint substitute.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T021",
         "MB-T062",
@@ -725,7 +724,7 @@
       "expected_outputs": "owned Mechanic material module; wear-map-contract.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p14/",
       "acceptance_boundary": "Uncertain construction/history remains proposed; chronological owner decision cannot be invented.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T016",
         "MB-T021",
@@ -771,7 +770,7 @@
       "expected_outputs": "owned Advanced/PBR module; fixed-light image pairs",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p15/",
       "acceptance_boundary": "No exposure/camera changes to conceal mismatch; compare scope separately from source equality.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T021",
         "MB-T023",
@@ -819,7 +818,7 @@
       "expected_outputs": "export-recipe.json; source/export receipts; replay command",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p16/",
       "acceptance_boundary": "Root integrates first. No candidate promotion into runtime without the release checks and applicable scope.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T015",
         "MB-T019",
@@ -864,7 +863,7 @@
       "expected_outputs": "control-capability-map.json; diagnostic-steps.md; test-receipt.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p17/",
       "acceptance_boundary": "Current source/local checks now. Actual rendered/mobile/cache behavior remains separately measured; enclosure successor views require candidate.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T029",
         "MB-T012"
@@ -913,7 +912,7 @@
       "expected_outputs": "visitor-state-contract.json; restoration-matrix.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p18/",
       "acceptance_boundary": "Current V37 diagnostics independent of successor rig; meaningful new cavities remain conditional on assembly contracts.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T029",
         "MB-T030",
@@ -959,7 +958,7 @@
       "expected_outputs": "recovery-coverage.json; failure-injection-steps.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p19/",
       "acceptance_boundary": "Source/local results only until rendered evidence is captured; no new state falsely inherits historical pass.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T029"
       ],
@@ -997,7 +996,7 @@
       "expected_outputs": "keyboard-checklist.md; semantic-inventory.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p20/",
       "acceptance_boundary": "Agent evidence can identify defects; human keyboard completion requires an executed named browser/session.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [],
       "criterion_ids": [
         "A02",
@@ -1034,7 +1033,7 @@
       "expected_outputs": "screen-reader-checklist.md; announcement-contract.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p21/",
       "acceptance_boundary": "Requires actual assistive technology/user result; DOM or source inspection alone cannot pass.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [],
       "criterion_ids": [
         "A02",
@@ -1072,7 +1071,7 @@
       "expected_outputs": "device-test-matrix.json; touch-checklist.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p22/",
       "acceptance_boundary": "Physical device required; desktop emulation cannot close this criterion.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T030",
         "MB-T031",
@@ -1110,7 +1109,7 @@
       "expected_outputs": "theme-control-map.json; listening-keyboard-checklist.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p23/",
       "acceptance_boundary": "Audible full/loop listening and human keyboard remain unrun until actual observations; preserve synthesized-vocalist status and historical music.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T029"
       ],
@@ -1144,7 +1143,7 @@
       "expected_outputs": "video-scope-receipt.json; visitor-video-checklist.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p24/",
       "acceptance_boundary": "Current video is independent of new creative delivery; source inspection is distinct from observed playback.",
-      "status": "NOT_DISPATCHED",
+      "status": "PREPARATION_SLICE_VERIFIED",
       "implementation_dependencies": [
         "MB-T029"
       ],
@@ -1185,7 +1184,7 @@
       "expected_outputs": "performance-protocol.json; transfer-baseline.json; measurement-harness",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p25/",
       "acceptance_boundary": "Physical hardware/GPU required; headless/software renderer results cannot certify sustained hardware performance.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T029",
         "MB-T042"
@@ -1227,7 +1226,7 @@
       "expected_outputs": "motion-reference-ledger.json; assembly-proposal.json; mechanics-phase.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p26/",
       "acceptance_boundary": "No animation/fitment implementation or engineering certification. Later mechanics selection remains owner-gated after artistic acceptance.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T013",
         "MB-T062",
@@ -1285,7 +1284,7 @@
       "expected_outputs": "current-t03-t05-contract.json; observation-receipt.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p27/",
       "acceptance_boundary": "Do not implement absent controls, substitute static CG, or transfer a V37 result to successor motion. Full certification remains conditional.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T017",
         "MB-T057"
@@ -1332,7 +1331,7 @@
       "expected_outputs": "current-t06-t08-contract.json; acting-capability-map.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p28/",
       "acceptance_boundary": "Current source/local evidence only until timed rendered observation. New motion/rig implementation remains separately selected.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T053",
         "MB-T057",
@@ -1388,7 +1387,7 @@
       "expected_outputs": "current-t09-t12-contract.json; interruption-matrix.json",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p29/",
       "acceptance_boundary": "Current V37 read-only selection needs delivered baseline only; it never closes an unimplemented successor.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T057",
         "MB-T009",
@@ -1442,7 +1441,7 @@
       "expected_outputs": "replit-triage.json; recovery-preservation-plan.md",
       "owned_path": "assets/audit/delegation-series-2026-10-05/packets/mb-p30/",
       "acceptance_boundary": "No reset/force-push or private archive publication; actual remote inventory/API auth requires root-owned Replit Free browser/connection verification.",
-      "status": "NOT_DISPATCHED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "implementation_dependencies": [
         "MB-T013",
         "MB-T029"
@@ -1654,5 +1653,7 @@
       "current_scope": "Current delivered static CG, existing V37 or media only as applicable; diagnose available controls independently of future implementation.",
       "successor_scope": "New CG motion, inspection or mechanics only in its separately selected authorized phase; record actual candidate and do not transfer passes."
     }
-  }
+  },
+  "follow_on_tasks_path": "docs/delegation-series-2026-10-05/follow-on-tasks.json",
+  "model_capacity_policy": "Default small Luna at the packet effort. On a concrete capacity error, root may request an older small Luna at low effort for bounded recovery on the same active goal; preserve configuration/readback uncertainty. No automatic larger-model or budget escalation."
 }

@@ -1,11 +1,10 @@
 {
   "schema_version": 1,
-  "as_of_utc": "2026-10-05T22:02:42.365Z",
+  "as_of_utc": "2026-10-05T22:39:39.192Z",
   "source_base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
-  "status": "INITIAL_TRANCHE_IN_PROGRESS",
+  "status": "INITIAL_TRANCHE_VERIFIED_WITH_PENDING_CONTROL_THREAD",
   "owner_allocation": {
     "owner": "Direct owner instruction in architect thread, October 5, 2026",
-    "thread_id": "01a10a9d-f5c9-7ac2-833e-3350f038dfb0",
     "max_delegate_threads": 30,
     "max_active_delegates": 3,
     "per_delegate_tokens_ceiling": 2000000,
@@ -17,90 +16,187 @@
   },
   "accounting": {
     "metric": "native_goal",
-    "reported_delegate_tokens": 332056,
+    "reported_completed_or_budget_limited_delegate_tokens": 826386,
+    "pending_thread_last_observed_native_tokens": 35608,
+    "observed_delegate_lower_bound": 861994,
     "reported_total_is_partial": true,
+    "superintendent_native_usage_checkpoint": 434294,
+    "superintendent_checkpoint_utc": "2026-10-05T22:34:29Z",
     "provider_total_tokens": null,
     "hard_billing_cap": false
   },
   "unique_threads_spawned": 7,
   "maximum_threads": 30,
-  "active_worker_count": 3,
+  "active_worker_count": 1,
   "thread_records": [
     {
+      "thread_ordinal": 1,
       "packet_id": "MB-P03",
-      "model": "gpt-6-luna",
+      "configured_model": "gpt-6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": null,
+      "model_readback_limit": null,
       "reasoning_effort": "medium",
       "status": "WAITING_ON_APPROVAL",
       "native_goal_ceiling_tokens": 50000,
-      "reported_native_tokens": null,
+      "reported_cumulative_native_tokens": null,
+      "last_observed_native_tokens": 35608,
       "retry": false,
-      "prior_assignments": []
-    },
-    {
-      "packet_id": "MB-P01",
-      "model": "gpt-6-luna",
-      "reasoning_effort": "low",
-      "status": "BUDGET_LIMITED_INCOMPLETE",
-      "native_goal_ceiling_tokens": 30000,
-      "reported_native_tokens": 42969,
-      "retry": false,
-      "prior_assignments": []
-    },
-    {
-      "packet_id": "MB-P02",
-      "model": "gpt-6-luna",
-      "reasoning_effort": "low",
-      "status": "BUDGET_LIMITED_INCOMPLETE",
-      "native_goal_ceiling_tokens": 35000,
-      "reported_native_tokens": 43333,
-      "retry": false,
-      "prior_assignments": []
-    },
-    {
-      "packet_id": "MB-P17",
-      "model": "gpt-6-luna",
-      "reasoning_effort": "low",
-      "status": "RUNNING",
-      "native_goal_ceiling_tokens": 1500000,
-      "reported_native_tokens": 62680,
-      "retry": true,
-      "prior_assignments": [
+      "assignments": [
         {
-          "packet_id": "MB-P01",
-          "status": "VERIFIED",
-          "native_tokens_used": 62680
+          "packet_id": "MB-P03",
+          "status": "WAITING_ON_APPROVAL",
+          "native_tokens_used": null
         }
       ]
     },
     {
+      "thread_ordinal": 2,
+      "packet_id": "MB-P01",
+      "configured_model": "gpt-6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": null,
+      "model_readback_limit": null,
+      "reasoning_effort": "low",
+      "status": "BUDGET_LIMITED_INCOMPLETE",
+      "native_goal_ceiling_tokens": 30000,
+      "reported_cumulative_native_tokens": 42969,
+      "last_observed_native_tokens": null,
+      "retry": false,
+      "assignments": [
+        {
+          "packet_id": "MB-P01",
+          "status": "BUDGET_LIMITED_INCOMPLETE",
+          "native_tokens_used": 42969
+        }
+      ]
+    },
+    {
+      "thread_ordinal": 3,
       "packet_id": "MB-P02",
-      "model": "gpt-6-luna",
+      "configured_model": "gpt-6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": null,
+      "model_readback_limit": null,
+      "reasoning_effort": "low",
+      "status": "BUDGET_LIMITED_INCOMPLETE",
+      "native_goal_ceiling_tokens": 35000,
+      "reported_cumulative_native_tokens": 43333,
+      "last_observed_native_tokens": null,
+      "retry": false,
+      "assignments": [
+        {
+          "packet_id": "MB-P02",
+          "status": "BUDGET_LIMITED_INCOMPLETE",
+          "native_tokens_used": 43333
+        }
+      ]
+    },
+    {
+      "thread_ordinal": 4,
+      "packet_id": "MB-P17",
+      "configured_model": "gpt-6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": null,
+      "model_readback_limit": null,
       "reasoning_effort": "low",
       "status": "VERIFIED",
       "native_goal_ceiling_tokens": 1500000,
-      "reported_native_tokens": 96266,
+      "reported_cumulative_native_tokens": 111353,
+      "last_observed_native_tokens": null,
       "retry": true,
-      "prior_assignments": []
+      "assignments": [
+        {
+          "packet_id": "MB-P01",
+          "status": "VERIFIED",
+          "native_tokens_used": 62680
+        },
+        {
+          "packet_id": "MB-P17",
+          "status": "VERIFIED",
+          "native_tokens_used": 48673
+        }
+      ]
     },
     {
-      "packet_id": "MB-P04",
-      "model": "gpt-6-luna",
-      "reasoning_effort": "medium",
-      "status": "RUNNING",
-      "native_goal_ceiling_tokens": 1500000,
-      "reported_native_tokens": null,
-      "retry": false,
-      "prior_assignments": []
-    },
-    {
-      "packet_id": "MB-P05",
-      "model": "gpt-6-luna",
-      "reasoning_effort": "medium",
+      "thread_ordinal": 5,
+      "packet_id": "MB-P19",
+      "configured_model": "gpt-6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": null,
+      "model_readback_limit": null,
+      "reasoning_effort": "low",
       "status": "VERIFIED",
       "native_goal_ceiling_tokens": 1500000,
-      "reported_native_tokens": 86808,
+      "reported_cumulative_native_tokens": 151023,
+      "last_observed_native_tokens": null,
+      "retry": true,
+      "assignments": [
+        {
+          "packet_id": "MB-P02",
+          "status": "VERIFIED",
+          "native_tokens_used": 96266
+        },
+        {
+          "packet_id": "MB-P19",
+          "status": "VERIFIED",
+          "native_tokens_used": 54757
+        }
+      ]
+    },
+    {
+      "thread_ordinal": 6,
+      "packet_id": "MB-P23",
+      "configured_model": "gpt-5.6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": "gpt-5.6-luna",
+      "model_readback_limit": "Recovery override sent through root app tool; worker self-report disagrees about whether a switch occurred. Per-sampling model identity is not exposed by read_thread.",
+      "reasoning_effort": "low",
+      "status": "VERIFIED",
+      "native_goal_ceiling_tokens": 1500000,
+      "reported_cumulative_native_tokens": 252154,
+      "last_observed_native_tokens": null,
       "retry": false,
-      "prior_assignments": []
+      "assignments": [
+        {
+          "packet_id": "MB-P04",
+          "status": "VERIFIED",
+          "native_tokens_used": 112556,
+          "reasoning_effort": "medium"
+        },
+        {
+          "packet_id": "MB-P23",
+          "status": "VERIFIED",
+          "native_tokens_used": 139598
+        }
+      ]
+    },
+    {
+      "thread_ordinal": 7,
+      "packet_id": "MB-P24",
+      "configured_model": "gpt-6-luna",
+      "initial_model": "gpt-6-luna",
+      "configured_recovery_model": null,
+      "model_readback_limit": null,
+      "reasoning_effort": "low",
+      "status": "VERIFIED",
+      "native_goal_ceiling_tokens": 1500000,
+      "reported_cumulative_native_tokens": 225554,
+      "last_observed_native_tokens": null,
+      "retry": false,
+      "assignments": [
+        {
+          "packet_id": "MB-P05",
+          "status": "VERIFIED",
+          "native_tokens_used": 86808,
+          "reasoning_effort": "medium"
+        },
+        {
+          "packet_id": "MB-P24",
+          "status": "VERIFIED",
+          "native_tokens_used": 138746
+        }
+      ]
     }
   ],
   "packet_records": [
@@ -139,7 +235,7 @@
       "source_task_ids": [
         "MB-T018"
       ],
-      "status": "IN_PROGRESS",
+      "status": "VERIFIED_PREPARATION_SLICE",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -158,7 +254,7 @@
         "MB-T002",
         "MB-T003"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -168,7 +264,7 @@
         "MB-T004",
         "MB-T005"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -179,7 +275,7 @@
         "MB-T008",
         "MB-T021"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -190,7 +286,7 @@
         "MB-T010",
         "MB-T016"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -199,7 +295,7 @@
       "source_task_ids": [
         "MB-T011"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -209,7 +305,7 @@
         "MB-T014",
         "MB-T019"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -220,7 +316,7 @@
         "MB-T012",
         "MB-T020"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -230,7 +326,7 @@
         "MB-T022",
         "MB-T025"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -240,7 +336,7 @@
         "MB-T023",
         "MB-T027"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -250,7 +346,7 @@
         "MB-T024",
         "MB-T026"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -259,7 +355,7 @@
       "source_task_ids": [
         "MB-T028"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -271,7 +367,7 @@
         "MB-T032",
         "MB-T037"
       ],
-      "status": "IN_PROGRESS",
+      "status": "VERIFIED_PREPARATION_SLICE",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -282,7 +378,7 @@
         "MB-T034",
         "MB-T058"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -292,7 +388,7 @@
         "MB-T035",
         "MB-T039"
       ],
-      "status": "QUEUED_SELECTED",
+      "status": "VERIFIED_PREPARATION_SLICE",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -301,7 +397,7 @@
       "source_task_ids": [
         "MB-T040"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -310,7 +406,7 @@
       "source_task_ids": [
         "MB-T041"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -319,7 +415,7 @@
       "source_task_ids": [
         "MB-T042"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -328,7 +424,7 @@
       "source_task_ids": [
         "MB-T043"
       ],
-      "status": "QUEUED_SELECTED",
+      "status": "VERIFIED_PREPARATION_SLICE",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -337,7 +433,7 @@
       "source_task_ids": [
         "MB-T044"
       ],
-      "status": "QUEUED_SELECTED",
+      "status": "VERIFIED_PREPARATION_SLICE",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -347,7 +443,7 @@
         "MB-T045",
         "MB-T046"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -359,7 +455,7 @@
         "MB-T059",
         "MB-T060"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -370,7 +466,7 @@
         "MB-T048",
         "MB-T049"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -381,7 +477,7 @@
         "MB-T051",
         "MB-T052"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -393,7 +489,7 @@
         "MB-T055",
         "MB-T056"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     },
     {
@@ -402,24 +498,37 @@
       "source_task_ids": [
         "MB-T061"
       ],
-      "status": "QUEUED_GATED",
+      "status": "QUEUED_WITH_EXPLICIT_GATES",
       "product_criteria_closed_by_worker": false
     }
   ],
   "root_control_completion": {
     "packet_id": "MB-P03",
     "synthetic_cases": 15,
-    "actual_threads_stopped": 0,
+    "actual_owned_fixture_processes_stopped": 1,
+    "actual_app_threads_interrupted": 0,
     "actual_control_thread_completion": false,
-    "scope": "Architect completed the executable decision drill; initial delegate remains pending outside-root write approval."
+    "scope": "Root completed and reviewed the decision drill plus exact owned PID/nonce/command process-stop fixture. Initial delegate still waits on its outside-root write approval; no exposed app interrupt endpoint or billing enforcement is claimed."
   },
   "mechanical_checks": {
     "program_source_hash": "PASS",
     "task_criterion_finding_scenario_coverage": "PASS",
-    "dispatch_safeguards": "9tests PASS",
-    "full_node_suite": "88tests PASS",
+    "dispatch_safeguards": "10 tests PASS",
+    "full_node_suite": "89 tests PASS; focused worker suites overlap this count",
     "preflight_root_rehash": "19/19 PASS",
-    "media_custody": "768/768 PASS in isolated worker checkout"
+    "media_custody": "768/768 PASS in isolated worker checkout",
+    "theme_root_rehash": "3/3 PASS",
+    "strict_normal_replay": "Retained failure reproduced; unchanged 2e-5 threshold; fresh native evaluation NOT RUN",
+    "native_runtime_probe": "Blender 5.2.1 LTS loaded one retained source read-only; source hash unchanged",
+    "npm_ci": "PASS",
+    "npm_build": "PASS; local modified tree at 68a0e418; 154 payloads plus release manifest",
+    "theme_publication_presentation_validators": "PASS",
+    "local_browser_video_label": "PASS in actual local Folio accessibility state; no human screen-reader acceptance"
+  },
+  "integrated_runtime_fix": {
+    "path": "src/folio-main.js",
+    "behavior": "First Choice video now has an explicit source-compatible accessible name and retains its existing description.",
+    "human_media_acceptance": "NOT RUN"
   },
   "limits": {
     "source_likeness": "UNMET",
@@ -431,5 +540,6 @@
     "replit": "Free development preview only",
     "creative_license": "All rights reserved; code MIT"
   },
-  "next_action": "Root integrates remaining selected source/normal/media diagnostics; gated visual/human/device/remote/mechanics packets remain explicit future duties."
+  "remote_release_status": "PENDING exact final PR head CI, merge, deployment and remote readbacks at this receipt time",
+  "next_action": "Review one bounded next slice against program prerequisites and follow-on-tasks.json. Current V37/browser/human work remains independent of successor rig. Verify any future normal repair or visual change freshly before acceptance."
 }

@@ -52,7 +52,7 @@ export function status(program, state) {
   const active = threads.filter(t => activeStates.has(t.status));
   const verified = new Set([...threads.filter(t => t.status === 'VERIFIED').map(t => t.packet_id),
     ...(state.packet_acceptances??[]).filter(a=>a.status==='VERIFIED_PREP_SLICE').map(a=>a.packet_id)]);
-  const already = new Set(threads.filter(t => !terminalStates.has(t.status) || ['VERIFIED','DELIVERED'].includes(t.status)).map(t => t.packet_id));
+  const already = new Set([...verified, ...threads.filter(t => !terminalStates.has(t.status) || ['VERIFIED','DELIVERED'].includes(t.status)).map(t => t.packet_id)]);
   const enabled = new Set([...program.initial_execution_tranche, ...(state.root_selected_packet_ids ?? [])]);
   const ready = program.packets.filter(p => enabled.has(p.packet_id) && !already.has(p.packet_id) && p.dispatch_dependencies.every(d => verified.has(d)));
   return { thread_count: threads.length, active_count: active.length, free_worker_slots: Math.max(0, 3-active.length),

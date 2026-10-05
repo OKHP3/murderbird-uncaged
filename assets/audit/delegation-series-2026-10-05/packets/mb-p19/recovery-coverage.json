@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "packet_id": "MB-P19",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "source_tasks": [
+    "MB-T035",
+    "MB-T039"
+  ],
+  "scope": "Source and local unit coverage plus bounded rendered-browser failure procedure; no browser execution or rendered claim.",
+  "coverage": [
+    {
+      "area": "illustrated fallback image lifecycle",
+      "source_paths": [
+        "src/scene/fallback.js",
+        "tests/recovery-lifecycle.test.mjs"
+      ],
+      "local_tests": {
+        "status": "PASS",
+        "command": "node --test tests/recovery-lifecycle.test.mjs tests/presence-state.test.mjs tests/encounter-state.test.mjs",
+        "suite_total_pass": 25,
+        "failed": 0,
+        "covered": [
+          "failed preview hidden and unavailable message persists across fallback updates",
+          "changing era replaces stale failure state and subsequent image load restores preview"
+        ]
+      },
+      "browser": {
+        "status": "NOT RUN",
+        "note": "Rendered image failure and recovery are described in failure-injection-steps.md."
+      }
+    },
+    {
+      "area": "presence encounter lifecycle and recovery",
+      "source_paths": [
+        "src/scene/presence-state.js",
+        "tests/presence-state.test.mjs"
+      ],
+      "local_tests": {
+        "status": "PASS",
+        "suite_included": true,
+        "covered": [
+          "autonomous watch/pace/boundary/cage-test/recover/settle sequence",
+          "visitor reach, retreat before and after commitment, inspection/pause interactions",
+          "reduced motion avoids travel/strike and lets an active step ground",
+          "era switch, invalid/large delta sanitation, deterministic route plan variation"
+        ]
+      },
+      "browser": {
+        "status": "NOT RUN",
+        "note": "No live rendered or device behavior inferred from state-machine tests."
+      }
+    },
+    {
+      "area": "encounter response and cooldown",
+      "source_paths": [
+        "src/scene/encounter-state.js",
+        "tests/encounter-state.test.mjs"
+      ],
+      "local_tests": {
+        "status": "PASS",
+        "suite_included": true,
+        "covered": [
+          "complete response returns to idle after cooldown",
+          "duplicate reach rejection, interruption, pause, era change, reduced-motion finite phases",
+          "input sanitation, snapshots and change notification"
+        ]
+      },
+      "browser": {
+        "status": "NOT RUN"
+      }
+    },
+    {
+      "area": "model startup failure and retry",
+      "source_paths": [
+        "src/main.js",
+        "src/scene/exhibit.js",
+        "scripts/verify-recovery-v4.mjs"
+      ],
+      "source_observation": "loadExhibit catches loading/WebGL errors, installs illustrated view, updates label and disables WebGL controls; Retry 3D removes the forced-view query and calls loadExhibit again. Context loss switches through the same fallback route.",
+      "local_tests": {
+        "status": "NOT COVERED_BY_THREE_REQUESTED_UNIT_SUITES"
+      },
+      "browser": {
+        "status": "NOT RUN",
+        "existing_verifier": "scripts/verify-recovery-v4.mjs",
+        "coverage": "Two failed GLB requests, illustrated fallback, two failed retries, then successful WebGL retry and restored controls."
+      }
+    },
+    {
+      "area": "fallback artwork and supporting information",
+      "source_paths": [
+        "src/scene/fallback.js",
+        "scripts/verify-recovery-v4.mjs"
+      ],
+      "source_observation": "Image error hides image and retains an unavailable message; captions/details and inspection remain available.",
+      "local_tests": {
+        "status": "PARTIAL",
+        "evidence": "recovery-lifecycle.test.mjs covers image error persistence and later-era image load, not actual DOM/render behavior."
+      },
+      "browser": {
+        "status": "NOT RUN",
+        "existing_verifier": "scripts/verify-recovery-v4.mjs",
+        "coverage": "Force GLB and Maker preview failure; inspect unavailable label, open assembly section, adjust separation, and navigate to the folio."
+      }
+    },
+    {
+      "area": "visibility and calm motion",
+      "source_paths": [
+        "src/main.js",
+        "src/scene/exhibit.js",
+        "src/scene/presence-state.js",
+        "tests/presence-state.test.mjs",
+        "tests/encounter-state.test.mjs"
+      ],
+      "source_observation": "Reduced-motion media preference initializes the UI and state, preference changes update the state, and the checkbox is independently handled. Main animation loop skips frame/state updates while document.hidden and continues scheduling requestAnimationFrame; frame delta is capped at 0.1 seconds on return.",
+      "local_tests": {
+        "status": "PARTIAL",
+        "evidence": "State-machine reduced-motion transitions pass; requested suites do not exercise browser visibility lifecycle or rendered interpolation."
+      },
+      "browser": {
+        "status": "NOT RUN",
+        "note": "Need rendered evidence for tab hide/return, OS preference changes, and UI checkbox behavior."
+      }
+    },
+    {
+      "area": "media and WebGL context recovery",
+      "source_paths": [
+        "scripts/verify-recovery-v4.mjs",
+        "src/scene/presence-exhibit.js"
+      ],
+      "source_observation": "Existing verifier injects 503 audio failure, blocked WebGL context creation, and two WEBGL_lose_context cycles; context-loss handler enters fallback.",
+      "local_tests": {
+        "status": "NOT COVERED_BY_THREE_REQUESTED_UNIT_SUITES"
+      },
+      "browser": {
+        "status": "NOT RUN",
+        "existing_verifier": "scripts/verify-recovery-v4.mjs"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "recovery lifecycle, presence state, encounter state Node tests",
+      "status": "PASS",
+      "command": "node --test tests/recovery-lifecycle.test.mjs tests/presence-state.test.mjs tests/encounter-state.test.mjs",
+      "result": "25 passed, 0 failed, 0 skipped; duration 331.9 ms"
+    },
+    {
+      "name": "source path inventory",
+      "status": "PASS",
+      "evidence": "Current source handlers and existing browser verifier read in this checkout."
+    },
+    {
+      "name": "rendered browser failure injection",
+      "status": "NOT RUN",
+      "reason": "This assignment prohibits browser interaction; existing browser verifiers also write to audit paths outside the assigned packet unless redirected."
+    },
+    {
+      "name": "visibility lifecycle in browser",
+      "status": "NOT RUN",
+      "reason": "No rendered browser/device evidence captured."
+    }
+  ],
+  "limits": [
+    "Unit tests cover fallback image state and encounter/presence state machines, not WebGL rendering or browser lifecycle.",
+    "No independent browser, mobile, screen-reader, audio-device, or deployment evidence is claimed.",
+    "The main animation callback continues scheduling while document.hidden; the frame state update is skipped. Behavior after browser suspension needs rendered verification."
+  ]
+}
