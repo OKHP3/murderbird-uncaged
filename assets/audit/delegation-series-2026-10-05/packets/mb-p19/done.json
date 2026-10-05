@@ -1,0 +1,31 @@
+{
+  "packet_id": "MB-P19",
+  "status": "COMPLETE",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "SOURCE_AND_LOCAL_COVERAGE_PASS_BROWSER_FAILURES_NOT_RUN",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/recovery-coverage.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/failure-injection-steps.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/report.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/result.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/done.json"
+  ],
+  "checks": {
+    "requested_node_suites": "PASS 25 passed, 0 failed, 0 skipped",
+    "coverage_and_result_json": "PASS parse",
+    "rendered_browser_failure_steps": "DOCUMENTED_NOT_RUN",
+    "visibility_rendered_check": "NOT RUN"
+  },
+  "remaining_product_gates": [
+    "Run bounded browser failure steps and retain rendered receipts in authorized packet scope",
+    "Verify hidden-tab pause/resume and preference changes in rendered browser",
+    "No device, human or deployment acceptance is established"
+  ],
+  "usage": {
+    "native_goal_tokens_used": 54757,
+    "native_goal_token_budget": 1500000,
+    "native_goal_elapsed_seconds": 191,
+    "provider_total_tokens": null
+  },
+  "completionBudgetReport": "Goal achieved. tokensUsed 54757 of 1500000; elapsed 191 seconds. provider_total_tokens unavailable/null."
+}

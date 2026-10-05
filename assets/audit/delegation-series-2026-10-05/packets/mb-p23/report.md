@@ -1,0 +1,9 @@
+# MB-P23 — Iron Verdict v3 playback review
+
+**Outcome: source and asset custody verified; human playback and keyboard acceptance remain NOT RUN.** The release manifest identifies owner-accepted `production-v3` as an original locally generated synthesized sung performance using ACE-Step 1.5. It is not a human vocalist recording. Deployment verification is separate. The existing GarageBand/instrumental material and optional soundscape retain distinct historical statuses; this packet did not inspect or change them.
+
+All three approved runtime files matched the manifest's size and SHA-256: the 147.75-second full-song MP3, the 145.384625-second lossless repeating FLAC, and the 1,181-byte readable lyric text. The lyrics were directly read as text. Source code mounts the player in the exhibit and exposes Full song/Seamless loop, Play/Pause/Cancel, Restart, Mute, a labeled 0–100 volume slider, playback status, and a visible Read the lyrics link. Inspection also found abortable loading, fetch/decode error messaging with retry, and loop-source configuration.
+
+These are source observations only. Audible full-track/loop-boundary listening, real browser and keyboard operation, mute/volume behavior, and failure/cancel/retry behavior remain NOT RUN. `scripts/verify-theme-release.mjs` was not run because it requires `dist/`, which is absent; no build was performed. See the control map, listening/keyboard checklist, and result record for evidence and exact limits.
+
+During closeout, the native goal readback showed `BLOCKED` after initially reporting `ACTIVE`; the directed recovery continued this same goal. A request to switch to an older small Luna model at low effort could not be applied because this thread has no self-model-switch control; no child agent was started. The bounded review continued on the current model.

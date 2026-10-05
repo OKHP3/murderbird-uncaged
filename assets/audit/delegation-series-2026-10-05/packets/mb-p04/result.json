@@ -1,0 +1,72 @@
+{
+  "packet_id": "MB-P04",
+  "task_id": "MB-T018",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "REPRODUCED_RETAINED_STRICT_NORMAL_FAILURE_CAUSE_UNKNOWN",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/bounded-replay.py",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/normal-diagnosis.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/reproduction.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/report.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/result.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/done.json"
+  ],
+  "checks": [
+    {
+      "name": "bounded retained-export replay",
+      "status": "PASS",
+      "evidence": "Bundled Python execution of bounded-replay.py: all three current GLB hashes matched retained checker receipt; all prior/current mesh-node transforms asserted identity; retained strict failure records and three crown associations summarized at unchanged 2e-5 threshold."
+    },
+    {
+      "name": "packet structure and report bound",
+      "status": "PASS",
+      "evidence": "Parsed normal-diagnosis.json and result.json; confirmed threshold 2e-5, packet ID/base SHA, and report.md at 279 words. done.json intentionally not yet written."
+    },
+    {
+      "name": "fresh native Blender/export execution",
+      "status": "NOT RUN",
+      "evidence": "This packet only replays retained native/export correspondence records and retained exports; no native source evaluation or exporter run."
+    },
+    {
+      "name": "application build / dist review",
+      "status": "NOT RUN",
+      "evidence": "Artifact-only diagnosis; no application or runtime files changed."
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Strict normal parity fails at 2e-5 L2; maximum 0.008557185882560697 L2 / 0.49029213149792866 degrees is associated with CGRF02 left forward toe 2 recessed joint shoulder 1.",
+      "tier": "CONFIRMED_RETAINED_RECEIPT_AND_REPLAY",
+      "evidence": "assets/audit/cg-recursive-three-loop01/loop03/independent-proof01/export-replay/checker-results.json and normal-diagnosis.json"
+    },
+    {
+      "claim": "The retained worst triangle has exact position correspondence and passing UV correspondence, while its corner normals differ.",
+      "tier": "CONFIRMED_RETAINED_RECEIPT",
+      "evidence": "normal-diagnosis.json worst_failure native/GLB corner tuples"
+    },
+    {
+      "claim": "Each era crown has a separate strict-normal failure; prior/final crown GLB association matched all current triangles and stored normals component-exactly.",
+      "tier": "CONFIRMED_REPLAY",
+      "evidence": "normal-diagnosis.json crown_normal_failures and crown_prior_final_associations"
+    },
+    {
+      "claim": "Producer-side cause, native transform history, and exporter behavior are unknown.",
+      "tier": "UNKNOWN",
+      "evidence": "No fresh Blender/native evaluation or exporter execution"
+    }
+  ],
+  "remaining_product_gates": {
+    "strict_normal_parity": "FAIL at unchanged 2e-5 L2",
+    "source_likeness": "UNMET",
+    "owner_artistic_acceptance": "PENDING",
+    "prd_scoring": "NOT SCORED",
+    "animation_or_mechanics_phase": "NOT AUTHORIZED by this packet"
+  },
+  "usage": {
+    "native_goal_tokens_used_snapshot": 112556,
+    "native_goal_token_budget": 1500000,
+    "native_goal_time_used_seconds_snapshot": 497,
+    "provider_total_tokens": null,
+    "note": "Provider total is unavailable; native goal count is not a billing guarantee."
+  }
+}
