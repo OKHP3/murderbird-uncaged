@@ -1,5 +1,11 @@
 # MurderBird architect: next goals and unfinished work
 
+## October 5 current continuation
+
+The [fresh five-pass report](evaluations/windows-five-pass-review-2026-10-05.md) and [current task ledger](../assets/audit/windows-production-closeout-2026-10-05/task-ledger.json) govern the corrected operational routing. The reviewed delivery is `4c5a1055d2be6bdd895aa4cebac342147f8930e9`; all 62 IDs and 52 criteria remain stable. Current V37 T03–T12 observation selectors depend only on verified delivery and a supported-state inventory, and never close successor motion. The original October 4 frozen ledger/reviews remain preserved. Modeling dispatch awaits scoped selection and MB-T062 demonstration; delivery/review completion grants no new allocation.
+
+## October 4 reviewed roadmap (historical context)
+
 This roadmap follows five successive analytical Equilibrium Review passes of production candidate `109e9e7a405ada1d9a466f1225bde4662a2dc777`. It retains the prior handoff and all 52 PRD criteria, F01–F10 and 18 scenario procedures. The review approves the roadmap with limits, not artistic mission completion. **Source likeness: UNMET. Owner artistic acceptance: PENDING.**
 
 There are 62 tracked records: one closed delivery, two current passing maintenance safeguards, and 59 remaining, partial, unverified or conditional records. NOT RUN indicates missing evidence rather than an observed failure. Proposed task caps are not automatic execution authorization. The next implementation series should target a connected head while preserving useful prior breast, underlap, toe and restrained crown gains.
@@ -582,7 +588,7 @@ See the five-pass machine record, raw review-passes bundles, exact surface recei
 
 **P2 · current scoped checks pass future maintenance**. Maintain verified current source custody, import/inventory and release allowlist on a changed successor; no current observed failure is asserted. Broader future coverage remains conditional.
 
-**Closure evidence:** Actual approved dist inventory/asset hashes, ignored private sessions/source archives, historical-only validator callers and safe unexpected-output fixture when validator scope changes; no permanent28/134 count replacement.
+**Closure evidence:** Actual approved dist inventory/asset hashes, ignored private sessions/source archives, historical-only validator callers and safe unexpected-output fixture when validator scope changes; no permanent 28/134 count replacement. Current validation assumes reviewed public inputs: ordinary public files are admitted automatically unless banned. Before new ordinary public admission, document explicit approval or strengthen the input manifest and isolated negative fixture; no current leak is observed in the verified 154-payload inventory.
 
 **Traceability:** PRD D02, D05; findings F10. **Responsible role:** Architect-selected scoped worker + independent QC.
 
@@ -691,7 +697,7 @@ See the five-pass machine record, raw review-passes bundles, exact surface recei
 
 **P2 · not run required evidence**. Keep owner-accepted synthesized Iron Verdict v3 distinct from legacy instrumentals while proving optional explicit playback and loop/control behavior.
 
-**Closure evidence:** Actual audible full/loop listening, seam, pause/restart/mute/volume/track-switch/media-failure checks; no autoplay/competing soundscape or human-vocalist claim.
+**Closure evidence:** Actual audible full/loop listening, seam, pause/restart/mute/volume/track-switch/media-failure checks; no autoplay/competing soundscape or human-vocalist claim. Open and read the approved-version lyrics through the visitor link using a keyboard, verify source/version identity, and record load-failure/alternative behavior. Lyrics availability alone does not prove audible playback or loop quality.
 
 **Traceability:** PRD A04, D02; findings none assigned. **Responsible role:** Architect-selected scoped worker + independent QC.
 
@@ -709,11 +715,18 @@ See the five-pass machine record, raw review-passes bundles, exact surface recei
 
 **Traceability:** PRD A05, V12, V14, D04; findings none assigned. **Responsible role:** Architect-selected scoped worker + independent QC.
 
-**Preflight dependencies:** MB-T017, MB-T029.
+**Current observation dependencies:** MB-T029. Linked future-task prerequisites govern later implementation and full closure only.
 
 **Preservation:** Preserve all three retained partial gains, original/pinned source binaries, native/history/receipts and approved stance anchors; changes only within a newly authorized owned scope.
 
 **Execution boundary:** authorized access media performance evidence scope. Proposed suballocation ceiling: 30 minutes / 3000 generated output tokens. Provider-total suballocation must be selected and validated within the applicable series envelope before dispatch; maxima are not added together.
+
+**Current slice:** Existing approved folio/video playback, seek, silent state, poster, description, controls and source/rights checks at the exact delivered release can proceed independently of future motion-reference work.
+
+**Later slice:** New era motion-reference interpretation depends on MB-T017 only when that separate scope is selected; it cannot block current media checks.
+
+**Later dependencies:** MB-T017. These do not block the current observational slice.
+
 
 ### MB-T045 — Measure sustained hardware-GPU performance
 
@@ -873,17 +886,24 @@ See the five-pass machine record, raw review-passes bundles, exact surface recei
 
 ### MB-T056 — Complete interruption and motion-continuity matrix
 
-**P2 · conditional phase not run**. Enumerate era×supported-action×pause/reduced-motion/inspection/reset transitions and source-frame continuity, preserving valid support and avoiding queued stale attacks.
+**P2 · current V37 diagnostics NOT RUN; successor regression conditional**. Enumerate era×supported-action×pause/reduced-motion/inspection/reset transitions and source-frame continuity, preserving valid support and avoiding queued stale attacks.
 
 **Closure evidence:** Explicit tested/untested matrix, rapid era and repeated inputs, uncut action/transition clips with timecodes, no morphing/floating/stretching or permanent lock; future action tests append to matrix.
 
 **Traceability:** PRD B10, V12, A01, I06; findings F07, F08. **Responsible role:** Architect-selected scoped worker + independent QC.
 
-**Preflight dependencies:** MB-T017, MB-T057.
+**Current observation dependencies:** MB-T029. Linked future-task prerequisites govern later implementation and full closure only.
 
 **Preservation:** Preserve all three retained partial gains, original/pinned source binaries, native/history/receipts and approved stance anchors; changes only within a newly authorized owned scope.
 
-**Execution boundary:** conditional later animation requires authorization. Proposed suballocation ceiling: 45 minutes / 4000 generated output tokens. Provider-total suballocation must be selected and validated within the applicable series envelope before dispatch; maxima are not added together.
+**Execution boundary:** Current supported V37 read-only observation is available independently; new successor animation requires a separately selected authorized scope. Proposed suballocation ceiling: 45 minutes / 4000 generated output tokens. Provider-total suballocation must be selected and validated within the applicable series envelope before dispatch; maxima are not added together.
+
+**Current slice:** Read-only T12 diagnosis of supported existing V37 encounter, era change, pause/reduced motion, inspection, reset, jump and thrust states. Bind uncut clips/matrix to V37 and exact release; record missing controls/failures without claiming a retained CG rig exists.
+
+**Later slice:** Successor action/transition regression requires separately authorized motion scope plus MB-T017 reference coverage and MB-T057 assembly contracts. V37 passes cannot close successor motion.
+
+**Later dependencies:** MB-T017, MB-T057. These do not block the current observational slice.
+
 
 ## Conditional later assembly, inspection and mechanics
 
@@ -947,11 +967,11 @@ See the five-pass machine record, raw review-passes bundles, exact surface recei
 
 ## Superintendent controls and preserved-work triage
 
-### MB-T061 — Triage fifteen preserved Replit-only commits and unique asset
+### MB-T061 — Triage preserved Replit-only commits and unique asset
 
 **P1 · preserved not reviewed for current candidate**. Determine whether any preserved Replit-only contribution is a useful missing improvement to the current source-aligned CG or existing V37, rather than assuming branch age or divergence makes it disposable.
 
-**Closure evidence:** Exact15-commit/path list; per-path overlap with retained04/V37, unique binary hashes and source-matched benefit/risk decisions. Propose selective imports only for independently useful gains; preserve all main-history bundle and unique widened-exterior bytes. Missing old worktree object coverage remains unknown.
+**Closure evidence:** Exact 15-commit/path list; per-path overlap with retained04/V37, unique binary hashes and source-matched benefit/risk decisions. Propose selective imports only for independently useful gains; preserve all main-history bundle and unique widened-exterior bytes. Missing old worktree object coverage remains unknown. Also disposition the two later configuration commits separately. Record all-ref recovery coverage, parent-versus-isolated-preview identity and connector authorization; no blanket merge/reset or inference of benefit from a commit subject.
 
 **Traceability:** PRD D02, D05, C10; findings none assigned. **Responsible role:** Repository/source-custody worker + independent CG/runtime QC.
 
@@ -960,6 +980,9 @@ See the five-pass machine record, raw review-passes bundles, exact surface recei
 **Preservation:** No reset, prune, rewrite, blanket merge or archive deletion; no substitution of unreviewed legacy geometry. Stop after20 minutes with a partial exact-ID inventory if necessary.
 
 **Execution boundary:** read only preserved work triage before any import. Proposed suballocation ceiling: 20 minutes / 3000 generated output tokens. Provider-total suballocation must be selected and validated within the applicable series envelope before dispatch; maxima are not added together.
+
+**October 5 inventory:** 17 parent-only commits at `0d7366d8` = original fifteen plus two later configuration commits. Preserve and disposition both groups separately. All-ref recovery gaps, unique assets and API reauthorization remain unresolved; the isolated preview is a separate checkout.
+
 
 ### MB-T062 — Make worker caps and visible-gain stops operational
 

@@ -1,0 +1,66 @@
+{
+  "role": "evidence",
+  "pass": "PASS01",
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "decision": "approve-with-limits",
+  "decision_scope": "Authority, chronology and supplied delivery identity; no likeness, PRD attainment or dispatch approval.",
+  "checks_performed": ["Ten frozen source SHA-256 values match", "Local HEAD equals frozen revision; working tree clean", "Local commit chronology and documentary ledgers inspected"],
+  "findings": [
+    {
+      "claim_id": "EV-AUTH-001",
+      "claim": "Current appearance-first authority supersedes historical engineering-first sequencing; no new modeling allocation follows this review.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["goal.md#October-4-owner-authorization", "goal.md#Operative-mandate", "docs/murderbird-evaluation-prd.md#Authority-source-hierarchy-and-conflict-resolution"],
+      "consequence": "Historical milestone ceilings or mechanics gates could incorrectly govern new work.",
+      "next_test": "Before dispatch, freeze the latest scoped owner direction and complete MB-T062; review approval cannot substitute."
+    },
+    {
+      "claim_id": "EV-CHRON-002",
+      "claim": "Loop03 no-promotion limits were true for that run and are superseded only for the subsequently authorized retained production delivery.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["assets/audit/cg-recursive-three-loop01/loop03/handoff.json#/known_limits/4", "docs/handoffs/cg-production-release-2026-10-04-01.md#Five-pass-closeout-addendum", "goal.md#Current-production-and-next-goal-review"],
+      "consequence": "Treating preservation snapshots as current failures would reopen completed delivery or erase historical boundaries.",
+      "next_test": "Keep separate dated run, candidate-delivery and documentation-release receipts; use the supplied frozen receipt for current identity."
+    },
+    {
+      "claim_id": "EV-DELIV-003",
+      "claim": "The supplied root receipt supports exact current GitHub/Pages, isolated Replit preview and Notion delivery at 4c5a1055; it does not establish parent Replit convergence or connector authorization.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": [".local/production-closeout-20261005/equilibrium/freeze.json#/surface_receipt"],
+      "consequence": "An unrestricted three-surface sync claim could hide 17 preserved parent-only commits and unauthorized connectors.",
+      "next_test": "After restart or changed revision, recheck actual cg.html, served manifest and visible candidate; independently triage parent work and reauthenticate connectors."
+    },
+    {
+      "claim_id": "EV-ACCEPT-004",
+      "claim": "Delivery and useful retained gains coexist with likeness UNMET, owner acceptance PENDING, strict normal FAIL and zero retained GLB skins/animations.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["assets/audit/cg-recursive-three-loop01/loop03/handoff.json#/delivery", "assets/audit/cg-recursive-three-loop01/architect-assessment-final.md", "docs/cg-architect-next-goals.md:3"],
+      "consequence": "Static publication or analytical agreement could be mistaken for visual, motion or engineering completion.",
+      "next_test": "Matched scoped visual packet and exact owner decision for likeness; targeted unchanged-threshold diagnosis for normal failure."
+    },
+    {
+      "claim_id": "EV-CHRON-005",
+      "claim": "The four-pass annotation in the frozen final backlog is intentional PASS05 input chronology; the separate completed review records five analytical passes.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["assets/audit/cg-production-delivery01/architect-backlog-final01.json#/formal_review_passes_completed_by_this_draft", "assets/audit/cg-production-delivery01/five-pass-review01.json#/completed_passes", "docs/handoffs/cg-architect-closeout-2026-10-04.md#documentation-release-addendum"],
+      "consequence": "Rewriting frozen annotations would obscure reviewed-version custody.",
+      "next_test": "Read completed review and frozen input together; retain their distinct hashes."
+    },
+    {
+      "claim_id": "EV-DOC-006",
+      "claim": "Historical current-study, deployed-baseline and authorization headings remain potentially misleading in goal.md; dated supersession text resolves them, while Windows pending-release text is superseded by the supplied freeze receipt.",
+      "claim_type": "interpretation",
+      "status": "provisional",
+      "evidence_ids": ["goal.md:28", "goal.md:97", "goal.md:120", "docs/handoffs/windows-production-closeout-2026-10-05.md#Next-action-and-limits", ".local/production-closeout-20261005/equilibrium/freeze.json#/surface_receipt"],
+      "consequence": "A partial reader could use expired authority or a stale SHA.",
+      "next_test": "Require continuation readers to identify current release, active authority and expired milestone scope from the combined record; append clear historical labels if they cannot."
+    }
+  ],
+  "limits": ["Fresh remote receipt is supplied root evidence, not my rerun", "No protected holdout or fresh owner review", "Shared model/context and repository sources limit independence", "No native, browser, numerical PRD or performance replay", "Pass 01 only; later coverage and task-dependency passes remain outstanding"]
+}

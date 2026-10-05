@@ -1,0 +1,60 @@
+{
+  "role": "evidence",
+  "pass": "PASS04",
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "artifact_path": ".local/production-closeout-20261005/equilibrium/continuation-ledger-pass04.json",
+  "artifact_sha256": "187fa80b56b518ee4f016c66a61853b660dc2213fe57eb463c868682cd2f2629",
+  "decision": "approve-with-limits",
+  "dispatch_readiness": "defer-for-evidence",
+  "checks_performed": ["Ledger hash verified; ten original frozen hashes unchanged", "62 unique task IDs, 52 criteria, ten findings and 18 scenarios; no missing/crosswalk-invalid task references", "Direct and conditional dependency graphs have no cycles or dangling edges"],
+  "findings": [
+    {
+      "claim_id": "EV-COV-010",
+      "claim": "Complete 62/52/10/18 crosswalk is retained; scenario accounting does not claim new execution.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/criterion_task_map", "#/finding_task_map", "#/scenario_task_map"],
+      "consequence": "Mapping could be mistaken for attainment.",
+      "next_test": "Bind later criterion/scenario closures to exact executed evidence."
+    },
+    {
+      "claim_id": "EV-V37-014",
+      "claim": "T043 adds keyboard lyrics/version/failure checks; T044 current media and T056 current V37 diagnosis depend only on delivery. Future motion dependencies are explicitly conditional.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/tasks/42", "#/tasks/43", "#/tasks/55"],
+      "consequence": "Current evidence could remain blocked by future rig work.",
+      "next_test": "Execute current slices separately; lyrics access cannot establish audible loop quality or successor motion."
+    },
+    {
+      "claim_id": "EV-RECOV-015",
+      "claim": "T061 distinguishes original 15 commits plus two configuration commits, incomplete all-ref recovery, unsynchronized parent and unauthorized connectors.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/tasks/60/current_inventory", "#/current_snapshot/replit"],
+      "consequence": "Preserved work could be lost or blanket-imported.",
+      "next_test": "Per-commit/path disposition with custody and source benefit evidence; refresh connectors independently."
+    },
+    {
+      "claim_id": "EV-DEP-016",
+      "claim": "Graph is acyclic; T001/T015 edges expressly use preflight slices, avoiding requiring a successor before creating it.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/planning_rules", "#/tasks/14/scope_slices", "#/next_series_proposal"],
+      "consequence": "Whole-task dependency interpretation could create a procedural deadlock.",
+      "next_test": "Dispatch ledger must name selected slices and owned closure evidence."
+    },
+    {
+      "claim_id": "EV-CAP-017",
+      "claim": "45-minute/12000-output/500000-provider-total envelope is proposed; 80% stop, reserve and in-flight allowances are specified, but T062 feasibility/monitor drill remains unrun.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/tasks/61", "#/next_series_proposal"],
+      "consequence": "Written controls could be mistaken for enforceable limits.",
+      "next_test": "Harmless cap/counter-loss/cancellation drill plus feasible owned suballocations before modeling."
+    }
+  ],
+  "evidence_pointer_base": "artifact_path",
+  "limits": ["Remote/Replit inventory is supplied root evidence", "No operational drill, human acceptance or protected holdout", "Shared model/sources; analytical roadmap approval only", "Pass04 only"]
+}

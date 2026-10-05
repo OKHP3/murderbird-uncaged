@@ -1,0 +1,44 @@
+{
+  "role": "safety-portability",
+  "pass": 2,
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "decision": "approve-with-limits",
+  "decision_scope": "Source/evidence boundaries, not visual attainment or artistic acceptance.",
+  "own_checks": "Seven pinned-reference hashes and all ten frozen-source hashes match; HEAD unchanged. No image judgment or probe replay.",
+  "findings": [
+    {
+      "id": "SP02-SCOPES",
+      "claim": "Composite controls full-bird canon; candidate03 is prior body direction; July controls head only, excluding its body/hanging wings. Era images control finishes; eight-second video controls surface continuity/screen presence.",
+      "claim_status": "supported",
+      "support": ["goal.md:48-64"],
+      "consequence": "Cross-scope substitution could change canon while appearing source-backed.",
+      "smallest_decisive_test": "MB-T013: freeze feature-to-source scope/exclusions and exact video timecodes/frame hashes; stop if a pinned source is missing."
+    },
+    {
+      "id": "SP02-ERA-RIGHTS",
+      "claim": "Maker/Mechanic optics stay dark; Advanced awakening is restrained orange. Publication does not supply owner acceptance or creative reuse rights.",
+      "claim_status": "supported",
+      "support": ["goal.md:69-79", "NOTICE.md", "assets/audit/cg-recursive-three-loop01/loop03/handoff.json:/owner_acceptance"],
+      "consequence": "Delivery could become unsupported era canon or final approval.",
+      "smallest_decisive_test": "MB-T020: explicit per-era owner decision on the exact scoped candidate; retain UNMET/PENDING until then."
+    },
+    {
+      "id": "SP02-STATIC-RUNTIME",
+      "claim": "Retained exports have zero skins/animations; V37 interaction is separate. Browser loading and software-rendered checks establish neither CG motion nor physical-device equivalence.",
+      "claim_status": "supported-documented-evidence",
+      "support": ["assets/audit/cg-recursive-three-loop01/loop03/handoff.json:/delivery", "docs/handoffs/cg-production-release-2026-10-04-01.md#Local validation addendum"],
+      "consequence": "Static assessment could falsely close behavior or platform acceptance.",
+      "smallest_decisive_test": "Keep static/V37 scenario results separate; test any later authorized motion on named real devices."
+    },
+    {
+      "id": "SP02-NORMAL-EQUIVALENCE",
+      "claim": "Strict normal parity remains FAIL at 2e-5 L2; maximum 0.008557 L2/0.490292 degrees is a retained Loop02 toe; crown fails separately. Cause, shader and pixel equivalence remain unknown.",
+      "claim_status": "supported-historical-failure",
+      "support": ["assets/audit/cg-recursive-three-loop01/architect-assessment-final.md", "docs/cg-architect-next-goals.md#MB-T018", "docs/cg-architect-next-goals.md#MB-T019"],
+      "consequence": "Custody or position/UV success could conceal unresolved shading differences.",
+      "smallest_decisive_test": "MB-T018: reproduce indexed toe/crown discrepancies at unchanged threshold; MB-T019: define matched browser/native lighting/color scope before equivalence claims."
+    }
+  ],
+  "limits": ["Peer reports unseen; shared model/history/sources", "No protected holdout, numerical scoring or owner judgment", "Receipts remain supplied/historical; no remote or runtime replay"]
+}

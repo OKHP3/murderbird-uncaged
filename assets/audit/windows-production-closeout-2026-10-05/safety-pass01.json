@@ -1,0 +1,62 @@
+{
+  "role": "safety-portability",
+  "pass": 1,
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "decision": "approve-with-limits",
+  "decision_scope": "Frozen delivery/continuation account; no new modeling, acceptance, engineering or release authority.",
+  "summary": "The Windows repair and retained-release account preserve authority and custody boundaries. Remaining limitations are explicit. Future public-file admission needs a stronger negative test.",
+  "independence": "Separate safety prompt; peer reports unseen. Shared inherited model/history and repository sources; no protected holdout.",
+  "own_checks": ["Clean HEAD equals frozen revision", "All ten frozen source SHA-256 values match", "Read-only repair, allowlist, ignore and authority inspection"],
+  "findings": [
+    {
+      "id": "SP01-AUTHORITY",
+      "claim": "Delivery authorization does not authorize a fourth modeling loop, mechanics, paid Replit or artistic acceptance.",
+      "claim_status": "supported",
+      "support": ["goal.md#October 4 owner authorization", "AGENTS.md#Privacy, licensing, and publication", "assets/audit/cg-production-delivery01/architect-backlog-final01.json:/next_series_proposal/authority"],
+      "consequence": "Scope or spending could expand without owner direction.",
+      "smallest_decisive_test": "Before implementation, bind selected scope to owner authority and MB-T062's operational drill."
+    },
+    {
+      "id": "SP01-RIGHTS",
+      "claim": "Code remains MIT; creative content remains all rights reserved. Private archives and this report are ignored.",
+      "claim_status": "supported",
+      "support": ["NOTICE.md", ".gitignore:10", "assets/README.md"],
+      "consequence": "Custody could be mistaken for reuse rights or publication approval.",
+      "smallest_decisive_test": "Repeat exact source/rights and ignored-path checks for any changed publication selection."
+    },
+    {
+      "id": "SP01-SURFACES",
+      "claim": "Supplied receipts support exact GitHub/Pages and isolated-preview identity; Replit parent and connectors remain unresolved.",
+      "claim_status": "supported-with-supplied-receipts",
+      "support": [".local/production-closeout-20261005/equilibrium/freeze.json:/surface_receipt", "docs/handoffs/windows-production-closeout-2026-10-05.md#Initial surface inspection"],
+      "consequence": "A blanket synchronization claim would conceal 17 untriaged parent-only commits and unauthorized connectors.",
+      "smallest_decisive_test": "At resume, read actual isolated checkout and served /cg.html revision; separately inventory parent preservation and connector authorization."
+    },
+    {
+      "id": "SP01-PORTABILITY",
+      "claim": "Native-path entry detection and narrow LF rules repair the documented Windows failure without changing imported creative bytes.",
+      "claim_status": "supported-with-supplied-test-receipts",
+      "support": ["scripts/prepare-cg-release.mjs", ".gitattributes", "docs/handoffs/windows-production-closeout-2026-10-05.md#New defect and bounded repair"],
+      "consequence": "58-file output or CRLF drift could recur on another checkout.",
+      "smallest_decisive_test": "On a newly supported host, clean checkout/build and compare all 154 payload identities; no universal portability certification."
+    },
+    {
+      "id": "SP01-ACCEPTANCE",
+      "claim": "Static retained GLBs, pending owner acceptance, unmet likeness and strict-normal FAIL remain distinct from V37 behavior and delivery success.",
+      "claim_status": "supported",
+      "support": ["assets/audit/cg-recursive-three-loop01/loop03/handoff.json:/known_limits", "goal.md#Current production and next-goal review", "docs/murderbird-evaluation-prd.md:157-165"],
+      "consequence": "Successful transport could become unsupported artistic, motion or device acceptance.",
+      "smallest_decisive_test": "Use applicable source-matched evaluation and explicit owner decision; execute named-device/accessibility scenarios separately."
+    },
+    {
+      "id": "SP01-PUBLIC-TRUST",
+      "claim": "The validator admits every public file except banned patterns; the CG subset has an exact allowlist. No leak is observed in the supplied inventory.",
+      "claim_status": "supported-source-observation",
+      "support": ["scripts/verify-publication.mjs:45-49", "scripts/publication-boundary.mjs", ".local/production-closeout-20261005/equilibrium/freeze.json:/surface_receipt/live/files", "docs/cg-architect-next-goals.md#MB-T036"],
+      "consequence": "A future misplaced ordinary public file could pass boundary validation.",
+      "smallest_decisive_test": "In an isolated fixture, add an unapproved ordinary public file and require rejection; otherwise retain an explicit reviewed-public-input limit."
+    }
+  ],
+  "limits": ["No build, validator, browser, native probe or remote rerun by this reviewer", "Root receipts remain supplied evidence", "No secret-content audit, legal judgment, numerical PRD scoring, physical-device proof or protected visual holdout", "Later passes remain unperformed"]
+}

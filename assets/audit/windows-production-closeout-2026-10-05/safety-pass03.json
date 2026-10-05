@@ -1,0 +1,44 @@
+{
+  "role": "safety-portability",
+  "pass": 3,
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "decision": "approve-with-limits",
+  "decision_scope": "Analytical continuation account; correct current-V37 routing before operational use.",
+  "own_checks": "Requirements inventory matches frozen Git blob: 52 criteria, F01–F10, 18 scenarios. No runtime, human, physical-device or audible replay.",
+  "findings": [
+    {
+      "id": "SP03-TRACE-POLICY",
+      "claim_status": "supported",
+      "claim": "Complete documentary mapping is not attainment. Numeric policy remains proposed; historical inventory statuses do not override current delivery receipts.",
+      "support": ["assets/audit/cg-production-delivery01/requirements-inventory01.json:/requirements", "docs/murderbird-evaluation-prd.md:111-113"],
+      "consequence": "Coverage could become a fabricated score or acceptance.",
+      "smallest_decisive_test": "For each applicable criterion/scenario, bind exact executed evidence and owner-approved scoring contract; retain UNKNOWN/NOT RUN distinctly."
+    },
+    {
+      "id": "SP03-T12-ROUTING",
+      "claim_status": "source-conflict",
+      "claim": "Architect MB-T056 remains conditional behind MB-T017/057 without a baseline slice; production handoff says current V37 diagnosis was separated. Actual T12 runtime execution remains NOT RUN.",
+      "support": ["docs/cg-architect-next-goals.md:874-882", "assets/audit/cg-production-delivery01/architect-backlog-final01.json:/tasks/55", "docs/handoffs/cg-production-release-2026-10-04-01.md:51"],
+      "consequence": "Existing stale-attack/recovery diagnosis could wait unnecessarily for a future rig.",
+      "smallest_decisive_test": "Add dated current-V37 routing correction; demonstrate readiness with future tasks unstarted, then separately execute supported-action interruption matrix. Preserve frozen history."
+    },
+    {
+      "id": "SP03-ACCESS-FAILURE",
+      "claim_status": "supported-limited-evidence",
+      "claim": "Local model/WebGL/context-loss/fallback checks do not close human keyboard, screen-reader, touch or legacy/media recovery.",
+      "support": ["docs/cg-architect-next-goals.md#MB-T035", "docs/cg-architect-next-goals.md#MB-T040", "docs/cg-architect-next-goals.md#MB-T041"],
+      "consequence": "Essential journeys could remain inaccessible despite smoke passes.",
+      "smallest_decisive_test": "Named human/platform essential journey and forced-media/retry cases on exact revision, independently of future CG rig."
+    },
+    {
+      "id": "SP03-MEDIA-DEVICE-ERA",
+      "claim_status": "supported-open-obligations",
+      "claim": "Accepted synthesized v3 is distinct from historical instrumentals/soundscape. Audible controls, sustained hardware performance and era-action safety remain unverified.",
+      "support": ["docs/cg-architect-next-goals.md#MB-T043", "docs/cg-architect-next-goals.md#MB-T045", "docs/murderbird-evaluation-prd.md:318-341"],
+      "consequence": "Involuntary/overlapping sound, unsupported device claims or prohibited early-era actions could be missed.",
+      "smallest_decisive_test": "T15 explicit playback/loop/lyrics/failure review; T16 named-device measurements; T03–T12 supported-era exclusions, flightless settlement and stale-action recovery. No human-vocalist claim."
+    }
+  ],
+  "limits": ["Peer reports unseen; shared model/sources", "No protected holdout or numeric acceptance", "Reports/receipts remain supplied documentary evidence"]
+}

@@ -1,0 +1,58 @@
+{
+  "role": "evidence",
+  "pass": "PASS03",
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "decision": "approve-with-limits",
+  "checks_performed": ["PRD IDs compared with inventory/backlog: 52/52 criteria, F01-F10, T01-T18; all mapped task IDs resolve; inventory SHA256 ddfd359819f9cd4649325196fb880157e2ccd174c44a6528a17d6c825e1dc649 matches recorded pin"],
+  "findings": [
+    {
+      "claim_id": "EV-COV-010",
+      "claim": "52 criteria and ten findings map to existing tasks; 18 procedures are preserved as NOT_EVALUATED. Mapping establishes accounting, not attainment.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["requirements-inventory01.json#/requirements", "requirements-inventory01.json#/scenarios", "architect-backlog-final01.json#/criterion_task_map", "architect-backlog-final01.json#/finding_task_map"],
+      "consequence": "Coverage could be misreported as passed evaluation.",
+      "next_test": "Candidate-specific criterion/scenario receipts and applicable tested/untested matrix."
+    },
+    {
+      "claim_id": "EV-RUNTIME-011",
+      "claim": "Static CG has no skins/animations; existing V37 capabilities remain separate. Era/orbit/fallback local passes have limited scope, not full behavior or access acceptance.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["goal.md:26", "architect-backlog-final01.json#/tasks/29", "architect-backlog-final01.json#/tasks/34"],
+      "consequence": "The retained candidate could inherit unrelated V37 motion evidence.",
+      "next_test": "Bind each behavior receipt to its actual runtime/model/revision."
+    },
+    {
+      "claim_id": "EV-EVID-012",
+      "claim": "Human keyboard/screen-reader/touch, audible theme/video controls, sustained GPU and loading/memory evidence remain NOT RUN; delivered payload hashes cannot close them.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["architect-backlog-final01.json#/tasks/39", "docs/cg-architect-next-goals.md#MB-T043", "docs/cg-architect-next-goals.md#MB-T045"],
+      "consequence": "Software-renderer/build success could imply user/device acceptance.",
+      "next_test": "Execute MB-T040-T046 on named environments; report partial scope."
+    },
+    {
+      "claim_id": "EV-POLICY-013",
+      "claim": "PRD numeric thresholds are proposed policy; scorecard remains unscored and G1 unmet.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["docs/murderbird-evaluation-prd.md:113", "requirements-inventory01.json#/framework"],
+      "consequence": "Invented scores could substitute for owner artistic authority.",
+      "next_test": "Record selected policy and actual evidence before scoring; obtain separate owner decisions."
+    },
+    {
+      "claim_id": "EV-V37-014",
+      "claim": "MB-T056's later-animation gate and MB-T057 dependency obscure currently available V37 interruption diagnosis, which current goal permits independently.",
+      "claim_type": "interpretation",
+      "status": "disputed",
+      "evidence_ids": ["architect-backlog-final01.json#/tasks/55", "goal.md:36"],
+      "consequence": "Current B10/A01/I06 gaps could wait unnecessarily for a future rig.",
+      "next_test": "Separate existing V37 tested/untested transitions from future CG actions; execute only available current controls."
+    }
+  ],
+  "source_path_base": "assets/audit/cg-production-delivery01/",
+  "limits": ["Analytical mapping only; no runtime/media/human replay", "No protected holdout or owner acceptance", "Shared model/sources", "Pass03 only"]
+}
+
