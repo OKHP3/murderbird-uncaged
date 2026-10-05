@@ -1,0 +1,181 @@
+{
+  "role": "evidence",
+  "pass_id": "PASS03",
+  "decision": "approve-with-limits",
+  "confidence": "medium",
+  "execution_status": "completed",
+  "evidence_status": "analytical",
+  "created_utc": "2026-10-05T00:26:11.298592+00:00",
+  "artifact": {
+    "path": "assets/audit/cg-production-delivery01/review-passes/pass03/backlog.json",
+    "sha256": "ac72eaa1deaa7d54b2c40cce0287145339d06160d108604cc22aa2876b10f613",
+    "production_commit": "109e9e7a405ada1d9a466f1225bde4662a2dc777"
+  },
+  "question": "Do the production, Replit preview and Notion readbacks communicate and serve the same retained candidate, while preserving runtime controls and disclosing tested limits?",
+  "independence": {
+    "identity": "/root/five_pass_evidence",
+    "model_identity": "GPT-6 family per developer context; exact deployed model/configuration not exposed",
+    "system_prompt_id": "inherited system/developer context; no supplied hash",
+    "role_prompt_id": "root PASS03 evidence assignment, four-minute1800word checkpoint",
+    "context_id": "/root/five_pass_evidence PASS03",
+    "source_set": "57 frozen resources;54 hashes checked with three large Blender hashes not repeated; direct GLB JSON inspection and supplied release receipts",
+    "retrieval_date": "2026-10-05 UTC",
+    "tools": [
+      "read-only exec_command/Python hash, JSON and GLB-header/source inspection",
+      "clock"
+    ],
+    "permissions": "Wrote only pass03/evidence.json. No peer PASS03 reports, children, browser/native execution, dependencies, modeling or remote writes.",
+    "limits": [
+      "Same reviewer/context/model family across successive passes; shared source/history.",
+      "Root authored integration and provides live CI/Pages/Replit/Notion evidence. This review validates local receipt lineage, not current remote state by fresh network operations.",
+      "No visual holdout. No source likeness/artistic regrading performed in this runtime-focused pass.",
+      "Three large native Blender files were previously hashed in PASS01/02 and not rehashed here."
+    ]
+  },
+  "checks_observed": {
+    "frozen_hashes_checked": 54,
+    "hash_mismatches": 0,
+    "large_blend_hashes_not_repeated": 3,
+    "unchanged152_receipt01_links_exact": true,
+    "prior_receipt_hash_matches": true,
+    "changed_payload_paths": 2,
+    "unique_current_payload_paths": 154,
+    "publication_allowlist_receipt_links_exact": 96,
+    "GLB_headers_direct": {
+      "builder": {
+        "skins": 0,
+        "animations": 0,
+        "external_uris": 0,
+        "meshes": 25
+      },
+      "maker": {
+        "skins": 0,
+        "animations": 0,
+        "external_uris": 0,
+        "meshes": 25
+      },
+      "mechanic": {
+        "skins": 0,
+        "animations": 0,
+        "external_uris": 0,
+        "meshes": 25
+      }
+    }
+  },
+  "material_findings": [
+    {
+      "id": "PASS03-E01",
+      "claim_id": "CLM-007/D01",
+      "claim": "The supplied production identity and payload delta proof consistently identify109e9e7.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "github-production-receipt01.json",
+        "live-pages-receipt01.json",
+        "live-pages-receipt02.json",
+        "surface-freeze02.json"
+      ],
+      "consequence": "A stale release or unverifiable unchanged-path assumption could be called current delivery.",
+      "next_test": "Refresh exact live revision and only affected path proofs after any new deployment or changed manifest.",
+      "rationale": "Receipt01 streamed154files atff8a0d9. Receipt02 binds its exact hash, links152 unchanged path byte/hash pairs without discrepancies, and records matching live bytes for new assets/cg-Cc_iGSuU.js and changed cg.html. Old cg-BBfQuD9N.js is explicitly removed. All96 publication allowlist path/hash/size entries match unchanged proof. Current revision, successful Pages37244718043 and main validation37244718056 agree. This is supplied live proof audited analytically, not54 newly downloaded files or a new network check."
+    },
+    {
+      "id": "PASS03-E02",
+      "claim_id": "RUNTIME-RACE",
+      "claim": "The delayed-download lighting mismatch has a specific source fix and hosted regression proof.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "src/cg-main.js load completion around105",
+        "live-pages-receipt02.json browser heldDownloadState/completedModelState",
+        "github-production-receipt01.json PR32/checks"
+      ],
+      "consequence": "Selected Exhibit button/status could disagree with the actual loaded renderer.",
+      "next_test": "Retain the held-request regression for changed loader/light logic; broaden only for a newly changed scenario.",
+      "rationale": "After awaiting model creation, code applies the current lighting state. Receipt02 records held request with no renderer and Exhibit selected, then completed renderer snapshot/status/buttons all Exhibit. The hosted narrow check uses Headless Chrome ANGLE/SwiftShader and one Advanced GLB; it does not rerun all-era3D/failure/mobile scenarios or establish hardware performance."
+    },
+    {
+      "id": "PASS03-E03",
+      "claim_id": "CLM-005",
+      "claim": "Publication of these GLBs establishes a static assessment candidate, while V37 remains a separate interactive demonstration.",
+      "status": "supported",
+      "evidence": [
+        "direct GLB header/JSON inspection of allthree retained04 files",
+        "cg.html/src/cg-main.js static labels",
+        "goal.md current delivery scope",
+        "publication96 entries and receipt02 model hashes"
+      ],
+      "consequence": "Byte custody or orbit controls could be mistaken for animated CG integration.",
+      "next_test": "Any future animated integration requires separately applicable scope, actual rig/actions and runtime evidence.",
+      "rationale": "All three direct files have zero animations, skins or external buffer/image URIs. Current served-byte proof matches their frozen hashes. Public text explicitly calls them static and separates V37 movement/encounter/inspection/fallback. Static jawpose clarification in MB-T002 prevents future closed/open stills from being labeled animation."
+    },
+    {
+      "id": "PASS03-E04",
+      "claim_id": "CLM-007/REPLIT",
+      "claim": "Replit selected private preview and Notion communicate the same candidate within accurately limited tests.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "replit-preview-receipt03.json",
+        "notion-delivery-readback02.json text",
+        "surface-freeze02.json",
+        "surface-chronology01.json"
+      ],
+      "consequence": "Worker reports or a saved continuation document could be mistaken for full remote suite/hosting acceptance.",
+      "next_test": "Refresh served SHA/dirtybit and selected3000 UI after preview sleep/reset; replay a newly needed test in its named environment.",
+      "rationale": "Root independently observed clean109e9e7 served manifest and Advanced3D;124source hashes, build/publication/theme/standard presentation passes are worker-reported. Complete Replit suite was not replayed and its deterministic held-request harness was not run. Prior partial60PASS16FAIL fixture scope remains historical. Notion supplement repeats these limits and UNMET/PENDING. Private Preview3000, inactive original5000, connector reauthentication and incomplete all-ref bundle remain explicit; no Replit publication or paid mode follows."
+    },
+    {
+      "id": "PASS03-E05",
+      "claim_id": "CLM-006/D05",
+      "claim": "Scoped local/browser/CI results establish full human, device, GPU or artistic acceptance.",
+      "status": "disputed",
+      "evidence": [
+        "technical-release-qc01.json tested environment/limitations",
+        "live-pages-receipt02.json limits",
+        "MB-T035/039\u2013046",
+        "claim-ledger03.json"
+      ],
+      "consequence": "Software renderer/emulated controls or green CI could obscure missing owner and physical-device evidence.",
+      "next_test": "Run named human keyboard/screen-reader, physical touch and sustained hardware-GPU tasks only in selected scope; keep missing results unknown.",
+      "rationale": "Initial local QA records a dirty219e8 build and old goal revision as historical local evidence. Current exact release evidence supplements it. Local tested404/no-WebGL/context-loss/native fallback/retry/no-JS and narrow viewport cases remain passed within scope. Current live regression is narrower; no fresh full harness, clean-host, shader/pixel parity, device or owner artistic proof is supplied. Strict normal FAIL/cause unknown remain preserved."
+    },
+    {
+      "id": "PASS03-E06",
+      "claim_id": "PASS02-CORRECTIONS/B11",
+      "claim": "PASS03 corrections preserve complete PRD B11 meaning and avoid partial-checkpoint acceptance or stale surface routing.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "B11 exact PRD row206 and criterion_task_map",
+        "MB-T050/024/058",
+        "MB-T012/020",
+        "source_records.SURFACE_FREEZE/current_snapshot/validation/next_root_action",
+        "claim-ledger03 exactpass bindings"
+      ],
+      "consequence": "Useful waiting behavior or head progress could close omitted power/cognition/copy/finish requirements.",
+      "next_test": "Close B11 only when extended no-refuel/depletion encounter, separate power/processing inspection and interface-copy no-demonstrated-learning claim all have evidence; copy honesty applies whenever published, not only at future animation acceptance.",
+      "rationale": "Task050 now explicitly includes all three B11 closure meanings, mapped with024/058; no fresh behavior implementation is asserted. MB-T012 is a provisional packet/partialcheckpoint; MB-T020 now includes era finish predecessors. Current surface pointer is02 and completed-pass metadata is2. Claim008/012 point to exact PASS03 backlog. B11 broad applicability is still labeled conditional motion, so preserve the current publication-copy honesty slice even while encounter/inspection tests remain future unknowns."
+    }
+  ],
+  "acceptance_assessment": {
+    "AC01": "supported B11fullmeaning and stable stage map; copy honesty scope qualifier retained",
+    "AC02": "supported exact supplied receipt chain and static identity",
+    "AC03": "prior visual observations retained; no artistic closure",
+    "AC04": "corrected packet/owner/finish/source sequencing supported, actual future execution notrun",
+    "AC05": "documentary boundaries preserved; no new external action",
+    "AC06": "supported attributed live versus analytical/historical/local distinctions",
+    "AC07": "supported static versus conditional behavior/inspection/device limits",
+    "AC08": "two completed prior passes; PASS03initial result only, root conditional comparison remains"
+  },
+  "release_conditions": [
+    "Approve scoped analytical runtime evidence chain, not full product or owner artistic acceptance.",
+    "Preserve distinctions among newly streamed changed paths, manifest-linked prior live bytes, worker-reported Replit validators and root UI observations.",
+    "Do not promote missing full Replit/hardware/human/holdout tests into passes or failures.",
+    "Current copy must remain honest about procedural behavior even though full B11 encounter/inspection closure is conditional.",
+    "Root completes remaining PASS03roles and conditional adjudication."
+  ],
+  "not_run": [
+    "Fresh live CI/Pages/Replit/Notion replay",
+    "Browser harness rerun or native/render generation",
+    "Full Replit suite and Replit held-request harness",
+    "Human/physical-device/GPU/clean-host/shader-pixel/owner acceptance or holdout evaluation"
+  ],
+  "review_expiry_trigger": "Any changed deployed revision, payload/manifest, preview session/runtime, source scope or decisive new test."
+}
