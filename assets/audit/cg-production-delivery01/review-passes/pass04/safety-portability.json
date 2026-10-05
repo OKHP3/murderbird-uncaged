@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "pass_id": "PASS04",
+  "role": "safety-portability",
+  "decision": "approve-with-limits",
+  "reviewed_utc": "2026-10-05 00:33:11 UTC",
+  "artifact": {
+    "path": "assets/audit/cg-production-delivery01/review-passes/pass04/backlog.json",
+    "sha256": "3e4c4a589e1dca7ada7a13f66342281c7a0dadbf2a7021e3785fa514546a0bc9",
+    "production_revision": "109e9e7a405ada1d9a466f1225bde4662a2dc777",
+    "frozen_utc": "2026-10-05T00:29:36.239869+00:00"
+  },
+  "question": "Is the developing next-task/goal list complete, ordered by source impact, bounded and independently testable without imposing superseded engineering gates?",
+  "summary": "The roadmap separates provider/output units and blocks new implementation on ownership, custody, source scopes and an operational resource drill. Caps and timing remain proposals; no enforced provider cap, affordability, guaranteed completion or billing inference is supported. Phase/privacy/Free-only/no-child boundaries remain intact. One operational wording correction makes the 80% stop unambiguous before dispatch.",
+  "execution": {
+    "status": "analytical",
+    "started_utc": "2026-10-05 00:30:32 UTC",
+    "actual_file_checks": [
+      "PASS04 backlog SHA matched freeze.",
+      "33 frozen resources<=350000bytes hashmatched;24 larger resources not rehashed.",
+      "62-task dependencygraph has no cycles or missing dependency IDs.",
+      "Every NEXT_VISUAL_PHASE task has MB-T062 prerequisite.",
+      "Every task carries preservation condition; no proposed allocation retains ambiguous aggregate_tokens_ceiling field.",
+      "HEAD/originmain remain109e9e7; private music archive remainsignored."
+    ],
+    "not_run": [
+      "No live counter/controller availability validation.",
+      "No syntheticcapbreach/interrupt/drill or renderingtiming benchmark.",
+      "No providerbilling, actual dispatch/model/QA feasibility test.",
+      "No source/model changes, children, remote operations or dependencies."
+    ]
+  },
+  "independence": {
+    "identity": "Same separate safety reviewer continuingPASS01–04",
+    "model": "Inherited configured model unknown, not introspected",
+    "prompt_id": "Root PASS04 cap/dispatch/resource brief; frozenAC01–08;4-minute/1800-word constraint",
+    "protocol": "EquilibriumSKILL/review-protocol retained fromPASS01",
+    "source_retrieval": "LocalfrozenPASS04/currentgoal/receipts;2026-10-05",
+    "tools": [
+      "read-onlyexec_command python/hashlib/rg/git",
+      "clock",
+      "apply_patchownreport"
+    ],
+    "permissions": "Onlypass04/safety-portability.json written; no peerPASS04 reports, nochildren/modeling/regeneration/dependencies/externalwrites.",
+    "limits": [
+      "Common sources/context/model; earlier ownobservations retained, peerreports hidden.",
+      "Root authorsintegration and laternegotiation; convergence is correlated.",
+      "Protected/externalvisualholdout absent; allreferences usedindevelopment.",
+      "This approves analyticalroadmap only, notdispatch readiness or ownerartisticacceptance."
+    ]
+  },
+  "material_claims": [
+    {
+      "claim_id": "P04-SAFE-01",
+      "ledger_ids": [
+        "CLM-012"
+      ],
+      "claim": "Generated-output and provider-total ceilings are separate proposals; cachedinput is counted once and observedusage is not billedcost.",
+      "claim_type": "design-choice",
+      "evidence_ids": [
+        "next_series_proposal shared_generated_output_tokens_ceiling12000/shared_provider_total_tokens_ceiling500000/accounting_unit/cap_status",
+        "Allproposed_bounded_allocation records",
+        "MB-T062"
+      ],
+      "status": "supported-with-limits",
+      "evidence_status": "analytical",
+      "consequence": "Cachedsubset or output could be added twice, calls omitted, or a tokenledger falsely represented as spending control.",
+      "next_test": "T062 validate actualcounter schema, baselines/deltas and call/contributor IDs; replay repeatedcumulative updates/retry/cachedsubset examples and show no doublecount. Use observedprovider total directly when its documented semantics match; do not add output or cachedinput again."
+    },
+    {
+      "claim_id": "P04-SAFE-02",
+      "claim": "The shared45minute envelope includes root/workers/QC/integration and cannot be enlarged by adding taskceilings.",
+      "claim_type": "design-choice",
+      "evidence_ids": [
+        "MB-T001–006 shared_envelope",
+        "next_series_proposal",
+        "planning_rules"
+      ],
+      "status": "provisional",
+      "evidence_status": "analytical; execution feasibilityNOTRUN",
+      "consequence": "Per-task30minute/4000output ceilings could multiply into an unbounded headseries or omit integration/evidence cost.",
+      "next_test": "Beforedispatch select actualnamedsuballocations whose committedtotal fits45minutes/12000output/500000provider and reserves comparison/QC/integration. Declare clockstart, whether preflight/drill usage is included or a separately scoped budget, and calibrated rendering/asset handling assumptions. Stopatcap with partialpacket if eightview evidence cannotfit; do not reduce required closure covertly."
+    },
+    {
+      "claim_id": "P04-SAFE-03",
+      "ledger_ids": [
+        "CLM-012"
+      ],
+      "claim": "MB-T062 is an explicit preflight dispatchgate requiring availablecounters, ownership, cadence and an interruptdrill; no hardcontroller is claimed.",
+      "claim_type": "design-choice",
+      "evidence_ids": [
+        "MB-T062 deliverable_and_closure_evidence",
+        "next_series_proposal/controller",
+        "actualallimplementationT062edges"
+      ],
+      "status": "supported-with-limits",
+      "evidence_status": "analytical",
+      "consequence": "Implementation could run before reliablemonitoring, or60secondsampling could be falsely promised to prevent in-flight overrun.",
+      "next_test": "ResolveFIND01, then harmlessdrill that proves ceiling/visibilitystop invokesnamedinterrupt and handles missing/laggedcounters. Ifcounters/controller are unverified, marknotreadyfordispatch; no paid/multi-day/mostpowerfulfallback."
+    },
+    {
+      "claim_id": "P04-SAFE-04",
+      "claim": "Ownership/preflight/postflight slices avoid authorizing work or requiring a finishedsuccessor before its construction.",
+      "claim_type": "design-choice",
+      "evidence_ids": [
+        "MB-T001 scope_slices/component prerequisite_dependency_scope",
+        "MB-T013/015/062 preflight",
+        "MB-T014/015 postflight",
+        "dispatch_contract/owner_role_policy"
+      ],
+      "status": "supported",
+      "evidence_status": "analytical+actualgraphcheck",
+      "consequence": "Cycle-like closure requirements could trigger endless preparation or workerchilddelegation and overlapping destructive edits.",
+      "next_test": "Actualdispatch record namescontributor/exactfiles-objects/basehash/deliverable/suballocation/checkpoint/interrupt. Workerowns one deliverable; root reassigns ratherthan permittingworker children. MB-T015 preflight custody first, successorcomparison aftercreation."
+    },
+    {
+      "claim_id": "P04-SAFE-05",
+      "claim": "Scoped headcheckpoint closure is distinct from full per-era likeness/material acceptance and latermotion/engineering.",
+      "claim_type": "design-choice",
+      "evidence_ids": [
+        "MB-T012 provisionaltitle/partialpacketclosure",
+        "next_series_proposal postflight scoped_head_decision",
+        "MB-T020 fullartisticgate",
+        "goal appearance-first/CGshortcuts",
+        "MB-T059/060"
+      ],
+      "status": "supported",
+      "evidence_status": "analytical",
+      "consequence": "45minute headpacket could be expanded into completefinish/parity/fullproduct acceptance or blocked by manufacturingpurity.",
+      "next_test": "Present exactconnectedhead with wholebird/eightviews/retainedgain checks and declarednormal/finishlimits; ownerretains/rejects/requestschanges for thatpartialdirection. Fulleraacceptance remainsMB-T020. Nohiddenengineering or newmotion authorized."
+    },
+    {
+      "claim_id": "P04-SAFE-06",
+      "ledger_ids": [
+        "CLM-006",
+        "CLM-011"
+      ],
+      "claim": "Unknownfuture evidence and custody gaps remain unknown; currentpasses are not silently removed or historicalfailures reclassified.",
+      "claim_type": "fact/design-choice",
+      "evidence_ids": [
+        "planning_rules UNKNOWN/NOTRUN vsFAIL and localscopedpasses",
+        "MB-T036/038 futuremaintenance",
+        "MB-T061",
+        "source normalFAIL/currentcontrolsPASS",
+        "localdist historicalidentity warning"
+      ],
+      "status": "supported",
+      "evidence_status": "analytical",
+      "consequence": "Missinghuman/device/counter evidence could become inventedfailure, currentcontrols be retested endlessly, or preservedlegacyassets be erased.",
+      "next_test": "Closeeach scopedtask onlywithspecificfresh evidence/authority. Maintain normalFAIL/fullsuiteNOTRUN/human-deviceNOTRUN separately; selectedlegacyimports requireexactread-onlytriage and fulloldrefcoverage remainsunknown."
+    },
+    {
+      "claim_id": "P04-SAFE-07",
+      "claim": "Resourceproposal does not grant purchase/privateupload/newdependency/Power/Max/ReplitPublish authority.",
+      "claim_type": "design-choice",
+      "evidence_ids": [
+        "AGENTS currentFreeonly ownerrule",
+        "planning_rules",
+        "MB-T038/059/061",
+        "owner_role_policy"
+      ],
+      "status": "supported",
+      "evidence_status": "analytical",
+      "consequence": "Quota orcapfeasibility failure could trigger unauthorizedpaidmode, billingchange or sourcepublication.",
+      "next_test": "DeclinePower/Max; stopwithpreservedcheckpoint onFree limit. Existingrights, Vite/Three/WebAudio and ignoredprivatearchives continue; no scopechange inferred from capproposal."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "P04-SAFETY-FIND-01",
+      "classification": "supported operationalambiguity",
+      "severity": "minor beforedispatch; materialtoresourcecontrol",
+      "criteria": [
+        "AC04",
+        "AC05",
+        "AC06"
+      ],
+      "location": "next_series_proposal/controller and MB-T062 defined80%-headroomstop",
+      "claim": "'Cease newcalls at80% headroom' does not explicitly say80%consumed/20%remaining, nor how pendingwork reserves are treated.",
+      "evidence": [
+        "Exactcontroller andT062wording"
+      ],
+      "consequence": "Onecontroller could stopat20%usage while another stopsat80%; unrecorded outstandingcalls may exhaust the remainingreserve despite polling.",
+      "correction": "State numericaltrigger: cease newdispatch at9600generatedoutput or400000provider-total tokens consumed/reserved (80%of proposedceilings), retaining20%headroom; if time has thesame rule,36of45minutes. Record outstandingcall reservations/usage lag and exactinterrupt ownership. Thresholdnumbers remainproposal untilT062drill validates feasibility.",
+      "next_test": "Harmlessboundarydrill immediatelybelow/at/abovetrigger, repeatedcounterupdates, pendingcall and missingcounter case; verify no newcalls, namedinterrupt/checkpoint action, no hardproviderlimitclaim."
+    }
+  ],
+  "limits": [
+    "Analyticalroadmap approval; actualnewdispatch readiness deferredtoMB-T062evidence and ownerselectedscope.",
+    "Providercounter/interrupt availability and45minute completepacket feasibilityNOTRUN.",
+    "No hardprovider/billing/overspendprevention guarantee from60secondpolling.",
+    "OwnerartisticacceptancePENDING/sourcegoalUNMET/normalFAIL/fullReplitsuiteNOTrerun/human-deviceacceptanceNOTRUN preserved.",
+    "No protectedholdout/unseen outcome-uplift.",
+    "No newphase,childdelegation,purchase,paidmode,Publish,dependency or externalwrite authority.",
+    "No laterpassstarted; root mustadjudicate independentmaterialclaims."
+  ],
+  "changed_files": [
+    "assets/audit/cg-production-delivery01/review-passes/pass04/safety-portability.json"
+  ]
+}

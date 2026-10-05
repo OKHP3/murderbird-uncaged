@@ -1,0 +1,163 @@
+{
+  "role": "evidence",
+  "pass_id": "PASS01",
+  "decision": "approve-with-limits",
+  "confidence": "medium",
+  "execution_status": "completed",
+  "evidence_status": "analytical",
+  "created_utc": "2026-10-05T00:05:17.640195+00:00",
+  "artifact": {
+    "path": "assets/audit/cg-production-delivery01/review-passes/pass01/backlog.json",
+    "sha256": "02d344d3e14c7846226f788cd415c0d701e77ac1415e489a9c3923cfe8234047",
+    "production_commit": "109e9e7a405ada1d9a466f1225bde4662a2dc777"
+  },
+  "question": "Does the verified three-surface frozen candidate have a coherent source/PRD/prior-handoff baseline and complete stage-aware claim/evidence inventory?",
+  "independence": {
+    "reviewer_identity": "/root/five_pass_evidence",
+    "model_identity": "GPT-6 family identified by developer context; exact deployed model/configuration not exposed and not introspected",
+    "system_prompt_id": "inherited developer/system context; no content hash supplied",
+    "role_prompt_id": "root assignment PASS01 Evidence reviewer",
+    "context_id": "/root/five_pass_evidence PASS01",
+    "source_set": "freeze.json resources; supplied stage receipts; four direct saved-image observations",
+    "retrieval_date": "2026-10-05 UTC",
+    "tools": [
+      "exec_command read-only file/Git/Python hash and graph inspection",
+      "view_image for saved JPG/PNG",
+      "clock current time"
+    ],
+    "permissions": "Read-only inputs. Wrote only own evidence.json and evidence-observations.md. No browser interaction, Blender regeneration, dependencies, remote write, peer reports or children.",
+    "limits": [
+      "Inherited model/context and shared sources/history correlate judgments.",
+      "Initial peer reports hidden. Root authored the artifact and current surface integration.",
+      "Same reviewers may be reused across passes; this is the first assigned pass.",
+      "All references were used in development; no protected/external visual holdout.",
+      "Direct current local-file/hash observations are distinct from supplied historical/native tests and root live-browser/surface receipts."
+    ]
+  },
+  "checks_observed": {
+    "all_44_frozen_resource_hashes_match": true,
+    "backlog_hash_matches": true,
+    "local_HEAD_matches_production": true,
+    "goal_bytes_match_production_commit": true,
+    "prd_criterion_source_lines_and_target_quotes_match": 52,
+    "criterion_ids_mapped": 52,
+    "historical_finding_ids_mapped": 10,
+    "dependency_dangling_ids": 0,
+    "dependency_cycles": 0,
+    "images_first_observations_path": "assets/audit/cg-production-delivery01/review-passes/pass01/evidence-observations.md"
+  },
+  "material_findings": [
+    {
+      "id": "PASS01-E01",
+      "claim_id": "CLM-008",
+      "claim": "All52 stable PRD requirements and F01\u2013F10 have semantically relevant closure tasks with stage-aware boundaries.",
+      "status": "supported",
+      "evidence": [
+        "backlog.json criterion_task_map/finding_task_map/tasks",
+        "docs/murderbird-evaluation-prd.md lines177\u2013253",
+        "requirements-inventory01.json requirements/findings",
+        "inspector-corrections-supervisor-2026-09-27.md"
+      ],
+      "consequence": "Omitted requirements could disappear behind a narrow static release.",
+      "next_test": "Retain exact IDs/quotes and verify semantics after any later backlog revision.",
+      "rationale": "Visual rows map to source-specific forms, finish and matched evidence. B01\u2013B11, motion V12, inspection V13/C06\u2013C08 and future mechanics are preserved as conditional tests. Current browser/media/delivery rows keep scoped passes and named unknowns; static GLBs do not close behavior. C01 historical structure-first wording is constrained by current appearance-first authority rather than restored as an engineering gate."
+    },
+    {
+      "id": "PASS01-E02",
+      "claim_id": "AUTHORITY-ANCHORS",
+      "claim": "The source_records.GOAL entry accurately identifies current controlling goal citations.",
+      "status": "disputed",
+      "evidence": [
+        "backlog.json source_records.GOAL reviewed_main251f2f0243181e97140179c2aff6eb057e165438 and lines24/34/55/63/75",
+        "current goal.md verified at109e9e7a405ada1d9a466f1225bde4662a2dc777"
+      ],
+      "consequence": "A worker could follow superseded authorization or read blank/header lines instead of the claimed rule.",
+      "next_test": "Keep the old entry explicitly historical and add a current authority source at109e9e7 with actual section/line anchors; update stale PARENT_DELIVERY pending wording or label it assignment-history only.",
+      "rationale": "Current snapshot and MB-T029 correctly close scoped delivery and preserve UNMET/PENDING. The historical GOAL record remains stale: current line55 is blank and63 is an optic heading. This limits citation trust, not the verified stage snapshot."
+    },
+    {
+      "id": "PASS01-E03",
+      "claim_id": "CLM-003",
+      "claim": "A coherent source-specific connected head is the highest-value next visual goal.",
+      "status": "supported",
+      "evidence": [
+        "evidence-observations.md",
+        "locked Sept22 composite",
+        "July head-only source",
+        "retained04 Maker canon-neutral/head-neck",
+        "goal.md October4 authorization",
+        "architect-assessment-final.md",
+        "bill-vault-integration-2026-10-01.md"
+      ],
+      "consequence": "Further minor finish loops could spend resources without repairing defining identity.",
+      "next_test": "A bounded connected crown/brow/optic/cheek/bill successor with whole-bird matched views and at most two actual designs without gain; owner chooses scope.",
+      "rationale": "Independent saved-image viewing found smoother crown shell, less recessed optic/brow, sparse cheek construction and different bill relationship. The historical bill handoff already identifies unresolved brow integration. No new numerical likeness score or full-era artistic conclusion is inferred."
+    },
+    {
+      "id": "PASS01-E04",
+      "claim_id": "TALON-DIRECTION",
+      "claim": "MB-T011 communicates the direction of the remaining claw correction unambiguously.",
+      "status": "provisional",
+      "evidence": [
+        "MB-T011 unfinished_outcome",
+        "goal.md line24 broader shorter claws",
+        "architect-assessment-final.md paragraph2 claws remain broad/short",
+        "evidence-observations.md locked/candidate feet"
+      ],
+      "consequence": "A future worker could narrow/lengthen claws when the source-directed intention is broader/shorter.",
+      "next_test": "State explicitly whether broad/short describes desired source geometry or an observed defect; use side-by-side planted feet to lock that direction before implementing MB-T011.",
+      "rationale": "The current goal calls for broader shorter claws; the historical assessment says claws remain broad/short, while the backlog says addressing broad/short profiles. My viewed retained claws read slimmer/longer than the locked source. This is a qualitative ambiguity, not calibrated metrology."
+    },
+    {
+      "id": "PASS01-E05",
+      "claim_id": "CLM-007",
+      "claim": "Current surfaces carry the exact retained production revision within separately stated scopes.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "surface-freeze01.json",
+        "backlog.json current_snapshot and MB-T029",
+        "root assignment exact current surface verification",
+        "local HEAD and goal-byte inspection"
+      ],
+      "consequence": "Delivery could be mistaken for full artistic acceptance, complete Replit suite validation or public Replit hosting.",
+      "next_test": "Refresh the exact root receipts after any changed runtime, deployment, preview session or Notion edit; retain selected3000/private preview restrictions.",
+      "rationale": "Root supplied exact main/Pages run and receipt lineage, selected private Replit UI revision/dirtybit and Notion content readback. I verified frozen files/hashes, not these remote surfaces live. Replit validators awaiting worker logs and all-ref preservation limits remain explicit."
+    },
+    {
+      "id": "PASS01-E06",
+      "claim_id": "CLM-004/005/006/009/010/012",
+      "claim": "The roadmap preserves observed failures, unrun tests and authority limits without upgrading them into full-product results.",
+      "status": "supported",
+      "evidence": [
+        "claim-ledger01.json",
+        "backlog.json planning_rules/tasks",
+        "loop03/handoff.json known_limits",
+        "goal.md current scope",
+        "NOTICE.md",
+        "technical-release-qc01.json"
+      ],
+      "consequence": "Unknowns could become fabricated failures or passing local delivery could become owner acceptance/engineering certification.",
+      "next_test": "Keep strict normal FAIL unchanged pending narrow diagnosis; run named future tests only in selected authorized scope.",
+      "rationale": "Normal cause, full shader/pixel parity, physical devices, screen-reader and sustained GPU tests remain unresolved. Rights/private custody/architecture/Free-only preview boundaries remain explicit. Task budgets include integration and do not authorize execution. No protected holdout or outcome uplift is claimed."
+    }
+  ],
+  "acceptance_assessment": {
+    "AC01": "supported with current-authority citation correction E02",
+    "AC02": "supported by root live receipt chain; reviewer analytical/file verification only",
+    "AC03": "supported as source-specific backlog; head independently observed; all-era finish closure remains pending",
+    "AC04": "supported with talon-direction clarification E04 before its execution",
+    "AC05": "supported documentary boundaries; no new publication audit replay",
+    "AC06": "supported with live receipt attribution limit and frozen-backlog citation preference",
+    "AC07": "supported; conditional/unknown product tests are not failures",
+    "AC08": "in-progress protocol obligation, not yet satisfied by PASS01 initial result; root must retain all successive records and conditional adjudication"
+  },
+  "release_conditions": [
+    "Use this as an analytical stage-aware baseline only; no owner/artistic/full-product approval.",
+    "Refresh current GOAL authority anchors and prefer frozen PASS01 backlog citations over mutable backlog-working01 references in CLM-008/012 before downstream execution.",
+    "Clarify MB-T011 correction direction before selecting claw implementation.",
+    "Root completes remaining independent roles, conditional disruptor/negotiator and later four passes; no missing result treated as agreement."
+  ],
+  "strongest_surviving_objection": "Current authority citation lineage still names an older main revision/shifted lines; current snapshot is correct but those references should be repaired before routing new implementation.",
+  "review_expiry_trigger": "Any changed production/source/reference bytes, owner scope, remote served identity, proposed task semantics or new decisive product/visual evidence.",
+  "notes": "Approve-with-limits applies to the frozen gap-roadmap baseline, not model acceptance. Direct visual observations precede technical counts. Shared history and no holdout cap confidence; missing broader product tests remain unknown. A quick memory registry search found general prior Equilibrium notes but supplied no decisive project evidence."
+}

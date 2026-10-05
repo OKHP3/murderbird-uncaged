@@ -1,0 +1,111 @@
+{
+  "role": "outcome",
+  "pass_id": "PASS04",
+  "decision": "approve-with-limits",
+  "confidence": "medium",
+  "execution_status": "analytical",
+  "artifact": {
+    "path": "assets/audit/cg-production-delivery01/review-passes/pass04/backlog.json",
+    "sha256": "3e4c4a589e1dca7ada7a13f66342281c7a0dadbf2a7021e3785fa514546a0bc9",
+    "hash_verified": true,
+    "question": "Is the developing next-task/goal list complete, ordered by source impact, bounded and independently testable without imposing superseded engineering gates?"
+  },
+  "independence": {
+    "role_prompt_id": "PASS04-outcome-parent-NEW_TASK",
+    "context_id": "/root/five_pass_outcome:PASS04",
+    "system_prompt_id": "Inherited runtime instructions; provider prompt ID/hash not introspected",
+    "configured_model": "unknown; not introspected",
+    "source_set": "Exact frozen PASS04 backlog.json and its human companion; current task/dependency/budget fields",
+    "retrieval_date": "2026-10-05 UTC",
+    "tools_permissions": "Local read-only shell; write only own outcome.json; no children, models, dependencies, remote operations or peer reports",
+    "shared_context_limit": "Own prior pass judgments/source-image observations retained; common sources/history and potentially shared model correlate judgments. No broad image rescan or other reviewer result was read.",
+    "protected_holdout_present": false,
+    "external_holdout_present": false,
+    "acceptance_limit": "Proposal review is not operational cap proof, new model score, owner acceptance or unseen outcome evidence"
+  },
+  "walkthrough": [
+    "Freeze exact source scopes and candidate base at T013; complete only T015's current retained-custody/invariant preflight.",
+    "T062 names owned contributors/files, picks feasible shared suballocations, validates actual counters and drills stop/interrupt behavior before modeling dispatch.",
+    "T001's preflight selects the bounded connected-head plan and applicable authority; this is sufficient to start T002 bill and T004 crown without a finished head.",
+    "T003 follows the bill root; T005 integrates optic/brow after cheek/crown. T006 judges the assembled landmarks; T007 checks the join while preserving body/stance.",
+    "After candidate creation, T014 supplies all-era eight-view/whole-bird/head pairs and T015 appends retained-gain comparisons. A scoped owner retain/reject/change direction decision may follow within the head packet.",
+    "Later complete body/era-finish work, provisional T012 packet and controlled representation limits support T020's separate exact per-era artistic decisions. Full finish/owner acceptance is not a 45-minute head-packet prerequisite."
+  ],
+  "material_findings": [
+    {
+      "id": "P04-OUT01",
+      "claim": "The source-first sequence has valid dependencies and no remaining finished-head-before-construction blocker.",
+      "claim_type": "design choice",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:planning_rules", "BACKLOG:T001/scope_slices", "BACKLOG:T002..T005/prerequisite_dependency_scope", "BACKLOG:T015,T062", "BACKLOG:next_series_proposal"],
+      "evidence": "All dependency targets exist and the graph has no cycles. T001 and T015 preflight/postflight slices are explicit. The component edges now require only T001 authority/plan, not completed comparisons. Eight-view/preservation postflight and scoped partial direction are distinct from T020 full-era finish acceptance. Source-impact priority follows the previously inspected head relationships, and later mechanics remain separately authorized.",
+      "consequence": "Without these slices, workers could wait for the model they are supposed to create or silently inflate a partial checkpoint into track completion.",
+      "next_test": "Use the walkthrough against the exact named assignment ledger; each dispatch must identify a satisfied preflight slice and each acceptance must identify its exact postflight artifact."
+    },
+    {
+      "id": "P04-OUT02",
+      "claim": "JSON budgets correctly separate generated-output and provider-total limits, but their feasibility is explicitly unproved.",
+      "claim_type": "design choice",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:next_series_proposal/accounting_unit,cap_status,controller", "BACKLOG:T062", "BACKLOG:tasks/proposed_bounded_allocation"],
+      "evidence": "The shared proposal is 45 minutes, 12,000 generated-output tokens and 500,000 cached-inclusive provider-total tokens, including root/workers/QC/integration. Output is counted as a separate constraint rather than added twice to total. Observed counters are not billed cost or hard enforcement. T062 requires reliable counter access, feasible per-worker allocations and a harmless stop drill before dispatch; unavailable counters cause a partial/not-ready report rather than an endless fallback.",
+      "consequence": "Unit confusion or a plan presented as proven could repeat uncontrolled resource consumption.",
+      "next_test": "Record counter semantics/baselines, an explicit elapsed clock start, selected source/context sizes, actual per-worker output/provider budgets and reserve for integration/eight-view QC; execute the harmless threshold/interrupt drill before claiming ready."
+    },
+    {
+      "id": "P04-OUT03",
+      "claim": "The frozen human-readable budget summary contradicts the current JSON unit contract.",
+      "claim_type": "fact",
+      "status": "disputed",
+      "evidence_ids": ["backlog.md:9", "backlog.md:per-task Proposed ceiling lines", "BACKLOG:next_series_proposal"],
+      "evidence": "Markdown line 9 still states the shared ceiling as 45 minutes / 12,000 aggregate tokens. Per-task prose offers generated output as new units or original aggregate units as historical draft, while the current JSON specifies 12,000 generated output and a separate 500,000 provider-total cap. The current reader should not have to choose which accounting unit governs execution.",
+      "consequence": "The owner or successor could approve one resource contract while workers execute another, or mistake the provider ceiling for a validated budget revision.",
+      "next_test": "Rewrite the current markdown headline and task cap language to the single JSON contract, explicitly labeling old units as preserved historical context only. Read both artifacts together before the next freeze."
+    },
+    {
+      "id": "P04-OUT04",
+      "claim": "The resource stop threshold needs a numerical definition rather than the phrase 80% headroom.",
+      "claim_type": "design choice",
+      "status": "provisional",
+      "evidence_ids": ["BACKLOG:next_series_proposal/controller", "BACKLOG:T062/deliverable_and_closure_evidence"],
+      "evidence": "The controller says cease new calls at 80% headroom and T062 asks for an 80%-headroom stop. That could mean 80% used with 20% remaining, or 80% remaining. Monitoring every 60 seconds and interrupting at the ceiling are clear, but the new-dispatch threshold is not yet computable from the text.",
+      "consequence": "Controllers could stop at materially different points or spend the reserve intended for integration/partial-result preservation.",
+      "next_test": "State the chosen rule numerically. If 80% used is intended, cease new dispatch at 9,600 output tokens, 400,000 provider-total tokens or 36 minutes, whichever applicable counter reaches its threshold first; specify how already running calls and reserved closure work are handled, then drill it."
+    },
+    {
+      "id": "P04-OUT05",
+      "claim": "Per-task ceilings are not a feasible schedule or additive allowance, and the draft correctly blocks dispatch pending selection.",
+      "claim_type": "interpretation",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:T013,T015,T062/proposed_bounded_allocation", "BACKLOG:T001..T006/proposed_bounded_allocation", "BACKLOG:next_series_proposal/cap_status"],
+      "evidence": "Preflight maxima alone are T013 30 minutes/3,000 output, T015 30/3,000 and T062 20/3,000. Several component maxima are 4,000 output each. Spending all those maxima would exceed the shared envelope before evidence/integration. They are explicitly selectable ceilings, not scheduled spends, and the proposal says feasibility must be validated before dispatch. This is useful planning, not operational readiness.",
+      "consequence": "Starting every task at its printed maximum could exhaust the packet before a complete reviewable bird is produced.",
+      "next_test": "Select and schedule only the necessary slices, credit already frozen evidence only where still applicable, and show a critical-path/time-and-token allocation whose totals fit the shared envelope. Define whether separately selected preparation precedes the 45-minute clock; do not silently exclude it."
+    },
+    {
+      "id": "P04-OUT06",
+      "claim": "The 62-entry inventory distinguishes completed delivery, maintenance and genuine remaining evidence/work.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:tasks/status", "BACKLOG:T029,T030,T031,T035,T036,T038,T039", "BACKLOG:validation"],
+      "evidence": "There is one CLOSED delivery entry (T029), two current-pass future-maintenance entries (T036/T038), and 59 other inventory entries. Those 59 include limited existing passes, confirmed rules, unknown evidence, owner decisions and conditional phases; they are not 59 fresh observed failures or 59 tasks authorized for execution. Local-pass coverage and reopen-on-changed-evidence rules remain visible. Formal counters consistently record three completed passes before this PASS04 result.",
+      "consequence": "Counting every inventory entry as unfinished failure would mislead prioritization and repeat already completed work.",
+      "next_test": "When selecting a series, publish selected slices and exact status transitions; reopen only changed or stale evidence, retaining prior scoped passes and historical failure records."
+    }
+  ],
+  "evidence_ids": ["PASS04 freeze/backlog.json", "PASS04 backlog.md", "T001..T020 dependency/slice/closure fields", "T029..T039 status refresh fields", "T062", "next_series_proposal"],
+  "assumptions": [
+    "No actual counter drill, scheduler/controller test, model work, live source refresh or owner artistic decision ran in this review.",
+    "Proposed ceilings cannot prove that a useful connected-head candidate and complete postflight evidence will fit; the explicit pre-dispatch feasibility gate handles that uncertainty.",
+    "No protected holdout or independent external model family evidence is available."
+  ],
+  "release_conditions": [
+    "Approve only the analytical roadmap and dependency sequence; do not claim ready for dispatch until T062 closes against actual evidence.",
+    "Align the current human-readable budget units with JSON and define numeric stop thresholds.",
+    "Choose a feasible selected-slice schedule/allocation with an explicit elapsed clock and reserved closure work before modeling.",
+    "Preserve source goal UNMET/owner PENDING, scoped partial direction versus full-era artistic decisions, and conditional engineering authority."
+  ],
+  "smallest_correction": "Correct the markdown budget contract and replace 80% headroom with numeric thresholds. The existing T062 gate should then produce the concrete selected allocation/clock/drill record before dispatch; no model change or roadmap-wide rewrite is needed.",
+  "review_expiry_trigger": "Changed selected scope, accounting semantics, controller capability, source/candidate hash or task dependencies requires scoped refresh.",
+  "notes": "The plan is useful and structurally executable as a bounded proposal. Operational feasibility remains unproved and is honestly gated. Two reader/controller ambiguities should be corrected before a successor treats this as an executable resource contract."
+}

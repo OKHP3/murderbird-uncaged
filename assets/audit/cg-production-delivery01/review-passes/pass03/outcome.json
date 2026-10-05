@@ -1,0 +1,105 @@
+{
+  "role": "outcome",
+  "pass_id": "PASS03",
+  "decision": "approve-with-limits",
+  "confidence": "medium",
+  "execution_status": "analytical",
+  "artifact": {
+    "path": "assets/audit/cg-production-delivery01/review-passes/pass03/backlog.json",
+    "sha256": "ac72eaa1deaa7d54b2c40cce0287145339d06160d108604cc22aa2876b10f613",
+    "hash_verified": true,
+    "question": "Do the production, Replit preview and Notion readbacks communicate and serve the same retained candidate, while preserving runtime controls and disclosing tested limits?"
+  },
+  "independence": {
+    "role_prompt_id": "PASS03-outcome-parent-NEW_TASK",
+    "context_id": "/root/five_pass_outcome:PASS03",
+    "system_prompt_id": "Inherited runtime instructions; provider prompt ID/hash not introspected",
+    "configured_model": "unknown; not introspected",
+    "source_set": "Exact frozen PASS03 backlog, goal, surface-freeze02 and its GitHub/Pages/Replit/Notion receipts, technical-release-QC, CG publication and scenario/chronology records",
+    "retrieval_date": "2026-10-05 UTC",
+    "tools_permissions": "Local read-only shell; write only own PASS03 outcome.json. No browser execution, external writes, children, modeling or dependencies.",
+    "peer_reports_seen": false,
+    "context_limit": "Own PASS01/PASS02 saved-image observations and historical context retained. Peer report resource names were visible in freeze, but peer report content was not read. Shared model/sources/history can correlate judgments.",
+    "protected_holdout_present": false,
+    "external_holdout_present": false,
+    "acceptance_limit": "No blind owner judgment, new model score, synthetic human acceptance, hardware certification or outcome uplift is claimed"
+  },
+  "material_findings": [
+    {
+      "id": "P03-OUT01",
+      "claim": "The exact receipts describe the same retained model source and current production revision on the three delivery/documentation surfaces.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["surface-freeze02.json", "github-production-receipt01.json", "live-pages-receipt01.json", "live-pages-receipt02.json", "replit-preview-receipt03.json", "notion-delivery-readback02.json", "cg-publication.json"],
+      "evidence": "Frozen receipt hashes matched locally. Model source remains e305989b; current production and root-observed clean Replit served revision are 109e9e7. Pages receipt02 records deployment37244718043 and current release-manifest identity. Its 96 CG entries bind to original streamed byte proof; two changed paths were streamed after the runtime fix and 152 unchanged paths explicitly rely on receipt01. Notion readback repeats that revision, private preview route and UNMET/PENDING limits. Source-model revision and app production revision are distinct, not competing candidates.",
+      "consequence": "Mixing app revision, old deployment and retained model revision could cause a wrong-candidate review or false synchronization claim.",
+      "next_test": "Refresh the exact manifest/served-model receipts only when a candidate or deployment changes; keep documentation synchronization separate from binary hosting. This role did not freshly query remote state."
+    },
+    {
+      "id": "P03-OUT02",
+      "claim": "Runtime evidence supports scoped static assessment capabilities while retaining the separate V37 demonstration and unknown equivalence work.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["technical-release-qc01.json:/checks", "live-pages-receipt01.json:/browser", "live-pages-receipt02.json:/browser,/limits", "replit-preview-receipt03.json", "BACKLOG:MB-T018,MB-T019,MB-T030..MB-T036"],
+      "evidence": "The CG GLB record has zero skins/animations. Receipt01 checks all-era native light images and Advanced static 3D orbit/zoom/reset; receipt02 narrows to delayed-download Exhibit selection with actual renderer/status/button agreement. Replit independently reports the clean served revision and manually loaded Advanced controls, while held-request harness and full suite remain NOT RUN there. Unchanged runtime bytes preserve implementation custody, not proof of a newly replayed full V37 journey. Normal FAIL and shader/color-management/pixel parity UNKNOWN remain explicit.",
+      "consequence": "Native images, software-rendered controls or byte equality could be mistaken for full animated integration, all-era live-3D coverage or image parity.",
+      "next_test": "Use T018/T019 for narrow normal/equivalence diagnosis, T030/T031 for genuinely untested named environments, and T033/T034 for exact V37 inspection/journey coverage. Do not gratuitously repeat already passing scoped tests."
+    },
+    {
+      "id": "P03-OUT03",
+      "claim": "The head-construction sequence now separates preflight authority from postflight evidence and partial direction from full-era artistic acceptance.",
+      "claim_type": "design choice",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:MB-T001/scope_slices", "BACKLOG:MB-T002..MB-T005/prerequisite_dependency_scope", "BACKLOG:MB-T012", "BACKLOG:MB-T020", "BACKLOG:next_series_proposal/postflight_gates"],
+      "evidence": "T001 now has explicit plan/authority preflight and assembled-head/eight-view postflight slices; T002–T005 restrict their T001 edges to preflight. No completed successor is required to start construction. T012 is a provisional packet/partial checkpoint decision, not G1 acceptance. The 45-minute head packet permits a scoped retain/reject/change direction decision with declared normal/finish limits; T020 remains a separate full-era gate and now depends on T022–T027 finish work. T020's T019 edge requires a controlled representation and declared limits, not an invented shader-parity pass. Static jaw comparison is explicitly distinguished from implemented animation.",
+      "consequence": "A circular acceptance interpretation or oversized full-era gate could stop useful head work, or a partial direction decision could be reported as track completion.",
+      "next_test": "Walk the selected head assignment from T013/T015 preflight/T062 through construction and eight-view postflight before dispatch, then ask the owner only for the exact declared checkpoint decision."
+    },
+    {
+      "id": "P03-OUT04",
+      "claim": "Current human accessibility work can proceed without waiting for later inspection or animation, and existing automation is not promoted to human/device evidence.",
+      "claim_type": "design choice",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:MB-T039..MB-T042", "BACKLOG:MB-T045,MB-T046", "live-pages-receipt01.json:/browser/rendering,/checksNotRun", "replit-preview-receipt03.json:/worker_release_checks"],
+      "evidence": "T039 separates current static/no-forced-motion and V37 calm preference from later aggressive-state alternatives. T040/T041 have current CG human keyboard and screen-reader slices with no future-inspection dependency; later legacy/future journeys remain separately named. T042 retains narrow-layout/synthetic-touch evidence while requiring physical hardware. T045/T046 require named sustained hardware-GPU/network/memory measurements. SwiftShader screenshots and source/build reports do not satisfy those tasks.",
+      "consequence": "Future-work dependencies could unnecessarily delay today's accessibility review, while automated element/control tests could falsely close human acceptance.",
+      "next_test": "Named human CG keyboard and assistive-technology journeys at exact revision can run now; record physical-device and sustained hardware measurements separately when selected."
+    },
+    {
+      "id": "P03-OUT05",
+      "claim": "B11 now preserves its full future semantics instead of being reduced to varied idle behavior or power/processing labels.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["BACKLOG:criterion_task_map/B11", "BACKLOG:MB-T050", "BACKLOG:MB-T058", "docs/murderbird-evaluation-prd.md:206"],
+      "evidence": "T050 requires the two 120-second purposeful-acting runs and adds extended encounter without routine refuel/depletion, independent power/processing inspection and interface-copy review that does not advertise procedural behavior as demonstrated learning AI. T058 supplies the distinct future inspection evidence. B11 remains conditional later motion, with no current static acceptance claim.",
+      "consequence": "A local behavior routine could be falsely advertised as learning AI or a decorative cavity could be treated as a complete power/persona distinction.",
+      "next_test": "In the separately selected future phase, inspect extended encounter logs, distinct processing/power representation and exact interface copy together; two short runs alone do not close B11."
+    }
+  ],
+  "criteria_assessment": {
+    "AC01": "52/F01–F10 coverage retained; this pass targets runtime/acceptance semantics rather than a fresh full-product grade",
+    "AC02": "exact receipt identity supported within frozen record; no fresh remote replay",
+    "AC03": "prior actual saved-image findings retained, no new image score or owner acceptance",
+    "AC04": "previous dependency ambiguity resolved; current/future closure slices usable",
+    "AC05": "private preview/Free-only/source custody and architecture limits remain explicit",
+    "AC06": "root-observed versus worker-reported versus historical/not-run evidence distinguished",
+    "AC07": "static CG, V37, future motion/inspection and mechanics boundaries preserved",
+    "AC08": "PASS03 initial result only; completion of five successive adjudicated records remains unproved here"
+  },
+  "evidence_ids": ["PASS03 freeze/backlog", "surface-freeze02.json", "github-production-receipt01.json", "live-pages-receipt01.json", "live-pages-receipt02.json", "replit-preview-receipt03.json", "notion-delivery-readback02.json", "technical-release-qc01.json", "cg-publication.json", "scenario-task-map01.json", "surface-chronology01.json"],
+  "assumptions": [
+    "Receipt observations are supplied frozen execution records. Local hash verification confirms exact records, not current remote availability.",
+    "No broad repeat image scan, live runtime replay, native probe, human journey or hardware measurement occurred in this role.",
+    "Private Replit preview can sleep, external selected-port routing is limited, connector authorization remains unresolved and preservation bundle coverage is incomplete as disclosed.",
+    "Notion is a continuation record; canonical creative binaries remain in the repository."
+  ],
+  "release_conditions": [
+    "Approve only the analytical delivered-surface/regression roadmap claim within recorded scope.",
+    "Maintain source goal UNMET/owner PENDING, static CG versus V37 and explicit normal/parity/holdout limits.",
+    "Do not relabel Advanced-only live 3D, worker-reported Replit checks or software rendering as full all-era/human/hardware acceptance.",
+    "Refresh exact affected receipts after changes and complete the remaining separate review passes before claiming five-pass completion."
+  ],
+  "smallest_correction": "No material correction required for this frozen pass. Preserve the recorded per-surface evidence limits and use current human-review slices as written when selecting next work.",
+  "review_expiry_trigger": "Candidate/runtime/deployment/reference hash change, changed receipt or owner decision requires scoped refresh.",
+  "notes": "The frozen receipts and revised roadmap are useful and truthful about current static CG delivery, preserved V37 custody and outstanding evidence. The strongest remaining limit is incomplete all-environment/human/hardware testing, already disclosed; it does not invalidate the scoped assessment delivery."
+}
