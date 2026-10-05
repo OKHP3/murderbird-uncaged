@@ -1,0 +1,48 @@
+{
+  "role": "safety-portability",
+  "pass": 5,
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "artifacts": {
+    "continuation-ledger-pass05.json": "5e2f03aa3a8cee1ea516f7446f48f4c00f7dfd51bce5a8da8e45a7d7a6412dd5",
+    "report-draft-pass05.md": "ed26b140f0d9e82f31229467f4c1106921af52453989269151e5ffc4335f6a70"
+  },
+  "decision": "approve-with-limits",
+  "decision_scope": "Final analytical continuation plan; no implementation, artistic acceptance or subsequent publication proof.",
+  "own_checks": "Both input hashes and ten historical-main hashes match. Ten T03–T12 selectors pass structural checks. Counts: 62 tasks, one closed, two maintenance, 59 remaining; 52 criteria, 10 findings, 18 scenarios.",
+  "findings": [
+    {
+      "id": "SP05-SELECTORS",
+      "claim_status": "supported",
+      "claim": "Explicit V37 observation slices depend only on MB-T029, require supported-state inventory, prohibit implementation/substitution and disable successor attainment transfer.",
+      "support": ["ledger:/current_diagnostic_contract", "ledger:/scenario_task_map"],
+      "consequence": "Future task gates no longer need to delay baseline diagnosis.",
+      "smallest_decisive_test": "Execute selected supported V37 observations later; record absent capabilities and actual revision. Structural readiness is not runtime success."
+    },
+    {
+      "id": "SP05-CLAIM-CLOSURE",
+      "claim_status": "supported-with-supplied-receipts",
+      "claim": "59 records distinguish gaps, partial work, missing evidence and proposals. UNMET/PENDING/strict-normal FAIL, static CG/V37 separation and unverified human/media/device evidence remain explicit. Numeric policy is unapproved.",
+      "support": ["ledger:/product_limits", "report:Delivered state and evidence", "report:Completed and maintained records"],
+      "consequence": "Delivery/review completion cannot establish product acceptance.",
+      "smallest_decisive_test": "Close each obligation against scoped executed evidence and owner decisions; replace PASS05_PENDING only after saved root adjudication."
+    },
+    {
+      "id": "SP05-CONTROLS-AUTHORITY",
+      "claim_status": "supported-proposal-only",
+      "claim": "45min/12000 output/500000 provider-total proposal retains 80% stops, closure reserve, bounded outstanding calls and MB-T062 drill. It grants no modeling allocation or hard billing guarantee.",
+      "support": ["ledger:/next_series_proposal", "report:Next series and closure order"],
+      "consequence": "Unverified enforcement or inherited authority could enable another uncontrolled loop.",
+      "smallest_decisive_test": "Select owner scope and feasible owned suballocations; demonstrate counter-loss/breach/in-flight stop behavior before implementation."
+    },
+    {
+      "id": "SP05-CUSTODY-PUBLICATION",
+      "claim_status": "supported-with-limits",
+      "claim": "Rights, ignored private archives, ordinary-public review limit and 17-commit parent preservation remain explicit. Connector/all-ref recovery limits persist; subsequent documentation requires its own release receipt.",
+      "support": ["ledger:/tasks/35", "ledger:/tasks/60", "report:Continuation housekeeping", ".gitignore:10", "NOTICE.md"],
+      "consequence": "Review archives or preserved parent work must not become accidental runtime inputs or unreviewed imports.",
+      "smallest_decisive_test": "Inspect intended dist/source inventory on later publication; verify exact new SHA/deployment and scoped preview/editorial receipts separately."
+    }
+  ],
+  "limits": ["Ledger/report pointers refer to frozen PASS05 inputs", "No peers, runtime replay, visual scoring, human/device/listening or enforcement proof", "Shared model/sources; no protected holdout"]
+}

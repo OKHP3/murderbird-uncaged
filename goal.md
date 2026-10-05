@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-05T01:09:52.867918+00:00"
+last_updated: "2026-10-05T06:55:38.172Z"
 timezone: "America/Chicago"
 status: "retained-cg-assessment-delivered-review-complete"
 canonical_path: "goal.md"
@@ -27,7 +27,15 @@ Import exact retained native sources, exports and supporting evidence without al
 
 The integration record is [CG production release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md). The original completed-run assessment and limits remain in [architect assessment](assets/audit/cg-recursive-three-loop01/architect-assessment-final.md) and [Loop03 handoff](assets/audit/cg-recursive-three-loop01/loop03/handoff.json). Actual GitHub merge, Pages deployment, live asset delivery, Replit checkout and Notion receipt must each be verified separately. Earlier status snapshots below are preserved history.
 
-## Current production and next-goal review
+## October 5 verified production and fresh continuation review
+
+The owner repeated the production/surface delivery and five-pass review request on the Windows host. [PR #36](https://github.com/OKHP3/murderbird-uncaged/pull/36) repairs Windows CG release preparation and scoped runtime text line endings. Before review, clean release `4c5a1055d2be6bdd895aa4cebac342147f8930e9` passed exact-SHA main validation and Pages deployment; all 154 live payloads were freshly hashed against the clean Windows build. The isolated Replit port 3000 preview was fast-forwarded, rebuilt and observed; its parent remains preserved at `0d7366d8` with 17 local-only commits, and both API connections still require reauthorization. A dated Notion receipt was saved and read back. Replit remains Free mode development only. These receipts are a dated review freeze; later documentation delivery has its own manifest SHA and final surface receipt.
+
+Five fresh successive analytical Equilibrium Review passes are complete in the [October 5 report](docs/evaluations/windows-five-pass-review-2026-10-05.md), [completed review record](assets/audit/windows-production-closeout-2026-10-05/five-pass-review.json) and [current task ledger](assets/audit/windows-production-closeout-2026-10-05/task-ledger.json). There are 59 unfinished/partial/unverified/conditional records, one scoped closed delivery and two passing maintenance obligations. All 52 PRD IDs, F01–F10 and 18 scenarios remain accounted for. The current ledger corrects readable lyrics closure, independent existing-video checks, current V37 diagnostic selection and the 17-commit Replit inventory. Current T03–T12 read-only observation does not require a successor rig and cannot close successor motion.
+
+**Source likeness remains UNMET; owner artistic acceptance PENDING; strict normal parity FAIL at its unchanged threshold; PRD NOT SCORED.** The current recommended visual packet is still one connected source-specific head, preserving the retained breast/underlap/toe/crown gains and stance. Its proposed shared ceiling remains 45 minutes / 12,000 generated output / 500,000 provider-total tokens, with an 80% modeling stop and 20% closure reserve. This release/review does not select that packet or grant a new modeling allocation. Applicable owner scope, feasible owned suballocations, reference custody and MB-T062 counter/stop demonstration precede new implementation. Earlier milestone budgets below retain their original checkpoint scope. Animation/mechanics remain separately selected phases. No protected visual holdout or fresh human/device/listening/performance acceptance was supplied by this review.
+
+## October 4 production and next-goal review (historical receipt)
 
 The retained assessment was delivered and directly verified at `109e9e7a405ada1d9a466f1225bde4662a2dc777` on GitHub Pages, the selected private Replit Preview and the Notion continuation page. [PR31](https://github.com/OKHP3/murderbird-uncaged/pull/31) imports the preserved result; [PR32](https://github.com/OKHP3/murderbird-uncaged/pull/32) fixes delayed-load lighting. This delivery supersedes historical pending/no-promotion snapshots for this retained assessment only. Model/source likeness is still **UNMET**, and owner artistic acceptance is **PENDING**.
 
@@ -94,7 +102,7 @@ Choose an editable, browser-reliable surface pipeline that visibly supplies regi
 
 The visual gate is a recognizable MurderBird whose color, surface character and overall appearance closely match the pinned reference set across eras, cameras and lighting, subject to owner artistic review. Automated checks, worker agreement and deployment do not establish that acceptance. No engineering certification is required or claimed. Later mechanics/fitment is a separate follow-on priority; do not describe it as completed by this visual stage.
 
-## Branch and commit pins
+## Branch and commit pins (September 30–October 2 snapshot)
 
 - Frozen engineering archive: branch `codex/v38-engineering-archive`, commit `9cc1b3c2da8cb064f343ab5915b32d0ab53236b1` ("Add hanging breast checkpoint and following home camera"). No new work lands on this line; it is reference geometry.
 - CG working track: `codex/cinematic-vfx-milestone01`, created and pushed on owner authorization. Initial tip: `c2041bdb67bebf301cd616a5dcf1db3f04361aa3`; current tip is authoritative in Git and checkpoint handoffs. The original integration branch is preserved without resetting or rewriting it.
@@ -117,7 +125,7 @@ Keep bounded parallel work, cheap targeted checks, coherent commits and frequent
 
 The previous operational goal is preserved locally in the Git-ignored supervision archive. Prior repository directives remain in Git history and the creative-authority record; their reference, rights and preservation rules still apply.
 
-## Current authorization — Milestone 2b avian identity and cinematic construction
+## Milestone 2b authorization (historical checkpoint scope)
 
 Owner directs: “Let’s push it and try 10 agents for up to 5 hours and no more than 1million tokens to see if we can push through the jamb with brute force.” New attempt from exact preserved CG revision `3df3cb18ebdcdc522eb6a388a170df912b299d89`; working branch `codex/cinematic-vfx-milestone02b`. Start 2026-10-03T22:34:59Z; deadline 2026-10-04T03:34:59Z. Aggregate token ceiling 1,000,000 including workers and integration; this is a ceiling, not a spending target.
 

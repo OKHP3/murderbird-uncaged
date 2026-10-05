@@ -1,0 +1,37 @@
+{
+  "role": "disruptor",
+  "pass": "PASS05",
+  "evaluation_status": "analytical",
+  "input_hashes_verified": {
+    "continuation-ledger-pass05.json": "5e2f03aa3a8cee1ea516f7446f48f4c00f7dfd51bce5a8da8e45a7d7a6412dd5",
+    "report-draft-pass05.md": "ed26b140f0d9e82f31229467f4c1106921af52453989269151e5ffc4335f6a70",
+    "ten_original_sources": "All match freeze.json"
+  },
+  "counterexamples": [
+    {
+      "id": "D05-COUNTS",
+      "hypothesis": "Final counts omit unfinished tasks or misclassify maintenance as completion.",
+      "test": "Pure-data count and exact report-heading comparison.",
+      "evidence": "62 unique tasks =59 remaining +1 scoped delivery +2 maintenance;52 criteria,10 findings,18 scenarios. Report has59 matching headings;zero omissions.",
+      "status": "refuted",
+      "consequence": "Accounting is complete; mapped/maintained records still do not establish product attainment."
+    },
+    {
+      "id": "D05-SELECTORS",
+      "hypothesis": "Current V37 observation still inherits future implementation prerequisites.",
+      "test": "Evaluate ten T03-T12 selectors with only T029 closed and future tasks unstarted.",
+      "evidence": "Ten eligible,zero failures: dependencies only T029;candidate V37;read-only mode;required supported-state inventory;NOT RUN;successor-transfer false. Scenario current_diagnostic_slice separates task links from observation prerequisites.",
+      "status": "refuted",
+      "consequence": "Documentary selection is ready; unavailable controls must be recorded, never implemented or substituted."
+    },
+    {
+      "id": "D05-COMPLETION-AUTHORITY",
+      "hypothesis": "Final wording counts historical reviews as this chain or grants modeling/acceptance authority.",
+      "test": "Compare ledger progress/limits with draft:5,35,41-51.",
+      "evidence": "Historical chains explicitly separate;four completed passes and intentional PASS05_PENDING precede adjudication. UNMET/PENDING/normal FAIL persist. Proposed envelope is no allocation;T062 remains required;later publication needs new receipts.",
+      "status": "refuted",
+      "consequence": "Analytical planning approval grants neither implementation nor artistic acceptance."
+    }
+  ],
+  "limits": ["Read-only/pure-data checks;no runtime or remote replay", "Shared model/sources;no protected holdout", "Root adjudication remains pending"]
+}

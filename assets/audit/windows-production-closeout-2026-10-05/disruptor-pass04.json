@@ -1,0 +1,28 @@
+{
+  "role": "disruptor",
+  "pass": "PASS04",
+  "evaluation_status": "analytical",
+  "artifact": "continuation-ledger-pass04.json",
+  "artifact_sha256": "187fa80b56b518ee4f016c66a61853b660dc2213fe57eb463c868682cd2f2629",
+  "objections": [
+    {
+      "id": "D04-DIAGNOSTIC-ROUTE",
+      "hypothesis": "A task-graph dispatcher can still block current T03-T11 diagnosis behind future implementation.",
+      "test": "Pure-data selection: T03 maps only T047, whose dependencies are T017/T057 and phase is conditional animation; T047 has no current scope slice. T04/T048 and T11/T057-058 have similar routing.",
+      "counterevidence": "Planning rule13 and every scenario current_scope explicitly permit independent diagnosis. T056 now provides a concrete delivery-only V37 slice.",
+      "status": "survives",
+      "consequence": "Human interpretation can proceed, but generic permission and machine task routing remain inconsistent; no actual runtime block is demonstrated.",
+      "smallestnexttest": "Add explicit current-diagnostic slices/edges for affected scenarios; select them with T017/T057 unstarted and verify documentary readiness."
+    },
+    {
+      "id": "D04-BUDGET",
+      "hypothesis": "Task caps are additive allocations or operational hard limits.",
+      "test": "Sum output maxima:216000 exceeds shared12000; inspect proposal cap_status, accounting, controller and T062 evidence status.",
+      "counterevidence": "Planning rule4 explicitly forbids summed automatic runs. Cap status requires feasibility/monitor drill; cached input is not double-counted; pending calls,80%stop,reserve,counter-loss and cancellation limits are explicit. Drill is unrun; no billing guarantee.",
+      "status": "refuted",
+      "consequence": "Planning approval supplies no dispatch or enforcement proof.",
+      "smallestnexttest": "Select feasible owned suballocations and complete harmless monitoring/counter-loss/in-flight-stop drill before implementation."
+    }
+  ],
+  "limits": ["Read-only/pure-data checks; no runtime", "Shared model/sources; analytical planning only"]
+}

@@ -1,0 +1,46 @@
+{
+  "role": "safety-portability",
+  "pass": 4,
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "artifact": ".local/production-closeout-20261005/equilibrium/continuation-ledger-pass04.json",
+  "artifact_sha256": "187fa80b56b518ee4f016c66a61853b660dc2213fe57eb463c868682cd2f2629",
+  "decision": "approve-with-limits",
+  "decision_scope": "Continuation overlay; implementation/monitoring readiness remains deferred.",
+  "own_checks": "Frozen hash matches. Read-only graph check: 62 tasks, 52 criterion maps, 10 finding maps, 18 scenarios; no missing task references or dependency cycles.",
+  "findings": [
+    {
+      "id": "SP04-CORRECTED-ROUTES",
+      "claim_status": "supported",
+      "claim": "Current V37 T12 and approved video checks depend on closed delivery, independently of future rig/reference work. Lyrics now require keyboard opening, source/version and failure evidence.",
+      "support": ["/tasks/55/scope_slices", "/tasks/43/scope_slices", "/tasks/42/deliverable_and_closure_evidence"],
+      "consequence": "Routing correction must not become a claimed runtime pass.",
+      "smallest_decisive_test": "Documentary readiness with MB-T017/057 unstarted; then separately record actual V37/media results."
+    },
+    {
+      "id": "SP04-CROSSWALK",
+      "claim_status": "supported-with-interpretation-limit",
+      "claim": "Scenario crosswalk preserves current-versus-successor scope, but T03–T11 also map conditional implementation tasks. Generic diagnostic permission must override future prerequisites only for current observation.",
+      "support": ["/planning_rules/13", "/scenario_task_map", "/tasks/46", "/tasks/47", "/tasks/57"],
+      "consequence": "A dispatcher could still delay existing-era safety diagnosis or transfer V37 attainment to static CG.",
+      "smallest_decisive_test": "Select available T03–T12 diagnostic slices with future tasks unstarted; show readiness without authorizing implementation or closing successor obligations."
+    },
+    {
+      "id": "SP04-AUTHORITY-PUBLIC",
+      "claim_status": "supported",
+      "claim": "New modeling remains proposed; rights/Free-only rules persist. Ordinary public inputs require explicit review or a stronger manifest/negative fixture. Private sessions/report remain ignored.",
+      "support": ["/tasks/35/deliverable_and_closure_evidence", "/tasks/37", "/next_series_proposal/authority", ".gitignore:10"],
+      "consequence": "Placement or technical checks cannot grant publication/creative authority.",
+      "smallest_decisive_test": "Before changed public admission, bind approved input inventory and prove an ordinary unapproved-file rejection or retain documented manual-review limit."
+    },
+    {
+      "id": "SP04-CONTROLS",
+      "claim_status": "supported-proposal-only",
+      "claim": "Shared 45min/12000 output/500000 provider-total ceilings distinguish cached-inclusive accounting; 80% stops reserve closure, with bounded outstanding calls and owned-process stops. No hard enforcement is established.",
+      "support": ["/next_series_proposal", "/tasks/61"],
+      "consequence": "Unverified counters/cancellation or summed task maxima could overspend the envelope.",
+      "smallest_decisive_test": "MB-T062: feasible shared suballocations, 60-second monitoring, synthetic breach/counter-loss/in-flight latency drill and recorded stop/overshoot limits before implementation."
+    }
+  ],
+  "limits": ["Pointers refer to frozen overlay unless path stated", "No peer reports, runtime replay, hardcap proof, new implementation or owner acceptance", "Shared sources/model; no protected holdout"]
+}

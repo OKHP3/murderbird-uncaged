@@ -1,0 +1,62 @@
+{
+  "role": "evidence",
+  "pass": "PASS05",
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "artifact_path": ".local/production-closeout-20261005/equilibrium/continuation-ledger-pass05.json",
+  "artifact_sha256": "5e2f03aa3a8cee1ea516f7446f48f4c00f7dfd51bce5a8da8e45a7d7a6412dd5",
+  "report_sha256": "ed26b140f0d9e82f31229467f4c1106921af52453989269151e5ffc4335f6a70",
+  "decision": "approve-with-limits",
+  "dispatch_readiness": "defer-for-evidence",
+  "checks_performed": ["PASS05 hashes verified; original sources unchanged", "Simulation: future tasks UNSTARTED, T029 CLOSED; ten selectors eligible; pointers match", "62 = 59 unfinished + one closed + two maintenance; 59 matching report headings"],
+  "findings": [
+    {
+      "claim_id": "EV-V37-014",
+      "claim": "T03-T12 selectors depend only on current delivery, identify V37, require supported-state inventory, and explicitly forbid successor closure transfer. Future task links do not gate observation.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/current_diagnostic_contract/slices", "#/scenario_task_map"],
+      "consequence": "Current diagnosis could inherit future construction dependencies.",
+      "next_test": "Execute selected supported controls at exact release; record unavailable capabilities without implementing substitutes."
+    },
+    {
+      "claim_id": "EV-COUNT-018",
+      "claim": "Human/machine accounting agrees: 62 stable tasks, 52 criteria, ten findings, 18 scenarios; 59 unfinished, one scoped closed delivery, two passing maintenance safeguards.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/tasks", "report-draft-pass05.md#Completed-and-maintained-records"],
+      "consequence": "Missing evidence or maintenance could be mislabeled as product failure/completion.",
+      "next_test": "Preserve counts and task identities when adjudication is appended."
+    },
+    {
+      "claim_id": "EV-ACCEPT-004",
+      "claim": "Final claims preserve UNMET likeness, PENDING owner acceptance, strict-normal FAIL, unscored PRD, static retained CG and no protected holdout. Transport is not visual/runtime acceptance.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/product_limits", "report-draft-pass05.md#Delivered-state-and-evidence"],
+      "consequence": "Review or delivery could inflate artistic attainment.",
+      "next_test": "Separate actual owner, renderer, human/device and scenario evidence before respective closure."
+    },
+    {
+      "claim_id": "EV-CAP-017",
+      "claim": "Resource envelope remains proposed; T062 operational readiness is unrun, so no new modeling dispatch follows planning approval.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/next_series_proposal", "#/tasks/61"],
+      "consequence": "Written controls could authorize unsupported execution.",
+      "next_test": "Monitor/feasibility drill, scoped authority and bounded outstanding-call allowance."
+    },
+    {
+      "claim_id": "EV-CHRON-005",
+      "claim": "FROZEN_FOR_PASS05/four completed passes and PASS05_PENDING accurately precede final adjudication; historical chains remain distinct.",
+      "claim_type": "fact",
+      "status": "supported",
+      "evidence_ids": ["#/formal_review_passes_completed", "report-draft-pass05.md#Review-contract-and-five-passes"],
+      "consequence": "Premature completion or rewritten freezes would corrupt chronology.",
+      "next_test": "Append actual adjudication in a new finalized artifact; verify its later publication revision separately."
+    }
+  ],
+  "evidence_pointer_base": "artifact_path; relative report paths use its directory",
+  "limits": ["Analytical selectors, not executed scenarios", "Supplied remote evidence not rerun", "Shared model/sources; no protected holdout", "Root final adjudication remains pending"]
+}
+

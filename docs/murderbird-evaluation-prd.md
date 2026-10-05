@@ -10,6 +10,12 @@ The product succeeds when someone familiar with the established artwork recogniz
 
 This is a requirements and scoring document, not permission to redesign the character, declare references approved, purchase tools, expose source archives, replace the application architecture, or publish another release. It includes original requirements, subsequent owner clarifications, established project constraints, and explicitly identified proposed evaluation thresholds.
 
+### October 5 interpretation and continuation
+
+The later root [goal](../goal.md) controls current appearance-first CG sequencing: exterior/source likeness precedes separately scoped animation or engineering work. Section 10's original motion/fitment sequence remains historical context for those later phases; it is not a requirement to complete mechanics before current visual correction. Locked September 22 controls full-bird canon, candidate03 records prior body direction, July controls head only, and era images control finish within their pinned scopes. No earlier broad source wording overrides these later assignments.
+
+The [fresh five-pass review](evaluations/windows-five-pass-review-2026-10-05.md) and [current continuation ledger](../assets/audit/windows-production-closeout-2026-10-05/task-ledger.json) retain all 52 stable criterion IDs, F01–F10 and 18 procedures. Explicit current V37 observation slices and existing access/media/performance checks can proceed independently of future CG construction. Results identify their actual candidate and never transfer V37 attainment to static retained CG or a successor. This interpretation changes neither numerical weights/proposed thresholds nor the blank score sheet. It supplies no artistic acceptance, new implementation allocation or engineering certification.
+
 ## 1. Product vision and intended experience
 
 MurderBird: Uncaged is a single-page, science-museum-style encounter with a virtual mechanical creature inside an enclosure. The visitor should feel that a substantial, dangerous machine occupies that space. The visitor can observe, move around it with the camera, approach through an explicit interaction, provoke an era-appropriate response, and understand how its construction works by opening and separating its assemblies.
@@ -438,3 +444,5 @@ Non-goals remain: a new dinosaur, free-flight creature, photorealism at any cost
 Keep criterion IDs stable. Add a change log entry for every new owner requirement, supersession, altered reference scope, scoring weight/threshold or applicability change. Preserve completed score sheets against their original candidate and PRD version. A later improvement does not rewrite an earlier failed assessment.
 
 This version introduces the consolidated index and blank companion worksheet. It does not modify the model, code, source artwork, story or live deployment. Mechanical document validation checks links, row uniqueness, categories/weights, era expansion and unfilled score status; human judgment and product scoring remain outstanding.
+
+**Change log — 2026-10-05:** Add later-goal appearance-first/source-scope interpretation and independent current-diagnostic routing. Criterion IDs, scoring policy, proposed numerical thresholds and unfilled assessment status remain unchanged. Preserve September 27 version 1.0 as the original index baseline.

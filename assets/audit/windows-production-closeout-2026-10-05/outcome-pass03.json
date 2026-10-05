@@ -1,0 +1,38 @@
+{
+  "role": "outcome",
+  "pass": 3,
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "decision": "defer-for-evidence",
+  "decision_scope": "Catalog coverage is supported; the actionable continuation requires explicit current-runtime slices and complete media closure.",
+  "findings": [
+    {
+      "id": "OUT-P03-01",
+      "claim": "All 52 unique criteria and F01-F10 have nonempty valid task mappings; all 18 unique scenario procedures remain preserved.",
+      "claim_status": "supported-as-coverage",
+      "supporting_pointers": ["assets/audit/cg-production-delivery01/architect-backlog-final01.json#/criterion_task_map", "assets/audit/cg-production-delivery01/requirements-inventory01.json#/scenarios"],
+      "consequence": "Mapping counts could be misreported as executed scenarios or attained requirements.",
+      "smallest_test": "Retain task-specific evidence/status and explicit scenario-to-current/future closure crosswalks.",
+      "limits": "Local JSON coverage checks only; no runtime scoring."
+    },
+    {
+      "id": "OUT-P03-02",
+      "claim": "MB-T056 lacks a current V37 interruption diagnostic slice; MB-T044 delays current video checks behind future motion-reference coverage.",
+      "claim_status": "material-correction-required",
+      "supporting_pointers": ["docs/cg-architect-next-goals.md:874", "assets/audit/cg-production-delivery01/architect-backlog-final01.json#/tasks/43", "docs/murderbird-evaluation-prd.md:327"],
+      "consequence": "Existing supported behavior and media remain untested while unrelated successor prerequisites delay diagnosis.",
+      "smallest_test": "Add a continuation overlay splitting current V37 supported-state T12 checks and current T15 video playback from later successor action/reference/rig evidence. Current checks depend on exact delivery and supported-state inventory, not MB-T017/057 completion.",
+      "limits": "No current behavior failure is inferred; the frozen historical ledger stays intact."
+    },
+    {
+      "id": "OUT-P03-03",
+      "claim": "MB-T043 maps A04 but its closure omits explicit lyrics access.",
+      "claim_status": "closure-omission",
+      "supporting_pointers": ["assets/audit/cg-production-delivery01/architect-backlog-final01.json#/tasks/42", "docs/murderbird-evaluation-prd.md:241", "docs/murderbird-evaluation-prd.md:330"],
+      "consequence": "The task could close without completing the media procedure.",
+      "smallest_test": "Add readable lyrics opening, source/version verification and failure/alternative evidence to the current media slice.",
+      "limits": "This is missing task evidence, not an observed lyrics defect."
+    }
+  ],
+  "limits": ["MB-T040-046 human/device/audible/performance checks remain NOT RUN; browser emulation/build/byte custody cannot close them.", "MB-T018 strict normal parity is an observed FAIL with unknown cause, distinct from missing evidence.", "No peers read, remote/runtime mutation, fresh score or artistic acceptance."]
+}

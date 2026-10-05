@@ -1,0 +1,38 @@
+{
+  "role": "disruptor",
+  "pass": "PASS01",
+  "evaluation_status": "analytical",
+  "artifact_revision": "4c5a1055d2be6bdd895aa4cebac342147f8930e9",
+  "trigger": "Initial roles materially agree on release accounting with limits.",
+  "checks": ["Clean frozen HEAD; all ten frozen source hashes match", "Read-only source/receipt comparison", "Pure publication-boundary function probes; no filesystem fixture"],
+  "objections": [
+    {
+      "id": "D01-CHRONOLOGY",
+      "hypothesis": "A partial continuation reader can mistake historical state for current delivery or authorization.",
+      "test": "Inspect standalone current-looking sections: goal.md:97-103,120-122 and windows-production-closeout-2026-10-05.md:21-23.",
+      "counterevidence": "goal.md:20-38 and265-267 establish delivered candidate, proposed next scope and stopped historical attempt; freeze.json supplies completed 4c5a105 release receipts.",
+      "status": "survives",
+      "consequence": "Sections still name an old deployed baseline/current study and pending release action. Transport is supported, but standalone reader usefulness needs a dated supersession pointer.",
+      "smallestnexttest": "Append a current-receipt pointer and explicit historical labels without rewriting snapshots; test fresh-reader identification of release and active authority."
+    },
+    {
+      "id": "D01-PUBLIC",
+      "hypothesis": "An unapproved ordinary public file can pass publication validation.",
+      "test": "verify-publication.mjs:45-49 admits every public path. Pure assertPublicationBoundary probe admits ordinary-public-note.txt when supplied in that set.",
+      "counterevidence": "Probes reject unapproved cg/unapproved.txt and provenance/receipt.txt. Supplied live inventory has154 matching payloads; no current leak demonstrated.",
+      "status": "survives",
+      "consequence": "Approval requires reviewed public inputs; the guard cannot certify future ordinary-file admission.",
+      "smallestnexttest": "Separate isolated negative fixture adding an unapproved ordinary public file must reject, or document the admission limit explicitly."
+    },
+    {
+      "id": "D01-REPLIT",
+      "hypothesis": "Exact Replit synchronization implies the divergent parent or connectors were repaired.",
+      "test": "Compare freeze.json surface_receipt.replit with Windows handoff:19 and architect closeout:7,17.",
+      "counterevidence": "All distinguish isolated checkout/served cg.html from clean0d7366d8 parent,17 untriaged commits and unauthorized connectors.",
+      "status": "refuted",
+      "consequence": "Scoped preview delivery is supportable; blanket workspace synchronization is not.",
+      "smallestnexttest": "At resume, recheck isolated checkout and actual served route; independently inventory parent custody and connector authorization."
+    }
+  ],
+  "limits": ["Shared model and sources; no protected holdout", "Supplied remote receipts not independently replayed", "No new modeling, artistic acceptance, PRD attainment or dispatch readiness"]
+}
