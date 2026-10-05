@@ -1,0 +1,97 @@
+{
+  "role": "safety-portability",
+  "pass_id": "PASS04",
+  "execution_status": "completed",
+  "decision": "approve-with-limits",
+  "confidence": "medium",
+  "evidence_status": "analytical",
+  "artifact_identity": {
+    "production_revision": "109e9e7a405ada1d9a466f1225bde4662a2dc777",
+    "backlog": "assets/audit/cg-production-delivery01/backlog-pass04.json",
+    "freeze": "assets/audit/cg-production-delivery01/equilibrium/freeze-pass04.json",
+    "claim_ledger": "assets/audit/cg-production-delivery01/claim-ledger-pass04.json",
+    "human_plan": "docs/cg-next-goals.md; draft-before-pass04"
+  },
+  "material_findings": [
+    {
+      "id": "P04-S01",
+      "claim": "The proposed connected-head envelope is shared across root/workers/integration; suballocations cannot be summed into an automatic run or treated as spending targets.",
+      "status": "supported",
+      "evidence_ids": [
+        "backlog-pass04.json/next_series_proposal",
+        "backlog-pass04.json/MB-T001/proposed_bounded_allocation/shared_envelope",
+        "docs/cg-next-goals.md#recommended-next-series-and-owner-decisions",
+        "claim-ledger-pass04.json/CLM-012"
+      ],
+      "consequence": "Independent task ceilings could otherwise create a much longer or more expensive series than the stated45 minutes/12000 tokens.",
+      "next_test": "Before dispatch publish one selected-task allocation ledger whose combined limits including root/integration fit the authorized envelope; stop at resource ceiling or two actual designs without visible whole-character gain."
+    },
+    {
+      "id": "P04-S02",
+      "claim": "Monitoring, interrupt and accounting controls remain a documented prerequisite proposal, not demonstrated hard enforcement.",
+      "status": "provisional",
+      "evidence_ids": [
+        "backlog-pass04.json/MB-T062",
+        "backlog-pass04.json/MB-T001/dependencies",
+        "claim-ledger-pass04.json/CLM-012"
+      ],
+      "consequence": "Another worker overrun could occur despite nominal caps, or cached-inclusive counters could be misrepresented as billed cost.",
+      "next_test": "MB-T062 must name actual monitor/controller, sampling cadence, provider/output/aggregate units, worker ownership, deadline and interrupt path; exercise a harmless synthetic breach and record actual stop latency/limits before model dispatch."
+    },
+    {
+      "id": "P04-S03",
+      "claim": "Current accessibility review has no future-rig dependency, but MB-T034 status CONDITIONAL_PHASE_NOT_RUN is ambiguous as a predecessor of current human keyboard/screen-reader work.",
+      "status": "provisional",
+      "evidence_ids": [
+        "backlog-pass04.json/MB-T033",
+        "backlog-pass04.json/MB-T034",
+        "backlog-pass04.json/MB-T039",
+        "backlog-pass04.json/MB-T040",
+        "backlog-pass04.json/MB-T041"
+      ],
+      "consequence": "A scheduler using the conditional status could defer useful current V37 essential-workflow review until an unrelated future CG interaction phase.",
+      "next_test": "Split or explicitly label MB-T034 current frozen V37 evidence versus future successor proof, and state that MB-T040/041 current assessment may proceed with failures recorded rather than awaiting a new rig. Keep MB-T039 no-dependency current reduced-motion path."
+    },
+    {
+      "id": "P04-S04",
+      "claim": "Ownership and phase boundaries permit scoped read-only planning while reserving new models, motion/mechanics, imports and consequential changes for their actual authority.",
+      "status": "supported",
+      "evidence_ids": [
+        "backlog-pass04.json/owner_role_policy",
+        "backlog-pass04.json/MB-T038",
+        "backlog-pass04.json/MB-T057-MB-T060",
+        "backlog-pass04.json/MB-T061",
+        "docs/cg-next-goals.md",
+        "AGENTS.md",
+        "NOTICE.md"
+      ],
+      "consequence": "A roadmap could otherwise authorize destructive cleanup, purchases, private uploads, successor publication or engineering; superseded manufacturing holds could also block current appearance work.",
+      "next_test": "Before each owned deliverable record exact contributor, allowed files and applicable scope. Preserve main/history/unique Replit assets; no reset/prune/blanket merge/archive deletion. Keep rights, explicit runtime selections, no unscoped dependencies/purchases/uploads and Free-only preview. Engineering certification is neither a current visual gate nor an inferred result."
+    },
+    {
+      "id": "P04-S05",
+      "claim": "The selection refresh resolves the narrow PASS03 current-preview identity uncertainty at its timestamp without proving enduring uptime or a repaired connector.",
+      "status": "supported",
+      "evidence_ids": [
+        "replit-selection-refresh01.json/process_check",
+        "replit-selection-refresh01.json/root_actions",
+        "replit-selection-refresh01.json/limitations",
+        "claim-ledger-pass04.json/CLM-007"
+      ],
+      "consequence": "Route selection could be mistaken for process failure, provoke unnecessary duplicate/restart actions, or be presented as permanently healthy sync.",
+      "next_test": "After route/runtime change check actual existing process/served root/revision first and navigate explicit private3000/cg.html; refresh visible identity and timestamp. Connector reauthentication and later documentation acknowledgments remain separate."
+    }
+  ],
+  "assumptions": [
+    "This is analytical plan approval, not task execution readiness or completed control enforcement. Human, hardware and monitor tests were not run.",
+    "Replit freshness conclusion uses root recorded process/route observations, not reviewer UI access; source/static status and original production identity remain distinct from final documentation synchronization.",
+    "Same configured model/shared context and sources limit independence; no peer results were accessed."
+  ],
+  "release_conditions": [
+    "Use the roadmap with the MB-T034 current/future clarification; retain NOT RUN as missing evidence, not observed defects.",
+    "Complete operational MB-T062 and concrete assignment ownership before newly authorized model dispatch.",
+    "No new artistic acceptance, holdout outcome claim, paid Replit, purchase, cleanup, publication, motion or engineering authority is granted.",
+    "Keep full likeness UNMET, owner acceptance PENDING and untested human/device/portability limits visible."
+  ],
+  "notes": "Caps and stops are credible bounded planning controls when kept as prerequisites. Fresh recorded preview identity closes the earlier narrow deferral. The remaining status ambiguity is actionable document semantics, not an observed accessibility or runtime failure. Only this owned review JSON was written."
+}

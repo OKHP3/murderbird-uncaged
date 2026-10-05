@@ -1,0 +1,91 @@
+{
+  "role": "evidence",
+  "pass": "PASS04",
+  "decision": "defer-for-evidence",
+  "confidence": "high for documentary mapping and dependency defects; no implementation or artistic judgment",
+  "evidence_status": "analytical",
+  "production_revision": "109e9e7a405ada1d9a466f1225bde4662a2dc777",
+  "material_findings": [
+    {
+      "id": "P04-E01",
+      "claim": "All52 PRD target quotations, F01-F10 and18 original scenario procedures remain preserved with valid reciprocal task mappings.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "backlog-pass04.json#/criterion_task_map",
+        "backlog-pass04.json#/finding_task_map",
+        "scenario-task-map01.json",
+        "docs/murderbird-evaluation-prd.md",
+        "docs/handoffs/inspector-corrections-supervisor-2026-09-27.md"
+      ],
+      "consequence": "No stable-ID omission or altered criterion target was found. Task completion must satisfy its scoped clause and original linked scenario evidence; it cannot close every associated full-product criterion automatically.",
+      "next_test": "At closure, record exact candidate/environment and applicable criterion/scenario clauses, retaining untested remainder explicitly."
+    },
+    {
+      "id": "P04-E02",
+      "claim": "The62-node dependency graph has no missing IDs or cycles, but current evidence tasks depend on unapproved successor modeling.",
+      "status": "scope-conflict",
+      "evidence_ids": [
+        "backlog-pass04.json#MB-T032/dependencies",
+        "backlog-pass04.json#MB-T038/dependencies",
+        "backlog-pass04.json#MB-T019/dependencies",
+        "backlog-pass04.json#MB-T012",
+        "backlog-pass04.json#MB-T028",
+        "backlog-pass04.json#MB-T026",
+        "docs/cg-next-goals.md#MB-T019",
+        "docs/cg-next-goals.md#MB-T032",
+        "docs/cg-next-goals.md#MB-T038"
+      ],
+      "consequence": "Current enclosure/readability checkMB-T032 waits for next visual checkpointMB-T012; current rights/architecture checkMB-T038 waits for successor deliveryMB-T028; current equivalence-scope definitionMB-T019 waits for future material workMB-T026. Useful read-only baseline checks cannot independently close without a separately authorized model phase, despite their current-scope labels.",
+      "next_test": "Split each into current frozen-baseline evidence and successor retest branches; attach future predecessors only to successor branches, then rerun graph/closure review. This correction needs no new modeling."
+    },
+    {
+      "id": "P04-E03",
+      "claim": "Task evidence units and status rules reject historical-score inheritance and distinguish later conditional execution from current missing evidence.",
+      "status": "supported",
+      "evidence_ids": [
+        "backlog-pass04.json#/planning_rules",
+        "backlog-pass04.json#MB-T012",
+        "backlog-pass04.json#MB-T013-MB-T020",
+        "backlog-pass04.json#MB-T039",
+        "backlog-pass04.json#MB-T043",
+        "backlog-pass04.json#MB-T045-MB-T050",
+        "backlog-pass04.json#MB-T056-MB-T062"
+      ],
+      "consequence": "Exact hashes/views, era decisions, uncut durations, device/environment logs and tested/untested matrices supply concrete closure units. Old39.16/100 and2.05-2.09 scores are explicitly not current. Provisional static checkpoint cannot close G1; per-era acceptance retains finish prerequisites. B11 extended no-depletion/copy checks and lyrics access/return are explicit. NOT RUN remains missing implementation evidence, not observed failure.",
+      "next_test": "Use original sampling/scenario conditions and dated task-specific receipts; do not convert an existing software smoke check into human, physical-device, full motion or normal/shader parity acceptance."
+    },
+    {
+      "id": "P04-E04",
+      "claim": "The new Replit selection receipt resolves the earlier process/route uncertainty at a stated timestamp, while preserving its original discrepancy and limits.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "replit-selection-refresh01.json",
+        "backlog-pass04.json#MB-T029/status_refresh_rule",
+        "claim-ledger-pass04.json#CLM-007"
+      ],
+      "consequence": "Root reports alive preview process, clean109e9e7 served manifest and actual/cg.html on3000 without restart. Initial old5000 iframe observation remains recorded; this is source-reported evidence, not a reviewer UI check or enduring uptime guarantee.",
+      "next_test": "Refresh selected route/actual iframe/served SHA after a restart or reversion; retain connector and unrun GLB-suite limits."
+    }
+  ],
+  "assumptions": [
+    "Current baseline checks can be reviewed without new successor geometry; successor retests still require their own applicable scope.",
+    "Original criterion/scenario records remain controlling closure specifications; task-level summaries do not erase their clauses.",
+    "Shared parent context, model family and source records correlate reviewer judgments; no peer outputs were read."
+  ],
+  "release_conditions": [
+    "Defer describing the graph as independently executable until current-versus-successor predecessor splits are corrected and verified.",
+    "The documentary roadmap remains useful as a gap inventory with preserved stable requirements; no rollback or model execution is indicated.",
+    "Preserve UNMET/PENDING, static/V37 separation, full parity/access/motion NOT RUN limits and historical scores attached only to original candidates."
+  ],
+  "notes": [
+    "Fresh documentary checks: all17 freeze resource hashes match;62 unique graph IDs/no missing dependencies/no cycles;52 exact PRD target equality;F01-F10 presence;18 reciprocal scenario links; current-task closures and human-draft predecessor descriptions compared.",
+    "No new remote/UI/native/build/browser/physical-device tests or model changes. New Replit result is root-reported; implementation tests remain NOT RUN here."
+  ],
+  "input_hashes": {
+    "backlog-pass04.json": "1cf491e552fc01bbdb4ceaeea1556c6c5f24c0576a65fec1d496f9031911dc60",
+    "claim-ledger-pass04.json": "320f46f3d271b355107b2a293709b4225c4ad32b9fb81726dbc184cea27b3676",
+    "scenario-task-map01.json": "8bbc4ae1f87c3ddca85bca420c75028b6ab06ae48a96ee6edfb0570970b2cfb8",
+    "equilibrium/freeze-pass04.json": "4a33365d97bb038411835e55fadf5cafd80d9cadc91859910ff35ec967548aa4"
+  },
+  "human_draft_read_hash": "88307ce99b344a8dfc603ae8a3d45d8c0252bfd1f1cf279b8887a2cba61244cb"
+}

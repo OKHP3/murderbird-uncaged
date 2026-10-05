@@ -1,0 +1,92 @@
+{
+  "role": "evidence",
+  "pass": "PASS03",
+  "decision": "approve-with-limits",
+  "confidence": "high for checked record identity and evidence boundaries; current Replit service state unresolved",
+  "evidence_status": "analytical",
+  "production_revision": "109e9e7a405ada1d9a466f1225bde4662a2dc777",
+  "material_findings": [
+    {
+      "id": "P03-E01",
+      "claim": "Receipts02 support a recorded same-SHA assessment delivery across Pages, private Replit and Notion.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "live-pages-receipt02.json",
+        "replit-preview-receipt02.json",
+        "notion-delivery-receipt02.json",
+        "notion-delivery-readback01.json"
+      ],
+      "consequence": "Pages release is clean at109e9e7 with successful run37244718043; two changed paths were streamed,152 unchanged paths reference exact receipt01 proof,96 CG paths unchanged. Replit records private3000 clean same-SHA preview/96 hashes in Free mode. Saved Notion readback contains same SHA/run/static/UNMET/PENDING/3000. These are source-reported point-in-time receipts, not fresh remote checks by this reviewer.",
+      "next_test": "Use a new exact revision/selected port/served manifest readback after a process or preview-routing change."
+    },
+    {
+      "id": "P03-E02",
+      "claim": "Persistent current Replit preview health is not established by receipt02 after the later old5000 iframe observation.",
+      "status": "provisional",
+      "evidence_ids": [
+        "replit-preview-receipt02.json#/captured_utc",
+        "claim-ledger-pass03.json#CLM-007",
+        "root PASS03 steering: iframe returned to old5000 while link remained3000"
+      ],
+      "consequence": "A healthy historical private3000 receipt could be overread as current visible service health. The observation alone does not establish lost source custody or failed Pages delivery.",
+      "next_test": "Root finishes process/selected-port/actual iframe URL and served clean-SHA checks, then records the result separately. Until then describe synchronization as verified at receipt time and current preview availability as unresolved."
+    },
+    {
+      "id": "P03-E03",
+      "claim": "The lighting-download regression supports the corrected selection behavior within named local and live Pages scopes.",
+      "status": "supported-with-limits",
+      "evidence_ids": [
+        "lighting-download-regression01.json",
+        "live-pages-receipt02.json#/browser",
+        "technical-release-qc01.json"
+      ],
+      "consequence": "Local15 checks ran onff8a0d9 dirty plus the two-file fix, whose source commit isbfaf725; the Pages receipt checks the clean109e9e7 held-download renderer/button/status sequence. Older broad local QA was on a different dirty build. These records cannot be treated as a fresh complete exact-production scenario suite or a Replit regression replay.",
+      "next_test": "Retest only affected scope after another runtime change; delayed-download replay on Replit remains explicitly NOT RUN."
+    },
+    {
+      "id": "P03-E04",
+      "claim": "The static candidate, V37 controls, asset boundary and unresolved parity/access/motion evidence remain distinguishable.",
+      "status": "supported",
+      "evidence_ids": [
+        "technical-release-qc01.json#/checks",
+        "assets/review/cg-publication.json",
+        "assets/audit/cg-recursive-three-loop01/loop03/handoff.json"
+      ],
+      "consequence": "Publication lists96 explicit GLB/PNG/JPG outputs and no native/session/ledger paths. Saved QA rejected an injected CG path in an isolated fixture, preserved V37 sources/fallback and scoped browser controls; static GLBs have zero skins/animations. Normal parity FAIL at2e-5/cause unknown remains; software rendering/emulation does not certify hardware GPU, physical touch, screen readers, full legacy acting or owner likeness.",
+      "next_test": "Apply future task-specific tests when that capability is changed/claimed; retain full shader/pixel parity and human evidence as unproved."
+    },
+    {
+      "id": "P03-E05",
+      "claim": "All18 scenario procedures and expected evidence survive exactly; their task mappings are not execution results. Source metadata revisions are correctly pinned.",
+      "status": "supported",
+      "evidence_ids": [
+        "scenario-task-map01.json",
+        "docs/murderbird-evaluation-prd.md:314-335",
+        "equilibrium/freeze-pass03.json",
+        "backlog-pass03.json#/source_records/GOAL"
+      ],
+      "consequence": "All16 freeze hashes match. Active GOAL now names immutable109e9e7 snapshot; claw corrections require source outlines, and provisional static checkpoint cannot close G1/full era acceptance. T17 receipt delivery does not close T03-T16 behavior/access/media/performance or T18 presentation merely through mapping.",
+      "next_test": "Keep per-scenario exact candidate/environment/test status and issue-specific closure. Final roadmap delivery to Notion/preview needs its own later receipt; receipt02 predates that work."
+    }
+  ],
+  "assumptions": [
+    "Root-reported live receipts are trusted source records within their stated scope, not independently refreshed here.",
+    "Current Replit routing investigation is pending; no conclusion that the preview is down or persistently healthy.",
+    "Same model family, parent context and saved source set limit reviewer independence; no peers were read."
+  ],
+  "release_conditions": [
+    "Approve documentary scoped delivery/regression only; qualify current preview health pending the fresh root readback.",
+    "Preserve UNMET/PENDING, static/V37 separation, exact reference scopes, Free-only private preview and all NOT RUN/parity limits.",
+    "Do not claim final review-document synchronization from receipt02."
+  ],
+  "notes": [
+    "Fresh local analytical checks:16 freeze hashes; exact equality of18 scenario procedure/evidence pairs;96 publication path extensions/boundary; prior live receipt hash linkage; active goal source revision and saved Notion content.",
+    "No new remotes, UI, builds, browser/native tests, image judgments or asset changes performed. Source-reported tests retain their original build/environment/date and execution ownership."
+  ],
+  "input_hashes": {
+    "backlog-pass03.json": "dd233636e258f02b5fdb0417548db31f36f50d77c1583cb0398712e4b1d3895f",
+    "claim-ledger-pass03.json": "d46d43cedbf433ef07125b56f1522415a0af42b3ba4e5740588531fe69fe4d6a",
+    "scenario-task-map01.json": "8bbc4ae1f87c3ddca85bca420c75028b6ab06ae48a96ee6edfb0570970b2cfb8",
+    "equilibrium/freeze-pass03.json": "7a03d47aa2b55abe5d214750b6460de65e4ca17f8681beba2e6a84ad7e5d7886"
+  }
+}
