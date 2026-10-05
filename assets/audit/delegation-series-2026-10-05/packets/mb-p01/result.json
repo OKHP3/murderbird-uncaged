@@ -1,0 +1,57 @@
+{
+  "packet_id": "MB-P01",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "COMPLETE_ARTIFACT_ONLY",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p01/reference-ledger.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p01/head-feature-contract.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p01/report.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p01/result.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p01/done.json"
+  ],
+  "checks": [
+    {
+      "name": "delegated base SHA",
+      "status": "PASS",
+      "evidence": "git rev-parse HEAD matched"
+    },
+    {
+      "name": "seven source hashes",
+      "status": "PASS",
+      "evidence": [
+        "Locked Sept 22 composite:CONFIRMED_BYTES_MATCH_DECLARED",
+        "Candidate 03:CONFIRMED_BYTES_MATCH_DECLARED",
+        "July selection:CONFIRMED_BYTES_MATCH_DECLARED",
+        "Maker era image:CONFIRMED_BYTES_MATCH_DECLARED",
+        "Mechanic era image:CONFIRMED_BYTES_MATCH_DECLARED",
+        "Advanced era image:CONFIRMED_BYTES_MATCH_DECLARED",
+        "First Choice video:CONFIRMED_BYTES_MATCH_DECLARED"
+      ]
+    },
+    {
+      "name": "criteria/finding/scenario inventory",
+      "status": "PASS",
+      "evidence": "52 criteria, 10 findings, 18 scenario procedures copied from current task ledger"
+    },
+    {
+      "name": "app build/tests and source acceptance",
+      "status": "NOT RUN",
+      "evidence": "artifact-only scope"
+    }
+  ],
+  "findings": [
+    "No code, source media or existing tracked files modified.",
+    "Criterion/finding/scenario mappings frozen as traceability, not attainment.",
+    "No dimensional targets supplied."
+  ],
+  "remaining_product_gates": [
+    "Separate explicit owner scope before implementation",
+    "Owner artistic likeness acceptance",
+    "PRD evaluation score",
+    "Authorized animation/mechanics phase and scenario execution"
+  ],
+  "usage": {
+    "native_goal_tokens_used_before_artifacts": 10784,
+    "provider_total_tokens": null
+  }
+}

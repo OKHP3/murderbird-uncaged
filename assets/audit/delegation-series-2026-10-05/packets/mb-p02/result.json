@@ -1,0 +1,71 @@
+{
+  "packet_id": "MB-P02",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "PREFLIGHT_PARTIAL_CAPTURED_POSTFLIGHT_OPEN",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p02/retained-gains-contract.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p02/custody-receipt.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p02/report.md"
+  ],
+  "checks": [
+    {
+      "name": "scripts/verify-media-import.py",
+      "status": "PASS",
+      "evidence": "768/768 entries; 0 errors."
+    },
+    {
+      "name": "retained native/export hash inventory",
+      "status": "PARTIAL",
+      "evidence": "Loop02: 6 files across three eras; Loop03: 6 files across three eras; Loop01 and checkpoint09 bytes absent in scoped checkout."
+    },
+    {
+      "name": "checkpoint09 exact identity",
+      "status": "UNKNOWN",
+      "evidence": "No exact checkpoint09 path established from scoped retained delivery directories."
+    },
+    {
+      "name": "successor visible preservation comparison",
+      "status": "NOT RUN",
+      "evidence": "Postflight gate; no successor candidate supplied."
+    },
+    {
+      "name": "packed-map per-image re-decode",
+      "status": "NOT RUN",
+      "evidence": "Outside media-import checker scope."
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Three retained development loops cover short breast courses, underlaps/toe articulation, and cooler crown tone.",
+      "tier": "CONFIRMED_DOCUMENT_RECORD",
+      "evidence": "assets/audit/cg-recursive-three-loop01/architect-assessment-final.md and loop03/handoff.json"
+    },
+    {
+      "claim": "The currently identified retained stage native/export files match the freshly recorded hashes.",
+      "tier": "CONFIRMED",
+      "evidence": "custody-receipt.json; hashes computed from files in this checkout."
+    },
+    {
+      "claim": "Checkpoint09 precise source bytes are identified.",
+      "tier": "UNKNOWN",
+      "evidence": "No exact identity located in scoped retained delivery paths."
+    },
+    {
+      "claim": "Loop01 and checkpoint09 native/export bytes are pinned.",
+      "tier": "UNKNOWN",
+      "evidence": "No files under scoped paths in this isolated checkout."
+    }
+  ],
+  "remaining_product_gates": [
+    "Successor postflight visual and structural preservation comparison",
+    "Exact checkpoint09 identity and hash linkage if required for full MB-T015 closure",
+    "Owner artistic acceptance remains pending",
+    "Source likeness remains unmet"
+  ],
+  "usage": {
+    "native_goal_tokens_used": 96266,
+    "native_goal_token_budget": 1500000,
+    "native_goal_elapsed_seconds": 267,
+    "provider_total_tokens": null
+  }
+}

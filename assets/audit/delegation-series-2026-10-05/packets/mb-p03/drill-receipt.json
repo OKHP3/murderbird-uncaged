@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "mode": "SYNTHETIC_DRY_RUN",
+  "primary_metric": "native_goal",
+  "cases": [
+    {
+      "id": "within-native-limits",
+      "expected": "CONTINUE_BOUNDED",
+      "actual": {
+        "action": "CONTINUE_BOUNDED",
+        "provider_billing_enforced": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "agent-80-percent",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "agent-80-percent-reserve"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "delegate-80-percent",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "delegates-80-percent-reserve"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "root-80-percent",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "root-80-percent-reserve"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "unknown-native-counter",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "unknown-agent-counter"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "unit-mismatch",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "counter-unit-mismatch"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "four-workers",
+      "expected": "STOP_DISPATCH",
+      "actual": {
+        "action": "STOP_DISPATCH",
+        "reason": "three-active-worker-bound"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "two-no-gain-attempts",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "two-attempts-without-visible-gain"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "checkpoint-due",
+      "expected": "STOP_NEW_IMPLEMENTATION",
+      "actual": {
+        "action": "STOP_NEW_IMPLEMENTATION",
+        "reason": "checkpoint-due"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "owned-thread-request",
+      "expected": "REQUEST_OWNED_STOP",
+      "actual": {
+        "action": "REQUEST_OWNED_STOP",
+        "kind": "thread",
+        "id": "synthetic-owned-thread",
+        "actual_stop_executed": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "owned-process-request",
+      "expected": "REQUEST_OWNED_STOP",
+      "actual": {
+        "action": "REQUEST_OWNED_STOP",
+        "kind": "process",
+        "id": "synthetic-owned-process",
+        "actual_stop_executed": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "foreign-thread-refused",
+      "expected": "REFUSE_FOREIGN_STOP",
+      "actual": {
+        "action": "REFUSE_FOREIGN_STOP",
+        "actual_stop_executed": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "foreign-process-refused",
+      "expected": "REFUSE_FOREIGN_STOP",
+      "actual": {
+        "action": "REFUSE_FOREIGN_STOP",
+        "actual_stop_executed": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "oversized-agent-config",
+      "expected": "REFUSE_CONFIG",
+      "actual": {
+        "action": "REFUSE_CONFIG",
+        "reason": "invalid-agent-cap"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "oversized-delegate-config",
+      "expected": "REFUSE_CONFIG",
+      "actual": {
+        "action": "REFUSE_CONFIG",
+        "reason": "invalid-delegates-cap"
+      },
+      "status": "PASS"
+    }
+  ],
+  "passed": 15,
+  "provider_total_tokens": null,
+  "actual_external_calls": 0,
+  "actual_processes_stopped": 0,
+  "actual_threads_interrupted": 0,
+  "provider_billing_enforced": false,
+  "limitation": "Pure decision function. Root must execute any real owned stop through a supported control. The app exposes no interrupt endpoint here; pending outside-root approval is still open."
+}

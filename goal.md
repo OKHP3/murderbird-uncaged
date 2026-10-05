@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-05T06:55:38.172Z"
+last_updated: "2026-10-05T22:03:46Z"
 timezone: "America/Chicago"
-status: "retained-cg-assessment-delivered-review-complete"
+status: "delegation-program-in-progress"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -16,6 +16,18 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## October 5 owner allocation — executable delegation series
+
+The owner directed converting the completed five-pass review into executable, individually assignable duties, using the smallest adequate models and least necessary tokens. The maximum allocation is **30 delegate threads × 2,000,000 tokens**, plus **20,000,000 for this architect**, totaling **80,000,000**. This new direction supersedes earlier checkpoint-specific delegation prohibitions and the review's proposed resource envelope for the selected continuation program; it does not retroactively accept likeness or select new animation/mechanics. These are maximums, not consumption targets.
+
+The [executable series](docs/delegation-series-2026-10-05/README.md), [30 machine packets](docs/delegation-series-2026-10-05/program.json), [dated execution receipt](docs/delegation-series-2026-10-05/execution-receipt.json) and [new findings](docs/delegation-series-2026-10-05/new-findings.md) retain all 62 task records, 52 criteria, F01–F10 and T01–T18. Run at most three workers concurrently with disjoint owned paths and isolated checkouts. Routine duties use `gpt-6-luna` low effort; bounded diagnosis/code duties use that model at medium effort. Root alone integrates, dispatches, controls shared refs and writes remote receipts. Initial failures and replacement threads count toward the maximum; completed threads may receive another duty only within their cumulative per-thread ceiling.
+
+The selected first tranche is reference/custody/resource preflight, strict normal diagnosis, a concrete connected-head contract, and current V37/fallback/audio/video source diagnostics. It produces verifiable preparation and executed applicable local checks. Candidate model implementation remains a separately selected visual increment after its actual reference/custody/owned-stop preflight; owner artistic acceptance and later mechanics remain explicit gates. No worker may infer those decisions from its own completion. The returned original head contract is preserved; its effective architect revision uses this allocation and reserves assembled derivative natives for the integrator.
+
+The architect's native goal is registered at 20,000,000. New delegate goals use a smaller **1,500,000 native cap**, with early 20-minute checkpoints, bounded tool calls, two-attempt stops and closure reserve; 500,000 remains below the per-thread owner maximum for exposure from an in-flight step. Native startup caps of30,000/35,000 were exhausted before artifacts and are honestly retained as incomplete. The observable unit is `native_goal`; provider-total/billing counters remain unavailable and no hard billing cap is claimed. The executable synthetic control drill does not establish an actual app thread/process stop; one initial control thread still awaits its outside-root write approval, consumes a slot, and is not counted complete. Corrected workers use workspace-contained writable checkouts or their own outputs; no broader write approval is needed for the new packet paths.
+
+Source likeness remains **UNMET**, owner acceptance **PENDING**, strict normal failure open at unchanged **2e-5**, and PRD **NOT SCORED**. Current V37 diagnostics cannot close unimplemented successor behavior. Human/device/audible/hardware-GPU and Replit parent-history/API evidence remain separate duties. Replit stays Free mode development only; preservation, creative rights and production boundaries above and below remain in force.
 
 ## October 4 owner authorization — retained CG production delivery
 
