@@ -2,7 +2,8 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export const cgManifestPath = 'assets/review/cg-publication.json';
 export async function readCGManifest() {
@@ -63,4 +64,4 @@ export async function prepareCGRelease() {
   }
   console.log(`CG assessment allowlist: ${manifest.assets.length} verified assets, ${(manifest.assets.reduce((sum, asset) => sum + asset.bytes, 0) / 1e6).toFixed(1)} MB. Artistic acceptance remains pending.`);
 }
-if (process.argv[1]?.endsWith('/prepare-cg-release.mjs') || process.argv[1] === 'scripts/prepare-cg-release.mjs') await prepareCGRelease();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await prepareCGRelease();
