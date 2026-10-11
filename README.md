@@ -101,7 +101,7 @@ This is the canonical repository for MurderBird creative production and the inte
 | `public/` | Deliberately approved browser-delivered files |
 | `.local/` | Ignored private archives and machine-local verification |
 
-Original names, source trees, and historical candidates are preserved. Only explicit runtime references and the reviewed publication allowlist enter the website build. Private session archives are never staged or published. Read the [repository boundaries](docs/repository-boundaries.md), [asset guide](assets/README.md), [media catalog](docs/media-catalog.md), and [agent guidance](AGENTS.md) before contributing.
+Original names, source trees, and historical candidates are preserved. Only explicit runtime references and the reviewed publication allowlist enter the website build. Private session archives are never staged or published. Read the [repository boundaries](docs/repository-boundaries.md), [asset guide](assets/current-deliverables.md), [media catalog](docs/media-catalog.md), and [agent guidance](AGENTS.md) before contributing.
 
 ## License and credits
 
