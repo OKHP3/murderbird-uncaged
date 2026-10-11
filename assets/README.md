@@ -6,17 +6,18 @@ This directory holds MurderBird production material and selected files used by t
 
 Imported source and production material is retained under `murderbird/` at its original relative paths, including the `v2/`, stills, and production branches. Keep names, nesting, companion files, and embedded metadata intact. Do not flatten or rename source files to fit the app. Record each migration and any derived files in the repository's `provenance/` ledgers.
 
-Use `assets/img/` for existing image paths and website-related images whose source paths must remain stable. Do not create a parallel `website-images/` tree. The existing `audio/`, `images/`, and `models/` directories remain future organization areas for approved working or delivery copies; their `.gitkeep` files do not indicate that finished media is present.
+Use `assets/img/` for existing image paths and website-related images whose source paths must remain stable. Do not create a parallel `website-images/` tree. The `audio/` and `models/` directories contain recorded source or delivery packages; `images/` remains reserved scaffolding. Status comes from manifests and receipts; a placeholder, filename or folder name alone establishes no completion.
 
-## Future organization areas
+## Selected production packages and preserved history
 
-- `audio/` — organized theme-song stems, mixes, and interaction sound effects.
-- `images/` — organized concept art, working images, and reference stills when a copy is needed for app work.
-- `models/` — organized geometry, rigs, and exported GLB/GLTF models when a copy is needed for app work.
-- `murderbird/` — preserved imported source and production hierarchy; retain historical versions and their supporting files.
-- `img/` — existing source-relative and website-related image paths; preserve import paths and references.
+Start with the root [selected-deliverable table](../README.md#selected-deliverables) for the three retained04 CG natives/exports and the V37 interactive package. Keep CG packed textures, native views, receipts and supporting files in their established source trees. The [CG publication manifest](review/cg-publication.json), [V37 runtime manifest](review/production-v37.json) and [media catalog](../docs/media-catalog.md) identify current selections and historical context.
 
-Video and additional deliverable types should remain in the preserved `murderbird/` hierarchy unless a documented application need establishes a separate path. Do not create a second source archive just to match a proposed folder taxonomy.
+- models/ retains versioned editable geometry and exports, including V37 and earlier studies.
+- audit/ retains receipt-bound source packages, matched views and diagnostics; the retained04 CG natives remain here at their original paths.
+- murderbird/ retains imported artwork, video, music and production hierarchy, including unresolved variants.
+- img/, audio/ and images/ retain their existing paths and roles; changing navigation does not authorize moving or replacing source files.
+
+Do not create a second asset tree or copy the archive into a new taxonomy. Add a deliberate derived runtime file only with its source/provenance relationship recorded.
 
 ## Browser delivery and Git LFS
 
@@ -26,6 +27,6 @@ The Vite build copies files from `public/` into the distributable. Keep source a
 
 Keep production state explicit. Preserve the source's recorded draft, working, or final designation, and use `unknown` when evidence is missing. A filename or file extension does not establish that media is finished, licensed for every use, or approved for publication.
 
-## Current exterior assessment study
+## Historical exterior assessment study
 
-`models/uncaged-exterior-v1/` now holds the versioned editable exterior proposal, combined runtime GLB, individual era exports, regional PBR maps and fixed fallback previews. See its [source/export guide](models/uncaged-exterior-v1/README.md). This production status is a review study, not final character art. The subsequent owner instruction authorizes publication for independent assessment. Earlier `uncaged-*` model versions remain preserved. `audit/exterior-v1/` preserves review media and validation receipts from the local checkpoint. The explicit `review/exterior-v1-publication.json` selects only gallery images and the demonstration MP4 for the public review derivative. Raw receipts, source scenes and provenance stay in the repository; no audit directory is copied wholesale into the runtime.
+`models/uncaged-exterior-v1/` preserves the versioned editable exterior proposal, combined runtime GLB, individual era exports, regional PBR maps and fixed fallback previews. See its [source/export guide](models/uncaged-exterior-v1/README.md). This earlier package is a preserved review study; current selected packages are listed above. It does not establish final character art. The subsequent owner instruction authorizes publication for independent assessment. Earlier `uncaged-*` model versions remain preserved. `audit/exterior-v1/` preserves review media and validation receipts from the local checkpoint. The explicit `review/exterior-v1-publication.json` selects only gallery images and the demonstration MP4 for the public review derivative. Raw receipts, source scenes and provenance stay in the repository; no audit directory is copied wholesale into the runtime.

@@ -17,9 +17,11 @@ they had when written; this catalog provides current navigation.
 | Historical Iron Verdict music | [Audio production README](../assets/murderbird/production/audio/iron-verdict/README.md) | Instrumental demo, GarageBand session and preview, MIDI, stems, arrangement, and source scripts. |
 | Lyrics and vocal composition | [Performance sheet v2](../assets/murderbird/production/audio/iron-verdict/vocal-score-v2/performance-sheet.md) | Complete lyrics and notated melody with PDF, MusicXML, MIDI, pitch guide, and rehearsal mix. These are not a recorded singer's performance. |
 | Earlier lyric and private sessions | `.local/archives/` in the owner's Mac clone | Preserved local archives include the earlier lyric and production sessions. Private library/profile context stays local. |
-| Local 3D assembly study | [Production handoff](production-handoff.md), `assets/models/uncaged-study/` | New editable Blender source and grouped GLB; revised proportions await owner review. [Local verification](acceptance-report.md) is separate from artistic acceptance or release. |
+| Selected CG assessment | [Selected packages](../README.md#selected-deliverables), [CG manifest](../assets/review/cg-publication.json), [CG import ledger](../provenance/cg-production-import-2026-10-04.json) | Three retained04 native/GLB packages with packed textures, native views and receipts; static assessment. Likeness UNMET, owner acceptance PENDING and strict-normal parity FAIL remain recorded. |
+| Selected V37 movement exhibit | [V37 release record](production-v37.md), [runtime manifest](../assets/review/production-v37.json) | Preserved editable Blender source, rigid GLB and three era previews; owner-authorized kinematic movement, inspection and sound. |
+| Historical 3D assembly study | [Production handoff](production-handoff.md), `assets/models/uncaged-study/` | Preserved earlier editable Blender source and grouped GLB; revised proportions await owner review. [Local verification](acceptance-report.md) does not establish artistic acceptance or release. |
 | 3D staging | [Scale-stage notes](../assets/murderbird/v2/production/README.md) | Blender scale proxy, not a finished character model or rig. |
-| Interactive app | `src/` | Procedural Three.js study, illustrated fallback, optional synthesized soundscape, and visitor-controlled accepted theme song. Imported visual production archives remain separate from the viewer. |
+| Interactive app | `src/`, [selected packages](../README.md#selected-deliverables) | V37 movement exhibit and a separate static CG assessment viewer; illustrated fallback and visitor-controlled accepted theme song. Imported production archives remain separate from browser publication. |
 
 ## Working from the collection
 
