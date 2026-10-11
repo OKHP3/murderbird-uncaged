@@ -3,13 +3,14 @@
 import hashlib
 import json
 import math
+import os
 import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[5]
 AUDIT = ROOT / "assets/audit/cg-recursive-three-loop01"
 CHECKER = AUDIT / "loop03/independent-proof01/export-replay/checker-results.json"
-OUT = Path(__file__).resolve().parent / "normal-diagnosis.json"
+OUT = Path(os.environ["UNCAGED_NORMAL_DIAGNOSIS_OUT"]).resolve() if os.environ.get("UNCAGED_NORMAL_DIAGNOSIS_OUT") else None
 LIMIT = 2e-5
 
 
@@ -144,8 +145,7 @@ def main():
     # Recheck retained export identities and hashes against the archived checker receipt.
     export_receipts = []
     for row in recorded["results"]:
-        glb = Path(row["GLB_path"].replace("/Users/okh/.codex/worktrees/cg-architect-cycle01/murderbird-uncaged/", ""))
-        glb = ROOT / glb
+        glb = ROOT / "assets" / row["GLB_path"].split("/assets/", 1)[1]
         doc, _, sha = read_glb(glb)
         identity_transforms(doc)
         assert sha == row["GLB_sha256"]
@@ -191,8 +191,10 @@ def main():
         },
         "limits": ["No threshold change", "No geometry or native-source edit", "No fresh Blender evaluation", "No full shader or rendered-pixel equivalence claim", "No acceptance claim"]
     }
-    OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n")
-    print(json.dumps({"outcome": result["outcome"], "worst_object": worst["native_object"], "worst_l2": worst["max_l2"], "unique_failure_material_count": len(unique_failures), "retained_receipt_rows": len(failures), "crown_rows": len(crowns), "output": str(OUT)}, indent=2))
+    if OUT is not None:
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"outcome": result["outcome"], "worst_object": worst["native_object"], "worst_l2": worst["max_l2"], "unique_failure_material_count": len(unique_failures), "retained_receipt_rows": len(failures), "crown_rows": len(crowns), "output": str(OUT) if OUT else "not written; set UNCAGED_NORMAL_DIAGNOSIS_OUT to save"}, indent=2))
 
 
 if __name__ == "__main__":
