@@ -19,6 +19,10 @@ Start with the root [selected-deliverable table](../README.md#selected-deliverab
 
 Do not create a second asset tree or copy the archive into a new taxonomy. Add a deliberate derived runtime file only with its source/provenance relationship recorded.
 
+## Historical checkpoint captures
+
+The v4 [iteration](audit/alignment-v4/iterations/README.md) and [pre-yaw-wrap runtime](audit/alignment-v4/runtime-iterations/README.md) PNG/WebM capture sets are now available through an exact preserved Git commit instead of every current checkout. Their receipts, source snapshots and editable native/export inputs remain. The [retirement ledger](../provenance/checkpoint-retirement-2026-10-11.json) records all 399 paths and verified payload hashes; [frozen regression records](audit/regression-v4/README.md) keep their original meaning. This change reduces a hydrated checkout by 334,813,155 bytes and does not reclaim hosted LFS storage. Other checkpoints remain pending dependency and preservation review, rather than being classified as permanent keeps.
+
 ## Browser delivery and Git LFS
 
 The Vite build copies files from `public/` into the distributable. Keep source archives, production sessions, private material, provenance records, and unrelated historical support files out of `public/`. An asset becomes a website dependency only through an explicit app reference or by placement under `public/`; verify the built `dist/` contents before publishing.
