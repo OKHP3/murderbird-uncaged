@@ -10,9 +10,7 @@
 
 Meet a flightless mechanical creature whose construction changes across centuries. Orbit its enclosure, operate the Maker's external controls, engage the Mechanic's limited walking routine, and encounter the Advanced bird's attention, strikes, jump, and shield thrust. Open its assemblies to explore the machinery beneath the armor.
 
-**The retained Loop03 CG character is published for assessment across all three eras.** Its dedicated viewer presents static browser models, exact native renders, original scoped references and checkpoint09-to-current comparisons. It retains shorter breast courses, local underlaps, articulated toe detail and a restrained crown finish change. Full source likeness remains unmet and owner artistic acceptance remains pending. [Release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md) · [Selected publication assets](assets/review/cg-publication.json).
-
-**Version 37 remains the interactive movement exhibit.** It supplies three era-specific movement systems, reversible inspection, sound and matching illustrated fallbacks. The new CG exports have no skins or animations and are presented separately. The banner is reference artwork, not a screenshot. Publication does not establish artistic acceptance or validated engineering.
+**Two selected packages are retained:** the static CG assessment and the V37 interactive movement exhibit. Their editable sources, usable exports, receipts and acceptance limits are listed under [Selected deliverables](#selected-deliverables). The banner is reference artwork.
 
 ## Three eras, three ways to move
 
@@ -34,9 +32,22 @@ The wings are flightless guards for balance and shielding. The repaired anatomic
 
 The [story and media folio](https://okhp3.github.io/murderbird-uncaged/folio.html) preserves the illustrated narrative, motion study, and earlier model context. The **main exhibit above is the current interactive implementation**; the folio's earlier construction study is historical context.
 
-## Current production source
+## Selected deliverables
 
-[Version 37 release record](docs/production-v37.md) identifies the editable Blender model, exact GLB, browser fallbacks, and validation. Construction is rigid and motion is kinematic. The current model uses neutral mechanical surfaces; it does not claim final reference-matched materials or physical collision simulation.
+Use these existing packages as the entry point; their source trees and filenames stay intact.
+
+| Package | Editable native | Usable export / evidence | Current status |
+|---|---|---|---|
+| CG Maker, retained04 | [Blender source](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/maker/murderbird-recursive-maker.blend) | [GLB](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/maker/murderbird-recursive-maker.glb), [native views and receipt](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/maker/) | Static assessment; no skins or animations. |
+| CG Mechanic, retained04 | [Blender source](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/murderbird-recursive-mechanic.blend) | [GLB](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/murderbird-recursive-mechanic.glb), [native views and receipt](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/) | Static assessment; no skins or animations. |
+| CG Advanced, retained04 (source folder: builder) | [Blender source](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/murderbird-recursive-builder.blend) | [GLB](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/murderbird-recursive-builder.glb), [native views and receipt](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/) | Static assessment; no skins or animations. |
+| V37 interactive exhibit | [Blender source](assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.blend) | [GLB](assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb), [era previews and package](assets/models/whole-character-v37/attempt-release02/), [release record](docs/production-v37.md) | Owner-authorized exhibit with kinematic movement, inspection, sound and illustrated fallbacks. |
+
+The [CG selection manifest](assets/review/cg-publication.json) and [V37 runtime manifest](assets/review/production-v37.json) pin the browser assets. The [CG import ledger](provenance/cg-production-import-2026-10-04.json) and [release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md) retain source paths, hashes and delivery evidence. Native sources, packed textures, views and receipts remain in their established packages; public copies are generated only from explicit publication selections.
+
+These are selected deliverables, not final artistic acceptance. CG source likeness remains **UNMET**, owner acceptance **PENDING**, and strict native/export normal parity remains **FAIL** at **2e-5** ([diagnosis](assets/audit/delegation-series-2026-10-05/packets/mb-p04/normal-diagnosis.json)). The CG candidate retains shorter breast courses, local underlaps, articulated toe detail and a restrained crown finish change. V37 remains the separate movement exhibit; construction is rigid, motion is kinematic, and physical engineering is not established.
+
+For story, artwork, audio and historical source packages, use the [media catalog](docs/media-catalog.md). Historical variants and their source refs remain recoverable; do not promote them by age or filename. Machine-local recovery archives and worktree ownership records belong outside publication paths. The verified owner staging archive is separate from this repository and is not an independent backup. Repository navigation or tracked-file cleanup does not purge hosted Git LFS objects.
 
 ## One release source
 
@@ -90,7 +101,7 @@ This is the canonical repository for MurderBird creative production and the inte
 | `public/` | Deliberately approved browser-delivered files |
 | `.local/` | Ignored private archives and machine-local verification |
 
-Original names, source trees, and historical candidates are preserved. Only explicit runtime references and the reviewed publication allowlist enter the website build. Private session archives are never staged or published. Read the [repository boundaries](docs/repository-boundaries.md), [asset guide](assets/README.md), [media catalog](docs/media-catalog.md), and [agent guidance](AGENTS.md) before contributing.
+Original names, source trees, and historical candidates are preserved. Only explicit runtime references and the reviewed publication allowlist enter the website build. Private session archives are never staged or published. Read the [repository boundaries](docs/repository-boundaries.md), [asset guide](assets/current-deliverables.md), [media catalog](docs/media-catalog.md), and [agent guidance](AGENTS.md) before contributing.
 
 ## License and credits
 

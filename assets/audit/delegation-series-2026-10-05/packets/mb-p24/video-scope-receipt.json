@@ -1,0 +1,86 @@
+{
+  "packet_id": "MB-P24",
+  "task_id": "MB-T044",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "status": "SOURCE_REVIEW_COMPLETE_PLAYBACK_NOT_OBSERVED",
+  "surfaces": {
+    "story_snapshot": {
+      "canonical_page_url_recorded_in_readme": "https://overkillhill.com/writings/murderbird/",
+      "source_repository_revision": "OKHP3/overkill-hill@f1142a02f1e73cd45e46e981022aef27f1c6e095",
+      "snapshot_path": "content/story/published-index.html",
+      "authored_fragment_path": "content/story/index.main.html",
+      "authored_fragment_sha256": "89564989c55cfb2a6315763a76172ea9643e9dc29fc388e636f7849330593c7d",
+      "scope_note": "Local historical source snapshot, not direct evidence of current live page or current media delivery."
+    },
+    "current_folio_source": {
+      "render_path": "src/folio-main.js#L122-L135",
+      "media_registry": "src/media.js",
+      "delivery_version_label": "Controlled Pilot 03 / 8 seconds / silent",
+      "approval_text": "Exact eight-second delivery approved for the MurderBird story page; approval does not extend to rejected earlier pilots, a 3D rig, soundtrack, or planned longer film.",
+      "owner_acceptance_upgrade": false
+    }
+  },
+  "media": {
+    "source_path": "assets/video/murderbird-first-choice-635f0e15.mp4",
+    "preserved_binary_path": "assets/murderbird/production/video/murderbird-first-choice-controlled-pilot-03.mp4",
+    "bytes": 824339,
+    "sha256": "635f0e1552bac61699c03c8406157207f6230ea817bb1ecaeb3adbb3a7bf8613",
+    "provenance_record": "provenance/exterior-construction-v1-2026-09-27.json (LFS alias and preserved binary hashes match); provenance/story-media-publication-2026-09-27.json (owner-authorized assessment publication; no finality upgrade).",
+    "story_snapshot_fragment": "content/story/index.main.html",
+    "poster_path": "assets/img/murderbird-first-choice-poster.jpg",
+    "poster_bytes": 185405,
+    "poster_sha256": "897faf4814ba0ed59b95c1ae43558a34aa3e4154b49f9f4ba0d86942227144c6",
+    "poster_provenance": "provenance/story-media-publication-2026-09-27.json"
+  },
+  "source_control_findings": [
+    {
+      "control": "visitor initiated / no autoplay",
+      "story_snapshot": "CONFIRMED_IN_SOURCE: video has controls and no autoplay attribute",
+      "folio": "CONFIRMED_IN_SOURCE: controls, playsinline, preload=none; no autoplay attribute"
+    },
+    {
+      "control": "playback and seeking",
+      "story_snapshot": "CONFIRMED_IN_SOURCE: native controls attribute; runtime seek was NOT RUN",
+      "folio": "CONFIRMED_IN_SOURCE: native controls attribute; runtime seek was NOT RUN"
+    },
+    {
+      "control": "poster",
+      "story_snapshot": "CONFIRMED_IN_SOURCE: poster URL present; media and poster hashes matched current manifest",
+      "folio": "CONFIRMED_IN_SOURCE: imported poster path assigned to video poster; hash matched current manifest"
+    },
+    {
+      "control": "silent playback",
+      "story_snapshot": "DECLARED_IN_SOURCE: caption and alt-style name say silent; no muted attribute; audio-stream presence not inspected",
+      "folio": "DECLARED_IN_SOURCE: kicker/fallback say silent; no muted attribute; audio-stream presence not inspected"
+    },
+    {
+      "control": "description and accessible name",
+      "story_snapshot": "CONFIRMED_IN_SOURCE: aria-label plus aria-describedby referencing visible caption and separate visual description",
+      "folio": "CONFIRMED_IN_SOURCE: aria-describedby references the visual description; SOURCE GAP: video element has no explicit aria-label/title or direct heading association"
+    },
+    {
+      "control": "one source at a time",
+      "story_snapshot": "UNKNOWN: no interaction behavior verified from the static snapshot",
+      "folio": "CONFIRMED_IN_SOURCE: play handler pauses other media and stops soundscape; actual behavior NOT RUN"
+    },
+    {
+      "control": "rights and approval",
+      "story_snapshot": "CONFIRMED_IN_SOURCE: source snapshot points to canonical story; video exact delivery recorded as story-approved",
+      "folio": "CONFIRMED_IN_SOURCE: assessment publication authorization is recorded; MurderBird creative content remains all rights reserved under NOTICE.md"
+    }
+  ],
+  "observations_and_unknowns": {
+    "source_files_hashed_this_session": true,
+    "source_checks": "Bounded PowerShell source assertions and Get-FileHash checks; results in result.json.",
+    "actual_playback": "NOT RUN; no browser/runtime interaction was performed.",
+    "audio_track_presence": "UNKNOWN; ffprobe was unavailable and no binary parser was run. The 'silent' label is source wording, not codec inspection.",
+    "seeking_and_keyboard_controls": "UNKNOWN until tested in a browser on supported desktop/mobile devices.",
+    "poster_render_and_accessibility_tree": "UNKNOWN until browser/assistive-technology check.",
+    "current_live_page_or_deployment": "NOT CHECKED; local snapshots and source do not establish current live bytes or behavior."
+  },
+  "rights": {
+    "creative_material": "All rights reserved under NOTICE.md; the code MIT license does not license the character, story, video, art or music.",
+    "publication_scope": "provenance/story-media-publication-2026-09-27.json records owner-authorized assessment publication, explicitly without artistic or music finality upgrade.",
+    "no_new_license_or_acceptance_inferred": true
+  }
+}

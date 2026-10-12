@@ -1,0 +1,63 @@
+{
+  "packet_id": "MB-P19",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "SOURCE_AND_LOCAL_COVERAGE_PASS_BROWSER_FAILURES_NOT_RUN",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/recovery-coverage.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/failure-injection-steps.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/report.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/result.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p19/done.json"
+  ],
+  "checks": [
+    {
+      "name": "recovery lifecycle, presence state, encounter state Node tests",
+      "status": "PASS",
+      "command": "node --test tests/recovery-lifecycle.test.mjs tests/presence-state.test.mjs tests/encounter-state.test.mjs",
+      "result": "25 passed, 0 failed, 0 skipped; duration 331.9 ms"
+    },
+    {
+      "name": "source path inventory",
+      "status": "PASS",
+      "evidence": "Current source handlers and existing browser verifier read in this checkout."
+    },
+    {
+      "name": "rendered browser failure injection",
+      "status": "NOT RUN",
+      "reason": "This assignment prohibits browser interaction; existing browser verifiers also write to audit paths outside the assigned packet unless redirected."
+    },
+    {
+      "name": "visibility lifecycle in browser",
+      "status": "NOT RUN",
+      "reason": "No rendered browser/device evidence captured."
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Three requested Node suites pass 25 tests.",
+      "tier": "CONFIRMED",
+      "evidence": "Local command result from this checkout."
+    },
+    {
+      "claim": "Model, fallback-image, context-loss and reduced-motion paths are present in source.",
+      "tier": "CONFIRMED_SOURCE_OBSERVATION",
+      "evidence": "Paths listed in recovery-coverage.json."
+    },
+    {
+      "claim": "Browser rendered recovery and visibility behavior passes.",
+      "tier": "UNKNOWN",
+      "evidence": "No browser interaction or rendered evidence captured."
+    }
+  ],
+  "remaining_product_gates": [
+    "Run bounded browser failure steps and retain rendered receipts in authorized packet scope",
+    "Verify hidden-tab pause/resume and preference changes in rendered browser",
+    "Assess device/audio/accessibility behavior only with appropriate direct evidence"
+  ],
+  "usage": {
+    "native_goal_tokens_used": 54757,
+    "native_goal_token_budget": 1500000,
+    "native_goal_elapsed_seconds": 191,
+    "provider_total_tokens": null
+  }
+}

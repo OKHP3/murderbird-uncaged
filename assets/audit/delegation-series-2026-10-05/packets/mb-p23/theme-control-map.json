@@ -1,0 +1,105 @@
+{
+  "packet_id": "MB-P23",
+  "source_task_id": "MB-T043",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "review_scope": "Read-only source/provenance review plus runtime file hash checks. No browser, audible listening, keyboard operation, build, or source edit.",
+  "approved_release": {
+    "title": "MurderBird: Iron Verdict",
+    "version": "production-v3",
+    "status_from_release_record": "Owner accepted song and explicitly authorized deployment and push to origin/main in that production chat; deployment verification is separate.",
+    "performance_status": "Synthesized sung performance generated locally with ACE-Step 1.5; do not describe as a human vocalist recording.",
+    "origin": "Original locally generated sung performance/arrangement using existing Iron Verdict lyrics/composition and MurderBird story; no identifiable singer was requested for cloning or imitation.",
+    "historical_material_boundary": "Historical GarageBand/instrumental material and optional soundscape remain distinct. This packet did not inspect, modify, or change their status.",
+    "release_manifest": "provenance/iron-verdict-v3-release.json"
+  },
+  "runtime_assets": [
+    {
+      "role": "Full sung theme",
+      "path": "public/audio/iron-verdict-v3/full-song.mp3",
+      "format": "MP3, 320 kbps listening copy",
+      "duration_seconds_manifest": 147.75,
+      "bytes": 5912684,
+      "sha256": "88d21ba2bafc8750976f133006f7aee416192e72dcef40ef13a4f561f06bd249",
+      "ledger_hash_check": "PASS"
+    },
+    {
+      "role": "Repeating exhibit mix",
+      "path": "public/audio/iron-verdict-v3/seamless-loop.flac",
+      "format": "FLAC, 48 kHz / 24-bit stereo",
+      "duration_seconds_manifest": 145.384625,
+      "bytes": 30880257,
+      "sha256": "d9bc121c0c2f1a04ff8456b8aeea1ae6d48fdc1777119ef4823bebc458425a72",
+      "ledger_hash_check": "PASS"
+    },
+    {
+      "role": "Readable lyrics text alternative",
+      "path": "public/audio/iron-verdict-v3/lyrics.txt",
+      "format": "Plain UTF-8 text",
+      "bytes": 1181,
+      "sha256": "1c15ca04684c34329ed9c53018960e23e0556280e571b57bb168ebda88749e89",
+      "ledger_hash_check": "PASS",
+      "source_read": "PASS; displayed as readable text in this task"
+    }
+  ],
+  "control_map": [
+    {
+      "control_or_state": "Production source selection",
+      "implementation": "src/audio/theme-player.js:6-11",
+      "source_behavior": "Normal production uses release-v3 full-song.mp3 and seamless-loop.flac via BASE_URL. A development-only local preview override can select /__theme-preview/*.wav.",
+      "runtime_observation": "NOT RUN"
+    },
+    {
+      "control_or_state": "Mount and explicit Play/Pause/Cancel",
+      "implementation": "src/main.js:167; src/audio/theme-player.js:22, 51-56, 133-138",
+      "source_behavior": "Mounted in exhibit viewer column. The native button toggles Play/Pause while a source exists and Cancel during load; playback starts only after user action.",
+      "runtime_observation": "NOT RUN"
+    },
+    {
+      "control_or_state": "Full song / seamless loop selection",
+      "implementation": "src/audio/theme-player.js:24, 40-42, 110, 141-144",
+      "source_behavior": "Version select chooses full or loop. Loop sets AudioBufferSourceNode.loop=true; changing version stops and resets playback before selection.",
+      "runtime_observation": "NOT RUN"
+    },
+    {
+      "control_or_state": "Restart and end-of-song state",
+      "implementation": "src/audio/theme-player.js:64-80, 112-120, 140",
+      "source_behavior": "Restart clears offset and begins selected item from the start. Natural full-song end reports completion and a subsequent Play starts again.",
+      "runtime_observation": "NOT RUN"
+    },
+    {
+      "control_or_state": "Fetch/decode failure and cancellation",
+      "implementation": "src/audio/theme-player.js:72-75, 98-104, 126-131",
+      "source_behavior": "AbortController supports cancel while loading. Non-OK fetch/decode errors stop playback and show an error with retry instruction; AbortError reports cancellation.",
+      "runtime_observation": "NOT RUN"
+    },
+    {
+      "control_or_state": "Volume and mute",
+      "implementation": "src/audio/theme-player.js:26, 58-63, 145-146",
+      "source_behavior": "Labeled 0-100 range slider starts at 60%; live output displays selected percentage. Mute toggles gain to zero while preserving slider value.",
+      "runtime_observation": "NOT RUN"
+    },
+    {
+      "control_or_state": "Readable lyrics link",
+      "implementation": "src/audio/theme-player.js:20",
+      "source_behavior": "Visible link text is 'Read the lyrics' and points at public/audio/iron-verdict-v3/lyrics.txt; that text file was directly read and matched the release hash.",
+      "runtime_observation": "Browser navigation NOT RUN"
+    },
+    {
+      "control_or_state": "Keyboard/accessibility affordances",
+      "implementation": "src/audio/theme-player.js:16-27; src/audio/theme-player.css:9, 19-20",
+      "source_behavior": "Native buttons, select, labeled range input, status role, aria-pressed states, and focus-visible styling are present. Source inspection does not prove actual keyboard usability.",
+      "runtime_observation": "NOT RUN"
+    }
+  ],
+  "check_receipt": {
+    "base_sha_check": "PASS: git rev-parse HEAD returned 4984f39bdca13e87ead9b446b1d033dc0f2898ee.",
+    "runtime_asset_size_and_sha256_vs_manifest": "PASS: all three exact approved copies matched.",
+    "source_syntax": "PASS: bundled Node --check src/audio/theme-player.js and src/main.js.",
+    "theme_release_validator": "NOT RUN: scripts/verify-theme-release.mjs reads dist/ and asserts actual build payload; dist/ is absent. No build was run.",
+    "full_song_audible_listen": "NOT RUN",
+    "loop_boundary_and_repeated_cycles_listen": "NOT RUN",
+    "keyboard_and_browser_operation": "NOT RUN",
+    "forced_failure_cancel_retry_and_volume_operation": "NOT RUN"
+  },
+  "product_acceptance": "UNKNOWN/PENDING actual audible, browser, and keyboard observations; source review and hash match are not runtime acceptance."
+}

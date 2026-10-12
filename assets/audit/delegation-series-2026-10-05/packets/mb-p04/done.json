@@ -1,0 +1,32 @@
+{
+  "packet_id": "MB-P04",
+  "task_id": "MB-T018",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "status": "COMPLETE",
+  "outcome": "REPRODUCED_RETAINED_STRICT_NORMAL_FAILURE_CAUSE_UNKNOWN",
+  "report": "assets/audit/delegation-series-2026-10-05/packets/mb-p04/report.md",
+  "artifacts": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/normal-diagnosis.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/reproduction.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/bounded-replay.py",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p04/result.json"
+  ],
+  "checks": [
+    "Bounded replay PASS; retained current GLB hashes match checker receipt and current/prior mesh-node transforms are identity.",
+    "Artifact structure and 279-word report bound PASS.",
+    "Fresh native Blender/export execution NOT RUN."
+  ],
+  "product_gates": {
+    "strict_normal_parity": "FAIL at unchanged 2e-5 L2",
+    "source_likeness": "UNMET",
+    "owner_artistic_acceptance": "PENDING",
+    "prd_scoring": "NOT SCORED"
+  },
+  "usage": {
+    "native_goal_tokens_used": 112556,
+    "native_goal_token_budget": 1500000,
+    "native_goal_time_used_seconds": 497,
+    "provider_total_tokens": null
+  },
+  "completionBudgetReport": "Goal achieved. Report final usage from this tool result's structured goal fields. If `goal.tokenBudget` is present, include token usage from `goal.tokensUsed` and `goal.tokenBudget`. If `goal.timeUsedSeconds` is greater than 0, summarize elapsed time in a concise, human-friendly form appropriate to the response language."
+}

@@ -1,0 +1,5 @@
+# Historical v4 iteration captures
+
+The 216 generated PNG captures formerly checked out here are preserved at [commit a27a06fe448c](https://github.com/OKHP3/murderbird-uncaged/tree/a27a06fe448cbea3814f96c6ec677894a1cdf6a8/assets/audit/alignment-v4/iterations). The 31 ordinary receipts remain at their original paths. Editable natives, GLBs and generation source under `assets/models/uncaged-alignment-v4/` remain in the current tree.
+
+These are historical comparison outputs, outside the current CG/V37 publication manifests. Their removal from the current checkout does not change the recorded findings or establish owner acceptance. To read an original image path recorded in a receipt, open that exact path at the pinned commit above. See the [exact path/OID recovery ledger](../../../../provenance/checkpoint-retirement-2026-10-11.json). All retired payload hashes were verified against existing local cache bytes before this change. Git history and cached payloads remain; hosted LFS storage has not been reclaimed.

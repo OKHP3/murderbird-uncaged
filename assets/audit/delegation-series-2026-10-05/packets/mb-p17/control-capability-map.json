@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "packet_id": "MB-P17",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "evidence_scope": "Local V37 source inspection and renderer-independent state tests; no browser/rendered observation in this packet.",
+  "era_aliases": {
+    "maker": "Maker",
+    "mechanic": "Mechanic",
+    "builder": "Advanced (UI label); Builder (internal state key)"
+  },
+  "capabilities": [
+    {
+      "era": "maker",
+      "movement_model": "Stationary supported puppet; explicitly controlled articulation only.",
+      "controls": ["five outside articulation sliders: leg, wing, tail, neck, jaw", "release all levers", "camera orbit/zoom", "inspection and assembly separation", "pause/calm", "reduced motion", "part selection/focus", "sound toggle"],
+      "unavailable_by_design": ["autonomous locomotion", "internal power", "visitor tracking/reach response", "predatory behavior", "power jump", "shield thrust", "claw scrape"],
+      "inspection_assemblies": ["support", "pivots", "control-linkages"],
+      "evidence": ["src/scene/era-controller.js: ERA_CAPABILITIES.maker", "src/main.js: maker-controls and applyEra", "tests/era-controller.test.mjs"]
+    },
+    {
+      "era": "mechanic",
+      "movement_model": "Bounded energy-limited mechanical routine; no visitor tracking or predatory behavior.",
+      "controls": ["engage mechanism", "stop after current cycle", "wind spring", "spring charge meter", "camera orbit/zoom", "inspection and assembly separation", "pause/calm", "reduced motion", "part selection/focus", "sound toggle"],
+      "unavailable_by_design": ["outside articulation", "visitor tracking/reach response", "predatory behavior", "power jump", "shield thrust", "claw scrape"],
+      "inspection_assemblies": ["winding-drive", "transmission", "joint-linkages"],
+      "evidence": ["src/scene/era-controller.js: ERA_CAPABILITIES.mechanic", "src/main.js: mechanic-controls and applyEra", "tests/era-controller.test.mjs"]
+    },
+    {
+      "era": "builder",
+      "movement_model": "Advanced era: autonomous encounter, visitor tracking/response, cage testing, claw action and gated power moves.",
+      "controls": ["visitor position left/center/right", "reach toward bars", "retreat", "tap-to-reach mode", "power jump", "shield thrust", "claw scrape", "camera orbit/zoom", "inspection and assembly separation", "pause/calm", "reduced motion", "part selection/focus", "sound toggle"],
+      "inspection_assemblies": ["power-core", "distribution", "actuators", "sensors", "processing"],
+      "evidence": ["src/scene/era-controller.js: ERA_CAPABILITIES.builder", "src/main.js: advanced controls and applyEra", "tests/presence-state.test.mjs", "tests/encounter-state.test.mjs"]
+    }
+  ],
+  "shared_view_controls": {
+    "webgl": ["drag orbit and pointer orbit", "scroll or pinch zoom", "buttons orbit left/right, raise/lower viewpoint, zoom in/out", "reset view", "center selected part"],
+    "inspection": ["open inspection", "separate assembly slider", "reassemble and return"],
+    "keyboard": "Arrow keys orbit/elevate; plus/equal and minus zoom; Home resets in the WebGL exhibit source.",
+    "source": ["src/main.js", "src/scene/presence-exhibit.js"]
+  },
+  "fallback": {
+    "activation": "Append ?view=illustrated or allow WebGL/model initialization to fail; Retry 3D is shown after fallback.",
+    "capabilities_confirmed_in_source": ["fixed reference still", "era-specific still selection", "textual part descriptions", "separate illustrative assembly schematic", "era switching", "retry path"],
+    "not_equivalent_to_webgl": ["no orbit, zoom, camera reset, or part focus in fallback adapter", "no posed 3D enclosure evidence", "schematic is labeled illustrative and is not a 3D view"],
+    "source": ["src/main.js: loadExhibit", "src/scene/fallback.js"]
+  },
+  "identity_and_enclosure": {
+    "source_claims": ["UI presents one inherited body across three eras", "WebGL scene creates a cage/enclosure", "current goal says source likeness UNMET and owner artistic acceptance PENDING"],
+    "visual_result": "UNKNOWN: no current rendered desktop, fallback, mobile, cache, or human identity review was performed in this packet.",
+    "evidence": ["src/main.js", "src/scene/presence-exhibit.js", "goal.md"]
+  },
+  "limits": ["Source capability is not rendered behavior or acceptance.", "Automated state tests do not prove canvas, enclosure, responsive layout, browser cache, performance, or visual identity.", "Enclosure successor-view validation requires the selected successor candidate; no candidate is reviewed here."]
+}

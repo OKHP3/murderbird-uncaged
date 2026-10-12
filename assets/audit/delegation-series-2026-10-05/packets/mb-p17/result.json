@@ -1,0 +1,34 @@
+{
+  "packet_id": "MB-P17",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "COMPLETE_SOURCE_INVENTORY_AND_STATE_TESTS",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p17/control-capability-map.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p17/diagnostic-steps.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p17/test-receipt.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p17/report.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p17/result.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p17/done.json"
+  ],
+  "checks": [
+    { "name": "delegated base SHA", "status": "PASS", "evidence": "git rev-parse HEAD matched 4984f39bdca13e87ead9b446b1d033dc0f2898ee" },
+    { "name": "era/presence/encounter state tests", "status": "PASS", "evidence": "36 passed, 0 failed" },
+    { "name": "browser rendered desktop/fallback/mobile", "status": "NOT RUN", "evidence": "procedure prepared; no browser/device observation" },
+    { "name": "build", "status": "NOT RUN", "evidence": "no application source changed" }
+  ],
+  "findings": [
+    "Source UI label Advanced maps to internal state key builder.",
+    "Fallback is a fixed still/schematic mode and lacks WebGL camera operations.",
+    "Source control and unit-test evidence do not establish visual identity, enclosure readability, or rendered behavior."
+  ],
+  "remaining_product_gates": [
+    "Exact-revision browser observation of WebGL and forced fallback",
+    "Actual narrow mobile/physical-device behavior and performance evidence",
+    "Human reference-matched identity review and owner artistic acceptance",
+    "Enclosure successor views against an actual selected successor candidate"
+  ],
+  "usage": {
+    "native_goal_tokens_used_before_closeout": 34227,
+    "provider_total_tokens": null
+  }
+}

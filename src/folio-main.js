@@ -124,7 +124,7 @@ app.innerHTML = `
           <article class="playback-card motion-card">
             <p class="playback-kicker">CONTROLLED PILOT 03 / 8 SECONDS / SILENT</p>
             <h3>First choice</h3>
-            <video id="first-choice-video" controls playsinline preload="none" poster="${firstChoicePilot.poster}" aria-describedby="pilot-description">
+            <video id="first-choice-video" controls playsinline preload="none" poster="${firstChoicePilot.poster}" aria-label="The first choice: a silent MurderBird motion study" aria-describedby="pilot-description">
               <source src="${firstChoicePilot.src}" type="video/mp4">
               <p>Your browser does not support this video. <a href="${firstChoicePilot.src}">Open the silent motion study</a>.</p>
             </video>

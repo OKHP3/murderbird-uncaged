@@ -1,0 +1,88 @@
+{
+  "packet_id": "MB-P23",
+  "source_task_id": "MB-T043",
+  "base_sha": "4984f39bdca13e87ead9b446b1d033dc0f2898ee",
+  "outcome": "SOURCE_AND_ASSET_CUSTODY_CONFIRMED_RUNTIME_HUMAN_VERIFICATION_NOT_RUN",
+  "changed_paths": [
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p23/theme-control-map.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p23/listening-keyboard-checklist.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p23/report.md",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p23/result.json",
+    "assets/audit/delegation-series-2026-10-05/packets/mb-p23/done.json"
+  ],
+  "checks": [
+    {
+      "name": "isolated base revision",
+      "status": "PASS",
+      "evidence": "git rev-parse HEAD = 4984f39bdca13e87ead9b446b1d033dc0f2898ee"
+    },
+    {
+      "name": "production-v3 runtime sizes and SHA-256 versus release manifest",
+      "status": "PASS",
+      "evidence": "Bundled Python read-only check verified all three files under public/audio/iron-verdict-v3/ against provenance/iron-verdict-v3-release.json. Lyrics also read directly as plain text."
+    },
+    {
+      "name": "source syntax",
+      "status": "PASS",
+      "evidence": "Bundled Node --check passed for src/audio/theme-player.js and src/main.js."
+    },
+    {
+      "name": "scripts/verify-theme-release.mjs",
+      "status": "NOT RUN",
+      "evidence": "The validator requires dist/; dist/ is absent. No build was run per scope."
+    },
+    {
+      "name": "full-song and loop listening; loop boundary and multiple cycles",
+      "status": "NOT RUN",
+      "evidence": "No audible listening observation in this task."
+    },
+    {
+      "name": "keyboard/browser, cancellation/failure/retry, mute and volume behavior",
+      "status": "NOT RUN",
+      "evidence": "Control-flow source inspected only; no actual browser or keyboard interaction."
+    }
+  ],
+  "findings": [
+    {
+      "claim": "production-v3 is the owner-accepted Iron Verdict release record and identifies an original locally generated synthesized sung performance using ACE-Step 1.5; no human vocalist recording is claimed.",
+      "tier": "CONFIRMED_FROM_RELEASE_RECORD_AND_REPOSITORY_GUIDANCE",
+      "evidence": "provenance/iron-verdict-v3-release.json; AGENTS.md"
+    },
+    {
+      "claim": "The full-song, seamless-loop, and lyric runtime copies match the approved release manifest byte counts and SHA-256 values.",
+      "tier": "CONFIRMED_BY_READ_ONLY_HASH_CHECK",
+      "evidence": "theme-control-map.json check_receipt"
+    },
+    {
+      "claim": "Source exposes full/loop selection, Play/Pause/Cancel, Restart, Mute, labeled Volume, retry/error statuses, and a visible plain-text lyric link.",
+      "tier": "CONFIRMED_SOURCE_ONLY",
+      "evidence": "src/audio/theme-player.js and theme-control-map.json"
+    },
+    {
+      "claim": "The controls work audibly and with real keyboard/browser navigation, including an uninterrupted seamless loop and failure recovery.",
+      "tier": "UNKNOWN_NOT_RUN",
+      "evidence": "listening-keyboard-checklist.md"
+    }
+  ],
+  "remaining_product_gates": {
+    "human_full_track_listen": "NOT RUN",
+    "human_loop_boundary_and_three_cycle_listen": "NOT RUN",
+    "actual_keyboard_and_browser": "NOT RUN",
+    "failure_cancel_retry_mute_volume_operation": "NOT RUN",
+    "theme_release_build_payload_validator": "NOT RUN because dist/ is absent; no build was run",
+    "deployment_verification": "NOT ESTABLISHED by this source/asset packet",
+    "historical_music_status": "Preserved as distinct; no status change or audit performed"
+  },
+  "execution_notes": [
+    "The native goal readback later showed BLOCKED after its initial ACTIVE state; the explicit recovery direction was followed in the same goal without restarting inspection or creating another goal.",
+    "An older small Luna model at low effort was requested as a capacity fallback. This thread exposes no self-model-switch control; no child agent was authorized or started, so the fallback was not applied and the current model continued the bounded closeout."
+  ],
+  "usage": {
+    "this_goal_native_tokens_used_snapshot": 139598,
+    "this_goal_token_budget": 1500000,
+    "this_goal_time_used_seconds_snapshot": 184,
+    "prior_completed_mb_p04_goal_tokens": 112556,
+    "provider_total_tokens": null,
+    "note": "Keep MB-P04 and MB-P23 native goal usage as separate per-packet totals; provider total and billing are unavailable."
+  }
+}
