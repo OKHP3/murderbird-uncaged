@@ -2,16 +2,18 @@
 
 ## Status and decision boundary
 
-This is a record of the owner's contour clarification and a plan for a later
+This is a record of the assistant's delegated contour clarification and a plan for a later
 review pass. It is not an implemented geometry change, binary rebuild, likeness
 acceptance, engineering approval, or publication authorization.
 
-The owner selected the **side-view breast/chest bulge** for reduction. The
+The owner authorized the assistant to answer the existing question. The assistant
+selected the **side-view breast/chest bulge** for reduction; this is a proposed
+direction, not the owner's artistic acceptance. The
 requested direction is to reduce its spherical protrusion toward Candidate 03
 and the locked full-bird reference. The rear/back contour is to remain
 unchanged.
 
-The owner also confirmed the intended direction for the other two reviewed
+The assistant carried forward the existing intended direction for the other two reviewed
 regions: retain a stronger, thicker visible neck and flatten the
 shoulder/wing-mantle transition into the chest so it reads as a bird form
 rather than a human shoulder.
@@ -31,9 +33,10 @@ Do not use this clarification to change the head, bill, legs, feet, or unrelated
 regions. Candidate 03 is
 [`assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png`](../assets/img/library/murderbird-unified-master-candidate-03-2026-09-06.png),
 SHA-256 `538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633`.
-Before editing, identify and record the exact file and hash of the separately
-described locked full-bird reference; this note does not infer a missing
-reference path.
+The controlling full-bird canon is pinned in `goal.md`:
+[`assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg`](../assets/img/library/murderbird-locked-sept22-composite-owner-reissued-2026-10-03.jpg),
+SHA-256 `645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114`.
+These references retain their separate scopes; neither substitutes for the other.
 
 ## Bounded review plan
 
@@ -54,16 +57,21 @@ reference path.
 ## This sync closeout
 
 At the owner's direction, this closeout records the clarification and plan
-only. No geometry, model binary, generated render, branch, archive, release
-manifest, or publication state was changed. No automatic application of the
-plan was performed. Likeness remains unaccepted.
+only. No geometry, model binary, generated render, or release manifest changed.
+Replit automatically applied the documentation task to main despite the requested
+no-auto-apply boundary. Its pre-merge checkpoint removed eight historical proof
+logs; the integrator restored them exactly from canonical main. A subsequent
+performance-documentation checkpoint repeated those deletions. The corrective
+sync review restores the original logs again and preserves every preceding
+commit. This record does not establish any model acceptance or authorize later
+geometry work. Likeness remains unaccepted.
 
 ## Evidence status
 
-- **Confirmed:** owner-selected side-view breast/chest contour and preservation
+- **Confirmed:** assistant-selected side-view breast/chest contour and preservation
   constraints, recorded from the clarification received 2026-10-13.
 - **Proposed:** the four-step review plan above.
-- **Unknown:** the exact path and hash of the separately described locked
-  full-bird reference; identify it before the later geometry pass.
+- **Confirmed:** canonical reference paths and hashes above, as pinned in `goal.md`.
+- **Pending:** owner likeness acceptance and authorization for a later geometry pass.
 - **Not run:** geometry, export, visual, engineering, collision, and device
   validation, because no model changes were authorized in this closeout.
