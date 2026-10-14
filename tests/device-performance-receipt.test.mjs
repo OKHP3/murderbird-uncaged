@@ -184,11 +184,15 @@ test('PASS/FAIL is accepted only with measured evidence and documented threshold
   const candidate = withMeasuredAsusResult({
     status: 'PASS',
     measuredAt: '2026-10-13T10:05:00Z',
+    comparisonEvidence: 'assets/audit/performance/example-comparison.json',
   });
   candidate.performancePolicy.thresholdClassification = 'APPROVED';
   candidate.performancePolicy.thresholdsStatus = 'APPROVED';
   candidate.performancePolicy.approvalEvidence = 'docs/performance-target-approval.md';
   candidate.performancePolicy.approvedAt = '2026-10-13T10:00:00Z';
+  candidate.performancePolicy.approvedThresholds = [
+    { metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: 16.7 },
+  ];
   assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
 
   candidate.performancePolicy.approvedAt = '2026-10-13T10:10:00Z';
@@ -264,4 +268,67 @@ test('historical telemetry passes only when labeled historical and non-target', 
 test('workload duration alone cannot substantiate MEASURED', () => {
   const candidate = withMeasuredAsusResult({ representativeFrameTimings: null });
   assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /MEASURED requires actual numeric measurement evidence/);
+});
+
+function withApprovedVerdict(status = 'PASS', timings = { medianFrameMs: 16.7 }) {
+  const candidate = withMeasuredAsusResult({
+    status, representativeFrameTimings: timings,
+    measuredAt: '2026-10-13T10:05:00Z',
+    comparisonEvidence: 'example-comparison.json',
+  });
+  Object.assign(candidate.performancePolicy, {
+    thresholdClassification: 'APPROVED', thresholdsStatus: 'APPROVED',
+    approvalEvidence: 'example-approval.md', approvedAt: '2026-10-13T10:00:00Z',
+    approvedThresholds: [
+      { metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: 16.7 },
+    ],
+  });
+  return candidate;
+}
+
+test('an approval label alone cannot substantiate PASS or FAIL', () => {
+  for (const status of ['PASS', 'FAIL']) {
+    const candidate = withApprovedVerdict(status, { medianFrameMs: 9999 });
+    delete candidate.performancePolicy.approvedThresholds;
+    delete candidate.targetDevicePerformance.comparisonEvidence;
+    const errors = validateDevicePerformanceReceipt(candidate).join('\n');
+    assert.match(errors, /requires non-empty approvedThresholds/);
+    assert.match(errors, /requires a comparisonEvidence reference/);
+  }
+});
+
+test('verdict must agree with actual observations against all approved limits', () => {
+  assert.deepEqual(validateDevicePerformanceReceipt(withApprovedVerdict()), []);
+  assert.deepEqual(validateDevicePerformanceReceipt(withApprovedVerdict('FAIL', { medianFrameMs: 9999 })), []);
+  assert.match(validateDevicePerformanceReceipt(withApprovedVerdict('PASS', { medianFrameMs: 9999 })).join('\n'), /PASS contradicts/);
+  assert.match(validateDevicePerformanceReceipt(withApprovedVerdict('FAIL')).join('\n'), /FAIL contradicts/);
+  const candidate = withApprovedVerdict('PASS', { medianFrameMs: 16, p95FrameMs: 50 });
+  candidate.performancePolicy.approvedThresholds.push({
+    metric: 'representativeFrameTimings.p95FrameMs', operator: '<=', limit: 33.3,
+  });
+  assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /PASS contradicts/);
+  candidate.targetDevicePerformance.status = 'FAIL';
+  assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
+});
+
+test('approved limits must identify unique actual metrics and valid numeric comparisons', () => {
+  for (const threshold of [
+    { metric: 'observedDurationSeconds', operator: '<=', limit: 120 },
+    { metric: 'representativeFrameTimings.medianFrameMs', operator: 'about', limit: 16.7 },
+    { metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: '16.7' },
+    { metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: Infinity },
+    { metric: 'representativeFrameTimings.__proto__.value', operator: '<=', limit: 16.7 },
+    null,
+  ]) {
+    const candidate = withApprovedVerdict();
+    candidate.performancePolicy.approvedThresholds = [threshold];
+    assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /each approved threshold/);
+  }
+  const candidate = withApprovedVerdict();
+  candidate.performancePolicy.approvedThresholds.push(candidate.performancePolicy.approvedThresholds[0]);
+  assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /each approved threshold/);
+  candidate.performancePolicy.approvedThresholds = [
+    { metric: 'representativeFrameTimings.missingMetric', operator: '<=', limit: 16.7 },
+  ];
+  assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /requires an actual finite numeric observation/);
 });

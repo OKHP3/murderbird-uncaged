@@ -348,6 +348,8 @@ These are review targets, not claims about the current product. A **MEASURED** s
 
 ### Current device selection and evidence status — October 13, 2026
 
+For a receipt verdict, `performancePolicy.approvedThresholds` records every approved comparison as `{ metric, operator, limit }`. The metric is a dotted path to an observed performance value (for example, `representativeFrameTimings.medianFrameMs`), the operator is `<=`, `<`, `>=`, or `>`, and the limit is a finite number in that metric's units. Record `comparisonEvidence` on the measured result to identify the comparison receipt. The validator evaluates every approved limit against the actual observations: PASS requires all limits to pass; FAIL requires at least one failure. Missing observations, limits, or comparison evidence cannot substantiate either verdict. Workload duration remains a test condition, not a performance metric. This schema defines evidence requirements and does not approve any proposed limit.
+
 | Item | Current record |
 | --- | --- |
 | Immediate desktop target | Owner-reported local inventory: ASUS Vivobook Pro 15 N6506MJ_Q533MJ; Intel Core Ultra 7 155H; Intel Arc plus NVIDIA RTX 3050 6GB Laptop GPU; Windows 11 Home build 26300. This inventory identifies the intended target but does not verify physical access. |
