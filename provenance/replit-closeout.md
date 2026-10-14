@@ -77,3 +77,36 @@ The two existing breastplate jobs remain Free-only: #52 checks the middle neck
 link, and #53 checks internal equipment after #52. Accepted/queued state is not
 execution or completion. Respect the actual agent-capacity gate; do not use
 Build on main, paid capacity, replacement tasks or fabricated results.
+
+## Subsequent source review — October 14, 2026
+
+The next completed root chain was preserved at
+`refs/archive/replit-owner-closeout/3b79209c580a47221643044b8e3995c2b7ae311b/main`.
+All 17 then-current branch tips received exact archive refs before any checkout
+change. This chain contains the four owner-selected original commits
+`863faa419f3810fe291d9dbaa873633afc1a090f`,
+`07bde141ac07af7f426aafbf76dc0e8664ba25a8`,
+`a74261fec69f3a9ac934b6d3e02dd75e3b46330f` and
+`9c1d1429df5519ea87350f0c2c339a9065db1930`, plus later timing-tool commits
+`3bc422835a048142c9a3d6bfbe18acbd4a5978f1` and
+`3b79209c580a47221643044b8e3995c2b7ae311b`.
+
+The compatible threshold-revision validator, regression tests and specification
+from `a74261fe` are selectively incorporated. Existing unscored receipts remain
+valid without rewriting historical evidence. New verdicts reference a hashed
+snapshot of the approved timestamp, evidence and exact comparison limits;
+changing later proposals does not change an earlier verdict's criteria.
+
+The other source remains held locally for separate review. In particular,
+`07bde141` includes accumulated candidate scene/model/tooling changes across
+80 paths, beyond its capture-generation title. Historical log deletions and
+media payload rewrites are not incorporated. The two later timing-tool commits
+also remain held. Original ancestry and payload availability are separate
+facts; no original-history or LFS upload is claimed by this selective review.
+
+Breastplate task #52 reached its dependency gate: baseline and candidate model
+hashes matched its existing receipt, but the worker found no Blender executable
+and made no geometry edits or new clearance measurements. Task #53 depends on
+that work. Tasks #63/#64 remain selected Free-only work; queued state is not a
+completed collision audit. Retained04/V37 and whole-bird acceptance boundaries
+remain unchanged.
