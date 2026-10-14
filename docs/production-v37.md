@@ -16,7 +16,7 @@ The release composes the preserved V37 tucked-shoulder envelope and rebuilt foot
 
 The exact exported GLB passes the bounded 66-sample era/attachment/inspection/reset integration check with zero reported attachment failures or fit-risk flags. Export checks preserve rigid ownership, finite geometry, material assignments and the native source. These checks do not supersede known local shoulder/foot clearance issues or establish physical engineering. Motion is kinematic.
 
-The current neutral exterior and likeness remain open to later refinement. The owner has authorized deployment as it stands. Source records retain all geometric findings without exposing the research history in the product interface.
+The current neutral exterior and likeness remain open to later refinement. The owner has authorized deployment as it stands; this deployment authorization is not owner likeness acceptance. These are independent statuses. Source records retain all geometric findings without exposing the research history in the product interface.
 
 Run `npm ci`, `npm run build`, all Node tests, the theme/publication/presentation verifiers, and media-import verification before release. The publication verifier pins the one model, three matching fallback images, story media, and every emitted file; sources and raw audit trees remain excluded. `scripts/verify-v37-release-browser.mjs` exercises actual public controls and fallback loading. The live `release.json` identifies the exact deployed revision; only a successful Pages deployment and a matching live manifest establish delivery.
 
