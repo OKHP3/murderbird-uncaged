@@ -193,6 +193,55 @@ function isVerifiedPhysicalAccess(value) {
   return ['VERIFIED', 'CONFIRMED'].includes(String(value ?? '').trim().toUpperCase());
 }
 
+function validateVerdictComparison(record, policy, label, status) {
+  const errors = [];
+  if (!hasMeasurementEvidence({ evidence: record.comparisonEvidence })) {
+    errors.push(`${label}: PASS/FAIL requires a comparisonEvidence reference.`);
+  }
+  const thresholds = policy?.approvedThresholds;
+  if (!Array.isArray(thresholds) || thresholds.length === 0) {
+    errors.push(`${label}: PASS/FAIL requires non-empty approvedThresholds with metric, operator, and numeric limit.`);
+    return errors;
+  }
+  const operators = {
+    '<=': (value, limit) => value <= limit,
+    '<': (value, limit) => value < limit,
+    '>=': (value, limit) => value >= limit,
+    '>': (value, limit) => value > limit,
+  };
+  const seen = new Set();
+  const outcomes = [];
+  for (const threshold of thresholds) {
+    const metric = threshold?.metric;
+    const path = typeof metric === 'string' ? metric.split('.') : [];
+    if (!path.length || !MEASUREMENT_KEYS.has(path[0])
+      || path.some((part) => !part || ['__proto__', 'prototype', 'constructor'].includes(part))
+      || seen.has(metric) || !Object.hasOwn(operators, threshold?.operator)
+      || typeof threshold?.limit !== 'number' || !Number.isFinite(threshold.limit)) {
+      errors.push(`${label}: each approved threshold must uniquely identify an observed metric, supported operator, and finite numeric limit.`);
+      continue;
+    }
+    seen.add(metric);
+    let observed = record;
+    for (const part of path) {
+      observed = observed && typeof observed === 'object' && Object.hasOwn(observed, part)
+        ? observed[part] : undefined;
+    }
+    if (typeof observed !== 'number' || !Number.isFinite(observed)) {
+      errors.push(`${label}: approved metric ${metric} requires an actual finite numeric observation.`);
+      continue;
+    }
+    outcomes.push(operators[threshold.operator](observed, threshold.limit));
+  }
+  if (outcomes.length === thresholds.length) {
+    const calculatedStatus = outcomes.every(Boolean) ? 'PASS' : 'FAIL';
+    if (status !== calculatedStatus) {
+      errors.push(`${label}: ${status} contradicts the approved threshold comparison (${calculatedStatus}).`);
+    }
+  }
+  return errors;
+}
+
 /**
  * Checks that ASUS performance claims are backed by verified, on-device evidence,
  * while keeping cloud/software and historical evidence explicitly ineligible.
@@ -265,6 +314,7 @@ export function validateDevicePerformanceReceipt(receipt) {
       }
     }
     if (status === 'PASS' || status === 'FAIL') {
+      errors.push(...validateVerdictComparison(record, policy, label, status));
       const classification = String(policy?.thresholdClassification ?? '').trim().toUpperCase();
       if (classification !== 'APPROVED'
         || !present(policy?.approvalEvidence)) {
