@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -193,14 +194,94 @@ function isVerifiedPhysicalAccess(value) {
   return ['VERIFIED', 'CONFIRMED'].includes(String(value ?? '').trim().toUpperCase());
 }
 
+function thresholdRevisionFor(snapshot) {
+  const thresholds = Array.isArray(snapshot?.thresholds)
+    ? snapshot.thresholds.map((threshold) => [
+      threshold?.metric,
+      threshold?.operator,
+      threshold?.limit,
+    ])
+    : [];
+  const canonicalSnapshot = JSON.stringify([
+    snapshot?.approvedAt,
+    snapshot?.approvalEvidence,
+    thresholds,
+  ]);
+  return `sha256-${createHash('sha256').update(canonicalSnapshot).digest('hex')}`;
+}
+
+function validateThresholdSnapshots(policy) {
+  const errors = [];
+  const snapshots = policy?.approvedThresholdRevisions;
+  if (!Array.isArray(snapshots)) {
+    return ['performancePolicy: approvedThresholdRevisions must be an array of immutable approved threshold snapshots.'];
+  }
+
+  const seenRevisions = new Set();
+  for (const snapshot of snapshots) {
+    if (!snapshot || typeof snapshot !== 'object' || Array.isArray(snapshot)) {
+      errors.push('performancePolicy: each approved threshold revision must be an object.');
+      continue;
+    }
+    const revision = snapshot.revision;
+    if (typeof revision !== 'string' || !/^sha256-[a-f0-9]{64}$/.test(revision)
+      || seenRevisions.has(revision)) {
+      errors.push('performancePolicy: each approved threshold revision must have a unique sha256 revision identifier.');
+    }
+    if (typeof revision === 'string') seenRevisions.add(revision);
+    if (parseEvidenceTimestamp(snapshot.approvedAt) === null) {
+      errors.push('performancePolicy: each approved threshold revision requires an ISO approval timestamp.');
+    }
+    if (!present(snapshot.approvalEvidence)) {
+      errors.push('performancePolicy: each approved threshold revision requires an approval evidence reference.');
+    }
+    if (!Array.isArray(snapshot.thresholds) || snapshot.thresholds.length === 0) {
+      errors.push('performancePolicy: each approved threshold revision requires a non-empty thresholds list.');
+      continue;
+    }
+    const operators = new Set(['<=', '<', '>=', '>']);
+    const seenMetrics = new Set();
+    for (const threshold of snapshot.thresholds) {
+      const metric = threshold?.metric;
+      const path = typeof metric === 'string' ? metric.split('.') : [];
+      if (!path.length || !MEASUREMENT_KEYS.has(path[0])
+        || path.some((part) => !part || ['__proto__', 'prototype', 'constructor'].includes(part))
+        || seenMetrics.has(metric) || !operators.has(threshold?.operator)
+        || typeof threshold?.limit !== 'number' || !Number.isFinite(threshold.limit)) {
+        errors.push('performancePolicy: each approved threshold revision must contain unique observed metrics, supported operators, and finite numeric limits.');
+        continue;
+      }
+      seenMetrics.add(metric);
+    }
+    if (revision !== thresholdRevisionFor(snapshot)) {
+      errors.push('performancePolicy: approved threshold revision does not match its recorded approval timestamp, evidence, and threshold values.');
+    }
+  }
+  return errors;
+}
+
 function validateVerdictComparison(record, policy, label, status) {
   const errors = [];
   if (!hasMeasurementEvidence({ evidence: record.comparisonEvidence })) {
     errors.push(`${label}: PASS/FAIL requires a comparisonEvidence reference.`);
   }
-  const thresholds = policy?.approvedThresholds;
+  const revision = record.thresholdRevision;
+  const snapshots = policy?.approvedThresholdRevisions;
+  const matchingSnapshots = Array.isArray(snapshots)
+    ? snapshots.filter((snapshot) => snapshot?.revision === revision)
+    : [];
+  if (typeof revision !== 'string' || matchingSnapshots.length !== 1) {
+    errors.push(`${label}: PASS/FAIL requires a thresholdRevision matching exactly one recorded approved threshold snapshot.`);
+    return errors;
+  }
+  const snapshot = matchingSnapshots[0];
+  if (revision !== thresholdRevisionFor(snapshot)) {
+    errors.push(`${label}: threshold evidence does not match the recorded thresholdRevision.`);
+    return errors;
+  }
+  const thresholds = snapshot.thresholds;
   if (!Array.isArray(thresholds) || thresholds.length === 0) {
-    errors.push(`${label}: PASS/FAIL requires non-empty approvedThresholds with metric, operator, and numeric limit.`);
+    errors.push(`${label}: PASS/FAIL requires a non-empty approved threshold snapshot.`);
     return errors;
   }
   const operators = {
@@ -257,6 +338,7 @@ export function validateDevicePerformanceReceipt(receipt) {
   if (!policy || typeof policy !== 'object') {
     errors.push('performancePolicy: proposed thresholds and their source must be explicitly recorded.');
   } else {
+    errors.push(...validateThresholdSnapshots(policy));
     const classification = String(policy.thresholdClassification ?? '').trim().toUpperCase();
     const approved = classification === 'APPROVED';
     const statusText = String(policy.thresholdsStatus ?? '').toUpperCase();
@@ -278,6 +360,10 @@ export function validateDevicePerformanceReceipt(receipt) {
     }
     if (approved && parseEvidenceTimestamp(policy.approvedAt) === null) {
       errors.push('performancePolicy: approved thresholds require an ISO timestamp for approval.');
+    }
+    if (approved && (!Array.isArray(policy.approvedThresholdRevisions)
+      || policy.approvedThresholdRevisions.length === 0)) {
+      errors.push('performancePolicy: approved thresholds require at least one immutable approved threshold revision.');
     }
   }
 
@@ -315,16 +401,19 @@ export function validateDevicePerformanceReceipt(receipt) {
     }
     if (status === 'PASS' || status === 'FAIL') {
       errors.push(...validateVerdictComparison(record, policy, label, status));
-      const classification = String(policy?.thresholdClassification ?? '').trim().toUpperCase();
-      if (classification !== 'APPROVED'
-        || !present(policy?.approvalEvidence)) {
-        errors.push(`${label}: PASS/FAIL requires approved thresholds; proposed targets alone cannot produce a performance verdict.`);
+      const revision = record.thresholdRevision;
+      const snapshots = policy?.approvedThresholdRevisions;
+      const matchingSnapshot = Array.isArray(snapshots)
+        ? snapshots.find((snapshot) => snapshot?.revision === revision)
+        : null;
+      if (!matchingSnapshot || !present(matchingSnapshot.approvalEvidence)) {
+        errors.push(`${label}: PASS/FAIL requires a recorded approved threshold snapshot; proposed targets alone cannot produce a performance verdict.`);
       }
-      const approvedAt = parseEvidenceTimestamp(policy?.approvedAt);
+      const snapshotApprovedAt = parseEvidenceTimestamp(matchingSnapshot?.approvedAt);
       const measuredAt = parseEvidenceTimestamp(record.measuredAt);
       if (measuredAt === null) {
         errors.push(`${label}: PASS/FAIL requires an ISO measurement timestamp.`);
-      } else if (approvedAt === null || approvedAt > measuredAt) {
+      } else if (snapshotApprovedAt === null || snapshotApprovedAt > measuredAt) {
         errors.push(`${label}: threshold approval must be recorded before the measured run.`);
       }
     }

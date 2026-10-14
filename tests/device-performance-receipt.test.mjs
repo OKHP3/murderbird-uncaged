@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -175,7 +176,7 @@ test('proposed targets alone cannot produce a PASS or FAIL verdict', () => {
     const candidate = withMeasuredAsusResult({ status });
     assert.match(
       validateDevicePerformanceReceipt(candidate).join('\n'),
-      /PASS\/FAIL requires approved thresholds; proposed targets alone cannot produce a performance verdict/,
+      /PASS\/FAIL requires a recorded approved threshold snapshot; proposed targets alone cannot produce a performance verdict/,
     );
   }
 });
@@ -190,12 +191,22 @@ test('PASS/FAIL is accepted only with measured evidence and documented threshold
   candidate.performancePolicy.thresholdsStatus = 'APPROVED';
   candidate.performancePolicy.approvalEvidence = 'docs/performance-target-approval.md';
   candidate.performancePolicy.approvedAt = '2026-10-13T10:00:00Z';
-  candidate.performancePolicy.approvedThresholds = [
-    { metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: 16.7 },
-  ];
+  const snapshot = createThresholdSnapshot(
+    candidate.performancePolicy.approvedAt,
+    candidate.performancePolicy.approvalEvidence,
+    [{ metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: 16.7 }],
+  );
+  candidate.performancePolicy.approvedThresholdRevisions = [snapshot];
+  candidate.targetDevicePerformance.thresholdRevision = snapshot.revision;
   assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
 
-  candidate.performancePolicy.approvedAt = '2026-10-13T10:10:00Z';
+  const lateSnapshot = createThresholdSnapshot(
+    '2026-10-13T10:10:00Z',
+    candidate.performancePolicy.approvalEvidence,
+    candidate.performancePolicy.approvedThresholdRevisions[0].thresholds,
+  );
+  candidate.performancePolicy.approvedThresholdRevisions = [lateSnapshot];
+  candidate.targetDevicePerformance.thresholdRevision = lateSnapshot.revision;
   assert.match(
     validateDevicePerformanceReceipt(candidate).join('\n'),
     /threshold approval must be recorded before the measured run/,
@@ -217,6 +228,7 @@ test('the PRD identifies targets as proposals and defines evidence requirements 
   assert.ok(evaluationPrd.includes('**Status: PROPOSED REVIEW TARGETS, NOT APPROVED ACCEPTANCE LIMITS OR MEASURED RESULTS.**'));
   assert.ok(evaluationPrd.includes('A **MEASURED** status requires actual observed values plus a traceable evidence reference'));
   assert.ok(evaluationPrd.includes('A **PASS** or **FAIL** status additionally requires thresholds explicitly approved before the run'));
+  assert.ok(evaluationPrd.includes('Preserve old snapshots when proposing or approving revised targets'));
 });
 
 test('SwiftShader cannot satisfy ASUS hardware renderer evidence', () => {
@@ -279,20 +291,39 @@ function withApprovedVerdict(status = 'PASS', timings = { medianFrameMs: 16.7 })
   Object.assign(candidate.performancePolicy, {
     thresholdClassification: 'APPROVED', thresholdsStatus: 'APPROVED',
     approvalEvidence: 'example-approval.md', approvedAt: '2026-10-13T10:00:00Z',
-    approvedThresholds: [
-      { metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: 16.7 },
-    ],
   });
+  const snapshot = createThresholdSnapshot(
+    candidate.performancePolicy.approvedAt,
+    candidate.performancePolicy.approvalEvidence,
+    [{ metric: 'representativeFrameTimings.medianFrameMs', operator: '<=', limit: 16.7 }],
+  );
+  candidate.performancePolicy.approvedThresholdRevisions = [snapshot];
+  candidate.targetDevicePerformance.thresholdRevision = snapshot.revision;
   return candidate;
+}
+
+function createThresholdSnapshot(approvedAt, approvalEvidence, thresholds) {
+  const snapshot = { approvedAt, approvalEvidence, thresholds };
+  const canonicalSnapshot = JSON.stringify([
+    approvedAt,
+    approvalEvidence,
+    thresholds.map((threshold) => [
+      threshold?.metric,
+      threshold?.operator,
+      threshold?.limit,
+    ]),
+  ]);
+  snapshot.revision = `sha256-${createHash('sha256').update(canonicalSnapshot).digest('hex')}`;
+  return snapshot;
 }
 
 test('an approval label alone cannot substantiate PASS or FAIL', () => {
   for (const status of ['PASS', 'FAIL']) {
     const candidate = withApprovedVerdict(status, { medianFrameMs: 9999 });
-    delete candidate.performancePolicy.approvedThresholds;
+    candidate.performancePolicy.approvedThresholdRevisions = [];
     delete candidate.targetDevicePerformance.comparisonEvidence;
     const errors = validateDevicePerformanceReceipt(candidate).join('\n');
-    assert.match(errors, /requires non-empty approvedThresholds/);
+    assert.match(errors, /thresholdRevision matching exactly one recorded approved threshold snapshot/);
     assert.match(errors, /requires a comparisonEvidence reference/);
   }
 });
@@ -303,9 +334,17 @@ test('verdict must agree with actual observations against all approved limits', 
   assert.match(validateDevicePerformanceReceipt(withApprovedVerdict('PASS', { medianFrameMs: 9999 })).join('\n'), /PASS contradicts/);
   assert.match(validateDevicePerformanceReceipt(withApprovedVerdict('FAIL')).join('\n'), /FAIL contradicts/);
   const candidate = withApprovedVerdict('PASS', { medianFrameMs: 16, p95FrameMs: 50 });
-  candidate.performancePolicy.approvedThresholds.push({
-    metric: 'representativeFrameTimings.p95FrameMs', operator: '<=', limit: 33.3,
-  });
+  const snapshot = candidate.performancePolicy.approvedThresholdRevisions[0];
+  const revisedSnapshot = createThresholdSnapshot(
+    snapshot.approvedAt,
+    snapshot.approvalEvidence,
+    [
+      ...snapshot.thresholds,
+      { metric: 'representativeFrameTimings.p95FrameMs', operator: '<=', limit: 33.3 },
+    ],
+  );
+  candidate.performancePolicy.approvedThresholdRevisions = [revisedSnapshot];
+  candidate.targetDevicePerformance.thresholdRevision = revisedSnapshot.revision;
   assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /PASS contradicts/);
   candidate.targetDevicePerformance.status = 'FAIL';
   assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
@@ -321,14 +360,71 @@ test('approved limits must identify unique actual metrics and valid numeric comp
     null,
   ]) {
     const candidate = withApprovedVerdict();
-    candidate.performancePolicy.approvedThresholds = [threshold];
+    const revision = createThresholdSnapshot(
+      candidate.performancePolicy.approvedAt,
+      candidate.performancePolicy.approvalEvidence,
+      [threshold],
+    );
+    candidate.performancePolicy.approvedThresholdRevisions = [revision];
+    candidate.targetDevicePerformance.thresholdRevision = revision.revision;
     assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /each approved threshold/);
   }
   const candidate = withApprovedVerdict();
-  candidate.performancePolicy.approvedThresholds.push(candidate.performancePolicy.approvedThresholds[0]);
+  const snapshot = candidate.performancePolicy.approvedThresholdRevisions[0];
+  const duplicateMetrics = createThresholdSnapshot(
+    snapshot.approvedAt,
+    snapshot.approvalEvidence,
+    [...snapshot.thresholds, snapshot.thresholds[0]],
+  );
+  candidate.performancePolicy.approvedThresholdRevisions = [duplicateMetrics];
+  candidate.targetDevicePerformance.thresholdRevision = duplicateMetrics.revision;
   assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /each approved threshold/);
-  candidate.performancePolicy.approvedThresholds = [
-    { metric: 'representativeFrameTimings.missingMetric', operator: '<=', limit: 16.7 },
-  ];
+  const missingMetric = createThresholdSnapshot(
+    snapshot.approvedAt,
+    snapshot.approvalEvidence,
+    [{ metric: 'representativeFrameTimings.missingMetric', operator: '<=', limit: 16.7 }],
+  );
+  candidate.performancePolicy.approvedThresholdRevisions = [missingMetric];
+  candidate.targetDevicePerformance.thresholdRevision = missingMetric.revision;
   assert.match(validateDevicePerformanceReceipt(candidate).join('\n'), /requires an actual finite numeric observation/);
+});
+
+test('verdict criteria come from the referenced snapshot, not later proposal edits', () => {
+  const candidate = withApprovedVerdict();
+  candidate.performancePolicy.source = 'docs/murderbird-evaluation-prd.md#revised-proposed-performance-targets';
+  candidate.performancePolicy.proposedTargets = { medianFrameMs: 9999 };
+  candidate.performancePolicy.thresholdClassification = 'PROPOSED';
+  candidate.performancePolicy.thresholdsStatus = 'PROPOSED; targets have since been revised';
+  candidate.performancePolicy.approvalEvidence = null;
+  candidate.performancePolicy.approvedAt = null;
+  assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
+
+  candidate.performancePolicy.approvedThresholdRevisions[0].thresholds[0].limit = 9999;
+  assert.match(
+    validateDevicePerformanceReceipt(candidate).join('\n'),
+    /approved threshold revision does not match its recorded approval timestamp, evidence, and threshold values/,
+  );
+});
+
+test('V37 verdicts use their own recorded threshold revision', () => {
+  const candidate = withApprovedVerdict();
+  candidate.v37SustainedPerformanceAttempt = structuredClone(candidate.targetDevicePerformance);
+  candidate.targetDevicePerformance.status = 'NOT RUN';
+  candidate.targetDevicePerformance.performanceStatus = undefined;
+  assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
+
+  candidate.v37SustainedPerformanceAttempt.thresholdRevision = 'sha256-' + '0'.repeat(64);
+  assert.match(
+    validateDevicePerformanceReceipt(candidate).join('\n'),
+    /v37SustainedPerformanceAttempt: PASS\/FAIL requires a thresholdRevision matching exactly one recorded approved threshold snapshot/,
+  );
+});
+
+test('a verdict cannot refer to a different or missing threshold revision', () => {
+  const candidate = withApprovedVerdict();
+  candidate.targetDevicePerformance.thresholdRevision = 'sha256-' + '0'.repeat(64);
+  assert.match(
+    validateDevicePerformanceReceipt(candidate).join('\n'),
+    /thresholdRevision matching exactly one recorded approved threshold snapshot/,
+  );
 });
