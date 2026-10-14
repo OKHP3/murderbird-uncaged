@@ -213,6 +213,8 @@ function thresholdRevisionFor(snapshot) {
 function validateThresholdSnapshots(policy) {
   const errors = [];
   const snapshots = policy?.approvedThresholdRevisions;
+  // Existing proposals and unscored observations have no approved revisions yet.
+  if (snapshots === undefined) return errors;
   if (!Array.isArray(snapshots)) {
     return ['performancePolicy: approvedThresholdRevisions must be an array of immutable approved threshold snapshots.'];
   }
