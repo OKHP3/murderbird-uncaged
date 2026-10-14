@@ -1,16 +1,102 @@
 {
-  "scope": "target-device performance for the 2026-09-27 geometry-correction candidate",
+  "scope": "device identity and target-device performance status for the 2026-09-27 geometry-correction candidate",
   "status": "NOT RUN",
   "checkedAt": "2026-10-13",
+  "desktopTarget": {
+    "status": "OWNER-REPORTED TARGET; PHYSICAL ACCESS NOT VERIFIED",
+    "device": "ASUS Vivobook Pro 15 N6506MJ_Q533MJ",
+    "processor": "Intel Core Ultra 7 155H",
+    "installedGraphicsInventory": [
+      "Intel Arc",
+      "NVIDIA RTX 3050 6GB Laptop GPU"
+    ],
+    "operatingSystem": "Windows 11 Home build 26300",
+    "physicalAccess": "NOT VERIFIED",
+    "browser": "NOT VERIFIED ON THIS DEVICE",
+    "browserVersion": "NOT VERIFIED ON THIS DEVICE",
+    "webglRendererActuallySelected": "NOT VERIFIED ON THIS DEVICE",
+    "performanceStatus": "NOT RUN"
+  },
+  "mobileTarget": {
+    "status": "NOT SELECTED",
+    "device": null,
+    "performanceStatus": "NOT RUN"
+  },
+  "separateCloudSoftwareRendererProbe": {
+    "evidenceClass": "NON-ASUS CLOUD/SOFTWARE PROBE",
+    "hardwarePerformanceEligible": false,
+    "status": "WEBGL RENDERER PROBE ONLY; NOT AN ASUS OR PERFORMANCE MEASUREMENT",
+    "checkedAt": "2026-10-13",
+    "environment": "Replit-hosted Linux review environment",
+    "browser": "Chromium",
+    "browserVersion": "152.0.7977.64",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "webglAvailable": true,
+    "webglRendererActuallySelected": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "gpuClass": "SwiftShader software renderer",
+    "representativeFrameTimings": null,
+    "notes": "The WebGL renderer was read from WEBGL_debug_renderer_info in a headless browser probe. This environment result must remain separate from physical ASUS hardware results."
+  },
+  "performancePolicy": {
+    "thresholdClassification": "PROPOSED",
+    "thresholdsStatus": "PROPOSED; NOT APPROVED AND NOT MEASURED",
+    "source": "docs/murderbird-evaluation-prd.md#proposed-performance-targets",
+    "approvalEvidence": null,
+    "approvedAt": null
+  },
+  "baselineAndAcceptance": {
+    "productionBaseline": "V37",
+    "v37DeploymentAuthorization": "OWNER-AUTHORIZED; see docs/production-v37.md",
+    "v37OwnerLikenessAcceptance": "PENDING",
+    "correctionCandidateOwnerLikenessAcceptance": "NOT RECORDED"
+  },
   "candidateAcceptance": {
     "status": "NOT RECORDED",
     "evidence": "docs/exterior-silhouette-correction-2026-09-27.md states the candidate is a local review candidate and that owner likeness acceptance is unknown."
+  },
+  "v37SustainedPerformanceAttempt": {
+    "scope": "V37 production runtime only; this is separate from the exterior correction candidate and from owner likeness acceptance.",
+    "status": "NOT RUN",
+    "intendedDevice": "Owner-reported ASUS Vivobook Pro 15 N6506MJ_Q533MJ",
+    "deviceUsed": null,
+    "physicalAccess": "NOT VERIFIED",
+    "operatingSystem": "Owner-reported Windows 11 Home build 26300; not verified during a physical-device test.",
+    "browser": null,
+    "browserVersion": null,
+    "selectedWebGLRenderer": null,
+    "viewportCssPixels": null,
+    "devicePixelRatio": null,
+    "coldLoad": {
+      "status": "NOT RUN",
+      "durationSeconds": null
+    },
+    "warmLoad": {
+      "status": "NOT RUN",
+      "durationSeconds": null
+    },
+    "representativeEncounter": {
+      "requestedDurationSeconds": 120,
+      "status": "NOT RUN",
+      "observedDurationSeconds": null
+    },
+    "observations": {
+      "memory": null,
+      "stutters": null,
+      "essentialInputResponse": null
+    },
+    "testConditions": null,
+    "reason": [
+      "Physical access to the intended ASUS is not verified.",
+      "The browser, viewport, pixel ratio, and WebGL renderer actually selected on that device are unknown.",
+      "The separate cloud SwiftShader renderer probe is not a hardware-performance substitute."
+    ]
   },
   "targetDevicePerformance": {
     "status": "NOT RUN",
     "reason": [
       "The candidate has not been recorded as owner-accepted, which is a prerequisite for this run.",
-      "The intended physical device is not identified or available in this review environment."
+      "The owner-reported intended desktop device is identified as the ASUS Vivobook Pro 15 N6506MJ_Q533MJ, but physical access is not verified in this review environment.",
+      "The browser and WebGL renderer actually selected on that ASUS are not verified."
     ],
     "device": null,
     "browser": null,
@@ -18,11 +104,16 @@
     "representativeFrameTimings": null
   },
   "historicalTelemetryNotUsedAsAcceptanceEvidence": {
+    "evidenceClass": "HISTORICAL NON-TARGET TELEMETRY",
+    "hardwarePerformanceEligible": false,
+    "temporalClassification": "HISTORICAL",
     "path": "../browser-validation.json",
     "generatedAt": "2026-09-27T18:04:51.081Z",
     "browser": "151.0.7922.34",
     "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+    "device": "NOT RECORDED IN ORIGINAL RECEIPT",
+    "candidate": "Exterior v1 historical browser-validation report; exact model identity not recorded in that receipt",
     "reason": "The historical root report has hardware-renderer frame samples, but does not establish that they represent this correction candidate or the agreed intended physical device. It is not used as this task's device-performance result."
   },
-  "nextStep": "After the candidate is accepted and the intended physical device is confirmed and available, run the exterior review on that device and record its device identity, browser, WebGL renderer, and representative frame timings."
+  "nextStep": "After the candidate is accepted and physical access to the ASUS is confirmed, run the exterior review on that device. Record the browser and version and the renderer actually selected by WebGL on the ASUS, then capture representative timings. Keep this separate from cloud/SwiftShader evidence; do not make a mobile performance claim."
 }
