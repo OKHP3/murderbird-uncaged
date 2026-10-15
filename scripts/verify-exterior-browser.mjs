@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { assertValidBrowserTimingReport, createBrowserTimingProvenance } from './browser-timing-provenance.mjs';
 
 if (!process.argv[2]) throw new Error('Pass the already installed Playwright entry module as argv[2].');
 const { chromium } = await import(pathToFileURL(process.argv[2]).href);
@@ -12,7 +13,7 @@ for(const value of [devUrl,productionUrl])if(!['127.0.0.1','localhost'].includes
 const outputDir=path.resolve(process.env.UNCAGED_AUDIT||'assets/audit/exterior-v1');
 await mkdir(outputDir,{recursive:true});
 const browser=await chromium.launch({headless:false});
-const report={generatedAt:new Date().toISOString(),devUrl,productionUrl,browser:browser.version(),status:'running',checks:[],errors:[],screenshots:[],performance:[],blockedRequests:[],stubbedAnalyticsRequests:[],lifecycle:{}};
+const report={generatedAt:new Date().toISOString(),devUrl,productionUrl,browser:browser.version(),timingEvidenceProvenance:createBrowserTimingProvenance('Era-specific exterior v1 candidate; exact model identity is not recorded by this capture script'),status:'running',checks:[],errors:[],screenshots:[],performance:[],blockedRequests:[],stubbedAnalyticsRequests:[],lifecycle:{}};
 const pages=[];
 const lifecycleByPage=new Map();
 
@@ -265,6 +266,7 @@ try{
   assert.equal(report.errors.length,0,'browser console/page errors found');
 }catch(error){report.status='failed';report.error=String(error?.stack||error);throw error;}
 finally{
+  assertValidBrowserTimingReport(report);
   const manifestPath=path.join(outputDir,'screenshot-manifest.json');
   await writeFile(manifestPath,JSON.stringify(report.screenshots,null,2)+'\n');
   await writeFile(path.join(outputDir,'browser-validation.json'),JSON.stringify(report,null,2)+'\n');

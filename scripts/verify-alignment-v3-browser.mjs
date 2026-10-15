@@ -4,6 +4,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { assertValidBrowserTimingReport, createBrowserTimingProvenance } from './browser-timing-provenance.mjs';
 
 if (!process.argv[2]) throw new Error('Pass the already installed Playwright entry module as argv[2].');
 const { chromium } = await import(pathToFileURL(process.argv[2]).href);
@@ -35,7 +36,7 @@ const modelPath='assets/models/uncaged-alignment-v3/murderbird-alignment-v3.glb'
 const modelBytes=await readFile(modelPath);
 const modelIdentity={path:modelPath,bytes:modelBytes.length,sha256:sha256(modelBytes)};
 const browser=await chromium.launch({headless:false});
-const report={generatedAt:new Date().toISOString(),devUrl,productionUrl,modelIdentity,network:'Loopback, unthrottled; analytics script stubbed',browser:browser.version(),status:'running',checks:[],errors:[],screenshots:[],performance:[],blockedRequests:[],stubbedAnalyticsRequests:[],lifecycle:{}};
+const report={generatedAt:new Date().toISOString(),devUrl,productionUrl,modelIdentity,network:'Loopback, unthrottled; analytics script stubbed',browser:browser.version(),timingEvidenceProvenance:createBrowserTimingProvenance(`Alignment v3 candidate (${modelIdentity.path}; SHA-256 ${modelIdentity.sha256})`),status:'running',checks:[],errors:[],screenshots:[],performance:[],blockedRequests:[],stubbedAnalyticsRequests:[],lifecycle:{}};
 const pages=[];
 const desktopLabelCounts=new Map();
 const lifecycleByPage=new Map();
@@ -360,6 +361,7 @@ try{
   assert.equal(report.errors.length,0,'browser console/page errors found');
 }catch(error){report.status='failed';report.error=String(error?.stack||error);throw error;}
 finally{
+  assertValidBrowserTimingReport(report);
   const manifestPath=path.join(outputDir,'screenshot-manifest.json');
   await writeFile(manifestPath,JSON.stringify(report.screenshots,null,2)+'\n');
   await writeFile(path.join(outputDir,'browser-validation.json'),JSON.stringify(report,null,2)+'\n');

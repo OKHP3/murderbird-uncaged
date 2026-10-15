@@ -5,14 +5,32 @@ import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
+  archivedBrowserCaptureConditionsDigest,
+  archivedBrowserTimingDigest,
+  createArchivedBrowserTimingRebaseline,
+  validateArchivedBrowserTimingArchive,
+  validateArchivedBrowserCaptureConditions,
+  validateArchivedBrowserTimingMeasurements,
   validateBrowserTimingProvenance,
   validateDevicePerformanceReceipt,
 } from '../scripts/validate-device-performance-receipt.mjs';
+import {
+  assertValidBrowserTimingReport,
+  createBrowserTimingProvenance,
+  UNVERIFIED_BROWSER_DEVICE,
+} from '../scripts/browser-timing-provenance.mjs';
 
 const receiptPath = new URL(
   '../assets/audit/exterior-v1/geometry-correction-2026-09-27/browser-validation.json',
   import.meta.url,
 );
+const browserCaptureScripts = [
+  'verify-exterior-browser.mjs',
+  'verify-alignment-v3-browser.mjs',
+  'verify-alignment-v4-browser.mjs',
+  'verify-neutral-v2-browser.mjs',
+  'verify-era-browser.mjs',
+];
 const receipt = JSON.parse(await readFile(receiptPath, 'utf8'));
 const historicalReceipt = JSON.parse(await readFile(new URL(
   '../assets/audit/exterior-v1/browser-validation.json',
@@ -80,6 +98,177 @@ test('every archived browser timing report declares its historical status, devic
   assert.equal(timingReceiptCount, 9, 'the audit should cover all nine archived receipts with numeric timing samples');
 });
 
+test('archived browser timing values are frozen while provenance remains editable', async () => {
+  const auditDirectory = fileURLToPath(new URL('../assets/audit/', import.meta.url));
+  const baselinePath = fileURLToPath(new URL(
+    './fixtures/archived-browser-timing-baseline.json',
+    import.meta.url,
+  ));
+  assert.deepEqual(await validateArchivedBrowserTimingArchive({ auditDirectory, baselinePath }), []);
+
+  const archivePath = 'assets/audit/exterior-v1/browser-validation.json';
+  const baseline = { [archivePath]: archivedBrowserTimingDigest(historicalReceipt) };
+  const provenanceCorrection = structuredClone(historicalReceipt);
+  provenanceCorrection.timingEvidenceProvenance = {
+    temporalClassification: 'HISTORICAL',
+    device: 'NOT RECORDED IN ORIGINAL RECEIPT',
+    candidate: 'Exterior v1 (clarified)',
+    hardwarePerformanceEligible: false,
+    reason: 'Provenance clarified without changing original browser measurements.',
+  };
+  assert.deepEqual(
+    validateArchivedBrowserTimingMeasurements(
+      { [archivePath]: provenanceCorrection },
+      baseline,
+    ),
+    [],
+  );
+
+  const alteredTiming = structuredClone(historicalReceipt);
+  alteredTiming.performance[0].frameMsP50 += 1;
+  assert.match(
+    validateArchivedBrowserTimingMeasurements(
+      { [archivePath]: alteredTiming },
+      baseline,
+    ).join('\n'),
+    /archived browser timing values differ from the frozen baseline/,
+  );
+});
+
+test('intentional timing rebaselines retain a reason and readable before/after measurements', () => {
+  const archivePath = 'assets/audit/exterior-v1/browser-validation.json';
+  const before = structuredClone(historicalReceipt);
+  const after = structuredClone(historicalReceipt);
+  after.performance[0].frameMsP50 += 1;
+
+  const rebaseline = createArchivedBrowserTimingRebaseline(
+    before,
+    after,
+    'Corrected the archived sample to match the source capture.',
+  );
+  assert.equal(rebaseline.before.digest, archivedBrowserTimingDigest(before));
+  assert.equal(rebaseline.after.digest, archivedBrowserTimingDigest(after));
+  assert.match(
+    JSON.stringify(rebaseline),
+    /"reason":"Corrected the archived sample to match the source capture\.".*"frameMsP50".*"value":\d+/,
+  );
+
+  const baseline = {
+    [archivePath]: {
+      digest: rebaseline.before.digest,
+      rebaselines: [rebaseline],
+    },
+  };
+  assert.deepEqual(
+    validateArchivedBrowserTimingMeasurements({ [archivePath]: after }, baseline),
+    [],
+  );
+
+  const laterChange = structuredClone(after);
+  laterChange.performance[0].frameMsP50 += 1;
+  const mismatch = validateArchivedBrowserTimingMeasurements(
+    { [archivePath]: laterChange },
+    baseline,
+  ).join('\n');
+  assert.match(mismatch, /before \[.*performance\.0\.frameMsP50 = 10/);
+  assert.match(mismatch, /after \[.*performance\.0\.frameMsP50 = 11/);
+  assert.match(mismatch, /Current measurements: \[.*performance\.0\.frameMsP50 = 12/);
+});
+
+test('timing rebaseline records require a concise reason and internally consistent snapshots', () => {
+  const before = structuredClone(historicalReceipt);
+  const after = structuredClone(historicalReceipt);
+  after.performance[0].frameMsP50 += 1;
+  assert.throws(
+    () => createArchivedBrowserTimingRebaseline(before, after, 'fix'),
+    /Rebaseline reason must be/,
+  );
+  assert.throws(
+    () => createArchivedBrowserTimingRebaseline(
+      before,
+      after,
+      'Corrected the sample\nbut not the record format.',
+    ),
+    /Rebaseline reason must be/,
+  );
+  assert.throws(
+    () => createArchivedBrowserTimingRebaseline(
+      before,
+      after,
+      'x'.repeat(241),
+    ),
+    /Rebaseline reason must be/,
+  );
+
+  const record = createArchivedBrowserTimingRebaseline(
+    before,
+    after,
+    'Corrected the archived sample to match the source capture.',
+  );
+  const baseline = {
+    'assets/audit/exterior-v1/browser-validation.json': {
+      digest: record.before.digest,
+      rebaselines: [{ ...record, reason: 'too short' }],
+    },
+  };
+  assert.match(
+    validateArchivedBrowserTimingMeasurements(
+      { 'assets/audit/exterior-v1/browser-validation.json': after },
+      baseline,
+    ).join('\n'),
+    /requires a concise reason/,
+  );
+});
+
+test('archived browser capture conditions are frozen separately from timing and provenance', () => {
+  const archivePath = 'assets/audit/exterior-v1/browser-validation.json';
+  const baseline = {
+    [archivePath]: archivedBrowserCaptureConditionsDigest(historicalReceipt),
+  };
+
+  const provenanceCorrection = structuredClone(historicalReceipt);
+  provenanceCorrection.timingEvidenceProvenance = {
+    temporalClassification: 'HISTORICAL',
+    device: 'NOT RECORDED IN ORIGINAL RECEIPT',
+    candidate: 'Exterior v1 (clarified)',
+    hardwarePerformanceEligible: false,
+    reason: 'Provenance clarified without changing the original capture conditions.',
+  };
+  assert.deepEqual(
+    validateArchivedBrowserCaptureConditions({ [archivePath]: provenanceCorrection }, baseline),
+    [],
+  );
+
+  const timingCorrection = structuredClone(historicalReceipt);
+  timingCorrection.performance[0].frameMsP50 += 1;
+  assert.deepEqual(
+    validateArchivedBrowserCaptureConditions({ [archivePath]: timingCorrection }, baseline),
+    [],
+    'numeric timing edits belong to the separate timing baseline check',
+  );
+
+  const changedConditions = [
+    (candidate) => { candidate.browser = 'A different browser'; },
+    (candidate) => {
+      candidate.checks[0].detail.performance.renderer = 'A different renderer';
+    },
+    (candidate) => {
+      candidate.checks[0].detail.performance.viewport.width += 1;
+    },
+    (candidate) => {
+      candidate.representativeWorkload = 'A different browser workload';
+    },
+  ];
+  for (const change of changedConditions) {
+    const candidate = structuredClone(historicalReceipt);
+    change(candidate);
+    assert.match(
+      validateArchivedBrowserCaptureConditions({ [archivePath]: candidate }, baseline).join('\n'),
+      /archived browser capture conditions differ from the frozen baseline/,
+    );
+  }
+});
+
 test('legacy timing samples fail validation when provenance is missing or misleading', () => {
   const candidate = structuredClone(historicalReceipt);
   delete candidate.timingEvidenceProvenance;
@@ -98,6 +287,60 @@ test('legacy timing samples fail validation when provenance is missing or mislea
     validateBrowserTimingProvenance(candidate).join('\n'),
     /historical timing data must be ineligible/,
   );
+});
+
+test('new browser timing reports receive current, explicitly unknown, hardware-ineligible provenance', () => {
+  const report = {
+    timingEvidenceProvenance: createBrowserTimingProvenance('Test candidate'),
+    performance: [{ fps: 60 }],
+  };
+
+  assert.deepEqual(report.timingEvidenceProvenance, {
+    temporalClassification: 'CURRENT',
+    device: UNVERIFIED_BROWSER_DEVICE,
+    candidate: 'Test candidate',
+    hardwarePerformanceEligible: false,
+    reason: 'Newly captured browser timings are current to this run, but are not verified physical-device performance evidence.',
+  });
+  assert.doesNotThrow(() => assertValidBrowserTimingReport(report));
+});
+
+test('browser timing reports are rejected before writing when provenance is absent or invalid', () => {
+  assert.throws(
+    () => assertValidBrowserTimingReport({ performance: [{ fps: 60 }] }),
+    /without timing evidence provenance/,
+  );
+
+  const report = {
+    performance: [{ fps: 60 }],
+    timingEvidenceProvenance: {
+      ...createBrowserTimingProvenance('Test candidate'),
+      hardwarePerformanceEligible: true,
+    },
+  };
+  assert.throws(
+    () => assertValidBrowserTimingReport(report),
+    /Refusing to write invalid browser timing report/,
+  );
+});
+
+test('every browser capture validates provenance before saving its report', async () => {
+  for (const scriptName of browserCaptureScripts) {
+    const source = await readFile(
+      new URL(`../scripts/${scriptName}`, import.meta.url),
+      'utf8',
+    );
+    const validationIndex = source.indexOf('assertValidBrowserTimingReport(report)');
+    const reportWriteIndex = Math.max(
+      source.indexOf("writeFile(reportPath,"),
+      source.indexOf("writeFile(path.join(outputDir,'browser-validation.json')"),
+      source.indexOf("writeFile(path.join(outputDir, 'browser-validation.json')"),
+    );
+
+    assert.match(source, /createBrowserTimingProvenance\(/, `${scriptName}: missing provenance`);
+    assert.notEqual(validationIndex, -1, `${scriptName}: missing pre-write validation`);
+    assert.ok(reportWriteIndex > validationIndex, `${scriptName}: report is written before validation`);
+  }
 });
 
 test('an ASUS performance claim fails until physical access is verified', () => {

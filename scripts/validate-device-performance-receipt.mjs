@@ -1,9 +1,12 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { resolve } from 'node:path';
+import { relative, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const DEFAULT_RECEIPT = 'assets/audit/exterior-v1/geometry-correction-2026-09-27/browser-validation.json';
+const DEFAULT_TIMING_BASELINE = 'tests/fixtures/archived-browser-timing-baseline.json';
+const DEFAULT_CAPTURE_CONDITIONS_BASELINE = 'tests/fixtures/archived-browser-capture-conditions-baseline.json';
+const DEFAULT_AUDIT_DIRECTORY = 'assets/audit';
 const UNMEASURED_STATUSES = new Set([
   'PROPOSED',
   'NOT RUN',
@@ -92,6 +95,262 @@ function hasBrowserTimingData(value) {
   ));
 }
 
+function isArchivedBrowserTimingKey(key) {
+  return BROWSER_TIMING_KEYS.has(key) || /^(?:frameMs|fps)P\d+$/.test(key);
+}
+
+function archivedBrowserTimingMeasurements(receipt) {
+  const measurements = [];
+  const visit = (value, path = []) => {
+    if (!value || typeof value !== 'object') return;
+    for (const [key, child] of Object.entries(value)) {
+      const childPath = [...path, key];
+      if (isArchivedBrowserTimingKey(key)) {
+        const projected = numericTimingProjection(child);
+        if (projected !== undefined) measurements.push({ path: childPath, value: projected });
+      }
+      visit(child, childPath);
+    }
+  };
+  visit(receipt);
+  measurements.sort((left, right) => JSON.stringify(left.path).localeCompare(JSON.stringify(right.path)));
+  return measurements;
+}
+
+function digestTimingMeasurements(measurements) {
+  const canonical = measurements.map(({ path, value }) => [path, value]);
+  return `sha256-${createHash('sha256').update(JSON.stringify(canonical)).digest('hex')}`;
+}
+
+function timingSnapshot(receipt) {
+  const measurements = archivedBrowserTimingMeasurements(receipt);
+  return { digest: digestTimingMeasurements(measurements), measurements };
+}
+
+function isValidTimingSnapshot(snapshot) {
+  if (!snapshot || typeof snapshot !== 'object' || Array.isArray(snapshot)
+    || typeof snapshot.digest !== 'string'
+    || !/^sha256-[a-f0-9]{64}$/.test(snapshot.digest)
+    || !Array.isArray(snapshot.measurements)) {
+    return false;
+  }
+  const measurements = snapshot.measurements;
+  if (measurements.some((measurement) => (
+    !measurement || typeof measurement !== 'object' || Array.isArray(measurement)
+    || !Array.isArray(measurement.path)
+    || measurement.path.length === 0
+    || measurement.path.some((part) => typeof part !== 'string')
+    || numericTimingProjection(measurement.value) === undefined
+    || JSON.stringify(numericTimingProjection(measurement.value)) !== JSON.stringify(measurement.value)
+  ))) return false;
+  const sorted = [...measurements].sort((left, right) => (
+    JSON.stringify(left.path).localeCompare(JSON.stringify(right.path))
+  ));
+  return JSON.stringify(measurements) === JSON.stringify(sorted)
+    && digestTimingMeasurements(measurements) === snapshot.digest;
+}
+
+const MIN_REBASELINE_REASON_LENGTH = 12;
+const MAX_REBASELINE_REASON_LENGTH = 240;
+
+function validateRebaselineReason(reason) {
+  return typeof reason === 'string'
+    && !/[\r\n]/.test(reason)
+    && reason.trim().length >= MIN_REBASELINE_REASON_LENGTH
+    && reason.trim().length <= MAX_REBASELINE_REASON_LENGTH;
+}
+
+export function createArchivedBrowserTimingRebaseline(beforeReceipt, afterReceipt, reason) {
+  if (!validateRebaselineReason(reason)) {
+    throw new TypeError(
+      `Rebaseline reason must be ${MIN_REBASELINE_REASON_LENGTH}-${MAX_REBASELINE_REASON_LENGTH} characters.`,
+    );
+  }
+  const before = timingSnapshot(beforeReceipt);
+  const after = timingSnapshot(afterReceipt);
+  if (before.digest === after.digest) {
+    throw new TypeError('A timing rebaseline must change at least one numeric timing value.');
+  }
+  return { reason: reason.trim(), before, after };
+}
+
+function formatTimingMeasurements(measurements) {
+  if (!Array.isArray(measurements) || measurements.length === 0) return '(no numeric timing values)';
+  return measurements.map(({ path, value }) => `${path.join('.')} = ${JSON.stringify(value)}`).join('; ');
+}
+
+function numericTimingProjection(value) {
+  if (typeof value === 'number') return Number.isFinite(value) ? value : undefined;
+  if (Array.isArray(value)) {
+    const projected = value.map(numericTimingProjection).filter((item) => item !== undefined);
+    return projected.length ? projected : undefined;
+  }
+  if (value && typeof value === 'object') {
+    const projected = Object.fromEntries(
+      Object.keys(value).sort()
+        .map((key) => [key, numericTimingProjection(value[key])])
+        .filter(([, item]) => item !== undefined),
+    );
+    return Object.keys(projected).length ? projected : undefined;
+  }
+  return undefined;
+}
+
+/**
+ * Hash only numeric values under recognized browser timing fields. This keeps
+ * provenance and other descriptive metadata editable without unpinning history.
+ */
+export function archivedBrowserTimingDigest(receipt) {
+  return timingSnapshot(receipt).digest;
+}
+
+function captureConditionsProjection(value) {
+  if (Array.isArray(value)) {
+    return value.map(captureConditionsProjection);
+  }
+  if (!value || typeof value !== 'object') return value;
+
+  return Object.fromEntries(
+    Object.keys(value).sort()
+      .filter((key) => key !== 'timingEvidenceProvenance'
+        && !MEASUREMENT_KEYS.has(key)
+        && !isArchivedBrowserTimingKey(key))
+      .map((key) => [key, captureConditionsProjection(value[key])]),
+  );
+}
+
+/**
+ * Hash archived report content that describes the run, excluding measurements
+ * and provenance so a provenance-only correction does not rewrite history.
+ */
+export function archivedBrowserCaptureConditionsDigest(receipt) {
+  const projection = captureConditionsProjection(receipt);
+  return `sha256-${createHash('sha256').update(JSON.stringify(projection)).digest('hex')}`;
+}
+
+export function validateArchivedBrowserTimingMeasurements(archive, baseline) {
+  const errors = [];
+  const archivePaths = Object.keys(archive ?? {}).sort();
+  const baselinePaths = Object.keys(baseline ?? {}).sort();
+
+  for (const path of baselinePaths) {
+    if (!Object.hasOwn(archive ?? {}, path)) {
+      errors.push(`${path}: archived browser-validation report is missing.`);
+      continue;
+    }
+    const actual = timingSnapshot(archive[path]);
+    const entry = baseline[path];
+    const originalDigest = typeof entry === 'string' ? entry : entry?.digest;
+    if (typeof originalDigest !== 'string' || !/^sha256-[a-f0-9]{64}$/.test(originalDigest)) {
+      errors.push(`${path}: frozen timing baseline must contain a sha256 digest.`);
+      continue;
+    }
+
+    let expectedDigest = originalDigest;
+    const rebaselines = typeof entry === 'object' && entry !== null
+      ? entry.rebaselines ?? []
+      : [];
+    if (!Array.isArray(rebaselines)) {
+      errors.push(`${path}: timing rebaselines must be an array of documented before/after comparisons.`);
+      continue;
+    }
+    let invalidRebaseline = false;
+    for (const [index, rebaseline] of rebaselines.entries()) {
+      const label = `${path}: timing rebaseline ${index + 1}`;
+      if (!rebaseline || typeof rebaseline !== 'object' || Array.isArray(rebaseline)) {
+        errors.push(`${label} must be an object with a reason and before/after timing snapshots.`);
+        invalidRebaseline = true;
+        continue;
+      }
+      if (!validateRebaselineReason(rebaseline.reason)) {
+        errors.push(`${label} requires a concise reason (${MIN_REBASELINE_REASON_LENGTH}-${MAX_REBASELINE_REASON_LENGTH} characters).`);
+        invalidRebaseline = true;
+      }
+      if (!isValidTimingSnapshot(rebaseline.before) || !isValidTimingSnapshot(rebaseline.after)) {
+        errors.push(`${label} requires valid, readable before/after timing snapshots.`);
+        invalidRebaseline = true;
+        continue;
+      }
+      if (rebaseline.before.digest !== expectedDigest) {
+        errors.push(`${label} before digest does not continue the frozen timing history.`);
+        invalidRebaseline = true;
+      }
+      if (rebaseline.before.digest === rebaseline.after.digest) {
+        errors.push(`${label} must record a change in numeric timing values.`);
+        invalidRebaseline = true;
+      }
+      expectedDigest = rebaseline.after.digest;
+    }
+    if (invalidRebaseline) continue;
+    if (actual.digest !== expectedDigest) {
+      const lastRebaseline = rebaselines.at(-1);
+      const comparison = lastRebaseline
+        ? ` Last documented change (${lastRebaseline.reason}): before [${formatTimingMeasurements(lastRebaseline.before.measurements)}]; after [${formatTimingMeasurements(lastRebaseline.after.measurements)}]. Current measurements: [${formatTimingMeasurements(actual.measurements)}].`
+        : ` Current measurements: [${formatTimingMeasurements(actual.measurements)}].`;
+      errors.push(`${path}: archived browser timing values differ from the frozen baseline.${comparison}`);
+    }
+  }
+  for (const path of archivePaths) {
+    if (!Object.hasOwn(baseline ?? {}, path)) {
+      errors.push(`${path}: browser-validation report is not recorded in the frozen timing baseline.`);
+    }
+  }
+  return errors;
+}
+
+export function validateArchivedBrowserCaptureConditions(archive, baseline) {
+  const errors = [];
+  const archivePaths = Object.keys(archive ?? {}).sort();
+  const baselinePaths = Object.keys(baseline ?? {}).sort();
+
+  for (const path of baselinePaths) {
+    if (!Object.hasOwn(archive ?? {}, path)) {
+      errors.push(`${path}: archived browser-validation report is missing.`);
+      continue;
+    }
+    const actualDigest = archivedBrowserCaptureConditionsDigest(archive[path]);
+    if (actualDigest !== baseline[path]) {
+      errors.push(`${path}: archived browser capture conditions differ from the frozen baseline.`);
+    }
+  }
+  for (const path of archivePaths) {
+    if (!Object.hasOwn(baseline ?? {}, path)) {
+      errors.push(`${path}: browser-validation report is not recorded in the frozen capture-conditions baseline.`);
+    }
+  }
+  return errors;
+}
+
+async function findBrowserValidationReports(directory) {
+  const reports = {};
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) {
+      Object.assign(reports, await findBrowserValidationReports(path));
+    } else if (entry.name === 'browser-validation.json') {
+      const relativePath = relative(process.cwd(), path).split('\\').join('/');
+      reports[relativePath] = JSON.parse(await readFile(path, 'utf8'));
+    }
+  }
+  return reports;
+}
+
+export async function validateArchivedBrowserTimingArchive({
+  auditDirectory = resolve(DEFAULT_AUDIT_DIRECTORY),
+  baselinePath = resolve(DEFAULT_TIMING_BASELINE),
+  captureConditionsBaselinePath = resolve(DEFAULT_CAPTURE_CONDITIONS_BASELINE),
+} = {}) {
+  const baseline = JSON.parse(await readFile(baselinePath, 'utf8'));
+  const captureConditionsBaseline = JSON.parse(
+    await readFile(captureConditionsBaselinePath, 'utf8'),
+  );
+  const archive = await findBrowserValidationReports(auditDirectory);
+  return [
+    ...validateArchivedBrowserTimingMeasurements(archive, baseline),
+    ...validateArchivedBrowserCaptureConditions(archive, captureConditionsBaseline),
+  ];
+}
+
 /**
  * Legacy browser-validation receipts put timing samples in root-level checks
  * and performance collections. Those samples must declare what they describe.
@@ -100,7 +359,7 @@ export function validateBrowserTimingProvenance(receipt) {
   if (!receipt || typeof receipt !== 'object' || Array.isArray(receipt)) return [];
   const hasLegacyTiming = ['checks', 'performance']
     .some((key) => hasBrowserTimingData(receipt[key]));
-  if (!hasLegacyTiming) return [];
+  if (!hasLegacyTiming && !receipt.timingEvidenceProvenance) return [];
 
   const errors = [];
   const provenance = receipt.timingEvidenceProvenance;
@@ -498,7 +757,21 @@ async function runCli() {
     process.exitCode = 1;
     return;
   }
-  console.log(`PASS ${receiptPath}: proposed targets, measured evidence, approvals, cloud/software, and historical evidence are properly separated.`);
+  let archiveErrors;
+  try {
+    archiveErrors = await validateArchivedBrowserTimingArchive();
+  } catch (error) {
+    console.error(`FAIL archived browser run baseline: ${error.message}`);
+    process.exitCode = 1;
+    return;
+  }
+  if (archiveErrors.length) {
+    console.error('FAIL archived browser timing and capture conditions');
+    for (const error of archiveErrors) console.error(`- ${error}`);
+    process.exitCode = 1;
+    return;
+  }
+  console.log(`PASS ${receiptPath}: receipt evidence and archived browser timing and capture conditions are valid.`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
