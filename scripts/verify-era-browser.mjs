@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { assertValidBrowserTimingReport, createBrowserTimingProvenance } from './browser-timing-provenance.mjs';
 
 if (!process.argv[2]) throw new Error('Pass the existing Playwright entry module as argv[2].');
 const { chromium } = await import(pathToFileURL(process.argv[2]).href);
@@ -28,6 +29,9 @@ const report = {
   devUrl,
   productionUrl,
   browser: browser.version(),
+  timingEvidenceProvenance: createBrowserTimingProvenance(
+    'Three-era construction review candidate; exact model identity is not recorded by this capture script',
+  ),
   checks: [],
   errors: [],
   screenshots: [],
@@ -400,6 +404,7 @@ try {
   console.error(error.message);
 } finally {
   await browser.close();
+  assertValidBrowserTimingReport(report);
   await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify({ reportPath, checks: report.checks.map(({ name, status }) => ({ name, status })), errors: report.errors.length }, null, 2));
 }
