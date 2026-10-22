@@ -1,12 +1,15 @@
 import { readFile, readdir } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { relative, resolve } from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { isAbsolute, relative, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const DEFAULT_RECEIPT = 'assets/audit/exterior-v1/geometry-correction-2026-09-27/browser-validation.json';
 const DEFAULT_TIMING_BASELINE = 'tests/fixtures/archived-browser-timing-baseline.json';
 const DEFAULT_CAPTURE_CONDITIONS_BASELINE = 'tests/fixtures/archived-browser-capture-conditions-baseline.json';
 const DEFAULT_AUDIT_DIRECTORY = 'assets/audit';
+const PROJECT_ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const ASUS_RUN_EVIDENCE_SCHEMA = 'asus-browser-run/v1';
 const UNMEASURED_STATUSES = new Set([
   'PROPOSED',
   'NOT RUN',
@@ -448,6 +451,74 @@ function validateWorkloadConditions(record, label) {
   return errors;
 }
 
+function validateAsusRunEvidence(record, label) {
+  const errors = [];
+  const evidencePath = record.rawRunEvidence;
+  const evidenceReferences = typeof record.evidence === 'string'
+    ? [record.evidence]
+    : Array.isArray(record.evidence) ? record.evidence : [];
+
+  if (typeof evidencePath !== 'string' || !evidencePath.trim()) {
+    return [`${label}: rawRunEvidence must reference a machine-readable ASUS browser-run JSON file.`];
+  }
+  if (!evidenceReferences.includes(evidencePath)) {
+    errors.push(`${label}: rawRunEvidence must also appear in the evidence references.`);
+  }
+  if (!evidencePath.endsWith('.json') || isAbsolute(evidencePath)) {
+    return [...errors, `${label}: rawRunEvidence must be a repository-relative JSON path.`];
+  }
+
+  const resolvedPath = resolve(PROJECT_ROOT, evidencePath);
+  const projectRelativePath = relative(PROJECT_ROOT, resolvedPath);
+  if (projectRelativePath.startsWith('..') || isAbsolute(projectRelativePath)) {
+    return [...errors, `${label}: rawRunEvidence must stay inside the repository.`];
+  }
+
+  let capture;
+  try {
+    capture = JSON.parse(readFileSync(resolvedPath, 'utf8'));
+  } catch (error) {
+    return [...errors, `${label}: rawRunEvidence could not be read as JSON (${error.message}).`];
+  }
+
+  if (!capture || typeof capture !== 'object' || Array.isArray(capture)
+    || capture.schema !== ASUS_RUN_EVIDENCE_SCHEMA) {
+    return [...errors, `${label}: rawRunEvidence must use the ${ASUS_RUN_EVIDENCE_SCHEMA} format.`];
+  }
+  if (typeof capture.representativeWorkload !== 'string'
+    || !present(capture.representativeWorkload)) {
+    errors.push(`${label}: rawRunEvidence representativeWorkload must be a non-empty string.`);
+  } else if (capture.representativeWorkload !== record.representativeWorkload) {
+    errors.push(`${label}: representativeWorkload does not match rawRunEvidence.`);
+  }
+  if (typeof capture.observedDurationSeconds !== 'number'
+    || !Number.isFinite(capture.observedDurationSeconds)
+    || capture.observedDurationSeconds <= 0) {
+    errors.push(`${label}: rawRunEvidence observedDurationSeconds must be a positive number.`);
+  } else if (capture.observedDurationSeconds !== record.observedDurationSeconds) {
+    errors.push(`${label}: observedDurationSeconds does not match rawRunEvidence.`);
+  }
+
+  const captureViewport = capture.viewportCssPixels;
+  const receiptViewport = record.viewportCssPixels;
+  if (!captureViewport || typeof captureViewport !== 'object' || Array.isArray(captureViewport)
+    || !Number.isFinite(captureViewport.width) || captureViewport.width <= 0
+    || !Number.isFinite(captureViewport.height) || captureViewport.height <= 0) {
+    errors.push(`${label}: rawRunEvidence viewportCssPixels must record positive CSS-pixel width and height.`);
+  } else if (captureViewport.width !== receiptViewport?.width
+    || captureViewport.height !== receiptViewport?.height) {
+    errors.push(`${label}: viewportCssPixels does not match rawRunEvidence.`);
+  }
+  if (typeof capture.devicePixelRatio !== 'number'
+    || !Number.isFinite(capture.devicePixelRatio)
+    || capture.devicePixelRatio <= 0) {
+    errors.push(`${label}: rawRunEvidence devicePixelRatio must be a positive number.`);
+  } else if (capture.devicePixelRatio !== record.devicePixelRatio) {
+    errors.push(`${label}: devicePixelRatio does not match rawRunEvidence.`);
+  }
+  return errors;
+}
+
 function isVerifiedPhysicalAccess(value) {
   if (value === true) return true;
   return ['VERIFIED', 'CONFIRMED'].includes(String(value ?? '').trim().toUpperCase());
@@ -651,6 +722,7 @@ export function validateDevicePerformanceReceipt(receipt) {
     const hasMeasurement = hasActualMeasurementData(record);
     if (['MEASURED', 'PASS', 'FAIL'].includes(status) || hasMeasurement) {
       errors.push(...validateWorkloadConditions(record, label));
+      errors.push(...validateAsusRunEvidence(record, label));
     }
     if (status === 'MEASURED' || status === 'PASS' || status === 'FAIL') {
       if (!hasMeasurement) {

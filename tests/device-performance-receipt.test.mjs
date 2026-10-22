@@ -67,7 +67,8 @@ function withMeasuredAsusResult(overrides = {}) {
       observedDurationSeconds: 120,
       viewportCssPixels: { width: 1440, height: 900 },
       devicePixelRatio: 1.25,
-      evidence: ['assets/audit/performance/asus-run.json'],
+      rawRunEvidence: 'tests/fixtures/asus-browser-run-evidence.json',
+      evidence: ['tests/fixtures/asus-browser-run-evidence.json'],
       ...overrides,
     },
   });
@@ -364,6 +365,49 @@ test('an ASUS performance claim requires browser, exact version, and selected re
 
 test('a complete ASUS hardware performance claim passes', () => {
   assert.deepEqual(validateDevicePerformanceReceipt(withMeasuredAsusResult()), []);
+});
+
+test('measured ASUS receipt conditions match the referenced raw-run evidence', () => {
+  const candidate = withMeasuredAsusResult();
+  assert.deepEqual(validateDevicePerformanceReceipt(candidate), []);
+});
+
+test('measured ASUS receipt conditions fail when they disagree with raw-run evidence', () => {
+  const mismatches = [
+    ['representativeWorkload', 'Run a different interaction.'],
+    ['observedDurationSeconds', 121],
+    ['viewportCssPixels', { width: 1441, height: 900 }],
+    ['devicePixelRatio', 1.5],
+  ];
+  for (const [field, value] of mismatches) {
+    const candidate = withMeasuredAsusResult({ [field]: value });
+    assert.match(
+      validateDevicePerformanceReceipt(candidate).join('\n'),
+      new RegExp(`${field} does not match rawRunEvidence`),
+      field,
+    );
+  }
+});
+
+test('measured ASUS receipts require a readable, referenced raw-run evidence file', () => {
+  for (const overrides of [
+    { rawRunEvidence: undefined },
+    { rawRunEvidence: 'tests/fixtures/missing-asus-run.json' },
+    { rawRunEvidence: '../outside-asus-run.json' },
+  ]) {
+    assert.match(
+      validateDevicePerformanceReceipt(withMeasuredAsusResult(overrides)).join('\n'),
+      /rawRunEvidence/,
+    );
+  }
+
+  const unreferenced = withMeasuredAsusResult({
+    evidence: ['assets/audit/performance/other-evidence.png'],
+  });
+  assert.match(
+    validateDevicePerformanceReceipt(unreferenced).join('\n'),
+    /rawRunEvidence must also appear in the evidence references/,
+  );
 });
 
 test('measured ASUS results require a described workload, duration, viewport, and pixel ratio', () => {
