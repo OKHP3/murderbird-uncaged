@@ -14,7 +14,7 @@ The owner selected approximately 14 inches tall. With an assumed 7-foot (84-inch
 
 The remaining targets are design proposals, not proven quantities, prices, construction, or owner acceptance. See the [recent model review](lego-murderbird-35cm-model-review.md) for measured source proportions and their limits.
 
-- Design around the 35.56 cm target. A literal scaling of the latest V38 whole-body study gives an approximately 19.3 cm wide by 23.2 cm deep saved-pose envelope. Brick construction and useful articulation may require proportion adjustments.
+- Design around the 35.56 cm target. A literal scaling of the V38 whole-body study reviewed on October 1 gives an approximately 19.3 cm wide by 23.2 cm deep saved-pose envelope. Brick construction and useful articulation may require proportion adjustments.
 - Explore roughly 1,200–1,800 pieces for the first bird and a simple removable support. Let the priced inventory and acceptable likeness determine whether that target holds.
 - Make head turn, neck pitch, jaw opening, wing guard positioning, hips, and knees the first articulation targets. Add ankle, toe, and tail articulation only where the joints remain compact and useful.
 - Use joints that hold a pose under the finished armor's weight. Retain a removable support as an option; standing and balancing through the proposed pose range remain unverified.
@@ -23,7 +23,7 @@ The remaining targets are design proposals, not proven quantities, prices, const
 
 ## Budget and purchasing
 
-The owner's dollar ceiling and reusable LEGO inventory are not established. A budget question is pending. Do not present a particular spending level as authorized or claim that this design can meet it before producing a priced parts list.
+The owner's dollar ceiling and reusable LEGO inventory are not established. Establish both before a future inventory or purchasing phase; they are not prerequisites for closing this research brief. Do not present a particular spending level as authorized or claim that this design can meet it before producing a priced parts list.
 
 Prioritize common available elements and colors. Use inexpensive colors inside the frame, reserve the visible palette for the armor, and avoid making rare metallic finishes essential to likeness. Separate the final model inventory from experimental and spare purchases. Track shipping, tax, and any display support in the total. No purchases are authorized by this brief.
 
@@ -40,7 +40,7 @@ Prioritize common available elements and colors. Use inexpensive colors inside t
 
 The eventual design package should contain an editable brick model, assembly instructions, a priced inventory, front and side likeness comparisons, and physical evidence that the major joints hold their poses. Record remaining support, clearance, sourcing, and appearance limitations separately. A render establishes appearance only; a digital connection check does not establish physical strength.
 
-The present artifact is a scope brief. CAD assembly, parts sourcing, physical testing, buildability, cost, and owner likeness acceptance remain unverified.
+This thread delivered research and a scope brief; the design sequence above is a proposal for a future phase, not an outstanding construction commitment. The present artifact is a scope brief. CAD assembly, parts sourcing, physical testing, buildability, cost, and owner likeness acceptance remain unverified.
 
 ## Authority and preservation
 

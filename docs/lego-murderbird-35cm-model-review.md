@@ -2,9 +2,9 @@
 
 Reviewed October 1, 2026. The owner requests an affordable, manually articulated Technic and conventional-brick MurderBird, approximately 14 inches tall. Assuming a full-size height of 84 inches, the target is exactly **1:6**, or **35.56 cm** from feet to crown, excluding a support. The assumed full-size height comes from the owner; the exported models do not establish it.
 
-## Recent sources and selection
+## Sources reviewed on October 1, 2026
 
-The main checkout at `fac4337d9f5128d3a6d720601fc5d2c197461fb8` contains V37. Newer V38 material resides in the linked checkout `/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged`, branch `codex/v38-hanging-breast-integration01`, reviewed at `a06c243d4cd3c764c3bacb876c2bf149c566fa25`. Sources were inspected without editing them.
+At the October 1 review, the main checkout at `fac4337d9f5128d3a6d720601fc5d2c197461fb8` contained V37. Newer V38 material resided in the linked checkout `/Users/okh/.codex/worktrees/review-regression/murderbird-uncaged`, branch `codex/v38-hanging-breast-integration01`, reviewed at `a06c243d4cd3c764c3bacb876c2bf149c566fa25`. Sources were inspected without editing them.
 
 | Saved checkpoint | Finding relevant to LEGO | Recorded status |
 | --- | --- | --- |
@@ -13,7 +13,9 @@ The main checkout at `fac4337d9f5128d3a6d720601fc5d2c197461fb8` contains V37. Ne
 | V38 hanging-breast01 attempt02, October 1 | Twenty-two formed hanging shields replace thirty-three rectangular breast tiles. Diagonal layers and free tips provide a useful starting point for removable brick armor. | Visible development gain, **FIT HOLD**: support, overlaps and motion clearance unproven. |
 | V38 optic-seat01 attempt02, October 1 | Clearer upper orbital surround, but crowded lower cheek and little whole-bird improvement. | **HOLD**, source review only; not integrated. Being newer does not make it the preferred complete reference. |
 
-Use hanging-breast attempt02 as a provisional whole-body proportion reference, with facial-fit attempt02 informing the head. Master03 remains the controlling breast/body artwork; the July reference is head-only. The LEGO interpretation must return to that artwork for likeness rather than copying every unresolved study feature.
+For the October 1 reference set, use hanging-breast attempt02 as a provisional whole-body proportion reference, with facial-fit attempt02 informing the head. Master03 remains the controlling breast/body artwork; the July reference is head-only. The LEGO interpretation must return to that artwork for likeness rather than copying every unresolved study feature.
+
+The historical checkout path above is provenance, not a required current workspace. The October 22 closeout recovered both V38 exports from the immutable revision and cached LFS objects, verified their hashes, and remeasured them. This review does not select or assess the later CG work recorded in `goal.md`.
 
 ## Measured proportions
 
@@ -52,7 +54,7 @@ Inspected editable-source records, exported geometry and whole-bird/head/breast 
 - [V38 hanging-breast handoff at the reviewed revision](https://github.com/OKHP3/murderbird-uncaged/blob/a06c243d4cd3c764c3bacb876c2bf149c566fa25/assets/audit/whole-character-v38/hanging-breast-integration01/handoff.md).
 - [V38 optic-seat disposition at the reviewed revision](https://github.com/OKHP3/murderbird-uncaged/blob/a06c243d4cd3c764c3bacb876c2bf149c566fa25/assets/audit/whole-character-v38/optic-seat01/attempt02/root-disposition.json).
 
-The revision links identify locally inspected Git content; remote availability was not independently checked for this review. Measured GLB SHA-256 values:
+The original review inspected local Git content. At the October 22 closeout, all four cited GitHub evidence paths were checked through the GitHub API, with V38 pinned to the reviewed revision; binary measurements used the exact local LFS bytes identified below. Measured GLB SHA-256 values:
 
 | Export | SHA-256 |
 | --- | --- |
