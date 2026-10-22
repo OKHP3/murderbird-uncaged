@@ -147,3 +147,12 @@ Give concise progress updates centered on visible improvement, outstanding uncer
 - The next corrective action and its acceptance evidence.
 
 Finish only with an honest new assessment state. The intended outcome is the recognizable MurderBird brought to life in three distinct construction eras—not another successful deployment of an inaccurate model.
+
+
+## October 22, 2026 — execution precedence and preservation addendum
+
+This September prompt is a historical correction brief, not an instruction to restart completed work or override later scoped decisions. Before execution, read the latest GitHub `main` version of `goal.md`, `AGENTS.md`, `replit.md`, and `docs/incremental-delivery.md`. Reconcile each F01–F10 finding against the current candidate and its evidence; preserve the original inspector baseline and distinguish unresolved, superseded, implemented, and independently verified items. The original visual-twin priority remains unchanged. New documentation and technical passes do not establish owner likeness acceptance.
+
+**Replit communication and execution must use Free mode only.** Verify the mode before submitting any agent message. Decline Power/Max and every paid fallback; if Free mode cannot proceed, preserve the checkpoint and report the actual limit. GitHub Pages remains production and Replit remains a development preview. Do not use Replit Publish.
+
+Check active task ownership before touching shared checkouts, browser sessions, preview servers, or model files. Preserve unique commits and files before synchronization. A clean isolated preview does not prove that its parent history has been reconciled. This addendum does not dispatch an agent, authorize an engine migration, or select a new modeling increment.
