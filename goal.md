@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-05T22:41:46.655Z"
+last_updated: "2026-10-23T13:58:46.800976Z"
 timezone: "America/Chicago"
 status: "delegation-initial-tranche-verified"
 canonical_path: "goal.md"
@@ -177,7 +177,7 @@ Owner proportion correction within Milestone 1b: narrow torso cross-section by 1
 
 Owner avian stance correction within Milestone 1b: legs attach into the lower third of the torso, rather than beneath its bottom. The lower rear torso forms a compact tail/counterweight to the head. Preserve flightless avian anatomy and planted feet; no engineering analysis is requested.
 
-Latest Milestone 1b rendered evidence lives on the [CG checkpoint branch](https://github.com/OKHP3/murderbird-uncaged/tree/codex/cinematic-vfx-milestone01b/assets/audit/cinematic-cg-milestone01b). Owner artistic acceptance remains pending; stop after the revised avian stance comparison.
+Latest Milestone 1b rendered evidence lives on the [preserved CG checkpoint](https://github.com/OKHP3/murderbird-uncaged/tree/5eeacc07ebce2d46ca7784c477e6dba454d00135/assets/audit/cinematic-cg-milestone01b). Owner artistic acceptance remains pending; stop after the revised avian stance comparison.
 
 ## Milestone 1c — revised geometry into cinematic character
 

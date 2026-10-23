@@ -81,6 +81,10 @@ test('private output refuses overwrite, archives, publication paths, traversal a
   const root = await mkdtemp(join(tmpdir(), 'murderbird-snapshot-test-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   execFileSync('git', ['init', '-q', root]);
+  // Keep this temporary repository independent of host-wide ignore rules.
+  const excludes = join(root, '.git', 'isolated-excludes');
+  await writeFile(excludes, '');
+  execFileSync('git', ['-C', root, 'config', 'core.excludesFile', excludes]);
   await writeFile(join(root, '.gitignore'), '.local/\n');
   await mkdir(join(root, '.local', 'diagnostics'), { recursive: true });
   const output = '.local/diagnostics/new.json';
