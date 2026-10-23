@@ -1,7 +1,7 @@
 ---
 title: "Cinematic origin chat closeout checkpoint"
-last_updated: "2026-10-23T14:30:00Z"
-status: "blocked"
+last_updated: "2026-10-23T15:02:55.467568+00:00"
+status: "complete-superseded-study"
 thread_id: "01a10507-b0ba-7251-a487-40ef123c587f"
 canonical_repository: "OKHP3/murderbird-uncaged"
 ---
@@ -106,3 +106,16 @@ own worktrees and cleanup. This fork remains BLOCKED and unarchived until its
 required closeout evidence and artistic-scope disposition are resolved. Final
 remote and cleanup readbacks belong in the private dated receipt; this document
 does not claim them before they occur.
+
+
+# Owner supersession — October 23, 2026
+
+The owner answered the pending scope question: **“Close this study as superseded; preserve the shared CG program.”** The interrupted continuation is therefore closed as superseded, not completed as a successful likeness attempt. The earlier BLOCKED passages above preserve the initial checkpoint and are superseded for this fork by this explicit decision. No new model or render is claimed.
+
+The shared CG goal, its delegated program, all original reference/model binaries, pending artistic gates and other chats’ ownership remain intact. The original production closeout’s historical recovery hold remains its own obligation; no missing history is declared recovered and no associated worktree is selected for cleanup by this fork.
+
+The independent technical repair is integrated through [PR #71](https://github.com/OKHP3/murderbird-uncaged/pull/71), source `9772b963ad012487b1f6bd69291990187b89ece2`, merge `7c32048ee17954c573e7d043d9e748540befd854`. Both Node 24/26 PR builds and the exact merge’s main validation and Pages deployment passed. All 143 tests, 768 media entries, seven source pins, three historical video-frame hashes and 236 recovery-file hashes passed their stated checks. The live release was clean at that merge: all 154 payload manifest tuples matched the preserved baseline, and all 20 HTML/JS/CSS payloads were freshly downloaded and hash-verified. Large media were not all downloaded again; prior full-media evidence remains explicitly separate.
+
+The repair’s own clean temporary worktree and local/remote branch were removed after exact three-file blob comparison against merged main, bundle verification and no-use checks. Its source is preserved in main, a private patch/bundle and `refs/archive/origin-cg-thread-20261023/validator-fix`. Shared recovery and other worktrees were untouched.
+
+The owner’s decision removes this fork’s remaining modeling-scope gate. This final documentation delivery, shared-current-source readback and cleanup of its new temporary documentation checkout are verified separately in the dated private final receipt. Archive this chat last after those checks; do not archive the shared CG program, its worker chats or the original production closeout. This scoped closure makes no new artistic, hardware, motion or historical-recovery acceptance claim.

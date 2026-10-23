@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-23T13:58:46.800976Z"
+last_updated: "2026-10-23T15:02:55.467568+00:00"
 timezone: "America/Chicago"
 status: "delegation-initial-tranche-verified"
 canonical_path: "goal.md"
@@ -16,6 +16,12 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## Owner disposition — interrupted cinematic origin study
+
+On October 23 the owner explicitly chose: **“Close this study as superseded; preserve the shared CG program.”** This closes the interrupted Milestone 2b continuation in chat `01a10507-b0ba-7251-a487-40ef123c587f`; it does not close or replace the shared CG program described below. The unused earlier three-million-token/two-hour continuation is not an automatic restart instruction.
+
+The study and its partial checkpoints remain preserved. Whole-bird source likeness stays **UNMET**, artistic acceptance **PENDING**, and the shared program retains its existing owners, reference hierarchy and gates. No new render, candidate promotion, engineering approval or broader publication is implied. The fork’s technical verifier repair and verification evidence remain in [its closeout receipt](docs/handoffs/cinematic-origin-closeout-2026-10-23.md). Other chats retain their own integration and historical-recovery obligations; this disposition neither certifies nor cancels them.
 
 ## October 5 owner allocation — executable delegation series
 
