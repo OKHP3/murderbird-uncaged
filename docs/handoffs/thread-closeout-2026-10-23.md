@@ -1,7 +1,7 @@
 ---
 title: "MurderBird production thread closeout"
-last_updated: "2026-10-23T14:46:35.424945Z"
-status: "blocked-historical-recovery"
+last_updated: "2026-10-23T16:07:37.269176+00:00"
+status: "owner-authorized-closeout"
 thread_id: "01a0e13f-9459-72b3-a1ec-015b73ff89dc"
 canonical_repository: "OKHP3/murderbird-uncaged"
 ---
@@ -107,3 +107,24 @@ Status remains **BLOCKED by historical recovery**, rather than by the expired to
 ## Independent resumption audit
 
 Three separate reviewer contexts rechecked the frozen v2 receipt and all62 dispositions. Evidence, outcome and safety/portability each approved publication **with limits**; none approved COMPLETE or archival. They confirmed that only historical MB-T029 is closed, current observations do not certify human/device/fullT12 results, and the unique binary does not establish older ancestry recovery. A raw-readback omission was found and repaired by printing the complete actual Replit JSON: all eight exits0, clean7c32048 HEAD/origin, three missing-tip exits128 and ten earlier commit identities. Raw AX SHA-256 is `4dba25ae086b4eba3de83c5f7c57f67a1a669abf9e9705d1937cecda91508c94`. No suite was rerun merely to repair evidence capture. Same model family and overlapping sources limit independence; no protected visual holdout or artistic review was claimed. The negotiated disposition is publish an accurate BLOCKED checkpoint, finish its transport/readbacks and retain every workspace.
+
+## October 23 owner exception and verified legacy-workspace cleanup
+
+**Current authority supersedes the recovery hold above:** the owner directly answered **“Authorize the documented historical exception, then finish safe cleanup and archive.”** The original 15 plus 2 Replit contribution coverage is permanently **UNVERIFIED — OWNER-AUTHORIZED EXCEPTION**. It is no longer a closure prerequisite for this thread. No missing commit, contribution equivalence, remote binary availability or artistic acceptance is manufactured by this decision. The earlier blocked records remain dated history.
+
+All available recovery remains intact: the 272,022,926-byte verified canonical bundle, 236 exact file copies / 372,903,878 bytes, all four full archive refs, the shared LFS object cache and the available Replit bundles/private recovered GLB. Original historical task-ledger statuses remain unchanged. MB-T061's closeout disposition now records the exception; its wider program task is not declared complete.
+
+A fresh independent safety review verified every source/copy hash, both ignored failure logs, exact heads/archive refs and no open-file use. All tracked LFS objects in each of the four old worktrees were checked against the retained shared cache (6,506;6,542;6,454;6,391 entries); none required recovery. The app archive request returned queued without observed removal, so no app snapshot is claimed. After fresh per-target checks, Git-aware worktree removal and exact local branch deletion succeeded for:
+
+| Worktree | Original head | Durable recovery ref | Local branch disposition |
+|---|---|---|---|
+| `v38-crown-construction` | `864e1e6eddf105667a999b63bce1cb9b225ba192` | `refs/archive/thread-closeout-20261023/v38-crown-construction` | `codex/v38-crown-construction-01` deleted; recovery retained |
+| `v38-crown-lap-fit` | `c035d25625bec9521661e8ec5ab13ee9f547e278` | `refs/archive/thread-closeout-20261023/v38-crown-lap-fit` | `codex/v38-crown-lap-fit-01` deleted; recovery retained |
+| `v38-head-profile` | `66926a6e5d7dfcd65796dd696c0c24b3d68fde45` | `refs/archive/thread-closeout-20261023/v38-head-profile` | `codex/v38-head-profile-01` deleted; recovery retained |
+| `v38-hip-transition` | `8493404082a3d12b1284ff42b8fe7034805eade7` | `refs/archive/thread-closeout-20261023/v38-hip-transition` | `codex/v38-shoulder-form-01` deleted; recovery retained |
+
+The first three heads are ancestors of main. The hip-transition recovery-document commit was preserved and explicitly superseded rather than promoted into current models. All four source directories are absent from disk and the Git worktree registry; prune dry-run reports no stale Git registration. No shared clone, other-thread workspace, private archive, LFS cache, source model, frozen engineering ref or Replit recovery was deleted. This run's isolated documentation worktree remains until final integration/readback, after which its unique ignored publication receipt is already hash-backed for removal.
+
+Final technical evidence before this documentation change remains separately attributable: PR74/cafabbb Node24/26 and Pages passed; all 154 live payload files (407,610,132 bytes) matched SHA-256. Actual Free-selected Replit clean source/origin/build 4e844db6 passed five focused checks and three HTTP200 routes; the earlier full 7c32048 suite passed 143 tests / 768 media entries / eight checks. Later independently owned goal/closeout changes through ae0bd134 are documentation only. This closeout changes no model or runtime payload.
+
+The established Notion continuation retains all 62 IDs and its architect child; raw fetch custody is saved privately. A final transport receipt beside the preserved archive records this document's actual merge, CI/Pages, local/Replit/Notion readbacks, final isolated-worktree removal and actual thread archival after those operations occur. This committed document cannot self-certify its own future merge or archival. Source likeness stays UNMET, whole-character artistic acceptance PENDING, strict normal parity FAIL, and human/device/fullT12 evidence unclaimed; the separate CG program retains those boundaries.

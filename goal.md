@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-23T15:09:14.410947+00:00"
+last_updated: "2026-10-23T16:05:45.017402+00:00"
 timezone: "America/Chicago"
 status: "delegation-initial-tranche-verified"
 canonical_path: "goal.md"
@@ -16,6 +16,12 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## October 23 owner exception — prototype production closeout
+
+For Prototype MurderBird Exhibit (`01a0e13f-9459-72b3-a1ec-015b73ff89dc`), the owner explicitly chose: **“Authorize the documented historical exception, then finish safe cleanup and archive.”** This retires verification of the original October 4/5 15 plus 2 Replit contribution set as a prerequisite to closing this thread. Its contribution coverage remains **UNVERIFIED — OWNER-AUTHORIZED EXCEPTION**, permanently documented rather than represented as recovered or integrated. The unavailable backup is not assumed lost everywhere.
+
+Keep all available recovery bundles, exact file copies, archive refs, shared LFS cache and the recovered historical GLB. Complete final integration/readbacks and recoverable cleanup of this thread's proven-owned inactive worktrees, then archive the thread. This exception does not close the shared CG program or accept likeness, strict normals, human/device checks, engineering or a paid Replit mode. The [production-thread receipt](docs/handoffs/thread-closeout-2026-10-23.md) records the preserved history and the final verification boundary.
 
 ## October 23 owner decision — legacy continuation superseded
 
