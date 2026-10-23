@@ -1,6 +1,6 @@
 ---
 title: "CG assessment architect thread closeout"
-date: "2026-10-23"
+last_updated: "2026-10-23"
 thread_id: "01a1050b-6c87-7c91-9d4f-56003ec98a76"
 status: "scoped-complete-pending-final-readback"
 ---
