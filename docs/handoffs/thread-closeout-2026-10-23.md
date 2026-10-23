@@ -97,7 +97,7 @@ The surviving `.local/archives/replit-pre-v37.bundle` is 125,751,364 bytes and v
 
 The unique older widened-exterior GLB **was recovered** from Replit's local LFS cache: 17,340,120 bytes, SHA-256 `e57bca8d183808a7dd808b03616f807039b8693879deb4ef3fdbf20e36322692`. Its exact bytes were copied separately to `.local/archives/thread-closeout-20261023/historical-unique-exterior.glb`; this is recovery only, with no runtime promotion. A bounded authenticated GitHub LFS retrieval reported object 404, so no remote availability or successful Mac copy is claimed. Failed local downloads are 133-byte pointer artifacts, not the recovered binary.
 
-**Smallest missing input:** access to the former October 4 main-history recovery bundle, or another clone/backup containing the three exact historical tips above. Once available, produce the exact 15 plus 2 commit/path inventory, compare intended contributions to retained 04/V37, and preserve/import only reviewed improvements. A count, a different bundle or a commit subject cannot establish equivalence. The independent audit requires this disposition before this thread can be declared COMPLETE.
+**Smallest missing input:** access to the former October 4 main-history recovery bundle, or another clone/backup containing the three exact historical tips above. Once available, produce the exact 15 plus 2 commit/path inventory, compare intended contributions to retained04/V37, and preserve/import only reviewed improvements. A count, a different bundle or a commit subject cannot establish equivalence. The independent audit requires this disposition before this thread can be declared COMPLETE.
 
 ## Cleanup and final disposition
 
