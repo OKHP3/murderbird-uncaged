@@ -1,16 +1,16 @@
 ---
 title: "MurderBird production thread closeout"
-last_updated: "2026-10-23T14:00:00Z"
-status: "verification-in-progress"
+last_updated: "2026-10-23T14:46:35.424945Z"
+status: "blocked-historical-recovery"
 thread_id: "01a0e13f-9459-72b3-a1ec-015b73ff89dc"
 canonical_repository: "OKHP3/murderbird-uncaged"
 ---
 
 # Closeout scope
 
-The October 23 owner allocation resumes the October 22 checkpoint for **closeout only**, with no new modeling. This receipt closes the bounded production, integration, review and preservation work of **Prototype MurderBird Exhibit**. It does not close the wider cinematic likeness goal: source likeness remains **UNMET** and full-character owner artistic acceptance remains **PENDING**. Technical publication, software checks and partial head approval are separate claims.
+The October 23 owner allocation resumes the October 22 checkpoint for **closeout only**, with no new modeling. This receipt records the bounded production, integration, review and preservation work of **Prototype MurderBird Exhibit**. It does not close the wider cinematic likeness goal: source likeness remains **UNMET** and full-character owner artistic acceptance remains **PENDING**. Technical publication, software checks and partial head approval are separate claims.
 
-The current `goal.md` delegation program and the separate **Assess 3D Model Completion Gaps** thread (`01a1050b-6c87-7c91-9d4f-56003ec98a76`) continue independently. Their queued work is retained. The 61 future or conditional tasks in the original 62-record roadmap are not silently converted into new modeling obligations during this closeout. T029's historical closed disposition also remains preserved.
+The current `goal.md` delegation program and the separate **Assess 3D Model Completion Gaps** thread (`01a1050b-6c87-7c91-9d4f-56003ec98a76`) continue independently. Their queued work is retained. The remaining61 records include both current evidence gaps and future implementation proposals. Their individual closeout dispositions are recorded in [the obligation ledger](../../assets/audit/thread-closeout-2026-10-23/task-dispositions.json); none is silently converted into modeling work or declared passed. T029's historical closed disposition also remains preserved.
 
 # Recovered commitments and dispositions
 
@@ -75,3 +75,35 @@ Restore recovery with `git bundle verify <bundle>` and fetch the desired archive
 # Final gate
 
 Pending: final Replit/build/runtime readback, independent review, recoverable cleanup, documentation integration, exact final main/Pages/Notion parity, own server/worktree cleanup, and actual thread archival. Do not treat this draft as a COMPLETE receipt.
+
+
+# October 23 resumption — current runtime verified; historical recovery remains blocked
+
+The owner resumed the complete closeout request after the resource stop. The native app returned no exhausted active goal; closeout work resumed without modeling. While this chat was stopped, the owner-account advanced the closeout branch, merged PR #67 at `65deb5161b8c816e6364de106a0685e690acdefc` and synchronized canonical main/Replit. These are freshly verified external changes, not work claimed as performed by this run.
+
+PR #67 contains the four-line fixture portability correction plus this receipt's earlier draft and the immutable goal link. A synthetic global `.local/` ignore reproduced the original failure; the isolated fixture then passed. Production privacy checks were unchanged. Current source was subsequently fast-forwarded preserving all refs/files to `7c32048ee17954c573e7d043d9e748540befd854`, including the independently owned documentation/provenance PRs #68–70 and media-verifier portability PR #71.
+
+At **2026-10-23T14:43:11.470856Z**, actual Replit `/home/runner/workspace` clean `main` and its fetched `origin/main` both equaled `7c32048ee17954c573e7d043d9e748540befd854`. All eight checks completed with exit0: npm ci, build, theme, publication, presentation, performance receipt validation, full Node tests and media custody. The initial 640/768 media result identified 128 historical LFS pointers; only those paths were fetched/hydrated, and all768 entries passed on rerun. No expected hash or asset was replaced. Current Node suite is143 tests; the earlier140-count applies before PR #71. Free was visibly selected; no Agent, Power/Max, billing or Publish operation was used. The existing port5000 process was retained.
+
+The current shared parity receipt is `.local/archives/thread-closeout-20261023/parity-final.json` in Replit, with eight logs `parity-final-{0..7}.log`. Root's native UI readback is preserved in the canonical Mac private archive. It closes current-source parity for the coordinated closeout chats without certifying this thread's historical ancestry recovery. Communication with those chats followed a directly verified owner reply authorizing coordination of active chats; one operator owned Shell at a time.
+
+Additional automated production-build observations at `65deb516…` passed: V37 system reduced motion/calm status, disabled jump, keyboard pause toggles; full/loop theme decoding and advancing clock, pause/restart/mute/volume; approved-version lyrics opened by keyboard; silent First Choice visitor playback and seek with truthful source labels. V37's uncut177.809-second development sequence and production illustrated fallback also passed. Human listening/seam quality, actual screen-reader and physical-device journeys, controlled network/memory measurements, full T12 matrix and strict native/export normals remain explicitly unclaimed. The [62-row disposition ledger](../../assets/audit/thread-closeout-2026-10-23/task-dispositions.json) separates these current gaps from future modeling; it does not rewrite or close the original task ledger.
+
+## Exact historical recovery blocker
+
+The older October4/5 records identify **15 preserved Replit-only commits plus two later configuration commits**, rooted at `6b9548081ba278bc9a7bf48c0061056c1b9f70ca`, then `76c6f152950349ce8c414bd7e0fd58f66188dabd` and `0d7366d8e8924cacebf48b19a0a0dbb27bd0b673`. Fresh `git cat-file` lookups for all three fail in the current Replit object database. GitHub commit lookup also reports no commit for the two queried endpoint tips. The canonical Mac database does not contain these historical tips. No source/ref deletion was performed during this closeout.
+
+The surviving `.local/archives/replit-pre-v37.bundle` is125,751,364 bytes and verifies, with head `c1bfca3736fd9f981cc6f8f05e6ce79113b95724`. It preserves a different earlier history, with ten commits not reachable from current main. This does not establish the exact original15-plus2 inventory or prove the October4 main-history bundle's coverage. The current271,360,765-byte all-refs bundle protects the current store; it is not promoted into proof of missing earlier ancestry. Searches of persistent `.local` recovery bundles and recorded migration recovery artifacts did not locate the former roughly167MB October4 main-history bundle. The source session's original preservation statements remain historical reports, not current recovery verification.
+
+The unique older widened-exterior GLB **was recovered** from Replit's local LFS cache:17,340,120 bytes, SHA-256 `e57bca8d183808a7dd808b03616f807039b8693879deb4ef3fdbf20e36322692`. Its exact bytes were copied separately to `.local/archives/thread-closeout-20261023/historical-unique-exterior.glb`; this is recovery only, with no runtime promotion. A bounded authenticated GitHub LFS retrieval reported object404, so no remote availability or successful Mac copy is claimed. Failed local downloads are133-byte pointer artifacts, not the recovered binary.
+
+**Smallest missing input:** access to the former October4 main-history recovery bundle, or another clone/backup containing the three exact historical tips above. Once available, produce the exact15-plus2 commit/path inventory, compare intended contributions to retained04/V37, and preserve/import only reviewed improvements. A count, a different bundle or a commit subject cannot establish equivalence. The independent audit requires this disposition before this thread can be declared COMPLETE.
+
+## Cleanup and final disposition
+
+Status remains **BLOCKED by historical recovery**, rather than by the expired token allocation. All236 preserved file copies, all-refs bundle, four old thread-owned V38 worktrees, frozen engineering line, shared/uncertain worktrees and the isolated closeout worktree remain retained. No recoverable worktree archival or branch deletion is claimed. Cleanup and actual thread archival wait for the historical recovery gate; no permanent deletion is authorized or needed now. Existing independent review decisions defer final archival. Final documentation/readback evidence is appended separately after its actual merge; no self-referential SHA is invented.
+
+
+## Independent resumption audit
+
+Three separate reviewer contexts rechecked the frozen v2 receipt and all62 dispositions. Evidence, outcome and safety/portability each approved publication **with limits**; none approved COMPLETE or archival. They confirmed that only historical MB-T029 is closed, current observations do not certify human/device/fullT12 results, and the unique binary does not establish older ancestry recovery. A raw-readback omission was found and repaired by printing the complete actual Replit JSON: all eight exits0, clean7c32048 HEAD/origin, three missing-tip exits128 and ten earlier commit identities. Raw AX SHA-256 is `4dba25ae086b4eba3de83c5f7c57f67a1a669abf9e9705d1937cecda91508c94`. No suite was rerun merely to repair evidence capture. Same model family and overlapping sources limit independence; no protected visual holdout or artistic review was claimed. The negotiated disposition is publish an accurate BLOCKED checkpoint, finish its transport/readbacks and retain every workspace.
