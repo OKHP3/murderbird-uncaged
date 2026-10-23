@@ -32,8 +32,15 @@ export function diagnoseSnapshot(scene, { era, pose, minimumSeparationMeters } =
       }
       const excludedName = name.endsWith('-foot') ? name.replace('-foot', '-toes')
         : name.endsWith('-shin') ? name.replace('-shin', '-foot') : null;
-      // Exclude only a descendant: unrelated surfaces are never subtracted.
-      const excluded = excludedName ? root.getObjectByName(excludedName) : null;
+      // Exclude only one unambiguous descendant: unrelated surfaces are never subtracted.
+      const excludedMatches = [];
+      if (excludedName) root.traverse(object => {
+        if (object !== root && object.name === excludedName) excludedMatches.push(object);
+      });
+      if (excludedName && excludedMatches.length !== 1) {
+        throw new Error(`Expected one descendant exclusion named ${excludedName}; found ${excludedMatches.length}`);
+      }
+      const excluded = excludedMatches[0] ?? null;
       function check(object) {
         if (object === excluded || !object.visible) return;
         if (object.isSkinnedMesh || object.isInstancedMesh || object.geometry?.morphAttributes?.position?.length) {

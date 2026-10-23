@@ -27,7 +27,7 @@ Schema `murderbird-structural-clearance-snapshot/v1` always reports overall `PAR
 | Area | Evidence and limit |
 | --- | --- |
 | Geometry | Ordinary static mesh triangles at exported resting transforms and exported visibility; units assumed metres. No runtime setup, animation, era selection or transform adjustment. Era/pose are labels only. |
-| Static pairs | Nine: left/right toes, plus each toe set against both feet and both shins. Foot surfaces exclude descendant toes; shin surfaces exclude descendant feet. No centroid seam exclusion. |
+| Static pairs | Nine: left/right toes, plus each toe set against both feet and both shins. Foot surfaces exclude one uniquely named descendant toe group; shin surfaces exclude one uniquely named descendant foot group. Missing or ambiguous exclusions leave the parent surface `NOT RUN`. No centroid seam exclusion. |
 | Contacts | All pairs returned by `measureSurfaceContacts`, with triangle/mesh identifiers and distances, retained in caller order. Duplicate geometry remains separate triangle pairs, not physical contact manifolds. Threshold and numeric tolerance semantics follow the [helper contract](triangle-clearance-contract.md). |
 | Nearest summary | One nearest-distance result per measured pair; not a substitute for the full contact list. Its pair order is helper-defined. |
 | Missing coverage | Missing/ambiguous groups, hidden ancestors, empty surfaces and unsupported skinned, instanced or morph geometry are `NOT RUN`. A dependent pair remains unknown, never clear. |
@@ -40,4 +40,4 @@ Only static triangle/BVH queries run. Contact inventories are not truncated; den
 
 ## Regression evidence
 
-`node --test tests/structural-clearance-snapshot.test.mjs` uses synthetic geometry: nine-pair selection, descendant exclusion, simultaneous contacts, unchanged transforms/visibility, missing/ambiguous/unsupported surfaces, labels/threshold validation, private-output boundaries, overwrite refusal and pre-parse hash rejection. These tests do not load creative model assets or establish motion integration. The independent helper suite covers its geometry and temporal algorithms; that does not add temporal coverage to this adapter.
+`node --test tests/structural-clearance-snapshot.test.mjs` uses synthetic geometry: nine-pair selection, unique descendant exclusion, ambiguous descendant-exclusion rejection, simultaneous contacts, unchanged transforms/visibility, missing/ambiguous/unsupported surfaces, labels/threshold validation, private-output boundaries, overwrite refusal and pre-parse hash rejection. These tests do not load creative model assets or establish motion integration. The independent helper suite covers its geometry and temporal algorithms; that does not add temporal coverage to this adapter.
