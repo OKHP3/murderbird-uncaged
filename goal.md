@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-23T15:03:05.659460+00:00"
+last_updated: "2026-10-23T15:09:14.410947+00:00"
 timezone: "America/Chicago"
 status: "delegation-initial-tranche-verified"
 canonical_path: "goal.md"
@@ -22,6 +22,12 @@ Read the current goal before assigning or starting work. Systems can fetch GitHu
 Owner decision in legacy chat `01a10507-f84d-77c3-b675-847cae773211`: “Treat this legacy continuation as superseded; keep unfinished likeness work in the current CG program.” This explicitly supersedes that chat's unfinished head/neck/compact-shoulder continuation from partial Milestone2b, including its later three-million-token/two-hour request. It closes the legacy assignment without claiming the missing successor was implemented.
 
 The current CG program retains the unfinished source-likeness work under its existing reference authority, selected-task controls and acceptance gates. Source likeness remains **UNMET** and owner artistic acceptance **PENDING**. No model, budget consumption, new allocation, animation, mechanics or release acceptance is inferred from this administrative closeout. Frozen engineering and historical CG assets remain preserved. See the [legacy closeout and owner-decision addendum](docs/handoffs/prototype-thread-closeout-f84d-2026-10-23.md). Other active production/recovery threads keep their own obligations and status.
+
+## Owner disposition — interrupted cinematic origin study
+
+On October 23 the owner explicitly chose: **“Close this study as superseded; preserve the shared CG program.”** This closes the interrupted Milestone 2b continuation in chat `01a10507-b0ba-7251-a487-40ef123c587f`; it does not close or replace the shared CG program described below. The unused earlier three-million-token/two-hour continuation is not an automatic restart instruction.
+
+The study and its partial checkpoints remain preserved. Whole-bird source likeness stays **UNMET**, artistic acceptance **PENDING**, and the shared program retains its existing owners, reference hierarchy and gates. No new render, candidate promotion, engineering approval or broader publication is implied. The fork’s technical verifier repair and verification evidence remain in [its closeout receipt](docs/handoffs/cinematic-origin-closeout-2026-10-23.md). Other chats retain their own integration and historical-recovery obligations; this disposition neither certifies nor cancels them.
 
 ## October 5 owner allocation — executable delegation series
 
