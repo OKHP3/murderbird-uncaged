@@ -1,5 +1,13 @@
 # MurderBird architect: next goals and unfinished work
 
+## October 23 architect thread closure and carryforward
+
+The owner closed **Assess 3D Model Completion Gaps** around its completed assessment, three modeling loops, retained production delivery and five-pass review. See [the dated closeout](handoffs/cg-assessment-thread-closeout-2026-10-23.md). The wider source likeness mission remains **UNMET**, per-era artistic acceptance **PENDING**, strict normal parity **FAIL**; those outcomes are carried forward, not waived.
+
+Keep the 62 stable task IDs and the October 5 task-ledger routing below. The next selected modeling goal is MB-T001 with dependent source-alignment work MB-T002–012, evidence/custody MB-T013–015, strict normal/material diagnosis MB-T018–019, full per-era owner decision MB-T020, and demonstrated resource/stop controls MB-T062. Reconcile later connected-head studies before selecting an exact successor. Existing body/underlap/toe/crown gains remain preservation requirements. Human/device and conditional motion/mechanics work retain their recorded gates; this handoff grants no new open-ended allocation or blanket dispatch.
+
+MB-T061 continues as a separate production/custody obligation: current-source Free-mode Replit parity does not establish the missing historical 15-plus-2 commits. The inspected stores lack tips `6b9548081ba278bc9a7bf48c0061056c1b9f70ca`, `76c6f152950349ce8c414bd7e0fd58f66188dabd`, and `0d7366d8e8924cacebf48b19a0a0dbb27bd0b673`; the owner reports the requested backup unavailable. Retain surviving bundles/refs and the hash-verified 17,340,120-byte widened-exterior GLB in Replit private recovery. Do not promote it, delete its custody, or substitute a different surviving bundle as proof. The [continuing production handoff](handoffs/thread-closeout-2026-10-23.md) owns the exact restart evidence.
+
 ## October 5 current continuation
 
 The [fresh five-pass report](evaluations/windows-five-pass-review-2026-10-05.md) and [current task ledger](../assets/audit/windows-production-closeout-2026-10-05/task-ledger.json) govern the corrected operational routing. The reviewed delivery is `4c5a1055d2be6bdd895aa4cebac342147f8930e9`; all 62 IDs and 52 criteria remain stable. Current V37 T03–T12 observation selectors depend only on verified delivery and a supported-state inventory, and never close successor motion. The original October 4 frozen ledger/reviews remain preserved. Modeling dispatch awaits scoped selection and MB-T062 demonstration; delivery/review completion grants no new allocation.
