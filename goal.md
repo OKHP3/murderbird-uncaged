@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-23T15:02:55.467568+00:00"
+last_updated: "2026-10-23T15:09:14.410947+00:00"
 timezone: "America/Chicago"
 status: "delegation-initial-tranche-verified"
 canonical_path: "goal.md"
@@ -16,6 +16,12 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## October 23 owner decision — legacy continuation superseded
+
+Owner decision in legacy chat `01a10507-f84d-77c3-b675-847cae773211`: “Treat this legacy continuation as superseded; keep unfinished likeness work in the current CG program.” This explicitly supersedes that chat's unfinished head/neck/compact-shoulder continuation from partial Milestone2b, including its later three-million-token/two-hour request. It closes the legacy assignment without claiming the missing successor was implemented.
+
+The current CG program retains the unfinished source-likeness work under its existing reference authority, selected-task controls and acceptance gates. Source likeness remains **UNMET** and owner artistic acceptance **PENDING**. No model, budget consumption, new allocation, animation, mechanics or release acceptance is inferred from this administrative closeout. Frozen engineering and historical CG assets remain preserved. See the [legacy closeout and owner-decision addendum](docs/handoffs/prototype-thread-closeout-f84d-2026-10-23.md). Other active production/recovery threads keep their own obligations and status.
 
 ## Owner disposition — interrupted cinematic origin study
 
