@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import tempfile
 
 
 def digest(path):
@@ -47,13 +48,18 @@ def main():
             else:
                 verified_entries += 1
 
-    attribute_check = subprocess.run(
-        ['git', 'check-attr', '-z', 'text', '--stdin'],
-        cwd=root,
-        input=b'\0'.join(os.fsencode(path) for path in manifest_files) + b'\0',
-        capture_output=True,
-        check=False,
-    )
+    # A regular input file avoids bidirectional pipe backpressure on large
+    # inventories. Keep NUL delimiters so spaces and newlines stay in paths.
+    with tempfile.TemporaryFile() as attribute_input:
+        attribute_input.write(b'\0'.join(os.fsencode(path) for path in manifest_files) + b'\0')
+        attribute_input.seek(0)
+        attribute_check = subprocess.run(
+            ['git', 'check-attr', '-z', 'text', '--stdin'],
+            cwd=root,
+            stdin=attribute_input,
+            capture_output=True,
+            check=False,
+        )
     if attribute_check.returncode:
         errors.append('Could not check Git text attributes: ' + attribute_check.stderr.decode(errors='replace').strip())
     else:
