@@ -1,9 +1,31 @@
 ---
-title: "CG assessment architect thread closeout checkpoint"
+title: "CG assessment architect thread closeout"
 date: "2026-10-23"
 thread_id: "01a1050b-6c87-7c91-9d4f-56003ec98a76"
-status: "blocked"
+status: "scoped-complete-pending-final-readback"
 ---
+
+# October 23 owner scope decision and final closeout
+
+The owner explicitly directed: “Close this thread around the completed assessment, three modeling loops, production delivery, and five-pass review. Carry unfinished likeness work into the next goals, finish reconciliation and cleanup, then archive.” This supersedes the earlier archival hold tied to finishing the wider artistic mission. The dated checkpoint below remains historical evidence; its BLOCKED conclusion is no longer the current decision for this bounded thread.
+
+**Bounded thread scope:** assessment, three recursive modeling loops, retained production delivery, and five-pass review are complete. Final reconciliation and recoverable cleanup are recorded below before actual thread archival. **CG mission status remains source likeness UNMET, owner artistic acceptance PENDING, and strict normal parity FAIL.** Closing this thread supplies no artistic acceptance, animation certification or engineering approval.
+
+The next series starts from the [existing 62-record roadmap](../cg-architect-next-goals.md), with its current October 5 routing preserved. Carry forward MB-T001–012 for connected-head/full-character source alignment, MB-T013–015 for pinned references, matched views and retained gains, MB-T018–019 for strict normals/material equivalence, MB-T020 for explicit per-era owner decisions, and MB-T062 for demonstrated worker/stop controls. Future animation, mechanics and human/device acceptance remain conditional as already documented. No new modeling allocation or blanket implementation of 59 unfinished records is granted by closeout.
+
+Current repository identity is `OKHP3/murderbird-uncaged`, canonical branch `main`; the clean local and fetched remote revision before this documentation-only addendum was `cafabbb27ea9a6c7f622326f73bbf286f2dae550`. This thread’s retained release/review PRs 31, 32, 34, 35 and checkpoint PR70 are merged. The final closeout PR and exact post-merge checks are recorded in the external final receipt so that a document never claims to contain its own future merge SHA.
+
+Actual Replit evidence at `2026-10-23T15:01:18.951311Z`: clean `main` and `origin/main`, built clean release revision `cafabbb27ea9a6c7f622326f73bbf286f2dae550`, all 154 payload tuples unchanged after documentation transport, five final build/publication/presentation checks passed, `/cg.html` HTTP 200. Full eight-check evidence at `7c32048ee17954c573e7d043d9e748540befd854` includes 143 Node tests and 768 media entries. The companion production closeout owns the shared Shell; no duplicate writer or Replit Agent was launched here. Replit remains a Free-mode preview, without publication. Later documentation synchronization must be separately read back; these dated facts do not prove an unknown future HEAD.
+
+The unresolved older Replit 15-plus-2 contribution inventory belongs to the continuing production/custody handoff and MB-T061. The three historical tips and unavailable backup are recorded in [the production closeout](thread-closeout-2026-10-23.md). The unique older widened-exterior GLB remains separately preserved in Replit, not promoted to runtime. This thread does not declare that inventory reconciled or delete any shared Replit project, bundle, recovery ref or companion worktree. That separate recovery hold does not reopen the owner-closed modeling assignment.
+
+## Reconciliation and cleanup outcome
+
+Completed the fresh source-custody recheck, then recoverably archived all three obsolete worktrees attached to this thread: `cg-production-delivery01`, `cg-supervised-export01`, and `cg-supervised-optic-area13`. The app now lists each as `archived_worktree`; all three paths are absent from the registered Git worktree list. Before archival, all 259 source files and six current staged/unstaged patch artifacts matched their private recovery copies; source HEAD/status and substantive-file inventories were unchanged. No matching active process/open-file reference, nested repository or worktree lock was found. App recovery snapshots retain their Git history and working changes; the separate private copies retain ignored substantive files. Recovery refs and superseded experimental branches remain deliberately preserved rather than force-deleted. The canonical clone, other active chats’ worktrees, private recovery trees, shared Git LFS cache, recovery refs and Replit project are excluded. Missing historical attachment paths are not represented as newly archived.
+
+Final merge/check/readback, preservation and cleanup outcomes are saved outside every disposable worktree in canonical Git-ignored `.local/archives/cg-thread-closeout-2026-10-22/final-scope-closeout.json`; the existing Notion architect page receives the same bounded closure. Actual archival is the last action after the receipt is verified.
+
+# Earlier October 23 checkpoint (historical)
 
 # Scope and outcome
 
