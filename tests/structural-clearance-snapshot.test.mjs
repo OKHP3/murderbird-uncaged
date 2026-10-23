@@ -69,6 +69,28 @@ test('missing, ambiguous, empty and unsupported geometry stay unknown', () => {
   }
 });
 
+test('parent surfaces stay unknown when their named descendant exclusion is ambiguous', () => {
+  const duplicateToes = fixture();
+  duplicateToes.getObjectByName('left-foot').add(mesh('left-toes'));
+  let result = diagnoseSnapshot(duplicateToes, options);
+  assert.equal(result.surfaces['left-foot'].status, 'NOT RUN');
+  assert.match(result.surfaces['left-foot'].reason, /Expected one descendant exclusion named left-toes; found 2/);
+
+  const duplicateFeet = fixture();
+  const secondFoot = new THREE.Group(); secondFoot.name = 'left-foot';
+  secondFoot.add(mesh('additional-left-foot'));
+  duplicateFeet.getObjectByName('left-shin').add(secondFoot);
+  result = diagnoseSnapshot(duplicateFeet, options);
+  assert.equal(result.surfaces['left-shin'].status, 'NOT RUN');
+  assert.match(result.surfaces['left-shin'].reason, /Expected one descendant exclusion named left-foot; found 2/);
+
+  const missingToes = fixture();
+  missingToes.getObjectByName('left-toes').removeFromParent();
+  result = diagnoseSnapshot(missingToes, options);
+  assert.equal(result.surfaces['left-foot'].status, 'NOT RUN');
+  assert.match(result.surfaces['left-foot'].reason, /Expected one descendant exclusion named left-toes; found 0/);
+});
+
 test('explicit labels and finite nonnegative threshold required', () => {
   for (const value of [NaN, Infinity, -1, undefined]) {
     assert.throws(() => diagnoseSnapshot(fixture(), { ...options, minimumSeparationMeters: value }));
