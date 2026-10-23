@@ -1,7 +1,7 @@
 ---
 title: "Prototype MurderBird Exhibit — preserved milestone closeout"
-last_updated: "2026-10-23T14:37:26.866862+00:00"
-status: "blocked-owner-review-and-preservation-holds"
+last_updated: "2026-10-23T15:03:05.659460+00:00"
+status: "complete-legacy-continuation-superseded"
 thread_id: "01a10507-f84d-77c3-b675-847cae773211"
 ---
 
@@ -48,3 +48,13 @@ Private evidence is retained under `.local/closeouts/prototype-legacy-f84d-2026-
 **BLOCKED.** The goal's artistic gate remains unmet; the current shared goal and published assessment explicitly retain owner acceptance PENDING. The outstanding focused head/neck/compact-shoulder result has no completion evidence. The smallest owner decision is whether the later retained04/current delegation program supersedes this legacy continuation for closure, or this chat must still deliver a distinct bounded successor. This is a scope decision, not a request to authorize the same budget again. Acceptance of a technical audit does not accept the appearance.
 
 After that decision, reconcile any still-required visual work with the current program owner and produce a matched whole-bird review. Keep the dirty study checkouts until ownership, unique-file preservation and completion are established. A second closeout pass must verify final main/CI/live/Replit state and cleanup immediately before archival. Under the owner's closeout instruction, this chat remains unarchived while these obligations are blocked.
+
+## October 23 owner supersession — current closeout disposition
+
+The owner answered the explicit scope question: “Treat this legacy continuation as superseded; keep unfinished likeness work in the current CG program.” This supersedes the earlier BLOCKED scope decision above. **COMPLETE for the legacy assignment by explicit supersession**, not completion of the unimplemented visual successor or the overall MurderBird goal. The current program continues the head/neck/shoulder and other unfinished likeness work; source likeness remains UNMET and owner artistic acceptance PENDING. The shared root goal records this decision for other systems.
+
+The four dirty V38 study checkouts are **KEEP**, as preserved engineering/history resources; they are not disposable legacy-CG cleanup targets. Six formerly removed workspace paths remain absent; the recorded uncertainty about their former ignored contents is preserved, not retroactively certified. The separate later production chat retains the October4–5 Replit parent-history recovery hold and its own current-runtime synchronization duties. Closing this legacy assignment neither resolves nor archives that separate work.
+
+The completed audit's temporary validation worktree and merged branch were removed only after its receipts and build identity were copied outside it,518 hydrated inputs matched committed hashes, the exact tip was merged, and active-use checks passed. Git-aware removal and an expected-tip remote branch deletion were verified; no old study or shared checkout was removed. Its second pass completed143/143 tests,768/768 media records, reference/custody checks and a remote/local receipt-blob comparison. The original audit merged in PR72 at `58ff295109c51f4c270488aa0573c73c7b8be9b6`; main validation39972758821 and Pages39972758909 succeeded. Earlier timestamped observations remain historical evidence.
+
+This final change edits only this receipt and the shared goal. It alters no application, reference or model bytes. Final merge/check/readback and archival outcomes are saved as a dated addendum in the existing private receipt directory; no archival is claimed before the app confirms it. No additional artistic approval, budget authorization, new implementation or paid service is requested.
