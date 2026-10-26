@@ -4,8 +4,9 @@ import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { execFileSync } from 'node:child_process';
-import { createPlan, hydrate, MAX_BYTES, parsePointer, safeRelative, summarize } from '../scripts/ci-lfs-assets.mjs';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createPlan, hydrate, MAX_BYTES, parsePointer, safeRelative, summarize, validateDownloadApproval } from '../scripts/ci-lfs-assets.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const pointer = bytes => `version https://git-lfs.github.com/spec/v1\noid sha256:${sha(bytes)}\nsize ${bytes.length}\n`;
@@ -144,9 +145,61 @@ test('verified existing payloads satisfy missing cache without fetching and hydr
   const f = await fixture(t), plan = await createPlan(f.root);
   await f.put('assets/model.bin', f.bytes); await f.put('assets/test.glb', f.testBytes);
   // No cache or remote exists. Even explicit fetch must be unnecessary.
-  const result = await hydrate(f.root, plan, { fetch: true });
+  const result = await hydrate(f.root, plan, { fetch: true, expectedHead: plan.head, expectedPlanKey: plan.cacheKey, maxDownloadBytes: plan.bytes });
   assert.equal(result.hydratedPaths, 1); assert.equal(result.workingTreeSourceObjects, 2);
   assert.deepEqual(await readFile(path.join(f.root, 'assets/model-copy.bin')), f.bytes);
+});
+
+test('download approval rejects missing, stale or enlarged scope before any remote access', async t => {
+  const f = await fixture(t), plan = await createPlan(f.root);
+  const approved = { expectedHead: plan.head, expectedPlanKey: plan.cacheKey, maxDownloadBytes: plan.bytes };
+  const original = await readFile(path.join(f.root, 'assets/model.bin'));
+  for (const approval of [{}, { ...approved, expectedHead: '0'.repeat(40) }, { ...approved, expectedPlanKey: 'old-plan' },
+    { ...approved, maxDownloadBytes: plan.bytes - 1 }, { ...approved, maxDownloadBytes: MAX_BYTES + 1 },
+    { ...approved, maxDownloadBytes: NaN }, { ...approved, maxDownloadBytes: String(plan.bytes) }]) {
+    await assert.rejects(hydrate(f.root, plan, { fetch: true, ...approval }), /Download approval/);
+  }
+  assert.deepEqual(await readFile(path.join(f.root, 'assets/model.bin')), original);
+  await f.fillCache();
+  await assert.rejects(hydrate(f.root, plan, { fetch: true, ...approved, expectedHead: '0'.repeat(40) }), /Download approval/);
+  assert.doesNotThrow(() => validateDownloadApproval(plan, approved));
+  assert.equal((await hydrate(f.root, plan, { fetch: true, ...approved })).hydratedPaths, plan.files.length);
+});
+
+test('CLI rejects malformed and duplicate download approvals without changing payloads or index', async t => {
+  const f = await fixture(t), plan = await createPlan(f.root);
+  const helper = fileURLToPath(new URL('../scripts/ci-lfs-assets.mjs', import.meta.url));
+  const before = git(f.root, ['ls-files', '--stage', '-z']);
+  const original = await readFile(path.join(f.root, 'assets/model.bin'));
+  const common = ['hydrate', '--fetch', `--expected-head=${plan.head}`, `--expected-plan-key=${plan.cacheKey}`];
+  for (const options of [common, ...['-1', '1e9', '123abc', '9007199254740992'].map(n => [...common, `--max-download-bytes=${n}`]),
+    [...common, `--max-download-bytes=${plan.bytes}`, `--expected-head=${plan.head}`],
+    ['plan', '--fetch'], ['hydrate', `--expected-head=${plan.head}`]]) {
+    const result = spawnSync(process.execPath, [helper, ...options], { cwd: f.root, encoding: 'utf8', windowsHide: true,
+      env: { ...process.env, GIT_LFS_SKIP_SMUDGE: '1', GIT_TERMINAL_PROMPT: '0' } });
+    assert.equal(result.status, 1, result.stderr);
+    assert.match(result.stderr, /Download approval|Usage:/);
+  }
+  assert.equal(git(f.root, ['ls-files', '--stage', '-z']), before);
+  assert.deepEqual(await readFile(path.join(f.root, 'assets/model.bin')), original);
+});
+
+test('approved fetch uses only selected objects from a local file remote', async t => {
+  const f = await fixture(t), plan = await createPlan(f.root);
+  const remote = path.join(f.root, '.local', 'origin.git');
+  git(f.root, ['init', '--bare', '-q', remote]);
+  git(f.root, ['remote', 'add', 'origin', pathToFileURL(remote).href]);
+  for (const bytes of [f.bytes, f.testBytes, Buffer.from('unselected archived data')]) {
+    const oid = sha(bytes);
+    await f.put(`.local/origin.git/lfs/objects/${oid.slice(0, 2)}/${oid.slice(2, 4)}/${oid}`, bytes);
+  }
+  const result = await hydrate(f.root, plan, { fetch: true, expectedHead: plan.head, expectedPlanKey: plan.cacheKey, maxDownloadBytes: plan.bytes });
+  assert.equal(result.hydratedPaths, 3);
+  assert.deepEqual(await readFile(path.join(f.root, 'assets/model.bin')), f.bytes);
+  assert.deepEqual(await readFile(path.join(f.root, 'assets/test.glb')), f.testBytes);
+  assert.equal((await readFile(path.join(f.root, 'assets/archive.bin'))).toString(), pointer(Buffer.from('unselected archived data')));
+  const archiveOid = sha(Buffer.from('unselected archived data'));
+  await assert.rejects(readFile(path.join(f.root, '.git/lfs/objects', archiveOid.slice(0, 2), archiveOid.slice(2, 4), archiveOid)), { code: 'ENOENT' });
 });
 
 test('hydration keeps LFS status clean and preserves unrelated staged content', async t => {

@@ -13,11 +13,24 @@ on:
         description: 'Publish the validated build (main branch only)'
         type: boolean
         default: false
+      expected_revision:
+        description: 'Exact approved main commit SHA (required for a download)'
+        type: string
+        default: ''
+      expected_lfs_plan_key:
+        description: 'Exact approved asset-plan cacheKey (required for a download)'
+        type: string
+        default: ''
+      max_lfs_download_bytes:
+        description: 'Approved unique payload byte ceiling (required for a download)'
+        type: string
+        default: ''
 permissions:
   contents: read
 concurrency:
   group: validate-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  # Do not interrupt a running approved main fill with a later main update.
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 env:
   GIT_LFS_SKIP_SMUDGE: '1'
 jobs:
@@ -50,15 +63,20 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download
         env:
           GH_TOKEN: ${{ github.token }}
+          EXPECTED_REVISION: ${{ inputs.expected_revision }}
         run: |
+          test "$GITHUB_REF" = refs/heads/main && test "$EXPECTED_REVISION" = "$GITHUB_SHA" || { echo "::error::A cache fill requires the exact approved main revision. No LFS download started."; exit 1; }
           limit=$(gh api "repos/$GITHUB_REPOSITORY/actions/cache/storage-limit" --jq .max_cache_size_gb)
-          test "$limit" -le 10 || { echo "::error::Cache limit exceeds the free 10 GB ceiling. No LFS download started."; exit 1; }
+          [[ "$limit" =~ ^([1-9]|10)$ ]] || { echo "::error::Cache limit is invalid or exceeds the free 10 GB ceiling. No LFS download started."; exit 1; }
       - name: Hydrate verified required assets
         env:
           ALLOW_LFS_DOWNLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download }}
+          EXPECTED_REVISION: ${{ inputs.expected_revision }}
+          EXPECTED_LFS_PLAN_KEY: ${{ inputs.expected_lfs_plan_key }}
+          MAX_LFS_DOWNLOAD_BYTES: ${{ inputs.max_lfs_download_bytes }}
         run: |
           if [ "$ALLOW_LFS_DOWNLOAD" = "true" ]; then
-            node scripts/ci-lfs-assets.mjs hydrate --fetch
+            node scripts/ci-lfs-assets.mjs hydrate --fetch --expected-head="$EXPECTED_REVISION" --expected-plan-key="$EXPECTED_LFS_PLAN_KEY" --max-download-bytes="$MAX_LFS_DOWNLOAD_BYTES"
           else
             node scripts/ci-lfs-assets.mjs hydrate
           fi

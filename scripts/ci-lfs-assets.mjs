@@ -173,7 +173,14 @@ async function validatePayload(file, object) {
   }
   return hash.digest('hex') === object.oid ? null : 'SHA-256 mismatch';
 }
-export async function hydrate(root, plan, { fetch = false } = {}) {
+export function validateDownloadApproval(plan, { expectedHead, expectedPlanKey, maxDownloadBytes } = {}) {
+  if (expectedHead !== plan.head) throw new Error('Download approval must name the exact current HEAD');
+  if (expectedPlanKey !== plan.cacheKey) throw new Error('Download approval must name the exact current asset-plan key');
+  if (!Number.isSafeInteger(maxDownloadBytes) || maxDownloadBytes < plan.bytes || maxDownloadBytes > MAX_BYTES) {
+    throw new Error(`Download approval byte ceiling must cover ${plan.bytes} and not exceed ${MAX_BYTES}`);
+  }
+}
+export async function hydrate(root, plan, { fetch = false, ...approval } = {}) {
   // Revalidate limits even for programmatic callers; CLI always regenerates its plan.
   plan = { ...plan, ...summarize(plan.files, { scope: plan.scope ?? 'ci' }) };
   if (!/^[a-f0-9]{40,64}$/.test(plan.head) || git(root, ['rev-parse', 'HEAD']).toString().trim() !== plan.head) throw new Error('Hydration plan must match current HEAD');
@@ -215,11 +222,17 @@ export async function hydrate(root, plan, { fetch = false } = {}) {
     return issues;
   };
   let issues = await inspectCache();
+  // Even a warm-cache fill must match the reviewed revision, scope and ceiling.
+  // Ordinary cache-only hydration needs no download approval.
+  if (fetch) validateDownloadApproval(plan, approval);
   if (fetch && issues.length && issues.every(o => o.reason === 'missing')) {
     const includePaths = issues.map(o => o.paths[0]);
     for (const name of includePaths) if (/[,!*?\[\]]/.test(name) || name.trim() !== name) throw new Error(`Cannot fetch this path literally: ${name}`);
     for (let i = 0; i < includePaths.length; i += 40) {
-      git(root, ['-c', 'lfs.fetchrecentalways=false', 'lfs', 'fetch', `--include=${includePaths.slice(i, i + 40).join(',')}`, '--exclude=', 'origin', plan.head]);
+      // Git LFS rejects zero and silently substitutes eight retries. One is its
+      // supported minimum; allowance planning must include that possible retry.
+      git(root, ['-c', 'lfs.fetchrecentalways=false', '-c', 'lfs.transfer.maxretries=1', '-c', 'lfs.concurrenttransfers=1',
+        'lfs', 'fetch', `--include=${includePaths.slice(i, i + 40).join(',')}`, '--exclude=', 'origin', plan.head]);
     }
     issues = await inspectCache();
   }
@@ -250,9 +263,12 @@ export async function hydrate(root, plan, { fetch = false } = {}) {
 }
 export async function main(args = process.argv.slice(2)) {
   const [command, ...options] = args;
-  if (!['plan', 'hydrate'].includes(command) || options.some(o => !['--fetch', '--scope=ci', '--scope=build'].includes(o))
-      || options.filter(o => o.startsWith('--scope=')).length > 1 || (command === 'plan' && options.includes('--fetch'))) {
-    throw new Error('Usage: node scripts/ci-lfs-assets.mjs plan|hydrate [--scope=ci|--scope=build] [--fetch (hydrate only)]');
+  const approvalOptions = ['--expected-head=', '--expected-plan-key=', '--max-download-bytes='];
+  if (!['plan', 'hydrate'].includes(command) || options.some(o => !['--fetch', '--scope=ci', '--scope=build'].includes(o) && !approvalOptions.some(prefix => o.startsWith(prefix)))
+      || ['--scope=', ...approvalOptions].some(prefix => options.filter(o => o.startsWith(prefix)).length > 1)
+      || (command === 'plan' && options.some(o => o === '--fetch' || approvalOptions.some(prefix => o.startsWith(prefix))))
+      || (!options.includes('--fetch') && options.some(o => approvalOptions.some(prefix => o.startsWith(prefix))))) {
+    throw new Error('Usage: node scripts/ci-lfs-assets.mjs plan|hydrate [--scope=ci|--scope=build] [--fetch --expected-head=SHA --expected-plan-key=KEY --max-download-bytes=BYTES (hydrate only)]');
   }
   const scope = options.find(o => o.startsWith('--scope='))?.slice('--scope='.length) ?? 'ci';
   const root = await realpath(git(process.cwd(), ['rev-parse', '--show-toplevel']).toString().trim());
@@ -261,7 +277,12 @@ export async function main(args = process.argv.slice(2)) {
   await mkdir(path.dirname(output), { recursive: true });
   await writeFile(output, JSON.stringify(plan, null, 2) + '\n');
   if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `cache-key=${plan.cacheKey}\nbytes=${plan.bytes}\nobjects=${plan.objectCount}\n`);
-  const result = command === 'hydrate' ? await hydrate(root, plan, { fetch: options.includes('--fetch') }) : { scope, objects: plan.objectCount, bytes: plan.bytes, paths: plan.files.length, cacheKey: plan.cacheKey };
+  const value = prefix => options.find(o => o.startsWith(prefix))?.slice(prefix.length);
+  const ceiling = value('--max-download-bytes=');
+  const result = command === 'hydrate' ? await hydrate(root, plan, { fetch: options.includes('--fetch'),
+    expectedHead: value('--expected-head='), expectedPlanKey: value('--expected-plan-key='),
+    maxDownloadBytes: /^(0|[1-9][0-9]*)$/.test(ceiling ?? '') ? Number(ceiling) : NaN,
+  }) : { head: plan.head, scope, objects: plan.objectCount, bytes: plan.bytes, paths: plan.files.length, cacheKey: plan.cacheKey };
   console.log(JSON.stringify(result));
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch(error => { console.error(error.message); process.exitCode = 1; });
