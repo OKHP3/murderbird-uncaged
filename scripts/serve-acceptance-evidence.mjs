@@ -7,9 +7,9 @@ import { homedir } from 'node:os';
 
 const evidenceBase = resolve(homedir(), 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence/visual-technical-acceptance');
 const session = process.argv[2] ?? '';
-if (!['', 'connected-head-correction', 'optic-bill-refinement'].includes(session)) throw new Error('Unknown acceptance session');
-const root = resolve(evidenceBase, session === 'optic-bill-refinement'
-  ? 'connected-head-correction/optic-bill-refinement' : session);
+if (!['', 'connected-head-correction', 'optic-bill-refinement', 'tab-sliver-correction'].includes(session)) throw new Error('Unknown acceptance session');
+const correctionSession = ['optic-bill-refinement', 'tab-sliver-correction'].includes(session);
+const root = resolve(evidenceBase, correctionSession ? `connected-head-correction/${session}` : session);
 await mkdir(root, { recursive: true });
 const server = http.createServer(async (request, response) => {
   const origin = request.headers.origin;
@@ -20,18 +20,23 @@ const server = http.createServer(async (request, response) => {
     const baseline = /^\/exact-normal-candidate\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
     const corrected = session === 'connected-head-correction'
       && /^\/attempt-01\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
-    const refined = session === 'optic-bill-refinement'
+    const refined = correctionSession
       && /^\/candidate\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
-    const checkpoint = session === 'optic-bill-refinement'
+    const checkpoint = correctionSession
       && /^\/checkpoint\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
-    const candidate = baseline || corrected || refined || checkpoint;
+    const seatingRepair = session === 'tab-sliver-correction'
+      && /^\/seating-repair\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
+    const candidate = baseline || corrected || refined || checkpoint || seatingRepair;
     if (request.url !== '/review.html' && !candidate) { response.writeHead(404).end(); return; }
     try {
       const file = checkpoint
-        ? resolve(evidenceBase, 'connected-head-correction/attempt-01', request.url.slice('/checkpoint/'.length))
+        ? resolve(evidenceBase, session === 'tab-sliver-correction'
+          ? 'connected-head-correction/optic-bill-refinement/candidate' : 'connected-head-correction/attempt-01',
+          request.url.slice('/checkpoint/'.length))
         : resolve(baseline ? evidenceBase : root, request.url.slice(1));
       const body = await readFile(file);
       response.setHeader('Content-Type', candidate ? 'model/gltf-binary' : 'text/html; charset=utf-8');
+      response.setHeader('Cache-Control', 'no-store');
       response.setHeader('Content-Length', body.length);
       response.end(body);
     } catch { response.writeHead(404).end(); }
