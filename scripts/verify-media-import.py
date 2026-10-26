@@ -73,7 +73,7 @@ def main():
             else:
                 valid = path.is_file() and not path.is_symlink() and path.stat().st_size == item['bytes'] and digest(path) == item['sha256']
             if not valid:
-                errors.append(f'{manifest_path.name}: {relative}')
+                errors.append(f'{manifest_path.name}: {relative.as_posix()}')
             else:
                 verified_entries += 1
 

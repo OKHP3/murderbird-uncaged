@@ -63,7 +63,7 @@ test('Git attribute protocol preserves long Unicode and newline paths on every p
   assert.ok(Buffer.byteLength(paths.join('\0')) > 200_000);
   const check = (input) => {
     const result = spawnSync(python, ['-c',
-      "import json, runpy, sys; from pathlib import Path; check = runpy.run_path('scripts/verify-media-import.py')['text_attribute_errors']; print(json.dumps(check(Path.cwd(), json.load(sys.stdin))))"], {
+      "import json, runpy, sys; from pathlib import Path; check = runpy.run_path('scripts/verify-media-import.py')['text_attribute_errors']; print(json.dumps(check(Path.cwd(), json.load(sys.stdin.buffer))))"], {
       cwd: data.root, env: data.env, input: JSON.stringify(input), encoding: 'utf8', timeout: 15_000,
       maxBuffer: 4 * 1024 * 1024,
     });
