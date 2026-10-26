@@ -4,27 +4,118 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      allow_lfs_download:
+        description: 'Verified $0 stop-usage enforcement and available allowance: permit bounded LFS cache fill'
+        type: boolean
+        default: false
+      publish_pages:
+        description: 'Publish the validated build (main branch only)'
+        type: boolean
+        default: false
 permissions:
   contents: read
+concurrency:
+  group: validate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+env:
+  GIT_LFS_SKIP_SMUDGE: '1'
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [24, 26]
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v7
         with:
-          lfs: true
+          lfs: false
       - uses: actions/setup-node@v7
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 24
           cache: npm
-      - run: npm ci
-      - run: npm run build
-      - run: node scripts/verify-theme-release.mjs
-      - run: node scripts/verify-publication.mjs
-      - run: node scripts/verify-presentation.mjs
-      - run: node scripts/validate-device-performance-receipt.mjs
-      - run: node --test tests/*.test.mjs
-      - run: python3 scripts/verify-media-import.py
+      - name: Test asset selection and missing-content safeguards
+        run: node --test tests/ci-lfs-assets.test.mjs
+      - name: Plan assets required by the existing checks
+        id: assets
+        run: node scripts/ci-lfs-assets.mjs plan
+      - name: Restore content-addressed LFS cache
+        id: lfs-cache
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: .git/lfs/objects
+          key: lfs-objects-v1-${{ steps.assets.outputs.cache-key }}
+      - name: Verify free cache limit before an explicitly requested fill
+        if: github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          limit=$(gh api "repos/$GITHUB_REPOSITORY/actions/cache/storage-limit" --jq .max_cache_size_gb)
+          test "$limit" -le 10 || { echo "::error::Cache limit exceeds the free 10 GB ceiling. No LFS download started."; exit 1; }
+      - name: Hydrate verified required assets
+        env:
+          ALLOW_LFS_DOWNLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download }}
+        run: |
+          if [ "$ALLOW_LFS_DOWNLOAD" = "true" ]; then
+            node scripts/ci-lfs-assets.mjs hydrate --fetch
+          else
+            node scripts/ci-lfs-assets.mjs hydrate
+          fi
+      - name: Save verified selected objects after explicit cache fill
+        if: github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download && steps.lfs-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: .git/lfs/objects
+          key: lfs-objects-v1-${{ steps.assets.outputs.cache-key }}
+      - name: Install dependencies on Node 24
+        run: npm ci
+      - name: Build and verify on Node 24
+        run: |
+          npm run build
+          node scripts/verify-theme-release.mjs
+          node scripts/verify-publication.mjs
+          node scripts/verify-presentation.mjs
+          node scripts/validate-device-performance-receipt.mjs
+          node --test tests/*.test.mjs
+      - name: Verify every imported source payload
+        run: python3 scripts/verify-media-import.py
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+      - name: Install dependencies on Node 26
+        run: npm ci
+      - name: Build and verify on Node 26
+        run: |
+          npm run build
+          node scripts/verify-theme-release.mjs
+          node scripts/verify-publication.mjs
+          node scripts/verify-presentation.mjs
+          node scripts/validate-device-performance-receipt.mjs
+          node --test tests/*.test.mjs
+      - name: Upload the validated Pages build
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: dist
+      - name: Record transfer scope
+        if: always()
+        env:
+          REQUIRED_OBJECTS: ${{ steps.assets.outputs.objects }}
+          REQUIRED_BYTES: ${{ steps.assets.outputs.bytes }}
+        run: |
+          echo "Required LFS plan: $REQUIRED_OBJECTS objects / $REQUIRED_BYTES declared bytes. This is not metered download usage." >> "$GITHUB_STEP_SUMMARY"
+  deploy:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1

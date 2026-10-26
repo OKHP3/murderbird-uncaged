@@ -54,7 +54,7 @@ For story, artwork, audio and historical source packages, use the [media catalog
 **GitHub `main` is the integration and deployment source.** GitHub Actions builds the current exhibit and story folio together and publishes one GitHub Pages artifact.
 
 - [Build checks](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/validate.yml)
-- [Pages deployment](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/deploy.yml)
+- [Validated Pages deployment](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/validate.yml)
 - [Live release manifest](https://okhp3.github.io/murderbird-uncaged/release.json): exact source revision and SHA-256 hashes for the published files.
 - [Release and reconciliation guide](docs/release-source-of-truth.md)
 
@@ -65,15 +65,19 @@ A local preview is a checkout, not a second authority. Replit is development pre
 Use a supported Node.js version from `package.json`, Python 3, and Git LFS for the model and media files.
 
 ```sh
-git lfs install
-git lfs pull
+git lfs install --local --skip-smudge
+node scripts/ci-lfs-assets.mjs plan --scope=build
+node scripts/ci-lfs-assets.mjs hydrate --scope=build
 npm ci
 npm run dev -- --host 127.0.0.1
 ```
 
+Hydration verifies existing local payloads and fails clearly when required content is missing. For a new checkout, clone with `git -c filter.lfs.smudge= -c filter.lfs.process= -c filter.lfs.required=false clone https://github.com/OKHP3/murderbird-uncaged.git` to retain pointers initially. See [bounded LFS downloads](docs/lfs-downloads.md) before explicitly fetching missing assets; ordinary development and synchronization do not automatically retrieve the archive.
+
 Create and inspect the production release:
 
 ```sh
+node scripts/ci-lfs-assets.mjs hydrate
 npm run build
 node --test tests/*.test.mjs
 node scripts/verify-theme-release.mjs
@@ -83,7 +87,7 @@ python3 scripts/verify-media-import.py
 npm run preview -- --host 127.0.0.1
 ```
 
-`npm run build` includes the manifest-selected review gallery and writes `dist/release.json`. Local modified builds are marked as such. The publication verifier checks emitted media and file hashes. CI retrieves LFS objects and validates Node 24 and 26. See the [technology inventory](docs/technology-stack.md) for maintenance details.
+`npm run build` includes the manifest-selected review gallery and writes `dist/release.json`. Local modified builds are marked as such. The publication verifier checks emitted media and file hashes. Full validation requires the default CI asset scope, including imported source originals and test fixtures; a preview needs only `--scope=build`. CI restores verified cached objects and validates Node 24 and 26; network hydration requires an explicit manual request. See the [technology inventory](docs/technology-stack.md) for maintenance details.
 
 The application uses **Vite, Three.js, and Web Audio**, with no application backend. Existing Google Analytics is loaded by the page; audio remains visitor-controlled. Do not put credentials or private files into browser assets.
 
