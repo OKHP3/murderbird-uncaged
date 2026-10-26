@@ -1,7 +1,8 @@
 /** Local QA evidence receiver. Never part of the exhibit or public build. */
 import http from 'node:http';
-import { mkdir, writeFile, readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { mkdir, writeFile, readFile, realpath } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { resolve, relative, isAbsolute, extname } from 'node:path';
 import { homedir } from 'node:os';
 
 const root = resolve(homedir(), 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence/visual-technical-acceptance');
@@ -47,3 +48,29 @@ const server = http.createServer(async (request, response) => {
   } catch (error) { response.writeHead(409).end(error.message); }
 });
 server.listen(4177, '127.0.0.1', () => console.log(`Evidence receiver: ${root}`));
+
+// Serve the existing build directly; inject QA observation before app startup
+// only on the explicitly requested local test route. No dist file is changed.
+const buildRoot = await realpath(resolve('dist'));
+const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript',
+  '.css': 'text/css', '.json': 'application/json', '.glb': 'model/gltf-binary',
+  '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
+http.createServer(async (request, response) => {
+  if (request.method !== 'GET') { response.writeHead(405).end(); return; }
+  try {
+    const url = new URL(request.url, 'http://127.0.0.1:4176');
+    const name = url.pathname === '/' ? 'index.html' : decodeURIComponent(url.pathname).slice(1);
+    const file = await realpath(resolve(buildRoot, name)), inside = relative(buildRoot, file);
+    if (inside.startsWith('..') || isAbsolute(inside)) { response.writeHead(403).end(); return; }
+    let body = await readFile(file);
+    if (name === 'index.html' && url.searchParams.get('acceptance-probe') === '1') {
+      const probe = await readFile(resolve('scripts/asus-browser-probe.js'), 'utf8');
+      body = Buffer.from(body.toString('utf8').replace('<head>', `<head><script>${probe}</script>`));
+      response.setHeader('X-Acceptance-Probe-Sha256', createHash('sha256').update(probe).digest('hex'));
+    }
+    response.setHeader('Cache-Control', 'no-store');
+    response.setHeader('Content-Type', types[extname(file)] || 'application/octet-stream');
+    response.setHeader('Content-Length', body.length);
+    response.end(body);
+  } catch { response.writeHead(404).end(); }
+}).listen(4176, '127.0.0.1', () => console.log('Instrumented local build: http://127.0.0.1:4176/?acceptance-probe=1'));
