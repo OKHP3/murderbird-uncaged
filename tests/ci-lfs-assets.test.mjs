@@ -156,7 +156,7 @@ test('hydration keeps LFS status clean and preserves unrelated staged content', 
   const before = git(f.root, ['ls-files', '--stage', '-z']);
   await f.fillCache(); await hydrate(f.root, plan);
   assert.equal(git(f.root, ['ls-files', '--stage', '-z']), before);
-  const status = execFileSync('git', ['-c', 'filter.lfs.process=', '-c', 'filter.lfs.clean=git-lfs clean -- %f', '-c', 'filter.lfs.required=true', '-C', f.root,
+  const status = execFileSync('git', ['-c', 'filter.lfs.process=git-lfs filter-process', '-c', 'filter.lfs.clean=git-lfs clean -- %f', '-c', 'filter.lfs.required=true', '-C', f.root,
     'status', '--porcelain', '--', ...plan.files.map(f => f.path)], { encoding: 'utf8', windowsHide: true });
   assert.equal(status, '');
   assert.equal(git(f.root, ['diff', '--cached', '--name-only']).trim(), 'public/readme.txt');
