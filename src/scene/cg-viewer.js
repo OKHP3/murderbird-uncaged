@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-export async function createCGViewer(container, url, { lighting = 'neutral', signal, onProgress, onContextLost } = {}) {
+export async function createCGViewer(container, url, { lighting = 'neutral', signal, onProgress, onContextLost, reviewFrame } = {}) {
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -44,7 +44,8 @@ export async function createCGViewer(container, url, { lighting = 'neutral', sig
   const observer = new ResizeObserver(resize);
   const contextLost = event => { event.preventDefault(); onContextLost?.(); };
   canvas.addEventListener('webglcontextlost', contextLost);
-  function snapshot() { return { lighting, camera: camera.position.toArray(), target: controls.target.toArray(), zoom: camera.zoom, triangles: renderer.info.render.triangles }; }
+  function snapshot() { return { lighting, camera: camera.position.toArray(), target: controls.target.toArray(), zoom: camera.zoom, triangles: renderer.info.render.triangles,
+    framing: { center: center.toArray(), radius, fittedHeight } }; }
   function zoom(factor) { camera.zoom = THREE.MathUtils.clamp(camera.zoom * factor, .5, 4); camera.updateProjectionMatrix(); render(); }
   function orbit(horizontal, vertical = 0) {
     const offset = camera.position.clone().sub(controls.target);
@@ -89,7 +90,18 @@ export async function createCGViewer(container, url, { lighting = 'neutral', sig
     signal?.throwIfAborted(); scene.add(model);
     const box = new THREE.Box3().setFromObject(model); if (box.isEmpty()) throw new Error('Model has no visible geometry');
     center = box.getCenter(new THREE.Vector3()); radius = box.getSize(new THREE.Vector3()).length() / 2;
-    fittedHeight = radius * 2.05; camera.near = Math.max(.001, radius / 1000); camera.far = radius * 100;
+    fittedHeight = radius * 2.05;
+    // Comparison tooling can retain the receiving camera instead of silently
+    // refitting a changed silhouette. Ordinary exhibit callers keep auto-fit.
+    if (reviewFrame) {
+      if (!Array.isArray(reviewFrame.center) || reviewFrame.center.length !== 3
+        || !reviewFrame.center.every(Number.isFinite) || !Number.isFinite(reviewFrame.radius)
+        || reviewFrame.radius <= 0 || !Number.isFinite(reviewFrame.fittedHeight) || reviewFrame.fittedHeight <= 0) {
+        throw new RangeError('Review framing requires a finite center and positive radius/height');
+      }
+      center.set(...reviewFrame.center); radius = reviewFrame.radius; fittedHeight = reviewFrame.fittedHeight;
+    }
+    camera.near = Math.max(.001, radius / 1000); camera.far = radius * 100;
     setLighting(lighting); resetView(); resize(); observer.observe(container);
     return { setLighting, zoom, orbit, resetView, snapshot, dispose };
   } catch (error) { dispose(); throw error; }

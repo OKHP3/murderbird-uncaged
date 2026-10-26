@@ -5,7 +5,10 @@ import { createHash } from 'node:crypto';
 import { resolve, relative, isAbsolute, extname } from 'node:path';
 import { homedir } from 'node:os';
 
-const root = resolve(homedir(), 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence/visual-technical-acceptance');
+const evidenceBase = resolve(homedir(), 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence/visual-technical-acceptance');
+const session = process.argv[2] ?? '';
+if (!['', 'connected-head-correction'].includes(session)) throw new Error('Unknown acceptance session');
+const root = resolve(evidenceBase, session);
 await mkdir(root, { recursive: true });
 const server = http.createServer(async (request, response) => {
   const origin = request.headers.origin;
@@ -13,10 +16,13 @@ const server = http.createServer(async (request, response) => {
   if (origin && !allowed.includes(origin)) { response.writeHead(403).end(); return; }
   if (origin) response.setHeader('Access-Control-Allow-Origin', origin);
   if (request.method === 'GET') {
-    const candidate = /^\/exact-normal-candidate\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
+    const baseline = /^\/exact-normal-candidate\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
+    const corrected = session === 'connected-head-correction'
+      && /^\/attempt-01\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
+    const candidate = baseline || corrected;
     if (request.url !== '/review.html' && !candidate) { response.writeHead(404).end(); return; }
     try {
-      const body = await readFile(resolve(root, request.url.slice(1)));
+      const body = await readFile(resolve(baseline ? evidenceBase : root, request.url.slice(1)));
       response.setHeader('Content-Type', candidate ? 'model/gltf-binary' : 'text/html; charset=utf-8');
       response.setHeader('Content-Length', body.length);
       response.end(body);
