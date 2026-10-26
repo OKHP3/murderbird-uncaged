@@ -9,6 +9,7 @@ import json
 import os
 import re
 import struct
+from html import escape
 from pathlib import Path
 
 HOME = Path.home() / 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence/visual-technical-acceptance'
@@ -110,6 +111,16 @@ def run(args):
                            'after': relative(Path(new['image'])), 'before_sha256': old['sha256'], 'after_sha256': new['sha256']})
     head = next(p for p in native if p['view'] == 'head-neutral')
     html = '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>MurderBird tab and sliver review</title><style>body{background:#202622;color:#ede9db;font:17px system-ui;margin:24px}p{max-width:1100px}select{font:inherit;padding:8px;margin:4px}a{color:#ebc58d}.pair{display:grid;grid-template-columns:1fr 1fr;gap:15px}.pair img{width:100%}label{display:inline-block}pre{white-space:pre-wrap;font-size:13px}@media(max-width:850px){.pair{grid-template-columns:1fr}}</style><h1>MurderBird: one tab and sliver correction</h1><p>Before is the preserved358d review checkpoint. After reseats the inset optic lip, smooths its inner retainer fold and tucks upper bill-root tails. Stance, breast, toes and other nonselected gains remain protected. Source likeness and Jamie's acceptance remain open.</p><p><a href="acceptance-matrix.md">Acceptance matrix and remaining holds</a> · <a href="matched-view-check.json">78 matched camera/light pairs</a> · <a href="postflight-preservation.json">Saved-native preservation</a> · <a href="normal-parity-summary.json">Strict export data</a></p><label>Era <select id="era"><option value="builder">Advanced</option><option>maker</option><option>mechanic</option></select></label><label>View <select id="view"><option value="head">Head close-up</option><option value="full">Whole bird</option></select></label><label>Light <select id="light"><option>neutral</option><option>exhibit</option></select></label><label>Angle <select id="angle"></select></label><label>Elevation <select id="elevation"><option value="0">Default</option><option value="0.3">Elevated</option><option value="-0.3">Low</option></select></label><p>Identical camera, target, zoom, frame, light and browser environment. Native-size model captures include their own camera receipts; click for full size.</p><div class="pair"><section><h2>Before:358d checkpoint</h2><a id="before-link"><img id="before" alt="Preserved checkpoint at the selected camera"></a></section><section><h2>After:tab/sliver proposal</h2><a id="after-link"><img id="after" alt="Proposed correction at the same camera"></a></section></div><pre id="metadata"></pre><h2>Matched native Builder views</h2><p>CPU Cycles4samples,800-pixel diagnostics. Native/browser lighting differs; their pixels are not equivalent.</p><div class="pair"><section><h3>Native head before</h3><img src="__NATIVE_BEFORE__" alt="Native head before"></section><section><h3>Native head after</h3><img src="__NATIVE_AFTER__" alt="Native head after"></section></div><p>__NATIVE_LINKS__</p><script>const rows=__ROWS__;const $=id=>document.getElementById(id);function update(change=false){let full=$('view').value==='full';let angles=full?[0,45,90,135,180,225,270,315]:[0,90,180],previous=$('angle').value;if(change||!$('angle').options.length){$('angle').replaceChildren(...angles.map(v=>new Option(v+'°',v)));if(angles.includes(Number(previous)))$('angle').value=previous;}if(!full||$('angle').value!=='0')$('elevation').value='0';$('elevation').disabled=!full||$('angle').value!=='0';let found=rows.filter(r=>r.era===$('era').value&&r.view===$('view').value&&r.light===$('light').value&&r.angle===Number($('angle').value)&&r.elevation===Number($('elevation').value));for(let r of found){$(r.version).src=r.evidence;$(r.version+'-link').href=r.evidence;}$('metadata').textContent=JSON.stringify(found,null,2);}for(let id of ['era','light','angle','elevation'])$(id).onchange=()=>update();$('view').onchange=()=>update(true);update(true);</script></html>'''
+    if args.heading:
+        html = html.replace('MurderBird tab and sliver review', escape(args.heading))
+        html = html.replace('MurderBird: one tab and sliver correction', escape(args.heading))
+    if args.summary:
+        start = html.index('<p>Before is the preserved358d')
+        end = html.index('</p>', start) + 4
+        html = html[:start] + '<p>' + escape(args.summary) + '</p>' + html[end:]
+    if args.notice:
+        end = html.index('</h1>') + 5
+        html = html[:end] + '<p style="border:2px solid #dba56c;padding:12px"><strong>' + escape(args.notice) + '</strong></p>' + html[end:]
     html = html.replace('__ROWS__', json.dumps(rows)).replace('__NATIVE_BEFORE__', head['before']).replace('__NATIVE_AFTER__', head['after'])
     html = html.replace('__NATIVE_LINKS__', ' · '.join(f'<a href="{p[version]}">{p["view"]} {version}</a>' for p in native for version in ('before', 'after')))
     html = html.replace('href="postflight-preservation.json"', 'href="' + args.preservation + '"')
@@ -136,4 +147,7 @@ if __name__ == '__main__':
     parser.add_argument('--parity-prefix', default='parity')
     parser.add_argument('--native-folder', default='native-after')
     parser.add_argument('--preservation', default='postflight-preservation.json')
+    parser.add_argument('--heading', help='Plain-text checkpoint heading; historical default retained')
+    parser.add_argument('--summary', help='Plain-text description of this exact selected candidate')
+    parser.add_argument('--notice', help='Visible plain-text review disposition, separate from data gates')
     run(parser.parse_args())
