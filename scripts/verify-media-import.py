@@ -14,40 +14,9 @@ def digest(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--manifest', action='append', help='import manifest to check; repeat for multiple ledgers (default: discover provenance/*-import-*.json)')
-    args = parser.parse_args()
-    root = Path(__file__).resolve().parents[1]
-    manifests = [root / path for path in args.manifest] if args.manifest else sorted((root / 'provenance').glob('*-import-*.json'))
+def text_attribute_errors(root, manifest_files):
+    """Check arbitrary Git paths without requiring those names on this filesystem."""
     errors = []
-    if not manifests:
-        errors.append('No import manifests found')
-    manifest_files = []
-    total_entries = 0
-    verified_entries = 0
-    for manifest_path in manifests:
-        manifest = json.loads(manifest_path.read_text())
-        for item in manifest['files']:
-            total_entries += 1
-            relative = Path(item['destination'])
-            if relative.is_absolute() or '..' in relative.parts:
-                errors.append(f'Unsafe destination in {manifest_path.name}: {relative}')
-                continue
-            if item.get('type') == 'file':
-                manifest_files.append(relative.as_posix())
-            path = root / relative
-            if item.get('type') == 'symlink':
-                valid = path.is_symlink() and str(path.readlink()) == item['target']
-            elif item.get('type') == 'directory':
-                valid = path.is_dir() and not path.is_symlink()
-            else:
-                valid = path.is_file() and not path.is_symlink() and path.stat().st_size == item['bytes'] and digest(path) == item['sha256']
-            if not valid:
-                errors.append(f'{manifest_path.name}: {relative}')
-            else:
-                verified_entries += 1
-
     # A regular input file avoids bidirectional pipe backpressure on large
     # inventories. Keep NUL delimiters so spaces and newlines stay in paths.
     with tempfile.TemporaryFile() as attribute_input:
@@ -71,6 +40,44 @@ def main():
                 path, attribute, value = (os.fsdecode(field) for field in fields[index:index + 3])
                 if attribute != 'text' or value != 'unset':
                     errors.append(f'Imported file must have Git text=unset: {path} ({attribute}={value})')
+    return errors
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest', action='append', help='import manifest to check; repeat for multiple ledgers (default: discover provenance/*-import-*.json)')
+    args = parser.parse_args()
+    root = Path(__file__).resolve().parents[1]
+    manifests = [root / path for path in args.manifest] if args.manifest else sorted((root / 'provenance').glob('*-import-*.json'))
+    errors = []
+    if not manifests:
+        errors.append('No import manifests found')
+    manifest_files = []
+    total_entries = 0
+    verified_entries = 0
+    for manifest_path in manifests:
+        manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+        for item in manifest['files']:
+            total_entries += 1
+            relative = Path(item['destination'])
+            if relative.is_absolute() or '..' in relative.parts:
+                errors.append(f'Unsafe destination in {manifest_path.name}: {relative}')
+                continue
+            if item.get('type') == 'file':
+                manifest_files.append(relative.as_posix())
+            path = root / relative
+            if item.get('type') == 'symlink':
+                valid = path.is_symlink() and str(path.readlink()) == item['target']
+            elif item.get('type') == 'directory':
+                valid = path.is_dir() and not path.is_symlink()
+            else:
+                valid = path.is_file() and not path.is_symlink() and path.stat().st_size == item['bytes'] and digest(path) == item['sha256']
+            if not valid:
+                errors.append(f'{manifest_path.name}: {relative}')
+            else:
+                verified_entries += 1
+
+    errors.extend(text_attribute_errors(root, manifest_files))
 
     print(json.dumps({'verified_entries': verified_entries, 'total_entries': total_entries, 'manifests': [path.relative_to(root).as_posix() for path in manifests], 'errors': errors}, indent=2))
     raise SystemExit(bool(errors))

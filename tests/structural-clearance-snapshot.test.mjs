@@ -118,9 +118,19 @@ test('private output refuses overwrite, archives, publication paths, traversal a
     '.local/../../escape.json', '.local/new.json']) {
     await assert.rejects(writePrivateReceipt(root, path, {}));
   }
-  await symlink(join(root, '.local', 'diagnostics'), join(root, '.local', 'link'));
+  // A Windows directory junction exercises the same real-directory guard
+  // without requiring permission to create a file symbolic link.
+  const directoryLinkType = process.platform === 'win32' ? 'junction' : 'dir';
+  await symlink(join(root, '.local', 'diagnostics'), join(root, '.local', 'link'), directoryLinkType);
   await assert.rejects(writePrivateReceipt(root, '.local/link/new.json', {}), /real directories/);
-  await symlink(join(root, 'target.json'), join(root, '.local', 'diagnostics', 'link.json'));
+  if (process.platform === 'win32') {
+    const leafTarget = join(root, 'receipt-target');
+    await mkdir(leafTarget);
+    await symlink(leafTarget,
+      join(root, '.local', 'diagnostics', 'link.json'), 'junction');
+  } else {
+    await symlink(join(root, 'target.json'), join(root, '.local', 'diagnostics', 'link.json'));
+  }
   await assert.rejects(writePrivateReceipt(root, '.local/diagnostics/link.json', {}), /EEXIST/);
   await writeFile(join(root, '.gitignore'), '');
   await assert.rejects(writePrivateReceipt(root, '.local/diagnostics/unignored.json', {}));
