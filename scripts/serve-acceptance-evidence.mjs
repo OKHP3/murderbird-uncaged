@@ -7,8 +7,9 @@ import { homedir } from 'node:os';
 
 const evidenceBase = resolve(homedir(), 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence/visual-technical-acceptance');
 const session = process.argv[2] ?? '';
-if (!['', 'connected-head-correction'].includes(session)) throw new Error('Unknown acceptance session');
-const root = resolve(evidenceBase, session);
+if (!['', 'connected-head-correction', 'optic-bill-refinement'].includes(session)) throw new Error('Unknown acceptance session');
+const root = resolve(evidenceBase, session === 'optic-bill-refinement'
+  ? 'connected-head-correction/optic-bill-refinement' : session);
 await mkdir(root, { recursive: true });
 const server = http.createServer(async (request, response) => {
   const origin = request.headers.origin;
@@ -19,10 +20,17 @@ const server = http.createServer(async (request, response) => {
     const baseline = /^\/exact-normal-candidate\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
     const corrected = session === 'connected-head-correction'
       && /^\/attempt-01\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
-    const candidate = baseline || corrected;
+    const refined = session === 'optic-bill-refinement'
+      && /^\/candidate\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
+    const checkpoint = session === 'optic-bill-refinement'
+      && /^\/checkpoint\/(maker|mechanic|builder)\/murderbird-recursive-\1\.glb$/.test(request.url ?? '');
+    const candidate = baseline || corrected || refined || checkpoint;
     if (request.url !== '/review.html' && !candidate) { response.writeHead(404).end(); return; }
     try {
-      const body = await readFile(resolve(baseline ? evidenceBase : root, request.url.slice(1)));
+      const file = checkpoint
+        ? resolve(evidenceBase, 'connected-head-correction/attempt-01', request.url.slice('/checkpoint/'.length))
+        : resolve(baseline ? evidenceBase : root, request.url.slice(1));
+      const body = await readFile(file);
       response.setHeader('Content-Type', candidate ? 'model/gltf-binary' : 'text/html; charset=utf-8');
       response.setHeader('Content-Length', body.length);
       response.end(body);
