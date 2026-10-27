@@ -8,7 +8,7 @@ Git LFS storage, download bandwidth, and successful publication are separate mea
 
 The helper enforces a 3,000,000,000-byte unique-object ceiling. Enlarging that ceiling requires reviewing the asset scope. It is not a retention policy: editable source masters and historical objects outside the CI set remain preserved.
 
-After hydration, the same workspace runs the existing builds, publication/theme/presentation/device verifiers and full test suite on Node 24 and Node 26 sequentially. The unchanged Python import verifier checks every recorded source entry. Pages receives the validated output from that job; it performs no second checkout or build. Superseded runs are cancelled.
+After hydration, the same workspace runs the existing builds, publication/theme/presentation/device verifiers and full test suite on Node 24 and Node 26 sequentially. The unchanged Python import verifier checks every recorded source entry. Pages receives the validated output from that job; it performs no second checkout or build. Superseded non-main runs are cancelled. Main runs serialize without cancelling an active run, preserving an approved cache fill; the activation plan below also requires a main-ref freeze and queue drain.
 
 ## Local development and synchronization
 
