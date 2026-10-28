@@ -161,6 +161,22 @@ async function safeLocal(root, relative) {
   }
   return current;
 }
+async function localCacheRoot(value) {
+  // Inspect the supplied path before resolving it: realpath alone would hide a
+  // junction/symlink. UNC shares are not an offline local source.
+  if (typeof value !== 'string' || !path.isAbsolute(value) || /^[\\/]{2}/.test(value)
+      || (process.platform === 'win32' && !/^[A-Za-z]:[\\/]/.test(value))
+      || value.includes('\0') || value.split(/[\\/]/).some(part => part === '.' || part === '..')) {
+    throw new Error('Cache source must be an absolute local directory without dot segments');
+  }
+  let current = path.parse(value).root;
+  for (const part of value.slice(current.length).split(/[\\/]/).filter(Boolean)) {
+    current = path.join(current, part);
+    const info = await lstat(current);
+    if (info.isSymbolicLink() || !info.isDirectory()) throw new Error(`Refusing non-directory or symlink cache source: ${current}`);
+  }
+  return realpath(current);
+}
 async function validatePayload(file, object) {
   let info;
   try { info = await lstat(file); } catch (error) { if (error.code === 'ENOENT') return 'missing'; throw error; }
@@ -180,7 +196,9 @@ export function validateDownloadApproval(plan, { expectedHead, expectedPlanKey, 
     throw new Error(`Download approval byte ceiling must cover ${plan.bytes} and not exceed ${MAX_BYTES}`);
   }
 }
-export async function hydrate(root, plan, { fetch = false, ...approval } = {}) {
+export async function hydrate(root, plan, { fetch = false, cacheSource, ...approval } = {}) {
+  if (fetch && cacheSource !== undefined) throw new Error('Cache source is offline-only and cannot be combined with fetch');
+  const externalCache = cacheSource === undefined ? null : await localCacheRoot(cacheSource);
   // Revalidate limits even for programmatic callers; CLI always regenerates its plan.
   plan = { ...plan, ...summarize(plan.files, { scope: plan.scope ?? 'ci' }) };
   if (!/^[a-f0-9]{40,64}$/.test(plan.head) || git(root, ['rev-parse', 'HEAD']).toString().trim() !== plan.head) throw new Error('Hydration plan must match current HEAD');
@@ -190,7 +208,7 @@ export async function hydrate(root, plan, { fetch = false, ...approval } = {}) {
   if (staged.length) throw new Error(`Refusing selected staged changes: ${staged.join(', ')}`);
   const common = await realpath(git(root, ['rev-parse', '--path-format=absolute', '--git-common-dir']).toString().trim());
   const cacheFile = object => safeLocal(common, `lfs/objects/${object.oid.slice(0, 2)}/${object.oid.slice(2, 4)}/${object.oid}`);
-  const pending = [], workingSources = new Map(), sources = new Map();
+  const pending = [], workingSources = new Map(), sources = new Map(), externalSources = new Set();
   for (const file of plan.files) {
     const target = await safeLocal(root, file.path);
     let info;
@@ -215,7 +233,15 @@ export async function hydrate(root, plan, { fetch = false, ...approval } = {}) {
     for (const object of plan.objects) {
       // Existing local/Replit payloads need neither a cache entry nor a download.
       if (workingSources.has(object.oid)) { sources.set(object.oid, workingSources.get(object.oid)); continue; }
-      const source = await cacheFile(object), reason = await validatePayload(source, object);
+      let source = await cacheFile(object), reason = await validatePayload(source, object);
+      // Only an absent local entry may use the explicit offline source. A
+      // corrupt existing cache must stay visible for a separate repair.
+      if (reason === 'missing' && externalCache) {
+        source = await safeLocal(externalCache, `${object.oid.slice(0, 2)}/${object.oid.slice(2, 4)}/${object.oid}`);
+        reason = await validatePayload(source, object);
+        if (!reason) externalSources.add(object.oid);
+        else reason = `external cache: ${reason}`;
+      }
       if (reason) issues.push({ ...object, reason });
       else sources.set(object.oid, source);
     }
@@ -259,16 +285,18 @@ export async function hydrate(root, plan, { fetch = false, ...approval } = {}) {
     git(root, [...clean, 'add', '--pathspec-from-file=-', '--pathspec-file-nul'], Buffer.from(names.map(name => `:(literal)${name}`).join('\0') + '\0'));
   }
   if (!git(root, ['ls-files', '--stage', '-z']).equals(indexBefore)) throw new Error('Index content changed during refresh');
-  return { scope: plan.scope, objects: plan.objectCount, bytes: plan.bytes, hydratedPaths: pending.length, alreadyHydratedPaths: plan.files.length - pending.length, workingTreeSourceObjects: workingSources.size };
+  return { scope: plan.scope, objects: plan.objectCount, bytes: plan.bytes, hydratedPaths: pending.length, alreadyHydratedPaths: plan.files.length - pending.length, workingTreeSourceObjects: workingSources.size, externalCacheSourceObjects: externalSources.size };
 }
 export async function main(args = process.argv.slice(2)) {
   const [command, ...options] = args;
   const approvalOptions = ['--expected-head=', '--expected-plan-key=', '--max-download-bytes='];
-  if (!['plan', 'hydrate'].includes(command) || options.some(o => !['--fetch', '--scope=ci', '--scope=build'].includes(o) && !approvalOptions.some(prefix => o.startsWith(prefix)))
-      || ['--scope=', ...approvalOptions].some(prefix => options.filter(o => o.startsWith(prefix)).length > 1)
-      || (command === 'plan' && options.some(o => o === '--fetch' || approvalOptions.some(prefix => o.startsWith(prefix))))
+  const cacheSource = options.find(o => o.startsWith('--cache-source='))?.slice('--cache-source='.length);
+  if (!['plan', 'hydrate'].includes(command) || options.some(o => !['--fetch', '--scope=ci', '--scope=build'].includes(o) && !['--cache-source=', ...approvalOptions].some(prefix => o.startsWith(prefix)))
+      || ['--scope=', '--cache-source=', ...approvalOptions].some(prefix => options.filter(o => o.startsWith(prefix)).length > 1)
+      || (cacheSource !== undefined && (!cacheSource || options.includes('--fetch') || !path.isAbsolute(cacheSource)))
+      || (command === 'plan' && options.some(o => o === '--fetch' || ['--cache-source=', ...approvalOptions].some(prefix => o.startsWith(prefix))))
       || (!options.includes('--fetch') && options.some(o => approvalOptions.some(prefix => o.startsWith(prefix))))) {
-    throw new Error('Usage: node scripts/ci-lfs-assets.mjs plan|hydrate [--scope=ci|--scope=build] [--fetch --expected-head=SHA --expected-plan-key=KEY --max-download-bytes=BYTES (hydrate only)]');
+    throw new Error('Usage: node scripts/ci-lfs-assets.mjs plan|hydrate [--scope=ci|--scope=build] [--cache-source=ABSOLUTE_LOCAL_OBJECTS_DIR | --fetch --expected-head=SHA --expected-plan-key=KEY --max-download-bytes=BYTES (hydrate only)]');
   }
   const scope = options.find(o => o.startsWith('--scope='))?.slice('--scope='.length) ?? 'ci';
   const root = await realpath(git(process.cwd(), ['rev-parse', '--show-toplevel']).toString().trim());
@@ -279,7 +307,7 @@ export async function main(args = process.argv.slice(2)) {
   if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `cache-key=${plan.cacheKey}\nbytes=${plan.bytes}\nobjects=${plan.objectCount}\n`);
   const value = prefix => options.find(o => o.startsWith(prefix))?.slice(prefix.length);
   const ceiling = value('--max-download-bytes=');
-  const result = command === 'hydrate' ? await hydrate(root, plan, { fetch: options.includes('--fetch'),
+  const result = command === 'hydrate' ? await hydrate(root, plan, { fetch: options.includes('--fetch'), cacheSource,
     expectedHead: value('--expected-head='), expectedPlanKey: value('--expected-plan-key='),
     maxDownloadBytes: /^(0|[1-9][0-9]*)$/.test(ceiling ?? '') ? Number(ceiling) : NaN,
   }) : { head: plan.head, scope, objects: plan.objectCount, bytes: plan.bytes, paths: plan.files.length, cacheKey: plan.cacheKey };

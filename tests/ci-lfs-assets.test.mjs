@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
+import { mkdtemp, mkdir, writeFile, readFile, rm, stat, symlink, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -14,7 +14,9 @@ function git(root, args) {
   return execFileSync('git', ['-c', `core.hooksPath=${path.join(root, '.disabled-hooks')}`, '-c', 'filter.lfs.process=', '-c', 'filter.lfs.required=false', '-c', 'filter.lfs.clean=', '-c', 'core.autocrlf=false', '-c', 'user.name=CI LFS Test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', '-C', root, ...args], { encoding: 'utf8', env: { ...process.env, GIT_LFS_SKIP_SMUDGE: '1', GIT_TERMINAL_PROMPT: '0' }, stdio: ['pipe', 'pipe', 'pipe'] });
 }
 async function fixture(t) {
-  const root = await mkdtemp(path.join(tmpdir(), 'ci-lfs-assets-test-'));
+  // macOS exposes its temp directory through /var -> /private/var. Tests need
+  // the physical root; production intentionally refuses linked cache sources.
+  const root = await realpath(await mkdtemp(path.join(tmpdir(), 'ci-lfs-assets-test-')));
   t.after(() => rm(root, { recursive: true, force: true }));
   const put = async (name, bytes) => { await mkdir(path.dirname(path.join(root, name)), { recursive: true }); await writeFile(path.join(root, name), bytes); };
   const json = (name, object) => put(name, JSON.stringify(object));
@@ -34,6 +36,16 @@ async function fixture(t) {
   const cache = async (data, stored = data) => put(`.git/lfs/objects/${sha(data).slice(0, 2)}/${sha(data).slice(2, 4)}/${sha(data)}`, stored);
   const fillCache = async () => { await cache(bytes); await cache(testBytes); };
   return { root, put, json, bytes, testBytes, cache, fillCache };
+}
+const objectPath = (root, bytes) => path.join(root, sha(bytes).slice(0, 2), sha(bytes).slice(2, 4), sha(bytes));
+async function externalCache(f) {
+  const source = path.join(f.root, '.local', 'preserved-objects');
+  for (const bytes of [f.bytes, f.testBytes, Buffer.from('unselected archived data')]) {
+    const file = objectPath(source, bytes);
+    await mkdir(path.dirname(file), { recursive: true });
+    await writeFile(file, bytes);
+  }
+  return source;
 }
 
 test('pointer parsing rejects payloads, non-SHA256 pointers and unsafe sizes', () => {
@@ -223,4 +235,89 @@ test('selected staged edits fail before hydration and retain their exact index a
   assert.equal(git(f.root, ['ls-files', '--stage', '-z']), before);
   assert.equal((await readFile(path.join(f.root, 'assets/model.bin'))).toString(), edited);
   assert.equal((await readFile(path.join(f.root, 'assets/model-copy.bin'))).toString(), pointer(f.bytes));
+});
+
+test('offline external cache hydrates only selected paths and preserves source files and unrelated staged work', async t => {
+  const f = await fixture(t), plan = await createPlan(f.root), source = await externalCache(f);
+  const archive = Buffer.from('unselected archived data');
+  const originalSources = await Promise.all([f.bytes, f.testBytes, archive].map(async bytes => ({
+    file: objectPath(source, bytes), bytes, modified: (await stat(objectPath(source, bytes))).mtimeMs,
+  })));
+  await f.put('public/readme.txt', 'owner staged work'); git(f.root, ['add', 'public/readme.txt']);
+  const before = git(f.root, ['ls-files', '--stage', '-z']);
+  assert.equal(git(f.root, ['remote']), '');
+  const result = await hydrate(f.root, plan, { cacheSource: source });
+  assert.equal(result.externalCacheSourceObjects, 2); assert.equal(result.hydratedPaths, 3);
+  for (const file of plan.files) assert.equal(sha(await readFile(path.join(f.root, file.path))), file.oid);
+  assert.equal((await readFile(path.join(f.root, 'assets/archive.bin'))).toString(), pointer(archive));
+  assert.equal(git(f.root, ['ls-files', '--stage', '-z']), before);
+  assert.equal(git(f.root, ['diff', '--cached', '--name-only']).trim(), 'public/readme.txt');
+  for (const original of originalSources) {
+    assert.deepEqual(await readFile(original.file), original.bytes);
+    assert.equal((await stat(original.file)).mtimeMs, original.modified);
+  }
+  await assert.rejects(readFile(objectPath(path.join(f.root, '.git/lfs/objects'), archive)), { code: 'ENOENT' });
+  assert.equal((await hydrate(f.root, plan, { cacheSource: source })).hydratedPaths, 0);
+});
+
+test('missing or corrupt external content fails complete preflight without changing any selected path or index', async t => {
+  for (const failure of ['missing', 'corrupt']) {
+    const f = await fixture(t), plan = await createPlan(f.root), source = await externalCache(f);
+    const last = plan.objects.at(-1), file = path.join(source, last.oid.slice(0, 2), last.oid.slice(2, 4), last.oid);
+    if (failure === 'missing') await rm(file); else await writeFile(file, Buffer.alloc(last.size, 0));
+    const before = git(f.root, ['ls-files', '--stage', '-z']);
+    await assert.rejects(hydrate(f.root, plan, { cacheSource: source }), /external cache: missing|external cache: SHA-256 mismatch/);
+    for (const asset of plan.files) assert.deepEqual(parsePointer(await readFile(path.join(f.root, asset.path))), { oid: asset.oid, size: asset.size });
+    assert.equal(git(f.root, ['ls-files', '--stage', '-z']), before);
+  }
+  const f = await fixture(t), source = await externalCache(f), nested = Buffer.from(pointer(f.bytes));
+  await f.put('assets/model.bin', pointer(nested));
+  const file = objectPath(source, nested); await mkdir(path.dirname(file), { recursive: true }); await writeFile(file, nested);
+  const plan = { head: git(f.root, ['rev-parse', 'HEAD']).trim(), ...summarize([{ path: 'assets/model.bin', oid: sha(nested), size: nested.length }]) };
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: source }), /LFS pointer instead of payload/);
+  assert.equal((await readFile(path.join(f.root, 'assets/model.bin'))).toString(), pointer(nested));
+});
+
+test('external source cannot mask corrupt local cache or overwrite selected owner edits', async t => {
+  const f = await fixture(t), plan = await createPlan(f.root), source = await externalCache(f);
+  await f.cache(f.bytes, Buffer.alloc(f.bytes.length, 0));
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: source }), /SHA-256 mismatch/);
+  assert.equal((await readFile(path.join(f.root, 'assets/model.bin'))).toString(), pointer(f.bytes));
+  await f.put('assets/model.bin', 'owner changed media');
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: source }), /Refusing edited non-pointer/);
+  assert.equal((await readFile(path.join(f.root, 'assets/model.bin'))).toString(), 'owner changed media');
+});
+
+test('external cache refuses relative, network, non-directory and linked source paths before hydration', async t => {
+  const f = await fixture(t), plan = await createPlan(f.root), source = await externalCache(f);
+  for (const invalid of ['', '.local/preserved-objects', '//server/share', '\\\\server\\share', path.join(source, sha(f.bytes).slice(0, 2), sha(f.bytes).slice(2, 4), sha(f.bytes)), source + '/../preserved-objects']) {
+    await assert.rejects(hydrate(f.root, plan, { cacheSource: invalid }), /absolute local directory|non-directory or symlink/);
+  }
+  if (process.platform === 'win32') await assert.rejects(hydrate(f.root, plan, { cacheSource: '\\drive-relative-cache' }), /absolute local directory/);
+  const linked = path.join(f.root, '.local', 'linked-objects');
+  await symlink(source, linked, process.platform === 'win32' ? 'junction' : 'dir');
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: linked }), /symlink cache source/);
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: path.join(linked, sha(f.bytes).slice(0, 2)) }), /symlink cache source/);
+  const nested = path.join(f.root, '.local', 'nested-source'); await mkdir(nested);
+  await symlink(path.join(source, sha(f.bytes).slice(0, 2)), path.join(nested, sha(f.bytes).slice(0, 2)), process.platform === 'win32' ? 'junction' : 'dir');
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: nested }), /Refusing symlink/);
+  await assert.rejects(hydrate(f.root, plan, { cacheSource: source, fetch: true }), /offline-only/);
+  assert.equal((await readFile(path.join(f.root, 'assets/model.bin'))).toString(), pointer(f.bytes));
+});
+
+test('CLI accepts one offline cache source and rejects conflicting, duplicate and malformed source options', async t => {
+  const f = await fixture(t), source = await externalCache(f);
+  const helper = fileURLToPath(new URL('../scripts/ci-lfs-assets.mjs', import.meta.url));
+  const sourceOption = `--cache-source=${source}`, before = git(f.root, ['ls-files', '--stage', '-z']);
+  for (const options of [['hydrate', '--cache-source='], ['hydrate', '--cache-source=relative'],
+    ['hydrate', sourceOption, sourceOption], ['hydrate', sourceOption, '--fetch'], ['plan', sourceOption],
+    ['hydrate', sourceOption, '--expected-head=invalid']]) {
+    const result = spawnSync(process.execPath, [helper, ...options], { cwd: f.root, encoding: 'utf8', windowsHide: true });
+    assert.equal(result.status, 1, result.stderr); assert.match(result.stderr, /Usage:/);
+  }
+  assert.equal(git(f.root, ['ls-files', '--stage', '-z']), before);
+  assert.equal((await readFile(path.join(f.root, 'assets/model.bin'))).toString(), pointer(f.bytes));
+  const result = spawnSync(process.execPath, [helper, 'hydrate', sourceOption], { cwd: f.root, encoding: 'utf8', windowsHide: true });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(JSON.parse(result.stdout).externalCacheSourceObjects, 2);
 });

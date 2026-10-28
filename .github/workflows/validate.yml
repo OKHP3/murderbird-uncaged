@@ -14,7 +14,7 @@ on:
         type: boolean
         default: false
       expected_revision:
-        description: 'Exact approved main commit SHA (required for a download)'
+        description: 'Exact approved main commit SHA (required for a download or publication)'
         type: string
         default: ''
       expected_lfs_plan_key:
@@ -41,6 +41,12 @@ jobs:
       contents: read
       actions: read
     steps:
+      - name: Check explicit publication approval
+        if: github.event_name == 'workflow_dispatch' && inputs.publish_pages
+        env:
+          EXPECTED_REVISION: ${{ inputs.expected_revision }}
+        run: |
+          test "$GITHUB_REF" = refs/heads/main && test "$EXPECTED_REVISION" = "$GITHUB_SHA" || { echo "::error::Publication requires the exact approved main revision."; exit 1; }
       - uses: actions/checkout@v7
         with:
           lfs: false
@@ -49,7 +55,7 @@ jobs:
           node-version: 24
           cache: npm
       - name: Test asset selection and missing-content safeguards
-        run: node --test tests/ci-lfs-assets.test.mjs
+        run: node --test tests/ci-lfs-assets.test.mjs tests/ci-workflow-gates.test.mjs
       - name: Plan assets required by the existing checks
         id: assets
         run: node scripts/ci-lfs-assets.mjs plan
@@ -113,7 +119,7 @@ jobs:
           node scripts/validate-device-performance-receipt.mjs
           node --test tests/*.test.mjs
       - name: Upload the validated Pages build
-        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.publish_pages && inputs.expected_revision == github.sha
         uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: dist
@@ -125,7 +131,7 @@ jobs:
         run: |
           echo "Required LFS plan: $REQUIRED_OBJECTS objects / $REQUIRED_BYTES declared bytes. This is not metered download usage." >> "$GITHUB_STEP_SUMMARY"
   deploy:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.publish_pages && inputs.expected_revision == github.sha
     needs: build
     runs-on: ubuntu-latest
     permissions:
