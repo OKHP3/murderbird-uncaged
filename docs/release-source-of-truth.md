@@ -12,6 +12,8 @@
 
 Local builds record whether tracked or untracked changes existed at build time. CI release builds must be clean. The manifest contains only public output paths and hashes, never local filesystem paths or archive inventories.
 
+The `Validate build` workflow now owns validation and the dependent Pages deployment. It hydrates the bounded required LFS set once, runs Node 24 and Node 26 in that workspace, and publishes its validated output. Normal runs require verified local/cache payloads; cold-cache fills require explicit dispatch after zero-spending enforcement and allowance are verified. See [bounded LFS downloads](lfs-downloads.md), including the main-only manual publication option. The older separate Pages build workflow is retired by this change.
+
 For local boundary checks, `scripts/verify-publication.mjs` reads the emitted manifest's current path inventory, verifies each listed file's byte count and hash, and checks the active exhibit model and three era previews against the current model inventory's recorded hashes. Historical review media is checked by its separate pinned inventory. The retired exterior-v1 validator's former fixed checkpoint count is not a current release requirement.
 
 ## October 4 retained CG assessment delivery
