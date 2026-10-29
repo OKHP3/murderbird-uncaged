@@ -25,6 +25,14 @@ on:
         description: 'Approved unique payload byte ceiling (required for a download)'
         type: string
         default: ''
+      verified_cache_limit_gb:
+        description: 'Owner-read repository cache limit, 1-10 GB; required if Actions token receives 403'
+        type: string
+        default: ''
+      cache_limit_checked_at:
+        description: 'UTC time of owner cache-limit read (ISO 8601 Z, within 30 minutes); required for 403'
+        type: string
+        default: ''
 permissions:
   contents: read
 concurrency:
@@ -55,7 +63,7 @@ jobs:
           node-version: 24
           cache: npm
       - name: Test asset selection and missing-content safeguards
-        run: node --test tests/ci-lfs-assets.test.mjs tests/ci-workflow-gates.test.mjs
+        run: node --test tests/ci-lfs-assets.test.mjs tests/ci-workflow-gates.test.mjs tests/ci-lfs-cache-capacity.test.mjs
       - name: Plan assets required by the existing checks
         id: assets
         run: node scripts/ci-lfs-assets.mjs plan
@@ -65,15 +73,19 @@ jobs:
         with:
           path: .git/lfs/objects
           key: lfs-objects-v1-${{ steps.assets.outputs.cache-key }}
+      - name: Inspect cache capacity with read-only Actions permission
+        if: (github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download) || steps.lfs-cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/ci-lfs-cache-capacity.mjs inspect "$RUNNER_TEMP/lfs-cache-capacity.json"
       - name: Verify free cache limit before an explicitly requested fill
         if: github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download
         env:
-          GH_TOKEN: ${{ github.token }}
           EXPECTED_REVISION: ${{ inputs.expected_revision }}
-        run: |
-          test "$GITHUB_REF" = refs/heads/main && test "$EXPECTED_REVISION" = "$GITHUB_SHA" || { echo "::error::A cache fill requires the exact approved main revision. No LFS download started."; exit 1; }
-          limit=$(gh api "repos/$GITHUB_REPOSITORY/actions/cache/storage-limit" --jq .max_cache_size_gb)
-          [[ "$limit" =~ ^([1-9]|10)$ ]] || { echo "::error::Cache limit is invalid or exceeds the free 10 GB ceiling. No LFS download started."; exit 1; }
+          REQUIRED_BYTES: ${{ steps.assets.outputs.bytes }}
+          VERIFIED_CACHE_LIMIT_GB: ${{ inputs.verified_cache_limit_gb }}
+          CACHE_LIMIT_CHECKED_AT: ${{ inputs.cache_limit_checked_at }}
+        run: node scripts/ci-lfs-cache-capacity.mjs verify "$RUNNER_TEMP/lfs-cache-capacity.json"
       - name: Hydrate verified required assets
         env:
           ALLOW_LFS_DOWNLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_lfs_download }}
