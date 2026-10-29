@@ -1,5 +1,6 @@
 import { readFile, readdir } from 'node:fs/promises';
-import { readFileSync } from 'node:fs';
+import { readFileSync, realpathSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { createHash } from 'node:crypto';
 import { isAbsolute, relative, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -9,6 +10,7 @@ const DEFAULT_TIMING_BASELINE = 'tests/fixtures/archived-browser-timing-baseline
 const DEFAULT_CAPTURE_CONDITIONS_BASELINE = 'tests/fixtures/archived-browser-capture-conditions-baseline.json';
 const DEFAULT_AUDIT_DIRECTORY = 'assets/audit';
 const PROJECT_ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const PROJECT_EVIDENCE_ROOT = resolve(homedir(), 'OKH-Local/01_ChatGPT_Exports/murderbird-uncaged/evidence');
 const ASUS_RUN_EVIDENCE_SCHEMA = 'asus-browser-run/v1';
 const UNMEASURED_STATUSES = new Set([
   'PROPOSED',
@@ -451,7 +453,27 @@ function validateWorkloadConditions(record, label) {
   return errors;
 }
 
-function validateAsusRunEvidence(record, label) {
+export function resolveAsusRunEvidence(evidencePath, evidenceRoot = PROJECT_EVIDENCE_ROOT) {
+  if (typeof evidencePath !== 'string' || !evidencePath.endsWith('.json')) {
+    throw new Error('rawRunEvidence must reference a JSON file.');
+  }
+  const external = evidencePath.startsWith('project-evidence:');
+  const path = external ? evidencePath.slice('project-evidence:'.length) : evidencePath;
+  // Keep references portable and forbid alternate drive, UNC and traversal forms.
+  if (!path || path.includes('\\') || path.includes(':') || isAbsolute(path)
+    || path.split('/').some(part => !part || part === '.' || part === '..')) {
+    throw new Error('rawRunEvidence must stay inside the repository or approved project evidence home.');
+  }
+  const root = realpathSync(external ? evidenceRoot : PROJECT_ROOT);
+  const resolvedPath = realpathSync(resolve(root, path));
+  const within = relative(root, resolvedPath);
+  if (within.startsWith('..') || isAbsolute(within)) {
+    throw new Error('rawRunEvidence must stay inside the repository or approved project evidence home, including symlinks.');
+  }
+  return resolvedPath;
+}
+
+function validateAsusRunEvidence(record, label, evidenceRoot) {
   const errors = [];
   const evidencePath = record.rawRunEvidence;
   const evidenceReferences = typeof record.evidence === 'string'
@@ -464,18 +486,9 @@ function validateAsusRunEvidence(record, label) {
   if (!evidenceReferences.includes(evidencePath)) {
     errors.push(`${label}: rawRunEvidence must also appear in the evidence references.`);
   }
-  if (!evidencePath.endsWith('.json') || isAbsolute(evidencePath)) {
-    return [...errors, `${label}: rawRunEvidence must be a repository-relative JSON path.`];
-  }
-
-  const resolvedPath = resolve(PROJECT_ROOT, evidencePath);
-  const projectRelativePath = relative(PROJECT_ROOT, resolvedPath);
-  if (projectRelativePath.startsWith('..') || isAbsolute(projectRelativePath)) {
-    return [...errors, `${label}: rawRunEvidence must stay inside the repository.`];
-  }
-
   let capture;
   try {
+    const resolvedPath = resolveAsusRunEvidence(evidencePath, evidenceRoot);
     capture = JSON.parse(readFileSync(resolvedPath, 'utf8'));
   } catch (error) {
     return [...errors, `${label}: rawRunEvidence could not be read as JSON (${error.message}).`];
@@ -659,7 +672,7 @@ function validateVerdictComparison(record, policy, label, status) {
  * Checks that ASUS performance claims are backed by verified, on-device evidence,
  * while keeping cloud/software and historical evidence explicitly ineligible.
  */
-export function validateDevicePerformanceReceipt(receipt) {
+export function validateDevicePerformanceReceipt(receipt, { evidenceRoot = PROJECT_EVIDENCE_ROOT } = {}) {
   const errors = [];
   if (!receipt || typeof receipt !== 'object' || Array.isArray(receipt)) {
     return ['Receipt must be a JSON object.'];
@@ -722,7 +735,7 @@ export function validateDevicePerformanceReceipt(receipt) {
     const hasMeasurement = hasActualMeasurementData(record);
     if (['MEASURED', 'PASS', 'FAIL'].includes(status) || hasMeasurement) {
       errors.push(...validateWorkloadConditions(record, label));
-      errors.push(...validateAsusRunEvidence(record, label));
+      errors.push(...validateAsusRunEvidence(record, label, evidenceRoot));
     }
     if (status === 'MEASURED' || status === 'PASS' || status === 'FAIL') {
       if (!hasMeasurement) {

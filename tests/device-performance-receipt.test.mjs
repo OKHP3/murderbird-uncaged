@@ -13,6 +13,7 @@ import {
   validateArchivedBrowserTimingMeasurements,
   validateBrowserTimingProvenance,
   validateDevicePerformanceReceipt,
+  resolveAsusRunEvidence,
 } from '../scripts/validate-device-performance-receipt.mjs';
 import {
   assertValidBrowserTimingReport,
@@ -73,6 +74,24 @@ function withMeasuredAsusResult(overrides = {}) {
     },
   });
 }
+
+test('ASUS evidence can remain in its approved project home without a repository copy', () => {
+  const evidenceRoot = fileURLToPath(new URL('./fixtures/', import.meta.url));
+  const reference = 'project-evidence:asus-browser-run-evidence.json';
+  const candidate = withMeasuredAsusResult({ rawRunEvidence: reference, evidence: [reference] });
+  assert.deepEqual(validateDevicePerformanceReceipt(candidate, { evidenceRoot }), []);
+  candidate.targetDevicePerformance.observedDurationSeconds = 121;
+  assert.match(validateDevicePerformanceReceipt(candidate, { evidenceRoot }).join('\n'),
+    /observedDurationSeconds does not match rawRunEvidence/);
+});
+
+test('project evidence rejects traversal, absolute paths, alternate drives and unknown schemes', () => {
+  for (const reference of [
+    'project-evidence:../outside.json', 'project-evidence:/outside.json',
+    'project-evidence:C:/outside.json', 'project-evidence:dir\\outside.json',
+    'project-evidence:./outside.json', 'file:outside.json', 'C:/outside.json',
+  ]) assert.throws(() => resolveAsusRunEvidence(reference), /rawRunEvidence/);
+});
 
 test('current receipt keeps unverified ASUS, cloud SwiftShader, and historical telemetry distinct', () => {
   assert.deepEqual(validateDevicePerformanceReceipt(receipt), []);
