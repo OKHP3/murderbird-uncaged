@@ -606,6 +606,53 @@ function measureSweptTriangleClearance(
   };
 }
 
+function deduplicateTrianglePairViolations(violations) {
+  const byTrianglePair = new Map();
+  for (const issue of violations) {
+    const identity = JSON.stringify([
+      issue.surfaces,
+      issue.closestTriangles,
+    ]);
+    const entries = byTrianglePair.get(identity) ?? [];
+    entries.push(issue);
+    byTrianglePair.set(identity, entries);
+  }
+
+  const merged = [];
+  for (const entries of byTrianglePair.values()) {
+    entries.sort((a, b) => a.timeIntervalSeconds[0] - b.timeIntervalSeconds[0]
+      || a.timeIntervalSeconds[1] - b.timeIntervalSeconds[1]);
+    for (const issue of entries) {
+      const previous = merged.at(-1);
+      const previousIdentity = previous && JSON.stringify([
+        previous.surfaces,
+        previous.closestTriangles,
+      ]);
+      const identity = JSON.stringify([issue.surfaces, issue.closestTriangles]);
+      if (previous && previousIdentity === identity
+          && issue.timeIntervalSeconds[0] <= previous.timeIntervalSeconds[1]) {
+        previous.timeIntervalSeconds[1] = Math.max(previous.timeIntervalSeconds[1], issue.timeIntervalSeconds[1]);
+        if (previous.intervalEvidence === 'sampled-contact-bracket'
+            || issue.intervalEvidence === 'sampled-contact-bracket') {
+          previous.intervalEvidence = 'sampled-contact-bracket';
+        } else if (previous.timeIntervalSeconds[1] > previous.timeIntervalSeconds[0]) {
+          previous.intervalEvidence = 'bounded-contact-span';
+        }
+        if (issue.minimumSeparationMeters < previous.minimumSeparationMeters) {
+          previous.minimumSeparationMeters = issue.minimumSeparationMeters;
+          previous.detectedAtSeconds = issue.detectedAtSeconds;
+        }
+      } else {
+        merged.push({ ...issue, timeIntervalSeconds: [...issue.timeIntervalSeconds] });
+      }
+    }
+  }
+
+  return merged.sort((a, b) => a.timeIntervalSeconds[0] - b.timeIntervalSeconds[0]
+    || a.closestTriangles[0].triangle - b.closestTriangles[0].triangle
+    || a.closestTriangles[1].triangle - b.closestTriangles[1].triangle);
+}
+
 /** Return every qualifying triangle pair at one pose; nearest-only API is unchanged. */
 export function measureSurfaceContacts(first, second, { minimumSeparationMeters = 0 } = {}) {
   if (!Number.isFinite(minimumSeparationMeters) || minimumSeparationMeters < 0) {
@@ -673,12 +720,11 @@ export function measureSweptSurfaceClearance(firstStart, firstEnd, secondStart, 
     if (!minimum || result.minimumSeparationMeters < minimum.minimumSeparationMeters) minimum = result;
     violations.push(...result.violations); uncertainties.push(...result.uncertainties);
   }
-  violations.sort((a,b) => a.timeIntervalSeconds[0]-b.timeIntervalSeconds[0]
-    || a.closestTriangles[0].triangle-b.closestTriangles[0].triangle
-    || a.closestTriangles[1].triangle-b.closestTriangles[1].triangle);
+  const uniqueViolations = deduplicateTrianglePairViolations(violations);
   return { firstSurface:firstStart.name, secondSurface:secondStart.name,
     minimumSeparationMeters:minimum.minimumSeparationMeters, minimumAtSeconds:minimum.minimumAtSeconds,
     closestTriangles:minimum.closestTriangles, evaluations,
-    status:violations.length ? 'violation' : uncertainties.length ? 'uncertain' : 'clear',
-    violation:violations[0] ?? null, violations, uncertain:uncertainties[0] ?? null, uncertainties };
+    status:uniqueViolations.length ? 'violation' : uncertainties.length ? 'uncertain' : 'clear',
+    violation:uniqueViolations[0] ?? null, violations:uniqueViolations,
+    uncertain:uncertainties[0] ?? null, uncertainties };
 }

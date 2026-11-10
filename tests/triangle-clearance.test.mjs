@@ -66,7 +66,17 @@ test('swept clearance reports every separate collision window with its surfaces 
 function surface(name,zs){const root=new THREE.Group();root.name=name;zs.forEach((z,i)=>{const x=i*2;const m=new THREE.Mesh(new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute([x,0,z,x+.2,0,z,x,.2,z],3)));m.name=name+'-'+i;root.add(m);});return buildTriangleSurface(root);}
 function sweep(a,b,threshold=.002){const obstacle=surface('obstacle',a.map(()=>0));return measureSweptSurfaceClearance(surface('moving',a),surface('moving',b),obstacle,obstacle,{minimumSeparationMeters:threshold});}
 
-test('both simultaneous contact pairs are reported',()=>{const r=sweep([-.5,-.5],[.5,.5]);assert.equal(new Set(r.violations.map(v=>JSON.stringify(v.closestTriangles))).size,2);});
+test('all simultaneous contact pairs retain their triangle identities and time context',()=>{
+ const r=sweep([-.5,-.5],[.5,.5]);
+ assert.equal(r.violations.length,2,'each simultaneous triangle-pair contact must appear exactly once');
+ assert.equal(r.violation,r.violations[0],'legacy first-violation access remains available');
+ assert.deepEqual(r.violations.map(v=>v.closestTriangles),[
+  [{mesh:'moving-0',triangle:0},{mesh:'obstacle-0',triangle:0}],
+  [{mesh:'moving-1',triangle:1},{mesh:'obstacle-1',triangle:1}],
+ ]);
+ assert.ok(r.violations.every(v=>v.timeIntervalSeconds[0]<=.5&&v.timeIntervalSeconds[1]>=.5
+  &&Number.isFinite(v.minimumSeparationMeters)));
+});
 test('middle contact is retained when endpoints and midpoint involve different pairs',()=>{const r=sweep([0,-.01,-.02],[.02,.01,0]);assert.ok(r.violations.some(v=>v.closestTriangles.some(t=>t.mesh==='moving-1')),'missing middle lane contact');});
 test('zero-clearance request cannot label an actual crossing clear',()=>{const r=sweep([-.5],[.5],0);assert.notEqual(r.status,'clear');});
 
@@ -83,7 +93,22 @@ test('contact enumeration visits split BVH leaves and preserves caller pair orde
 test('persistent contact cannot conceal a second transient contact',()=>{
  const r=sweep([0,-.5],[0,.5]);
  assert.equal(new Set(r.violations.map(v=>v.closestTriangles[0].mesh)).size,2);
+  assert.equal(r.violations.filter(v=>v.closestTriangles[0].mesh==='moving-0').length,1,
+   'subdivision repeats for a persistent contact must be collapsed');
  assert.ok(r.violations.some(v=>v.closestTriangles[0].mesh==='moving-0' && v.timeIntervalSeconds[0]===0 && v.timeIntervalSeconds[1]===1));
+});
+test('duplicate triangle identities do not duplicate swept contact reports',()=>{
+ const duplicateIdentity=(value)=>({...value,triangles:[...value.triangles,value.triangles[0]]});
+ const start=duplicateIdentity(surface('moving',[-.5]));
+ const end=duplicateIdentity(surface('moving',[.5]));
+ const obstacle=surface('obstacle',[0]);
+ const r=measureSweptSurfaceClearance(start,end,obstacle,obstacle,{minimumSeparationMeters:.002});
+ assert.equal(r.status,'violation');
+ assert.equal(r.violations.length,1);
+ assert.deepEqual(r.violations[0].closestTriangles,[
+  {mesh:'moving-0',triangle:0},{mesh:'obstacle-0',triangle:0},
+ ]);
+ assert.ok(r.violations[0].timeIntervalSeconds[0]<=.5&&r.violations[0].timeIntervalSeconds[1]>=.5);
 });
 test('separated windows do not acquire a broad interval over a known clear gap',()=>{
  const r=sweep([0,-.01,-.02],[.02,.01,0]);
