@@ -36,3 +36,30 @@ test('publication preflight rejects an unapproved revision before checkout', () 
   assert.match(block, /test "\$GITHUB_REF" = refs\/heads\/main && test "\$EXPECTED_REVISION" = "\$GITHUB_SHA"/);
   assert.match(block, /exit 1/);
 });
+
+test('cache admission precedes downloads and preserves read-only permissions and explicit fill gates', () => {
+  const inspect = workflow.indexOf('- name: Inspect cache capacity with read-only Actions permission');
+  const verify = workflow.indexOf('- name: Verify free cache limit before an explicitly requested fill');
+  const hydrate = workflow.indexOf('- name: Hydrate verified required assets');
+  assert.ok(inspect >= 0 && inspect < verify && verify < hydrate);
+  assert.match(workflow.slice(verify, hydrate), /if: github\.event_name == 'workflow_dispatch' && inputs\.allow_lfs_download/);
+  assert.match(workflow.slice(verify, hydrate), /ci-lfs-cache-capacity\.mjs verify/);
+  assert.match(workflow, /actions: read/);
+  assert.doesNotMatch(workflow, /actions: write|administration:|secrets\./);
+  assert.match(workflow, /verified_cache_limit_gb:[\s\S]*?default: ''/);
+  assert.match(workflow, /cache_limit_checked_at:[\s\S]*?default: ''/);
+});
+
+test('ordinary warm-cache runs skip capacity API reads while explicit fills inspect them', () => {
+  const gate = /- name: Inspect cache capacity with read-only Actions permission\r?\n\s+if: ([^\r\n]+)/.exec(workflow)?.[1];
+  assert.ok(gate);
+  const expression = gate.replaceAll('steps.lfs-cache.outputs.cache-hit', "steps['lfs-cache'].outputs['cache-hit']");
+  for (const event_name of ['push', 'pull_request', 'workflow_dispatch']) {
+    for (const allow_lfs_download of [false, true]) {
+      for (const hit of ['true', 'false', '']) {
+        const context = { github: { event_name }, inputs: { allow_lfs_download }, steps: { 'lfs-cache': { outputs: { 'cache-hit': hit } } } };
+        assert.equal(Boolean(runInNewContext(expression, context)), hit !== 'true' || (event_name === 'workflow_dispatch' && allow_lfs_download));
+      }
+    }
+  }
+});
