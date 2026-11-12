@@ -338,7 +338,7 @@ async function findBrowserValidationReports(directory) {
   return reports;
 }
 
-export async function validateArchivedBrowserTimingArchive({
+async function readArchivedBrowserTimingArchive({
   auditDirectory = resolve(DEFAULT_AUDIT_DIRECTORY),
   baselinePath = resolve(DEFAULT_TIMING_BASELINE),
   captureConditionsBaselinePath = resolve(DEFAULT_CAPTURE_CONDITIONS_BASELINE),
@@ -348,10 +348,76 @@ export async function validateArchivedBrowserTimingArchive({
     await readFile(captureConditionsBaselinePath, 'utf8'),
   );
   const archive = await findBrowserValidationReports(auditDirectory);
-  return [
-    ...validateArchivedBrowserTimingMeasurements(archive, baseline),
-    ...validateArchivedBrowserCaptureConditions(archive, captureConditionsBaseline),
-  ];
+  return {
+    archive,
+    errors: [
+      ...validateArchivedBrowserTimingMeasurements(archive, baseline),
+      ...validateArchivedBrowserCaptureConditions(archive, captureConditionsBaseline),
+    ],
+  };
+}
+
+export async function validateArchivedBrowserTimingArchive(options) {
+  return (await readArchivedBrowserTimingArchive(options)).errors;
+}
+
+const UNKNOWN_TIMING_CONTEXT = /^(?:UNKNOWN|NOT\s+(?:RECORDED|VERIFIED|AVAILABLE|RUN)|UNSPECIFIED|N\/A|NONE)(?:\b|$)/i;
+const hasBrowserVersion = (value) => typeof value === 'string' && /\d+(?:\.\d+)+/.test(value);
+const hasContextText = (value) => typeof value === 'string' && present(value);
+const hasViewport = (value) => Number.isFinite(value?.width) && value.width > 0
+  && Number.isFinite(value?.height) && value.height > 0;
+
+function describeArchivedTimingContext(receipt) {
+  const fields = {
+    browserVersion: hasBrowserVersion,
+    renderer: hasContextText,
+    viewport: hasViewport,
+    workload: hasContextText,
+  };
+  const counts = Object.fromEntries(Object.keys(fields).map(field => [field, { missing: 0, unknown: 0 }]));
+
+  function visit(value, inherited = {}, collection) {
+    if (!value || typeof value !== 'object') return;
+    if (Array.isArray(value)) {
+      for (const item of value) visit(item, inherited, collection);
+      return;
+    }
+
+    const browserVersion = hasBrowserVersion(value.browser) ? value.browser : inherited.browserVersion;
+    const workload = inherited.workload ?? (
+      collection === 'checkpoints' ? value.stage : collection === 'checks' ? value.name : undefined
+    );
+    const ownOr = (keys, fallback) => {
+      const key = keys.find(key => Object.hasOwn(value, key));
+      return key === undefined ? fallback : value[key];
+    };
+    const context = {
+      browserVersion: ownOr(['browserVersion'], browserVersion),
+      renderer: ownOr(['renderer'], getRenderer(value) ?? inherited.renderer),
+      viewport: ownOr(['viewportCssPixels', 'viewport'], inherited.viewport),
+      workload: ownOr(['representativeWorkload', 'workload', 'scenario'], workload),
+    };
+    if (Object.entries(value).some(([key, child]) => (
+      isArchivedBrowserTimingKey(key) && hasNumericTimingValue(child)
+    ))) {
+      for (const [field, validate] of Object.entries(fields)) {
+        const input = context[field];
+        if (input == null) {
+          counts[field].missing += 1;
+        } else if ((typeof input === 'string' && UNKNOWN_TIMING_CONTEXT.test(input.trim()))
+          || !validate(input)) {
+          counts[field].unknown += 1;
+        }
+      }
+    }
+    for (const [key, child] of Object.entries(value)) visit(child, context, key);
+  }
+
+  visit(receipt);
+  return Object.entries(counts).flatMap(([field, statuses]) => (
+    Object.entries(statuses).filter(([, count]) => count > 0)
+      .map(([status, count]) => `${field} ${status} in ${count} timing record(s)`)
+  ));
 }
 
 /**
@@ -829,19 +895,23 @@ async function runCli() {
     process.exitCode = 1;
     return;
   }
-  let archiveErrors;
+  let archiveReview;
   try {
-    archiveErrors = await validateArchivedBrowserTimingArchive();
+    archiveReview = await readArchivedBrowserTimingArchive();
   } catch (error) {
     console.error(`FAIL archived browser run baseline: ${error.message}`);
     process.exitCode = 1;
     return;
   }
-  if (archiveErrors.length) {
+  if (archiveReview.errors.length) {
     console.error('FAIL archived browser timing and capture conditions');
-    for (const error of archiveErrors) console.error(`- ${error}`);
+    for (const error of archiveReview.errors) console.error(`- ${error}`);
     process.exitCode = 1;
     return;
+  }
+  for (const path of Object.keys(archiveReview.archive).sort()) {
+    const gaps = describeArchivedTimingContext(archiveReview.archive[path]);
+    if (gaps.length) console.warn(`WARN ${path}: archived timing context; ${gaps.join('; ')}.`);
   }
   console.log(`PASS ${receiptPath}: receipt evidence and archived browser timing and capture conditions are valid.`);
 }
