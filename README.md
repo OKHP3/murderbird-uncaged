@@ -2,6 +2,8 @@
 
 **Current shared goal:** read the root-level [goal.md](goal.md) before assigning, reviewing or starting work. Its YAML front matter records `last_updated`; use GitHub `main` for the latest shared revision. Cross-system review and commentary: [issue #14](https://github.com/OKHP3/murderbird-uncaged/issues/14).
 
+> **Status (November 13, 2026): complete as a study, frozen at v1.0.** The exhibit, story, song and sources are finished and preserved. Final character likeness was not achieved and is not claimed; that work is parked. See the [closeout receipt](docs/handoffs/project-closeout-2026-11-13.md).
+
 **One inherited body. Three eras. An interactive mechanical-creature exhibit.**
 
 ![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)
