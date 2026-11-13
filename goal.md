@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-10-23T16:05:45.017402+00:00"
+last_updated: "2026-11-13T23:30:00-06:00"
 timezone: "America/Chicago"
-status: "delegation-initial-tranche-verified"
+status: "closed-v1.0-likeness-parked-2026-11-13"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -16,6 +16,18 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## November 13 owner closeout: frozen at v1.0, likeness parked
+
+On November 13, 2026 the owner directed that every open MurderBird thread be driven "to solution, to completion, so that they are completely wrapped up and ready to be archived." This record applies that direction as the project's definition of done:
+
+- **Frozen at v1.0.** MurderBird: Uncaged is complete as a creative production and study: the deployed V37 interactive exhibit, the static CG assessment, the origin story, Iron Verdict v3 and the preserved model, motion and audit sources.
+- **Likeness parked, not accepted.** Whole-bird source likeness remains **UNMET** and owner artistic acceptance is **not given**. This closeout does not accept likeness, strict normals, engineering, animation or mechanics, and no worker, review or automated check may restate it as acceptance.
+- **Backlog retired.** The 62-task delegation series, the 21 unexecuted primary packets and Milestone 4 are **not pursued**. They stay preserved as the roadmap for any future, separately authorized likeness project, which should start from the November 12 VFX hero-asset critique (silhouette first; shingle-layered breast; detail in maps, not modeled parts) instead of resuming this track.
+- **No new agent work.** No new branches, pull requests or worker threads after this record without a fresh, explicit owner authorization naming scope, budget and stop rule.
+- **Publication unchanged.** The live Pages build (revision `914956e`) is not republished by this closeout. The eight later `main` commits are CI and LFS plumbing. The repository's LFS budget is currently exhausted, so the cold-cache CI guard fails by design; no paid allowance is authorized here.
+
+Closeout receipt: [docs/handoffs/project-closeout-2026-11-13.md](docs/handoffs/project-closeout-2026-11-13.md). The "Track completion" rule below is superseded by this record: the track closes by owner direction without artistic acceptance.
 
 ## October 23 owner exception — prototype production closeout
 

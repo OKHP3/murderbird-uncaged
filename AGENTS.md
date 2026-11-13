@@ -2,6 +2,8 @@
 
 **Current shared goal:** read the root-level [goal.md](goal.md) before assigning, reviewing or starting work. Its YAML front matter records `last_updated`; use GitHub `main` for the latest shared revision. Cross-system review and commentary: [issue #14](https://github.com/OKHP3/murderbird-uncaged/issues/14).
 
+**Project frozen (November 13, 2026).** MurderBird: Uncaged closed at v1.0 by owner direction, with likeness parked and not accepted. Do not open branches, pull requests or worker threads, and do not resume packets or milestones, without a new explicit owner authorization naming scope, budget and stop rule. See the closeout section at the top of [goal.md](goal.md).
+
 These instructions govern work in this repository only. They do not replace or modify OverKill Hill P³ universal governance. Read [the repository boundaries](docs/repository-boundaries.md), [the asset guide](assets/README.md), and [NOTICE.md](NOTICE.md) before migrating or publishing MurderBird material.
 
 ## Repository roles
