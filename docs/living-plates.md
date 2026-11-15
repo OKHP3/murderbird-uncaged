@@ -6,11 +6,14 @@ Added November 14, 2026 by owner direction, after the v1.0 closeout. Record: [pr
 
 `public/plates/` presents four pinned reference images as look-around plates: the canon bird and the Maker, Mechanic and Advanced era scenes. A visitor drags to shift the viewpoint about five degrees each way and the background slides behind the bird. A depth survey view draws the estimated depth as contour lines. Iron Verdict plays only when the visitor starts it.
 
+A tap on the plate, or the Provoke button, gets an answer in the manner of the era on show. The Maker's bird clacks once, as if a lever were pulled from outside. The Mechanic's bird slips three notches of its spring. The Advanced bird and the canon plate strike toward the visitor and the optic flares. The plate has no rig, so each answer is a camera move toward the head plus a short synthesized sound made in the browser at the moment of the tap. Visitors who ask for reduced motion get the status line, the flare and the sound without the camera move.
+
 At rest each plate is its reference image. Nothing was modeled. One monocular depth estimate per image lifts it into a front layer and a back layer.
 
 ## What it is not
 
 - It is not a 3D model. There is no orbit, no walk and no disassembly. The V37 exhibit keeps those.
+- The provoke reaction does not move the bird. No jaw opens and no limb swings; the camera moves and the optic glow changes.
 - It does not change the closeout status. Whole-bird likeness of the V37 and CG **models** stays **UNMET** and parked. The plates sidestep that question by showing the reference art itself.
 - Background revealed behind a moving edge is mirrored from nearby texture. It is plausible, not recovered.
 - The canon plate uses candidate 03, the higher-resolution sibling of the locked September 22 composite. The locked composite still controls full-bird canon.
@@ -56,4 +59,4 @@ The reference images must be hydrated from Git LFS first. Depth inference is not
 
 ## Verification status
 
-Checked in headless Chromium with software rendering at phone and desktop sizes: all four plates, era switching, the depth survey and capture mode, with no script errors. Frame rate on real hardware was not measured. The Node test suite gives the same result before and after this change on an LFS-pointer checkout: 141 pass and 9 fail, the 9 needing hydrated model payloads. The CI asset plan is unchanged at 499 objects. `npm run build` and the publication verifiers were not run, because the authoring environment held LFS pointers only. No existing build input, verifier or test was modified; tracked files under `public/` are admitted by `scripts/verify-publication.mjs` as they are.
+Checked in headless Chromium with software rendering at phone and desktop sizes: all four plates, era switching, the depth survey, capture mode and the provoke reaction on each plate, with no script errors. Frame rate on real hardware was not measured, and the reaction sounds were not auditioned on real hardware. The Node test suite gives the same result before and after this change on an LFS-pointer checkout: 141 pass and 9 fail, the 9 needing hydrated model payloads. The CI asset plan is unchanged at 499 objects. `npm run build` and the publication verifiers were not run, because the authoring environment held LFS pointers only. No existing build input, verifier or test was modified; tracked files under `public/` are admitted by `scripts/verify-publication.mjs` as they are.

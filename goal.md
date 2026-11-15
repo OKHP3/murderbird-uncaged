@@ -1,6 +1,6 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-11-14T19:30:00-06:00"
+last_updated: "2026-11-15T01:40:00-06:00"
 timezone: "America/Chicago"
 status: "closed-v1.0-likeness-parked-2026-11-13; living-plates-added-2026-11-14"
 canonical_path: "goal.md"
@@ -19,7 +19,7 @@ Read the current goal before assigning or starting work. Systems can fetch GitHu
 
 ## November 14 owner authorization: Living Plates
 
-After the closeout below, the owner gave a fresh, explicit authorization for one different-method attempt, on November 14: **"Let's attempt option B. However, this time I'm going to drop the leash and let you, solve it."** On November 15 the owner reviewed the result and directed: **"All of this needs to be pushed to production into the main origin GitHub."**
+After the closeout below, the owner gave a fresh, explicit authorization for one different-method attempt, on November 14: **"Let's attempt option B. However, this time I'm going to drop the leash and let you, solve it."** On November 15 the owner reviewed the result and directed: **"All of this needs to be pushed to production into the main origin GitHub."** The same message asked to **"Finalize the song, the interactive robot, the videos."** Under it the plates gained a tap-to-provoke reaction on November 15. Iron Verdict v3 was already accepted and final, and is unchanged. Promotional clips are kept outside tracked files.
 
 - **Scope.** `public/plates/`: the four pinned reference images shown as look-around plates, with its authoring script, provenance record and a no-LFS overlay publication path. Nothing in the V37 exhibit, the CG assessment, the folio or their sources changes.
 - **Status it does not change.** Model likeness stays **UNMET** and parked exactly as recorded below. The plates show the reference art itself; they are not a model and are not artistic acceptance of one.

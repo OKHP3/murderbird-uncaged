@@ -119,15 +119,19 @@
     },
     {
       "path": "public/plates/index.html",
-      "bytes": 27571,
-      "sha256": "2006a5a3d7e4cc71a392a8a0f1f7916009df69ff67ff02882d1aeab8917332c4"
+      "bytes": 32982,
+      "sha256": "e72b08141aa0225465114873a0b6f60550146d10c227f17f469463197763d70b"
     }
   ],
   "verification": {
-    "local": "Headless Chromium (software GL) at 390x844 and 1360x820: all four plates load, era switching, depth survey and capture mode run with no script errors. Real-GPU frame rate not measured.",
+    "local": "Headless Chromium (software GL) at 360x700, 390x844, 1000x640 and 1280x800: all four plates load, era switching, depth survey, capture mode and the tap-to-provoke reaction on each plate run with no script errors. Real-GPU frame rate and the reaction sounds were not auditioned on real hardware.",
     "overlay": "scripts/assemble-plates-overlay.mjs read back all 154 live files (407,610,132 bytes) at base revision 914956e32b5496600652ed2406b8a80e0eb1f857 and matched every recorded SHA-256 before adding the plates.",
     "not_run": "npm run build and the publication verifiers were not run for this change: the authoring environment had Git LFS pointers only. No tracked build input, verifier or test was modified.",
     "tests": "node --test tests/*.test.mjs on LFS pointers: 141 pass, 9 fail, identical before and after this change (the 9 need hydrated model payloads). scripts/ci-lfs-assets.mjs plan is unchanged at 499 objects / 2,736,090,200 bytes."
   },
-  "rights": "MurderBird character, art, story and music: all rights reserved (NOTICE.md). Code: MIT."
+  "rights": "MurderBird character, art, story and music: all rights reserved (NOTICE.md). Code: MIT.",
+  "interaction": {
+    "added": "2026-11-15",
+    "provoke": "A tap on the plate, or the Provoke button, answers with a short camera move toward the head in each era's manner: one lever-pulled clack (Maker), three spring notches (Mechanic), a strike with an optic flare (Advanced and canon). Sounds are synthesized in the browser with Web Audio at the moment of the tap; no audio file is added. Reduced-motion visitors get the status line, optic flare and sound without the camera move."
+  }
 }

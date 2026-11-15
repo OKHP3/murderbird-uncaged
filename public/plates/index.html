@@ -72,6 +72,8 @@ body {
   color: var(--dust); pointer-events: none;
   text-shadow: 0 1px 2px #000;
 }
+#flare { position: absolute; inset: 0; pointer-events: none; opacity: 0; z-index: 1;
+  background: radial-gradient(ellipse at 50% 44%, rgba(255,138,43,0) 42%, rgba(255,96,20,0.42) 100%); }
 #fallback { position: absolute; inset: 0; display: none; place-items: center; padding: 24px; text-align: center; color: var(--dust); }
 #placard {
   min-width: 0; min-height: 0;
@@ -107,7 +109,7 @@ dl.spec dd { margin: 0; color: var(--bronze); overflow-wrap: anywhere; }
 dl.spec dd.optic-on::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 8px var(--ember); margin-right: 8px; vertical-align: 1px; }
 dl.spec dd.optic-off::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2a241d; border: 1px solid var(--dust); margin-right: 8px; vertical-align: 1px; }
 .tools { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
-.tools .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.tools .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .tools button {
   appearance: none; border: 1px solid var(--seam); background: #1c1712; color: var(--bronze);
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -121,6 +123,7 @@ dl.spec dd.optic-off::before { content: ""; display: inline-block; width: 8px; h
 #slate { display: none; }
 body.capture { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
 body.capture #placard, body.capture #status { display: none; }
+body.capture #flare { z-index: 3; }
 body.capture #slate { display: block; position: absolute; inset: 0; pointer-events: none; z-index: 2; padding: 44px 48px; }
 body.capture #slate .b { font-family: var(--display); font-weight: 700; font-size: 36px; letter-spacing: 0.05em; text-transform: uppercase; color: #efe2c4; text-shadow: 0 2px 14px rgba(0,0,0,0.85); }
 body.capture #slate .f { position: absolute; left: 48px; right: 48px; bottom: 52px; text-shadow: 0 2px 16px rgba(0,0,0,0.9); }
@@ -132,7 +135,8 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
   #placard { border-left: 0; border-top: 1px solid var(--seam); padding: 12px 16px 12px; gap: 9px; }
   .method { display: none; }
   .method.rights { display: block; font-size: 11px; }
-  .tools button { padding: 8px 10px; }
+  .tools .row { grid-template-columns: repeat(4, auto); gap: 6px; }
+  .tools button { padding: 8px 6px; font-size: 10.5px; letter-spacing: 0.05em; }
   .eras button { padding: 6px 4px 6px; }
   .eras button i { font-size: 17px; }
   .brand b { font-size: 21px; }
@@ -145,9 +149,10 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
 </style>
 </head>
 <body>
-<main id="stage" aria-label="Interactive plate. Drag to look around.">
+<main id="stage" aria-label="Interactive plate. Drag to look around. Tap to provoke the bird.">
   <canvas id="gl"></canvas>
-  <div id="status">Loading plate</div>
+  <div id="flare" aria-hidden="true"></div>
+  <div id="status" role="status">Loading plate</div>
   <div id="slate" aria-hidden="true"><div class="b">MurderBird: Uncaged</div><div class="f"><div class="k" id="slate-k"></div><div class="t" id="slate-t"></div></div></div>
   <div id="fallback">This plate needs WebGL, which this browser has turned off.</div>
 </main>
@@ -174,6 +179,7 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
       <button type="button" id="themeBtn" aria-pressed="false">Play theme</button>
       <button type="button" id="depthBtn" aria-pressed="false">Depth survey</button>
       <button type="button" id="restBtn">Rest</button>
+      <button type="button" id="provokeBtn">Provoke</button>
     </div>
     <audio id="theme" preload="none" src="../audio/iron-verdict-v3/full-song.mp3"></audio>
     <nav class="links" aria-label="More MurderBird">
@@ -182,7 +188,7 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
       <a href="../audio/iron-verdict-v3/lyrics.txt">Iron Verdict lyrics</a>
       <a href="https://overkillhill.com/writings/murderbird/">Origin story</a>
     </nav>
-    <p class="method">Drag the plate to look around it. At rest the view is the reference image. Depth comes from one monocular estimate per plate, split into a front and a back layer so the background can slide behind the bird. Iron Verdict is a synthesized sung performance and plays only when you start it.</p>
+    <p class="method">Drag the plate to look around it, or tap it and each era answers the only way it can: a pulled lever, a slipped spring, a choice. At rest the view is the reference image. Depth comes from one monocular estimate per plate, split into a front and a back layer so the background can slide behind the bird. Iron Verdict is a synthesized sung performance and plays only when you start it.</p>
     <p class="method rights">Created and directed by Jamie Hill / OverKill Hill P&sup3;. MurderBird character, art, story and music: all rights reserved.</p>
   </div>
 </aside>
@@ -193,25 +199,25 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
   "use strict";
   var SCENES = {
     canon: {
-      file: "canon", focus: [0.615, 0.47], eye: [0.7161, 0.1332, 0.03],
+      file: "canon", focus: [0.615, 0.47], eye: [0.7161, 0.1332, 0.03], head: [0.70, 0.15], react: "strike", answer: "It noticed you.",
       kicker: "Reference plate", title: "The bird, as locked",
       body: "Hooked bill, swept crown, recessed optic, compact shield-wings. Nothing here was modeled. Every pixel is the reference art, and only the depth is estimated.",
       move: "One inherited body across three eras", optic: true, plate: "candidate 03, the sharper sibling of the locked canon · sha256 538c51bc"
     },
     maker: {
-      file: "maker", focus: [0.60, 0.47], eye: null,
+      file: "maker", focus: [0.60, 0.47], eye: null, head: [0.49, 0.15], react: "clack", answer: "A lever is pulled. The jaw answers.",
       kicker: "Era I · Bronze Age", title: "Newly made",
       body: "Fresh bronze in a courtyard, before anything inside it could move on its own. The Maker works the legs, wings, tail, neck and jaw from outside, with levers, rods and lines.",
       move: "External controls only", optic: false, plate: "maker clean candidate · sha256 93966eb2"
     },
     mechanic: {
-      file: "mechanic", focus: [0.57, 0.52], eye: null,
+      file: "mechanic", focus: [0.57, 0.52], eye: null, head: [0.45, 0.27], react: "ratchet", answer: "The spring slips three notches.",
       kicker: "Era II · 1853 to 1873", title: "Dug up and braced",
       body: "Centuries later a mechanic opens the corroded body, finds worn bearing surfaces, and fits iron where bronze failed. A spring, reduction gears and a cam give it a slow walking routine.",
       move: "Wound spring, short steps, pauses", optic: false, plate: "mechanic candidate · sha256 0bd7c795"
     },
     advanced: {
-      file: "builder", focus: [0.52, 0.52], eye: [0.4648, 0.2501, 0.016],
+      file: "builder", focus: [0.52, 0.52], eye: [0.4648, 0.2501, 0.016], head: [0.4648, 0.2501], react: "strike", answer: "It chose to answer.",
       kicker: "Era III · 2025", title: "The first choice",
       body: "A sealed power core and a processing lattice go into the open chest. The bird begins to pace, to watch, and to decide. The optic wakes.",
       move: "Coordinated actuators and sensing", optic: true, plate: "heart candidate · sha256 9430f91e"
@@ -323,7 +329,7 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
         g.add(glow);
       }
       var zp = zAt(s.focus[0], s.focus[1]);
-      return { id: id, A: A, K: K, group: g, mats: [mBack, mFront], glow: glow, pivot: point(s.focus[0], s.focus[1], zp), focus: s.focus };
+      return { id: id, A: A, K: K, group: g, mats: [mBack, mFront], glow: glow, pivot: point(s.focus[0], s.focus[1], zp), focus: s.focus, head: point(s.head[0], s.head[1], zAt(s.head[0], s.head[1])), react: s.react, answer: s.answer };
     });
     return cache[id];
   }
@@ -344,25 +350,82 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
     camera.setViewOffset(fw, fh, ox, oy, w, h);
     camera.updateProjectionMatrix();
   }
+  // Provoke: the plate has no rig, so the answer is a camera move toward the head, in each era's own manner.
+  // Returns [dolly as a fraction of the distance to the head, shake 0..1, optic flare 0..1] at a seconds after the tap.
+  var strike = { at: -1e9 }, clock = 0, flareEl = document.getElementById("flare"), flareShown = 0, READY_TEXT = "Drag to look around. Tap to provoke.";
+  function ease(x) { x = Math.max(0, Math.min(1, x)); return x * x * (3 - 2 * x); }
+  function reaction(kind, a) {
+    if (a < 0 || a > 1.4) return [0, 0, 0];
+    if (kind === "clack") { // Maker: one pull on an outside lever
+      return [0.055 * (a < 0.06 ? a / 0.06 : 1 - ease((a - 0.06) / 0.5)), a < 0.06 ? 0 : 0.45 * Math.exp(-(a - 0.06) * 14), 0];
+    }
+    if (kind === "ratchet") { // Mechanic: the spring lets go in three notches, then is drawn back
+      var n = Math.min(3, Math.floor(a / 0.12) + 1), into = a - (n - 1) * 0.12;
+      var d = 0.03 * (n - 1 + Math.min(1, into / 0.035));
+      if (a > 0.62) d = 0.09 * (1 - ease((a - 0.62) / 0.6));
+      return [d, a < 0.4 ? 0.3 * Math.exp(-into * 26) : 0, 0];
+    }
+    // Awake optic: a held beat, a fast strike, a slow withdrawal
+    var dolly = a < 0.09 ? 0 : a < 0.17 ? 0.2 * (1 - Math.pow(1 - (a - 0.09) / 0.08, 3)) : a < 0.45 ? 0.2 : 0.2 * (1 - ease((a - 0.45) / 0.8));
+    return [dolly, a < 0.17 ? 0 : Math.exp(-(a - 0.17) * 8), a < 0.09 ? a / 0.09 * 0.35 : a < 0.17 ? 1 : Math.exp(-(a - 0.17) * 2.6)];
+  }
+  var actx = null;
+  function sound(kind) {
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+      actx = actx || new AC(); if (actx.state === "suspended") actx.resume();
+      var now = actx.currentTime, out = actx.createGain(); out.gain.value = 0.3; out.connect(actx.destination);
+      function ping(freq, at, len, gain) {
+        var o = actx.createOscillator(), g = actx.createGain(); o.type = "sine"; o.frequency.value = freq;
+        g.gain.setValueAtTime(gain, now + at); g.gain.exponentialRampToValueAtTime(0.0001, now + at + len);
+        o.connect(g); g.connect(out); o.start(now + at); o.stop(now + at + len + 0.02);
+      }
+      function click(at, len, freq, gain) {
+        var n = Math.floor(actx.sampleRate * len), buf = actx.createBuffer(1, n, actx.sampleRate), ch = buf.getChannelData(0), i;
+        for (i = 0; i < n; i++) ch[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 2);
+        var src = actx.createBufferSource(), f = actx.createBiquadFilter(), g = actx.createGain();
+        src.buffer = buf; f.type = "bandpass"; f.frequency.value = freq; f.Q.value = 1.1; g.gain.value = gain;
+        src.connect(f); f.connect(g); g.connect(out); src.start(now + at);
+      }
+      if (kind === "clack") { click(0.05, 0.07, 900, 1.0); ping(392, 0.05, 0.6, 0.22); ping(1017, 0.05, 0.35, 0.1); }
+      else if (kind === "ratchet") { click(0.0, 0.03, 2600, 0.8); click(0.12, 0.03, 2400, 0.8); click(0.24, 0.035, 2200, 0.9); ping(233, 0.24, 0.5, 0.16); }
+      else { click(0.15, 0.09, 1700, 1.0); ping(73, 0.15, 0.3, 0.6); ping(587, 0.16, 0.45, 0.14); ping(1480, 0.16, 0.3, 0.07); }
+    } catch (err) {}
+  }
+  var answerTimer = 0;
+  function provoke(silent) {
+    if (!current || clock - strike.at < 0.55) return;
+    strike.at = clock; lastTouch = performance.now();
+    if (!silent) sound(current.react);
+    statusEl.textContent = current.answer;
+    clearTimeout(answerTimer); answerTimer = setTimeout(function () { if (current) statusEl.textContent = READY_TEXT; }, 2600);
+  }
   var q = new THREE.Quaternion(), e = new THREE.Euler(0, 0, 0, "YXZ"), v = new THREE.Vector3();
   function frame(now) {
     requestAnimationFrame(frame);
     if (!current) return;
-    var t = (window.__time != null) ? window.__time : (now - t0) / 1000, idle = (now - lastTouch) > 3200 && !dragging && !reduced && !window.__hold;
+    var t = (window.__time != null) ? window.__time : (now - t0) / 1000; clock = t;
+    var a = t - strike.at, r = reaction(current.react, a), still = reduced ? 0 : 1;
+    var idle = (now - lastTouch) > 3200 && !dragging && !reduced && !window.__hold;
     if (idle) { view.tx = 0.62 * Math.sin(t * 0.42); view.ty = 0.3 * Math.sin(t * 0.27 + 1.3); }
     var k = dragging ? 0.35 : 0.06;
     view.x += (view.tx - view.x) * k; view.y += (view.ty - view.y) * k;
     survey += (surveyTarget - survey) * 0.12;
-    e.set(-view.y * PITCH, -view.x * YAW, 0); q.setFromEuler(e);
+    var sh = r[1] * still * 0.22;
+    e.set(-view.y * PITCH + sh * PITCH * Math.sin(a * 131 + 1), -view.x * YAW + sh * YAW * Math.sin(a * 97), 0); q.setFromEuler(e);
     v.copy(current.pivot).applyQuaternion(q);
     camera.position.copy(current.pivot).sub(v); camera.quaternion.copy(q);
+    if (r[0] && still) camera.position.lerp(current.head, r[0]);
     layout();
     current.mats[0].uniforms.uSurvey.value = current.mats[1].uniforms.uSurvey.value = survey;
     if (current.glow) {
       var p = 0.86 + 0.1 * Math.sin(t * 2.1) + 0.04 * Math.sin(t * 7.3);
       var sz = current.glow.userData.size * (reduced ? 1 : p);
-      current.glow.scale.set(sz, sz, 1); current.glow.material.opacity = 0.42 * (1 - survey);
+      sz *= 1 + 0.9 * r[2];
+      current.glow.scale.set(sz, sz, 1); current.glow.material.opacity = Math.min(1, 0.42 * (1 + 1.5 * r[2])) * (1 - survey);
     }
+    var fl = Math.round(r[2] * 0.85 * 100) / 100;
+    if (fl !== flareShown) { flareShown = fl; flareEl.style.opacity = fl; }
     renderer.render(scene3, camera);
   }
 
@@ -388,7 +451,7 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
         if (group) scene3.remove(group);
         current = sc; group = sc.group; scene3.add(group);
         layout(); canvas.classList.add("ready");
-        statusEl.textContent = "Drag to look around";
+        statusEl.textContent = READY_TEXT;
         try { if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + id); } catch (err) {}
         ORDER.forEach(function (o) { if (o !== id) build(o).catch(function () {}); });
       }, current ? 240 : 0);
@@ -397,17 +460,22 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
 
   stage.addEventListener("pointerdown", function (ev) {
     dragging = true; stage.classList.add("dragging"); lastTouch = performance.now();
-    dragStart = { px: ev.clientX, py: ev.clientY, x: view.tx, y: view.ty };
+    dragStart = { px: ev.clientX, py: ev.clientY, x: view.tx, y: view.ty, at: performance.now(), moved: 0 };
     try { stage.setPointerCapture(ev.pointerId); } catch (err) {}
   });
   stage.addEventListener("pointermove", function (ev) {
     if (!dragging) return; lastTouch = performance.now();
     var w = stage.clientWidth, h = stage.clientHeight;
+    dragStart.moved = Math.max(dragStart.moved, Math.abs(ev.clientX - dragStart.px) + Math.abs(ev.clientY - dragStart.py));
     view.tx = Math.max(-1, Math.min(1, dragStart.x + (ev.clientX - dragStart.px) / (w * 0.42)));
     view.ty = Math.max(-1, Math.min(1, dragStart.y + (ev.clientY - dragStart.py) / (h * 0.42)));
   });
   function endDrag() { dragging = false; stage.classList.remove("dragging"); lastTouch = performance.now(); }
-  stage.addEventListener("pointerup", endDrag); stage.addEventListener("pointercancel", endDrag);
+  stage.addEventListener("pointerup", function () {
+    var tap = dragging && dragStart && dragStart.moved < 8 && performance.now() - dragStart.at < 400;
+    endDrag(); if (tap) provoke(false);
+  });
+  stage.addEventListener("pointercancel", endDrag);
   window.addEventListener("keydown", function (ev) {
     var step = 0.25, used = true;
     if (ev.key === "ArrowLeft") view.tx = Math.max(-1, view.tx - step);
@@ -432,12 +500,14 @@ body.capture #stage::after { background: linear-gradient(180deg, rgba(5,4,3,0.5)
   theme.addEventListener("play", themeLabel); theme.addEventListener("pause", themeLabel); theme.addEventListener("ended", themeLabel);
   theme.addEventListener("error", function () { themeBtn.textContent = "Theme unavailable here"; themeBtn.disabled = true; });
   document.getElementById("restBtn").addEventListener("click", function () { view.tx = 0; view.ty = 0; lastTouch = performance.now() + 6000; });
+  document.getElementById("provokeBtn").addEventListener("click", function () { provoke(false); });
   window.addEventListener("resize", layout);
   window.addEventListener("hashchange", function () { var id = location.hash.slice(1); if (SCENES[id] && id !== wanted) show(id); });
 
   // test hook: hold a fixed view, used for screenshots
   window.__hold = false;
   window.__setView = function (x, y) { window.__hold = true; view.x = view.tx = x; view.y = view.ty = y; lastTouch = performance.now(); };
+  window.__strike = function () { provoke(true); };
   window.__isReady = function (id) { return !!current && current.id === id && canvas.classList.contains("ready"); };
 
   if (/[?&]capture\b/.test(location.search)) document.body.classList.add("capture");
