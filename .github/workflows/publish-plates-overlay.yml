@@ -1,0 +1,58 @@
+name: Publish Living Plates overlay
+# Adds public/plates/ to the already-published site without rebuilding it.
+# Every published file is read back from the live release manifest and verified,
+# so this path downloads nothing from Git LFS. Manual, exact-revision, main only.
+on:
+  workflow_dispatch:
+    inputs:
+      expected_revision:
+        description: 'Exact approved main commit SHA'
+        type: string
+        required: true
+      expected_base_revision:
+        description: 'Revision recorded in the live release.json'
+        type: string
+        default: '914956e32b5496600652ed2406b8a80e0eb1f857'
+permissions:
+  contents: read
+concurrency:
+  group: pages-overlay
+  cancel-in-progress: false
+env:
+  GIT_LFS_SKIP_SMUDGE: '1'
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check explicit publication approval
+        env:
+          EXPECTED_REVISION: ${{ inputs.expected_revision }}
+        run: |
+          test "$GITHUB_REF" = refs/heads/main && test "$EXPECTED_REVISION" = "$GITHUB_SHA" || { echo "::error::Publication requires the exact approved main revision."; exit 1; }
+      - uses: actions/checkout@v7
+        with:
+          lfs: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Assemble the verified base site with the plates overlay
+        env:
+          EXPECTED_BASE_REVISION: ${{ inputs.expected_base_revision }}
+        run: node scripts/assemble-plates-overlay.mjs https://okhp3.github.io/murderbird-uncaged "$EXPECTED_BASE_REVISION" overlay-site
+      - name: Upload the overlay Pages build
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: overlay-site
+  deploy:
+    needs: assemble
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1

@@ -1,0 +1,77 @@
+/**
+ * Assemble a Pages artifact that adds public/plates/ to the site that is already published,
+ * without rebuilding it. The published files are read back from the live release manifest and
+ * verified byte for byte, so this path needs no Git LFS download and cannot alter the exhibit.
+ *
+ * Usage: node scripts/assemble-plates-overlay.mjs <base-url> <expected-base-revision> <out-dir>
+ */
+import {createHash} from 'node:crypto';
+import {mkdir, readFile, readdir, writeFile} from 'node:fs/promises';
+import {dirname, join, posix} from 'node:path';
+
+const [baseArg, expectedBase, out] = process.argv.slice(2);
+if (!baseArg || !expectedBase || !out) throw new Error('Usage: assemble-plates-overlay.mjs <base-url> <expected-base-revision> <out-dir>');
+const base = baseArg.replace(/\/+$/, '');
+const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+const safe = path => /^[A-Za-z0-9][A-Za-z0-9_./-]*$/.test(path) && !path.split('/').includes('..') && posix.normalize(path) === path;
+
+async function get(path, attempt = 1) {
+  const response = await fetch(`${base}/${path}`, {redirect: 'error', cache: 'no-store'});
+  if (!response.ok) {
+    if (attempt < 3 && response.status >= 500) return get(path, attempt + 1);
+    throw new Error(`${path}: HTTP ${response.status}`);
+  }
+  return Buffer.from(await response.arrayBuffer());
+}
+
+const manifestBytes = await get('release.json');
+const manifest = JSON.parse(manifestBytes.toString('utf8'));
+if (manifest.revision !== expectedBase) throw new Error(`Live release is ${manifest.revision}, expected ${expectedBase}. Review the base before overlaying.`);
+if (manifest.workingTreeDirty) throw new Error('Live release was built from a modified tree.');
+if (!Array.isArray(manifest.files) || manifest.files.length === 0) throw new Error('Live release manifest lists no files.');
+
+const queue = [...manifest.files];
+let baseBytes = 0;
+async function worker() {
+  for (let item = queue.shift(); item; item = queue.shift()) {
+    if (!safe(item.path)) throw new Error(`Unsafe published path: ${item.path}`);
+    if (item.path === 'release.json' || item.path.startsWith('plates/')) throw new Error(`Base release already claims ${item.path}`);
+    const bytes = await get(item.path);
+    if (bytes.length !== item.bytes || sha(bytes) !== item.sha256) throw new Error(`Live file does not match its release record: ${item.path}`);
+    await mkdir(dirname(join(out, item.path)), {recursive: true});
+    await writeFile(join(out, item.path), bytes);
+    baseBytes += bytes.length;
+  }
+}
+await mkdir(out, {recursive: true});
+await Promise.all(Array.from({length: 6}, worker));
+await writeFile(join(out, 'release.json'), manifestBytes);
+
+async function walk(directory, prefix = '') {
+  const found = [];
+  for (const entry of (await readdir(directory, {withFileTypes: true})).sort((a, b) => a.name.localeCompare(b.name))) {
+    const relative = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) found.push(...await walk(join(directory, entry.name), relative));
+    else if (entry.isFile()) found.push(relative);
+    else throw new Error(`Refusing non-regular overlay entry: ${relative}`);
+  }
+  return found;
+}
+const overlay = [];
+for (const relative of await walk('public/plates')) {
+  if (!safe(relative) || /\.(?:blend|webm|zip|wav)$/i.test(relative)) throw new Error(`Unexpected overlay file: ${relative}`);
+  const bytes = await readFile(join('public/plates', relative));
+  if (bytes.subarray(0, 40).toString('latin1').startsWith('version https://git-lfs.github.com/spec/')) throw new Error(`Overlay file is a Git LFS pointer: ${relative}`);
+  await mkdir(dirname(join(out, 'plates', relative)), {recursive: true});
+  await writeFile(join(out, 'plates', relative), bytes);
+  overlay.push({path: `plates/${relative}`, bytes: bytes.length, sha256: sha(bytes)});
+}
+if (!overlay.some(file => file.path === 'plates/index.html')) throw new Error('public/plates/index.html is missing.');
+const record = {
+  note: 'Living Plates overlay. Every other file on this site is the unchanged base release named below, verified against release.json.',
+  baseRevision: manifest.revision,
+  overlayRevision: process.env.GITHUB_SHA || 'local',
+  files: overlay,
+};
+await writeFile(join(out, 'plates', 'overlay.json'), JSON.stringify(record, null, 2) + '\n');
+console.log(`Overlay assembled: ${manifest.files.length} base files (${baseBytes} bytes) verified at ${manifest.revision}; ${overlay.length} plate files added.`);

@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-11-13T23:30:00-06:00"
+last_updated: "2026-11-15T01:40:00-06:00"
 timezone: "America/Chicago"
-status: "closed-v1.0-likeness-parked-2026-11-13"
+status: "closed-v1.0-likeness-parked-2026-11-13; living-plates-added-2026-11-14"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -16,6 +16,17 @@ The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://
 Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## November 14 owner authorization: Living Plates
+
+After the closeout below, the owner gave a fresh, explicit authorization for one different-method attempt, on November 14: **"Let's attempt option B. However, this time I'm going to drop the leash and let you, solve it."** On November 15 the owner reviewed the result and directed: **"All of this needs to be pushed to production into the main origin GitHub."** The same message asked to **"Finalize the song, the interactive robot, the videos."** Under it the plates gained a tap-to-provoke reaction on November 15. Iron Verdict v3 was already accepted and final, and is unchanged. Promotional clips are kept outside tracked files.
+
+- **Scope.** `public/plates/`: the four pinned reference images shown as look-around plates, with its authoring script, provenance record and a no-LFS overlay publication path. Nothing in the V37 exhibit, the CG assessment, the folio or their sources changes.
+- **Status it does not change.** Model likeness stays **UNMET** and parked exactly as recorded below. The plates show the reference art itself; they are not a model and are not artistic acceptance of one.
+- **Budget and stop rule.** One change set. No Git LFS storage or download, no paid allowance, no new modeling series. Further work needs a new owner authorization.
+- **Publication.** Manual only, by the exact-revision overlay workflow or by any later standard publication.
+
+Record: [docs/living-plates.md](docs/living-plates.md) and [provenance/living-plates-2026-11-14.json](provenance/living-plates-2026-11-14.json).
 
 ## November 13 owner closeout: frozen at v1.0, likeness parked
 

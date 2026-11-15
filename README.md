@@ -4,6 +4,8 @@
 
 > **Status (November 13, 2026): complete as a study, frozen at v1.0.** The exhibit, story, song and sources are finished and preserved. Final character likeness was not achieved and is not claimed; that work is parked. See the [closeout receipt](docs/handoffs/project-closeout-2026-11-13.md).
 
+> **Added November 14, 2026: [Living Plates](docs/living-plates.md).** The pinned reference art as four look-around plates in `public/plates/`. It is the reference art with estimated depth, not a model, and it leaves the parked likeness status unchanged.
+
 **One inherited body. Three eras. An interactive mechanical-creature exhibit.**
 
 ![MurderBird: Uncaged — mechanical bird reference art, with the interactive exhibit labeled under assessment](public/social-preview.png)
@@ -44,6 +46,7 @@ Use these existing packages as the entry point; their source trees and filenames
 | CG Mechanic, retained04 | [Blender source](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/murderbird-recursive-mechanic.blend) | [GLB](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/murderbird-recursive-mechanic.glb), [native views and receipt](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/mechanic/) | Static assessment; no skins or animations. |
 | CG Advanced, retained04 (source folder: builder) | [Blender source](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/murderbird-recursive-builder.blend) | [GLB](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/murderbird-recursive-builder.glb), [native views and receipt](assets/audit/cg-recursive-three-loop01/loop03/delivery/retained04/builder/) | Static assessment; no skins or animations. |
 | V37 interactive exhibit | [Blender source](assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.blend) | [GLB](assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb), [era previews and package](assets/models/whole-character-v37/attempt-release02/), [release record](docs/production-v37.md) | Owner-authorized exhibit with kinematic movement, inspection, sound and illustrated fallbacks. |
+| Living Plates | Pinned reference images, unchanged | [Page and layers](public/plates/), [authoring script](scripts/build-living-plates.py), [record](provenance/living-plates-2026-11-14.json) | Reference art with estimated depth and a five-degree look-around. Not a model. |
 
 The [CG selection manifest](assets/review/cg-publication.json) and [V37 runtime manifest](assets/review/production-v37.json) pin the browser assets. The [CG import ledger](provenance/cg-production-import-2026-10-04.json) and [release handoff](docs/handoffs/cg-production-release-2026-10-04-01.md) retain source paths, hashes and delivery evidence. Native sources, packed textures, views and receipts remain in their established packages; public copies are generated only from explicit publication selections.
 
@@ -59,6 +62,8 @@ For story, artwork, audio and historical source packages, use the [media catalog
 - [Validated Pages deployment](https://github.com/OKHP3/murderbird-uncaged/actions/workflows/validate.yml)
 - [Live release manifest](https://okhp3.github.io/murderbird-uncaged/release.json): exact source revision and SHA-256 hashes for the published files.
 - [Release and reconciliation guide](docs/release-source-of-truth.md)
+
+While the LFS budget is exhausted, the manual [overlay publication](docs/living-plates.md#publishing-while-the-lfs-budget-is-exhausted) can add `public/plates/` to the live site without rebuilding it. It republishes every other file unchanged after verifying it against the live manifest.
 
 A local preview is a checkout, not a second authority. Replit is development preview only. Other machines and Replit must verify their own commit against `origin/main`; this repository does not imply that an inaccessible checkout is synchronized.
 
