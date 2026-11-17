@@ -46,7 +46,9 @@ The exhibit, folio, CG viewer and `release.json` are republished unchanged. The 
 
 To run it: Actions, **Publish Living Plates overlay**, Run workflow on `main`, paste the current `main` commit SHA as `expected_revision`.
 
-After an overlay publication the live site is the base release plus `plates/`. `release.json` still describes the base build only; `plates/overlay.json` describes the addition. A later standard publication replaces both with one ordinary build.
+The overlay also changes exactly three base files so visitors can reach the plates: `index.html` and `folio.html` gain a small inline script that adds a Living Plates link to the existing main navigation, and `sitemap.xml` gains the folio and plates entries. `scripts/plates-overlay-patch.mjs` holds the allowlist. Each patch inserts fixed text after one exact anchor, and the run stops if an anchor is missing or repeated or the route is already present. `plates/overlay.json` records each changed file under `patchedBaseFiles` with its base hash and its published size and hash. Every other base file stays byte-identical. The same link is part of the exhibit and folio navigation source, so a later standard build carries it without the patch.
+
+After an overlay publication the live site is the base release plus `plates/` and the three patched navigation files. `release.json` still describes the base build only; `plates/overlay.json` describes the addition. A later standard publication replaces both with one ordinary build.
 
 ## Rebuilding the layers
 
