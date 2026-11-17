@@ -30,7 +30,7 @@ This ledger checks every request that thread made against what now exists. It ad
 
 - Corrected the bill guidance in [project-closeout-2026-11-13.md](project-closeout-2026-11-13.md).
 - Paused Dependabot version-update PRs (`open-pull-requests-limit: 0`) on the frozen repository. Security alerts are unaffected. Dependency PR #95 (vite 8.3.8) is closed unmerged on the same grounds as #89.
-- Deleted the four remote branches already contained in `main`: `claude/living-plates-20261114`, `claude/v1-closeout-20261113`, `codex/lfs-cache-preflight-20261029` and `codex/lfs-download-repair-20261026`. Their commits stay reachable through `main` and the merged pull requests. Register item E11's local Mac branch and paused automation still need host access.
+- Four remote branches are fully contained in `main` and can be deleted: `claude/living-plates-20261114`, `claude/v1-closeout-20261113`, `codex/lfs-cache-preflight-20261029` and `codex/lfs-download-repair-20261026`. The assistant session that wrote this ledger could not delete branches (its write path refused ref deletion), so the owner removes them on GitHub's Branches page. Register item E11's local Mac branch and paused automation still need host access.
 - Register item E10 (links from the exhibit and folio to Living Plates, and sitemap entries) is handled in a separate pull request.
 
 ## Still open, and why
