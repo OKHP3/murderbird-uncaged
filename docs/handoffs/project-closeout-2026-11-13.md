@@ -17,7 +17,7 @@ Authority: owner direction of 2026-11-13 to drive every open MurderBird thread t
 
 ## What did not ship
 
-Whole-bird source likeness against the pinned references is **UNMET** and owner artistic acceptance is **not given**. The October 2 to November 12 reviews found the modeling effort had optimized for engineering and manufacturability rather than screen likeness. A future likeness effort should be a new, separately authorized project that starts from a VFX hero-asset approach: silhouette and proportion first (short, heavy neck; low head; short hooked bill), a shingle-layered breast over a dark under-body, and fine detail in normal and displacement maps instead of modeled parts.
+Whole-bird source likeness against the pinned references is **UNMET** and owner artistic acceptance is **not given**. The October 2 to November 12 reviews found the modeling effort had optimized for engineering and manufacturability rather than screen likeness. A future likeness effort should be a new, separately authorized project that starts from a VFX hero-asset approach: silhouette and proportion first (short, heavy neck; low head; a deep, strongly hooked bill matched to the pinned July head reference, which governs head identity; "short" described candidate 03 only and is not a head-canon rule), a shingle-layered breast over a dark under-body, and fine detail in normal and displacement maps instead of modeled parts.
 
 ## Repository state at closeout
 
