@@ -23,15 +23,16 @@ This ledger checks every request that thread made against what now exists. It ad
 |---|---|
 | Reorient from engineering accuracy to screen-quality VFX likeness | Done. Adopted as the October 1 operative mandate in [goal.md](../../goal.md). |
 | Write a redirection prompt for ChatGPT | Done. Its gates (same-camera comparisons, two-iteration stop, budget per milestone, visual-only acceptance) appear in the October milestone plan. |
-| Assess the project and plan a course to completion | Done November 11. Executed through other threads: v1.0 closeout and tag (November 13), Living Plates and v1.1.0 (November 14 and 15), the website project page update, and the November 16 Codex audit and execution register (E01 to E19, kept in the owner's Notion workspace). |
+| Assess the project and plan a course to completion | Assessment and plan done November 11 in this thread. The plan was executed in other threads: v1.0 closeout merge and tag (November 13; GitHub release published November 15), Living Plates and v1.1.0 (November 14 and 15), the website project page update, and the November 16 Codex audit and execution register (E01 to E19, kept in the owner's Notion workspace). |
 | End with archival of this thread and the project's other threads | Owner action. Threads are archived in each app. This ledger, the v1.0 closeout and the November 16 register are the records to keep. |
 
 ## Housekeeping done in this change
 
 - Corrected the bill guidance in [project-closeout-2026-11-13.md](project-closeout-2026-11-13.md).
 - Paused Dependabot version-update PRs (`open-pull-requests-limit: 0`) on the frozen repository. Security alerts are unaffected. Dependency PR #95 (vite 8.3.8) is closed unmerged on the same grounds as #89.
-- Four remote branches are fully contained in `main` and can be deleted: `claude/living-plates-20261114`, `claude/v1-closeout-20261113`, `codex/lfs-cache-preflight-20261029` and `codex/lfs-download-repair-20261026`. The assistant session that wrote this ledger could not delete branches (its write path refused ref deletion), so the owner removes them on GitHub's Branches page. Register item E11's local Mac branch and paused automation still need host access.
-- Register item E10 (links from the exhibit and folio to Living Plates, and sitemap entries) is handled in a separate pull request.
+- Eight remote branches are fully contained in `main` and can be deleted: `claude/living-plates-20261114`, `claude/v1-closeout-20261113`, `codex/lfs-cache-preflight-20261029`, `codex/lfs-download-repair-20261026`, plus this closeout's own `claude/critique-thread-closeout-20261117`, `claude/ledger-branch-fix-20261117`, `claude/e10-plates-navigation-20261117` and `claude/ledger-final-20261117`. The assistant session that wrote this ledger could not delete branches (its write path refused ref deletion), so the owner removes them on GitHub's Branches page. Register item E11's local Mac branch and paused automation still need host access.
+- Register item E10 is done and live. PR #98 added a Living Plates link to the exhibit and folio navigation and the folio and plates entries to the sitemap. The overlay workflow (run 44094659852, overlay revision `2c0603f7`) published it with the three patched base files recorded under `patchedBaseFiles` in `plates/overlay.json`. All other base files stayed byte-identical to `release.json`. Checked live in Chromium: one link in each nav, clicking it opens Living Plates, no page errors.
+- An independent read-only check verified every repository and live-site claim in this ledger before the final revision.
 
 ## Still open, and why
 
