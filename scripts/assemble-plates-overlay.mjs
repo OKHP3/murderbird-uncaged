@@ -1,13 +1,16 @@
 /**
  * Assemble a Pages artifact that adds public/plates/ to the site that is already published,
  * without rebuilding it. The published files are read back from the live release manifest and
- * verified byte for byte, so this path needs no Git LFS download and cannot alter the exhibit.
+ * verified byte for byte, so this path needs no Git LFS download. Only the allowlisted files in
+ * plates-overlay-patch.mjs (index.html, folio.html, sitemap.xml) change, each by one anchored
+ * insertion that links Living Plates; every other base file is republished unchanged.
  *
  * Usage: node scripts/assemble-plates-overlay.mjs <base-url> <expected-base-revision> <out-dir>
  */
 import {createHash} from 'node:crypto';
 import {mkdir, readFile, readdir, writeFile} from 'node:fs/promises';
 import {dirname, join, posix} from 'node:path';
+import {BASE_PATCHES, applyBasePatch} from './plates-overlay-patch.mjs';
 
 const [baseArg, expectedBase, out] = process.argv.slice(2);
 if (!baseArg || !expectedBase || !out) throw new Error('Usage: assemble-plates-overlay.mjs <base-url> <expected-base-revision> <out-dir>');
@@ -32,6 +35,7 @@ if (!Array.isArray(manifest.files) || manifest.files.length === 0) throw new Err
 
 const queue = [...manifest.files];
 let baseBytes = 0;
+const patchedBaseFiles = [];
 async function worker() {
   for (let item = queue.shift(); item; item = queue.shift()) {
     if (!safe(item.path)) throw new Error(`Unsafe published path: ${item.path}`);
@@ -39,13 +43,22 @@ async function worker() {
     const bytes = await get(item.path);
     if (bytes.length !== item.bytes || sha(bytes) !== item.sha256) throw new Error(`Live file does not match its release record: ${item.path}`);
     await mkdir(dirname(join(out, item.path)), {recursive: true});
-    await writeFile(join(out, item.path), bytes);
     baseBytes += bytes.length;
+    if (Object.hasOwn(BASE_PATCHES, item.path)) {
+      const patched = Buffer.from(applyBasePatch(item.path, bytes.toString('utf8')), 'utf8');
+      await writeFile(join(out, item.path), patched);
+      patchedBaseFiles.push({path: item.path, baseSha256: item.sha256, bytes: patched.length, sha256: sha(patched)});
+    } else {
+      await writeFile(join(out, item.path), bytes);
+    }
   }
 }
 await mkdir(out, {recursive: true});
 await Promise.all(Array.from({length: 6}, worker));
 await writeFile(join(out, 'release.json'), manifestBytes);
+const missingPatch = Object.keys(BASE_PATCHES).filter(path => !patchedBaseFiles.some(file => file.path === path));
+if (missingPatch.length) throw new Error(`Live release lacks allowlisted patch targets: ${missingPatch.join(', ')}`);
+patchedBaseFiles.sort((a, b) => a.path.localeCompare(b.path));
 
 async function walk(directory, prefix = '') {
   const found = [];
@@ -68,10 +81,11 @@ for (const relative of await walk('public/plates')) {
 }
 if (!overlay.some(file => file.path === 'plates/index.html')) throw new Error('public/plates/index.html is missing.');
 const record = {
-  note: 'Living Plates overlay. Every other file on this site is the unchanged base release named below, verified against release.json.',
+  note: 'Living Plates overlay. Every other file on this site is the unchanged base release named below, verified against release.json. patchedBaseFiles lists the only base files changed, each to add a route to Living Plates.',
   baseRevision: manifest.revision,
   overlayRevision: process.env.GITHUB_SHA || 'local',
   files: overlay,
+  patchedBaseFiles,
 };
 await writeFile(join(out, 'plates', 'overlay.json'), JSON.stringify(record, null, 2) + '\n');
-console.log(`Overlay assembled: ${manifest.files.length} base files (${baseBytes} bytes) verified at ${manifest.revision}; ${overlay.length} plate files added.`);
+console.log(`Overlay assembled: ${manifest.files.length} base files (${baseBytes} bytes) verified at ${manifest.revision}; ${patchedBaseFiles.length} base files patched; ${overlay.length} plate files added.`);
