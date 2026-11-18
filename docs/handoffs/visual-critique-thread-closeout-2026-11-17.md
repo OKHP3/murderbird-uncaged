@@ -42,7 +42,7 @@ Each item needs owner access or owner judgment. None of them blocks archiving th
 |---|---|
 | Independent backup of the local mirror and private production (E07) | Destination found November 17: gjs-laptop's drive has 398 GB free and already holds a clean clone with about 9 GB of the 45 GB LFS set. The copy itself has to run from the Mac, which holds the full mirror and private production. |
 | Replit checkout state (E09) | Authenticated workspace |
-| Native Blender editability and strict normal replay (E04, E15) | A desktop Blender session |
+| Strict normal parity (E15) | Diagnosed November 17; the FAIL is kept. See below. Owner choice: accept it as a documented export artifact or re-export in a future scope. |
 | Human device, listening and screen-reader checks (E12) | A person and hardware |
 | TRELLIS result recovery (E13), promo reel disposition (E14), CRT source attachments (E18) | Original sessions and an editorial call |
 | Full standard Pages republish | LFS budget restored. The live base stays `914956e` with the Living Plates overlay. |
@@ -59,3 +59,13 @@ The owner linked gjs-laptop (Windows, the ASUS clone) to this session on Novembe
 - The remote-only PR heads were inspected on GitHub. `codex/foot-motion-png-evidence-validator` (#91), `codex/simultaneous-contact-report-dedup` (#90), `codex/archived-timing-diagnostics` (#92), `codex/mac-completion-coordination-20261026` and `codex/pr84-windows-followup` (#84) and `codex/asus-visual-technical-acceptance` (#83) are each 1 to 9 commits ahead of their base. All of those PRs were closed unmerged at the November 13 freeze, and the branches are kept as the record.
 
 E08 is closed for everything reachable. Only the Replit-era tips stay unrecovered, under the existing exception.
+
+## Evening round: native Blender checks (E04, E15) and branch cleanup (E11)
+
+Run in the linked laptop's Linux VM with headless Blender 5.2.4 LTS. Each file was opened read-only and never saved; SHA-256 hashes were identical before and after. Scripts and results are kept privately on the laptop in the `murderbird-uncaged-archives` folder.
+
+**E04, done.** The three retained04 natives at v1.0 open cleanly: maker (`bee3118c`), mechanic (`4f9dbbcb`) and builder (`9de7c4d1`, matching its LFS OID). Each has file version 5.2.44, 7,694 objects, 63 materials and 1,958,149 evaluated triangles, with every image packed, none missing and no linked libraries.
+
+**E15, diagnosed, FAIL kept.** The recorded worst case reproduces exactly: max L2 0.008557 between the builder object "CGRF02 left forward toe 2 recessed joint shoulder 1" and the merged GLB mesh "Supervised CG metal05 / machined-steel / builder / retained-uv". All 961 failing vertices are hard-edge vertices with split normals; every smooth vertex passes. Normal quantization is ruled out (the GLB stores float32 normals), and so is the object transform (the worst object has uniform scale). The likely cause is the export merging nearly identical split normals at bevel edges, a deviation of about half a degree. The 2e-5 threshold is unchanged.
+
+**E11, owner step.** An attempt to delete the owner-requested branch `claude/living-plates-20261114` through GitHub's web page was refused by this session's safety check, after the API and git routes had also been refused. The branch is 0 commits ahead of `main` (merged as #94). Delete it from GitHub's Branches page.
