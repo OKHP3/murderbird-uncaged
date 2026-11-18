@@ -40,11 +40,22 @@ Each item needs owner access or owner judgment. None of them blocks archiving th
 
 | Item | Blocker |
 |---|---|
-| Independent backup of the local mirror and private production (E07) | Needs an owned destination with roughly 75 GB or more free |
-| ASUS clone and four historical Git histories (E08) | Host access |
+| Independent backup of the local mirror and private production (E07) | Destination found November 17: gjs-laptop's drive has 398 GB free and already holds a clean clone with about 9 GB of the 45 GB LFS set. The copy itself has to run from the Mac, which holds the full mirror and private production. |
 | Replit checkout state (E09) | Authenticated workspace |
 | Native Blender editability and strict normal replay (E04, E15) | A desktop Blender session |
 | Human device, listening and screen-reader checks (E12) | A person and hardware |
 | TRELLIS result recovery (E13), promo reel disposition (E14), CRT source attachments (E18) | Original sessions and an editorial call |
 | Full standard Pages republish | LFS budget restored. The live base stays `914956e` with the Living Plates overlay. |
 | Final model likeness (E16) | Parked by owner decision. It needs a new, separately authorized project. |
+
+## Evening round: ASUS clone reconciliation (E08)
+
+The owner linked gjs-laptop (Windows, the ASUS clone) to this session on November 17. A read-only inspection used `git --no-optional-locks` and made no fetch, write or delete.
+
+- The clone is clean and on `main` at `be988a5` (the v1.0 merge). It has no stash, no uncommitted files and no local commits beyond its remote branches.
+- All 19 `archive/codex/*` tags in the clone exist on GitHub.
+- The only refs not on GitHub are `refs/archive/worktree-consolidation/custody-bounded-replay` and `custody-normal-diagnosis`. Both point to file blobs, not commits: a replay script and its normal-diagnosis result. Both blobs (`df0b12a2`, `f1925e62`) already exist on GitHub, so nothing is unique to this laptop.
+- The three Replit-era tips recorded as missing (`6b954808`, `76c6f152`, `0d7366d8`) and the older bundle head `c1bfca37` are not in this clone either. They stay under the October 23 owner-authorized historical exception.
+- The remote-only PR heads were inspected on GitHub. `codex/foot-motion-png-evidence-validator` (#91), `codex/simultaneous-contact-report-dedup` (#90), `codex/archived-timing-diagnostics` (#92), `codex/mac-completion-coordination-20261026` and `codex/pr84-windows-followup` (#84) and `codex/asus-visual-technical-acceptance` (#83) are each 1 to 9 commits ahead of their base. All of those PRs were closed unmerged at the November 13 freeze, and the branches are kept as the record.
+
+E08 is closed for everything reachable. Only the Replit-era tips stay unrecovered, under the existing exception.
