@@ -1,5 +1,7 @@
 # MurderBird operating goal — incremental visual delivery
 
+> **Superseded November 13, 2026.** The project closed at v1.0 with likeness parked; see the root `goal.md` and `AGENTS.md`. This mandate is kept as history and authorizes no new work.
+
 Owner direction, September 29, 2026: improve MurderBird's resemblance to the selected images through fast, visible, reviewable increments. Functionality is useful, but a pale, ghostlike model with the wrong character likeness is not the target. Measure progress by a visible gain in the complete bird, not worker activity, test counts, or accumulated versions.
 
 Start from the released V37 assembly. Keep one recognizable flightless mechanical bird across Maker, Mechanic, and Advanced. Prioritize the largest visible likeness gap; a cycle may address silhouette, a body region's construction, or mechanical material response, but must show how that change improves the whole character against its controlling reference.
