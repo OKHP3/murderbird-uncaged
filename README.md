@@ -73,7 +73,7 @@ Use a supported Node.js version from `package.json` and Git LFS for the files in
 
 ```sh
 git lfs install
-git lfs pull --include="media/*"
+git lfs pull --include="media/*,public/audio/**"
 npm ci
 npm run dev -- --host 127.0.0.1
 ```
