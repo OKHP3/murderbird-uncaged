@@ -15,7 +15,7 @@ Run from the repository root with the reference images hydrated from Git LFS:
 
     python3 scripts/build-living-plates.py
 
-The committed outputs were produced on 2026-11-14; see provenance/living-plates-2026-11-14.json.
+The committed outputs were produced on 2026-11-14; see records/living-plates-2026-11-14.json.
 """
 import json, numpy as np, cv2
 from PIL import Image

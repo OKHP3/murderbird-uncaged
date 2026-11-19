@@ -81,8 +81,8 @@ rows.sort((a,b) => a.name.localeCompare(b.name) || a.current.localeCompare(b.cur
 const result = { checkedAt: new Date().toISOString(), rows };
 const escape = (s) => String(s).replaceAll('|', '\\|').replaceAll('\n', ' ');
 const markdown = `# Technology version snapshot\n\nChecked: ${result.checkedAt}. Generated from the committed manifests and official registries.\n\nLatest means the publisher's stable/latest channel; transitive updates must be resolved through their parent packages. Host versions are measurements of the machine running this report.\n\n| Technology | In place | Latest stable / target | Status | Scope | Source |\n|---|---|---|---|---|---|\n${rows.map(r => `| ${[r.name,r.current,r.latest,r.status,r.scope].map(escape).join(' | ')} | [upstream](${r.source}) |`).join('\n')}\n`;
-await writeFile(new URL('docs/technology-versions.json', root), JSON.stringify(result, null, 2) + '\n');
-await writeFile(new URL('docs/technology-versions.md', root), markdown);
+await writeFile(new URL('records/technology-versions.json', root), JSON.stringify(result, null, 2) + '\n');
+await writeFile(new URL('records/technology-versions.md', root), markdown);
 console.log(`${rows.length} records; ${rows.filter(r => r.status === 'update available' || r.status === 'review declared line').length} update candidates; ${rows.filter(r => r.latest === 'unknown').length} lookup failures.`);
 if (rows.some(r => r.latest === 'unknown')) process.exitCode = 1;
 else if (process.argv.includes('--check') && rows.some(r => ['update available', 'review declared line'].includes(r.status))) process.exitCode = 2;

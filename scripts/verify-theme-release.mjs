@@ -5,7 +5,7 @@ import path from 'node:path';
 
 // Verify hydrated LFS media and the actual Pages payload, not just pointers.
 const root = process.cwd();
-const release = JSON.parse(await readFile(path.join(root, 'provenance/iron-verdict-v3-release.json'), 'utf8'));
+const release = JSON.parse(await readFile(path.join(root, 'records/iron-verdict-v3-release.json'), 'utf8'));
 const expected = new Set(['audio/iron-verdict-v3/full-song.mp3', 'audio/iron-verdict-v3/seamless-loop.flac', 'audio/iron-verdict-v3/lyrics.txt']);
 assert.equal(release.assets.length, expected.size, 'Release must identify exactly the approved runtime copies');
 for (const asset of release.assets) {
@@ -30,7 +30,7 @@ const built = await files(path.join(root, 'dist'));
 const audio = built.filter(name => /\.(?:mp3|flac|wav|m4a|ogg)$/i.test(name)).sort();
 // The separately preserved story folio has two explicitly released historical
 // demos. Identify their emitted bytes; do not allow arbitrary additional audio.
-const folio = JSON.parse(await readFile(path.join(root, 'provenance/story-media-publication-2026-09-27.json'), 'utf8'));
+const folio = JSON.parse(await readFile(path.join(root, 'records/story-media-publication-2026-09-27.json'), 'utf8'));
 const folioAudio = [];
 for (const asset of folio.assets.filter(asset => /\.mp3$/.test(asset.path))) {
   const source = await readFile(path.join(root, asset.path));

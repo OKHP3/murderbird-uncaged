@@ -1,9 +1,9 @@
 // Fixed renders of this exterior study accompany a separate assembly diagram.
 // The image is not animated or presented as an interactive spatial view.
 const previews = {
-  maker: new URL('../../assets/models/whole-character-v37/attempt-release02/maker-preview.png', import.meta.url).href,
-  mechanic: new URL('../../assets/models/whole-character-v37/attempt-release02/mechanic-preview.png', import.meta.url).href,
-  builder: new URL('../../assets/models/whole-character-v37/attempt-release02/builder-preview.png', import.meta.url).href,
+  maker: new URL('../../media/v37-maker-preview.png', import.meta.url).href,
+  mechanic: new URL('../../media/v37-mechanic-preview.png', import.meta.url).href,
+  builder: new URL('../../media/v37-builder-preview.png', import.meta.url).href,
 };
 const eraNames = { maker:'Maker', mechanic:'Mechanic', builder:'Advanced' };
 const referenceUrl = previews.builder;

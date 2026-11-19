@@ -19,4 +19,4 @@ jobs:
         run: npm run technology:report
       - name: Publish report in run summary
         if: always()
-        run: cat docs/technology-versions.md >> "$GITHUB_STEP_SUMMARY"
+        run: cat records/technology-versions.md >> "$GITHUB_STEP_SUMMARY"

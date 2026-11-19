@@ -1,10 +1,10 @@
 # Notice: split licensing
 
-This repository uses two different licenses for two different kinds of content. Read this before assuming the MIT license in [LICENSE](./LICENSE) covers everything here, it doesn't.
+This repository uses two different licenses for two different kinds of content. Read this before assuming the MIT license in [LICENSE](LICENSE) covers everything here, it doesn't.
 
 ## Code — MIT License
 
-All source code in this repository (build tooling, application logic, the 3D scene setup, the audio engine, interaction handling) is licensed under the MIT License. See [LICENSE](./LICENSE) for the full text. Read it, learn from it, fork it, reuse it under MIT's terms.
+All source code in this repository (build tooling, application logic, the 3D scene setup, the audio engine, interaction handling) is licensed under the MIT License. See [LICENSE](LICENSE) for the full text. Read it, learn from it, fork it, reuse it under MIT's terms.
 
 ## Creative content — all rights reserved
 

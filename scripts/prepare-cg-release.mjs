@@ -5,7 +5,7 @@ import { readFile, writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const cgManifestPath = 'assets/review/cg-publication.json';
+export const cgManifestPath = 'media/cg-publication.json';
 export async function readCGManifest() {
   const manifest = JSON.parse(await readFile(cgManifestPath, 'utf8'));
   assert.equal(manifest.schemaVersion, 1);
@@ -14,7 +14,7 @@ export async function readCGManifest() {
   assert(Array.isArray(manifest.assets) && manifest.assets.length > 0);
   const sources = new Set(), targets = new Set();
   for (const asset of manifest.assets) {
-    assert.match(asset.source, /^(assets|context)\/[a-zA-Z0-9_./-]+\.(png|jpg|glb)$/);
+    assert.match(asset.source, /^media\/[a-z0-9_.-]+\.(png|jpg|glb)$/);
     assert.match(asset.publicPath, /^cg\/[a-z0-9./-]+\.(png|jpg|glb)$/);
     assert(!asset.source.split('/').includes('..') && !asset.publicPath.split('/').includes('..'));
     assert(!sources.has(asset.source) && !targets.has(asset.publicPath), 'Duplicate CG selection');

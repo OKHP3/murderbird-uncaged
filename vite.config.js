@@ -77,7 +77,7 @@ export default defineConfig(({ command, isPreview }) => {
       host: localPreview ? '127.0.0.1' : '0.0.0.0',
       allowedHosts: localPreview ? ['localhost', '127.0.0.1'] : true,
       cors: localPreview ? false : undefined,
-      fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/.local/**', '**/provenance/**'] },
+      fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/.local/**', '**/records/**'] },
     },
   };
 });

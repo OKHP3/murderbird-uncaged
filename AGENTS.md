@@ -4,22 +4,22 @@
 
 **Project frozen (November 13, 2026).** MurderBird: Uncaged closed at v1.0 by owner direction, with likeness parked and not accepted. Do not open branches, pull requests or worker threads, and do not resume packets or milestones, without a new explicit owner authorization naming scope, budget and stop rule. See the closeout section at the top of [goal.md](goal.md).
 
-These instructions govern work in this repository only. They do not replace or modify OverKill Hill P³ universal governance. Read [the repository boundaries](docs/repository-boundaries.md), [the asset guide](assets/README.md), and [NOTICE.md](NOTICE.md) before migrating or publishing MurderBird material.
+These instructions govern work in this repository only. They do not replace or modify OverKill Hill P³ universal governance. Read [the repository boundaries](records/repository-boundaries.md), [the asset guide](records/README.md), and [NOTICE.md](NOTICE.md) before migrating or publishing MurderBird material.
 
 ## Repository roles
 
 - This repository is the canonical home for MurderBird creative production and the interactive exhibit application, including source imagery, video, music, lyrics, story-source snapshots, production material, models, and app code.
 - The OverKill Hill website retains the published MurderBird story, its page shells, and stable deployment assets. Preserve a source snapshot here when required for production provenance; identify its published URL and source revision. Do not imply a local snapshot is the live page.
 - FoundRy routes and incubates separate work. Route accepted MurderBird production material to this repository; do not treat a FoundRy copy as the canonical production archive.
-- Imported website scripts, tests, and configuration belong under `provenance/website-support/`. They are historical reference material, not active exhibit tooling.
+- Imported website scripts, tests, and configuration are kept as `records/website-support--*` files. They are historical reference material, not active exhibit tooling.
 
-## Preservation and provenance
+## Layout and preservation
 
-- Keep imported trees under their established paths, including `assets/murderbird/` and `assets/img/`. Preserve original relative paths, names, nesting, metadata, and companion files. Do not flatten, normalize, or overwrite historical source files as part of import.
-- Keep story-source snapshots under `content/story/`. Record the canonical published URL, source repository and revision or retrieval date, file hashes, and known rights/status in the matching `provenance/` ledger. Do not silently replace an earlier snapshot.
-- Keep imported historical support material in its source-relative location when that preserves references. Use `provenance/website-support/` for copied scripts, tests, and configuration so they cannot be mistaken for the active Vite app.
+- Keep the tree flat (flattened November 19, 2026). Shipped media goes in `media/` with descriptive lowercase names; records go in `records/` with a `group--name` prefix instead of subfolders. Do not recreate deep iteration trees (`v15/attempt-02/browser-<hash>/...`) on `main`.
+- Every file in `media/` is pinned by `media/cg-publication.json`, `media/production-v37.json` or a `records/` ledger. Add a file only together with its manifest or ledger entry.
+- Retired iterations, renders and study scripts are in Git history at tag `archive/pre-flatten-2026-11-19`; `records/flatten-map-2026-11-19.csv` maps every old path. Recover from there rather than re-importing.
 - Record facts from the files and source system. Mark unknown provenance, licensing, production status, and technical dependencies as unknown; do not infer them from names, dates, or appearance.
-- Preserve the source's draft, working, and final labels. The exterior-v1 three-era model is an implemented review study; owner likeness acceptance remains pending, and it is not validated engineering. The owner-accepted Iron Verdict v3 is a synthesized sung performance; no human vocalist recording is claimed. Keep its release status distinct from historical instrumental/GarageBand material and the optional soundscape. Do not upgrade any other asset's status without supporting evidence.
+- Preserve the source's draft, working, and final labels. The owner-accepted Iron Verdict v3 is a synthesized sung performance; no human vocalist recording is claimed. Do not upgrade any asset's status without supporting evidence.
 
 ## Privacy, licensing, and publication
 
@@ -32,7 +32,7 @@ These instructions govern work in this repository only. They do not replace or m
 
 ## Changes and verification
 
-- Use [the incremental delivery workflow](docs/incremental-delivery.md) for short visual checkpoints, bounded parallel work, and confirmed remote synchronization.
+- Use [the incremental delivery workflow](records/incremental-delivery.md) for short visual checkpoints, bounded parallel work, and confirmed remote synchronization.
 
 - Preserve the existing Vite, Three.js, and Web Audio architecture. Do not add dependencies or turn this exhibit into a general publishing or backend application without a separately scoped request.
 - Keep changes small and limited to the requested asset, story, or exhibit scope. Use lowercase kebab-case for new ordinary files and directories; retain tool-required names and established source paths.

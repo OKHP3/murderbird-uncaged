@@ -1,15 +1,15 @@
-import hero480 from '../assets/img/webp/murderbird-unified-master-03-2026-09-06-480.webp';
-import hero960 from '../assets/img/webp/murderbird-unified-master-03-2026-09-06-960.webp';
-import hero1536 from '../assets/img/webp/murderbird-unified-master-03-2026-09-06-1536.webp';
-import maker from '../assets/img/webp/murderbird-unified-maker-clean-2026-09-06-960.webp';
-import water from '../assets/img/webp/murderbird-unified-water-2026-09-06-960.webp';
-import mechanic from '../assets/img/webp/murderbird-unified-mechanic-2026-09-06-960.webp';
-import heart from '../assets/img/webp/murderbird-unified-heart-2026-09-06-960.webp';
-import sentinel from '../assets/img/webp/murderbird-unified-sentinel-2026-09-06-960.webp';
-import pilotPoster from '../assets/img/murderbird-first-choice-poster.jpg';
-import pilotVideo from '../assets/video/murderbird-first-choice-635f0e15.mp4';
-import ironVerdictTrack from '../assets/murderbird/production/audio/iron-verdict/murderbird-iron-verdict.mp3';
-import garageBandTrack from '../assets/audio/murderbird-iron-verdict-garageband-preview-192k.mp3';
+import hero480 from '../media/murderbird-unified-master-03-2026-09-06-480.webp';
+import hero960 from '../media/murderbird-unified-master-03-2026-09-06-960.webp';
+import hero1536 from '../media/murderbird-unified-master-03-2026-09-06-1536.webp';
+import maker from '../media/murderbird-unified-maker-clean-2026-09-06-960.webp';
+import water from '../media/murderbird-unified-water-2026-09-06-960.webp';
+import mechanic from '../media/murderbird-unified-mechanic-2026-09-06-960.webp';
+import heart from '../media/murderbird-unified-heart-2026-09-06-960.webp';
+import sentinel from '../media/murderbird-unified-sentinel-2026-09-06-960.webp';
+import pilotPoster from '../media/murderbird-first-choice-poster.jpg';
+import pilotVideo from '../media/murderbird-first-choice-635f0e15.mp4';
+import ironVerdictTrack from '../media/murderbird-iron-verdict.mp3';
+import garageBandTrack from '../media/murderbird-iron-verdict-garageband-preview-192k.mp3';
 
 export const murderBirdHero = {
   src: hero960,

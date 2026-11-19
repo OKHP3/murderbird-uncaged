@@ -1,0 +1,137 @@
+{
+  "title": "Living Plates authoring record",
+  "date": "2026-11-14",
+  "timezone": "America/Chicago",
+  "owner_direction": [
+    "2026-11-14: \"Let's attempt option B. However, this time I'm going to drop the leash and let you, solve it.\"",
+    "2026-11-15: \"All of this needs to be pushed to production into the main origin GitHub.\""
+  ],
+  "claim": "Four pinned reference images presented as look-around plates. At rest each plate shows its reference image. Depth is estimated; revealed background is mirrored texture, not recovered detail. This is not a 3D model and it does not change the parked likeness status of the V37 and CG models.",
+  "sources": [
+    {
+      "plate": "canon",
+      "path": "media/cg-references-candidate03.png",
+      "sha256": "538c51bcdbf5bfce95a0932fdbbb0f5868b446f4985346d15e6cacd32430e633",
+      "role": "Plate 0, Canon. Higher-resolution sibling of the locked September 22 composite (645d47c0...), which controls full-bird canon.",
+      "unchanged": true
+    },
+    {
+      "plate": "maker",
+      "path": "media/cg-references-maker.png",
+      "sha256": "93966eb269ae9f8d8d00e05e913cbb23f7656204e6f3fdf7fd26e8a39ca0cbb9",
+      "role": "Plate I, Maker era image",
+      "unchanged": true
+    },
+    {
+      "plate": "mechanic",
+      "path": "media/cg-references-mechanic.png",
+      "sha256": "0bd7c79510be9eeef024f8861a7576b777a7f5de5710523e8d2ab039d03c65f9",
+      "role": "Plate II, Mechanic era image",
+      "unchanged": true
+    },
+    {
+      "plate": "builder",
+      "path": "media/cg-references-builder.png",
+      "sha256": "9430f91e3cd3fc8223297720a0f57ec1c46e9c8245cfba91495e9c362029fea9",
+      "role": "Plate III, Advanced era image (page id: advanced)",
+      "unchanged": true
+    }
+  ],
+  "tools": [
+    {
+      "name": "Depth Anything V2 Small (ONNX)",
+      "source": "https://huggingface.co/onnx-community/depth-anything-v2-small",
+      "license": "Apache-2.0",
+      "use": "one monocular disparity estimate per source image, long side 1036 px"
+    },
+    {
+      "name": "scripts/build-living-plates.py",
+      "use": "front/back layer split, occlusion-edge matte, mirrored background fill, 16-bit disparity packing"
+    },
+    {
+      "name": "three.js r128 (vendored UMD build)",
+      "path": "public/plates/vendor/three.min.js",
+      "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "license": "MIT",
+      "source": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "public/plates/img/builder-back.webp",
+      "bytes": 54494,
+      "sha256": "fd6eda7b486868ddb8382e881a792f11ce56545d6df349571ad0cb979b93cce3"
+    },
+    {
+      "path": "public/plates/img/builder-depth.png",
+      "bytes": 349517,
+      "sha256": "638d87c2c877ca06b5eb840ff2a86e96ba9ca5f9e2127cfc0b1e08acec00e186"
+    },
+    {
+      "path": "public/plates/img/builder-front.webp",
+      "bytes": 271462,
+      "sha256": "1851a3adaedddf5beb254b498b3ec5c46e949c67fa2adb9541693db04d6f114f"
+    },
+    {
+      "path": "public/plates/img/canon-back.webp",
+      "bytes": 33734,
+      "sha256": "1d68ccbbd17b8cc6b7cf9d67c60de76078082c01f5d8d3d771008f50d470b05a"
+    },
+    {
+      "path": "public/plates/img/canon-depth.png",
+      "bytes": 322898,
+      "sha256": "f50e93863ef14df8d249ae20ebf31e383b86c750f93bbdaac9f4a18091573caf"
+    },
+    {
+      "path": "public/plates/img/canon-front.webp",
+      "bytes": 224266,
+      "sha256": "2d4f0dc1bf5b78c13b3ff58e319d2ed3d4ff5f9e94c33fa4c0fa1047fe728a4c"
+    },
+    {
+      "path": "public/plates/img/maker-back.webp",
+      "bytes": 119114,
+      "sha256": "24310c4994703d751c16ee5fb0fa4501822078e905f2c28240431c662d87ff0f"
+    },
+    {
+      "path": "public/plates/img/maker-depth.png",
+      "bytes": 322538,
+      "sha256": "33a8f9902041a38daeeb75dcfcc0c53a0b9823153d8c0cab5aa524d2c68e7abb"
+    },
+    {
+      "path": "public/plates/img/maker-front.webp",
+      "bytes": 356322,
+      "sha256": "8f30fc93dbcecd147399f456dd87a788e2754cb720543c813abe945bb0a053d0"
+    },
+    {
+      "path": "public/plates/img/mechanic-back.webp",
+      "bytes": 110482,
+      "sha256": "2d9229e0703ec2304b00b8f220cc21ec2bb6f91a9ab943b25ad39778c9206b1d"
+    },
+    {
+      "path": "public/plates/img/mechanic-depth.png",
+      "bytes": 326956,
+      "sha256": "bd35981daf998700f50872fd23d8f2ae295b3d20776f824921c9d24254cdc96c"
+    },
+    {
+      "path": "public/plates/img/mechanic-front.webp",
+      "bytes": 313184,
+      "sha256": "ece6835c9fe90434f0d8edd10cec471e478481dd6c8a7228b6724bff87d13817"
+    },
+    {
+      "path": "public/plates/index.html",
+      "bytes": 32982,
+      "sha256": "e72b08141aa0225465114873a0b6f60550146d10c227f17f469463197763d70b"
+    }
+  ],
+  "verification": {
+    "local": "Headless Chromium (software GL) at 360x700, 390x844, 1000x640 and 1280x800: all four plates load, era switching, depth survey, capture mode and the tap-to-provoke reaction on each plate run with no script errors. Real-GPU frame rate and the reaction sounds were not auditioned on real hardware.",
+    "overlay": "scripts/assemble-plates-overlay.mjs read back all 154 live files (407,610,132 bytes) at base revision 914956e32b5496600652ed2406b8a80e0eb1f857 and matched every recorded SHA-256 before adding the plates.",
+    "not_run": "npm run build and the publication verifiers were not run for this change: the authoring environment had Git LFS pointers only. No tracked build input, verifier or test was modified.",
+    "tests": "node --test tests/*.test.mjs on LFS pointers: 141 pass, 9 fail, identical before and after this change (the 9 need hydrated model payloads). scripts/ci-lfs-assets.mjs plan is unchanged at 499 objects / 2,736,090,200 bytes."
+  },
+  "rights": "MurderBird character, art, story and music: all rights reserved (NOTICE.md). Code: MIT.",
+  "interaction": {
+    "added": "2026-11-15",
+    "provoke": "A tap on the plate, or the Provoke button, answers with a short camera move toward the head in each era's manner: one lever-pulled clack (Maker), three spring notches (Mechanic), a strike with an optic flare (Advanced and canon). Sounds are synthesized in the browser with Web Audio at the moment of the tap; no audio file is added. Reduced-motion visitors get the status line, optic flare and sound without the camera move."
+  }
+}

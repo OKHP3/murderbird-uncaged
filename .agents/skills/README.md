@@ -2,7 +2,7 @@
 
 These seven complete packages are installed from `OKHP3/skillz` revision
 `2cec142b89400c2a51eea74328f8528225ef9899`. Source files are preserved unchanged.
-See [installation provenance](../../provenance/skill-installation.json) for paths and SHA-256 hashes.
+See [installation provenance](../../records/skill-installation.json) for paths and SHA-256 hashes.
 
 Repository `AGENTS.md`, `NOTICE.md`, and the repository boundaries govern their use.
 Load only the skill needed for the task. Installation does not establish behavioral validation.

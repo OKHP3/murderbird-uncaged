@@ -7,13 +7,13 @@ import {assertPublicationBoundary} from './publication-boundary.mjs';
 import {readCGManifest,verifyCGAsset} from './prepare-cg-release.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
-const manifestPath = 'assets/review/production-v37.json';
+const manifestPath = 'media/production-v37.json';
 const productionStatus = 'Published current construction; likeness refinement remains open';
-const modelPath = 'assets/models/whole-character-v37/attempt-release02/murderbird-whole-character-v37.glb';
+const modelPath = 'media/v37-murderbird-whole-character.glb';
 const previewPaths = {
-  maker: 'assets/models/whole-character-v37/attempt-release02/maker-preview.png',
-  mechanic: 'assets/models/whole-character-v37/attempt-release02/mechanic-preview.png',
-  builder: 'assets/models/whole-character-v37/attempt-release02/builder-preview.png',
+  maker: 'media/v37-maker-preview.png',
+  mechanic: 'media/v37-mechanic-preview.png',
+  builder: 'media/v37-builder-preview.png',
 };
 const pointerPrefix = Buffer.from('version https://git-lfs.github.com/spec/v1');
 
@@ -53,9 +53,9 @@ const [presenceSource,fallbackSource]=await Promise.all([
   readFile('src/scene/presence-exhibit.js','utf8'),
   readFile('src/scene/fallback.js','utf8'),
 ]);
-const modelPaths=[...presenceSource.matchAll(/new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.glb)['"],\s*import\.meta\.url\)/g)].map(match=>match[1]);
+const modelPaths=[...presenceSource.matchAll(/new URL\(['"]\.\.\/\.\.\/(media\/[^'"]+\.glb)['"],\s*import\.meta\.url\)/g)].map(match=>match[1]);
 assert.deepEqual(modelPaths,[modelPath],'The exhibit must select the V37 release GLB.');
-const selectedPreviews=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(assets\/models\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
+const selectedPreviews=Object.fromEntries([...fallbackSource.matchAll(/^\s*(maker|mechanic|builder):\s*new URL\(['"]\.\.\/\.\.\/(media\/[^'"]+\.png)['"],\s*import\.meta\.url\)/gm)].map(match=>[match[1],match[2]]));
 assert.deepEqual(selectedPreviews,previewPaths,'The illustrated fallback must use the V37 release previews.');
 
 const manifest=JSON.parse(await readFile(manifestPath,'utf8'));
@@ -83,7 +83,7 @@ for(const asset of manifest.assets){
 }
 assert.deepEqual([...sourceByPath.keys()].sort(),[...expectedSources].sort(),'The manifest must cover exactly the active V37 assets.');
 
-const sources=[...sourceByPath.values(),...JSON.parse(await readFile('provenance/story-media-publication-2026-09-27.json','utf8')).assets];
+const sources=[...sourceByPath.values(),...JSON.parse(await readFile('records/story-media-publication-2026-09-27.json','utf8')).assets];
 const emitted=new Map();
 for(const name of output.filter(path=>path.startsWith('assets/'))){
   const bytes=await readFile('dist/'+name);
