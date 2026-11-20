@@ -31,3 +31,20 @@ This ledger checks each action that thread asked for or recommended against what
 The [visual critique ledger](handoffs--visual-critique-thread-closeout-2026-11-17.md) keeps the single open-items list. As of `859983d` that list is: off-machine backup (E07), Replit checkout state (E09), the strict normal-parity FAIL kept for an owner call (E15), human device and listening checks (E12), TRELLIS, promo reel and CRT source items (E13, E14, E18), a full standard Pages republish once the LFS allowance is restored, and final model likeness (E16, parked). Each needs owner access or owner judgment.
 
 One more owner step: eleven remote branches are fully contained in `main` and can be deleted from GitHub's Branches page. Earlier sessions found that branch deletion is refused for assistant sessions. The branches are the nine `claude/*` branches from November 13 to 17 and `codex/lfs-cache-preflight-20261029` and `codex/lfs-download-repair-20261026`. This change's own branch is the twelfth once merged.
+
+## November 20 recheck
+
+Base reviewed: `main` at `425409c`, after the November 19 flatten. The owner asked this thread to finish and verify its own closeout. Nothing was modeled, published or accepted in this pass.
+
+| Item | November 20 state | Evidence |
+|---|---|---|
+| Open pull requests and issues | Still zero of each | REST API |
+| Releases | `v1.0.0` and `v1.1.0`, unchanged | REST API |
+| Merged remote branches (owner step above) | Done. `main` is the only branch left on GitHub. | REST API branch list |
+| Live exhibit, folio, Living Plates, `release.json`, Iron Verdict audio, both OverKill Hill pages | All HTTP 200. The live base is still release `914956e`. | Direct fetch |
+| CI on `main` | Green since November 19, but on push it now runs only `npm ci` and the unit tests. Media hydration and Pages deploy happen only on a manual run with `publish_pages`, and none has run since the flatten. So green CI does not show the Git LFS budget is back. | Workflow run job steps |
+| Paths in this ledger | The handoffs now live in `records/` as `handoffs--*.md`. The harvest row's `docs/handoffs/` means those files. | `records/flatten-map-2026-11-19.csv` |
+
+The open-items list in the [visual critique ledger](handoffs--visual-critique-thread-closeout-2026-11-17.md#still-open-and-why) stands as written, minus branch cleanup. A separate owner step from the Copilot-extraction thread is still pending: its overkill-hill closeout branch `docs/murderbird-copilot-thread-closeout-2026-11-18` is not on GitHub. It lives only on the laptop, and the Mac linked to this session has no copy.
+
+This thread has no work left of its own. It is ready to archive in the Claude app. No tool here can archive a chat.
