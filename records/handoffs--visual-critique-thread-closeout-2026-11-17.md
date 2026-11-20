@@ -79,3 +79,16 @@ The owner linked the Mac Studio and granted this session its mirrors folder, the
 - **E11 remote half, owner step.** Eleven remote branches are contained in `main`: the eight listed above plus `claude/critique-ledger-round1-20261117`, `claude/critique-ledger-round5-20261117` and `claude/orchestration-thread-closeout-20261117`. The API, git and browser routes were each refused for this session. The owner deletes them on GitHub's Branches page.
 - **E07, owner step.** The mirror's LFS store is 43 GB. The laptop answers on the file-sharing port (SMB, 445) from the Mac and on nothing else tested, so the copy needs the owner's Windows sign-in. The owner connects to `smb://gjs-laptop.local` in Finder and copies the mirror and the private production selection into the laptop's `murderbird-uncaged-archives` folder, then spot-checks a few LFS object hashes on the laptop.
 - **Cross-thread note.** The Copilot-extraction thread's overkill-hill closeout commit (`dfab7e30`, local branch `docs/murderbird-copilot-thread-closeout-2026-11-18`) is not in the Mac's overkill-hill mirror and not on GitHub. It is on the laptop. The owner pushes it from there, or links the laptop so a session can bundle it and push over HTTPS.
+
+## Recheck, November 20: final state of this thread's items
+
+Checked against GitHub, the live site, the Mac mirror and the owner's Notion register. No change was made other than this section.
+
+- **E11, done.** `main` is the only branch on GitHub. The owner deleted all eleven merged branches listed above, so E11 is closed on both the Mac and GitHub.
+- **Live site unchanged.** The exhibit, folio, CG assessment, Living Plates and sitemap all return HTTP 200. The overlay is still `2c0603f7` on base `914956e`. The November 19 flatten (`5f1c2cd8`) moved this ledger to `records/` and changed no live payload.
+- **Mac mirror.** It is at `425409c` (the flatten plus the Vite pin), updated by a host with `git-lfs`. It is one docs commit behind `main`. This session's shell has no `git-lfs`, so it can't fast-forward a checkout that now holds media under `media/`. That step belongs to the host.
+- **E07, owner decision recorded.** The Mac archives folder's README says a verified duplicate on the same drive was moved to the Trash on owner direction, and it recommends a copy on a different drive or machine. That is now the owner's open choice. No further session action applies.
+- **E15** stays the owner's choice: accept the documented export artifact or re-export later.
+- **Cross-thread.** The Copilot-extraction closeout commits (`dfab7e30`, `08e2363f`) are still only on the laptop, behind overkill-hill `main` by four commits. The owner rebases and pushes them from the laptop.
+
+This thread's own requests are all complete. Every remaining item is an owner decision or is owned by another thread, and each one is recorded above or in the November 16 register.
