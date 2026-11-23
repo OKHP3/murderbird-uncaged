@@ -27,7 +27,7 @@ def atom_order(path):
             f.seek(length-header,1)
     return names
 def rgb_sample(path,frame):
-    cmd=['ffmpeg','-v','error','-i',str(path),'-vf',f'select=eq(n\\,{frame}),scale=960:540:flags=lanczos,format=rgb24','-frames:v','1','-f','rawvideo','-']
+    cmd=['ffmpeg','-v','error','-i',str(path),'-vf',f'select=eq(n\\,{frame}),colorspace=iall=bt709:irange=tv:all=bt709:trc=srgb:range=tv,scale=960:540:flags=lanczos:in_color_matrix=bt709:in_range=tv:out_range=full,format=rgb24','-frames:v','1','-f','rawvideo','-']
     data=call(cmd,stdout=subprocess.PIPE).stdout
     if len(data)!=960*540*3:raise ValueError(f'Cannot decode frame {frame}')
     return data
@@ -80,6 +80,6 @@ report={'source_native_sha256':renderer['input_sha256'],
         'opening_frame':{'native_frame':0,'file':poster.name,'jpeg_sha256':sha(poster),'source_png_sha256':sha(args.frames/'hero-0000.png'),'size':poster.stat().st_size},
         'camera':'Fixed single continuous full-height three-quarter view; original rigid animation, cinema lens and lighting changes only.',
         'cycles':renderer,
-        'changed_pixels':{'comparison':'against decoded frame 0 in 960 × 540 view, includes encode/denoising and scene light variations','regions_xyxy':rects,'frames':changes}}
+        'changed_pixels':{'comparison':'against decoded frame 0 converted from tagged BT.709 to display-referred sRGB in a 960 × 540 view; includes encode/denoising and scene light variations','regions_xyxy':rects,'frames':changes}}
 args.receipt.write_text(json.dumps(report,indent=2)+'\n')
 print('Validated',movie.name,sha(movie),movie.stat().st_size,v['width'],v['height'],v['nb_read_frames'],v['duration'])
