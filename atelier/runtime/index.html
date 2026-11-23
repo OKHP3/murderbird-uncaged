@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#181917">
+  <meta name="color-scheme" content="dark">
+  <title>First Choice — MurderBird: Uncaged</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./viewer.css">
+</head>
+<body>
+  <main class="exhibit" aria-labelledby="page-title">
+    <header class="topbar">
+      <div class="title-block">
+        <p class="project-title">MurderBird: Uncaged</p>
+        <h1 id="page-title">First Choice</h1>
+      </div>
+      <fieldset class="light-controls switcher">
+        <legend>Lighting</legend>
+        <div class="switch-options">
+          <button type="button" data-light="workshop" aria-pressed="true" disabled>Workshop</button>
+          <button type="button" data-light="neutral" aria-pressed="false" disabled>Neutral</button>
+        </div>
+      </fieldset>
+    </header>
+
+    <section id="stage" class="stage" aria-label="Interactive model">
+      <canvas id="viewer-canvas" tabindex="0" aria-label="MurderBird orbit view" aria-describedby="orbit-help"></canvas>
+      <img id="poster" alt="Still of the First Choice candidate" hidden>
+      <div class="stage-message" id="stage-message">
+        <p id="stage-status" role="status" aria-live="polite">Opening the model…</p>
+        <progress id="load-progress" aria-label="Model loading"></progress>
+        <button type="button" id="retry" hidden>Try again</button>
+      </div>
+      <div class="stage-tools">
+        <span id="orbit-help">Drag to orbit <span aria-hidden="true">·</span> Scroll to zoom</span>
+        <button type="button" id="help" aria-haspopup="dialog" aria-label="Camera and playback controls">Controls</button>
+      </div>
+      <noscript><p class="no-script">Enable JavaScript to orbit the model and play First Choice.</p></noscript>
+    </section>
+
+    <footer class="console">
+      <fieldset class="camera-controls switcher">
+        <legend>Camera</legend>
+        <div class="camera-choices switch-options">
+          <button type="button" data-view="portrait" aria-pressed="true" disabled>Portrait</button>
+          <button type="button" data-view="profile" aria-pressed="false" disabled>Profile</button>
+          <button type="button" data-view="detail" aria-pressed="false" disabled>Head</button>
+          <button type="button" data-view="support" aria-pressed="false" disabled>Saddle</button>
+        </div>
+      </fieldset>
+      <button id="reset-camera" type="button" class="quiet-button" disabled>Reset camera</button>
+      <div class="timeline">
+        <button id="play" type="button" class="main-button" disabled><span class="transport-icon" aria-hidden="true"></span><span id="play-label">Play</span></button>
+        <button id="replay" type="button" class="quiet-button" disabled>Replay</button>
+        <label for="timeline" class="sr-only">Animation time</label>
+        <input id="timeline" type="range" min="0" max="8" step="0.01" value="0" disabled>
+        <div class="timing" id="timing" aria-hidden="true"><span id="elapsed">0:00.0</span><span class="slash"> / </span><span id="duration">—</span></div>
+        <span id="motion-note" role="status" hidden>Motion unavailable</span>
+      </div>
+    </footer>
+
+    <dialog id="guide" aria-labelledby="guide-title">
+      <div class="guide-header">
+        <h2 id="guide-title">Controls</h2>
+        <form method="dialog"><button type="submit" id="close-help">Close</button></form>
+      </div>
+      <dl class="keymap">
+        <dt>Orbit</dt><dd>Drag with one pointer, or focus the view and use the arrow keys.</dd>
+        <dt>Zoom</dt><dd>Scroll, pinch with two fingers, or use + and − in the view.</dd>
+        <dt>Playback</dt><dd>Use Play or Pause, or press Space in the view. Drag the timeline to inspect a moment.</dd>
+        <dt>Reset</dt><dd>Choose Reset camera, or press Home in the view.</dd>
+      </dl>
+    </dialog>
+  </main>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>
