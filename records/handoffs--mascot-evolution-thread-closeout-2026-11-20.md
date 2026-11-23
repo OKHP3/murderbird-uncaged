@@ -26,12 +26,12 @@ This ledger checks every request the thread made against what now exists. It add
 | Tool credits named GPT-5.6 SOL instead of the lead model | Resolved: the page credits Astra GPT-6 (`gpt-6-astra`), then `gpt-6.1-sol`. |
 | Music credits described GarageBand as the composer | Not a site defect: the page already says original MIDI and synthesized parts, with ACE-Step 1.5 vocals. The early post draft was corrected to match. |
 | Era III is "The Builder" in the story but "Advanced" in the exhibit | Kept as is. The story and the exhibit are separate canons, and the exhibit is frozen. |
-| Project page `dateModified` and sitemap `lastmod` still read November 13 after the November 15 v1.1 update | Open. A source-level fix (`site-src/pages/projects/murderbird-uncaged/index.extras.html` and `sitemap.xml` to 2026-11-15, rebuild, CSP regeneration) passed every site gate on November 20 but was not pushed. Cosmetic; it does not block archiving. |
+| Project page `dateModified` and sitemap `lastmod` still read November 13 after the November 15 v1.1 update | Resolved 2026-11-23 by overkill-hill #265. Originally open: A source-level fix (`site-src/pages/projects/murderbird-uncaged/index.extras.html` and `sitemap.xml` to 2026-11-15, rebuild, CSP regeneration) passed every site gate on November 20 but was not pushed. Cosmetic; it does not block archiving. |
 
 ## Still open, and why
 
 | Item | Owner | Next action |
 |---|---|---|
-| overkill-hill project page date fix | Owner | Apply the November 20 patch on a branch from overkill-hill `main`, open a PR and merge after CI, or skip it and accept a stale date. |
-| Copilot-extraction (redesign context) closeout in overkill-hill | Owner | Unchanged from the [flatten ledger](handoffs--repository-flatten-closeout-2026-11-19.md): bring commits `dfab7e30` and `08e2363f` from tag `archive/branches-2026-11-19` onto overkill-hill `main`. |
+| ~~overkill-hill project page date fix~~ | Resolved 2026-11-23 | Merged as overkill-hill [#265](https://github.com/OKHP3/overkill-hill/pull/265); see the [Copilot-extraction closeout](handoffs--copilot-extraction-thread-closeout-2026-11-23.md). |
+| ~~Copilot-extraction (redesign context) closeout in overkill-hill~~ | Resolved 2026-11-23 | Merged as overkill-hill [#264](https://github.com/OKHP3/overkill-hill/pull/264). |
 | Archive this thread and the project's other threads | Owner | Archive in each app. No assistant tool can archive threads. |

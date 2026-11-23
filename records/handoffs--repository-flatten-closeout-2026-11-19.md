@@ -36,8 +36,8 @@ The visual critique ledger's E09 item (Replit checkout state) is resolved by the
 | Item | Owner | Next action |
 |---|---|---|
 | The Replit archive exists only inside the Repl | Owner | When the Git LFS allowance is restored, run `git lfs push --all origin` in the Repl, then push tag `archive/replit-workspace-2026-11-19`. Until then, do not delete the Repl. |
-| Copilot-extraction closeout content is not on overkill-hill `main` | Owner, or the Copilot-extraction thread | Its branch `docs/murderbird-copilot-thread-closeout-2026-11-18` reached GitHub and was pruned with the other 14 branches on November 19. Tip `08e2363f` is preserved in `archive/branches-2026-11-19`. The closeout receipt, Plate III images and `oxide-positivism.md` are not on `main`. A November 20 commit (`c340596c`) separately marked the brief superseded, so cherry-picking the two commits conflicts in `context/threads/README.md` and the brief; keep `main`'s wording there and take the three new files. |
+| ~~Copilot-extraction closeout content is not on overkill-hill `main`~~ | Resolved 2026-11-23 | Landed by overkill-hill [#264](https://github.com/OKHP3/overkill-hill/pull/264); see the [Copilot-extraction closeout](handoffs--copilot-extraction-thread-closeout-2026-11-23.md). |
 | The live exhibit still serves release `914956e` | Owner | Run the Validate workflow manually with `publish_pages` once the Git LFS download allowance is back. |
-| Mac Studio clone is behind `main` | Owner | The owner declined a scheduled pull; pull whenever the Mac is next used. |
+| ~~Mac Studio clone is behind `main`~~ | Resolved 2026-11-23 | Confirmed at `main` (`ca448ad`); see the [Copilot-extraction closeout](handoffs--copilot-extraction-thread-closeout-2026-11-23.md). |
 
 Every other request this thread received is done or superseded. It is ready to archive in the Claude app.
