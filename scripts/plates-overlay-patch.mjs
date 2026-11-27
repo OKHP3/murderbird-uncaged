@@ -78,3 +78,18 @@ export function applyBasePatch(path, text) {
   const at = text.indexOf(patch.anchor) + patch.anchor.length;
   return text.slice(0, at) + patch.insert + text.slice(at);
 }
+
+/**
+ * Undoes applyBasePatch on a file an earlier overlay already published, so a later overlay can
+ * rebuild from the verified base. Throws unless the inserted text follows its anchor exactly once.
+ * The caller must still verify the result against the base release record.
+ */
+export function revertBasePatch(path, text) {
+  const patch = BASE_PATCHES[path];
+  if (!patch) throw new Error(`No overlay patch is allowlisted for ${path}`);
+  const patched = patch.anchor + patch.insert;
+  const count = occurrences(text, patched);
+  if (count !== 1) throw new Error(`${path}: expected the earlier overlay patch exactly once, found ${count}.`);
+  const at = text.indexOf(patched) + patch.anchor.length;
+  return text.slice(0, at) + text.slice(at + patch.insert.length);
+}
