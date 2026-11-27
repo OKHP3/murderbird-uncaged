@@ -12,7 +12,7 @@
 import {createHash} from 'node:crypto';
 import {mkdir, readFile, readdir, writeFile} from 'node:fs/promises';
 import {dirname, join, posix} from 'node:path';
-import {BASE_PATCHES, applyBasePatch} from './plates-overlay-patch.mjs';
+import {BASE_PATCHES, applyBasePatch, revertBasePatch} from './plates-overlay-patch.mjs';
 import {applyCopyFixes, isCopyFixTarget} from './final-copy-fixes.mjs';
 
 const [baseArg, expectedBase, out] = process.argv.slice(2);
@@ -39,11 +39,17 @@ if (!Array.isArray(manifest.files) || manifest.files.length === 0) throw new Err
 const queue = [...manifest.files];
 let baseBytes = 0;
 const patchedBaseFiles = [];
+const revertedBaseFiles = [];
 async function worker() {
   for (let item = queue.shift(); item; item = queue.shift()) {
     if (!safe(item.path)) throw new Error(`Unsafe published path: ${item.path}`);
     if (item.path === 'release.json' || item.path.startsWith('plates/')) throw new Error(`Base release already claims ${item.path}`);
-    const bytes = await get(item.path);
+    let bytes = await get(item.path);
+    if ((bytes.length !== item.bytes || sha(bytes) !== item.sha256) && Object.hasOwn(BASE_PATCHES, item.path)) {
+      // An earlier overlay already patched this file. Rebuild the base and verify it byte for byte.
+      bytes = Buffer.from(revertBasePatch(item.path, bytes.toString('utf8')), 'utf8');
+      revertedBaseFiles.push(item.path);
+    }
     if (bytes.length !== item.bytes || sha(bytes) !== item.sha256) throw new Error(`Live file does not match its release record: ${item.path}`);
     await mkdir(dirname(join(out, item.path)), {recursive: true});
     baseBytes += bytes.length;
@@ -101,6 +107,7 @@ const record = {
   note: 'Living Plates overlay. Every other file on this site is the unchanged base release named below, verified against release.json. patchedBaseFiles lists the only base files changed: a route to Living Plates and the v1.1 final copy fixes.',
   baseRevision: manifest.revision,
   overlayRevision: process.env.GITHUB_SHA || 'local',
+  revertedBaseFiles: revertedBaseFiles.sort(),
   files: overlay,
   patchedBaseFiles,
 };
