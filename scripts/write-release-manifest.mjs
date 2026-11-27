@@ -18,5 +18,5 @@ for(const path of await walk('dist')){
  files.push({path,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});
 }
 const dirty=execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim().length>0;
-await writeFile('dist/release.json',JSON.stringify({revision,workingTreeDirty:dirty,repository:'https://github.com/OKHP3/murderbird-uncaged',status:'Published for assessment; artistic acceptance pending.',files},null,2)+'\n');
+await writeFile('dist/release.json',JSON.stringify({revision,workingTreeDirty:dirty,repository:'https://github.com/OKHP3/murderbird-uncaged',status:'Frozen at v1.0; source likeness parked, not accepted.',files},null,2)+'\n');
 console.log(`Release manifest: ${revision}, ${files.length} files${dirty?' (local modified tree)':''}.`);
