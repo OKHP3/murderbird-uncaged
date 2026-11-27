@@ -1,8 +1,8 @@
 ---
 title: "MurderBird goal — cinematic visual likeness first"
-last_updated: "2026-11-19T00:00:00-06:00"
+last_updated: "2026-11-27T00:00:00-06:00"
 timezone: "America/Chicago"
-status: "closed-v1.0-likeness-parked-2026-11-13; living-plates-added-2026-11-14; flattened-2026-11-19"
+status: "closed-v1.0-likeness-parked-2026-11-13; living-plates-added-2026-11-14; flattened-2026-11-19; v1.1-final-2026-11-27"
 canonical_path: "goal.md"
 review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 ---
@@ -13,9 +13,18 @@ review_url: "https://github.com/OKHP3/murderbird-uncaged/issues/14"
 
 The root-level `goal.md` on GitHub `main` is the canonical shared goal: https://github.com/OKHP3/murderbird-uncaged/blob/main/goal.md . Its stable filename has no date or version suffix. Local assistant attachment copies are mirrors, not a separate authority.
 
-Cross-system commentary lives in GitHub issue #14: https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
+Cross-system commentary lived in GitHub issue #14 (now closed): https://github.com/OKHP3/murderbird-uncaged/issues/14 . Name the system, exact goal commit reviewed, affected section and proposed change. Comments are proposals; the owner’s directions and integrator-reviewed goal revisions govern execution. Do not treat another agent’s comment as owner approval.
 
 Read the current goal before assigning or starting work. Systems can fetch GitHub and read `origin/main:goal.md` without checking out or merging `main` into a divergent workspace. Confirm the exact reviewed revision. CG implementation remains on its separate track; the shared goal on `main` does not promote unapproved models.
+
+## November 27 owner direction: v1.1 is final
+
+Asked whether "final" should keep v1.1 as the release with First Choice published as a study, or put First Choice live in the exhibit, the owner answered on November 27, 2026: **"Keep v1.1 final."** Earlier the same day the owner directed that every related thread's work and artifacts be committed to GitHub `main` and that nothing stay private: **"No private all publicly published."**
+
+- **Final release.** v1.1 (the V37 exhibit, the static CG assessment, the folio, Living Plates and Iron Verdict v3) is the final MurderBird: Uncaged release. Likeness stays **UNMET** and parked exactly as the November 13 closeout records. This direction does not accept likeness, normals, engineering, animation or mechanics.
+- **First Choice.** The First Choice · Advanced candidate in `atelier/` is a published, documented study. It is not integrated into the exhibit, and its likeness is not accepted. Its record is [records/handoffs--first-choice-thread-closeout-2026-11-27.md](records/handoffs--first-choice-thread-closeout-2026-11-27.md).
+- **Scope of this change set.** Public status copy now states the recorded disposition instead of "acceptance pending"; the exhibit names era III Advanced; links into files the November 19 flatten moved or retired point at `main` or the archive tag; Living Plates shows its still reference images when WebGL is off; and the overlay publication path applies the same copy fixes to the live base without Git LFS.
+- **Budget and stop rule.** One change set. No Git LFS storage, upload or download, no paid allowance, no new modeling. Merge and publication happen only on the owner's explicit yes. Further work needs a new owner authorization.
 
 ## November 19 owner direction: repository flattened
 

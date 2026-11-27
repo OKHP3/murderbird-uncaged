@@ -1,4 +1,4 @@
-# Rebuild the private study
+# Rebuild the First Choice study
 
 The accompanying patch starts from OKHP3/murderbird-uncaged main at `ca448adf1c069d3b5f74bac8784320707176dbb6`. Apply it in an isolated checkout that already contains the verified retained04 Advanced native source. The project source and image authority are listed by hash in the evidence directory.
 

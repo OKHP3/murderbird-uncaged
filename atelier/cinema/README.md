@@ -1,6 +1,6 @@
 # First Choice screening render
 
-The private screening uses the fixed `first-choice.blend` with SHA-256 `1e59785a11aadf491714ef1b5aa682ff1b9efa0a6a3b421414f3bb7de053a05b`. The camera and lighting changes exist in the rendering process only. The supplied bird geometry, four animated pivots, saddle and seated stand perform the same timeline as the interactive model. The movie is a companion for viewing that performance in two dimensions.
+The screening uses the fixed `first-choice.blend` with SHA-256 `1e59785a11aadf491714ef1b5aa682ff1b9efa0a6a3b421414f3bb7de053a05b`. The camera and lighting changes exist in the rendering process only. The supplied bird geometry, four animated pivots, saddle and seated stand perform the same timeline as the interactive model. The movie is a companion for viewing that performance in two dimensions.
 
 The main camera observes the whole motion in one continuous shot. The render uses a 44.5 mm lens, the native studio cove, three-quarter framing and a darker, cooler floor with warm raking light on the shell. Cycles renders 1920 × 1080 on the local Apple M4 Max Metal GPU with a fixed sampling seed and OpenImageDenoise. Native frames 0 through 251 yield 252 displayed frames at 24 fps. The final pose is already at rest by frame 247. Frame 252 is separately available in the native timeline for an exact endpoint check.
 

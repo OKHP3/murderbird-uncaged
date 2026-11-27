@@ -12,4 +12,4 @@ The two before and two after PNGs show matched left and right three-quarter view
 
 `measure.py` evaluates the module against the original scene in Blender, then samples the lower breast from underneath. The sample at X = 0, Y = −0.24 is Z = 0.7829. Integration should verify against the final assembled geometry and pose.
 
-Native source SHA-256: `9de7c4d1c9ac158135f9f846af61683528e00340a708820b2cfe1d942acc54d5`. September 22 full-bird reference SHA-256: `645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114`. The far-side contour and repair marks are reconstructions. Owner likeness review is pending.
+Native source SHA-256: `9de7c4d1c9ac158135f9f846af61683528e00340a708820b2cfe1d942acc54d5`. September 22 full-bird reference SHA-256: `645d47c00ff46acae244aecf595608e8f49eb8095f5ca125da6b2eeeb4204114`. The far-side contour and repair marks are reconstructions. The owner kept v1.1 final on November 27, 2026, so this candidate stays a published study and its likeness is not accepted.
