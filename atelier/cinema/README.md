@@ -22,3 +22,13 @@ python3 native/atelier/cinema/encode_screening.py \
 ```
 
 The output is silent H.264 High Profile in a fast-start MP4 with a limited-range BT.709 transfer. The verification step counts decoded frames, checks duration and stream format, performs a full decode and compares movement over the head, shoe, base and planted-toe image regions at selected native times. The opening JPEG is derived from the identical first rendered frame. The receipt records both file hashes and the source-frame hash.
+
+## Published screening and scene
+
+Download the [screening](first-choice-native-preview.mp4?raw=1), [opening still](first-choice-opening.jpg) and [proofs](proofs/). For a fresh screening from the public scene, run the renderer from the repository root with Blender 5.2.1 on a supported Metal GPU. The published scene has normalized image paths and its own source digest.
+
+```sh
+blender --disable-autoexec -b atelier/delivery/first-choice.blend --python-exit-code 1 \
+  -P atelier/cinema/render_screening.py -- --out ./screening-frames \
+  --source-sha 019949c70a8aaff3314244b5fc222d9332dcaf23a24ff208576d52791395ae95
+```

@@ -1,0 +1,17 @@
+{
+  "name": "murderbird-three-eras-browser-qa",
+  "private": true,
+  "scripts": {
+    "test": "node verify.cjs",
+    "runtime": "node runtime.cjs",
+    "failure": "node failure.cjs",
+    "soak": "node soak.cjs",
+    "regions": "node region-host.cjs",
+    "capture": "node capture-open.cjs",
+    "textures": "node gpu.cjs",
+    "motion": "node motion-pref.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

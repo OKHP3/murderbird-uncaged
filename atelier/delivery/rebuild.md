@@ -22,3 +22,7 @@ The single-file viewer opens directly from disk. A host can instead copy the bui
 The native movie render script takes a verified native SHA-256 and uses local Apple Metal. Its encoder uses FFmpeg and validates the H.264 video.
 
 The recorded hashes identify the delivered bytes. Blender file serialization, mesh ordering, GPU rendering and encoders can vary between rebuilds and machines.
+
+## Archived outputs
+
+The [editable packaged scene](first-choice.blend?raw=1) opens without external image files. The [original derived GLB](first-choice.glb?raw=1), [final Advanced viewer](../runtime/first-choice-final.html?raw=1) and [native screening](../cinema/first-choice-native-preview.mp4?raw=1) are available directly. The [three-era study](../three-eras/README.md) builds independently from its included runtime inputs. To reproduce its full-resolution GLB from the published native, follow the [normal-correction protocol](../three-eras/normal-correction/README.md).
