@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>MurderBird: Uncaged · Three eras under review</title>
+<meta name="description" content="A private interactive review of one flightless mechanical bird across Maker, Mechanic and Advanced. Explore its movement, listen to Iron Verdict, and inspect each exterior.">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#171a17">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MurderBird: Uncaged">
+<meta property="og:title" content="MurderBird: Uncaged · Three eras under review">
+<meta property="og:description" content="Operate the Maker, wind the Mechanic and watch the Advanced bird choose its next movement. Private review.">
+<meta property="og:image" content="./assets/advanced.jpg"><meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="The Advanced bird stands beside a low rail in the workshop.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MurderBird: Uncaged · Three eras under review">
+<meta name="twitter:description" content="An interactive private review of the Maker, Mechanic and Advanced bird.">
+<meta name="twitter:image" content="./assets/advanced.jpg"><meta name="twitter:image:alt" content="The Advanced bird stands beside a low rail in the workshop.">
+<link rel="icon" sizes="32x32" type="image/png" href="./assets/favicon-32.png">
+<link data-host-only rel="shortcut icon" href="./assets/favicon.ico"><link data-host-only rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link data-host-only rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#171a17"><link data-host-only rel="manifest" href="./assets/exhibit.webmanifest">
+<meta data-host-only name="msapplication-config" content="./assets/browserconfig.xml"><meta data-host-only name="msapplication-TileImage" content="./assets/mstile-150.png">
+<meta name="msapplication-TileColor" content="#171a17">
+<link rel="stylesheet" href="./src/exhibit.css">
+</head>
+<body>
+<main>
+<header><div><a class="collection" href="https://overkillhill.com/projects/murderbird-uncaged/">MurderBird: Uncaged</a><h1>Three eras</h1></div>
+<nav aria-label="Choose an era"><button data-era="maker">Maker</button><button data-era="mechanic">Mechanic</button><button data-era="advanced" aria-pressed="true">Advanced</button></nav></header>
+<section class="stage" id="stage" aria-label="Exhibit enclosure">
+<img id="poster" src="assets/advanced.jpg" alt="The Advanced bird in the workshop, seen from the front left."><canvas id="canvas" tabindex="0" aria-label="Orbit the bird with arrow keys. Zoom with plus and minus. Home restores the camera." hidden></canvas>
+<div id="entry"><button id="load" class="primary">Enter 3D exhibit</button><div id="load-status" role="status">15 MB to enter · 10 MB for full surfaces</div></div>
+</section>
+<div class="sr-only" id="announce" role="status"></div>
+<section class="controls" aria-label="Era and inspection controls">
+<div class="copy"><h2 id="era-title">Advanced · First Choice</h2><p id="caption" aria-live="polite">The saddle gives. The feet hold. The bird shifts its weight and lowers its head toward the bolt before anyone asks.</p></div>
+<div class="actions"><button id="play" disabled>Play First Choice</button><button id="enclosure" disabled>Wake the enclosure</button><button id="patrol" disabled>Watch the pacing bird</button><button id="approach" disabled>Approach the rail</button><button id="reset" disabled>Return to rest</button></div>
+<fieldset id="visitor" hidden><legend>Visitor position</legend><button data-lane="left">Reach from left</button><button data-lane="center">Reach from center</button><button data-lane="right">Reach from right</button><button id="withdraw">Withdraw</button></fieldset>
+<div id="manual" hidden><label for="linkage">External control</label><select id="linkage"><option value="neck">Neck</option><option value="leg">Leg</option><option value="wing">Wing</option><option value="tail">Tail</option><option value="jaw">Jaw</option></select><label for="handle">Lever travel</label><input id="handle" type="range" min="0" max="100" value="0"></div>
+<div id="transport"><label for="position">Scene time</label><input id="position" type="range" min="0" max="10.5" step=".01" value="0" disabled><output id="clock" for="position">0.0 s</output></div>
+<div class="row"><fieldset><legend>Camera</legend><button data-view="portrait">Portrait</button><button data-view="profile">Profile</button><button data-view="detail">Head</button><button data-view="support">Saddle</button><button data-view="interior">Interior</button></fieldset><button id="surface" disabled hidden>Load full surfaces</button><button id="light" disabled>Neutral light</button><button id="sound" aria-pressed="false" disabled>Enable foley</button></div>
+<div class="row cut"><button id="open" aria-expanded="false" aria-controls="cutaway" disabled>Open the exterior</button><label for="cut-fraction">Panel opening</label><input id="cut-fraction" type="range" min="0" max="100" step="1" value="0" disabled></div>
+<div class="row" id="inspection-controls"><label for="inspection-region">Assembly</label><select id="inspection-region" disabled aria-describedby="region-note"></select><button type="button" id="region-focus" disabled>Focus assembly</button></div>
+<p id="region-note" aria-live="polite"></p>
+<p id="cutaway" hidden></p>
+<details id="guide"><summary>Illustrated walkthrough and controls</summary><img id="guide-image" alt=""><p id="walk"></p><p>Drag to orbit, scroll or pinch to zoom. Focus the view and use arrow keys to orbit, + or − to zoom, and Home to restore portrait. Scene time can be changed silently with the arrow keys. Return to rest closes the shell and resets the encounter.</p></details>
+<details id="music-panel"><summary>Iron Verdict · song and lyrics</summary>
+<p>Production version 3 pairs the sung theme with a separate, lossless mix for continuous playback.</p>
+<div class="row"><label for="music-version">Recording</label><select id="music-version"><option value="full">Full song</option><option value="loop">Seamless loop</option></select>
+<button id="music-play" type="button">Play music</button><button id="music-restart" type="button">Restart music</button>
+<button id="music-mute" type="button" aria-pressed="false">Mute music</button>
+<label for="music-volume">Music volume</label><input id="music-volume" type="range" min="0" max="100" value="60"><output id="music-level" for="music-volume">60%</output></div>
+<div class="row"><label for="music-seek">Track position</label><input id="music-seek" type="range" min="0" max="147.75" step=".1" value="0" disabled><span id="music-time">0:00 / 2:27</span></div>
+<p id="music-status" role="status">Choose Play music to begin.</p>
+<div id="loop-companion" hidden><label for="loop-file">Open the companion file <strong>seamless-loop.flac</strong> from the review kit.</label> <input id="loop-file" type="file" accept=".flac,audio/flac"></div>
+<audio id="song" preload="none" hidden></audio><details><summary>Lyrics</summary><pre id="lyrics" aria-label="Iron Verdict lyrics"></pre></details></details>
+<details id="pilot-panel"><summary>First Choice · original silent pilot</summary>
+<p id="pilot-description">In this eight-second illustrated motion study, the saddle yields, the torso shifts and the head lowers slightly. Both feet and the stand stay fixed. The clip was accepted for the story page.</p>
+<video id="pilot" playsinline muted preload="none" controls aria-label="First Choice, silent illustrated pilot" aria-describedby="pilot-description" style="width:min(100%,720px);height:auto"></video>
+<p id="pilot-status" role="status"></p></details>
+<footer><a href="https://overkillhill.com/writings/murderbird/">What the Water Kept</a><a href="https://okhp3.github.io/murderbird-uncaged/plates/">Living Plates</a><a href="https://okhp3.github.io/murderbird-uncaged/">V37 exhibit</a></footer>
+</section>
+</main>
+<script type="module" src="./src/exhibit.js"></script>
+</body></html>

@@ -1,0 +1,443 @@
+{
+  "tested_at": "2026-11-24T09:40:51.344403+00:00",
+  "legacy_revision_from_local_release_manifest": "474fd87470070708f4b85b710fed0f52c15fb048",
+  "method": "Separate byte-copied release directories, atomic active directory link, one loopback HTTP server and stable route, SHA-256 of every served payload and root document.",
+  "served": {
+    "legacy_before": {
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/",
+      "files": 169,
+      "bytes": 411080870,
+      "tree_sha256": "0c05cf87a244234d7cb22af35dba6474672531c547a919460dd25fb388b76d4f",
+      "index_sha256": "03646e301065af7a857cfdad37a8c2e1238c74c58fed440aa04cc33da1fad56f",
+      "all_files_match": true,
+      "index_alias_matches": true
+    },
+    "previous_before": {
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/first-choice/",
+      "files": 34,
+      "bytes": 66980978,
+      "tree_sha256": "caec082ed8ef526bb166c01bb5c57ec14abec8c5c6d0e0b74afa20699244d97a",
+      "index_sha256": "b802760e92a4e7171ad6a837c609df110afcd5653f390544a6cdb72c979f46d0",
+      "all_files_match": true,
+      "index_alias_matches": true
+    },
+    "candidate": {
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/first-choice/",
+      "files": 34,
+      "bytes": 66981042,
+      "tree_sha256": "053982a08b621b8ddbdc27e08d6b6761794715e916195791b178a78fa587383f",
+      "index_sha256": "b802760e92a4e7171ad6a837c609df110afcd5653f390544a6cdb72c979f46d0",
+      "all_files_match": true,
+      "index_alias_matches": true
+    },
+    "previous_after_rollback": {
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/first-choice/",
+      "files": 34,
+      "bytes": 66980978,
+      "tree_sha256": "caec082ed8ef526bb166c01bb5c57ec14abec8c5c6d0e0b74afa20699244d97a",
+      "index_sha256": "b802760e92a4e7171ad6a837c609df110afcd5653f390544a6cdb72c979f46d0",
+      "all_files_match": true,
+      "index_alias_matches": true
+    },
+    "legacy_after_rollback": {
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/",
+      "files": 169,
+      "bytes": 411080870,
+      "tree_sha256": "0c05cf87a244234d7cb22af35dba6474672531c547a919460dd25fb388b76d4f",
+      "index_sha256": "03646e301065af7a857cfdad37a8c2e1238c74c58fed440aa04cc33da1fad56f",
+      "all_files_match": true,
+      "index_alias_matches": true
+    }
+  },
+  "browser_readbacks": {
+    "previous_before": {
+      "stage": "candidate",
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/first-choice/",
+      "title": "MurderBird: Uncaged \u00b7 Three eras under review",
+      "browser": "158.0.8127.37",
+      "results": [
+        {
+          "era": "maker",
+          "triangles": 1491276,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        },
+        {
+          "era": "mechanic",
+          "triangles": 1502584,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        },
+        {
+          "era": "advanced",
+          "triangles": 1482392,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        }
+      ],
+      "requested": [
+        "/murderbird-uncaged/first-choice/",
+        "/murderbird-uncaged/first-choice/assets/study.js",
+        "/murderbird-uncaged/first-choice/assets/index.css",
+        "/murderbird-uncaged/first-choice/assets/advanced.jpg",
+        "/murderbird-uncaged/first-choice/assets/advanced-open.jpg",
+        "/murderbird-uncaged/first-choice/assets/favicon-32.png",
+        "/murderbird-uncaged/first-choice/assets/bird.pack",
+        "/murderbird-uncaged/first-choice/assets/concrete.jpg",
+        "/murderbird-uncaged/first-choice/assets/floor-normal.jpg",
+        "/murderbird-uncaged/first-choice/assets/oak.jpg",
+        "/murderbird-uncaged/first-choice/assets/plaster.jpg",
+        "/murderbird-uncaged/first-choice/assets/stand-albedo.jpg",
+        "/murderbird-uncaged/first-choice/assets/enamel.jpg",
+        "/murderbird-uncaged/first-choice/assets/phosphor.png",
+        "/murderbird-uncaged/first-choice/assets/standing-contact.png",
+        "/murderbird-uncaged/first-choice/assets/detail.pack",
+        "/murderbird-uncaged/first-choice/assets/maker.jpg",
+        "/murderbird-uncaged/first-choice/assets/maker-open.jpg",
+        "/murderbird-uncaged/first-choice/assets/mechanic.jpg",
+        "/murderbird-uncaged/first-choice/assets/mechanic-open.jpg"
+      ],
+      "external": [],
+      "errors": [],
+      "failures": []
+    },
+    "candidate": {
+      "stage": "candidate",
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/first-choice/",
+      "title": "MurderBird: Uncaged \u00b7 Three eras under review",
+      "browser": "158.0.8127.37",
+      "results": [
+        {
+          "era": "maker",
+          "triangles": 1491276,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        },
+        {
+          "era": "mechanic",
+          "triangles": 1502584,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        },
+        {
+          "era": "advanced",
+          "triangles": 1482392,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        }
+      ],
+      "requested": [
+        "/murderbird-uncaged/first-choice/",
+        "/murderbird-uncaged/first-choice/assets/study.js",
+        "/murderbird-uncaged/first-choice/assets/index.css",
+        "/murderbird-uncaged/first-choice/assets/advanced.jpg",
+        "/murderbird-uncaged/first-choice/assets/advanced-open.jpg",
+        "/murderbird-uncaged/first-choice/assets/favicon-32.png",
+        "/murderbird-uncaged/first-choice/assets/bird.pack",
+        "/murderbird-uncaged/first-choice/assets/concrete.jpg",
+        "/murderbird-uncaged/first-choice/assets/floor-normal.jpg",
+        "/murderbird-uncaged/first-choice/assets/oak.jpg",
+        "/murderbird-uncaged/first-choice/assets/plaster.jpg",
+        "/murderbird-uncaged/first-choice/assets/stand-albedo.jpg",
+        "/murderbird-uncaged/first-choice/assets/enamel.jpg",
+        "/murderbird-uncaged/first-choice/assets/phosphor.png",
+        "/murderbird-uncaged/first-choice/assets/standing-contact.png",
+        "/murderbird-uncaged/first-choice/assets/detail.pack",
+        "/murderbird-uncaged/first-choice/assets/maker.jpg",
+        "/murderbird-uncaged/first-choice/assets/maker-open.jpg",
+        "/murderbird-uncaged/first-choice/assets/mechanic.jpg",
+        "/murderbird-uncaged/first-choice/assets/mechanic-open.jpg"
+      ],
+      "external": [],
+      "errors": [],
+      "failures": []
+    },
+    "previous_after_rollback": {
+      "stage": "candidate",
+      "url": "http://127.0.0.1:55449/murderbird-uncaged/first-choice/",
+      "title": "MurderBird: Uncaged \u00b7 Three eras under review",
+      "browser": "158.0.8127.37",
+      "results": [
+        {
+          "era": "maker",
+          "triangles": 1491276,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        },
+        {
+          "era": "mechanic",
+          "triangles": 1502584,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        },
+        {
+          "era": "advanced",
+          "triangles": 1482392,
+          "reassembled": true,
+          "detail": "full",
+          "modelDigest": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+        }
+      ],
+      "requested": [
+        "/murderbird-uncaged/first-choice/",
+        "/murderbird-uncaged/first-choice/assets/study.js",
+        "/murderbird-uncaged/first-choice/assets/index.css",
+        "/murderbird-uncaged/first-choice/assets/advanced.jpg",
+        "/murderbird-uncaged/first-choice/assets/advanced-open.jpg",
+        "/murderbird-uncaged/first-choice/assets/favicon-32.png",
+        "/murderbird-uncaged/first-choice/assets/bird.pack",
+        "/murderbird-uncaged/first-choice/assets/concrete.jpg",
+        "/murderbird-uncaged/first-choice/assets/floor-normal.jpg",
+        "/murderbird-uncaged/first-choice/assets/oak.jpg",
+        "/murderbird-uncaged/first-choice/assets/plaster.jpg",
+        "/murderbird-uncaged/first-choice/assets/stand-albedo.jpg",
+        "/murderbird-uncaged/first-choice/assets/enamel.jpg",
+        "/murderbird-uncaged/first-choice/assets/phosphor.png",
+        "/murderbird-uncaged/first-choice/assets/standing-contact.png",
+        "/murderbird-uncaged/first-choice/assets/detail.pack",
+        "/murderbird-uncaged/first-choice/assets/maker.jpg",
+        "/murderbird-uncaged/first-choice/assets/maker-open.jpg",
+        "/murderbird-uncaged/first-choice/assets/mechanic.jpg",
+        "/murderbird-uncaged/first-choice/assets/mechanic-open.jpg"
+      ],
+      "external": [],
+      "errors": [],
+      "failures": []
+    }
+  },
+  "candidate_files": {
+    "assets/advanced-open.jpg": {
+      "bytes": 83211,
+      "sha256": "e8dce825be62064eeecd4b15369bd86a6df7c35914b81ec1138b4d43b423f3cb"
+    },
+    "assets/advanced.jpg": {
+      "bytes": 75585,
+      "sha256": "0fe81b7409870711b87d6af9b2e8b28e7384c742ce82e130b646c425b0d10569"
+    },
+    "assets/apple-touch-icon.png": {
+      "bytes": 24182,
+      "sha256": "11dc717b9908293c3a44280d501ab312f164bb1c480aaa9b641d8b36b4102a16"
+    },
+    "assets/bird.pack": {
+      "bytes": 15433906,
+      "sha256": "c58ef5268c0ed56380f1cd07aafbad209dc37ff0eb11943a357fd3c841fb21ce"
+    },
+    "assets/browserconfig.xml": {
+      "bytes": 219,
+      "sha256": "a1bc5d25750304f7cafa5fd9639754577ecb9fb85f00a83410451290a1b8d724"
+    },
+    "assets/concrete.jpg": {
+      "bytes": 179469,
+      "sha256": "f0270954aee27650f732590238ce8cea41b87ce542765463026d4d2578f967a3"
+    },
+    "assets/detail.pack": {
+      "bytes": 10222530,
+      "sha256": "cd2320ef5f4138fd8c966affdc8fb14ab0750ac89776b9b06cbb712ac95aa7ed"
+    },
+    "assets/enamel.jpg": {
+      "bytes": 131558,
+      "sha256": "de01994597242b8eff7f778e8adfedcaf0c39b647be9314c5657183b39209a67"
+    },
+    "assets/exhibit.webmanifest": {
+      "bytes": 794,
+      "sha256": "0bc13edd22b2553077454f5dfcfa4c93222b45201bdac0160d96b588a1caa1a0"
+    },
+    "assets/favicon-32.png": {
+      "bytes": 2419,
+      "sha256": "a87882fd848b32081af095d89116d683aad1cf65cd5f127f96664b1446bb1ac9"
+    },
+    "assets/favicon.ico": {
+      "bytes": 5266,
+      "sha256": "cec194de271effaeebf01411a98b56c63bf99e03eb7a16b4d787acb97d1b85e7"
+    },
+    "assets/floor-normal.jpg": {
+      "bytes": 660579,
+      "sha256": "633023e04803ecf6d4e062f6539b19124215739d199fbdbdb67e2fd9ea8bdfd9"
+    },
+    "assets/full-song.mp3": {
+      "bytes": 5912684,
+      "sha256": "88d21ba2bafc8750976f133006f7aee416192e72dcef40ef13a4f561f06bd249"
+    },
+    "assets/icon-192.png": {
+      "bytes": 27352,
+      "sha256": "a04a57cefe7fdf45edde6b268b2eb1353848465d9ad7a3f5207e81195fa7db94"
+    },
+    "assets/icon-512.png": {
+      "bytes": 173386,
+      "sha256": "eef5f52c07547aeb1d4d348f5b4421a58106d8c4174c6be198d7480450f67758"
+    },
+    "assets/icon-maskable-512.png": {
+      "bytes": 173386,
+      "sha256": "eef5f52c07547aeb1d4d348f5b4421a58106d8c4174c6be198d7480450f67758"
+    },
+    "assets/index.css": {
+      "bytes": 3336,
+      "sha256": "33439acb6a3022849a309dd87b6dfd52edfe11da7d3126fa5eb67e17cd645b71"
+    },
+    "assets/loop-a.bin": {
+      "bytes": 16777216,
+      "sha256": "2ba794a303136aabf87f7718443acee358ea2b61e8431fcc6b12c29feff66bda"
+    },
+    "assets/loop-b.bin": {
+      "bytes": 14103041,
+      "sha256": "7ddf62587fcb471bdba6ea1639e843b2263b508dad29d573b4213e2c2fddddca"
+    },
+    "assets/maker-open.jpg": {
+      "bytes": 87104,
+      "sha256": "0ca23f1db8d18fc2c1c240114faa16b80cdbe7cbeef8645539c690958d00c5d7"
+    },
+    "assets/maker.jpg": {
+      "bytes": 80551,
+      "sha256": "3392e33fd4f14a494ff2ba19bc478424500899ffe06c0d708f68d7bbfa1f0c04"
+    },
+    "assets/mechanic-open.jpg": {
+      "bytes": 75513,
+      "sha256": "37ca43e205d7813a69335086e22fb74e1db816602b4f565081f85f7be80a1d15"
+    },
+    "assets/mechanic.jpg": {
+      "bytes": 68848,
+      "sha256": "66c34dfa7c296af188ab0801246c4bf84ade3616a3f3c3f80439c694e03f2a5f"
+    },
+    "assets/mstile-150.png": {
+      "bytes": 19661,
+      "sha256": "7a60b97136522c57c1e31501d3ad05ba9e43d9c6d5dcb1ee1ee1ff3b765ef6ec"
+    },
+    "assets/murderbird-first-choice-635f0e15.mp4": {
+      "bytes": 824339,
+      "sha256": "635f0e1552bac61699c03c8406157207f6230ea817bb1ecaeb3adbb3a7bf8613"
+    },
+    "assets/murderbird-first-choice-poster.jpg": {
+      "bytes": 185405,
+      "sha256": "897faf4814ba0ed59b95c1ae43558a34aa3e4154b49f9f4ba0d86942227144c6"
+    },
+    "assets/oak.jpg": {
+      "bytes": 214505,
+      "sha256": "bd217836f134d434bd6c17244679014acf42fbdaad86619dd5919f46dda588b4"
+    },
+    "assets/phosphor.png": {
+      "bytes": 215882,
+      "sha256": "f7b08f5e3aed880b33b8b93925136a9f108742b40b08f5ccb8c32b06cc4a4b53"
+    },
+    "assets/plaster.jpg": {
+      "bytes": 142911,
+      "sha256": "1cc5e9b204616b0be94792481885622c793b3654c18fb1b9b6d08dedf9ec7d62"
+    },
+    "assets/safari-pinned-tab.svg": {
+      "bytes": 313,
+      "sha256": "46e38cd6d618990ac5aea7cc23dc0d5b51356730f29127b30b418d567aa13d0a"
+    },
+    "assets/stand-albedo.jpg": {
+      "bytes": 107010,
+      "sha256": "7d1043629ddf5ccb12ca74a6582f87895fe1cb8a6e2d9f9729d729b5f766b65d"
+    },
+    "assets/standing-contact.png": {
+      "bytes": 33869,
+      "sha256": "c678ce8872cb1f9b2ad0012cf1ea1056d02dbd8927a54b10444a8f49ccf2fb4b"
+    },
+    "assets/study.js": {
+      "bytes": 922832,
+      "sha256": "69e9632fa2fbf7a86d91b270ac393a25163839e20eecd23da7511c1fa92070e4"
+    },
+    "index.html": {
+      "bytes": 12180,
+      "sha256": "b802760e92a4e7171ad6a837c609df110afcd5653f390544a6cdb72c979f46d0"
+    }
+  },
+  "expected_missing_in_candidate": {
+    "first-choice.blend": 404,
+    "source/first-choice.patch": 404,
+    "evidence/reference-manifest.json": 404,
+    "media/cg-references-locked-canon.jpg": 404,
+    "manifest.json": 404,
+    "build.py": 404,
+    "node_modules/": 404
+  },
+  "asset_review": {
+    "glb": {
+      "embedded_images": 28,
+      "unique_digests": 28,
+      "external_uris": 0,
+      "embedded_images_matching_reference_masters": 0,
+      "first_draw": {
+        "bytes": 46141044,
+        "sha256": "2f9ff345f3a06732367d5c1dd2d2703b924bc3061b25d7a040bf24b9b597ba54"
+      },
+      "first_draw_images": {
+        "embedded_images": 28,
+        "unique_digests": 28,
+        "external_uris": 0,
+        "embedded_images_matching_reference_masters": 0
+      },
+      "unchanged_non_image_buffer_views": 310,
+      "reconstructed_glb": {
+        "bytes": 55884688,
+        "sha256": "20632ff6116f93827bc814d53301749dec1ef035165749db2d819bb89edcd41c"
+      },
+      "matches_strict_native_export": true
+    },
+    "published_theme_and_lyrics_digest_verified": true,
+    "portable": {
+      "bytes": 47367367,
+      "sha256": "ff21d980020c4654ced6e1617df1076e63eb599e99b9af1e6461643db6ad23e9"
+    },
+    "notices": {
+      "project_code": {
+        "bytes": 1074,
+        "sha256": "7a26108bff9a3301f0ed8fd0697f07134c7ed863d36572885ee37229c88ba29d",
+        "web_verified": true,
+        "portable_verified": true
+      },
+      "three_js": {
+        "bytes": 1081,
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+        "web_verified": true,
+        "portable_verified": true
+      },
+      "creative_rights": {
+        "bytes": 1569,
+        "sha256": "ea79de5d70b27e8e5cfa813a7a7a49f11a7db6cea0ca6d174acdaffd3ccd080b",
+        "web_verified": true,
+        "portable_verified": true
+      }
+    },
+    "external_navigation_only": [
+      "https://overkillhill.com/projects/murderbird-uncaged/",
+      "https://overkillhill.com/writings/murderbird/",
+      "https://okhp3.github.io/murderbird-uncaged/plates/",
+      "https://okhp3.github.io/murderbird-uncaged/"
+    ],
+    "reference_inventory_digests": 15,
+    "matched_source_master_files": 0,
+    "authorized_previously_published_reference_paths": [
+      "assets/murderbird-first-choice-635f0e15.mp4"
+    ],
+    "verified_host_only_files": [
+      "apple-touch-icon.png",
+      "browserconfig.xml",
+      "exhibit.webmanifest",
+      "favicon-32.png",
+      "favicon.ico",
+      "icon-192.png",
+      "icon-512.png",
+      "icon-maskable-512.png",
+      "loop-a.bin",
+      "loop-b.bin",
+      "mstile-150.png",
+      "safari-pinned-tab.svg"
+    ],
+    "approved_loop_from_transfers": {
+      "bytes": 30880257,
+      "sha256": "d9bc121c0c2f1a04ff8456b8aeea1ae6d48fdc1777119ef4823bebc458425a72"
+    }
+  },
+  "live_public_site_touched": false,
+  "listening_after_rehearsal": false
+}

@@ -1,0 +1,22 @@
+{
+  "name": "murderbird-uncaged",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Build and inspect the MurderBird three-era study.",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "scripts": {
+    "dev": "vite --config vite.config.mjs --configLoader native",
+    "build": "python3 build.py",
+    "preview": "vite preview --config vite.config.mjs --configLoader native",
+    "verify": "python3 verify-build.py"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.8"
+  }
+}

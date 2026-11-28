@@ -1,0 +1,164 @@
+{
+  "asset": "first-choice.glb",
+  "sha256": "88ff5f671a7359c04177b77c3dc01630491189f58d24e6bc0d85d7ed98ccd12e",
+  "byte_length": 54411132,
+  "gltf_version": 2,
+  "stats": {
+    "indexed_vertices_in_primitives": 858470,
+    "triangles": 721254,
+    "draw_primitives": 49,
+    "near_zero_normals": 0,
+    "triangles_double_area_below_1e-12": 0
+  },
+  "normal_length_range": [
+    0.9999998807907104,
+    1.0000001192092896
+  ],
+  "scene_count": 1,
+  "node_count": 17,
+  "mesh_count": 11,
+  "material_count": 16,
+  "image_count": 28,
+  "embedded_only": true,
+  "extensions": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_emissive_strength"
+  ],
+  "animations": [
+    {
+      "name": "First Choice",
+      "channels": [
+        {
+          "node": "FC | Torso",
+          "property": "rotation",
+          "start": 0.0,
+          "end": 10.5,
+          "samples": 253,
+          "interpolation": "LINEAR"
+        },
+        {
+          "node": "FC | Neck",
+          "property": "rotation",
+          "start": 0.0,
+          "end": 10.5,
+          "samples": 253,
+          "interpolation": "LINEAR"
+        },
+        {
+          "node": "FC | Head",
+          "property": "rotation",
+          "start": 0.0,
+          "end": 10.5,
+          "samples": 253,
+          "interpolation": "LINEAR"
+        },
+        {
+          "node": "FC | Saddle",
+          "property": "rotation",
+          "start": 0.0,
+          "end": 10.5,
+          "samples": 253,
+          "interpolation": "LINEAR"
+        }
+      ]
+    }
+  ],
+  "rig": [
+    {
+      "name": "FC | Head",
+      "node_index": 1,
+      "fc_region": "head",
+      "parent": "FC | Neck",
+      "local_translation": [
+        0,
+        0.24058997631072998,
+        0.08437000960111618
+      ],
+      "world_rest_pivot": [
+        0.0,
+        1.5405899286270142,
+        0.18937000632286072
+      ]
+    },
+    {
+      "name": "FC | Neck",
+      "node_index": 3,
+      "fc_region": "neck",
+      "parent": "FC | Torso",
+      "local_translation": [
+        0,
+        0.434999942779541,
+        0.20999999344348907
+      ],
+      "world_rest_pivot": [
+        0.0,
+        1.2999999523162842,
+        0.10499999672174454
+      ]
+    },
+    {
+      "name": "FC | Torso",
+      "node_index": 9,
+      "fc_region": "torso",
+      "parent": "FC | Ground",
+      "local_translation": [
+        0,
+        0.8650000095367432,
+        -0.10499999672174454
+      ],
+      "world_rest_pivot": [
+        0.0,
+        0.8650000095367432,
+        -0.10499999672174454
+      ]
+    },
+    {
+      "name": "FC | Ground",
+      "node_index": 12,
+      "fc_region": "ground",
+      "parent": null,
+      "local_translation": [
+        0,
+        0,
+        0
+      ],
+      "world_rest_pivot": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FC | Saddle",
+      "node_index": 14,
+      "fc_region": "saddle",
+      "parent": "FC | Stand",
+      "local_translation": [
+        0.02500000037252903,
+        0.8080000281333923,
+        0.43799999356269836
+      ],
+      "world_rest_pivot": [
+        0.02500000037252903,
+        0.8080000281333923,
+        0.43799999356269836
+      ]
+    },
+    {
+      "name": "FC | Stand",
+      "node_index": 16,
+      "fc_region": "stand",
+      "parent": null,
+      "local_translation": [
+        0,
+        0,
+        0
+      ],
+      "world_rest_pivot": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}
